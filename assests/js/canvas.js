@@ -234,7 +234,7 @@ function canvas() {
     
     
      var tipMain = document.createElement('p');
-        tipMain.innerHTML = "Hold Ctrl and drag the mouse to draw a cicrle :-O";
+        tipMain.innerHTML = "Hold shift and drag the mouse to draw a cicrle :-O";
         menuDiv.appendChild(tipMain);
     
     
