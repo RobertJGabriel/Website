@@ -1,52 +1,30 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <title>Gers Epic Game :D</title>
+<link rel="stylesheet" type="text/css" href="assests/css/mystyle.css">
+</head>
 
-    <head>
+<body>
 
-        <title>Html5 Canvffas - By Robert Gabriel</title>
-        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
-        <link href="assests/css/roboto.min.css" rel="stylesheet">
-        <link href="assests/css/material.min.css" rel="stylesheet">
-        <link href="assests/css/ripples.min.css" rel="stylesheet">
-         <!-- Canvas Code-->
-        <link rel="stylesheet" href="assests/css/style.css">
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="assests/js/canvas.js"></script>
-   
-    </head>
+  <div id="platformer">
 
-    <body>
-    <div class="container-fluid main">
-        <div class="row fill ">
-            
-            <nav class="col-xs-2 menu fill " id="left">
-            
-            
-            
-            </nav>
-            <div class="pages col-xs-10 fill" id="right"></div>
-            
-            
-            
-        </div>    
+    <canvas id="canvas">
+      <div class="unsupported">
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </div>
+    </canvas>
+
+    <div id="instructions">
+      <b>LEFT/RIGHT</b> to move, <b>SPACE</b> to jump, collect green bars and jump on the blue monsters.
     </div>
-        
 
-        <!-- Your site ends -->
+  </div>
 
-        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="assests/javascript/fpsmeter.min.js"></script>
+  <script src="assests/javascript/platformer.js"></script>
 
-        <script src="assests/js/ripples.min.js"></script>
-        <script src="assests/js/material.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                // This command is used to initialize some elements and make them work properly
-                $.material.init();
-            });
-        </script>
-
-    </body>
-
+</body>
 </html>
