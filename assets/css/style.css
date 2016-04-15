@@ -1,35 +1,4 @@
-body{
- background-color: #EEEEEE;   
-}
 
-p,a,h1,h2,h3,h4,h5{
+p,a{
  line-height:27px !important;
-}
-#left{
-    
-
-    
-}
-
-
-#right{
- background-color: #fff;
-
-    
-    
-}
-
-.fill{
- min-height: 100%;
-    height: 100%;
-    
-}
-
-h2,h4{
- margin-top: 50px;   
-    
-}
-canvas{
-    
-    cursor:crosshair;
 }
