@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Naive Bayes Classifier in Coldfusion">
+    <meta name="keywords" content="Naive Bayes Classifier, Naive Bayes Classifier Coldfusion, Naive Bayes Classifier java">
+    <meta name="author" content="Robert James Gabriel ">
+    <title>Naive Bayes Classifier</title>
+    <link rel="icon" type="image/png" href="assets/img/icons/logo.ico">
+    <!-- Material Design fonts -->
+    <link href="dist/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <a href="https://github.com/RobertJGabriel/material-design-theme/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67"
+            alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+    <div class="navbar navbar-warning" data-ripple-color="#F0F0F0" style="z-index:9;top: 0;position:fixed;width:100%;">
+        <div class="container-fluid">
+            <div class="navbar-header" style="width: 100%;">
+
+                <a class="navbar-brand" href="./index.html">Robert James Gabriel <p  id="logo1" style="display:none;float: right;margin-left: 5px;">- ss</p></a>
+                <a class="menu-button home"><i class="fa fa-bars"  style="float: right;/* margin:0 !important; */ color:white"aria-hidden="true"></i></a>
+
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <ul class="menu-bar slideLeft">
+                    <li><a href="index.html" class="menu-button">About</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                </ul>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <header class="withripple" data-ripple-color="red">
+
+        <div class='container'>
+
+            <div class="row">
+                <div class="col-lg-1"></div>
+
+                <div class="col-lg-8">
+                    <span id="logo2"><h1 class="header-title" style="line-height: 308px;">Naive Bayes Classifier</h1></span>
+                </div>
+
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <div class='container' style="    position: relative;">
+        <div class="row">
+            <div class="col-xs-3 col-sm-2"></div>
+
+            <div class="col-xs-6 col-sm-8">
+                <h1>Introduction</h1>
+
+                <p>
+                    For the past two years, I have been jumping in head first into machine learning. I love the aspect that you can make lines of code learn and change over time. You can see my fourth-year project which uses machine learning. Many programming languages now
+                    have machine learning libraries available in their toolbox.
+
+
+                </p>
+                <p> Java has ML libraries like WEKA; Node has several packages etc. These libraries come in handy when you need to write basic algorithms from scratch. The tool I used for this example is <a href="http://www.cs.waikato.ac.nz/ml/weka/" alt="WEKA">WEKA</a>                    A data mining software in Java. You can use it as a standalone application or use it's APIs in your Java program.</p>
+
+                <p>
+                    I will show you how to use WEKA library in ColdFusion. I am going to write a very simple Java program and add wrappers to it in ColdFusion. These wrappers can then be called from ColdFusion pages.
+                    <br>
+                </p>
+                <div class="row" style="margin-top:50px;margin-bottom:50px">
+                    <div class="col-md-12">
+                        <code>
+
+                      </code>
+                    </div>
+                </div>
+
+
+                <p>
+                    The above dataset contains five attributes namely
+
+                    <ol>
+                        <li> <b>Outlook</b> is a categorical variable(it can take only three values - sunny,overcast, rainy) .</li>
+                        <li>
+                            <b>Temperature</b> and humidity are numeric variables.</li>
+                        <li><b>Windy</b> is again a categorical variable(it can take two values - TRUE, FALSE) .</li>
+                        <li><b>Play</b>is a categorical variable(it can take two values - yes,no).</li>
+                        <li><b>Play</b> is the class variable in our problem which means we have to predict the value of this variable for given test datapoint which contains remaining four values.</li>
+                    </ol>
+
+
+                    <br> So the problem at hand is a classification problem.
+                    <br>We are given a training dataset which can be used to train a classifier and then use this model to predict the label for a test datapoint. There are many classifiers which can be used to solve this problem. But I am going to use naïve
+                    Bayes to solve this problem. It's a very simple classifier based on probability and it assumes that features are independent of one another. This means that the value outlook takes is independent of the values other attributes take.
+                    I will not explain the mathematical background of naïve Bayes but rather provide an implementation for it. To understand the theory behind naïve Bayes, check this link.
+                    <br>
+                    <br> Here is the Java program </p>
+                    <br>
+                    <br>
+                    <div class="row" style="margin-top:50px;margin-bottom:50px">
+                        <div class="col-md-12">
+                            <code>
+
+                          </code>
+                        </div>
+                    </div>
+
+                <p>
+                    Download weka.jar from http://www.cs.waikato.ac.nz/ml/weka/downloading.html. Add this jar to the classpath and compile the above program.
+                    <br>
+                    <br> In the above program, naiveBayesClassifierTrainedWithCV is used to train a naïve Bayes classifier with the dataset that is passed as an argument. The second argument numFolds is used to mentioned the number of folds for cross-validation.
+                    For e.g., 10-fold cross-validation requires numFolds = 10. generateTestSample is used to generate a test sample for which a class label will be predicted by the classifier. getDistributionInstanceForATestSample is used to get the probability
+                    distribution for a test sample predicted by the classifier.
+                    <br>
+                    <br> Following is a wrapper for these methods in ColdFusion. I have created a CFC for the same </p>
+
+                <div class="row" style="margin-top:50px;margin-bottom:50px">
+                    <div class="col-md-12">
+                        <code>
+
+                      </code>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <p>Above file is named as MachineLearning.cfc. Init() method is used to load the ARFF file. Rest of the methods are just wrappers around the corresponding Java methods. This CFC is used as follows</p>
+
+                <br>
+                <br>
+                <div class="row" style="margin-top:50px;margin-bottom:50px">
+                    <div class="col-md-12">
+                        <code>
+
+      </code>
+                    </div>
+                </div>
+                <p>
+                    MachineLearning object is created and naïve Bayes classifier is called on that object. Once the model is trained, a test sample is created and we want to know what is the label that is predicted by the classifier. Instead of getting the label, probability
+                    distribution of the test sample over the class labels is calculated i.e. probability of test sample being yes and probability of the sample being no. This is achieved by calling getDistributionInstanceForATestSample method. Below is
+                    the output that we get
+                </p>
+            </div>
+
+            <div class="col-xs-3 col-sm-2"></div>
+        </div>
+    </div>
+    <footer style="margin-top:50px;">
+        <div class='container' style="position: relative;">
+            <div class="row" style="margin-top: 13px;    height: 24px;">
+                <div class="col-xs-7 col-sm-7" style="height:44px">
+                    <p style="    line-height: 40px;">© Copyright 2016 Robert James Gabriel</p>
+                </div>
+
+                <div class="col-xs-5 col-sm-5">
+                    <ul>
+                        <a href="https://medium.com/@RobertJGabriel" alt="medium"><i class="fa fa-medium" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/RobertJGabriel"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="mailto:robert_gabriel@outlook.com" alt="mail"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        <a href="http://www.uplabs.com/RobertJGabriel" alt="dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="https://plus.google.com/105784333865475696211/posts" alt="googleplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/robertjamesgabriel" alt="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="assets/js/lib/L.js"></script>
+    <script src="assets/js/app/main.js" type="application/javascript" async></script>
+</body>
+
+</html>
