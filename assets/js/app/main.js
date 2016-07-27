@@ -3,7 +3,7 @@ ljs.load(['http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'
   function() {
 
     $.material.init();
-    
+
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function() {
@@ -18,6 +18,13 @@ ljs.load(['http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js'
 
     ga('create', 'UA-39444052-10', 'auto');
     ga('send', 'pageview');
+
+    if (regexUrlextensioncheck("github")){
+      $(document).ready( function(){
+
+      });
+    }
+
   });
 
 
