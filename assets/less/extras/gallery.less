@@ -46,11 +46,13 @@
 @-webkit-keyframes "display" {
     from {
         -webkit-transform: scale(0);
+        transform: scale(0);
     }
     4%,
     76%,
     to {
         -webkit-transform: scale(1);
+      transform: scale(1);
     }
 }
 @media @desktop {
@@ -94,24 +96,28 @@
         float: left;
         -webkit-animation-fill-mode: forwards;
         /* Chrome, Safari, Opera */
-        animation: display 5s;
-        -o-animation: display 5s;
-        -ms-animation: display 5s;
-        -moz-animation: display 5s;
-        -webkit-animation: display 5s;
+
+        -webkit-animation: display 5s linear infinite alternate;
+           -moz-animation:display 5s linear infinite alternate;
+            -ms-animation: display 5s linear infinite alternate;
+             -o-animation: display 5s linear infinite alternate;
+                animation: display 5s linear infinite alternate; /* this comes last */
+
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         &:nth-child(2) {
             background-color: red !important;
-            -webkit-animation-fill-mode: forwards;
+
             /* Chrome, Safari, Opera */
-            animation-delay: 0.2s forwards;
+
             -o-animation-delay: 0.2s;
             -ms-animation-delay: 0.2s;
             -moz-animation-delay: 0.2s;
             -webkit-animation-delay: 0.2s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
+                        animation-delay: 0.2s forwards;
+                        -webkit-animation-fill-mode: forwards;
+                        -webkit-animation-iteration-count: 3; /* Chrome, Safari, Opera */
+     animation-iteration-count: 3;
         }
         &:nth-child(3) {
             background-color: green !important;
@@ -128,6 +134,7 @@
         &:nth-child(4) {
             background-color: pink !important;
             -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
             animation-delay: 0.4s;
             -o-animation-delay: 0.4s;
@@ -139,6 +146,7 @@
         }
         &:nth-child(5) {
             -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
             animation-delay: 0.5s;
             -o-animation-delay: 0.5s;
@@ -150,6 +158,7 @@
         }
         &:nth-child(6) {
             -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
             animation-delay: 0.6s;
             -o-animation-delay: 0.6s;
@@ -161,6 +170,7 @@
         }
         &:nth-child(7) {
             -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
             animation-delay: 0.7s;
             -o-animation-delay: 0.7s;
@@ -172,6 +182,7 @@
         }
         &:nth-child(8) {
             -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
             animation-delay: 0.8s;
             -o-animation-delay: 0.8s;
