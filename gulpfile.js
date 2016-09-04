@@ -12,6 +12,7 @@ var htmlmin = require('gulp-htmlmin');
 var del = require('del');
 var concat = require('gulp-concat');
 
+
 gulp.task('less', function() {
   gulp.src('./assets/less/styles.less')
     .pipe(less()
@@ -29,12 +30,21 @@ gulp.task('less', function() {
     .pipe(gulp.dest('./dist/css/'));
 });
 
+
 gulp.task('fonts',function(){
   return gulp.src([
       './assets/fonts/*',
   ])
   .pipe(gulp.dest('./dist/fonts/'));
 });
+
+gulp.task('downloads',function(){
+  return gulp.src([
+      './assets/downloads/*/**',
+  ])
+  .pipe(gulp.dest('./dist/downloads/'));
+});
+
 
 gulp.task('scripts', function() {
   return gulp.src([
@@ -57,6 +67,7 @@ gulp.task('views', function() {
       .pipe(gulp.dest(''));
 });
 
+
 gulp.task('clean', function(cb) {
 	del([
     'dist/',
@@ -65,9 +76,9 @@ gulp.task('clean', function(cb) {
 		'!gulpfile.js',
 		'!CNAME',
     '!sitemap.xml',
-        '!README.md'
+    '!README.md'
 	], cb);
 });
 
 // Default Task
-gulp.task('default', ['clean','less','fonts','scripts','views']);
+gulp.task('default', ['clean','less','fonts','downloads','scripts','views']);
