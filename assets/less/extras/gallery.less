@@ -5,7 +5,12 @@
 
 
 
-
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
 @keyframes "display" {
     from,
     to {
@@ -63,7 +68,7 @@
   .feature{
     width: 60% !important;
   }
-  
+
 }
 #gallery {
     list-style-type: none;
@@ -97,8 +102,7 @@
             margin-bottom: 5%;
             margin-right: 2%;
         }
-        display: inline-block;
-        display: inline-block;
+
         float: left;
         -webkit-animation-fill-mode: forwards;
         /* Chrome, Safari, Opera */

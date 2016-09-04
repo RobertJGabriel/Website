@@ -14,3 +14,6 @@ $.material.init();
 
        ga('create', 'UA-39444052-10', 'auto');
        ga('send', 'pageview');
+       $(window).load(function() {
+         $("body").removeClass("preload");
+       });
