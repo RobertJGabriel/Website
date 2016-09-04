@@ -1,5 +1,5 @@
 {
-  "name": "Robin",
+  "name": "Website",
   "main": "index.html",
   "icon": "assets/img/icons/icon.icns",
   "description": "Robin is light weight award winning web browser. It is designed for low-end machines and for Teachers and Parents to block website and terms.",
@@ -51,6 +51,8 @@
     "remove": "node tests/remove.js"
   },
   "dependencies": {
+    "del": "^2.2.2",
+    "gulp-concat": "^2.6.0",
     "gulp-htmlmin": "^2.0.0",
     "gulp-install": "^0.4.0",
     "html-minifier": "^3.0.2"
