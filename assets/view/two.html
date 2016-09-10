@@ -70,14 +70,27 @@
 
 
 
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="http://fezvrasta.github.io/bootstrap-material-design/dist/js/material.js"></script>
-  <script src="http://fezvrasta.github.io/bootstrap-material-design/dist/js/ripples.min.js"></script>
+  <script src="dist/js/all.min.js"></script>
+  <noscript id="deferred-styles">
+   <link href="dist/css/styles.min.css" rel="stylesheet">
+  </noscript>
+  <noscript id="deferred-styles">
+   <link rel="stylesheet" type="text/css" href="small.css"/>
+ </noscript>
   <script>
-    $.material.init();
+      var loadDeferredStyles = function() {
+          var addStylesNode = document.getElementById("deferred-styles");
+          var replacement = document.createElement("div");
+          replacement.innerHTML = addStylesNode.textContent;
+          document.body.appendChild(replacement)
+          addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() {
+          window.setTimeout(loadDeferredStyles, 0);
+      });
+      else window.addEventListener('load', loadDeferredStyles);
   </script>
 </body>
 

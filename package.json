@@ -51,6 +51,7 @@
     "remove": "node tests/remove.js"
   },
   "dependencies": {
+    "critical": "^0.8.0",
     "del": "^2.2.2",
     "gulp-concat": "^2.6.0",
     "gulp-htmlmin": "^2.0.0",
