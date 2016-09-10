@@ -43,3 +43,7 @@ jspm_packages
 .node_repl_history
 
 node_modules
+
+.DS_Store
+
+assets/img/.DS_Store
