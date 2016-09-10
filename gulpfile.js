@@ -11,7 +11,7 @@ var rename = require("gulp-rename");
 var htmlmin = require('gulp-htmlmin');
 var del = require('del');
 var concat = require('gulp-concat');
-
+var imagemin = require('gulp-imagemin');
 
 gulp.task('less', function() {
   gulp.src('./assets/less/styles.less')
@@ -27,6 +27,7 @@ gulp.task('less', function() {
     .pipe(minifyCSS({
       keepSpecialComments: 1
     }))
+    .pipe(rename("styles.min.css"))
     .pipe(gulp.dest('./dist/css/'));
 });
 
@@ -55,9 +56,9 @@ gulp.task('scripts', function() {
     './assets/js/vendor/ripples.js',
     './assets/js/app/main.js'
     ])
-    .pipe(concat('all.js'))
+    .pipe(concat('all.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./dist/js'));
 });
 
 
@@ -66,6 +67,12 @@ gulp.task('views', function() {
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest(''));
 });
+
+gulp.task('images', () =>
+    gulp.src('assets/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'))
+);
 
 
 gulp.task('clean', function(cb) {
@@ -81,4 +88,4 @@ gulp.task('clean', function(cb) {
 });
 
 // Default Task
-gulp.task('default', ['clean','less','fonts','downloads','scripts','views']);
+gulp.task('default', ['clean','images','less','fonts','downloads','scripts','views']);
