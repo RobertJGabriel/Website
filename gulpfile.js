@@ -12,7 +12,7 @@ var htmlmin = require('gulp-htmlmin');
 var del = require('del');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
-var critical = require('critical');
+var critical = require('critical').stream;
 
 gulp.task('less', function() {
     gulp.src('./assets/less/styles.less')
@@ -32,15 +32,22 @@ gulp.task('less', function() {
         .pipe(gulp.dest('./dist/css/'));
 });
 
+
+
+
+// Generate & Inline Critical-path CSS
 gulp.task('critical', function() {
-    critical.generate({
-        base: '/',
-        src: 'dist/view/index.html',
-        dest: 'dist/css/main.css',
-        width: 1300,
-        height: 900
-    });
+    return gulp.src('*.html')
+        .pipe(critical({
+            inline: true,
+            minify: true,
+            width: 1300,
+            height: 900
+        }))
+        .pipe(gulp.dest(''));
 });
+
+
 gulp.task('fonts', function() {
     return gulp.src([
             './assets/fonts/*',
@@ -99,4 +106,8 @@ gulp.task('clean', function(cb) {
 });
 
 // Default Task
-gulp.task('default', ['clean', 'images', 'less', 'fonts', 'downloads', 'scripts', 'views']);
+
+
+gulp.task('default',  function(callback) {
+    runSequence('images', 'less', 'fonts', 'downloads', 'scripts', 'views', 'critical', callback);
+});
