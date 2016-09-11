@@ -12,34 +12,70 @@
     <meta name="keywords" content="HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node. j's, PHP and SQL developer,golang,web design ">
 
     <style>
-        body {
-            height: 100vh;
-            font-family: RobotoDraft, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            background-color: #EEE;
-            margin: 0;
-            font-size: 14px;
-            line-height: 1.42857143;
-            color: #333;
-        }
+    body {
+        height: 100vh;
+        font-family: RobotoDraft, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        background-color: #EEE;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+    }
 
-        a {
-            text-decoration: none;
-        }
-
-        .navbar .navbar-brand {
-            position: relative;
-            height: 60px;
-            line-height: 30px;
-            color: inherit;
-            float: left;
-            padding: 15px;
-            font-size: 18px;
-        }
-
-        .navbar-warning.navbar {
-            background-color: #ff5722;
-        }
+    a {
+        text-decoration: none;
+    }
+    li, p {
+font-size: 16px;
+line-height: 1.7!important;
+}
+.menu-bar li:first-child a {
+height: 5em;
+background: #f7f7f7;
+color: #333;
+line-height: 5;
+}
+.menu-bar li a {
+height: 4em;
+line-height: 4em;
+color: #333;
+font-family: verdana;
+}
+.fa-ul>li, .menu-bar li a {
+position: relative;
+}
+.menu li a, .menu-bar li a {
+display: block;
+border-bottom: 1px solid rgba(0,0,0,.05);
+text-align: center;
+}
+.btn, .menu-bar li a {
+text-decoration: none;
+}
+    .navbar .navbar-brand {
+        position: relative;
+        height: 60px;
+        line-height: 30px;
+        color: inherit;
+        float: left;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .menu-bar {
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        background: #f7f7f7;
+        box-shadow: 2px 0 18px rgba(0,0,0,.26);
+        overflow: hidden;
+        right: -100em;
+        z-index: 5;
+        height: 100%;
+    }
+    .navbar-warning.navbar {
+        background-color: #ff5722;
+    }
     </style>
 </head>
 <body>
@@ -172,7 +208,7 @@
     <noscript id="deferred-styles">
      <link href="dist/css/styles.min.css" rel="stylesheet">
     </noscript>
-  
+
     <script>
         var loadDeferredStyles = function() {
             var addStylesNode = document.getElementById("deferred-styles");

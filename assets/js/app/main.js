@@ -10,7 +10,7 @@ $.material.init();
            a.async = 1;
            a.src = g;
            m.parentNode.insertBefore(a, m)
-       })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+       })(window, document, 'script', 'assets/js/vendor/ga.js', 'ga');
 
        ga('create', 'UA-39444052-10', 'auto');
        ga('send', 'pageview');
