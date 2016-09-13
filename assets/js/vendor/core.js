@@ -1,28 +1,24 @@
 $(function() {
     //caches a jQuery object containing the header element
     var header = $(".clearHeader");
+    var navText = $("#logo1");
+    var bannerText = $('#logo2');
     $(window).scroll(function() {
+
         var scroll = $(window).scrollTop();
 
           if (scroll >= 100) {
-              $("#logo1").removeClass("hide");
-              $("#logo1").addClass("show");
-              $("#logo1").text(" - " + $('#logo2').text());
-              $("#logo2").removeClass("show");
-              $("#logo2").addClass("hide");
+              navText.removeClass("hide");
+              navText.addClass("show");
+              bannerText.length? navText.text(" - " + bannerText.text()) : null;
+              bannerText.removeClass("show");
+              bannerText.addClass("hide");
           } else {
-
-              $("#logo2").removeClass("hide");
-              $("#logo2").addClass("show");
-              $("#logo1").removeClass("show");
-              $("#logo1").addClass("hide");
-
-          
-
+              bannerText.removeClass("hide");
+              bannerText.addClass("show");
+              navText.removeClass("show");
+              navText.addClass("hide");
         }
-
-
-
 
     });
 
