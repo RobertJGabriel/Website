@@ -3,21 +3,20 @@ $(function() {
     var header = $(".clearHeader");
     var navText = $("#logo1");
     var bannerText = $('#logo2');
+    navText.addClass("show");
+    navText.text("Robert James Gabriel" );
     $(window).scroll(function() {
 
         var scroll = $(window).scrollTop();
 
           if (scroll >= 100) {
-              navText.removeClass("hide");
-              navText.addClass("show");
-              bannerText.length? navText.text(" - " + bannerText.text()) : null;
-              bannerText.removeClass("show");
-              bannerText.addClass("hide");
+
+
+              bannerText.length > 0 ?  navText.text("Robert James Gabriel - " + bannerText.text()):navText.text("Robert James Gabriel" );
           } else {
-              bannerText.removeClass("hide");
-              bannerText.addClass("show");
-              navText.removeClass("show");
-              navText.addClass("hide");
+
+
+                bannerText.length > 0 ? navText.text("Robert James Gabriel"):navText.text("Robert James Gabriel" );
         }
 
     });
