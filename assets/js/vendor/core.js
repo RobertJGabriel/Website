@@ -22,8 +22,9 @@ $(function() {
 
 
         var h1Elements = document.getElementsByTagName("h1");
-          var hrElements = document.getElementsByTagName("hr");
-                var h3Elements = document.getElementsByTagName("h3");
+        var hrElements = document.getElementsByTagName("hr");
+        var h3Elements = document.getElementsByTagName("h3");
+        var aTagsElements = document.getElementsByTagName("a");
         var color = document.getElementById('header').style.backgroundColor;
         for (var i = 1; i < h1Elements.length; i++) {
             h1Elements[i].style.color = color;
@@ -32,6 +33,9 @@ $(function() {
             h3Elements[i].style.color = color;
         }
         for (var i = 0; i < hrElements.length; i++) {
+            hrElements[i].style.color = color;
+        }
+        for (var i = 0; i < aTagsElements.length; i++) {
             hrElements[i].style.color = color;
         }
     }
