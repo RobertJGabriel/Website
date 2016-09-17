@@ -1,23 +1,37 @@
 // Height variables (appears count calculates by raw css)
 @height1: 100vh; // Appears 2 times
+
 html {
 	height: @height1;
 }
+
 body {
 	height: @height1;
 }
+
 canvas {
 	width: 100% !important;
-	    cursor: crosshair;
+	cursor: crosshair;
 }
+
+.header-title {
+	line-height: 94px;
+
+	padding-top: 90px;
+	cursor: pointer;
+	word-break: break-all;
+	white-space: initial;
+}
+
 header {
 	-webkit-transition: top 0.5s;
 	background: #ff5722;
-	height: 308px;
+	height: 340px;
 	left: 0;
 	position: none !important;
 	top: 0;
 	width: 100%;
+
 	.header-title {
 		color: #fff;
 		font-size: 56px;
@@ -28,40 +42,52 @@ header {
 		white-space: nowrap;
 	}
 }
+
 .embed-responsive {
 	margin: 20px 10 20px 0;
 }
+
 img {
 	margin: 20px 10 20px 0;
 }
+
 footer {
 	background-color: white;
 }
+
 .hide {
 	display: none;
 }
+
 .show {
 	display: block;
 }
+
 .fa {
 	font-size: 24px !important;
 	margin: 10px;
 }
-.container-fluid>.navbar-header{
+
+.container-fluid > .navbar-header {
 	margin-left: 0;
 	margin-right: 0;
 }
-.bold{
+
+.bold {
 	font-weight: 400 !important;
 }
-p,li {
+
+li,
+p {
 	font-size: 16px;
 	line-height: 1.7 !important;
 }
-#logo1{
+
+#logo1 {
 	line-height: 30px !important;
 	font-size: 18px;
 }
+
 .shadow {
 	background-image: url("https://design.google.com/images/shadow.png");
 	background-repeat: repeat-x;
