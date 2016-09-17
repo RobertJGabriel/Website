@@ -22,9 +22,13 @@ $(function() {
 
 
         var h1Elements = document.getElementsByTagName("h1");
+                var h3Elements = document.getElementsByTagName("h3");
         var color = document.getElementById('header').style.backgroundColor;
         for (var i = 1; i < h1Elements.length; i++) {
             h1Elements[i].style.color = color;
+        }
+        for (var i = 1; i < h3Elements.length; i++) {
+            h3Elements[i].style.color = color;
         }
     }
     $(".menu-button").click(function(e) {
