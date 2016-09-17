@@ -58,12 +58,21 @@
         width: 60% !important;
     }
 }
+.wide {
+    width: 100% !important;
+}
 #gallery {
     list-style-type: none;
     margin: 0;
     padding: 0;
     -webkit-overflow-scrolling: touch;
+    .wide {
+        width: 100% !important;
+    }
     li {
+      .wide {
+          width: 100% !important;
+      }
         margin-bottom: 2%;
         @media @desktop {
             .feature {
@@ -89,6 +98,8 @@
             margin-bottom: 5%;
             margin-right: 2%;
         }
+
+
         display: inline-block;
         display: inline-block;
         float: left;
@@ -126,7 +137,7 @@
             animation-fill-mode: forwards;
         }
         &:nth-child(4) {
-          
+
             -webkit-animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
             animation-delay: 0.4s;
