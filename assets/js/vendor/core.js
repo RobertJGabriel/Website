@@ -32,11 +32,13 @@ $(function() {
         for (var i = 0; i < h3Elements.length; i++) {
             h3Elements[i].style.color = color;
         }
+        if(hrElements.length > 0){
         for (var i = 0; i < hrElements.length; i++) {
             hrElements[i].style.color = color;
         }
-        for (var i = 0; i < aTagsElements.length; i++) {
-            hrElements[i].style.color = color;
+      }
+        for (var i = 4; i < aTagsElements.length; i++) {
+            aTagsElements[i].style.color = color;
         }
     }
     $(".menu-button").click(function(e) {
