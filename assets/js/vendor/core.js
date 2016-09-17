@@ -37,13 +37,14 @@ $(function() {
             hrElements[i].style.color = color;
         }
       }
-        for (var i = 4; i < aTagsElements.length; i++) {
+        for (var i = 6; i < aTagsElements.length; i++) {
             aTagsElements[i].style.color = color;
         }
     }
     $(".menu-button").click(function(e) {
         $(".menu-bar").addClass("open");
         $(".grey").addClass("show");
+         $(".overlay").show();
         e.stopPropagation();
 
     });
@@ -54,6 +55,7 @@ $(function() {
         if (!$(e.target).is('.menu-bar *,.menu-bar')) {
             $(".menu-bar").removeClass("open");
             $(".grey").removeClass("show");
+            $(".overlay").hide();
         }
     });
 });

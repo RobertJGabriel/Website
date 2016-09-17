@@ -4,6 +4,19 @@
 @font-family_1: FontAwesome;
 @font-family_2: verdana;
 
+.overlay {
+    position: fixed;
+    display: none;
+    /* color with alpha transparency */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* stretch to screen edges */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
 .card .card-footer a {
     margin: 0 !important;
     position: relative;
@@ -20,6 +33,8 @@ hr {
 }
 
 .menu {
+      position: absolute;
+      z-index: 3319;
     li {
         a {
             display: block;
@@ -147,7 +162,7 @@ hr {
 }
 
 .navbar-brand {
-  width: 85%;
+    width: 85%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
