@@ -10,8 +10,12 @@ $(function() {
         var scroll = $(window).scrollTop();
 
         if (scroll >= 100) {
+
+            $(".navbar").addClass("shadow");
             bannerText.length > 0 ? navText.text("Robert James Gabriel - " + bannerText.text()) : navText.text("Robert James Gabriel");
         } else {
+
+            $(".navbar").removeClass("shadow");
             bannerText.length > 0 ? navText.text("Robert James Gabriel") : navText.text("Robert James Gabriel");
         }
 
@@ -32,11 +36,11 @@ $(function() {
         for (var i = 0; i < h3Elements.length; i++) {
             h3Elements[i].style.color = color;
         }
-        if(hrElements.length > 0){
-        for (var i = 0; i < hrElements.length; i++) {
-            hrElements[i].style.color = color;
+        if (hrElements.length > 0) {
+            for (var i = 0; i < hrElements.length; i++) {
+                hrElements[i].style.color = color;
+            }
         }
-      }
         for (var i = 6; i < aTagsElements.length; i++) {
             aTagsElements[i].style.color = color;
         }
@@ -44,7 +48,7 @@ $(function() {
     $(".menu-button").click(function(e) {
         $(".menu-bar").addClass("open");
         $(".grey").addClass("show");
-         $(".overlay").show();
+        $(".overlay").show();
         e.stopPropagation();
 
     });
