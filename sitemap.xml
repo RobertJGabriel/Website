@@ -1,22 +1,75 @@
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--
- created with Free Online Sitemap Generator www.xml-sitemaps.com 
--->
-<url>
-<loc>http://robertgabriel.ninja/</loc>
-<lastmod>2016-08-08T23:26:07+00:00</lastmod>
-</url>
-<url>
-<loc>http://robertgabriel.ninja/index.html</loc>
-<lastmod>2016-08-08T23:26:07+00:00</lastmod>
-</url>
-<url>
-<loc>http://robertgabriel.ninja/awards.html</loc>
-<lastmod>2016-08-08T23:26:07+00:00</lastmod>
-</url>
-<url>
-<loc>http://robertgabriel.ninja/html5-canvas.html</loc>
-<lastmod>2016-08-08T23:26:07+00:00</lastmod>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://robertgabriel.ninja/Research-into-Web-Accessibility-for-Dyslexics-and-Dyslexia-focused-fonts-such-asOpenDyslexia.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/adblockers.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/awards.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/cv.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/github.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/googlea4b2e0ff05c168d5.html</loc>
+        <lastmod>2016-10-09T22:20:33.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/html5-canvas.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/robin.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/stuff-i-use.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/talks.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/work.html</loc>
+        <lastmod>2016-10-09T22:21:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
 </urlset>

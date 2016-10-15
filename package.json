@@ -34,6 +34,7 @@
     "gulp-minify-css": "*",
     "gulp-rename": "*",
     "gulp-shell": "*",
+    "gulp-sitemap": "^4.2.0",
     "gulp-uglify": "*",
     "gulp-util": "*",
     "imagemin-pngquant": "*",

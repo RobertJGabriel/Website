@@ -13,6 +13,9 @@ var del = require('del');
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var critical = require('critical').stream;
+var sitemap = require('gulp-sitemap');
+
+
 
 gulp.task('less', function() {
     gulp.src('./assets/less/styles.less')
@@ -105,9 +108,23 @@ gulp.task('clean', function(cb) {
     ], cb);
 });
 
+gulp.task('sitemap', function () {
+    gulp.src('./*.html', {
+            read: false
+        })
+        .pipe(sitemap({
+            siteUrl: 'http://robertgabriel.ninja',
+            priority: 1.0,
+            changefreq:'weekly'
+        }))
+        .pipe(gulp.dest('./'));
+});
+
+
+
 // Default Task
 
 
 gulp.task('default',  function(callback) {
-    runSequence('images', 'less', 'fonts', 'downloads', 'scripts', 'views', 'critical', callback);
+    runSequence('images', 'less', 'fonts', 'downloads', 'scripts', 'views', 'critical','sitemap', callback);
 });
