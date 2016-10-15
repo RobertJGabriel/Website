@@ -15,6 +15,22 @@ body {
 	}
 }
 
+.me {
+	height: 120px;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: contain;
+	border-radius: 120px;
+	background-image: url('../images/me.png');
+	transition: background-image 0.4s ease-in-out;
+
+	&:hover {
+		transition: background-image 0.4s ease-in-out;
+		background-image: url('../images/logo.png');
+	}
+}
+
 canvas {
 	width: 100% !important;
 	cursor: crosshair;
@@ -91,10 +107,54 @@ footer {
 li,
 p {
 	font-size: 16px;
-	line-height: 1.7 !important;
+	line-height: 1.7;
 }
 
 #logo1 {
 	line-height: 30px !important;
 	font-size: 18px;
+}
+
+footer {
+	margin-top: 50px;
+
+	.container {
+		position: relative;
+
+		.row {
+			height: 40px;
+			margin-top: 10px;
+
+			.col-sm-7,
+			.col-xs-7 {
+				height: 44px;
+				padding: 0;
+				margin: 0;
+
+				p {
+					text-align: center;
+					color: #ababab;
+					padding: 0;
+					line-height: 44px !important;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.awards {
+	header {
+		.container-fluid {
+			margin-top: 50px;
+
+			.row {
+				padding-top: 40px;
+
+				h1 {
+					color: white;
+				}
+			}
+		}
+	}
 }

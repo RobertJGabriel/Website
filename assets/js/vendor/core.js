@@ -42,6 +42,7 @@ $(function() {
             }
         }
         for (var i = 6; i < aTagsElements.length; i++) {
+            console.log("s");
             aTagsElements[i].style.color = color;
         }
     }
