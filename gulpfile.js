@@ -37,17 +37,6 @@ gulp.task('less', function() {
 
 
 
-// Generate & Inline Critical-path CSS
-gulp.task('critical', function() {
-    return gulp.src('*.html')
-        .pipe(critical({
-            inline: true,
-            minify: true,
-            width: 1300,
-            height: 900
-        }))
-        .pipe(gulp.dest(''));
-});
 
 
 gulp.task('fonts', function() {
@@ -79,14 +68,6 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('./dist/js'));
 });
 
-
-gulp.task('views', function() {
-    return gulp.src('assets/view/*.html')
-        .pipe(htmlmin({
-            collapseWhitespace: true
-        }))
-        .pipe(gulp.dest(''));
-});
 
 gulp.task('images', () =>
     gulp.src('assets/img/*')
@@ -120,13 +101,19 @@ gulp.task('sitemap', function() {
 });
 
 
-gulp.task('jade', function() {
+gulp.task('views', function() {
     var YOUR_LOCALS = {};
 
     gulp.src('./assets/view/*.jade')
         .pipe(jade({
             locals: YOUR_LOCALS
+        })).pipe(critical({
+            inline: true,
+            minify: true,
+            width: 1300,
+            height: 900
         }))
+
         .pipe(gulp.dest('./'))
 });
 
@@ -134,5 +121,5 @@ gulp.task('jade', function() {
 
 
 gulp.task('default', function(callback) {
-    runSequence('images', 'less', 'fonts', 'downloads', 'scripts', 'jade', 'views', 'critical', 'sitemap', callback);
+    runSequence('images', 'less', 'fonts', 'downloads', 'scripts', 'views', 'sitemap', callback);
 });
