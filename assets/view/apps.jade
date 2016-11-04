@@ -1,0 +1,72 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width')
+    meta(name='keywords', content="HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node. j's, PHP and SQL developer,golang,web design ")
+    meta(name='description', content='While doing research and odd thoughts on code, I store them on my blog which is here. I also do a lot of talks and presentations on machine learning and HCI/Ux')
+    meta(name='author', content='Robert James Gabriel')
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:description', content='While doing research and odd thoughts on code, I store them on my blog which is here. I also do a lot of talks and presentations on machine learning and HCI/Ux')
+    meta(property='og:image', content='http://robertgabriel.ninja/dist/images/me.png')
+    meta(name='twitter:image:src', content='http://robertgabriel.ninja/dist/images/me.png')
+    meta(name='twitter:creator', content='@RobertJGabriel')
+    meta(name='twitter:url', content='http://robertgabriel.ninja')
+    meta(name='twitter:title', content='Robert James Gabriel')
+    meta(name='theme-color', content='#eb298c')
+    title Robert James Gabriel : Apps
+    link(href='dist/css/styles.min.css', rel='stylesheet')
+    link(rel='icon', type='image/png', href='assets/img/favicon.png')
+    link(href='dist/css/styles.min.css', rel='stylesheet')
+    style.
+      img {
+      max-height: 175px;
+      min-width: 100%;
+      }
+  body.preload.awards
+    .navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#E91E63;z-index:9;top: 0;position:fixed;width:100%;')
+      .container-fluid
+        .navbar-header(style='width: 100%;')
+          a#logo1.navbar-brand(href='./index.html')
+          a.menu-button.home
+            i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
+        ul.nav.navbar-nav.navbar-right(style='width:100%;')
+          ul.menu-bar.slideLeft
+            li
+              a.menu-button(href='index.html') About
+            li
+              a.menu-button(href='apps.html') Apps
+            li
+              a(href='talks.html') Talks
+            li
+              a(href='https://blog.robertgabriel.ninja') Blog
+            li
+              a(href='awards.html') Awards
+    .overlay
+    header#header.withripple.shadow(data-ripple-color='red', style='background-color:#E91E63;')
+      .container-fluid
+        .row
+          .col-sm-3
+          .col-sm-6
+            .row
+              .me
+              h1#logo2.text-center
+                b  Apps & Software
+          .col-sm-3
+    .container(style='   margin-top:50px;')
+      .row
+        ul#gallery.loadseffect
+          li
+            .panel.panel-primary
+              .panel-body
+                img.img-responsive(src='https://lh3.googleusercontent.com/meqBehwoSvHDsjJl3khcDtZ2iAkQ-qPsNx3mJHiX06ugRgzDyotwJEVDov4pcQJgSy0_cOT4NA=s1280-h800-e365-rw', alt='Loading image...')
+                h3 OpenDyslexic For Chrome
+                p
+                  | Open-Dyslexic is an open sourced font created to increase readability for readers with dyslexia. This extension overrides all fonts on webpages with the OpenDyslexic font, and formats pages to be more easily readable.
+                  b 37,000 Users
+              .panel-footer
+                a.btn.btn-flat.btn-warning(href='https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam') Download Now
+    footer
+      include ./parts/footer.jade
+    script(async='', src='dist/js/all.min.js')

@@ -43,7 +43,8 @@
     "profanity-check": "*",
     "psi": "*",
     "run-sequence": "*",
-    "scraper-web": "*"
+    "scraper-web": "*",
+    "gulp-jade":"*"
   },
   "scripts": {
     "start": "nodewebkit",
