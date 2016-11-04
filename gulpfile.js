@@ -15,6 +15,7 @@ var imagemin = require('gulp-imagemin');
 var critical = require('critical').stream;
 var sitemap = require('gulp-sitemap');
 var jade = require('gulp-jade');
+var coffee = require('gulp-coffee');
 
 gulp.task('less', function() {
     gulp.src('./assets/less/styles.less')
@@ -54,14 +55,14 @@ gulp.task('downloads', function() {
 });
 
 
-gulp.task('scripts', function() {
+gulp.task('thirdParty', function() {
     return gulp.src([
             './assets/js/vendor/jquery.js',
             './assets/js/vendor/bootstrap.js',
-            './assets/js/vendor/core.js',
             './assets/js/vendor/material.js',
             './assets/js/vendor/ripples.js',
-            './assets/js/app/main.js'
+              './assets/js/app/core.js',
+              './assets/js/app/main.js'
         ])
         .pipe(concat('all.min.js'))
         .pipe(uglify())
@@ -88,6 +89,7 @@ gulp.task('clean', function(cb) {
     ], cb);
 });
 
+
 gulp.task('sitemap', function() {
     gulp.src('./*.html', {
             read: false
@@ -113,13 +115,19 @@ gulp.task('views', function() {
             width: 1300,
             height: 900
         }))
+    .pipe(gulp.dest('./'))
+});
 
-        .pipe(gulp.dest('./'))
+
+gulp.task('coffee', function() {
+    gulp.src('./js/app/*.coffee')
+        .pipe(coffee({
+            bare: true
+        }).on('error', gutil.log))
+        .pipe(gulp.dest('./js/app/d/'));
 });
 
 // Default Task
-
-
 gulp.task('default', function(callback) {
-    runSequence('images', 'less', 'fonts', 'downloads', 'scripts', 'views', 'sitemap', callback);
+    runSequence('images', 'less', 'fonts', 'downloads', 'coffee', 'thirdParty', 'views', 'sitemap', callback);
 });

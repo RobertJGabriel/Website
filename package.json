@@ -22,6 +22,7 @@
     "bayes": "*",
     "chalk": "*",
     "firebase": "*",
+    "gulp-coffee":"*",
     "getmac": "*",
     "gulp": "*",
     "gulp-clean": "*",
