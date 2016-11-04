@@ -61,8 +61,8 @@ gulp.task('thirdParty', function() {
             './assets/js/vendor/bootstrap.js',
             './assets/js/vendor/material.js',
             './assets/js/vendor/ripples.js',
-              './assets/js/app/core.js',
-              './assets/js/app/main.js'
+            './assets/js/app/core.js',
+            './assets/js/app/main.js'
         ])
         .pipe(concat('all.min.js'))
         .pipe(uglify())
@@ -85,7 +85,9 @@ gulp.task('clean', function(cb) {
         '!gulpfile.js',
         '!CNAME',
         '!sitemap.xml',
-        '!README.md'
+        '!README.md',
+        './assets/js/app/core.js',
+        './assets/js/app/main.js'
     ], cb);
 });
 
@@ -115,16 +117,16 @@ gulp.task('views', function() {
             width: 1300,
             height: 900
         }))
-    .pipe(gulp.dest('./'))
+        .pipe(gulp.dest('./'))
 });
 
 
 gulp.task('coffee', function() {
-    gulp.src('./js/app/*.coffee')
+    gulp.src('./assets/js/app/*.coffee')
         .pipe(coffee({
             bare: true
         }).on('error', gutil.log))
-        .pipe(gulp.dest('./js/app/d/'));
+        .pipe(gulp.dest('./assets/js/app/'));
 });
 
 // Default Task
