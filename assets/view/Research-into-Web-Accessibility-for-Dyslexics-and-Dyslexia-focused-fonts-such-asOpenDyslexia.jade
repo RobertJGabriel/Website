@@ -18,7 +18,7 @@ html(lang='en')
     title
       | Robert James Gabriel : Research into Web Accessibility for Dyslexics and Dyslexia-focused fonts such as OpenDyslexia
     link(href='dist/css/styles.min.css', rel='stylesheet')
-    link(rel='icon', type='image/png', href='assets/img/favicon.png')
+    link(rel='icon', type='image/png', href='dist/img/favicon.png')
   body.story
     .navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#00BCD4;z-index:9;top: 0;position:fixed;width:100%;')
       .container-fluid
@@ -58,7 +58,7 @@ html(lang='en')
             | which are small lines at the ends/tips of characters such as in Comic Sans).
           .row(style='margin-bottom:50px;')
             .col-md-12
-              img.img-responsive(src='./assets/img/talks/sans.jpg')
+              img.img-responsive(src='./dist/img/talks/sans.jpg')
           p
             | Fonts may be display fonts, designed for headlines, or text fonts, designed for large bodies of smaller text.
           p
@@ -74,7 +74,7 @@ html(lang='en')
           p The following graphic summarizes the key parts:
           .row(style='margin-bottom:50px;')
             .col-md-12
-              img.img-responsive(src='./assets/img/talks/typography.jpg')
+              img.img-responsive(src='./dist/img/talks/typography.jpg')
           h1 What is OpenDyslexia
           p
             | OpenDyslexia is a free font face designed to mitigate some of the common reading errors caused by dyslexia. It was made with the goal of helping with some of the symptoms of dyslexia. The font is based on the concept that the letters have heavily weighted
@@ -87,7 +87,7 @@ html(lang='en')
             br
           .row(style='margin-bottom:50px;')
             .col-md-12
-              img.img-responsive(src='./assets/img/talks/OpenDyslexic.png')
+              img.img-responsive(src='./dist/img/talks/OpenDyslexic.png')
           h1 The History of OpenDyslexia’s Development
           p
             | The font was created by a dyslexic and software developer Abelardo Gonzalez, who released it under an open-source license. The design for the font is based on that of DejaVu Sans, also open-source.
@@ -297,7 +297,7 @@ html(lang='en')
                   | V. F. d. Santana, "https://pdfs.semanticscholar.org," University of Campinas , 23 June ] 2012. [Online] [Accessed 23 Febuary 2016].
         .col-xs-2
     .container
-      include ./parts/madewith.jade
+      include ./parts/modal.jade
     footer
       include ./parts/footer.jade
     script(async='', src='dist/js/all.min.js')

@@ -71,9 +71,9 @@ gulp.task('thirdParty', function() {
 
 
 gulp.task('images', () =>
-    gulp.src('assets/img/*')
+    gulp.src('assets/img/**')
     .pipe(imagemin())
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('dist/img'))
 );
 
 

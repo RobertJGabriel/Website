@@ -17,7 +17,7 @@ html(lang='en')
     meta(name='theme-color', content='#eb298c')
     title Robert James Gabriel: UX and Software engineer.
     link(href='dist/css/styles.min.css', rel='stylesheet')
-    link(rel='icon', type='image/png', href='assets/img/favicon.png')
+    link(rel='icon', type='image/png', href='dist/img/favicon.png')
   body
     .overlay
     .navbar.navbar-warning(data-ripple-color='#F0F0F0', style='z-index:9;top: 0;position:fixed;width:100%;')
@@ -43,7 +43,7 @@ html(lang='en')
             hr(style='margin-top:40px;margin-bottom:40px')
           .row(style='margin-bottom:40px;')
             .col-sm-2.col-md-2
-              img.center-block.img-circle.img-responsive(src='./assets/img/favicon.png', height='120', width='120', alt='me')
+              img.center-block.img-circle.img-responsive(src='./dist/img/favicon.png', height='120', width='120', alt='me')
             .col-sm-10.col-md-8
               h4
                 b  About Me
@@ -53,7 +53,7 @@ html(lang='en')
                 | fifteen awards for design interaction, Ux, API design and code design.
           .row(style='margin-bottom:40px;')
             .col-sm-2.col-md-2
-              img.center-block.img-circle.img-responsive(src='./assets/img/github.png', height='120', width='120', alt='github')
+              img.center-block.img-circle.img-responsive(src='./dist/img/github.png', height='120', width='120', alt='github')
             .col-sm-10.col-md-8
               h4
                 b  Current Projects
@@ -72,7 +72,7 @@ html(lang='en')
                 |                             which makes it easier to organzine projects.
           .row(style='margin-bottom:40px;')
             .col-sm-2.col-md-2
-              img.center-block.img-circle.img-responsive(src='./assets/img/skills.png', height='120', width='120', alt='Skills')
+              img.center-block.img-circle.img-responsive(src='./dist/img/skills.png', height='120', width='120', alt='Skills')
             .col-sm-10
               h4
                 b  Skills
@@ -127,7 +127,7 @@ html(lang='en')
               a(href='https://ie.linkedin.com/in/robertjamesgabriel') And More
           .row(style='margin-bottom:40px;')
             .col-sm-2
-              img.center-block.img-circle.img-responsive(src='./assets/img/blog.png', height='120', width='120', alt='blog')
+              img.center-block.img-circle.img-responsive(src='./dist/img/blog.png', height='120', width='120', alt='blog')
             .col-sm-10
               h4
                 b  Talks
@@ -137,7 +137,7 @@ html(lang='en')
                 | . I also do a lot of talks and presentations on machine learning and HCI/Ux
           .row(style='margin-bottom:40px;')
             .col-sm-2
-              img.center-block.img-circle.img-responsive(src='./assets/img/heart.png', height='120', width='120', alt='What I Have Made')
+              img.center-block.img-circle.img-responsive(src='./dist/img/heart.png', height='120', width='120', alt='What I Have Made')
             .col-sm-10
               h4
                 b  Things I've made
@@ -161,7 +161,7 @@ html(lang='en')
                 a(href='https://github.com/RobertJGabriel')  GitHub.
           .row(style='margin-bottom:40px;')
             .col-sm-2
-              img.center-block.img-circle.img-responsive(src='./assets/img/medal.png', height='120', width='120', alt='Awards')
+              img.center-block.img-circle.img-responsive(src='./dist/img/medal.png', height='120', width='120', alt='Awards')
             .col-sm-10
               h4
                 b  Awards
@@ -197,17 +197,17 @@ html(lang='en')
                 i.material-icons(style='color:#F44336') favorite
           .row(style='margin-bottom:40px;')
             .col-sm-2
-              img.center-block.img-circle.img-responsive(src='./assets/img/cv.png', height='120', width='120', alt='Contacts')
+              img.center-block.img-circle.img-responsive(src='./dist/img/cv.png', height='120', width='120', alt='Contacts')
             .col-sm-10
               h4
                 b  Contact
               p
-                | What to contact me about work? or just a chat well my email is 
+                | What to contact me about work? or just a chat well my email is
                 a(href='mailto:robert_gabriel@outlook.com') robert_gabriel@outlook.com
                 | .
         .col-sm-3
     .container
-      include ./parts/madewith.jade
+      include ./parts/modal.jade
     footer
       include ./parts/footer.jade
     script(async='', src='dist/js/all.min.js')

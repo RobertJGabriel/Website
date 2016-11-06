@@ -25,7 +25,7 @@ html(lang='en')
     meta(name='theme-color', content='#eb298c')
     title Robert James Gabriel: Problems Posed by Ad-blockers and how to fix them
     link(href='dist/css/styles.min.css', rel='stylesheet')
-    link(rel='icon', type='image/png', href='assets/img/favicon.png')
+    link(rel='icon', type='image/png', href='dist/img/favicon.png')
   body.story
     .navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#4CAF50;z-index:9;top: 0;position:fixed;width:100%;')
       .container-fluid
@@ -73,7 +73,7 @@ html(lang='en')
             | Almost all filters are open source. Many filter lists are created and maintained by a large online community of users. [5]
           .row(style='margin-bottom:50px;')
             .col-md-12
-              img.img-responsive(src='./assets/img/talks/graphAdblocker.png')
+              img.img-responsive(src='./dist/img/talks/graphAdblocker.png')
           p
             | Ad blocking as a whole has seen a 41% growth from 2014 to the end of 2015, which demonstrates how dramatically its popularity has increased [3]In the US alone, it grew 48% over a 12 month period from June 2014 to June 2015 and as of January 2016 has 45
             | million active users in the U.S. between Q2 (April) 2014 and Q2 2015 for mobile and desktop users. [3]
@@ -329,7 +329,7 @@ html(lang='en')
                 | V. Beal, "What is Random Access Memory (RAM)? Webopedia ...," 10 August 2002. [Online]. Available: http://www.webopedia.com/TERM/R/RAM.html. [Accessed 24 March 2016].
         .col-xs-2
     .container
-      include ./parts/madewith.jade
+      include ./parts/modal.jade
     footer
       include ./parts/footer.jade
     script(async='', src='dist/js/all.min.js')
