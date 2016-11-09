@@ -8,7 +8,10 @@ $ ->
   navText.addClass 'show'
   navText.text 'Robert James Gabriel'
 
-
+  cheet '↑ ↑ ↓ ↓ ← → ← → b a', ->
+     console.log 'hi'
+     $('#easteregg').modal 'show'
+     return
 
   $(window).scroll ->
     scroll = $(window).scrollTop()
@@ -59,4 +62,7 @@ $ ->
       $('.grey').removeClass 'show'
       $('.overlay').hide()
     return
+
+
+
   return

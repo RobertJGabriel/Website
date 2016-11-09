@@ -8,6 +8,10 @@ $(function() {
   bannerText = $('#logo2');
   navText.addClass('show');
   navText.text('Robert James Gabriel');
+  cheet('↑ ↑ ↓ ↓ ← → ← → b a', function() {
+    console.log('hi');
+    $('#easteregg').modal('show');
+  });
   $(window).scroll(function() {
     var scroll;
     scroll = $(window).scrollTop();
