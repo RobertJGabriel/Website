@@ -20,16 +20,18 @@
   "devDependencies": {
     "async": "*",
     "bayes": "*",
+    "browser-sync": "^2.18.1",
     "chalk": "*",
     "firebase": "*",
-    "gulp-coffee":"*",
     "getmac": "*",
-    "gulp": "*",
+    "gulp": "^3.9.1",
     "gulp-clean": "*",
+    "gulp-coffee": "*",
     "gulp-go": "*",
     "gulp-html-minifier": "*",
     "gulp-htmlmin": "^2.0.0",
     "gulp-imagemin": "*",
+    "gulp-jade": "*",
     "gulp-less": "*",
     "gulp-logger": "*",
     "gulp-minify-css": "*",
@@ -44,8 +46,7 @@
     "profanity-check": "*",
     "psi": "*",
     "run-sequence": "*",
-    "scraper-web": "*",
-    "gulp-jade":"*"
+    "scraper-web": "*"
   },
   "scripts": {
     "start": "nodewebkit",
