@@ -85,6 +85,7 @@ gulp.task('clean', function(cb) {
         '!/googlea4b2e0ff05c168d5.html',
         '!gulpfile.js',
         '!CNAME',
+        '!robots.txt',
         '!sitemap.xml',
         '!README.md',
         './assets/js/app/core.js',
