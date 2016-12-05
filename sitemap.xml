@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://robertgabriel.ninja/Research-into-Web-Accessibility-for-Dyslexics-and-Dyslexia-focused-fonts-such-asOpenDyslexia.html</loc>
-        <lastmod>2016-12-03T00:11:38.000Z</lastmod>
+        <lastmod>2016-12-03T00:23:21.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>http://robertgabriel.ninja/adblockers.html</loc>
-        <lastmod>2016-12-03T00:11:49.000Z</lastmod>
+        <lastmod>2016-12-03T00:23:32.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
@@ -57,6 +57,12 @@
     <url>
         <loc>http://robertgabriel.ninja/robin.html</loc>
         <lastmod>2016-11-17T22:48:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://robertgabriel.ninja/seo-real-talk-front-end.html</loc>
+        <lastmod>2016-12-04T01:22:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1</priority>
     </url>
