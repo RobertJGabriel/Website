@@ -62,6 +62,7 @@ gulp.task('thirdParty', function() {
             './assets/js/vendor/material.js',
             './assets/js/vendor/ripples.js',
             './assets/js/vendor/cheet.js',
+            './assets/js/vendor/holder.js',
             './assets/js/app/core.js',
             './assets/js/app/main.js'
         ])

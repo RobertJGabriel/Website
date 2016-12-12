@@ -22,24 +22,13 @@
   },
   "work": [{
     "company": "Teamwork.com",
-    "position": "President",
+    "position": "Software Developer",
     "website": "https://teamwork.com",
     "startDate": "2015-01-01",
     "endDate": "current",
     "summary": "Description...",
     "highlights": [
       "Started the company"
-    ]
-  }],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "website": "http://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description...",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
     ]
   }],
   "education": [{
