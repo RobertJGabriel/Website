@@ -28,7 +28,7 @@ $(function() {
           installation = installations[i];
           fullName = "<h3>" + installation.name + "</h3>";
           i++;
-          $('#gallery').append('<li><div class="panel panel-primary"><div class="panel-body">       <img class="img-responsive bat" data-src="holder.js/300x200?text=' + installation.name + '&random=yes" alt=""><h3>' + fullName + '</h3><p>' + installation.description + ' <br/>  <b>Made Mostly with: ' + installation.language + '</p></div><div class="panel-footer"><a href="' + installation.url + '" class="btn btn-flat btn-warning">View Now</a></div></div></div></li>');
+          $('#gallery').append('<li><div class="panel panel-primary"><div class="panel-body">       <img class="img-responsive bat" data-src="holder.js/300x200?text=' + installation.name + '&random=yes&size=25" alt=""><h3>' + fullName + '</h3><p>' + installation.description + ' <br/>  <b>Made Mostly with: ' + installation.language + '</p></div><div class="panel-footer"><a href="' + installation.url + '" class="btn btn-flat btn-warning">View Now</a></div></div></div></li>');
           Holder.run({});
         }
       },
