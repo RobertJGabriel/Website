@@ -16,9 +16,8 @@ html(lang='en')
     meta(name='twitter:title', content='Robert James Gabriel')
     meta(name='theme-color', content='#eb298c')
     title Robert James Gabriel : Upcoming Projects
-    link(href='dist/css/styles.min.css', rel='stylesheet')
+    link(href='./dist/css/styles.min.css', rel='stylesheet')
     link(rel='icon', type='image/png', href='dist/img/favicon.png')
-    link(href='dist/css/styles.min.css', rel='stylesheet')
   body.awards
     .overlay
     .navbar.navbar-warning(data-ripple-color='#E91E63', style='background-color:#03A9F4;z-index:9;top: 0;position:fixed;width:100%;')
@@ -27,7 +26,7 @@ html(lang='en')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
             i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
-        include ./parts/sidebar.jade
+        include ./parts/sidebar.pug
     header#header.withripple.shadow(style='background-color:#03A9F4;', data-ripple-color='#03A9F4')
       .container-fluid
         .row
@@ -49,7 +48,7 @@ html(lang='en')
               p
                 | Complete rebuild of the robin browser with Firebase 3.0 and node.js 6.0
               p
-                strong Status 
+                strong Status
                 | Planning
               hr
             li.wide
@@ -57,9 +56,9 @@ html(lang='en')
               p
                 | Pre loading pages before the user clicks on them before clicking the link
               p
-                strong Status 
+                strong Status
                 |  Planning
-              hr       
+              hr
             li.wide
               h3 Data mining tool using Firebase and coffeescript
               p
@@ -67,7 +66,7 @@ html(lang='en')
               p
                 strong Status
                 |  Planning
-              hr     
+              hr
             li.wide
               h3  Scroll speed detection on articles. Doesn't let ppl comment unless they are scrolling slow enough to have read it.
               p
@@ -75,10 +74,10 @@ html(lang='en')
               p
                 strong Status
                 | Finishing it off
-              hr     
+              hr
         .col-xs-3
     .container
-      include ./parts/modal.jade
+      include ./parts/modal.pug
     footer
-      include ./parts/footer.jade
+      include ./parts/footer.pug
     script(async='', src='dist/js/all.min.js')

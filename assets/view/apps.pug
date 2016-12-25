@@ -16,9 +16,8 @@ html(lang='en')
     meta(name='twitter:title', content='Robert James Gabriel')
     meta(name='theme-color', content='#eb298c')
     title Robert James Gabriel : Apps
-    link(href='dist/css/styles.min.css', rel='stylesheet')
+    link(href='./dist/css/styles.min.css', rel='stylesheet')
     link(rel='icon', type='image/png', href='dist/img/favicon.png')
-    link(href='dist/css/styles.min.css', rel='stylesheet')
     style.
       img {
       max-height: 175px;
@@ -31,7 +30,7 @@ html(lang='en')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
             i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
-        include ./parts/sidebar.jade
+        include ./parts/sidebar.pug
     .overlay
     header#header.withripple.shadow(data-ripple-color='red', style='background-color:#E91E63;')
       .container-fluid
@@ -87,8 +86,8 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Verified-by-Visa') View
 
     .container
-      include ./parts/modal.jade
+      include ./parts/modal.pug
     footer
-      include ./parts/footer.jade
+      include ./parts/footer.pug
     script(async='', src='dist/js/all.min.js')
     script( src='assets/js/vendor/holder.js')

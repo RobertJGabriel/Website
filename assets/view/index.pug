@@ -15,8 +15,8 @@ html(lang='en')
     meta(name='twitter:url', content='http://robertgabriel.ninja')
     meta(name='twitter:title', content='Robert James Gabriel')
     meta(name='theme-color', content='#eb298c')
-    title Robert James Gabriel: UX and Software engineer.
-    link(href='dist/css/styles.min.css', rel='stylesheet')
+    title Robert James Gabriel: Software engineer.
+    link(href='./dist/css/styles.min.css', rel='stylesheet')
     link(rel='icon', type='image/png', href='dist/img/favicon.png')
   body
     .overlay
@@ -26,7 +26,7 @@ html(lang='en')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
             i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
-        include ./parts/sidebar.jade
+        include ./parts/sidebar.pug
     .container-fluid(style='margin-top: 103px;')
       .row
         .col-sm-3
@@ -207,7 +207,7 @@ html(lang='en')
                 | .
         .col-sm-3
     .container
-      include ./parts/modal.jade
+      include ./parts/modal.pug
     footer
-      include ./parts/footer.jade
+      include ./parts/footer.pug
     script(async='', src='dist/js/all.min.js')

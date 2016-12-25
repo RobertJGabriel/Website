@@ -17,7 +17,7 @@ html(lang='en')
     meta(name='theme-color', content='#eb298c')
     title
       | Robert James Gabriel : Research into Web Accessibility for Dyslexics and Dyslexia-focused fonts such as OpenDyslexia
-    link(href='dist/css/styles.min.css', rel='stylesheet')
+    link(href='./dist/css/styles.min.css', rel='stylesheet')
     link(rel='icon', type='image/png', href='dist/img/favicon.png')
   body.story
     .navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#00BCD4;z-index:9;top: 0;position:fixed;width:100%;')
@@ -26,7 +26,7 @@ html(lang='en')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
             i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
-        include ./parts/sidebar.jade
+        include ./parts/sidebar.pug
     header#header.withripple.shadow(data-ripple-color='red', style='background-color:#00BCD4;')
       .container
         .row
@@ -297,7 +297,7 @@ html(lang='en')
                   | V. F. d. Santana, "https://pdfs.semanticscholar.org," University of Campinas , 23 June ] 2012. [Online] [Accessed 23 Febuary 2016].
         .col-xs-2
     .container
-      include ./parts/modal.jade
+      include ./parts/modal.pug
     footer
-      include ./parts/footer.jade
+      include ./parts/footer.pug
     script(async='', src='dist/js/all.min.js')

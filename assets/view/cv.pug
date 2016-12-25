@@ -8,7 +8,7 @@ html(lang='en')
     title Robert James Gabriel : Web Developer Part Time Ninja
     meta(name='description', content='Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issue')
     meta(name='keywords', content="HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node. j's, PHP and SQL developer,golang,web design ")
-    link(href='dist/css/styles.min.css', rel='stylesheet')
+    link(href='./dist/css/styles.min.css', rel='stylesheet')
   body
     .navbar.navbar-warning(data-ripple-color='#F0F0F0', style='z-index:9;top: 0;position:fixed;width:100%;')
       .container-fluid
@@ -16,7 +16,7 @@ html(lang='en')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
             i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
-        include ./parts/sidebar.jade
+        include ./parts/sidebar.pug
     header#header.withripple.shadow(data-ripple-color='red')
       .container
         .row
@@ -75,7 +75,7 @@ html(lang='en')
                   button.btn.btn-flat Share
                   button.btn.btn-flat.btn-warning Learn More
     .container
-      include ./parts/modal.jade
+      include ./parts/modal.pug
     footer
-      include ./parts/footer.jade
+      include ./parts/footer.pug
     script(async='', src='dist/js/all.min.js')

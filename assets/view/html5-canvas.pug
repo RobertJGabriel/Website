@@ -8,7 +8,7 @@ html(lang='en')
     title Robert James Gabriel : Web Developer Part Time Ninja
     meta(name='description', content='My name is Robert James Gabriel , I have 4 plus years web technologies and I’m an experienced and ambitious  Golang, angular, HTML, HTML5, JavaScript, Node.js, PHP and SQL developer looking for a challenging new design role in the IT industry and to build websites .')
     meta(name='keywords', content="HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node. j's, PHP and SQL developer,golang,web design ")
-    link(href='dist/css/styles.min.css', rel='stylesheet')
+    link(href='./dist/css/styles.min.css', rel='stylesheet')
   body
     span#logo2(style='display:none !important;')
       h1.header-title
@@ -18,7 +18,7 @@ html(lang='en')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
             i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
-        include ./parts/sidebar.jade
+        include ./parts/sidebar.pug
     header#header.withripple.shadow(data-ripple-color='red')
       .container
         .row
@@ -30,7 +30,7 @@ html(lang='en')
         #left.col-sm-3
         #right.col-sm-9
     .container
-      include ./parts/modal.jade
+      include ./parts/modal.pug
     footer
-      include ./parts/footer.jade
+      include ./parts/footer.pug
     script(async='', src='dist/js/all.min.js')
