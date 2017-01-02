@@ -76,7 +76,7 @@ gulp.task('thirdParty', function(done) {
 gulp.task('images', function(done) {
     gulp.src('./assets/img/**/*')
         .pipe(imagemin({
-            optimizationLevel: 3,
+            optimizationLevel: 10,
             progressive: true,
             interlaced: true
         }))
