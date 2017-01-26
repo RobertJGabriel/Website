@@ -13,28 +13,6 @@ $ ->
      console.log 'hi'
      $('#easteregg').modal 'show'
      return
-  if window.location.href.indexOf('/apps.html') > -1
-
-    $.ajax
-      type: 'get'
-      url: 'https://api.github.com' + '/users/robertjgabriel/repos'
-      data: type: 'all',
-      dataType: 'json'
-      success: (installations) ->
-        console.log(installations)
-        i = 0
-        while i < installations.length
-
-          installation = installations[i]
-          fullName = "<h3>" +  installation.name  + "</h3>"
-
-          i++
-          $('#gallery').append('<li><div class="panel panel-primary"><div class="panel-body">  <div class="appcover"></div><h3>' +   fullName + '</h3><p>'+  installation.description + ' <br/>  <b>Made Mostly with: '+ installation.language  + '</p></div><div class="panel-footer"><a href="'+ installation.url + '" class="btn btn-flat btn-warning">View Now</a></div></div></div></li>')
-          Holder.run {}
-        return
-      error: (error) ->
-        console.log error
-
 
 
   $(window).scroll ->
