@@ -90,6 +90,7 @@ gulp.task('clean', function(done) {
     del.sync([
         './dist/downloads/*',
         '!./dist/css/*',
+        '!sorting-algorithms-coffeescript.html',
         './dist/fonts/*',
         './dist/img/*',
         './dist/js/*',
