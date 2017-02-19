@@ -20,23 +20,22 @@ html(lang='en')
     link(rel='icon', type='image/png', href='dist/img/favicon.png')
   body.awards
     .overlay
-    .navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#AD1457;z-index:9;top: 0;position:fixed;width:100%;')
+    #navBarId.navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#AD1457;z-index:9;top: 0;position:fixed;width:100%;')
       .container-fluid
         .navbar-header(style='width: 100%;')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
             i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
         include ./parts/sidebar.pug
-    header#header.withripple.shadow(style='background-color:#AD1457;', data-ripple-color='red')
-      .container-fluid
-        .row
-          .col-sm-3
-          .col-sm-6
-            .row
-              .me
-              h1#logo2.text-center
-                b  Honor & Awards
-          .col-sm-3
+    .container-fluid(style='margin-top: 103px;')
+      .row
+        .col-sm-3
+        .col-sm-6
+          .row
+            .me
+            h1#logo2.text-center
+              b  Honor & Awards
+        .col-sm-3
     .overlay
     .container(style='    position: relative;')
       .row(style='    margin-top: 20px;')

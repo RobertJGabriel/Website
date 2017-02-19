@@ -24,7 +24,7 @@ html(lang='en')
       min-width: 100%;
       }
   body.preload.awards
-    .navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#8E24AA;z-index:9;top: 0;position:fixed;width:100%;')
+    #navBarId.navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#8E24AA;z-index:9;top: 0;position:fixed;width:100%;')
       .container-fluid
         .navbar-header(style='width: 100%;')
           a#logo1.navbar-brand(href='./index.html')
@@ -32,16 +32,15 @@ html(lang='en')
             i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
         include ./parts/sidebar.pug
     .overlay
-    header#header.withripple.shadow(data-ripple-color='red', style='background-color:#8E24AA;')
-      .container-fluid
-        .row
-          .col-sm-3
-          .col-sm-6
-            .row
-              .me
-              h1#logo2.text-center
-                b  Talks and Research
-          .col-sm-3
+    .container-fluid(style='margin-top: 103px;')
+      .row
+        .col-sm-3
+        .col-sm-6
+          .row
+            .me
+            h1#logo2.text-center
+              b  Talks and Research
+        .col-sm-3
     .container(style='   margin-top:50px;')
       .row
         ul#gallery.loadseffect

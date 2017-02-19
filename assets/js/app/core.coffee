@@ -29,7 +29,7 @@ $ ->
     hrElements = document.getElementsByTagName('hr')
     h3Elements = document.getElementsByTagName('h3')
     aTagsElements = document.getElementsByTagName('a')
-    color = document.getElementById('header').style.backgroundColor
+    color = document.getElementById('navBarId').style.backgroundColor
     i = 1
     while i < h1Elements.length
       h1Elements[i].style.color = color

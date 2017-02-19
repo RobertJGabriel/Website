@@ -77,7 +77,7 @@ binarySearch = (array, target) ->
   
   
 binarySearch_event = () ->
-  sort = document.getElementById("inputSelection").value.split ''
+  sort = document.getElementById("inputBi").value.split ''
   document.getElementById("selectionResult").value = selectionSort sort
   return    
   
