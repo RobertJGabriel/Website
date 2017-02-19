@@ -58,8 +58,29 @@ selectionSort = (array) ->
     i++
   return array
     
-    
-    
+binarySearch = (array, target) ->
+  startIndex = 0
+  stopIndex = array.length - 1
+  middle = undefined
+  count = 0
+  while startIndex < stopIndex
+    count++
+    middle = ~ ~((stopIndex + startIndex) / 2)
+    # adjust search area
+    if target < array[middle]
+      stopIndex = middle - 1
+    else if target > array[middle]
+      startIndex = middle + 1
+    else
+      break
+  if array[middle] == target then return middle else return -1
+  
+  
+binarySearch_event = () ->
+  sort = document.getElementById("inputSelection").value.split ''
+  document.getElementById("selectionResult").value = selectionSort sort
+  return    
+  
 selection_event = () ->
   sort = document.getElementById("inputSelection").value.split ''
   document.getElementById("selectionResult").value = selectionSort sort
