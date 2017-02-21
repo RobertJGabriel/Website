@@ -13,19 +13,17 @@ var pug = require('gulp-pug');
 var coffee = require('gulp-coffee');
 var del = require('del');
 var size = require('gulp-size');
-
+var logger = require('gulp-logger');
 
 gulp.task('less', function(done) {
     gulp.src('./assets/less/styles.less')
-        .pipe(less()
-            .on('error', gutil.log)
-            .on('error', gutil.beep)
-            .on('error', function(err) {
-                console.log('err', err);
-                var pathToFile = err.fileName.split('\\');
-                file = pathToFile[pathToFile.length - 1];
-            })
-        )
+        .pipe(less())
+        .pipe(logger({
+            before: 'Coverting Less to Css ',
+            after: 'Finished!',
+            extname: '.min.css',
+            showChange: true
+        }))
         .pipe(minifyCSS({
             keepSpecialComments: 0
         }))
@@ -40,6 +38,11 @@ gulp.task('fonts', function(done) {
     gulp.src([
             './assets/fonts/*',
         ])
+        .pipe(logger({
+            before: 'Moving Fonts',
+            after: 'Finished!',
+            showChange: true
+        }))
         .pipe(gulp.dest('./dist/fonts/')).pipe(size());
     done();
 });
@@ -47,7 +50,11 @@ gulp.task('fonts', function(done) {
 gulp.task('downloads', function(done) {
     gulp.src([
             './assets/downloads/*/**',
-        ])
+        ])        .pipe(logger({
+                    before: 'Moving Downloads',
+                    after: 'Finished!',
+                    showChange: true
+                }))
         .pipe(gulp.dest('./dist/downloads/')).pipe(size());
     done();
 });
@@ -65,22 +72,28 @@ gulp.task('thirdParty', function(done) {
         ]).on('error', function(err) {
             gutil.log(gutil.colors.red(err.message));
         })
+        .pipe(logger({
+            before: 'Compling Javascript',
+            after: 'Finished!',
+            showChange: true
+        }))
         .pipe(concat('all.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js/'))
         .pipe(size());
-        done();
+    done();
 });
 
 
 gulp.task('images', function(done) {
     gulp.src('./assets/img/**/*')
-        .pipe(imagemin({
-            optimizationLevel: 10,
-            progressive: true,
-            interlaced: true
+        .pipe(imagemin())
+        .pipe(logger({
+            before: 'Compressing Images',
+            after: 'Finished!',
+            showChange: true
         }))
-        .pipe(gulp.dest('./dist/img/'))
+        .pipe(gulp.dest('./dist/img'))
         .pipe(size());
     done();
 });
@@ -118,6 +131,11 @@ gulp.task('sitemap', function(done) {
             priority: 1.0,
             changefreq: 'weekly'
         }))
+        .pipe(logger({
+            before: 'Creating Sitemap',
+            after: 'Finished!',
+            showChange: true
+        }))
         .pipe(gulp.dest('./'))
         .pipe(size());
     done();
@@ -132,11 +150,16 @@ gulp.task('html', function(done) {
             minify: true,
             width: 1300,
             height: 900,
-            css: [ __dirname+ '/dist/css/styles.min.css']
+            css: [__dirname + '/dist/css/styles.min.css']
         }))
         .on('error', function(err) {
             gutil.log(gutil.colors.red(err.message));
         })
+        .pipe(logger({
+            before: 'Minifing HTML',
+            after: 'Finished!',
+            showChange: true
+        }))
         .pipe(gulp.dest('./'))
         .pipe(size());
     done();
@@ -153,6 +176,6 @@ gulp.task('coffee', function(done) {
 
 
 
-gulp.task('default', gulp.series('clean','coffee', 'less', 'fonts', 'downloads', 'sitemap','images','html','thirdParty', function(done) {
+gulp.task('default', gulp.series('clean', 'coffee', 'less', 'fonts', 'downloads', 'sitemap', 'images', 'html', 'thirdParty', function(done) {
     done();
 }));

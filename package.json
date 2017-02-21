@@ -1,198 +1,152 @@
-{  
-   "util":{  
-      "colors":{  
-         "enabled":true,
-         "styles":{  
-            "reset":{  
-               "open":"\u001b[0m",
-               "close":"\u001b[0m",
-               "closeRe":{  
-
-               }
-            },
-            "bold":{  
-               "open":"\u001b[1m",
-               "close":"\u001b[22m",
-               "closeRe":{  
-
-               }
-            },
-            "dim":{  
-               "open":"\u001b[2m",
-               "close":"\u001b[22m",
-               "closeRe":{  
-
-               }
-            },
-            "italic":{  
-               "open":"\u001b[3m",
-               "close":"\u001b[23m",
-               "closeRe":{  
-
-               }
-            },
-            "underline":{  
-               "open":"\u001b[4m",
-               "close":"\u001b[24m",
-               "closeRe":{  
-
-               }
-            },
-            "inverse":{  
-               "open":"\u001b[7m",
-               "close":"\u001b[27m",
-               "closeRe":{  
-
-               }
-            },
-            "hidden":{  
-               "open":"\u001b[8m",
-               "close":"\u001b[28m",
-               "closeRe":{  
-
-               }
-            },
-            "strikethrough":{  
-               "open":"\u001b[9m",
-               "close":"\u001b[29m",
-               "closeRe":{  
-
-               }
-            },
-            "black":{  
-               "open":"\u001b[30m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "red":{  
-               "open":"\u001b[31m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "green":{  
-               "open":"\u001b[32m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "yellow":{  
-               "open":"\u001b[33m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "blue":{  
-               "open":"\u001b[34m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "magenta":{  
-               "open":"\u001b[35m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "cyan":{  
-               "open":"\u001b[36m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "white":{  
-               "open":"\u001b[37m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "gray":{  
-               "open":"\u001b[90m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "grey":{  
-               "open":"\u001b[90m",
-               "close":"\u001b[39m",
-               "closeRe":{  
-
-               }
-            },
-            "bgBlack":{  
-               "open":"\u001b[40m",
-               "close":"\u001b[49m",
-               "closeRe":{  
-
-               }
-            },
-            "bgRed":{  
-               "open":"\u001b[41m",
-               "close":"\u001b[49m",
-               "closeRe":{  
-
-               }
-            },
-            "bgGreen":{  
-               "open":"\u001b[42m",
-               "close":"\u001b[49m",
-               "closeRe":{  
-
-               }
-            },
-            "bgYellow":{  
-               "open":"\u001b[43m",
-               "close":"\u001b[49m",
-               "closeRe":{  
-
-               }
-            },
-            "bgBlue":{  
-               "open":"\u001b[44m",
-               "close":"\u001b[49m",
-               "closeRe":{  
-
-               }
-            },
-            "bgMagenta":{  
-               "open":"\u001b[45m",
-               "close":"\u001b[49m",
-               "closeRe":{  
-
-               }
-            },
-            "bgCyan":{  
-               "open":"\u001b[46m",
-               "close":"\u001b[49m",
-               "closeRe":{  
-
-               }
-            },
-            "bgWhite":{  
-               "open":"\u001b[47m",
-               "close":"\u001b[49m",
-               "closeRe":{  
-
-               }
-            }
-         },
-         "supportsColor":true
+{
+  "util": {
+    "colors": {
+      "enabled": true,
+      "styles": {
+        "reset": {
+          "open": "\u001b[0m",
+          "close": "\u001b[0m",
+          "closeRe": {}
+        },
+        "bold": {
+          "open": "\u001b[1m",
+          "close": "\u001b[22m",
+          "closeRe": {}
+        },
+        "dim": {
+          "open": "\u001b[2m",
+          "close": "\u001b[22m",
+          "closeRe": {}
+        },
+        "italic": {
+          "open": "\u001b[3m",
+          "close": "\u001b[23m",
+          "closeRe": {}
+        },
+        "underline": {
+          "open": "\u001b[4m",
+          "close": "\u001b[24m",
+          "closeRe": {}
+        },
+        "inverse": {
+          "open": "\u001b[7m",
+          "close": "\u001b[27m",
+          "closeRe": {}
+        },
+        "hidden": {
+          "open": "\u001b[8m",
+          "close": "\u001b[28m",
+          "closeRe": {}
+        },
+        "strikethrough": {
+          "open": "\u001b[9m",
+          "close": "\u001b[29m",
+          "closeRe": {}
+        },
+        "black": {
+          "open": "\u001b[30m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "red": {
+          "open": "\u001b[31m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "green": {
+          "open": "\u001b[32m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "yellow": {
+          "open": "\u001b[33m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "blue": {
+          "open": "\u001b[34m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "magenta": {
+          "open": "\u001b[35m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "cyan": {
+          "open": "\u001b[36m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "white": {
+          "open": "\u001b[37m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "gray": {
+          "open": "\u001b[90m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "grey": {
+          "open": "\u001b[90m",
+          "close": "\u001b[39m",
+          "closeRe": {}
+        },
+        "bgBlack": {
+          "open": "\u001b[40m",
+          "close": "\u001b[49m",
+          "closeRe": {}
+        },
+        "bgRed": {
+          "open": "\u001b[41m",
+          "close": "\u001b[49m",
+          "closeRe": {}
+        },
+        "bgGreen": {
+          "open": "\u001b[42m",
+          "close": "\u001b[49m",
+          "closeRe": {}
+        },
+        "bgYellow": {
+          "open": "\u001b[43m",
+          "close": "\u001b[49m",
+          "closeRe": {}
+        },
+        "bgBlue": {
+          "open": "\u001b[44m",
+          "close": "\u001b[49m",
+          "closeRe": {}
+        },
+        "bgMagenta": {
+          "open": "\u001b[45m",
+          "close": "\u001b[49m",
+          "closeRe": {}
+        },
+        "bgCyan": {
+          "open": "\u001b[46m",
+          "close": "\u001b[49m",
+          "closeRe": {}
+        },
+        "bgWhite": {
+          "open": "\u001b[47m",
+          "close": "\u001b[49m",
+          "closeRe": {}
+        }
       },
-      "env":{  
-         "_":[  
-            "less"
-         ]
-      },
-      "linefeed":"\n"
-   }
+      "supportsColor": true
+    },
+    "env": {
+      "_": [
+        "less"
+      ]
+    },
+    "linefeed": "\n"
+  },
+  "dependencies": {
+    "gulp-logger": "0.0.2",
+    "imagemin": "^5.2.2",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.0"
+  }
 }
