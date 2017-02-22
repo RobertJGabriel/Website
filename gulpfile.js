@@ -50,11 +50,11 @@ gulp.task('fonts', function(done) {
 gulp.task('downloads', function(done) {
     gulp.src([
             './assets/downloads/*/**',
-        ])        .pipe(logger({
-                    before: 'Moving Downloads',
-                    after: 'Finished!',
-                    showChange: true
-                }))
+        ]).pipe(logger({
+            before: 'Moving Downloads',
+            after: 'Finished!',
+            showChange: true
+        }))
         .pipe(gulp.dest('./dist/downloads/')).pipe(size());
     done();
 });
@@ -144,13 +144,16 @@ gulp.task('sitemap', function(done) {
 
 gulp.task('html', function(done) {
     gulp.src('assets/view/*.pug')
-        .pipe(pug({})).pipe(critical({
-            base: './',
+        .pipe(pug({}))
+        .pipe(critical({
+            base: __dirname,
+            css: [__dirname + '/dist/css/styles.min.css'],
             inline: true,
             minify: true,
-            width: 1300,
-            height: 900,
-            css: [__dirname + '/dist/css/styles.min.css']
+            inlineImages: true,
+            include: ['.navbar', '.navbar-warning', /^\.navbar/],
+            css: [__dirname + '/dist/css/styles.min.css'],
+            ignore: ['font-face', 'keyframes', /^\keyframes/]
         }))
         .on('error', function(err) {
             gutil.log(gutil.colors.red(err.message));
