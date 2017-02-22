@@ -151,7 +151,7 @@ gulp.task('html', function(done) {
             inline: true,
             minify: true,
             inlineImages: true,
-            include: ['.navbar', '.navbar-warning', /^\.navbar/],
+            include: [ /^\.navbar-nav/, /^\.navbar/, /^\.navbar-nav/,/^\.menu-bar/],
             css: [__dirname + '/dist/css/styles.min.css'],
             ignore: ['font-face', 'keyframes', /^\keyframes/]
         }))
