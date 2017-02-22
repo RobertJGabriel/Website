@@ -86,14 +86,14 @@ gulp.task('thirdParty', function(done) {
 
 
 gulp.task('images', function(done) {
-    gulp.src('./assets/img/**/*')
+    gulp.src('./assets/img/**/*.png')
         .pipe(imagemin())
         .pipe(logger({
             before: 'Compressing Images',
             after: 'Finished!',
             showChange: true
         }))
-        .pipe(gulp.dest('./dist/img'))
+        .pipe(gulp.dest('./dist/img/'))
         .pipe(size());
     done();
 });
