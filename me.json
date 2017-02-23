@@ -340,7 +340,7 @@
   "skills": [
     {
       "name": "Frontend",
-      "level": "Master",
+      "level": "",
       "keywords": [
         "HTML",
         "CSS/CSS3",
@@ -362,7 +362,7 @@
     },
     {
       "name": "Backened",
-      "level": "Master ",
+      "level": "",
       "keywords": [
         "Php",
         "Php framworks",
