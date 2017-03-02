@@ -152,7 +152,7 @@ gulp.task('html', function(done) {
             inline: true,
             minify: true,
             inlineImages: true,
-            include: [ /^\.navbar-nav/, /^\.navbar/, /^\.row/, /^\#gallery/, /^\.col-sm-2/,/^\.col-sm-8/, /^\.navbar-nav/,/^\.menu-bar/,/^\.me/,/^\.row/],
+            include: [ /^\.navbar-nav/,/^\.col-sm-3/,/^\.col-sm-6/, /^\.navbar/, /^\.row/, /^\#gallery/, /^\.col-sm-2/,/^\.col-sm-8/, /^\.navbar-nav/,/^\.menu-bar/,/^\.me/,/^\.row/],
             css: [__dirname + '/dist/css/styles.min.css'],
             ignore: ['font-face', 'keyframes', /^\keyframes/]
         }))
