@@ -1,52 +1,62 @@
 @desktop: ~"only screen and (min-width: 960px) and (max-width:4000px)";
 @tablet: ~"only screen and (min-width: 720px) and (max-width: 959px)";
 @smartphones: ~"only screen and (max-width: 719px)";
+
 @keyframes "display" {
     from,
     to {
         transform: scale(0);
     }
+
     4%,
     76%,
     to {
         transform: scale(1);
     }
 }
+
 @-o-keyframes "display" {
     from {
         -o-transform: scale(0);
     }
+
     4%,
     76%,
     to {
         -o-transform: scale(1);
     }
 }
+
 @-ms-keyframes "display" {
     from,
     to {
         -ms-transform: scale(0);
     }
+
     4%,
     76%,
     to {
         -ms-transform: scale(1);
     }
 }
+
 @-moz-keyframes "display" {
     from {
         -moz-transform: scale(0);
     }
+
     4%,
     76%,
     to {
         -moz-transform: scale(1);
     }
 }
+
 @-webkit-keyframes "display" {
     from {
         -webkit-transform: scale(0);
     }
+
     4%,
     76%,
     to {
@@ -58,21 +68,28 @@
         width: 60% !important;
     }
 }
+
 .wide {
     width: 100% !important;
 }
+
 #gallery {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
     -webkit-overflow-scrolling: touch;
+
     .wide {
         width: 100% !important;
     }
+
     li {
-      .wide {
-          width: 100% !important;
-      }
+
+        .wide {
+            width: 100% !important;
+        }
+            min-height: 460px;
         margin-bottom: 2%;
         @media @desktop {
             .feature {
@@ -98,11 +115,10 @@
             margin-bottom: 5%;
             margin-right: 2%;
         }
-
-
-        display: inline-block;
         display: inline-block;
         float: left;
+        margin-bottom: 20px;
+margin-top: 30px;
         -webkit-animation-fill-mode: forwards;
         /* Chrome, Safari, Opera */
         animation: display 5s;
@@ -112,8 +128,17 @@
         -webkit-animation: display 5s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
-        &:nth-child(2) {
 
+        .panel {
+            .panel-body {
+                p {
+                    overflow: auto;
+                    height: 200px;
+                }
+            }
+        }
+
+        &:nth-child(2) {
             -webkit-animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
             animation-delay: 0.2s forwards;
@@ -124,8 +149,8 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-        &:nth-child(3) {
 
+        &:nth-child(3) {
             -webkit-animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
             animation-delay: 0.3s;
@@ -136,8 +161,8 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
-        &:nth-child(4) {
 
+        &:nth-child(4) {
             -webkit-animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
             animation-delay: 0.4s;
@@ -148,6 +173,7 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
+
         &:nth-child(5) {
             -webkit-animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
@@ -159,6 +185,7 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
+
         &:nth-child(6) {
             -webkit-animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
@@ -170,6 +197,7 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
+
         &:nth-child(7) {
             -webkit-animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */
@@ -181,6 +209,7 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
+
         &:nth-child(8) {
             -webkit-animation-fill-mode: forwards;
             /* Chrome, Safari, Opera */

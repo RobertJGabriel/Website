@@ -8,12 +8,11 @@ $ ->
 
   navText.addClass 'show'
   navText.text 'Robert James Gabriel'
-  console.log "ss"
   cheet '↑ ↑ ↓ ↓ ← → ← → b a', ->
      console.log 'hi'
      $('#easteregg').modal 'show'
      return
-
+  console.log document.referrer
 
   $(window).scroll ->
     scroll = $(window).scrollTop()
@@ -41,7 +40,7 @@ $ ->
     if hrElements.length > 0
       i = 0
       while i < hrElements.length
-        hrElements[i].style.color = color
+        hrElements[i].style.background = color
         i++
     i = 6
     while i < aTagsElements.length

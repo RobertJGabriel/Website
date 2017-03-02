@@ -24,12 +24,12 @@ html(lang='en')
       min-width: 100%;
       }
   body.preload.awards
-    #navBarId.navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#8E24AA;z-index:9;top: 0;position:fixed;width:100%;')
+    #navBarId.navbar.navbar-warning.colorsFadeIn(data-ripple-color='#F0F0F0', style='background-color:#8E24AA;z-index:9;top: 0;position:fixed;width:100%;')
       .container-fluid
         .navbar-header(style='width: 100%;')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
-            i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
+            i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 20px;font-size: 20px !important;', aria-hidden='true')
         include ./parts/sidebar.pug
     .overlay
     .container-fluid(style='margin-top: 103px;')
@@ -46,7 +46,7 @@ html(lang='en')
               br
               | Robert James Gabriel
         .col-sm-3
-    .container(style='   margin-top:50px;')
+    .container(style='margin-top:30px;')
       .row
         .col-sm-2
         .col-sm-8        

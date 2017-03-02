@@ -18,14 +18,21 @@ html(lang='en')
     link(href='./dist/css/styles.min.css', rel='stylesheet')
     link(rel='icon', type='image/png', href='dist/img/favicon.png')
   body
-    .overlay
-    #navBarId.navbar.navbar-warning(data-ripple-color='#F0F0F0', style='z-index:9;top: 0;position:fixed;width:100%;')
+    .overlay  
+    #navBarId.navbar.navbar-warning.colorsFadeIn(data-ripple-color='#F0F0F0', style='z-index:9;top: 0;position:fixed;width:100%;')
       .container-fluid
         .navbar-header(style='width: 100%;')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
             i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
         include ./parts/sidebar.pug
+    .alert.alert-dismissible.alert-info(style='margin-top: 60px;')
+      button.close(type='button', data-dismiss='alert') x
+      strong Heads up!
+      |  New Blog post
+      a.alert-link(href='/bag.html') needs your attention
+      | , but it's not super important.
+
     .container-fluid(style='margin-top: 103px;')
       .row
         .col-sm-3
@@ -50,7 +57,7 @@ html(lang='en')
               p
                 | Robert Gabriel is a Software Engineer at Teamwork.com working with the Teamwork Projects team on importers for the product also leading the online and internal web sites team to 100% scalable and cutting edge. He is also develops/helps out on several open-source projects including Robin, Yettii, Xbox DVR Open Dyslexia (which has 60,000 uses) and upcoming Jarvis. 
                 | Robert is also the author of several published papers including Problems Posed by Ad-blockers and Web Accessibility and OpenDyslexia.
-                | He's "Gifted" on both backend and frontend develop having won over 21 awards.
+                | Lucky enough to win over 21 awards for backend and frontend development.
                 | Studied computer science at Cork Institute of Technology in Ireland and graduated at the top of my class.
           .row(style='margin-bottom:40px;')
             .col-sm-2.col-md-2

@@ -24,12 +24,12 @@ html(lang='en')
       min-width: 100%;
       }
   body.preload.awards
-    #navBarId.navbar.navbar-warning(data-ripple-color='#F0F0F0', style='background-color:#8E24AA;z-index:9;top: 0;position:fixed;width:100%;')
+    #navBarId.navbar.navbar-warning.colorsFadeIn(data-ripple-color='#F0F0F0', style='background-color:#8E24AA;z-index:9;top: 0;position:fixed;width:100%;')
       .container-fluid
         .navbar-header(style='width: 100%;')
           a#logo1.navbar-brand(href='./index.html')
           a.menu-button.home
-            i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
+            i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 20px;font-size: 20px !important;', aria-hidden='true')
         include ./parts/sidebar.pug
     .overlay
     .container-fluid(style='margin-top: 103px;')
@@ -45,8 +45,9 @@ html(lang='en')
               br
               br
               | Robert James Gabriel
+              hr(style='margin-top:40px;margin-bottom:40px')
         .col-sm-3
-    .container(style='   margin-top:50px;')
+    .container(style='margin-top:30px;')
       .row
         .col-sm-2
         .col-sm-8
@@ -72,7 +73,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='dist/img/work/austimstart.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/start.png', alt='Loading image...')
                   h3 Autism Start
                   p
                     | Autism Start provides practical expert advice to parents and practitioners supporting children and teenagers with autism. Our mission is to provide easy to follow step-by-step guides for teaching communication skills, social skills, academic learning and independent living skills. Our team is made up of board certified behaviour analysts, special education teachers and a senior clinical psychologist. The guides and advice on this site are the result of years and years of experience. The team has worked directly with over 500 children and teenagers with autism. Our advice is based on the all the things these amazing children taught us over the years.
@@ -81,7 +82,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='dist/img/websites/cleanenery6.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/clean.png', alt='Loading image...')
                   h3 Software Developer (Internship)
                   p
                     | Throughout this internship gained experience in setting up networks and servers on a huge scale. Worked with a number of varied departments in areas such as Networking, Coding, Engineering and HR. Redesigned and built the Visitors Portal Website to improve information and interactivity through social sharing and videos.
@@ -90,7 +91,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='dist/img/websites/sinnot2.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/emc.png', alt='Loading image...')
                   h3 Software Developer (Internship)
                   p
                     | Design and development of an interactive internal internet website for EMC employees. Employees interact with the website by creating an account, searching for employees and making mentor requests. Built using PHP, Html5, CSS and Microsoft Database.
@@ -98,7 +99,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='dist/img/websites/m3tv4.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/m3tv.png', alt='Loading image...')
                   h3 Web Developer
                   p
                     | Design and development of an interactive website for Clean Energy Ireland. Building a redesigned website with more social features and better coding standards. Mobile site, improved SEO and updated server software along with a custom cms for the staff to use. Built in Php , backbone and html.
@@ -107,7 +108,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='dist/img/websites/learnlode.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/learnlode.png', alt='Loading image...')
                   h3 Software Developer
                   p
                     | Designed a custom encryption algorithms to help with encrypting data for password restart in the enterprise market. Tied up patches of code along with reviewing code for development .
@@ -116,7 +117,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='dist/img/websites/allaaround932.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/websites/taxi.png', alt='Loading image...')
                   h3(style="overflow: hidden;") Application Developer
                   p
                     | Designed, developed and created the branding for AllAroundCorkTaxiToursandTransfers.com, a new taxi website in Cork. The site relies on social network and a huge database of locations which I also developed. Used Html5, knockout.js along others.
@@ -124,7 +125,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='assets/img/websites/yaa.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/yaa.png', alt='Loading image...')
                   h3(style="overflow: hidden;")  Web Developer
                   p
                     | Redesigning the online official website of well-renowned singer Declan Sinnott. As an internationally performing artist the objective was to grow online presence, support greater interaction with fans and centralize communication, cross-updating from Twitter, Facebook and his personal blog.
@@ -134,7 +135,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='assets/img/websites/teamwork.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/teamwork.png', alt='Loading image...')
                   h3(style="overflow: hidden;") Web Developer
                   p
                     | Design and development of Autism Starts social website, includes access to original content, social network community and tools available for users. Users can utilise Autism Starts’ original content via video playback, articles, and tailored lesson plans. Supports interaction with other users through a deeply-embedded social networking system: users can follow others, receive status updates, upload photos and share links. Includes public discussion forums and the facility to add Items to a scrapbook to read later.
@@ -143,7 +144,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='assets/img/work/teamwork.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/teamwork.png', alt='Loading image...')
                   h3(style="overflow: hidden;") Web Engineer (Internship)
                   p
                     | While working at Teamwork as part of internship. 
@@ -156,7 +157,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='assets/img/work/teamwork.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/teamwork.png', alt='Loading image...')
                   h3(style="overflow: hidden;") Software Engineer (Part Time)
                   p
                     | Worked part time while studying in 4th year of my college degree in computer science.
@@ -166,7 +167,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='assets/img/cork/teamwork.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/teamwork.png', alt='Loading image...')
                   h3(style="overflow: hidden;") Software Engineer
                   p
                     | Software Engineer, primarily responsible for the development for the suite of importers the Teamwork.com Projects team used along with being dropped into other teams to help. These included a rebuild of the signup code, adding Google signup support and new features and UX changes. Responsibilities also included creating Coldfusion/Golang based server-side solutions, graphic design and SEO implementation.
@@ -175,7 +176,7 @@ html(lang='en')
             li
               .panel.panel-primary
                 .panel-body
-                  img.img-responsive(src='assets/img/work/teamwork.png', alt='Loading image...')
+                  img.img-responsive(src='dist/img/work/teamwork.png', alt='Loading image...')
                   h3(style="overflow: hidden;") Teamwork.com Website Product lead & Sofware Engineer
                   p
                     | Product and engineering lead for Teamwork.com's website (They started treating it as a product). I lead and developed a rebuild of the stack. 

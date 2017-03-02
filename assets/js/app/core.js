@@ -9,11 +9,11 @@
     bannerText = $('#logo2');
     navText.addClass('show');
     navText.text('Robert James Gabriel');
-    console.log("ss");
     cheet('↑ ↑ ↓ ↓ ← → ← → b a', function() {
       console.log('hi');
       $('#easteregg').modal('show');
     });
+    console.log(document.referrer);
     $(window).scroll(function() {
       var scroll;
       scroll = $(window).scrollTop();
@@ -52,7 +52,7 @@
       if (hrElements.length > 0) {
         i = 0;
         while (i < hrElements.length) {
-          hrElements[i].style.color = color;
+          hrElements[i].style.background = color;
           i++;
         }
       }
