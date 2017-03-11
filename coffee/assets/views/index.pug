@@ -21,61 +21,64 @@ html(lang='en')
       [v-cloak] {
       display:none;
       }
-  body
-    .overlay  
-    #navBarId.navbar.navbar-warning.colorsFadeIn(data-ripple-color='#F0F0F0', style='z-index:9;top: 0;position:fixed;width:100%;')
-      .container-fluid
-        .navbar-header(style='width: 100%;')
-          a#logo2.navbar-brand(href='./index.html') What Coffee should I have Today?
-          a.menu-button.home
-            i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
-        include ./parts/sidebar.pug
+  body(style="background-color:#FF9000;")
+    .everything(id='app')
+      .overlay  
+      #navBarId.navbar.navbar-warning.colorsFadeIn(data-ripple-color='#F0F0F0', style='z-index:9;top: 0;position:fixed;width:100%;background-color:#FF9000')
+        .container-fluid
+          .navbar-header(style='width: 100%;')
+            a#logo2.navbar-brand(href='./index.html') What Coffee should I have Today?
+            a.menu-button.home
+              i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
+          include ./parts/sidebar.pug
 
-    .container-fluid(style='margin-top: 103px;height: 100vh;')
-      .row
-        .col-sm-4
-        .col-sm-4
-          .row
-            div(id='app')
-              h1(style="font-size:-webkit-xxx-large;margin-bottom: 31px;") 
-                | You should have a 
-                span(style='color:red',v-cloak) {{coffeeTitle}} 
-              p(v-cloak) {{coffeeDescription}}
-              br
-              br
-              br
-              a.btn.btn-raised.btn-primary(v-on:click='fetchCoffees',style='width:100%') Gimme another coffee
-              div(style="margin-top:100px;")
+      .container-fluid(style='margin-top: 103px;')
+        .row
+          .col-sm-3
+          .col-sm-6
+            .row
+              div(style="padding:15px;")
+                h1(style="font-size:-webkit-xxx-large;margin-bottom: 31px;font-size:5em;color:#fff;") 
+                  | You should have a 
+                  span(style='color:black',v-cloak) {{coffeeTitle}} 
+                p(v-cloak,style="color:white;font-size:1.5em") {{coffeeDescription}}
+                br
+                br
+                br
+                a.btn.btn-raised.btn-info.btn-lg(v-on:click='fetchCoffees',style='width:100%;color:white!important') Gimme another coffee
+    
+          .col-sm-3
+      .container-fluid(style='padding-top: 103px;background-color:#FFB400;padding-bottom:30px;')
+        .row
+          .col-sm-4
+            div.well
               h3 How can I add more coffee?
               p
                 | Add more by making a pull request to  
                 a(href='https://github.com/RobertJGabriel/coffee-drink-types') here
-              br
-              hr
-              br
+          .col-sm-4
+            div.well
               h3  How many coffees are in the database?
               p  {{numberOfCoffees}} Coffees
-              br
-              hr
-              br
-              h3  Why Did you make this ?
-              p  Wanted to make something using Vue.js and I love Coffee
+
               br
               hr
               br
               h3 Whats your favioute coffee
-              p Flat white.    
-        .col-sm-4
-
-    
-    .container
-      include ./parts/modal.pug
-    footer
-      include ./parts/footer.pug
+              p Flat white.  
+          .col-sm-4
+            div.well  
+              h3  Why Did you make this ?
+              p  Wanted to make something using Vue.js and I love Coffee
+      
+      .container
+        include ./parts/modal.pug
+      footer(style="margin-top:0px;")
+        include ./parts/footer.pug
 
     script(src='https://unpkg.com/vue@2.2.2/dist/vue.js')
     script(src="https://cdn.jsdelivr.net/vue.resource/1.2.1/vue-resource.min.js")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
-    script(src='http://robertgabriel.ninja/dist/js/all.min.js')
+  
     script(src='./assets/js/app/core.js')
 
