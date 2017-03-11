@@ -1,0 +1,52 @@
+
+#madewith.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal') x
+        h4.modal-title Made with.....
+      .modal-body
+      .list-group
+        .list-group-item
+          .row-picture
+            img.circle(src='https://vuejs.org/images/logo.png', alt='icon')
+          .row-content
+            h4.list-group-item-heading Vue.js
+            p.list-group-item-text For something more lightweight, a great solution is Vue.js. Vue is a library that focuses heavily on the ViewModel—the two-way data bindings that tie what we see and interact with on the screen with the application's data model
+        .list-group-separator
+        .list-group-item
+          .row-picture
+            img.circle(src='http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/03/1427207179CoffeeScriptLogo.png', alt='icon')
+          .row-content
+            h4.list-group-item-heading Coffee dataset
+            p.list-group-item-text.a(href='https://github.com/RobertJGabriel/coffee-drink-types') Full set here
+        .list-group-separator
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+
+
+#cvModal.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal') x
+        h4.modal-title This website not good enough?
+      .modal-body
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Coming soon
+        a.btn.btn-default(href='me.json', alt='cv json') Json
+
+
+
+#easteregg.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal') x
+        h4.modal-title Well Hey. Nothing to see here
+      .modal-body
+        img.img-responsive(src='./assets/img/easteregg.gif', alt='Cinque Terre', width='304', height='236')
+
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close

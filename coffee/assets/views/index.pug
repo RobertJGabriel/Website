@@ -1,0 +1,75 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width')
+    meta(name='description', content='Not sure what coffee to have? Let use pick for you with over 35 different coffees')
+    meta(name='author', content='Robert James Gabriel')
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:description', content='Not sure what coffee to have? Let use pick for you with over 35 different coffees')
+    meta(property='og:image', content='http://robertgabriel.ninja/dist/img/me.png')
+    meta(name='twitter:image:src', content='http://robertgabriel.ninja/dist/img/me.png')
+    meta(name='twitter:creator', content='@RobertJGabriel')
+    meta(name='twitter:url', content='http://robertgabriel.ninja')
+    meta(name='twitter:title', content='Robert James Gabriel')
+    meta(name='theme-color', content='#eb298c')
+    title What coffee should I have Today ?
+    link(href='http://robertgabriel.ninja/dist/css/styles.min.css', rel='stylesheet')
+    link(rel='icon', type='image/png', href='dist/img/favicon.png')
+    style.
+      [v-cloak] {
+      display:none;
+      }
+  body
+    .overlay  
+    #navBarId.navbar.navbar-warning.colorsFadeIn(data-ripple-color='#F0F0F0', style='z-index:9;top: 0;position:fixed;width:100%;')
+      .container-fluid
+        .navbar-header(style='width: 100%;')
+          a#logo2.navbar-brand(href='./index.html') What Coffee should I have Today?
+          a.menu-button.home
+            i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
+        include ./parts/sidebar.pug
+
+    .container-fluid(style='margin-top: 103px;height: 100vh;')
+      .row
+        .col-sm-4
+        .col-sm-4
+          .row
+            div(id='app')
+              h1(style="font-size:-webkit-xxx-large;margin-bottom: 31px;") 
+                | You should have a 
+                span(style='color:red',v-cloak) {{coffeeTitle}} 
+              p(v-cloak) {{coffeeDescription}}
+              br
+              br
+              br
+              a.btn.btn-raised.btn-primary(v-on:click='fetchCoffees',style='width:100%') Gimme another coffee
+              div(style="margin-top:100px;")
+              h3 How can I add more coffee?
+              p
+                | Add more by making a pull request to  
+                a(href='https://github.com/RobertJGabriel/coffee-drink-types') here
+              br
+              hr
+              br
+              h3  Why Did you make this ?
+              p  Wanted to make something using Vue.js and I love Coffee
+              br
+              hr
+              br
+              h3 Whats your favioute coffee
+              p Flat white.    
+        .col-sm-4
+
+    
+    .container
+      include ./parts/modal.pug
+    footer
+      include ./parts/footer.pug
+
+    script(src='https://unpkg.com/vue@2.2.2/dist/vue.js')
+    script(src="https://cdn.jsdelivr.net/vue.resource/1.2.1/vue-resource.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script(src='http://robertgabriel.ninja/dist/js/all.min.js')
+    script(src='./assets/js/app/core.js')
+
