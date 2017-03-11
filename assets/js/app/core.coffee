@@ -29,9 +29,10 @@ $ ->
     h3Elements = document.getElementsByTagName('h3')
     aTagsElements = document.getElementsByTagName('a')
     if  document.getElementById('navBarId').style.backgroundColor = "rgb(255, 255, 255)"
-      color = black
+      color = "black"
     else 
       color = document.getElementById('navBarId').style.backgroundColor
+    console.log(document.getElementById('navBarId').style.backgroundColor)
     
     i = 1
     while i < h1Elements.length
