@@ -29,7 +29,7 @@ html(lang='en')
           .navbar-header(style='width: 100%;')
             a#logo2.navbar-brand(href='./index.html',style="color:#000") What Coffee should I have Today?
             a.menu-button.home
-              i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
+              i.fa.fa-bars(style='float: right;color:#fff;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
           include ./parts/sidebar.pug
 
       .container-fluid(style='margin-top: 103px;')
@@ -48,7 +48,7 @@ html(lang='en')
                 a.btn.btn-raised.btn-info.btn-lg(v-on:click='fetchCoffees',style='width:100%;color:#FFF!important') Gimme another coffee
     
           .col-sm-3
-      .container-fluid(style='padding-top: 103px;border-top:1px solid #FFB400;padding-bottom:30px;')
+      .container-fluid(style='padding-top: 103px;padding-bottom:30px;')
         .row
           .col-sm-4
             div.well
@@ -79,6 +79,6 @@ html(lang='en')
     script(src='https://unpkg.com/vue@2.2.2/dist/vue.js')
     script(src="https://cdn.jsdelivr.net/vue.resource/1.2.1/vue-resource.min.js")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
-  
+    script(src='http://robertgabriel.ninja/dist/js/all.min.js')
     script(src='./assets/js/app/core.js')
 
