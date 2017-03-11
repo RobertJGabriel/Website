@@ -21,13 +21,13 @@ html(lang='en')
       [v-cloak] {
       display:none;
       }
-  body(style="background-color:#FF9000;")
+  body(style="background-color:#fff;")
     .everything(id='app')
       .overlay  
-      #navBarId.navbar.navbar-warning.colorsFadeIn(data-ripple-color='#F0F0F0', style='z-index:9;top: 0;position:fixed;width:100%;background-color:#FF9000')
+      #navBarId.navbar.navbar-warning.colorsFadeIn(data-ripple-color='#F0F0F0', style='z-index:9;top: 0;position:fixed;width:100%;background-color:#fff')
         .container-fluid
           .navbar-header(style='width: 100%;')
-            a#logo2.navbar-brand(href='./index.html') What Coffee should I have Today?
+            a#logo2.navbar-brand(href='./index.html',style="color:#000") What Coffee should I have Today?
             a.menu-button.home
               i.fa.fa-bars(style='float: right;color:white;padding: 0;margin: 0;margin-top: 13px;', aria-hidden='true')
           include ./parts/sidebar.pug
@@ -38,17 +38,17 @@ html(lang='en')
           .col-sm-6
             .row
               div(style="padding:15px;")
-                h1(style="font-size:-webkit-xxx-large;margin-bottom: 31px;font-size:5em;color:#fff;") 
+                h1(style="font-size:-webkit-xxx-large;margin-bottom: 31px;font-size:5em;color:#black;") 
                   | You should have a 
-                  span(style='color:black',v-cloak) {{coffeeTitle}} 
-                p(v-cloak,style="color:white;font-size:1.5em") {{coffeeDescription}}
+                  span(style='color:#0fb2fc',v-cloak) {{coffeeTitle}} 
+                p(v-cloak,style="color:#black;font-size:1.5em") {{coffeeDescription}}
                 br
                 br
                 br
-                a.btn.btn-raised.btn-info.btn-lg(v-on:click='fetchCoffees',style='width:100%;color:white!important') Gimme another coffee
+                a.btn.btn-raised.btn-info.btn-lg(v-on:click='fetchCoffees',style='width:100%;color:#FFF!important') Gimme another coffee
     
           .col-sm-3
-      .container-fluid(style='padding-top: 103px;background-color:#FFB400;padding-bottom:30px;')
+      .container-fluid(style='padding-top: 103px;border-top:1px solid #FFB400;padding-bottom:30px;')
         .row
           .col-sm-4
             div.well
