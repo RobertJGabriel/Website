@@ -1,0 +1,60 @@
+
+#madewith.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal') x
+        h4.modal-title Made with.....
+      .modal-body
+      .list-group
+        .list-group-item
+          .row-picture
+            img.circle(src='./dist/img/pug.png', alt='icon')
+          .row-content
+            h4.list-group-item-heading Pug
+            p.list-group-item-text Pug is a high performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js.
+        .list-group-separator
+        .list-group-item
+          .row-picture
+            img.circle(src='./dist/img/coffeescript.png', alt='icon')
+          .row-content
+            h4.list-group-item-heading Coffeescript
+            p.list-group-item-text CoffeeScript is a little language that compiles into JavaScript.
+        .list-group-separator
+        .list-group-item
+          .row-picture
+            img.circle(src='./dist/img/github.png', alt='icon')
+          .row-content
+            h4.list-group-item-heading Other tools
+            p.list-group-item-text Gulp, Google Page speed, Less, Css animations, Firebase, NPM, Critical CSS along with a Pagespeed score of 96%.
+        .list-group-separator
+
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+
+
+#cvModal.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal') x
+        h4.modal-title This website not good enough?
+      .modal-body
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Coming soon
+        a.btn.btn-default(href='me.json', alt='cv json') Json
+
+
+
+#easteregg.modal.fade(role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal') x
+        h4.modal-title Well Hey. Nothing to see here
+      .modal-body
+        img.img-responsive(src='./assets/img/easteregg.gif', alt='Cinque Terre', width='304', height='236')
+
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close
