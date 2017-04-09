@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /assets
-Disallow: /dist
-Disallow: /CNAME
-Disallow: .gitignore
-
-User-agent: Libwww-perl
-Disallow: /
