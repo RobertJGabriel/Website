@@ -12,7 +12,10 @@ htmlmin = require('gulp-htmlmin')
 babel = require('gulp-babel')
 sass = require('gulp-sass')
 pug = require('gulp-pug')
-rollup     = require('gulp-rollup')
+rollup = require('gulp-rollup')
+browserify = require('gulp-browserify')
+babelify = require('babelify')
+
 
 gulp.task 'vendor_css', ->
     gulp.src('./assets/css/scss/bootstrap/bootstrap-material-design.scss')
@@ -29,12 +32,12 @@ gulp.task 'vendor_css', ->
 
 
 gulp.task 'sass', ->
-  gulp.src('./assets/css/sass/*.sass')
-  .pipe(sass().on('error', sass.logError))
-  .pipe(minifyCSS())
-  .pipe(rename(suffix: '.min'))
-  .pipe gulp.dest('./dist/css')
-  return
+    gulp.src('./assets/css/sass/*.sass')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(minifyCSS())
+    .pipe(rename(suffix: '.min'))
+    .pipe gulp.dest('./dist/css')
+    return
 
 
 
@@ -55,15 +58,16 @@ gulp.task 'js_app', ->
 
 gulp.task 'js_vendor', ->
     gulp.src([
-        './assets/js/vendor/material/**/*.js'
+        './assets/js/vendor/index.js'
     ]).on('error', (err) ->
         gutil.log gutil.colors.red(err.message)
         return
     )
-    .pipe(rollup({
-
-          entry: './assets/js/vendor/material/index.js'
-        }))
+    .pipe(browserify({
+      debug: true,
+      insertGlobals : false,
+      transform: ["babelify"]
+      }))
     .pipe(logger(
         before: 'Compling Vendor Javascript'
         after: 'Finished!'
@@ -74,24 +78,24 @@ gulp.task 'js_vendor', ->
     return
 
 gulp.task 'html', ->
-  gulp.src('assets/views/*.pug')
-  .pipe(pug({}))
-  .pipe(logger(
-    before: 'Minifing HTML'
-    after: 'Finished!'
-    showChange: true))
-    .pipe(gulp.dest('./docs'))
+    gulp.src('assets/views/*.pug')
+    .pipe(pug({}))
+    .pipe(logger(
+        before: 'Minifing HTML'
+        after: 'Finished!'
+        showChange: true))
+        .pipe(gulp.dest('./docs'))
 
-  return
+    return
 
 
 
 
 gulp.task 'build', [
     'vendor_css'
-    'sass'
+
     'js_vendor'
-    'js_app'
+
     'html'
 ]
 
