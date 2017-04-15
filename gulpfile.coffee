@@ -13,13 +13,13 @@ babel = require('gulp-babel')
 sass = require('gulp-sass')
 pug = require('gulp-pug')
 rollup = require('gulp-rollup')
-browserify = require('gulp-browserify')
-babelify = require('babelify')
-
+concatCss = require('gulp-concat-css')
+del = require('del')
+coffee = require('gulp-coffee')
 
 gulp.task 'vendor_css', ->
-    gulp.src('./assets/css/scss/bootstrap/bootstrap-material-design.scss')
-    .pipe(sass().on('error', sass.logError))
+    gulp.src('./assets/css/vendor')
+    .pipe(concatCss("styles/bundle.css"))
     .pipe(minifyCSS(keepSpecialComments: 1))
     .pipe(logger(
         before: 'Compressing Css '
@@ -41,8 +41,8 @@ gulp.task 'sass', ->
 
 
 
-gulp.task 'js_app', ->
-    gulp.src('./assets/js/app/*.js')
+gulp.task 'app_js', ->
+    gulp.src('./assets/js/app/*.coffee')
     .on('error', (err) ->
         gutil.log gutil.colors.red(err.message)
         return
@@ -50,32 +50,32 @@ gulp.task 'js_app', ->
         before: 'Compling App Javascript'
         after: 'Finished!'
         showChange: true))
-    .pipe(babel({presets: ['es2015']}))
+    .pipe(coffee({bare: true}))
     .pipe(concat('app.min.js'))
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('./docs/assets/js'))
     return
 
 
-gulp.task 'js_vendor', ->
-    gulp.src([
-        './assets/js/vendor/index.js'
+gulp.task 'vendor_js', ->
+    gulp.src( [
+        './assets/js/vendor/jquery.js',
+        '.assets/js/vendor/tether.js',
+        './assets/js/vendor/bootstrap.min.js',
+        './assets/js/vendor/bootstrap-material-design.iife.js'
     ]).on('error', (err) ->
         gutil.log gutil.colors.red(err.message)
         return
     )
-    .pipe(browserify({
-      debug: true,
-      insertGlobals : false,
-      transform: ["babelify"]
-      }))
     .pipe(logger(
         before: 'Compling Vendor Javascript'
         after: 'Finished!'
         showChange: true))
     .pipe(concat('vendor.min.js'))
-    .pipe(babel({presets: ['es2015']}))
+    .pipe(uglify())
     .pipe(gulp.dest('./docs/assets/js/'))
     return
+
+
 
 gulp.task 'html', ->
     gulp.src('assets/views/*.pug')
@@ -85,10 +85,17 @@ gulp.task 'html', ->
         after: 'Finished!'
         showChange: true))
         .pipe(gulp.dest('./docs'))
-
     return
 
 
+
+gulp.task 'clean', ->
+  del.sync [
+    './docs/*'
+    './assets/css/vendor/*'
+    './assets/js/vendor/*'
+  ], force: true
+  return
 
 
 gulp.task 'build', [

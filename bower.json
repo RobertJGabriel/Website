@@ -21,17 +21,18 @@
   },
    "bowerMove": {
     "bootstrap": {
-      "dist/css/bootstrap.min.css": "assets/css/vendor",
+      "dist/css/bootstrap.css": "assets/css/vendor",
        "dist/js/bootstrap.min.js": "assets/js/vendor/"
     },
     "bootstrap-material-design": {
-      "dist/bootstrap-material-design.css": "assets/css/vendor/"
+      "dist/bootstrap-material-design.css": "assets/css/vendor/",
+      "dist/bootstrap-material-design.iife.js": "assets/js/vendor/"
     },
         "jquery": {
       "dist/jquery.js": "assets/js/vendor/"
     },
             "tether": {
-      "dist/js/tether.js": "assets/js/vendor/tether.js"
+      "dist/js/tether.js": "assets/js/vendor/"
     }
   }
 }
