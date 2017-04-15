@@ -1,12 +1,4 @@
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): util.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * --------------------------------------------------------------------------
- */
-
-const Util = (($) => {
-
+const Util = (() => {
 
   /**
    * ------------------------------------------------------------------------
@@ -14,37 +6,14 @@ const Util = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  let transition = false
-
-  const MAX_UID = 1000000
+  let transitionEnd = false
+  let transitionEndSelector = ''
 
   const TransitionEndEvent = {
-    WebkitTransition : 'webkitTransitionEnd',
-    MozTransition    : 'transitionend',
-    OTransition      : 'oTransitionEnd otransitionend',
-    transition       : 'transitionend'
-  }
-
-  // shoutout AngusCroll (https://goo.gl/pxwQGp)
-  function toType(obj) {
-    return {}.toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
-  }
-
-  function isElement(obj) {
-    return (obj[0] || obj).nodeType
-  }
-
-  function getSpecialTransitionEndEvent() {
-    return {
-      bindType: transition.end,
-      delegateType: transition.end,
-      handle(event) {
-        if ($(event.target).is(this)) {
-          return event.handleObj.handler.apply(this, arguments) // eslint-disable-line prefer-rest-params
-        }
-        return undefined
-      }
-    }
+    WebkitTransition: 'webkitTransitionEnd',
+    MozTransition: 'transitionend',
+    OTransition: 'oTransitionEnd otransitionend',
+    transition: 'transitionend'
   }
 
   function transitionEndTest() {
@@ -52,45 +21,25 @@ const Util = (($) => {
       return false
     }
 
-    const el = document.createElement('bootstrap')
+    let el = document.createElement('bmd')
 
-    for (const name in TransitionEndEvent) {
+    for (let name in TransitionEndEvent) {
       if (el.style[name] !== undefined) {
-        return {
-          end: TransitionEndEvent[name]
-        }
+        return TransitionEndEvent[name] // { end: TransitionEndEvent[name] }
       }
     }
 
     return false
   }
 
-  function transitionEndEmulator(duration) {
-    let called = false
-
-    $(this).one(Util.TRANSITION_END, () => {
-      called = true
-    })
-
-    setTimeout(() => {
-      if (!called) {
-        Util.triggerTransitionEnd(this)
-      }
-    }, duration)
-
-    return this
-  }
-
   function setTransitionEndSupport() {
-    transition = transitionEndTest()
+    transitionEnd = transitionEndTest()
 
-    $.fn.emulateTransitionEnd = transitionEndEmulator
-
-    if (Util.supportsTransitionEnd()) {
-      $.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent()
+    // generate a concatenated transition end event selector
+    for (let name in TransitionEndEvent) {
+      transitionEndSelector += ` ${TransitionEndEvent[name]}`
     }
   }
-
 
   /**
    * --------------------------------------------------------------------------
@@ -98,62 +47,57 @@ const Util = (($) => {
    * --------------------------------------------------------------------------
    */
 
-  const Util = {
+  let Util = {
 
-    TRANSITION_END: 'bsTransitionEnd',
-
-    getUID(prefix) {
-      do {
-        // eslint-disable-next-line no-bitwise
-        prefix += ~~(Math.random() * MAX_UID) // "~~" acts like a faster Math.floor() here
-      } while (document.getElementById(prefix))
-      return prefix
+    transitionEndSupported() {
+      return transitionEnd
     },
 
-    getSelectorFromElement(element) {
-      let selector = element.getAttribute('data-target')
+    transitionEndSelector()  {
+      return transitionEndSelector
+    },
 
-      if (!selector) {
-        selector = element.getAttribute('href') || ''
-        selector = /^#[a-z]/i.test(selector) ? selector : null
+    isChar(event) {
+      if (typeof event.which === 'undefined') {
+        return true
+      } else if (typeof event.which === 'number' && event.which > 0) {
+        return (
+          !event.ctrlKey
+          && !event.metaKey
+          && !event.altKey
+          && event.which !== 8  // backspace
+          && event.which !== 9  // tab
+          && event.which !== 13 // enter
+          && event.which !== 16 // shift
+          && event.which !== 17 // ctrl
+          && event.which !== 20 // caps lock
+          && event.which !== 27 // escape
+        )
       }
-
-      return selector
+      return false
     },
 
-    reflow(element) {
-      return element.offsetHeight
-    },
-
-    triggerTransitionEnd(element) {
-      $(element).trigger(transition.end)
-    },
-
-    supportsTransitionEnd() {
-      return Boolean(transition)
-    },
-
-    typeCheckConfig(componentName, config, configTypes) {
-      for (const property in configTypes) {
-        if (configTypes.hasOwnProperty(property)) {
-          const expectedTypes = configTypes[property]
-          const value         = config[property]
-          const valueType     = value && isElement(value) ?
-                                'element' : toType(value)
-
-          if (!new RegExp(expectedTypes).test(valueType)) {
-            throw new Error(
-              `${componentName.toUpperCase()}: ` +
-              `Option "${property}" provided type "${valueType}" ` +
-              `but expected type "${expectedTypes}".`)
-          }
+    assert($element, invalidTest, message) {
+      if (invalidTest) {
+        if (!$element === undefined) {
+          $element.css('border', '1px solid red')
         }
+        console.error(message, $element) // eslint-disable-line no-console
+        throw message
       }
+    },
+
+    describe($element) {
+      if ($element === undefined) {
+        return 'undefined'
+      } else if ($element.length === 0) {
+        return '(no matching elements)'
+      }
+      return `${$element[0].outerHTML.split('>')[0]}>`
     }
   }
 
   setTransitionEndSupport()
-
   return Util
 
 })(jQuery)

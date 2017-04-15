@@ -1,0 +1,21 @@
+{
+  "name": "robert_james_gabriel",
+  "description": "Personal website",
+  "main": "index.js",
+  "authors": [
+    "Robert James Gabriel"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/RobertJGabriel/Website",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}

@@ -13,6 +13,13 @@
 // default margin - no form-group required
 @include input-group-button-variation(input-padding-y);
 
+&.bmd-form-group-sm {
+  @include input-group-button-variation($input-padding-y-sm);
+}
+
+&.bmd-form-group-lg {
+  @include input-group-button-variation($input-padding-y-lg);
+}
 
 .input-group { // may be in or outside of form-group
 
