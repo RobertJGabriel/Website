@@ -120,10 +120,9 @@ const Carousel = (($) => {
     // public
 
     next() {
-      if (this._isSliding) {
-        throw new Error('Carousel is sliding')
+      if (!this._isSliding) {
+        this._slide(Direction.NEXT)
       }
-      this._slide(Direction.NEXT)
     }
 
     nextWhenVisible() {
@@ -134,10 +133,9 @@ const Carousel = (($) => {
     }
 
     prev() {
-      if (this._isSliding) {
-        throw new Error('Carousel is sliding')
+      if (!this._isSliding) {
+        this._slide(Direction.PREV)
       }
-      this._slide(Direction.PREVIOUS)
     }
 
     pause(event) {
@@ -195,7 +193,7 @@ const Carousel = (($) => {
 
       const direction = index > activeIndex ?
         Direction.NEXT :
-        Direction.PREVIOUS
+        Direction.PREV
 
       this._slide(direction, this._items[index])
     }
@@ -263,7 +261,7 @@ const Carousel = (($) => {
 
     _getItemByDirection(direction, activeElement) {
       const isNextDirection = direction === Direction.NEXT
-      const isPrevDirection = direction === Direction.PREVIOUS
+      const isPrevDirection = direction === Direction.PREV
       const activeIndex     = this._getItemIndex(activeElement)
       const lastItemIndex   = this._items.length - 1
       const isGoingToWrap   = isPrevDirection && activeIndex === 0 ||
@@ -273,7 +271,7 @@ const Carousel = (($) => {
         return activeElement
       }
 
-      const delta     = direction === Direction.PREVIOUS ? -1 : 1
+      const delta     = direction === Direction.PREV ? -1 : 1
       const itemIndex = (activeIndex + delta) % this._items.length
 
       return itemIndex === -1 ?
@@ -282,9 +280,13 @@ const Carousel = (($) => {
 
 
     _triggerSlideEvent(relatedTarget, eventDirectionName) {
+      const targetIndex = this._getItemIndex(relatedTarget)
+      const fromIndex = this._getItemIndex($(this._element).find(Selector.ACTIVE_ITEM)[0])
       const slideEvent = $.Event(Event.SLIDE, {
         relatedTarget,
-        direction: eventDirectionName
+        direction: eventDirectionName,
+        from: fromIndex,
+        to: targetIndex
       })
 
       $(this._element).trigger(slideEvent)
@@ -310,9 +312,10 @@ const Carousel = (($) => {
 
     _slide(direction, element) {
       const activeElement = $(this._element).find(Selector.ACTIVE_ITEM)[0]
+      const activeElementIndex = this._getItemIndex(activeElement)
       const nextElement   = element || activeElement &&
         this._getItemByDirection(direction, activeElement)
-
+      const nextElementIndex = this._getItemIndex(nextElement)
       const isCycling = Boolean(this._interval)
 
       let directionalClassName
@@ -354,7 +357,9 @@ const Carousel = (($) => {
 
       const slidEvent = $.Event(Event.SLID, {
         relatedTarget: nextElement,
-        direction: eventDirectionName
+        direction: eventDirectionName,
+        from: activeElementIndex,
+        to: nextElementIndex
       })
 
       if (Util.supportsTransitionEnd() &&

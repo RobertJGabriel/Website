@@ -16,6 +16,22 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.6"
+    "bootstrap": "v4.0.0-alpha.6",
+    "bootstrap-material-design": "^4.0.2"
+  },
+   "bowerMove": {
+    "bootstrap": {
+      "dist/css/bootstrap.min.css": "assets/css/vendor",
+       "dist/js/bootstrap.min.js": "assets/js/vendor/"
+    },
+    "bootstrap-material-design": {
+      "dist/bootstrap-material-design.css": "assets/css/vendor/"
+    },
+        "jquery": {
+      "dist/jquery.js": "assets/js/vendor/"
+    },
+            "tether": {
+      "dist/js/tether.js": "assets/js/vendor/tether.js"
+    }
   }
 }

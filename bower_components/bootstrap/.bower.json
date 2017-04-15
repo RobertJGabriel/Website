@@ -25,6 +25,7 @@
     "composer.json",
     "CONTRIBUTING.md",
     "docs",
+    "Gruntfile.js",
     "js/tests",
     "test-infra"
   ],
@@ -32,15 +33,13 @@
     "jquery": ">=1.9.1",
     "tether": "^1.4.0"
   },
-  "version": "4.0.0-alpha.6",
-  "_release": "4.0.0-alpha.6",
+  "_release": "6d64afe508",
   "_resolution": {
-    "type": "version",
-    "tag": "v4.0.0-alpha.6",
-    "commit": "65ffb1c3b6e94440812a2e228cb8e8be512652ec"
+    "type": "branch",
+    "branch": "v4-dev",
+    "commit": "6d64afe508bfd0bcfb5831a9a4708cef4ad88334"
   },
   "_source": "https://github.com/twbs/bootstrap.git",
-  "_target": "v4.0.0-alpha.6",
-  "_originalSource": "bootstrap",
-  "_direct": true
+  "_target": "v4-dev",
+  "_originalSource": "bootstrap"
 }
