@@ -17,7 +17,7 @@ concatCss = require('gulp-concat-css')
 del = require('del')
 coffee = require('gulp-coffee')
 uncss = require('gulp-uncss')
-
+imagemin = require('gulp-imagemin')
 
 
 gulp.task 'vendor_css', ->
@@ -91,10 +91,20 @@ gulp.task 'html', ->
         before: 'Minifing HTML'
         after: 'Finished!'
         showChange: true))
-        .pipe(gulp.dest('./docs'))
+    .pipe(gulp.dest('./docs'))
     return
 
 
+gulp.task 'images', ->
+  gulp.src('./assets/img/**/*')
+  .pipe(imagemin())
+  .pipe(logger(
+    before: 'Compressing Images'
+    after: 'Finished!'
+    showChange: true))
+  .pipe(gulp.dest('./docs/assets/img/'))
+
+  return
 
 gulp.task 'clean', ->
   del.sync [
@@ -107,6 +117,7 @@ gulp.task 'build', [
     'vendor_css'
     'vendor_js'
     'app_js'
+    'images'
     'html'
 ]
 
