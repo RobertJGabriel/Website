@@ -18,8 +18,8 @@ del = require('del')
 coffee = require('gulp-coffee')
 
 gulp.task 'vendor_css', ->
-    gulp.src('./assets/css/vendor')
-    .pipe(concatCss("styles/bundle.css"))
+    gulp.src('./assets/css/vendor/*.css')
+    .pipe(concatCss("vendor.css"))
     .pipe(minifyCSS(keepSpecialComments: 1))
     .pipe(logger(
         before: 'Compressing Css '
@@ -78,7 +78,7 @@ gulp.task 'vendor_js', ->
 
 
 gulp.task 'html', ->
-    gulp.src('assets/views/*.pug')
+    gulp.src('./assets/views/*.pug')
     .pipe(pug({}))
     .pipe(logger(
         before: 'Minifing HTML'
@@ -100,7 +100,8 @@ gulp.task 'clean', ->
 
 gulp.task 'build', [
     'vendor_css'
-    'js_vendor'
+    'vendor_js'
+    'app_js'
     'html'
 ]
 
