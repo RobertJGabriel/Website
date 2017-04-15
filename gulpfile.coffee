@@ -100,9 +100,7 @@ gulp.task 'clean', ->
 
 gulp.task 'build', [
     'vendor_css'
-
     'js_vendor'
-
     'html'
 ]
 
