@@ -16,9 +16,12 @@ rollup = require('gulp-rollup')
 concatCss = require('gulp-concat-css')
 del = require('del')
 coffee = require('gulp-coffee')
+uncss = require('gulp-uncss')
+
+
 
 gulp.task 'vendor_css', ->
-    gulp.src('./assets/css/vendor/*.css')
+    gulp.src(['assets/css/vendor/bootstrap.css','assets/css/vendor/bootstrap-material-design.css','assets/css/vendor/ripples.css'])
     .pipe(concatCss("vendor.css"))
     .pipe(minifyCSS(keepSpecialComments: 1))
     .pipe(logger(
@@ -27,6 +30,9 @@ gulp.task 'vendor_css', ->
         extname: '.min.css'
         showChange: true))
     .pipe(rename(suffix: '.min'))
+    .pipe(uncss({
+        html: ['./docs/*.html']
+    }))
     .pipe gulp.dest('./docs/assets/css')
     return
 
@@ -40,9 +46,8 @@ gulp.task 'sass', ->
     return
 
 
-
 gulp.task 'app_js', ->
-    gulp.src('./assets/js/app/*.coffee')
+    gulp.src('/assets/js/app/*.coffee')
     .on('error', (err) ->
         gutil.log gutil.colors.red(err.message)
         return
@@ -58,11 +63,13 @@ gulp.task 'app_js', ->
 
 gulp.task 'vendor_js', ->
     gulp.src( [
-        './assets/js/vendor/jquery.js',
-        '.assets/js/vendor/tether.js',
-        './assets/js/vendor/bootstrap.min.js',
-        './assets/js/vendor/bootstrap-material-design.iife.js'
-    ]).on('error', (err) ->
+        'assets/js/vendor/jquery.js',
+        'assets/js/vendor/tether.js',
+        'assets/js/vendor/bootstrap.min.js',
+        'assets/js/vendor/material.js',
+        'assets/js/vendor/ripples.js'
+        ]
+    ).on('error', (err) ->
         gutil.log gutil.colors.red(err.message)
         return
     )
@@ -92,8 +99,6 @@ gulp.task 'html', ->
 gulp.task 'clean', ->
   del.sync [
     './docs/*'
-    './assets/css/vendor/*'
-    './assets/js/vendor/*'
   ], force: true
   return
 
@@ -105,4 +110,4 @@ gulp.task 'build', [
     'html'
 ]
 
-gulp.task 'default', [ 'build' ]
+gulp.task 'default', [ 'clean','build' ]

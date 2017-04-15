@@ -17,22 +17,27 @@
   ],
   "dependencies": {
     "bootstrap": "v4.0.0-alpha.6",
-    "bootstrap-material-design": "^4.0.2"
+    "bootstrap-material-design": "git://github.com/FezVrasta/bootstrap-material-design.git#0.5.8"
   },
-   "bowerMove": {
+  "bowerMove": {
     "bootstrap": {
-      "dist/css/bootstrap.css": "assets/css/vendor",
-       "dist/js/bootstrap.min.js": "assets/js/vendor/"
+      "dist/css/bootstrap.css": "./assets/css/vendor/",
+      "dist/js/bootstrap.min.js": "./assets/js/vendor/"
     },
     "bootstrap-material-design": {
-      "dist/bootstrap-material-design.css": "assets/css/vendor/",
-      "dist/bootstrap-material-design.iife.js": "assets/js/vendor/"
+      "dist/css/bootstrap-material-design.css": "./assets/css/vendor/",
+      "dist/js/material.js": "./assets/js/vendor/",
+      "dist/js/ripples.js": "./assets/js/vendor/",
+      "dist/css/ripples.css": "./assets/css/vendor/"
     },
-        "jquery": {
-      "dist/jquery.js": "assets/js/vendor/"
+    "jquery": {
+      "dist/jquery.js": "./assets/js/vendor/"
     },
-            "tether": {
-      "dist/js/tether.js": "assets/js/vendor/"
+    "tether": {
+      "dist/js/tether.js": "./assets/js/vendor/"
     }
+  },
+  "resolutions": {
+    "bootstrap": "v4-dev"
   }
 }
