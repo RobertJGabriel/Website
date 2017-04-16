@@ -19,7 +19,8 @@
     "bootstrap": "v4.0.0-alpha.6",
     "bootstrap-material-design": "git://github.com/FezVrasta/bootstrap-material-design.git#0.5.8",
     "components-font-awesome": "^4.7.0",
-    "material-icons": "^0.1.0"
+    "material-icons": "^0.1.0",
+    "fingerprintjs2": "^1.5.1"
   },
   "bowerMove": {
     "bootstrap": {
