@@ -59,7 +59,7 @@ gulp.task 'app_css', ->
 
 
 gulp.task 'app_js', ->
-    gulp.src('/assets/js/app/*.coffee')
+    gulp.src('assets/js/app/*.coffee')
     .on('error', (err) ->
         gutil.log gutil.colors.red(err.message)
         return
@@ -67,7 +67,7 @@ gulp.task 'app_js', ->
         before: 'Compling App Javascript'
         after: 'Finished!'
         showChange: true))
-    .pipe(coffee({bare: true}))
+    .pipe(coffee())
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest('./docs/assets/js'))
     return
