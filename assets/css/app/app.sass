@@ -1,0 +1,120 @@
+html, body
+  height: 100vh
+
+
+.me
+  height: 120px
+  width: 120px
+  margin-left: auto
+  margin-right: auto
+  background-size: contain
+  border-radius: 120px
+  background-image: url('../img/me.png')
+  transition: background-image 0.4s ease-in-out
+  &:hover
+    transition: background-image 0.4s ease-in-out
+    background-image: url('../img/logo.png')
+
+canvas
+  width: 100% !important
+  cursor: crosshair
+
+.shadow
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26)
+
+.nav .navbar-nav .navbar-right
+  width: 100% !important
+  height: 100vh !important
+
+header
+  -webkit-transition: top 0.5s
+  background: #ff5722
+  left: 0
+  position: none !important
+  top: 0
+  width: 100%
+  padding-bottom: 70px
+
+  .header-title
+    color: #fff
+    font-size: 56px
+    font-weight: 400
+    line-height: 1.5
+    margin: 0 auto
+    overflow: hidden
+    white-space: nowrap
+    line-height: 94px
+    padding-top: 90px
+    cursor: pointer
+    word-break: break-word
+    white-space: initial
+
+.embed-responsive, img
+  margin: 20px 10 20px 0
+
+footer
+  background-color: #253139
+
+.hide
+  display: none
+
+.show
+  display: block
+
+.fa
+  font-size: 24px !important
+  margin: 10px
+
+.container-fluid > .navbar-header
+  margin-left: 0
+  margin-right: 0
+
+.bold
+  font-weight: 400 !important
+
+li, p
+  font-size: 16px
+  line-height: 1.7
+
+
+footer
+  margin-top: 50px
+  .container
+    position: relative
+    .row
+      height: 40px
+      margin-top: 10px
+      margin-bottom: 10px
+      .col-sm-7, .col-xs-7
+        height: 44px
+        padding: 0
+        margin: 0
+      .col-sm-7 p, .col-xs-7 p
+        text-align: center
+        color: white
+        padding: 0
+        font-size: 14px
+        line-height: 44px !important
+        margin: 0
+
+
+.footer-icons
+  li
+    list-style: none
+    float: left
+    a
+      color: #ababab !important
+      transition: color 0.5s ease
+      
+  .icon-twitter:hover
+    color: #F44336 !important
+  .icon-mail:hover
+    color: #FF5722 !important
+  .icon-dribble:hover
+    color: #FFEB3B !important
+  .icon-github:hover
+    color: #4CAF50 !important
+  .icon-googleplus:hover
+    color: #2196F3 !important
+  .icon-linkedin:hover
+    color: #673AB7 !important
