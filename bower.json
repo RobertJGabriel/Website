@@ -17,18 +17,27 @@
   ],
   "dependencies": {
     "bootstrap": "v4.0.0-alpha.6",
-    "bootstrap-material-design": "git://github.com/FezVrasta/bootstrap-material-design.git#0.5.8"
+    "bootstrap-material-design": "git://github.com/FezVrasta/bootstrap-material-design.git#0.5.8",
+    "components-font-awesome": "^4.7.0",
+    "material-icons": "^0.1.0"
   },
   "bowerMove": {
     "bootstrap": {
       "dist/css/bootstrap.css": "./assets/css/vendor/",
       "dist/js/bootstrap.min.js": "./assets/js/vendor/"
     },
+    "material-icons": {
+      "css/material-icons.css": "./assets/css/vendor/"
+    },
     "bootstrap-material-design": {
       "dist/css/bootstrap-material-design.css": "./assets/css/vendor/",
       "dist/js/material.js": "./assets/js/vendor/",
       "dist/js/ripples.js": "./assets/js/vendor/",
       "dist/css/ripples.css": "./assets/css/vendor/"
+    },
+    "components-font-awesome": {
+      "css/font-awesome.css": "./assets/css/vendor/",
+      "fonts/*": "./assets/fonts/"
     },
     "jquery": {
       "dist/jquery.js": "./assets/js/vendor/"
@@ -38,6 +47,6 @@
     }
   },
   "resolutions": {
-    "bootstrap": "v4-dev"
+    "bootstrap": "~3.3.6"
   }
 }
