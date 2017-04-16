@@ -1,18 +1,17 @@
-window.teamwork = {}
+
+window.app = {}
 
 
 
-
-
-teamwork.convert = (a,b,c) ->
+app.convert = (a,b,c) ->
   answer = a + b * c
   return answer
 
-teamwork.batman =() ->
+app.batman = () ->
   answer = "is the best"
   return answer
 
 
-console.log teamwork.convert 1,2,2
-console.log teamwork.batman 1,2,2
+console.log app.convert 1,2,2
+console.log app.batman 1,2,2
 
