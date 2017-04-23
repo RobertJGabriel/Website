@@ -46,7 +46,9 @@ gulp.task 'vendor_css', ->
 gulp.task 'app_css', ->
     gulp.src([
         './assets/css/app/app.sass'
+        './assets/css/app/layout.sass'
         './assets/css/app/material.sass'
+        './assets/css/app/menu.sass'
         ])
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss("app.css"))
@@ -79,7 +81,8 @@ gulp.task 'vendor_js', ->
         'assets/js/vendor/tether.js',
         'assets/js/vendor/bootstrap.min.js',
         'assets/js/vendor/material.js',
-        'assets/js/vendor/ripples.js'
+        'assets/js/vendor/ripples.js',
+        'assets/js/vendor/cheet.min.js'
         ]
     ).on('error', (err) ->
         gutil.log gutil.colors.red(err.message)
