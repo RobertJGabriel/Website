@@ -22,12 +22,12 @@ imagemin = require('gulp-imagemin')
 
 gulp.task 'vendor_css', ->
     gulp.src([
-        'assets/css/vendor/bootstrap.css',
-        'assets/css/vendor/font-awesome.css',
-        'assets/css/vendor/bootstrap-material-design.css',
-        'assets/css/vendor/material-icons.css',
+        'assets/css/vendor/bootstrap.css'
+        'assets/css/vendor/font-awesome.css'
+        'assets/css/vendor/bootstrap-material-design.css'
+        'assets/css/vendor/material-icons.css'
         'assets/css/vendor/ripples.css'
-        ])
+    ])
     .pipe(concatCss("vendor.css"))
     .pipe(minifyCSS(keepSpecialComments: 0))
     .pipe(logger(
@@ -56,9 +56,6 @@ gulp.task 'app_css', ->
     .pipe(rename(suffix: '.min'))
     .pipe gulp.dest('./docs/assets/css')
     return
-
-
-
 
 gulp.task 'app_js', ->
     gulp.src('assets/js/app/*.coffee')
