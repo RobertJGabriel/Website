@@ -22,8 +22,18 @@ html(lang='en')
 
     .container-fluid.baseheader
       .row
-        .col-sm-2
-        .col-sm-8.wrapper
+        .col-sm-3
+        .col-sm-6.wrapper
+          .row
+            .me
+            h1.text-center
+              b Robert James Gabriel
+            h2.text-center
+              | Apps, open souce projects & Hacks
+              br
+              | Made by myself on
+              a(href='github.com/robertjgabriel') @RobertJGabriel
+            hr
           ul#gallery.loadseffect.apps
             li.feature
               .panel.panel-primary
@@ -423,7 +433,7 @@ html(lang='en')
                   a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Verified-by-Visa') View
             
 
-        .col-sm-2
+        .col-sm-3
     footer
       include ./layout/footer.pug
       include ./layout/modal.pug

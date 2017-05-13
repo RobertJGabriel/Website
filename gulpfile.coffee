@@ -18,7 +18,8 @@ del = require('del')
 coffee = require('gulp-coffee')
 uncss = require('gulp-uncss')
 imagemin = require('gulp-imagemin')
-
+watch = require('gulp-watch')
+csscomb = require('gulp-csscomb')
 
 gulp.task 'vendor_css', ->
     gulp.src([
@@ -53,10 +54,12 @@ gulp.task 'app_css', ->
         ])
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss("app.css"))
+    .pipe(csscomb())
     .pipe(minifyCSS())
     .pipe(rename(suffix: '.min'))
     .pipe gulp.dest('./docs/assets/css')
     return
+
 
 gulp.task 'app_js', ->
     gulp.src('assets/js/app/*.coffee')
@@ -95,11 +98,8 @@ gulp.task 'vendor_js', ->
     .pipe(gulp.dest('./docs/assets/js/'))
     return
 
-
-
 gulp.task 'fonts', ->
     gulp.src('./assets/fonts/*')
-   
     .pipe(logger(
         before: 'Moving Fonts'
         after: 'Finished!'
@@ -134,6 +134,13 @@ gulp.task 'clean', ->
     './docs/*'
   ], force: true
   return
+
+
+gulp.task 'stream', ->
+  watch('css/**/*.css', ignoreInitial: false)
+  .pipe gulp.dest('build')
+  return
+
 
 
 gulp.task 'build', [
