@@ -37,9 +37,6 @@ gulp.task 'vendor_css', ->
         extname: '.min.css'
         showChange: true))
     .pipe(rename(suffix: '.min'))
-    .pipe(uncss({
-        html: ['./docs/*.html']
-    }))
     .pipe gulp.dest('./docs/assets/css')
     return
 
