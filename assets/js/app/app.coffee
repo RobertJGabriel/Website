@@ -43,26 +43,26 @@ robertjames.colors = ->
   if typeof h1Elements != 'undefined'
     i = 1
     while i < h1Elements.length
-      h1Elements[i].style.color = color
+      #h1Elements[i].style.color = color
       i++
 
 
   if typeof h3Elements != 'undefined'
     i = 0
     while i < h3Elements.length
-      h3Elements[i].style.color = color
+      #h3Elements[i].style.color = color
       i++
 
   if typeof hrElements != 'undefined'
     i = 0
     while i < hrElements.length
-      hrElements[i].style.background = color
+      #hrElements[i].style.background = color
       i++
 
   if typeof aTagsElements != 'undefined'
     i = 6
     while i < aTagsElements.length
-      aTagsElements[i].style.color = color
+      #aTagsElements[i].style.color = color
       i++
 
   return

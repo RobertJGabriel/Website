@@ -51,6 +51,7 @@ gulp.task 'app_css', ->
         './assets/css/app/material.sass'
         './assets/css/app/menu.sass'
         './assets/css/app/gallery.sass'
+        './assets/css/app/story.sass'
         ])
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss("app.css"))
