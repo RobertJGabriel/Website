@@ -105,6 +105,26 @@ gulp.task 'fonts', ->
     .pipe(gulp.dest('./docs/assets/fonts/'))
     return
 
+gulp.task 'cname', ->
+    gulp.src('./assets/CNAME')
+    .pipe(logger(
+        before: 'Moving Cname'
+        after: 'Finished!'
+        showChange: true))
+    .pipe(gulp.dest('./docs/'))
+    return
+
+
+gulp.task 'json', ->
+    gulp.src('./assets/*.json')
+    .pipe(logger(
+        before: 'Moving JSON'
+        after: 'Finished!'
+        showChange: true))
+    .pipe(gulp.dest('./docs/'))
+    return
+
+
 gulp.task 'html', ->
     gulp.src('./assets/views/*.pug')
     .pipe(pug({}))
@@ -134,11 +154,6 @@ gulp.task 'clean', ->
   return
 
 
-gulp.task 'stream', ->
-  watch('css/**/*.css', ignoreInitial: false)
-  .pipe gulp.dest('build')
-  return
-
 
 
 gulp.task 'build', [
@@ -149,6 +164,8 @@ gulp.task 'build', [
     'fonts'
     'images'
     'html'
+    'cname'
+    'json'
 ]
 
 gulp.task 'default', [ 'clean','build' ]

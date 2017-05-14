@@ -1,0 +1,82 @@
+{
+  "basics": {
+    "name": "Robert James Gabriel",
+    "label": "Ux and Software engineer.",
+    "picture": "",
+    "email": "robert_gabriel@outlook.com",
+    "phone": "353851499082",
+    "website": "http://roberthgabriel.ninja",
+    "summary": "I am an software designer and engineer. I currently work at Teamwork.com. I studied computer science at Cork Institute of Technology in Ireland and graduated at the top of my class. For the last five years, I have been developing and designing several popular web apps and websites, such as the chrome extension, Open Dyslexia, which has 29,000 daily users. In my design process I prioritize accessibility before anything else and as a result, I have won fifteen awards for design interaction, Ux, API design and code design.",
+    "location": {
+      "address": "Mansfieldhouse",
+      "postalCode": "NA",
+      "city": "Blarney",
+      "countryCode": "IE",
+      "region": "Ireland"
+    },
+    "profiles": [{
+      "network": "Twitter",
+      "username": "robertjgabriel",
+      "url": "http://twitter.com/robertjgabriel"
+    }]
+  },
+  "work": [{
+    "company": "Teamwork.com",
+    "position": "Software Developer",
+    "website": "https://teamwork.com",
+    "startDate": "2015-01-01",
+    "endDate": "current",
+    "summary": "Description...",
+    "highlights": [
+      "Started the company"
+    ]
+  }],
+  "education": [{
+    "institution": "University",
+    "area": "Software Development",
+    "studyType": "Bachelor",
+    "startDate": "2011-01-01",
+    "endDate": "2013-01-01",
+    "gpa": "4.0",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }],
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "website": "http://publication.com",
+    "summary": "Description..."
+  }],
+  "skills": [{
+    "name": "Web Development",
+    "level": "Master",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ]
+  }],
+  "languages": [{
+    "name": "English",
+    "level": "Native speaker"
+  }],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference..."
+  }]
+}
