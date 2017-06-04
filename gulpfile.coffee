@@ -43,12 +43,14 @@ gulp.task 'vendor_css', ->
 
 gulp.task 'app_css', ->
     gulp.src([
+        './assets/css/app/reset.sass'
         './assets/css/app/app.sass'
         './assets/css/app/layout.sass'
         './assets/css/app/material.sass'
         './assets/css/app/menu.sass'
         './assets/css/app/gallery.sass'
         './assets/css/app/story.sass'
+        './assets/css/app/box.sass'
         ])
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss("app.css"))
