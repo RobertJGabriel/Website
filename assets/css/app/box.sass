@@ -3,11 +3,16 @@
   flex-wrap: wrap;
   @media screen and (min-width: 769px)
     .column.is-half-tablet
-      lex: none
+      flex: none
       width: 50%
+
+  @media screen and (min-width: 1000px)
+    .column.is-one-third-desktop
+      flex: none
+      width: 33.3333%
+
   .column
     flex: none
-    width: 33.3333%
     display: block
     flex-basis: 0
     flex-grow: 1
@@ -21,6 +26,8 @@
       padding: 1.25rem
       background-color: #fff
       margin-bottom: 10px
+      .btn
+        width: 100%
       .image
         margin-bottom: 10px
         position: relative
@@ -39,3 +46,8 @@
         color: #4a4a4a
         font-size: 1.25rem
         font-weight: 300
+
+  #currentProjects
+    .column
+      flex: none
+      width: 50%

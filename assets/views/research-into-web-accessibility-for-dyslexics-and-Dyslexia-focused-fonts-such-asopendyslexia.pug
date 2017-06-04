@@ -18,19 +18,19 @@ html(lang='en')
     link(href='./assets/css/app.min.css', rel='stylesheet')
     link(rel='icon', type='image/png', href='./assets/img/core/favicon.png')
   body.story
-    include ./layout/header.pug
+    include ./layout/header2.pug
     header#header.withripple.shadow.colorsFadeIn(style='background-color:#00BCD4;')
       .container
         .row
-          .col-xs-2
-          .col-xs-8
+          .col-xs-3
+          .col-xs-6
             h1#logo2.header-title(style='color:white;') Web Accessibility and OpenDyslexia
-          .col-xs-2
+          .col-xs-3
     .overlay
     .container(style='    position: relative;')
       .row
-        .col-xs-2
-        .col-xs-8
+        .col-xs-3
+        .col-xs-6
           h1(style='0px') Introduction
           p
             | There are few published papers about usability testing with dyslexia focused fonts, but there is a considerable collection of knowledge on dyslexia as well as many suggestions for authoring dyslexia friendly interfaces. Existing accessibility guidelines
@@ -287,7 +287,7 @@ html(lang='en')
               li
                 a(href='https://pdfs.semanticscholar.org/9e90/8407d98ea6a2e552691c0741800efb361df8.pdf')
                   | V. F. d. Santana, "https://pdfs.semanticscholar.org," University of Campinas , 23 June ] 2012. [Online] [Accessed 23 Febuary 2016].
-        .col-xs-2
+        .col-xs-3
     include ./layout/modal.pug
     footer
       include ./layout/footer.pug

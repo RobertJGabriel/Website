@@ -2,15 +2,31 @@ html, body
   height: 100vh
 
 .subTitle
-  padding: .75rem
+  padding-bottom: 1rem
 
 a
   padding-left: 0.15em;
   padding-right: 0.15em;
 
+.bio
+  font-size: 1.5rem
+  text-align: center
+  .fa
+    font-size: 1.5rem
+    padding: 0.5rem;
+  .fa-heart
+    color: #d32f2f
+  .fa-coffee
+    color: #795548
+
+
+.fa-bars
+  font-size: 24px !important
+
 .panel-footer
   background-color: transparent!important;
-
+.home_title
+  padding-bottom: .75rem
 .panel-footer
   padding: 10px 15px;
   border-top: 1px solid #ddd;
@@ -26,13 +42,14 @@ a
   margin: 0 auto;
   h1
     font-weight: 600;
-    font-size: 3em;
+    font-size: 3.5rem;
     color: #222;
   h2
-    font-size: 20px;
+    font-size: 2rem
     font-weight: 300;
     line-height: 2em;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     color: #aaa;
   hr
     background-color: #253139
@@ -48,6 +65,7 @@ a
   margin-left: auto
   margin-right: auto
   background-size: contain
+  margin-bottom: 1rem;
   border-radius: 120px
   background-image: url('../img/me/me.png')
   transition: background-image 0.4s ease-in-out
@@ -94,6 +112,9 @@ header
 
 footer
   background-color: #253139
+  .fa
+    font-size: 24px !important
+    margin: 10px
 
 .hide
   display: none
@@ -101,9 +122,7 @@ footer
 .show
   display: block
 
-.fa
-  font-size: 24px !important
-  margin: 10px
+
 
 .container-fluid > .navbar-header
   margin-left: 0
