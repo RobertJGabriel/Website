@@ -27,7 +27,7 @@ updateGradient = ->
   b2 = Math.round(istep * c1_0[2] + step * c1_1[2])
   color2 = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')'
 
-  $('#navBarId').css(background: '-webkit-gradient(linear, left top, right top, from(' + color1 + '), to(' + color2 + '))').css background: '-moz-linear-gradient(left, ' + color1 + ' 0%, ' + color2 + ' 100%)'
+  #$('#navBarId').css(background: '-webkit-gradient(linear, left top, right top, from(' + color1 + '), to(' + color2 + '))').css background: '-moz-linear-gradient(left, ' + color1 + ' 0%, ' + color2 + ' 100%)'
 
   step += gradientSpeed
   if step >= 1
@@ -36,8 +36,8 @@ updateGradient = ->
     colorIndices[2] = colorIndices[3]
     #pick two new target color indices
     #do not pick the same as the current one
-    colorIndices[1] = (colorIndices[1] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length
-    colorIndices[3] = (colorIndices[3] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length
+    #colorIndices[1] = (colorIndices[1] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length
+    #colorIndices[3] = (colorIndices[3] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length
   return
 
 
