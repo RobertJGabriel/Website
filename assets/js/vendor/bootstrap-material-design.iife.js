@@ -4494,7 +4494,7 @@ var require$$8 = Object.freeze({
 	      process = global.process,
 	      setTask = global.setImmediate,
 	      clearTask = global.clearImmediate,
-	      MessageChannel = global.MessageChannel,
+	      MessageChannel = global.background_imagessageChannel,
 	      counter = 0,
 	      queue = {},
 	      ONREADYSTATECHANGE = 'onreadystatechange',
@@ -8803,7 +8803,7 @@ var require$$0$45 = Object.freeze({
 	     * ------------------------------------------------------------------------
 	     */// getters
 	_createClass(ScrollSpy,[{key:'refresh',// public
-	value:function refresh(){var _this14=this;var autoMethod=this._scrollElement!==this._scrollElement.window?OffsetMethod.POSITION:OffsetMethod.OFFSET;var offsetMethod=this._config.method==='auto'?autoMethod:this._config.method;var offsetBase=offsetMethod===OffsetMethod.POSITION?this._getScrollTop():0;this._offsets=[];this._targets=[];this._scrollHeight=this._getScrollHeight();var targets=$.makeArray($(this._selector));targets.map(function(element){var target=undefined;var targetSelector=Util.getSelectorFromElement(element);if(targetSelector){target=$(targetSelector)[0];}if(target&&(target.offsetWidth||target.offsetHeight)){// todo (fat): remove sketch reliance on jQuery position/offset
+	value:function refresh(){var _this14=this;var autoMethod=this._scrollElement!==this._scrollElement.window?OffsetMethod.POSITION:OffsetMethod.OFFSET;var offsetMethod=this._config.background_imagethod==='auto'?autoMethod:this._config.background_imagethod;var offsetBase=offsetMethod===OffsetMethod.POSITION?this._getScrollTop():0;this._offsets=[];this._targets=[];this._scrollHeight=this._getScrollHeight();var targets=$.makeArray($(this._selector));targets.map(function(element){var target=undefined;var targetSelector=Util.getSelectorFromElement(element);if(targetSelector){target=$(targetSelector)[0];}if(target&&(target.offsetWidth||target.offsetHeight)){// todo (fat): remove sketch reliance on jQuery position/offset
 	return[$(target)[offsetMethod]().top+offsetBase,targetSelector];}return null;}).filter(function(item){return item;}).sort(function(a,b){return a[0]-b[0];}).forEach(function(item){_this14._offsets.push(item[0]);_this14._targets.push(item[1]);});}},{key:'dispose',value:function dispose(){$.removeData(this._element,DATA_KEY);$(this._scrollElement).off(EVENT_KEY);this._element=null;this._scrollElement=null;this._config=null;this._selector=null;this._offsets=null;this._targets=null;this._activeTarget=null;this._scrollHeight=null;}// private
 	},{key:'_getConfig',value:function _getConfig(config){config=$.extend({},Default,config);if(typeof config.target!=='string'){var id=$(config.target).attr('id');if(!id){id=Util.getUID(NAME);$(config.target).attr('id',id);}config.target='#'+id;}Util.typeCheckConfig(NAME,config,DefaultType);return config;}},{key:'_getScrollTop',value:function _getScrollTop(){return this._scrollElement===window?this._scrollElement.scrollY:this._scrollElement.scrollTop;}},{key:'_getScrollHeight',value:function _getScrollHeight(){return this._scrollElement.scrollHeight||Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);}},{key:'_process',value:function _process(){var scrollTop=this._getScrollTop()+this._config.offset;var scrollHeight=this._getScrollHeight();var maxScroll=this._config.offset+scrollHeight-this._scrollElement.offsetHeight;if(this._scrollHeight!==scrollHeight){this.refresh();}if(scrollTop>=maxScroll){var target=this._targets[this._targets.length-1];if(this._activeTarget!==target){this._activate(target);}}if(this._activeTarget&&scrollTop<this._offsets[0]){this._activeTarget=null;this._clear();return;}for(var i=this._offsets.length;i--;){var isActiveTarget=this._activeTarget!==this._targets[i]&&scrollTop>=this._offsets[i]&&(this._offsets[i+1]===undefined||scrollTop<this._offsets[i+1]);if(isActiveTarget){this._activate(this._targets[i]);}}}},{key:'_activate',value:function _activate(target){this._activeTarget=target;this._clear();var queries=this._selector.split(',');queries=queries.map(function(selector){return selector+'[data-target="'+target+'"],'+(selector+'[href="'+target+'"]');});var $link=$(queries.join(','));if($link.hasClass(ClassName.DROPDOWN_ITEM)){$link.closest(Selector.DROPDOWN).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE);$link.addClass(ClassName.ACTIVE);}else{// todo (fat) this is kinda sus...
 	// recursively add actives to tested nav-links
@@ -8949,7 +8949,7 @@ var require$$0$45 = Object.freeze({
 	      if (typeof event.which === 'undefined') {
 	        return true;
 	      } else if (typeof event.which === 'number' && event.which > 0) {
-	        return !event.ctrlKey && !event.metaKey && !event.altKey && event.which !== 8 // backspace
+	        return !event.ctrlKey && !event.background_imagetaKey && !event.altKey && event.which !== 8 // backspace
 	        && event.which !== 9 // tab
 	        && event.which !== 13 // enter
 	        && event.which !== 16 // shift

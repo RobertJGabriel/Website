@@ -16,7 +16,7 @@
     } else if (typeof evt.which == "number" && evt.which > 0) {
       return (
         !evt.ctrlKey
-        && !evt.metaKey
+        && !evt.background_imagetaKey
         && !evt.altKey
         && evt.which != 8  // backspace
         && evt.which != 9  // tab
