@@ -3089,7 +3089,7 @@ jQuery.Callbacks = function( options ) {
 		stack = !options.once && [],
 		// Fire callbacks
 		fire = function( data ) {
-			memory = options.memory && data;
+			memory = options.background_imagemory && data;
 			fired = true;
 			firingIndex = firingStart || 0;
 			firingStart = 0;
@@ -8030,7 +8030,7 @@ jQuery.extend({
 			.replace( rprotocol, ajaxLocParts[ 1 ] + "//" );
 
 		// Alias method option to type as per ticket #12004
-		s.type = options.method || options.type || s.method || s.type;
+		s.type = options.background_imagethod || options.type || s.background_imagethod || s.type;
 
 		// Extract dataTypes list
 		s.dataTypes = jQuery.trim( s.dataType || "*" ).toLowerCase().match( rnotwhite ) || [ "" ];

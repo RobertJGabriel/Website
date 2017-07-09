@@ -64,7 +64,7 @@ gulp.task 'app_css', ->
 gulp.task 'app_js', ->
     gulp.src('assets/js/app/*.coffee')
     .on('error', (err) ->
-        gutil.log gutil.colors.red(err.message)
+        gutil.log gutil.colors.red(err.background_imagessage)
         return
     ).pipe(logger(
         before: 'Compling App Javascript'
@@ -86,7 +86,7 @@ gulp.task 'vendor_js', ->
         'assets/js/vendor/cheet.min.js'
         ]
     ).on('error', (err) ->
-        gutil.log gutil.colors.red(err.message)
+        gutil.log gutil.colors.red(err.background_imagessage)
         return
     )
     .pipe(logger(

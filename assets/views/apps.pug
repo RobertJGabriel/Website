@@ -21,20 +21,19 @@ html(lang='en')
     include ./layout/header.pug
     .container-fluid.baseheader
       .row
-        .col-sm-2
-        .col-sm-8.wrapper
+        .col-sm-3
+        .col-sm-6.wrapper
           .row
-            .me
+            .background_image
+            img.me.img-responsive(src='./assets/img/me/me.png')
             h1.text-center
               b Apps
-            h2.text-center
+            p.text-center
               | By
-              br
-              |
               a(href='github.com/robertjgabriel') @RobertJGabriel
           ul.columns.is-multiline
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://lh3.googleusercontent.com/sjmCRVBmuqQtrl3G0IcguNWQGiq3sYXy6Oopp_K5WsDy5sn5EG0bqgNlNMIbhny2Ei0pwQt2d7M=s1280-h800-e365-rw', alt='Loading image...')
@@ -42,7 +41,7 @@ html(lang='en')
                 p.subtitle.is-6
                   | Helperbird is an extension that overrides all fonts on webpage with the award winning OpenDyslexic font and  changes the page to be more easily read. You can switch it on and off at any time. Helping people with dyslexia.
                 a.btn.btn-flat.btn-warning(href='https://chrome.google.com/webstore/detail/helper-bird-opendyslexic/ahmapmilbkfamljbpgphfndeemhnajme?hl=en') Download Now
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://raw.githubusercontent.com/RobertJGabriel/websiteWrapper/master/assets/example.png', alt='Loading image...')
@@ -51,7 +50,7 @@ html(lang='en')
                   | This Project does what it says on the tin. Wrap web apps natively for osx or windows
    
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/websiteWrapper') View
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://pbs.twimg.com/media/C5SfHYUUoAALtRr.jpg', alt='Loading image...')
@@ -60,7 +59,7 @@ html(lang='en')
                   | I just made a small angular project for letting a user pick the theme on your site. Check it out
    
                 a.btn.btn-flat.btn-warning(href='http://robertgabriel.ninja/color/') View
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://i.ytimg.com/vi/Q8TXgCzxEnw/maxresdefault.jpg', alt='Loading image...')
@@ -69,7 +68,7 @@ html(lang='en')
                   | Set myself a goal to recreate the Material design input effect with no javascript.
    
                 a.btn.btn-flat.btn-warning(href='https://t.co/Y5kRdfxWdP') View
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='http://s2.quickmeme.com/img/96/963e77d9824553104fd63cb3cbcd81867a61672d89482bc7a492aaa8f6935449.jpg', alt='Loading image...')
@@ -78,7 +77,7 @@ html(lang='en')
                   | Made this for anyone else doing interviews. How to use and examples in sorting algorithms in CoffeeScript
    
                 a.btn.btn-flat.btn-warning(href='http://robertgabriel.ninja/sorting-algorithms-coffeescript/') View
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -87,7 +86,7 @@ html(lang='en')
                   | A Npm/Gulp package that checks if your html/jade compiles and meets the W3C standard.
    
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/gulp-w3c-validator-html') View
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -97,7 +96,7 @@ html(lang='en')
    
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Tallus') View
       
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -106,7 +105,7 @@ html(lang='en')
                   | A Gym booking and content management system. Allows gym members to book training sessions. Allows them to enter their training sessions results and more.
    
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Third-Year-Group-Project') View
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -114,7 +113,7 @@ html(lang='en')
                 p.subtitle.is-6
                   | A little php code to download pictures off any website and save it local machine.
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Imgur-image-downloader') View
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -123,7 +122,7 @@ html(lang='en')
                   | Example of different Sorting Algorithms in Php. It was used for a Google interview.
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Sorting-Algorithms-Php-interviews') View
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -132,7 +131,7 @@ html(lang='en')
                   | Simple Html5 Canvas built with Html5,javascript in Material Design
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Html5-Canvas-Material-Design') View
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -141,7 +140,7 @@ html(lang='en')
                   | Javascript Based Credit Card Validator
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Credit-card-validator-Javascript') View
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -151,7 +150,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/CrossTrainr') View
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -161,7 +160,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Cd-management-System') View
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -170,7 +169,7 @@ html(lang='en')
                   | Odd bits of Projects I did for fun and in class
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Java-Examples-') View
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -179,7 +178,7 @@ html(lang='en')
                   | note calculator app in JavaScript
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/note-calculator-app') View
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -188,7 +187,7 @@ html(lang='en')
                   | A Maven/Spring project. Which reads json files and inserts the information into the database. Reads froms the database and displays the information. Includes able to comment and error handling
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Spring-Java-Gallery') View
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -198,7 +197,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/xbox-dvr') View
 
             
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -208,7 +207,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Yeti') View
 
             
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -217,7 +216,7 @@ html(lang='en')
                   | Verber returns ``` true ``` if a string is a word and false if it isn't.
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Verber') View
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -226,7 +225,7 @@ html(lang='en')
                   | Examples for Google Hash Code by Google
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Google_Internship_HashCode') View
                   
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -236,7 +235,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/javascript-examples') View
 
                   
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -246,7 +245,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/List-Of-Explicit-Words') View
 
                   
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -257,7 +256,7 @@ html(lang='en')
 
                                                                   
                   
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -266,7 +265,7 @@ html(lang='en')
                   | Get how frequently a word appears
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/word-frequency') View
                   
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -275,7 +274,7 @@ html(lang='en')
                   | A demo in which you can track users even if they have cookies disabled local stage disabled
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/fingerprinting-firebase') View
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -286,7 +285,7 @@ html(lang='en')
           
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -295,7 +294,7 @@ html(lang='en')
                   | This is the Chrome Extension for Robin.Robin is light weight award winning web browser. It is designed for low-end machines and for teachers and parents to block websites and terms.We are pleased to have won Two All-Ireland Eircom Spider awards. So far it has been downloaded 40,000 times. The goal is to build a free light weight browser with a b…
                 a.btn.btn-flat.btn-warning(href='https://github.com/Projectbird/Robin-Chrome') View
                         
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -305,7 +304,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/Projectbird/Robin-Chrome') View
 
                                     
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -317,7 +316,7 @@ html(lang='en')
                                       
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -326,7 +325,7 @@ html(lang='en')
                   |  I like Golang but dont get to write much in work so made a simple web scrapper in Golang
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/golang-link-scraper') View
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -338,7 +337,7 @@ html(lang='en')
                     
 
                   
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -350,7 +349,7 @@ html(lang='en')
                     
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -360,7 +359,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Verified-by-Visa') View
 
                                                                                                         
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -371,7 +370,7 @@ html(lang='en')
 
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -382,7 +381,7 @@ html(lang='en')
 
                                                                                                         
                       
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -392,7 +391,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Yeti') View
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -402,7 +401,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/YourSear.ch') View
 
             
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://images.freecreatives.com/wp-content/uploads/2016/03/Material-Design-Pattern-For-Download.jpg', alt='Loading image...')
@@ -410,7 +409,7 @@ html(lang='en')
                 p.subtitle.is-6
                   | Planote application was developed to eliminate the hassle of taking notes, running late for class and miscommunicated timetable changes and consolidate all these everyday problems into the one application via a Smart phone app and cloud based software accessible through your pc.
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Planote') View
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='https://github.com/RobertJGabriel/Verified-by-Visa/raw/master/assets/img/banner.png', alt='Loading image...')
@@ -421,7 +420,7 @@ html(lang='en')
                 a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/Verified-by-Visa') View
             
 
-        .col-sm-2
+        .col-sm-3
     include ./layout/modal.pug
     footer
       include ./layout/footer.pug

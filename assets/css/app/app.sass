@@ -1,8 +1,19 @@
-html, body
-  height: 100vh
 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans')
+html, body
+  height: 100vh;
+  background-color: #f8f8f8;
+  font-family: 'Noto Sans', sans-serif;
 .subTitle
   padding-bottom: 1rem
+.navbar
+  background-color: #253139
+.me
+  width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+  margin-top: -70px;
 
 a
   padding-left: 0.15em;
@@ -50,7 +61,7 @@ a
     line-height: 2em;
     margin-top: 5px;
     margin-bottom: 5px;
-    color: #aaa;
+    color: #000;
   hr
     background-color: #253139
 
@@ -59,19 +70,20 @@ a
     td
       padding-bottom: 0.6em;
 
-.me
-  height: 120px
-  width: 120px
+.background_image
+  height: 220px
+  width: 100%
   margin-left: auto
   margin-right: auto
-  background-size: contain
+  background-size: cover
   margin-bottom: 1rem;
-  border-radius: 120px
-  background-image: url('../img/me/me.png')
-  transition: background-image 0.4s ease-in-out
+  border-radius: 0.5rem;
+  background-image: url('../img/me/background.jpeg');
+  transition: background-image 0.4s ease-in-out;
   &:hover
+    background-size: contain
     transition: background-image 0.4s ease-in-out
-    background-image: url('../img/me/logo.png')
+    background-image: url('../img/me/background2.jpg')
 
 canvas
   width: 100% !important
@@ -141,6 +153,8 @@ footer
   .container
     position: relative
     .row
+      margin-bottom: 30px
+      margin-bottom: 30px
       height: 40px
       margin-top: 10px
       margin-bottom: 10px

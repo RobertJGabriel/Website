@@ -25,7 +25,7 @@ html(lang='en')
         .col-sm-3
         .col-sm-6.wrapper
           .row
-            .me
+            .background_image
             h1.text-center
               b 404 :-O
             h2.text-center

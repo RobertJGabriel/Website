@@ -21,20 +21,19 @@ html(lang='en')
     include ./layout/header.pug
     .container-fluid.baseheader
       .row
-        .col-sm-2
-        .col-sm-8.wrapper
+        .col-sm-3
+        .col-sm-6.wrapper
           .row
-            .me
+            .background_image
+            img.me.img-responsive(src='./assets/img/me/me.png')
             h1.text-center
               b Work History
-            h2.text-center
+            p.text-center
               | By
-              br
-              |
               a(href='github.com/robertjgabriel') @RobertJGabriel
           ul.columns.is-multiline
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/horner.png', alt='Loading image...')
@@ -43,7 +42,7 @@ html(lang='en')
                   | Building circuit boards for Horner APG projects and coding on pre-market test projects & experience in R&D.
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/microsoft.png', alt='Loading image...')
@@ -52,7 +51,7 @@ html(lang='en')
                   | Participation in the national Young Scientist competition resulted in an invitation to this Microsoft Internship Workshop where there was a focus on developing critical links in the innovation process, commercialisation of skills, professional and career development skills along with software development skills.
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/start.png', alt='Loading image...')
@@ -61,7 +60,7 @@ html(lang='en')
                   | Autism Start provides practical expert advice to parents and practitioners supporting children and teenagers with autism. Our mission is to provide easy to follow step-by-step guides for teaching communication skills, social skills, academic learning and independent living skills. Our team is made up of board certified behaviour analysts, special education teachers and a senior clinical psychologist. The guides and advice on this site are the result of years and years of experience. The team has worked directly with over 500 children and teenagers with autism. Our advice is based on the all the things these amazing children taught us over the years.
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/emc.png', alt='Loading image...')
@@ -70,7 +69,7 @@ html(lang='en')
                   | Throughout this internship gained experience in setting up networks and servers on a huge scale. Worked with a number of varied departments in areas such as Networking, Coding, Engineering and HR. Redesigned and built the Visitors Portal Website to improve information and interactivity through social sharing and videos.
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/emc.png', alt='Loading image...')
@@ -80,7 +79,7 @@ html(lang='en')
 
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/clear.png', alt='Loading image...')
@@ -89,7 +88,7 @@ html(lang='en')
                   | Design and development of an interactive website for Clean Energy Ireland. Building a redesigned website with more social features and better coding standards. Mobile site, improved SEO and updated server software along with a custom cms for the staff to use. Built in Php , backbone and html.
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/learnloade.png', alt='Loading image...')
@@ -98,7 +97,7 @@ html(lang='en')
                   | Designed a custom encryption algorithms to help with encrypting data for password restart in the enterprise market. Tied up patches of code along with reviewing code for development .
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/taxi.png', alt='Loading image...')
@@ -107,7 +106,7 @@ html(lang='en')
                   | Designed, developed and created the branding for AllAroundCorkTaxiToursandTransfers.com, a new taxi website in Cork. The site relies on social network and a huge database of locations which I also developed. Used Html5, knockout.js along others.
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/yaa.png', alt='Loading image...')
@@ -116,7 +115,7 @@ html(lang='en')
                   | Redesigning the online official website of well-renowned singer Declan Sinnott. As an internationally performing artist the objective was to grow online presence, support greater interaction with fans and centralize communication, cross-updating from Twitter, Facebook and his personal blog.
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/yaa.png', alt='Loading image...')
@@ -125,7 +124,7 @@ html(lang='en')
                   | Redesigning the online official website of well-renowned singer Declan Sinnott. As an internationally performing artist the objective was to grow online presence, support greater interaction with fans and centralize communication, cross-updating from Twitter, Facebook and his personal blog.
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/teamwork.png', alt='Loading image...')
@@ -138,7 +137,7 @@ html(lang='en')
                   | I also worked on developing/redesign the Teamwork.com website and cms written in Coldfusion, Coffeescript Html, Less along others.
           
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/teamwork.png', alt='Loading image...')
@@ -147,7 +146,7 @@ html(lang='en')
                   | Worked part time while studying in 4th year of my college degree in computer science.
                   | Primarily responsible for the development for the suite of importers the Teamwork.com Projects team used along with developing new features and pages for Teamwork.com and the Cms that runs it. These included a rebuild of the signup code, adding Google signup support and new features and ux changes. Responsibilities also included creating Coldfusion/Golang based server-side solutions, Coffeescript based & javascript based server-side solutions, graphic design and SEO implementation.
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/teamwork.png', alt='Loading image...')
@@ -156,7 +155,7 @@ html(lang='en')
                   | Software Engineer, primarily responsible for the development for the suite of importers the Teamwork.com Projects team used along with being dropped into other teams to help. These included a rebuild of the signup code, adding Google signup support and new features and UX changes. Responsibilities also included creating Coldfusion/Golang based server-side solutions, graphic design and SEO implementation.ing new features and pages for Teamwork.com and the Cms that runs it. These included a rebuild of the signup code, adding Google signup support and new features and ux changes. Responsibilities also included creating Coldfusion/Golang based server-side solutions, Coffeescript based & javascript based server-side solutions, graphic design and SEO implementation.
 
 
-            li.column.is-half-tablet.is-one-third-desktop
+            li.column.is-half-tablet
               .box
                 figure.image
                   img.img-responsive(src='./assets/img/work/teamwork.png', alt='Loading image...')
@@ -165,7 +164,7 @@ html(lang='en')
                   | Product and engineering lead for Teamwork.com's website (They started treating it as a product). I lead and developed a rebuild of the stack. 
                   | Primarily responsible for the development for the suite Teamwork.com's website  (They started treating it as a product). I lead and developed a rebuild of the stack. Responsibilities also included creating Coldfusion/Golang based server-side solutions, Coffeescript based & javascript based server-side solutions, graphic design and SEO implementation.
 
-        .col-sm-2
+        .col-sm-3
     include ./layout/modal.pug
     footer
       include ./layout/footer.pug
