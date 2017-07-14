@@ -14,8 +14,7 @@
       "countryCode": "",
       "region": ""
     },
-    "profiles": [
-      {
+    "profiles": [{
         "network": "Twitter",
         "username": "RobertJGabriel",
         "url": "https://twitter.com/RobertJGabriel"
@@ -32,8 +31,7 @@
       }
     ]
   },
-  "work": [
-    {
+  "work": [{
       "company": "Teamwork.com",
       "position": "Teamwork.com Website Product lead & Sofware Engineer",
       "website": "https://www.teamwork.com",
@@ -167,8 +165,7 @@
     }
   ],
   "volunteer": [],
-  "education": [
-    {
+  "education": [{
       "institution": "Cork Institute of Technology",
       "area": "Computer Science",
       "studyType": "Bachelor",
@@ -187,8 +184,7 @@
       "courses": []
     }
   ],
-  "awards": [
-    {
+  "awards": [{
       "title": "Best use of Open Source Tools",
       "date": "2016-05-01",
       "awarder": "IBM & Intel",
@@ -321,8 +317,7 @@
       "summary": "Teamwork.com’s SEO had needed some TLC for so long and Robert James stepped up to the challenge in no small way! The amount of research and work he’s put in so far has already made a huge difference in how we rank and display in Google, and is key to our acquisition work in marketing. Truly [fire emoji}."
     }
   ],
-  "publications": [
-    {
+  "publications": [{
       "name": "Problems Posed by Ad-blockers",
       "publisher": "Cork Institute of Technology",
       "releaseDate": "2016-10-01",
@@ -337,8 +332,7 @@
       "summary": "There are few published papers about usability testing with dyslexia focused fonts, but there is a considerable collection of knowledge on dyslexia as well as many suggestions for authoring dyslexia friendly interfaces. Existing accessibility guidelines for dyslexic and non-dyslexic users suggest that dyslexic-accessible practices may redress difficulties encountered by all Internet users. This paper reviews two existing papers about dyslexia focused fonts (OpenDyslexia font) and accessibility. It will examine the font itself, as well as how the use of the font affects the visual perception, readability, and comprehension of the website and text with general web accessibility. The report is interested in the effects the font has, if any, for people with dyslexia, in comparison with those of Comic Sans or Times New Roman, and on improving human- computer interactions."
     }
   ],
-  "skills": [
-    {
+  "skills": [{
       "name": "Frontend",
       "level": "",
       "keywords": [
@@ -405,8 +399,7 @@
       ]
     }
   ],
-  "languages": [
-    {
+  "languages": [{
       "language": "English",
       "fluency": "Fluent"
     },
@@ -415,8 +408,7 @@
       "fluency": "Meh"
     }
   ],
-  "interests": [
-    {
+  "interests": [{
       "name": "",
       "keywords": [
         "Golf",
@@ -432,10 +424,8 @@
       "keywords": []
     }
   ],
-  "references": [
-    {
-      "name": "Robert James Gabriel",
-      "reference": "Im great"
-    }
-  ]
+  "references": [{
+    "name": "Robert James Gabriel",
+    "reference": "Im great"
+  }]
 }

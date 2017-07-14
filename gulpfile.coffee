@@ -1,6 +1,7 @@
 gulp = require('gulp')
 less = require('gulp-less')
 gutil = require('gulp-util')
+w3c = require('gulp-w3cjs')
 minifyCSS = require('gulp-minify-css')
 uglify = require('gulp-uglify')
 chalk = require('chalk')
@@ -31,11 +32,6 @@ gulp.task 'vendor_css', ->
     ])
     .pipe(concatCss("vendor.css"))
     .pipe(minifyCSS(keepSpecialComments: 0))
-    .pipe(logger(
-        before: 'Compressing Css '
-        after: 'Compressing finished!'
-        extname: '.min.css'
-        showChange: true))
     .pipe(rename(suffix: '.min'))
     .pipe gulp.dest('./docs/assets/css')
     return
@@ -43,6 +39,7 @@ gulp.task 'vendor_css', ->
 
 gulp.task 'app_css', ->
     gulp.src([
+        './assets/css/app/__ variables.sass'
         './assets/css/app/reset.sass'
         './assets/css/app/app.sass'
         './assets/css/app/layout.sass'
@@ -66,10 +63,7 @@ gulp.task 'app_js', ->
     .on('error', (err) ->
         gutil.log gutil.colors.red(err.background_imagessage)
         return
-    ).pipe(logger(
-        before: 'Compling App Javascript'
-        after: 'Finished!'
-        showChange: true))
+    )
     .pipe(coffee())
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest('./docs/assets/js'))
@@ -89,10 +83,6 @@ gulp.task 'vendor_js', ->
         gutil.log gutil.colors.red(err.background_imagessage)
         return
     )
-    .pipe(logger(
-        before: 'Compling Vendor Javascript'
-        after: 'Finished!'
-        showChange: true))
     .pipe(concat('vendor.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./docs/assets/js/'))
@@ -100,29 +90,17 @@ gulp.task 'vendor_js', ->
 
 gulp.task 'fonts', ->
     gulp.src('./assets/fonts/*')
-    .pipe(logger(
-        before: 'Moving Fonts'
-        after: 'Finished!'
-        showChange: true))
     .pipe(gulp.dest('./docs/assets/fonts/'))
     return
 
 gulp.task 'cname', ->
     gulp.src('./assets/CNAME')
-    .pipe(logger(
-        before: 'Moving Cname'
-        after: 'Finished!'
-        showChange: true))
     .pipe(gulp.dest('./docs/'))
     return
 
 
 gulp.task 'json', ->
     gulp.src('./assets/*.json')
-    .pipe(logger(
-        before: 'Moving JSON'
-        after: 'Finished!'
-        showChange: true))
     .pipe(gulp.dest('./docs/'))
     return
 
@@ -130,10 +108,8 @@ gulp.task 'json', ->
 gulp.task 'html', ->
     gulp.src('./assets/views/*.pug')
     .pipe(pug({}))
-    .pipe(logger(
-        before: 'Minifing HTML'
-        after: 'Finished!'
-        showChange: true))
+    .pipe(w3c())
+    .pipe(w3c.reporter())
     .pipe(gulp.dest('./docs'))
     return
 
@@ -141,10 +117,6 @@ gulp.task 'html', ->
 gulp.task 'images', ->
   gulp.src('./assets/img/**/*')
   .pipe(imagemin())
-  .pipe(logger(
-    before: 'Compressing Images'
-    after: 'Finished!'
-    showChange: true))
   .pipe(gulp.dest('./docs/assets/img/'))
 
   return

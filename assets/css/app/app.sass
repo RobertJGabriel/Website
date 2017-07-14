@@ -1,136 +1,164 @@
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans')
 
-html, body
-  height: 100vh
-  background-color: #f8f8f8
-  font-family: 'Noto Sans', sans-serif
+$font-stack: 'Noto Sans', sans-serif
+$navigation-color: #253139
+$background-color: transparent
+$heart-color: #d32f2f
+$primary-color: #333
+$header-color: #ff5722
+$footer-boarder-color: #ddd
+$footer-background-color: #253139
 
-.subTitle
+$black-header: #222
+
+$white: #fff
+$light-black: #253139
+$shadow: rgba(0, 0, 0, .26)
+$grey: #ababab
+
+
+html,
+body
+  background-color: $background-color
+  font-family: $font-stack
+
+  height: 100vh
+
+p, h1, h2 ,h3 ,h4 ,h5
+  font-family: $font-stack
+
+.sub-title
   padding-bottom: 1rem
 
 .navbar
-  background-color: #253139
+  background-color: $navigation-color
 
 .me
-  width: 110px
+  border-radius: 100%
   margin-left: auto
   margin-right: auto
-  border-radius: 100%
   margin-top: -70px
+  width: 110px
 
 a
-  padding-left: 0.15em
-  padding-right: 0.15em
+  padding-left: .15em
+  padding-right: .15em
+  font-family: $font-stack
 
 .bio
   font-size: 1.5rem
   text-align: center
+
   .fa
     font-size: 1.5rem
-    padding: 0.5rem
+    padding: .5rem
+
   .fa-heart
-    color: #d32f2f
-  .fa-coffee
-    color: #795548
+    color: $heart-color
 
 .fa-bars
-  font-size: 24px !important
+  font-size: 24px
 
 .panel-footer
-  background-color: transparent!important
+  background-color: transparent
 
-.home_title
+.home-title
   padding-bottom: .75rem
 
 .panel-footer
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+  border-top: 1px solid $footer-boarder-color
   padding: 10px 15px
-  border-top: 1px solid #ddd
-  border-bottom-right-radius: 0px
-  border-bottom-left-radius: 0px
 
   .btn
+    margin: 0
     width: 100%
-    margin: 0px
 
 .wrapper
-  padding: 40px 40px 0
   margin: 0 auto
+  padding: 40px 40px 0
+
   h1
-    font-weight: 600
+    color: $black-header
     font-size: 3.5rem
-    color: #222
+    font-weight: 600
+    font-family: $font-stack
+
   h2
+    color: $black-header
     font-size: 2rem
     font-weight: 300
     line-height: 2em
-    margin-top: 5px
     margin-bottom: 5px
-    color: #000
+    margin-top: 5px
+    font-family: $font-stack
+
   hr
-    background-color: #253139
+    background-color: $light-black
 
 .skills
   tr
     td
-      padding-bottom: 0.6em
+      padding-bottom: .6em
 
-.background_image
+.banner
+  background-image: url('../img/me/background.jpeg')
+  background-size: cover
+  border-radius: .5rem
   height: 220px
-  width: 100%
+  margin-bottom: 1rem
   margin-left: auto
   margin-right: auto
-  background-size: cover
-  margin-bottom: 1rem
-  border-radius: 0.5rem
-  background-image: url('../img/me/background.jpeg')
-  transition: background-image 0.4s ease-in-out
+  transition: background-image .4s ease-in-out
+  width: 100%
+
   &:hover
+    background-image: url('../img/me/background3.jpg')
     background-size: contain
-    transition: background-image 0.4s ease-in-out
-    background-image: url('../img/me/background2.jpg')
+    transition: background-image .4s ease-in-out
+
 
 canvas
-  width: 100% !important
   cursor: crosshair
+  width: 100%
 
 .shadow
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26)
+  box-shadow: 0 2px 5px $shadow
 
-.nav .navbar-nav .navbar-right
-  width: 100% !important
-  height: 100vh !important
+nav .navbar-nav .navbar-right
+  height: 100vh
+  width: 100%
 
 header
-  -webkit-transition: top 0.5s
-  background: #ff5722
+  background: $header-color
   left: 0
-  position: none !important
+  padding-bottom: 70px
+  position: none
   top: 0
   width: 100%
-  padding-bottom: 70px
 
   .header-title
-    color: #fff
+    color: $white
+    cursor: pointer
     font-size: 56px
     font-weight: 400
     line-height: 1.5
     margin: 0 auto
     overflow: hidden
-    white-space: nowrap
-    line-height: 94px
     padding-top: 90px
-    cursor: pointer
+    white-space: nowrap
     word-break: break-word
-    white-space: initial
 
-.embed-responsive, img
+
+
+.embed-responsive,
+img
   margin: 20px 10 20px 0
 
-footer
-  background-color: #253139
   .fa
-    font-size: 24px !important
+    font-size: 24px
     margin: 10px
 
 .hide
@@ -142,58 +170,67 @@ footer
 
 
 .container-fluid > .navbar-header
-  width: 100%
   margin-left: 0
   margin-right: 0
+  width: 100%
 
 .bold
-  font-weight: 400 !important
+  font-weight: 400
 
-li, p
+li,
+p
   font-size: 16px
   line-height: 1.7
 
 
 footer
-  margin-top: 50px
+  background-color: $footer-background-color
+
+  .fa
+    font-size: 24px
+    margin: 10px
+
   .container
     position: relative
+
     .row
-      margin-bottom: 30px
-      margin-bottom: 30px
       height: 40px
-      margin-top: 10px
-      margin-bottom: 10px
+      margin-bottom: 0
+      margin-top: 5px
+
       .col-sm-7, .col-xs-7
-        height: 44px
-        padding: 0
+        height: 44px !important
         margin: 0
-      .col-sm-7 p, .col-xs-7 p
-        text-align: center
-        color: white
         padding: 0
+
+      .col-sm-7 p, .col-xs-7 p
+        color: $white
         font-size: 14px
         line-height: 44px !important
         margin: 0
-
+        padding: 0
+        text-align: center
 
 .footer-icons
   li
-    list-style: none
     float: left
+    list-style: none
+    font-family: $font-stack
+
     a
-      color: #ababab !important
-      transition: color 0.5s ease
+      color: $grey
+      font-family: $font-stack
+      transition: color .5s ease
 
   .icon-twitter:hover
-    color: #F44336 !important
+    color: #F44336
   .icon-mail:hover
-    color: #FF5722 !important
+    color: #FF5722
   .icon-dribble:hover
-    color: #FFEB3B !important
+    color: #FFEB3B
   .icon-github:hover
-    color: #4CAF50 !important
+    color: #4CAF50
   .icon-googleplus:hover
-    color: #2196F3 !important
+    color: #2196F3
   .icon-linkedin:hover
-    color: #673AB7 !important
+    color: #673AB7

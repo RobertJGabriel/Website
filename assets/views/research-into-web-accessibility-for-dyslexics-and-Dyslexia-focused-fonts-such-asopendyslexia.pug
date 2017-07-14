@@ -1,6 +1,7 @@
 doctype html
 html(lang='en')
   head
+    meta(charset='UTF-8')
     meta(name='viewport', content='initial-scale=1.0,maximum-scale=1,width=device-width')
     meta(name='keywords', content="HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node. j's, PHP and SQL developer,golang,web design ")
     meta(name='description', content='Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issues')
@@ -14,11 +15,11 @@ html(lang='en')
     meta(name='twitter:title', content='Robert James Gabriel')
     meta(name='theme-color', content='#eb298c')
     title Robert James Gabriel: Software engineer.
-    link(href='./assets/css/vendor.min.css', rel='stylesheet')
     link(href='./assets/css/app.min.css', rel='stylesheet')
+    link(href='./assets/css/vendor.min.css', rel='stylesheet')
     link(rel='icon', type='image/png', href='./assets/img/core/favicon.png')
   body.story
-    include ./layout/header2.pug
+    include ./layout/header.pug
     header#header.withripple.shadow.colorsFadeIn(style='background-color:#00BCD4;')
       .container
         .row
@@ -50,7 +51,7 @@ html(lang='en')
             | which are small lines at the ends/tips of characters such as in Comic Sans).
           .row(style='margin-bottom:30px;')
             .col-md-12
-              img.img-responsive(src='./assets/img/talks/sans.jpg')
+              img.img-responsive(alt='open dyslexica',src='./assets/img/talks/sans.jpg')
           p
             | Fonts may be display fonts, designed for headlines, or text fonts, designed for large bodies of smaller text.
           p
@@ -66,7 +67,7 @@ html(lang='en')
           p The following graphic summarizes the key parts:
           .row(style='margin-bottom:30px;')
             .col-md-12
-              img.img-responsive(src='./assets/img/talks/typography.jpg')
+              img.img-responsive(alt='open dyslexica',src='./assets/img/talks/typography.jpg')
           h1 What is OpenDyslexia
           p
             | OpenDyslexia is a free font face designed to mitigate some of the common reading errors caused by dyslexia. It was made with the goal of helping with some of the symptoms of dyslexia. The font is based on the concept that the letters have heavily weighted
@@ -79,7 +80,7 @@ html(lang='en')
             br
           .row(style='margin-bottom:30px;')
             .col-md-12
-              img.img-responsive(src='./assets/img/talks/OpenDyslexic.png')
+              img.img-responsive(alt='open dyslexica',src='./assets/img/talks/OpenDyslexic.png')
           h1 The History of OpenDyslexia’s Development
           p
             | The font was created by a dyslexic and software developer Abelardo Gonzalez, who released it under an open-source license. The design for the font is based on that of DejaVu Sans, also open-source.
@@ -147,14 +148,13 @@ html(lang='en')
             | people with and without dyslexia are shown in the chart below.
           .row(style='margin-bottom:30px;')
             .col-md-12
-              img.img-responsive(src='http://i.stack.imgur.com/TzZ6i.png')
+              img.img-responsive(alt='open dyslexica',src='http://i.stack.imgur.com/TzZ6i.png')
           p
             | In the report, the areas of focus were broken down as follows:
-          p
-            ol
-              li The performance, measured in reading time.
-              li
-                | Preferences, represented by the percentage of participants who chose certain colours.
+          ol
+            li The performance, measured in reading time.
+            li
+              | Preferences, represented by the percentage of participants who chose certain colours.
           h2 Eye movement (Performance)
           p
             | Shorter fixations are preferred to longer ones, as according to other studies, readers pause longer at points where processing loads are larger. In their results, it was evident the greatest difference among groups is on the black and white pair, as seen
@@ -164,11 +164,12 @@ html(lang='en')
             | The testing approach is designed so that accessibility needs and personal preferences can be studied separately, rather than being mixed up as they frequently are in recommendations regarding colours and readability.
             br
             | The tests were composed of two parts:
-            br
-            ul
-              li
-                | Set of texts to be read with the use of the eye-tracking to study the reading performance.
-              li A survey to collect the user's preferences.
+          br
+          ul
+            li
+              | Set of texts to be read with the use of the eye-tracking to study the reading performance.
+            li
+              | A survey to collect the user's preferences.
           p
             | The benefit of this separation is that they could see whether there was a difference in reading speed and accuracy before and after colour customisation, which in turn allowed them to determine trends in colour choice.
           p
@@ -176,11 +177,10 @@ html(lang='en')
             | have been able to make a judgment as to which colours are most advantageous to their reading.
           p
             b Possible problems with the tests include:
-          p
-            ul
-              li The texts used are too small to draw firm conclusions.
-              li
-                | The texts were alone on the screen. Thus, the researchers couldn't predict the effect of colour differences in other reading contexts such as web browsing, where there are multiple colour schemes on the page.
+          ul
+            li The texts used are too small to draw firm conclusions.
+            li
+              | The texts were alone on the screen. Thus, the researchers couldn't predict the effect of colour differences in other reading contexts such as web browsing, where there are multiple colour schemes on the page.
           h2 Results of Study
           p
             | The outcome of the results from the paper (see figure 1) did not match the WC3 algorithm. Brown and Dark presented high fixation for both groups; that was second and third highest for people without and with dyslexia. These colours were also hardly selected
@@ -224,26 +224,28 @@ html(lang='en')
           h2 Web accessibility recommendations
           p
             | Some recommendations from the above mentioned papers include:
-          p
-            ul
-              li
-                | Choose a common font with recognizable letter forms for large bodies of text, such the OpenDyslexia font, comic sans or Arial.
-              li Include the option for different fonts
-              li Allow the user to choose between colour combinations
-              li Set the body text size to least 14px, instead of the existing 12px.
-              li
-                | Present blocks of texts in columns; don’t let text span the entire length of the screen on a widescreen display, allowing for better use of whitespace.
-              li
-                | Choose text and background colours with a high luminance contrast, or better yet allow the user to select the combination.
-              li
-                | Use lower case letters. Avoid the use of capital letters. Using all capital letters make it harder to read for people with dyslexia.
-              li Double spacing after periods.
-              li
-                | Avoid pure black text on a pure white background (Many dyslexic users can be sensitive to the brightness the high contrast colours cause, as stated in the W3C report as well.)
-              li
-                | Avoid Serif fonts ( A sans-serif font would allow dyslexic users to see the shapes of letters more clearly. This is because of the lack of hooks increases the spacing between letters and makes them more distinguishable.
-            br
-            br
+          ul
+            li
+              | Choose a common font with recognizable letter forms for large bodies of text, such the OpenDyslexia font, comic sans or Arial.
+            li
+              | Include the option for different fonts
+            li
+              | Allow the user to choose between colour combinations
+            li
+              | Set the body text size to least 14px, instead of the existing 12px.
+            li
+              | Present blocks of texts in columns; don’t let text span the entire length of the screen on a widescreen display, allowing for better use of whitespace.
+            li
+              | Choose text and background colours with a high luminance contrast, or better yet allow the user to select the combination.
+            li
+              | Use lower case letters. Avoid the use of capital letters. Using all capital letters make it harder to read for people with dyslexia.
+            li
+              | Double spacing after periods.
+            li
+              | Avoid pure black text on a pure white background (Many dyslexic users can be sensitive to the brightness the high contrast colours cause, as stated in the W3C report as well.)
+            li
+              | Avoid Serif fonts ( A sans-serif font would allow dyslexic users to see the shapes of letters more clearly. This is because of the lack of hooks increases the spacing between letters and makes them more distinguishable.
+          br
           p
             | As is evident from the suggestions, there are multiple possible avenues for future studies on typography for dyslexic users, and in fact, such research is desperately needed in order to create a web which is universally accessible.
           p
@@ -253,40 +255,33 @@ html(lang='en')
           p
             | This report should offer an insight into the way dyslexic users experience the web and demonstrate how dyslexic focus fonts try to fix some of their problems and improve web accessibility in general.
           h1 Bibliography
-          p
-            ol.bibliography
-              li
-                a(href='http://www.typographydeconstructed.com/ascender/')
-                  | K. O. Connor, "www.typographydeconstructed.com,"[Online].[Accessed 21 April 2016].
-              li
-                a(href='#')
-                  | L. R. &. R. Baeza-Yates, "Good Fonts for Dyslexia," Web Research Group, Barcelona, Spain, 2013.
-              li
-                a(href='http://opendyslexic.org/faq/')
-                  | A. GONZALEZ, "FAQ | OpenDyslexic," 03 June 2006. [Online]. [Accessed 01 April 2016].
-              li
-                a(href='http://opendyslexic.org/about-2/')
-                  | A. GONZALEZ, "OpenDyslexic | About," 01 June 2006. [Online]. [Accessed 12 Januray 2016].
-              li
-                a(href='http://download.springer.com/static/pdf/179/art%3A10.1007%2Fs11881-016- 0127- 1.pdf?originUrl=http://link.springer.com/article/10.1007/s11881- 016-0127- 1&token2=exp=1460302951~acl=/static/pdf/179/art%253A10.1007% 252Fs11881-016-0127- 1.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1 007%2Fs11881-016-0127- 1*~hmac=c7a7d24999a40384ec1f3df72b27590824f11c7b4e9b90bf8286366e95a1b9dc')
-                  | J. J. W. J. A. Diliberto, "The effect of a specialized dyslexia font, OpenDyslexic, on reading rate and accuracy," 15 October 2015. [Online]. [Accessed 01 Januray 2016].
-              li
-                a(href='http://www.ilo.gw.utwente.nl/ilo/attachments/032_Masterthesis_Leeuw.pdf')
-                  | R. d. Leeuw, "Special Font For Dyslexia?," 5 December 2010. [Online]. [Accessed 13 Januray 2016].
-              li
-                a(href='http://www.projectbird.com/research-essay-on-opendyslexica-font.html')
-                  | R. Gabriel, "Research-Essay On opendyslexica Font," 22 Feburay 2016. [Online]. [Accessed 2 April 2016].
-              li
-                a(href='http://www.dyslexiasw.com/about/website-accessibility')
-                  | D. Scotwest, "Website Accessibility For Dyslexiasw," 2010 April 2016. [Online]. [Accessed 2010 April 2016].
-              li
-                a(href='http://uxmovement.com/content/6-surprising-bad-practices-that-hurt- dyslexic-users/')
-                  | Anthony, "Surprising bad practices that hurt dyslexic users," 23 01 2011. [Online]. [Accessed 19 Feburay 2016].
-              li
-                a(href='https://www.w3.org/WAI/RD/2012/text-customization/r11') W3C, "Text Customization," 11 November 2012. [Online].
-              li
-                a(href='https://pdfs.semanticscholar.org/9e90/8407d98ea6a2e552691c0741800efb361df8.pdf')
-                  | V. F. d. Santana, "https://pdfs.semanticscholar.org," University of Campinas , 23 June ] 2012. [Online] [Accessed 23 Febuary 2016].
+          ol.bibliography
+            li
+              a(href='http://www.typographydeconstructed.com/ascender/', title='Fonts')
+                | K. O. Connor, "www.typographydeconstructed.com,"[Online].[Accessed 21 April 2016].
+            li
+              a(href='#')
+                | L. R. &. R. Baeza-Yates, "Good Fonts for Dyslexia," Web Research Group, Barcelona, Spain, 2013.
+            li
+              a(href='http://opendyslexic.org/faq/', title='Fonts')
+                | A. GONZALEZ, "FAQ | OpenDyslexic," 03 June 2006. [Online]. [Accessed 01 April 2016].
+            li
+              a(href='http://opendyslexic.org/about-2/', title='Fonts')
+                | A. GONZALEZ, "OpenDyslexic | About," 01 June 2006. [Online]. [Accessed 12 Januray 2016].
+            li
+              a(href='http://www.ilo.gw.utwente.nl/ilo/attachments/032_Masterthesis_Leeuw.pdf', title='Fonts')
+                | R. d. Leeuw, "Special Font For Dyslexia?," 5 December 2010. [Online]. [Accessed 13 Januray 2016].
+            li
+              a(href='http://www.projectbird.com/research-essay-on-opendyslexica-font.html', title='Fonts')
+                | R. Gabriel, "Research-Essay On opendyslexica Font," 22 Feburay 2016. [Online]. [Accessed 2 April 2016].
+            li
+              a(href='http://www.dyslexiasw.com/about/website-accessibility', title='Fonts')
+                | D. Scotwest, "Website Accessibility For Dyslexiasw," 2010 April 2016. [Online]. [Accessed 2010 April 2016].
+            li
+              a(href='https://www.w3.org/WAI/RD/2012/text-customization/r11') W3C, "Text Customization," 11 November 2012. [Online].
+            li
+              a(href='https://pdfs.semanticscholar.org/9e90/8407d98ea6a2e552691c0741800efb361df8.pdf', title='Fonts')
+                | V. F. d. Santana, "https://pdfs.semanticscholar.org," University of Campinas , 23 June ] 2012. [Online] [Accessed 23 Febuary 2016].
         .col-xs-3
     include ./layout/modal.pug
     footer
