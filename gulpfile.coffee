@@ -147,6 +147,7 @@ gulp.task 'build', [
     'images'
     'html'
     'cname'
+    'app_sw'
     'json'
 ]
 
