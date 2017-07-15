@@ -1,6 +1,6 @@
 {
   "short_name": "Robert James",
-  "name": "robertgabriel.nonja",
+  "name": "robertgabriel.ni snja",
   "background_color": "#FFFFFF",
   "theme_color": "#FF5722",
   "display": "standalone",
@@ -38,6 +38,6 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "http://robertgabriel.ninja",
-  "description": "Software engineer working at Teamwork.com"
+  "start_url": "https://robertgabriel.ninja/blog.html",
+  "description": "Software engineer working at Teamwork.com lover of Frontend"
 }
