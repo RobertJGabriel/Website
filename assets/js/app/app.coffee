@@ -81,3 +81,50 @@ robertjames.init = ->
 
 robertjames.init() # Attach events
 
+
+autorun = ->
+  ServiceWorker = undefined
+  ServiceWorker = do ->
+    `var ServiceWorker`
+
+    ServiceWorker = ->
+      if 'serviceWorker' of navigator
+        navigator.serviceWorker.register('./serviceWorker.js').then(((_this) ->
+          (registration) ->
+            if registration.installing
+              console.log 'Service worker installing'
+            else if registration.waiting
+              console.log 'Service worker installed'
+            else if registration.active
+              console.log 'Service worker active'
+              console.log registration
+              console.log 'Service Worker Registered'
+              _this.subscribe registration
+            return
+        )(this))['catch'] (err) ->
+          console.log 'Service Worker Failed to Register', err
+          return
+      return
+
+    ServiceWorker::unsubscribe = (serviceWorkerReg) ->
+      if 'serviceWorker' of navigator
+        serviceWorkerReg.pushManager.getSubscription().then (subscription) ->
+          subscription.unsubscribe()
+          return
+      return
+
+    ServiceWorker::subscribe = (serviceWorkerReg) ->
+      if 'serviceWorker' of navigator
+        serviceWorkerReg.pushManager.subscribe(userVisibleOnly: true).then (subscription) ->
+        return
+      return
+
+    ServiceWorker
+  new ServiceWorker
+
+if window.addEventListener
+  window.addEventListener 'load', autorun, false
+else if window.attachEvent
+  window.attachEvent 'onload', autorun
+else
+  window.onload = autorun

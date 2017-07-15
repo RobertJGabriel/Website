@@ -57,6 +57,16 @@ gulp.task 'app_css', ->
     .pipe gulp.dest('./docs/assets/css')
     return
 
+gulp.task 'app_sw', ->
+    gulp.src('assets/js/app/serviceWorker.coffee')
+    .on('error', (err) ->
+        gutil.log gutil.colors.red(err.background_imagessage)
+        return
+    )
+    .pipe(coffee())
+    .pipe(concat('serviceWorker.js'))
+    .pipe(gulp.dest('./docs/'))
+    return
 
 gulp.task 'app_js', ->
     gulp.src('assets/js/app/*.coffee')
@@ -98,12 +108,10 @@ gulp.task 'cname', ->
     .pipe(gulp.dest('./docs/'))
     return
 
-
 gulp.task 'json', ->
     gulp.src('./assets/*.json')
     .pipe(gulp.dest('./docs/'))
     return
-
 
 gulp.task 'html', ->
     gulp.src('./assets/views/*.pug')
