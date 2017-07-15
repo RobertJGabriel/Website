@@ -4,11 +4,12 @@
 
 cacheName = 'v1.29'
 
-offlineUrl = 'offline.html';
+offlineUrl = '404.html';
 
 
 # Default files to always cache
 cacheFiles = [
+    './assets/css/app.min.css'
 ]
 
 
