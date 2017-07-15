@@ -2,7 +2,7 @@
 # Set a name for the current cache
 
 
-cacheName = 'v1.29'
+cacheName = 'v1.30'
 
 offlineUrl = '404.html';
 
@@ -10,6 +10,19 @@ offlineUrl = '404.html';
 # Default files to always cache
 cacheFiles = [
     './assets/css/app.min.css'
+    './404.html'
+    './adblockers.html'
+    './apps.html'
+    './awards.html'
+    './bag.html'
+    './blog.html'
+    './index.html'
+    './assets/css/vendor.min.css'
+    './assets/js/app.min.js'
+    './assets/js/vendor.min.js'
+    './work.html'
+    './serviceWorker.js'
+    './research-into-web-accessibility-for-dyslexics-and-Dyslexia-focused-fonts-such-asopendyslexia.html'
 ]
 
 
