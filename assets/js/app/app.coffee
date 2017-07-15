@@ -92,17 +92,17 @@ autorun = ->
         navigator.serviceWorker.register('./serviceWorker.js').then(((_this) ->
           (registration) ->
             if registration.installing
-              console.log 'Service worker installing'
+              #console.log 'Service worker installing'
             else if registration.waiting
-              console.log 'Service worker installed'
+              #console.log 'Service worker installed'
             else if registration.active
-              console.log 'Service worker active'
-              console.log registration
-              console.log 'Service Worker Registered'
+              #console.log 'Service worker active'
+              #console.log registration
+              #console.log 'Service Worker Registered'
               _this.subscribe registration
             return
         )(this))['catch'] (err) ->
-          console.log 'Service Worker Failed to Register', err
+          #console.log 'Service Worker Failed to Register', err
           return
       return
 

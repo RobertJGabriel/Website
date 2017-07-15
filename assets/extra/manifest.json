@@ -6,6 +6,8 @@
   "display": "standalone",
   "orientation": "portrait",
   "scope": "./",
+  "gcm_sender_id": "482941778795",
+  "applicationServerKey": "",
   "icons": [
     {
       "src": "assets/img/me/logo.png",
