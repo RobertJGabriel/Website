@@ -92,11 +92,11 @@ self.addEventListener 'notificationclick', (event) ->
 # @return {} none
 ##
 self.addEventListener 'fetch', (event) ->
-    console.log event
+    #console.log event
     # request.mode = navigate isn't supported in all browsers
     # so include a check for Accept: text/html header.
     event.respondWith fetch(event.request).catch(->
-        console.log event.request
+        #console.log event.request
         caches.match event.request
     )
     return
