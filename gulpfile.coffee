@@ -113,6 +113,11 @@ gulp.task 'json', ->
     .pipe(gulp.dest('./docs/'))
     return
 
+gulp.task 'extra', ->
+    gulp.src('./assets/extra/*.json')
+    .pipe(gulp.dest('./docs/'))
+    return
+
 gulp.task 'html', ->
     gulp.src('./assets/views/*.pug')
     .pipe(pug({}))
@@ -148,6 +153,7 @@ gulp.task 'build', [
     'html'
     'cname'
     'app_sw'
+    'extra'
     'json'
 ]
 
