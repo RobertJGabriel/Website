@@ -136,6 +136,12 @@ gulp.task 'images', ->
 
   return
 
+gulp.task 'images-png', ->
+  gulp.src('./assets/img/**/*.png')
+  .pipe(gulp.dest('./docs/assets/img/'))
+
+  return
+
 gulp.task 'clean', ->
   del.sync [
     './docs/*'
@@ -150,9 +156,10 @@ gulp.task 'build', [
     'vendor_js'
     'app_js'
     'app_css'
+    'html'
     'fonts'
     'images'
-    'html'
+    'images-png'
     'cname'
     'app_sw'
     'extra'
