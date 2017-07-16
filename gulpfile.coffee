@@ -22,6 +22,7 @@ imagemin = require('gulp-imagemin')
 watch = require('gulp-watch')
 csscomb = require('gulp-csscomb')
 webp = require('gulp-webp')
+critical = require('critical')
 
 gulp.task 'vendor_css', ->
     gulp.src([
