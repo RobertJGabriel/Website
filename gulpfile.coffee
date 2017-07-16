@@ -21,6 +21,7 @@ uncss = require('gulp-uncss')
 imagemin = require('gulp-imagemin')
 watch = require('gulp-watch')
 csscomb = require('gulp-csscomb')
+webp = require('gulp-webp')
 
 gulp.task 'vendor_css', ->
     gulp.src([
@@ -60,7 +61,7 @@ gulp.task 'app_css', ->
 gulp.task 'app_sw', ->
     gulp.src('assets/js/app/serviceWorker.coffee')
     .on('error', (err) ->
-        gutil.log gutil.colors.red(err.background_imagessage)
+        gutil.log gutil.colors.red(err)
         return
     )
     .pipe(coffee())
@@ -71,7 +72,7 @@ gulp.task 'app_sw', ->
 gulp.task 'app_js', ->
     gulp.src('assets/js/app/*.coffee')
     .on('error', (err) ->
-        gutil.log gutil.colors.red(err.background_imagessage)
+        gutil.log gutil.colors.red(err)
         return
     )
     .pipe(coffee())
@@ -129,7 +130,7 @@ gulp.task 'html', ->
 
 gulp.task 'images', ->
   gulp.src('./assets/img/**/*')
-  .pipe(imagemin())
+  .pipe(webp())
   .pipe(gulp.dest('./docs/assets/img/'))
 
   return

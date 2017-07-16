@@ -12,7 +12,7 @@ $footer-background-color: #253139
 
 $black-header: #222
 
-$white: #fff
+$white: #F2F1EF
 $light-black: #253139
 $shadow: rgba(0, 0, 0, .26)
 $grey: #ababab
@@ -28,14 +28,16 @@ body
 p, h1, h2 ,h3 ,h4 ,h5
   font-family: $font-stack
 
-a
-  color: #3498DB !important
-
-  &:hover
+.row
+  a
     color: #3498DB !important
+
+    &:hover
+      color: #3498DB !important
 
 .navbar
   background-color: #000 !important
+
 .sub-title
   padding-bottom: 1rem
 
@@ -229,16 +231,28 @@ footer
       color: $grey
       font-family: $font-stack
       transition: color .5s ease
+      color: #F2F1EF !important
 
-  .icon-twitter:hover
+.icon-twitter
+  &:hover
     color: #F44336 !important
-  .icon-mail:hover
+
+.icon-mail
+  &:hover
     color: #FF5722 !important
-  .icon-dribble:hover
+
+.icon-dribble
+  &:hover
     color: #FFEB3B !important
-  .icon-github:hover
+
+.icon-github
+  &:hover
     color: #4CAF50 !important
-  .icon-googleplus:hover
+
+.icon-googleplus
+  &:hover
     color: #2196F3 !important
-  .icon-linkedin:hover
+
+.icon-linkedin
+  &:hover
     color: #673AB7 !important
