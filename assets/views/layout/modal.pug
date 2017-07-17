@@ -1,30 +1,37 @@
-
-#madewith.modal.fade(role='dialog')
+#madewith.modal.fade
   .modal-dialog
     .modal-content
       .modal-header
-        button.close(type='button', data-dismiss='modal') x
-        h4.modal-title Made with.....
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4.modal-title
       .modal-body
-      .list-group
-        .list-group-item
-          .row-content
-            p.list-group-item-text
-            ul
-              li Gulp
-              li Google Page speed
-              li SASS
-              li Css animations
-              li Firebase
-              li NPM
-              li Critical CSS along with a Pagespeed score of 96%.
-              li CoffeeScript
-              li Json
-              li Pug
-        .list-group-separator
-
+        h2 Built with
+        table.skills.table
+          tr
+            td Gulp
+            td Google Page speed
+            td SASS
+          tr
+            td Css animations
+            td Firebase
+            td NPM
+          tr
+            td Vue.js
+            td Critical CSS
+            td CoffeeScript
+          tr
+            td Bootstrap
+            td Service Worker
+            td Json
+          tr
+            td Travis
+            td PWA
+            td Love
       .modal-footer
         button.btn.btn-default(type='button', data-dismiss='modal') Close
+
+
+
 
 
 
