@@ -8,19 +8,16 @@
   right: 0
   z-index: 1
 
-@media (min-width: 769px)
   .navbar-brand
-    margin-top: 0px !important
+    margin-top: 0
+    padding: 10px !important;
 
-@media (min-width: 1000px)
-  .navbar-brand
-    margin-top: 0px !important
 
 
 .menu
   position: absolute
   z-index: 3319
-  li a
+  li > a
     display: block
     text-indent: -500em
     height: 5em
@@ -125,6 +122,9 @@
     margin-top: 10px
     color: #F2F1EF !important
 
+.navbar-right
+  float: none !important
+
 .navbar-brand
   width: 85%
   height: 40px !important
@@ -140,7 +140,3 @@
 @media screen and (max-height: 34em)
   .menu li, .menu-bar
     font-size: 70%
-
-@media screen and (max-height: 34em) and (max-width: 500px)
-  .menu
-    height: 3.5em
