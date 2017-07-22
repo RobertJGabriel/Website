@@ -1,294 +1,276 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='utf-8')
-    meta(content='IE=edge', http-equiv='X-UA-Compatible')
-    meta(content='width=device-width,initial-scale=1', name='viewport')
-    meta(name='keywords', content="HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node. j's, PHP and SQL developer,golang,web design ")
-    meta(name='description', content='Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issues')
-    meta(name='author', content='Robert James Gabriel')
-    meta(name='twitter:card', content='summary')
-    meta(name='twitter:description', content='Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issue')
-    meta(property='og:image', content='./assets/img/me/me.png')
-    meta(name='twitter:image:src', content='./assets/img/me/me.png')
-    meta(name='twitter:creator', content='@RobertJGabriel')
-    meta(name='twitter:url', content='https://robertgabriel.ninja')
-    meta(name='twitter:title', content='Robert James Gabriel')
-    meta(name='theme-color', content='#eb298c')
-    link(rel='manifest', href='./manifest.json')
-    title Robert James Gabriel: Software engineer.
-    link(href='./assets/css/app.min.css', rel='stylesheet')
-    link(href='./assets/css/vendor.min.css', rel='stylesheet')
-    link(rel='icon', type='image/png', href='./assets/img/core/favicon.png')
-    link(rel='canonical', href='https://robertgabriel.ninja/apps.html')
-  body
-    include ./layout/header.pug
-    .container-fluid.baseheader
-      .row
-        .col-sm-3
-        .col-sm-6.wrapper
-          .row
-            .banner
-            img.me.img-responsive(src='./assets/img/me/me.png', alt='Robert James Gabriel')
-            h1.text-center
-              b Apps
-            p.text-center
-              | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
+extends layout/layout
+append vars
+    - var bodyClasses = ''
+    - var metaTitle = 'Apps & Software | Robert James Gabriel'
+    - var metaDescription = 'Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issues'
+    - var metaKeywords = 'HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design'
+    - var pageUrl = 'https://robertgabriel.ninja/apps.html'
+    - var masterBinding = Math.floor(Math.random() * (15 - 1300) + 1300)
+    - var develop = false
+    - var currentPath = 'https://robertgabriel.ninja/apps.html'
 
-          .row
-            .col-sm-12
-              h2 Helper bird: OpenDyslexic font
-              p
-                | Helperbird is an extension that overrides all fonts on webpage with the award winning OpenDyslexic font and  changes the page to be more easily read. You can switch it on and off at any time. Helping people with dyslexia.
-              a(href="https://github.com/Projectbird/Helperbird-Dyslexia")  Read more
-          .row
-            .col-sm-12
-              h2 Website Wrapper
-              p
-                | This Project does what it says on the tin. Wrap web apps natively for osx or windows
-              a(href="https://github.com/RobertJGabriel/websiteWrapper")  Read more
-          .row
-            .col-sm-12
-              h2 Color Picker
-              p
-                | I just made a small angular project for letting a user pick the theme on your site. Check it out
-              a(href="https://github.com/RobertJGabriel/color-switcher-angular")  Read more
-          .row
-            .col-sm-12
-              h2 Material Design input
-              p
-                | Set myself a goal to recreate the Material design input effect with no javascript.
-              a(href="https://github.com/RobertJGabriel/color-switcher-angular")  Read more
+block pageBody
+  .container-fluid.baseheader
+    .row
+      .col-sm-3
+      .col-sm-6.wrapper
+        .row
+          .banner
+          img.me.img-responsive(src='./assets/img/me/me.png', alt='Robert James Gabriel')
+          h1.text-center
+            b Apps
+          p.text-center
+            | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
 
-          .row
-            .col-sm-12
-              h2 Sorting Algorithms Coffeescript
-              p
-                | Made this for anyone else doing interviews. How to use and examples in sorting algorithms in CoffeeScript
-              a(href="https://github.com/RobertJGabriel/sorting-algorithms-coffeescript")  Read more
+        .row
+          .col-sm-12
+            h2 Helper bird: OpenDyslexic font
+            p
+              | Helperbird is an extension that overrides all fonts on webpage with the award winning OpenDyslexic font and  changes the page to be more easily read. You can switch it on and off at any time. Helping people with dyslexia.
+            a(href="https://github.com/Projectbird/Helperbird-Dyslexia")  Read more
+        .row
+          .col-sm-12
+            h2 Website Wrapper
+            p
+              | This Project does what it says on the tin. Wrap web apps natively for osx or windows
+            a(href="https://github.com/RobertJGabriel/websiteWrapper")  Read more
+        .row
+          .col-sm-12
+            h2 Color Picker
+            p
+              | I just made a small angular project for letting a user pick the theme on your site. Check it out
+            a(href="https://github.com/RobertJGabriel/color-switcher-angular")  Read more
+        .row
+          .col-sm-12
+            h2 Material Design input
+            p
+              | Set myself a goal to recreate the Material design input effect with no javascript.
+            a(href="https://github.com/RobertJGabriel/color-switcher-angular")  Read more
 
-          .row
-            .col-sm-12
-              h2 Gulp W3C Validator html
-              p
-                | A Npm/Gulp package that checks if your html/jade compiles and meets the W3C standard.
-              a(href="https://github.com/RobertJGabriel/gulp-w3c-validator-html")  Read more
-          .row
-            .col-sm-12
-              h2 Tallus
-              p
-                | Tallus is a cover over operating system based on the windows kernel for the school environment. It allows the students to earn points by following tasks the teacher has set. Which can allow them access to more websites and different parts of the computer. If they misbehave, they lose points and access to the computer.
-              a(href="https://github.com/RobertJGabriel/Tallus")  Read more
-          .row
-            .col-sm-12
-              h2 Gym CMS System
-              p
-                | A Gym booking and content management system. Allows gym members to book training sessions. Allows them to enter their training sessions results and more.
-              a(href="https://github.com/RobertJGabriel/Third-Year-Group-Project")  Read more
-          .row
-            .col-sm-12
-              h2  Imgur image downloader
-              p
-                | A little php code to download pictures off any website and save it local machine.
-              a(href="https://github.com/RobertJGabriel/Imgur-image-downloader")  Read more
+        .row
+          .col-sm-12
+            h2 Sorting Algorithms Coffeescript
+            p
+              | Made this for anyone else doing interviews. How to use and examples in sorting algorithms in CoffeeScript
+            a(href="https://github.com/RobertJGabriel/sorting-algorithms-coffeescript")  Read more
 
-          .row
-            .col-sm-12
-              h2  Sorting Algorithms PHP interviews
-              p
-                | Example of different Sorting Algorithms in Php. It was used for a Google interview.
-              a(href="https://github.com/RobertJGabriel/Sorting-Algorithms-Php-interviews")  Read more
-          .row
-            .col-sm-12
-              h2  Html5 Canvas Material Design
-              p
-                | Simple Html5 Canvas built with Html5,javascript in Material Design
-              a(href="https://github.com/RobertJGabriel/Html5-Canvas-Material-Design")  Read more
-          .row
-            .col-sm-12
-              h2 Credit card validator Javascript
-              p
-                | Javascript Based Credit Card Validator
-              a(href="https://github.com/RobertJGabriel/Credit-card-validator-Javascript")  Read more
+        .row
+          .col-sm-12
+            h2 Gulp W3C Validator html
+            p
+              | A Npm/Gulp package that checks if your html/jade compiles and meets the W3C standard.
+            a(href="https://github.com/RobertJGabriel/gulp-w3c-validator-html")  Read more
+        .row
+          .col-sm-12
+            h2 Tallus
+            p
+              | Tallus is a cover over operating system based on the windows kernel for the school environment. It allows the students to earn points by following tasks the teacher has set. Which can allow them access to more websites and different parts of the computer. If they misbehave, they lose points and access to the computer.
+            a(href="https://github.com/RobertJGabriel/Tallus")  Read more
+        .row
+          .col-sm-12
+            h2 Gym CMS System
+            p
+              | A Gym booking and content management system. Allows gym members to book training sessions. Allows them to enter their training sessions results and more.
+            a(href="https://github.com/RobertJGabriel/Third-Year-Group-Project")  Read more
+        .row
+          .col-sm-12
+            h2  Imgur image downloader
+            p
+              | A little php code to download pictures off any website and save it local machine.
+            a(href="https://github.com/RobertJGabriel/Imgur-image-downloader")  Read more
 
-          .row
-            .col-sm-12
-              h2 CrossTrainr
-              p
-                | Javascript Based Credit Card Validator
-              a(href="https://github.com/RobertJGabriel/CrossTrainr")  Read more
-          .row
-            .col-sm-12
-              h2 Cd management System
-              p
-                | Showing how to use crud using symfony
-              a(href="https://github.com/RobertJGabriel/Cd-management-System")  Read more
+        .row
+          .col-sm-12
+            h2  Sorting Algorithms PHP interviews
+            p
+              | Example of different Sorting Algorithms in Php. It was used for a Google interview.
+            a(href="https://github.com/RobertJGabriel/Sorting-Algorithms-Php-interviews")  Read more
+        .row
+          .col-sm-12
+            h2  Html5 Canvas Material Design
+            p
+              | Simple Html5 Canvas built with Html5,javascript in Material Design
+            a(href="https://github.com/RobertJGabriel/Html5-Canvas-Material-Design")  Read more
+        .row
+          .col-sm-12
+            h2 Credit card validator Javascript
+            p
+              | Javascript Based Credit Card Validator
+            a(href="https://github.com/RobertJGabriel/Credit-card-validator-Javascript")  Read more
 
-          .row
-            .col-sm-12
-              h2 Java-Examples
-              p
-                | Odd bits of Projects I did for fun and in class
-              a(href="https://github.com/RobertJGabriel/Java-Examples-")  Read more
+        .row
+          .col-sm-12
+            h2 CrossTrainr
+            p
+              | Javascript Based Credit Card Validator
+            a(href="https://github.com/RobertJGabriel/CrossTrainr")  Read more
+        .row
+          .col-sm-12
+            h2 Cd management System
+            p
+              | Showing how to use crud using symfony
+            a(href="https://github.com/RobertJGabriel/Cd-management-System")  Read more
 
-          .row
-            .col-sm-12
-              h2 note calculator app
-              p
-                | note calculator app in JavaScript
-              a(href="https://github.com/RobertJGabriel/note-calculator-app")  Read more
-          .row
-            .col-sm-12
-              h2 Spring Java Gallery
-              p
-                | A Maven/Spring project. Which reads json files and inserts the information into the database. Reads froms the database and displays the information. Includes able to comment and error handling
-              a(href="https://github.com/RobertJGabriel/Spring-Java-Gallery")  Read more
+        .row
+          .col-sm-12
+            h2 Java-Examples
+            p
+              | Odd bits of Projects I did for fun and in class
+            a(href="https://github.com/RobertJGabriel/Java-Examples-")  Read more
 
-          .row
-            .col-sm-12
-              h2 Xbox DVR
-              p
-                | Reads your xbox one gamer tag video rss feed and displays the videos and screenshots onto your website. You can now save images and videos now
-              a(href="https://github.com/RobertJGabriel/xbox-dvr")  Read more
+        .row
+          .col-sm-12
+            h2 note calculator app
+            p
+              | note calculator app in JavaScript
+            a(href="https://github.com/RobertJGabriel/note-calculator-app")  Read more
+        .row
+          .col-sm-12
+            h2 Spring Java Gallery
+            p
+              | A Maven/Spring project. Which reads json files and inserts the information into the database. Reads froms the database and displays the information. Includes able to comment and error handling
+            a(href="https://github.com/RobertJGabriel/Spring-Java-Gallery")  Read more
 
-          .row
-            .col-sm-12
-              h2 YETTII
-              p
-                | Yeti is a search engine framework. It is designed to allow users to create a search engine for their site in a few seconds. Allowing results from different sources. All by adding a line of code.
-              a(href="https://github.com/Yeti-Ai/connector")  Read more
-          .row
-            .col-sm-12
-              h2 Verber
-              p
-                | Verber returns ``` true ``` if a string is a word and false if it isn't.
-              a(href="https://github.com/RobertJGabriel/verber")  Read more
-          .row
-            .col-sm-12
-              h2 Google_Internship_HashCode
-              p
-                | Examples for Google Hash Code by Google
-              a(href="https://github.com/RobertJGabriel/Google_Internship_HashCode")  Read more
-          .row
-            .col-sm-12
-              h2 Javascript examples
-              p
-                | Javascript examples from when I was in college
-              a(href="https://github.com/RobertJGabriel/javascript-examples")  Read more
+        .row
+          .col-sm-12
+            h2 Xbox DVR
+            p
+              | Reads your xbox one gamer tag video rss feed and displays the videos and screenshots onto your website. You can now save images and videos now
+            a(href="https://github.com/RobertJGabriel/xbox-dvr")  Read more
 
-          .row
-            .col-sm-12
-              h2 List Of Explicit Words
-              p
-                | A List of Explicit words from seo blacklists (porn sites) and Google Profanity Api
-              a(href="https://github.com/RobertJGabriel/List-Of-Explicit-Words")  Read more
+        .row
+          .col-sm-12
+            h2 YETTII
+            p
+              | Yeti is a search engine framework. It is designed to allow users to create a search engine for their site in a few seconds. Allowing results from different sources. All by adding a line of code.
+            a(href="https://github.com/Yeti-Ai/connector")  Read more
+        .row
+          .col-sm-12
+            h2 Verber
+            p
+              | Verber returns ``` true ``` if a string is a word and false if it isn't.
+            a(href="https://github.com/RobertJGabriel/verber")  Read more
+        .row
+          .col-sm-12
+            h2 Google_Internship_HashCode
+            p
+              | Examples for Google Hash Code by Google
+            a(href="https://github.com/RobertJGabriel/Google_Internship_HashCode")  Read more
+        .row
+          .col-sm-12
+            h2 Javascript examples
+            p
+              | Javascript examples from when I was in college
+            a(href="https://github.com/RobertJGabriel/javascript-examples")  Read more
 
-          .row
-            .col-sm-12
-              h2 Tate gallery using Express
-              p
-                | Tate Gallery using Express Node api
-              a(href="https://github.com/RobertJGabriel/Tate-Gallery-in-Express-node-api")  Read more
+        .row
+          .col-sm-12
+            h2 List Of Explicit Words
+            p
+              | A List of Explicit words from seo blacklists (porn sites) and Google Profanity Api
+            a(href="https://github.com/RobertJGabriel/List-Of-Explicit-Words")  Read more
 
-          .row
-            .col-sm-12
-              h2 Word frequency
-              p
-                | Get how frequently a word appears
-              a(href="https://github.com/RobertJGabriel/word-frequency")  Read more
+        .row
+          .col-sm-12
+            h2 Tate gallery using Express
+            p
+              | Tate Gallery using Express Node api
+            a(href="https://github.com/RobertJGabriel/Tate-Gallery-in-Express-node-api")  Read more
 
-          .row
-            .col-sm-12
-              h2 Fingerprinting Firebase
-              p
-                | Get how frequently a word appears
-              a(href="https://github.com/RobertJGabriel/fingerprinting-firebase")  Read more
+        .row
+          .col-sm-12
+            h2 Word frequency
+            p
+              | Get how frequently a word appears
+            a(href="https://github.com/RobertJGabriel/word-frequency")  Read more
 
-          .row
-            .col-sm-12
-              h2 Robin
-              p
-                |  Robin is light weight award winning web browser. It is designed for low-end machines and for teachers and parents to block websites and terms.We are pleased to have won Two All-Ireland Eircom Spider awards. So far it has been downloaded 40,000 times. The goal is to build a free light weight browser with a built in filtering system.
-              a(href="https://github.com/Projectbird/Robin")  Read more
+        .row
+          .col-sm-12
+            h2 Fingerprinting Firebase
+            p
+              | Get how frequently a word appears
+            a(href="https://github.com/RobertJGabriel/fingerprinting-firebase")  Read more
 
-          .row
-            .col-sm-12
-              h2 Robin-Chrome
-              p
-                |  This is the Chrome Extension for Robin.Robin is light weight award winning web browser. It is designed for low-end machines and for teachers and parents to block websites and terms.We are pleased to have won Two All-Ireland Eircom Spider awards. So far it has been downloaded 40,000 times. The goal is to build a free light weight browser with a b…
-              a(href="https://github.com/Projectbird/Robin-chrome")  Read more
+        .row
+          .col-sm-12
+            h2 Robin
+            p
+              |  Robin is light weight award winning web browser. It is designed for low-end machines and for teachers and parents to block websites and terms.We are pleased to have won Two All-Ireland Eircom Spider awards. So far it has been downloaded 40,000 times. The goal is to build a free light weight browser with a built in filtering system.
+            a(href="https://github.com/Projectbird/Robin")  Read more
 
-          .row
-            .col-sm-12
-              h2 Track users across domains
-              p
-                |  A javascript script where we can track users who visit your domains and subdomains room, trigger pages (example section pages). So you can trailer messages or pages with different links and content based on their history of the user visiting your site.
-              a(href="https://github.com/RobertJGabriel/track_users_across_domains")  Read more
-          .row
-            .col-sm-12
-              h2 Golang link scraper
-              p
-                |  I like Golang but dont get to write much in work so made a simple web scrapper in Golang
-              a(href="https://github.com/RobertJGabriel/golang-link-scraper")  Read more
+        .row
+          .col-sm-12
+            h2 Robin-Chrome
+            p
+              |  This is the Chrome Extension for Robin.Robin is light weight award winning web browser. It is designed for low-end machines and for teachers and parents to block websites and terms.We are pleased to have won Two All-Ireland Eircom Spider awards. So far it has been downloaded 40,000 times. The goal is to build a free light weight browser with a b…
+            a(href="https://github.com/Projectbird/Robin-chrome")  Read more
 
-          .row
-            .col-sm-12
-              h2 CIT Web development answers and notes
-              p
-                |  Notes, slides and answers for all of computer science in Cit Cork
-              a(href="https://github.com/RobertJGabriel/CIT-Web-development-answers-and-notes")  Read more
+        .row
+          .col-sm-12
+            h2 Track users across domains
+            p
+              |  A javascript script where we can track users who visit your domains and subdomains room, trigger pages (example section pages). So you can trailer messages or pages with different links and content based on their history of the user visiting your site.
+            a(href="https://github.com/RobertJGabriel/track_users_across_domains")  Read more
+        .row
+          .col-sm-12
+            h2 Golang link scraper
+            p
+              |  I like Golang but dont get to write much in work so made a simple web scrapper in Golang
+            a(href="https://github.com/RobertJGabriel/golang-link-scraper")  Read more
 
-          .row
-            .col-sm-12
-              h2 DVD managment system
-              p
-                |  dvd managment system in php
-              a(href="https://github.com/RobertJGabriel/dvd-managment-system")  Read more
+        .row
+          .col-sm-12
+            h2 CIT Web development answers and notes
+            p
+              |  Notes, slides and answers for all of computer science in Cit Cork
+            a(href="https://github.com/RobertJGabriel/CIT-Web-development-answers-and-notes")  Read more
 
-          .row
-            .col-sm-12
-              h2 Doctor Surgery in Java
-              p
-                |  The classic Doctor Surgery in geuss what ?..... Java
-              a(href="https://github.com/RobertJGabriel/Doctor-Surgery-Java")  Read more
+        .row
+          .col-sm-12
+            h2 DVD managment system
+            p
+              |  dvd managment system in php
+            a(href="https://github.com/RobertJGabriel/dvd-managment-system")  Read more
 
-          .row
-            .col-sm-12
-              h2 Verified-by-Visa
-              p
-                |  Keeping it simple my password for verified by visa is long and takes way to figure out which is the 2,6,21 character in your password. So this command line tool will help. Makes entering the verified by visa password less hellish.
-              a(href="https://github.com/RobertJGabriel/Verified-by-Visa")  Read more
+        .row
+          .col-sm-12
+            h2 Doctor Surgery in Java
+            p
+              |  The classic Doctor Surgery in geuss what ?..... Java
+            a(href="https://github.com/RobertJGabriel/Doctor-Surgery-Java")  Read more
 
-          .row
-            .col-sm-12
-              h2 Text-Scraping
-              p
-                | A node nodule that scraps the text out of a website into an array
-              a(href="https://github.com/RobertJGabriel/Text-Scraping")  Read more
+        .row
+          .col-sm-12
+            h2 Verified-by-Visa
+            p
+              |  Keeping it simple my password for verified by visa is long and takes way to figure out which is the 2,6,21 character in your password. So this command line tool will help. Makes entering the verified by visa password less hellish.
+            a(href="https://github.com/RobertJGabriel/Verified-by-Visa")  Read more
 
-          .row
-            .col-sm-12
-              h2 Profanity
-              p
-                | Profanity rates and reviews text, to see if its suitable. Enter a word and it will simply return a value of true or false, depending on whether or not the word is classed as profanity. Based off googles profanity check.
-              a(href="https://github.com/RobertJGabriel/profanity")  Read more
-          .row
-            .col-sm-12
-              h2 YourSear.ch
-              p
-                | Your Sear. ch Is an open source search engine (web scraper) that pulls in search results from all the search engines and social media sites. Add more so it will be handy for all
-              a(href="https://github.com/RobertJGabriel/YourSear.ch")  Read more
+        .row
+          .col-sm-12
+            h2 Text-Scraping
+            p
+              | A node nodule that scraps the text out of a website into an array
+            a(href="https://github.com/RobertJGabriel/Text-Scraping")  Read more
 
-          .row
-            .col-sm-12
-              h2 Planote
-              p
-                | Planote application was developed to eliminate the hassle of taking notes, running late for class and miscommunicated timetable changes and consolidate all these everyday problems into the one application via a Smart phone app and cloud based software accessible through your pc.
-              a(href="https://github.com/RobertJGabriel/Planote")  Read more
+        .row
+          .col-sm-12
+            h2 Profanity
+            p
+              | Profanity rates and reviews text, to see if its suitable. Enter a word and it will simply return a value of true or false, depending on whether or not the word is classed as profanity. Based off googles profanity check.
+            a(href="https://github.com/RobertJGabriel/profanity")  Read more
+        .row
+          .col-sm-12
+            h2 YourSear.ch
+            p
+              | Your Sear. ch Is an open source search engine (web scraper) that pulls in search results from all the search engines and social media sites. Add more so it will be handy for all
+            a(href="https://github.com/RobertJGabriel/YourSear.ch")  Read more
 
-        .col-sm-3
-    include ./layout/modal.pug
-    footer
-      include ./layout/footer.pug
-    script(src='./assets/js/vendor.min.js', defer='')
-    script(src='./assets/js/app.min.js', defer='')
+        .row
+          .col-sm-12
+            h2 Planote
+            p
+              | Planote application was developed to eliminate the hassle of taking notes, running late for class and miscommunicated timetable changes and consolidate all these everyday problems into the one application via a Smart phone app and cloud based software accessible through your pc.
+            a(href="https://github.com/RobertJGabriel/Planote")  Read more
+
+      .col-sm-3

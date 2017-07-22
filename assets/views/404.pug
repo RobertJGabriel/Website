@@ -1,47 +1,26 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='utf-8')
-    meta(content='IE=edge', http-equiv='X-UA-Compatible')
-    meta(content='width=device-width,initial-scale=1', name='viewport')
-    meta(name='keywords', content="HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node. j's, PHP and SQL developer,golang,web design ")
-    meta(name='description', content='Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issues')
-    meta(name='author', content='Robert James Gabriel')
-    meta(name='twitter:card', content='summary')
-    meta(name='twitter:description', content='Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issue')
-    meta(property='og:image', content='./assets/img/me/me.png')
-    meta(name='twitter:image:src', content='./assets/img/me/me.png')
-    meta(name='twitter:creator', content='@RobertJGabriel')
-    meta(name='twitter:url', content='https://robertgabriel.ninja')
-    meta(name='twitter:title', content='Robert James Gabriel')
-    meta(name='theme-color', content='#eb298c')
-    link(rel='manifest', href='./manifest.json')
-    title Robert James Gabriel: Software engineer.
-    link(href='./assets/css/app.min.css', rel='stylesheet')
-    link(href='./assets/css/vendor.min.css', rel= 'stylesheet')
-    link(rel='icon', type='image/png', href='./assets/img/core/favicon.png')
-    link(rel='canonical', href='https://robertgabriel.ninja/404.html')
+extends layout/layout
+append vars
+    - var bodyClasses = ''
+    - var metaTitle = 'Page not found | Robert James Gabriel'
+    - var metaDescription = 'Page not found'
+    - var metaKeywords = 'HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design'
+    - var pageUrl = 'https://robertgabriel.ninja/404.html'
+    - var masterBinding = Math.floor(Math.random() * (15 - 1300) + 1300)
+    - var develop = false
+    - var currentPath = 'https://robertgabriel.ninja/404.html'
 
-  body
-    include ./layout/header.pug
-
-    .container-fluid.baseheader
-      .row
-        .col-sm-3
-        .col-sm-6.wrapper
-          .row
-            .banner
-            h1.text-center
-              b 404 :-O
-            h2.text-center
-              | Sorry about that
-              br
-              |
-            hr
-
-        .col-sm-3
-    include ./layout/modal.pug
-    footer
-      include ./layout/footer.pug
-    script(src='./assets/js/vendor.min.js', defer='')
-    script(src='./assets/js/app.min.js', defer='')
+block pageBody
+  .container-fluid.baseheader
+    .row
+      .col-sm-3
+      .col-sm-6.wrapper
+        .row
+          .banner
+          h1.text-center
+            b 404 :-O
+          h2.text-center
+            | Sorry about that
+            br
+            |
+          hr
+      .col-sm-3

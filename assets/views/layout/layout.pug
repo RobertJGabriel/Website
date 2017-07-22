@@ -1,0 +1,66 @@
+//- Use `append vars` to override these in your page's layout
+block vars
+    - var metaTitle = 'Robert James Gabriel: Software engineer'
+    - var metaDescription = 'Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issues'
+    - var metaKeywords = 'HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design'
+    - var bodyClasses = ''
+    - var pageUrl = 'https://robertgabriel.ninja'
+    - var pageProduct = 'desk'
+    - var masterBinding = Math.floor(Math.random() * (15 - 1300) + 1300)
+    - var showFooterNav = true
+    - var showFooterSignup = true
+    - var showHeader = true
+    - var showMainNav = true
+    - var showSearchBar = true
+    - var develop = false
+    - var currentPath = '/'
+
+doctype
+html(lang="en")
+
+    block head
+        head
+            meta(charset='utf-8')
+            meta(content='IE=edge', http-equiv='X-UA-Compatible')
+            meta(content='width=device-width,initial-scale=1', name='viewport')
+            meta(name='author', content='Robert James Gabriel')
+            meta(name='twitter:card', content='summary')
+            meta(name='twitter:description', content='Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issue')
+            meta(property='og:image', content='./assets/img/me/me.png')
+            meta(name='twitter:image:src', content='./assets/img/me/me.png')
+            meta(name='twitter:creator', content='@RobertJGabriel')
+            meta(name='twitter:url', content='https://robertgabriel.ninja')
+            meta(name='twitter:title', content='Robert James Gabriel')
+            meta(name='theme-color', content='#eb298c')
+            link(rel='manifest', href='./manifest.json')
+            title
+                | #{metaTitle}
+            meta(name='title', content=metaTitle)
+            meta(name='description', content=metaDescription)
+            meta(name='keywords', content=metaKeywords)
+            link(rel='icon', type='image/png', href='./assets/img/core/favicon.png')
+            link(rel='canonical', href='https://robertgabriel.ninja')
+            //- Any stylesheets you want in the <head>
+            //- Use `append headStyles` in your page's layout to add more for that page
+            block headStyles
+              link(href='https://fonts.googleapis.com/css?family=Noto+Sans', rel='stylesheet')
+              link(href='./assets/css/app.min.css', rel='stylesheet')
+              link(href='./assets/css/vendor.min.css', rel='stylesheet')
+
+    body(class=bodyClasses)
+      include header
+      block pageBody
+
+      footer
+        block pageFooter
+          include footer
+
+      //- Any modals you want to include
+      //- Use `append modals` in your page's layout to add more for that page
+      block modals
+        include modal.pug
+          //- include modals/easter-egg
+
+      script(src='./assets/js/vendor.min.js', defer='')
+      script(src='./assets/js/app.min.js', defer='')
+
