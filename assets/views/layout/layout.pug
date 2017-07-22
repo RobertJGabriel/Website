@@ -13,10 +13,10 @@ block vars
     - var showMainNav = true
     - var showSearchBar = true
     - var develop = false
-    - var currentPath = '/'
+    - var currentPath = 'https://robertgabriel.ninja'
 
 doctype
-html(lang="en")
+html(lang="en",itemscope,itemtype="http://schema.org/MobileApplication")
 
     block head
         head
@@ -28,20 +28,52 @@ html(lang="en")
             meta(name='twitter:description', content='Robert James Gabriel is a web engineer currently at Teamwork.com.He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issue')
             meta(property='og:image', content='./assets/img/me/me.png')
             meta(name='twitter:image:src', content='./assets/img/me/me.png')
-            meta(name='twitter:creator', content='@RobertJGabriel')
-            meta(name='twitter:url', content='https://robertgabriel.ninja')
-            meta(name='twitter:title', content='Robert James Gabriel')
+            meta(name='twitter:title', content=metaTitle)
             meta(name='theme-color', content='#eb298c')
             link(rel='manifest', href='./manifest.json')
             title
                 | #{metaTitle}
             meta(name='title', content=metaTitle)
-            meta(name='description', content=metaDescription)
             meta(name='keywords', content=metaKeywords)
-            link(rel='icon', type='image/png', href='./assets/img/core/favicon.png')
+            link(rel='icon', type='image/png', href='https://robertgabriel.nina/assets/img/core/favicon.png')
             link(rel='canonical', href='https://robertgabriel.ninja')
-            //- Any stylesheets you want in the <head>
-            //- Use `append headStyles` in your page's layout to add more for that page
+
+            meta(itemprop='name', content=metaTitle)
+            meta(property='og:title', content=metaTitle)
+            meta(name='twitter:title', content=metaTitle)
+
+            link(itemprop='url', href=pageUrl)
+            meta(property='og:url', content=pageUrl)
+            meta(name='twitter:url', content=pageUrl)
+
+            meta(name='description', content=metaDescription)
+            meta(itemprop='description', content=metaDescription)
+            meta(name='twitter:description', content=metaDescription)
+            meta(property='og:description', content=metaDescription)
+
+            meta(property='author', content='Robert James Gabriel')
+            meta(property='og:site_name', content='robertgabriel.ninja')
+            meta(name='twitter:site', content='@robertjgabriel')
+            meta(name='twitter:creator', content='@robertjgabriel')
+
+            meta(name='theme-color', content='#eb298c')
+
+            meta(name='msapplication-navbutton-color', content='#eb298c')
+
+            meta(itemprop='image', content='https://robertgabriel.nina/assets/img/me/me.png')
+            meta(property='og:image', content='https://robertgabriel.nina/assets/img/me/me.png')
+            meta(name='twitter:image', content='https://robertgabriel.nina/assets/img/me/me.png')
+            meta(name='twitter:image:src', content='https://robertgabriel.nina/assets/img/me/me.png')
+
+            script(type='application/ld+json').
+              {
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              "url": "https://robertgabriel.ninja",
+              "logo": "assets/images/me/me.png"
+              }
+
+
             block headStyles
               link(href='https://fonts.googleapis.com/css?family=Noto+Sans', rel='stylesheet')
               link(href='./assets/css/app.min.css', rel='stylesheet')
