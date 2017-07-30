@@ -116,7 +116,7 @@ gulp.task 'json', ->
     return
 
 gulp.task 'extra', ->
-    gulp.src('./assets/extra/*.json')
+    gulp.src('./assets/extra/*')
     .pipe(gulp.dest('./docs/'))
     return
 
