@@ -4,12 +4,12 @@ append vars
     - var bodyClasses = ''
 
 block pageBody
-  .container-fluid.baseheader
+  .container.baseheader
     .row
-      .col-sm-3.col-md-4.col-lg-4
-      .col-sm-6.col-md-4.col-lg-4.wrapper
+      .col-sm-3.col-md-3.col-lg-3
+      .col-sm-6.col-md-6.col-lg-6.wrapper
         .row
-          .banner
+          .banner.shadow
           img.me.img-responsive(src='./assets/img/me/me.png', alt='Robert James Gabriel')
           h1.text-center
             b Robert James Gabriel
@@ -17,14 +17,15 @@ block pageBody
             | Software engineer working at #[a(href="https://www.teamwork.com") Teamwork.com]
 
         .row
-          .col-sm-12
+          .col-sm-12.boxes
             h2 About Me
             p
-              | Robert Gabriel is a Software Engineer at Teamwork.com working with the Teamwork Projects team on importers for the product also leading the online and internal web sites team to 100% scalable and cutting edge. He is also develops/helps out on several open-source projects including Robin, Yettii, Xbox DVR Open Dyslexia (which has 60,000 uses) and upcoming Jarvis.
+              | Robert James Gabriel is a Software Engineer at Teamwork.com.
+            p
               | Robert is also the author of several published papers including Problems Posed by Ad-blockers and Web Accessibility and OpenDyslexia.
-              | Studied computer science at Cork Institute of Technology in Ireland and graduated at the top of my class.
+
         .row
-          .col-sm-12
+          .col-sm-12.boxes
             h2 Current Projects
             p
               | I'm currently working on something like #[a(href="https://github.com/Yeti-Ai") Jarvis]
@@ -34,73 +35,24 @@ block pageBody
               | and #[a(href="https://www.teamwork.com/projects") Teamwork Projects].
 
         .row
-          .col-sm-12
-            h2 Skills
-            table.skills.table
-              tr
-                td HTML5
-                td PHP5
-                td CSS3, Less & Sass
-              tr
-                td Knockout.js
-                td Angular.js
-                td Bootstrap
-              tr
-                td GOLANG
-                td Backbone.js
-                td Require.js
-              tr
-                td Java
-                td Node
-                td Alorgthims
-              tr
-                td Performace
-                td Coffeescript
-                td SQL Pero
-              tr
-                td Database Design
-                td Gulp
-                td API Design
-              tr
-                td ES6
-                td Javascript
-                td Coldfusion
-              tr
-                td HCI
-                td Object Oriented
-                td Git
-              tr
-                td Handlebars.js
-                td User experience
-                td Ux Design
-              tr
-                td Pug
-                td Coldfusion
-                td Api Design
-              tr
-                td Accessibility Design
-                td NoSQL
-        .row
-          .col-sm-12
+          .col-sm-12.boxes
             h2 Talks
             p
               | While doing research and odd thoughts on code, I store them on my blog which is #[a(href="/talks") here].
-              | . I also do a lot of talks and presentations on machine learning and HCI/Ux
+              | I also do a lot of talks and presentations on machine learning and HCI/Ux
         .row
-          .col-sm-12
+          .col-sm-12.boxes
             h2 Things I've made
             p
-              | #[a(href="") Yeti]
-              |,#[a(href="") Jarvis]
-              |,#[a(href="https://github.com/Projectbird/Helperbird-Dyslexia") Helperbird]
+              | #[a(href="https://github.com/Projectbird/Helperbird-Dyslexia") Helperbird]
               |,#[a(href="https://github.com/RobertJGabriel/Xbox-One-Gamertag-Videos") Xbox One Gamertag Videos]
               |,#[a(href="https://www.projectbird.com/robin.html") Robin]
-              |,#[a(href="https://github.com/Projectbird/MrScraper") Mr Scrapper]
               |,#[a(href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en") Open Dyslexic]
+              |,#[a(href="https://chrome.google.com/webstore/detail/markdown-live-preview/dkpldbigkfcgpamifjimiejipmodkigk") Markdown Live Preview]
               |,#[a(href="https://github.com/yvasiyarov/swagger")  Swagger for Golang ]
               | are some of my projects. You can find more on  #[a(href="https://github.com/RobertJGabriel") GitHub] .
         .row
-          .col-sm-12
+          .col-sm-12.boxes
             h2 Awards
             ol
               li Imagine Cup Innovation National Runner Up
@@ -135,8 +87,8 @@ block pageBody
               br
               | Offered interviews with the likes of Google and significant other companies.
         #contact.row
-          .col-sm-12
+          .col-sm-12.boxes
             h2 Contact
             p
               | What to contact me about work?, speaking at an event?, spending me free stuff to show off (I love stickers) or just a chat well my email is #[a(href="mailto:robert_gabriel@outlook.com") robert_gabriel@outlook.com].
-      .col-sm-3.col-md-4.col-lg-4
+      .col-sm-3.col-md-3.col-lg-3

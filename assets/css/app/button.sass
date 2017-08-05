@@ -1,0 +1,39 @@
+.btn
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px transparent
+  position: relative
+  padding-right: 2.2em
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+  background-color: #ebebeb !important
+
+  &:before
+    content: "\f061"
+    position: absolute
+    right: 1em
+    padding: 0 1px
+    font-family: FontAwesome
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+  &:hover
+    -webkit-animation-name: hvr-icon-buzz-out
+    animation-name: hvr-icon-buzz-out
+    -webkit-animation-duration: 0.75s
+    animation-duration: 0.75s
+    -webkit-animation-timing-function: linear
+    animation-timing-function: linear
+    -webkit-animation-iteration-count: 1
+    animation-iteration-count: 1
+
+  &:hover:before, &:focus:before, &:active:before
+    -webkit-animation-name: hvr-icon-wobble-horizontal
+    animation-name: hvr-icon-wobble-horizontal
+    -webkit-animation-duration: 1s
+    animation-duration: 1s
+    -webkit-animation-timing-function: ease-in-out
+    animation-timing-function: ease-in-out
+    -webkit-animation-iteration-count: 1
+    animation-iteration-count: 1

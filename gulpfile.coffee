@@ -23,6 +23,21 @@ watch = require('gulp-watch')
 csscomb = require('gulp-csscomb')
 webp = require('gulp-webp')
 critical = require('critical')
+browserSync = require('browser-sync').create()
+
+
+
+
+gulp.task 'serve', [ 'app_css','app_js' ], ->
+  browserSync.init server: './docs'
+  gulp.watch './assets/css/app/*.scss', [ 'app_css' ]
+  gulp.watch './assets/js/app/*.coffee', [ 'app_js' ]
+  gulp.watch './assets/views/*.pug' ,['html']
+  gulp.watch('./assets/views/*.pug').on 'change', browserSync.reload
+  return
+
+
+
 
 gulp.task 'vendor_css', ->
     gulp.src([
@@ -41,8 +56,9 @@ gulp.task 'vendor_css', ->
 
 gulp.task 'app_css', ->
     gulp.src([
-        './assets/css/app/__ variables.sass'
+        './assets/css/app/__variables.sass'
         './assets/css/app/reset.sass'
+        './assets/css/app/button.sass'
         './assets/css/app/app.sass'
         './assets/css/app/layout.sass'
         './assets/css/app/material.sass'
@@ -51,12 +67,13 @@ gulp.task 'app_css', ->
         './assets/css/app/story.sass'
         './assets/css/app/box.sass'
         ])
-    .pipe(sass().on('error', sass.logError))
-    .pipe(concatCss("app.css"))
-    .pipe(csscomb())
-    .pipe(minifyCSS())
-    .pipe(rename(suffix: '.min'))
+    .pipe sass().on('error', sass.logError)
+    .pipe concatCss("app.css")
+    .pipe csscomb()
+    .pipe minifyCSS()
+    .pipe rename(suffix: '.min')
     .pipe gulp.dest('./docs/assets/css')
+    .pipe browserSync.stream()
     return
 
 gulp.task 'app_sw', ->
@@ -79,6 +96,7 @@ gulp.task 'app_js', ->
     .pipe(coffee())
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest('./docs/assets/js'))
+    .pipe browserSync.stream()
     return
 
 
@@ -126,6 +144,7 @@ gulp.task 'html', ->
     .pipe(w3c())
     .pipe(w3c.reporter())
     .pipe(gulp.dest('./docs'))
+    .pipe browserSync.stream()
     return
 
 
