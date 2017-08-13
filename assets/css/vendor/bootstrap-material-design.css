@@ -112,7 +112,7 @@ body .container .well-warning,
 body .container-fluid .well-warning,
 body .container .jumbotron-warning,
 body .container-fluid .jumbotron-warning {
-  background-color: #ff5722;
+  background-color: #24292E;
 }
 body .container .well-danger,
 body .container-fluid .well-danger,
@@ -173,7 +173,7 @@ body .container-fluid .jumbotron-danger {
 }
 .btn:not(.btn-raised).btn-warning,
 .input-group-btn .btn:not(.btn-raised).btn-warning {
-  color: #ff5722;
+  color: #24292E;
 }
 .btn:not(.btn-raised).btn-danger,
 .input-group-btn .btn:not(.btn-raised).btn-danger {
@@ -248,7 +248,7 @@ body .container-fluid .jumbotron-danger {
 .input-group-btn .btn.btn-fab.btn-warning,
 .btn-group-raised .btn.btn-warning,
 .btn-group-raised .input-group-btn .btn.btn-warning {
-  background-color: #ff5722;
+  background-color: #24292E;
   color: rgba(255,255,255, 0.84);
 }
 .btn.btn-raised.btn-danger,
@@ -740,7 +740,7 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
 }
 .btn-group.open > .dropdown-toggle.btn.btn-warning,
 .btn-group-vertical.open > .dropdown-toggle.btn.btn-warning {
-  background-color: #ff5722;
+  background-color: #24292E;
 }
 .btn-group.open > .dropdown-toggle.btn.btn-danger,
 .btn-group-vertical.open > .dropdown-toggle.btn.btn-danger {
@@ -1566,7 +1566,7 @@ output {
   background-color: #03a9f4;
 }
 .label.label-warning {
-  background-color: #ff5722;
+  background-color: #24292E;
 }
 .label.label-danger {
   background-color: #f44336;
@@ -1677,14 +1677,14 @@ fieldset[disabled] .form-group .form-control {
           box-shadow: none;
 }
 .form-group.has-warning.is-focused .form-control {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff5722), to(#ff5722)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
-  background-image: -webkit-linear-gradient(#ff5722, #ff5722), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
-  background-image: -o-linear-gradient(#ff5722, #ff5722), -o-linear-gradient(#D2D2D2, #D2D2D2);
-  background-image: linear-gradient(#ff5722, #ff5722), linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#24292E), to(#24292E)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+  background-image: -webkit-linear-gradient(#24292E, #24292E), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -o-linear-gradient(#24292E, #24292E), -o-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#24292E, #24292E), linear-gradient(#D2D2D2, #D2D2D2);
 }
 .form-group.has-warning label.control-label,
 .form-group.has-warning .help-block {
-  color: #ff5722;
+  color: #24292E;
 }
 .form-group.has-error .form-control {
   -webkit-box-shadow: none;
@@ -2472,7 +2472,7 @@ fieldset[disabled] .navbar .btn-link:focus {
   color: rgba(255,255,255, 0.84);
 }
 .navbar.navbar-warning {
-  background-color: #ff5722;
+  background-color: #24292E;
   color: rgba(255,255,255, 0.84);
 }
 .navbar.navbar-warning .navbar-form .form-group input.form-control::-moz-placeholder,
@@ -2496,11 +2496,11 @@ fieldset[disabled] .navbar .btn-link:focus {
 }
 .navbar.navbar-warning .dropdown-menu li > a:hover,
 .navbar.navbar-warning .dropdown-menu li > a:focus {
-  color: #ff5722;
+  color: #24292E;
   background-color: #eeeeee;
 }
 .navbar.navbar-warning .dropdown-menu .active > a {
-  background-color: #ff5722;
+  background-color: #24292E;
   color: rgba(255,255,255, 0.84);
 }
 .navbar.navbar-warning .dropdown-menu .active > a:hover,
@@ -2623,7 +2623,7 @@ fieldset[disabled] .navbar .btn-link:focus {
   color: rgba(255,255,255, 0.84);
 }
 .alert.alert-warning {
-  background-color: #ff5722;
+  background-color: #24292E;
   color: rgba(255,255,255, 0.84);
 }
 .alert.alert-warning a,
@@ -2676,13 +2676,13 @@ fieldset[disabled] .navbar .btn-link:focus {
   background-color: #03a9f4;
 }
 .progress .progress-bar.progress-bar-warning {
-  background-color: #ff5722;
+  background-color: #24292E;
 }
 .progress .progress-bar.progress-bar-danger {
   background-color: #f44336;
 }
 .text-warning {
-  color: #ff5722;
+  color: #24292E;
 }
 .text-primary {
   color: #009688;
@@ -2867,7 +2867,7 @@ fieldset[disabled] .navbar .btn-link:focus {
   background-color: #03a9f4;
 }
 .panel.panel-warning > .panel-heading {
-  background-color: #ff5722;
+  background-color: #24292E;
 }
 .panel.panel-danger > .panel-heading {
   background-color: #f44336;
@@ -3092,7 +3092,7 @@ hr.on-light {
   background-color: #03a9f4;
 }
 .slider.slider-warning.noUi-connect {
-  background-color: #ff5722;
+  background-color: #24292E;
 }
 .slider.slider-danger.noUi-connect {
   background-color: #f44336;
@@ -3114,7 +3114,7 @@ hr.on-light {
   background-color: #03a9f4;
 }
 .slider.slider-warning .noUi-connect {
-  background-color: #ff5722;
+  background-color: #24292E;
 }
 .slider.slider-danger .noUi-connect {
   background-color: #f44336;
@@ -3136,7 +3136,7 @@ hr.on-light {
   background-color: #03a9f4;
 }
 .slider.slider-warning .noUi-handle {
-  background-color: #ff5722;
+  background-color: #24292E;
 }
 .slider.slider-danger .noUi-handle {
   background-color: #f44336;
@@ -3158,7 +3158,7 @@ hr.on-light {
   border-color: #03a9f4;
 }
 .slider.slider-warning .noUi-handle {
-  border-color: #ff5722;
+  border-color: #24292E;
 }
 .slider.slider-danger .noUi-handle {
   border-color: #f44336;
