@@ -141,8 +141,8 @@ gulp.task 'extra', ->
 gulp.task 'html', ->
     gulp.src('./assets/views/*.pug')
     .pipe(pug({}))
-    .pipe(w3c())
-    .pipe(w3c.reporter())
+    #.pipe(w3c())
+    #.pipe(w3c.reporter())
     .pipe(gulp.dest('./docs'))
     .pipe browserSync.stream()
     return
