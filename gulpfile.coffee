@@ -22,10 +22,9 @@ imagemin = require('gulp-imagemin')
 watch = require('gulp-watch')
 csscomb = require('gulp-csscomb')
 webp = require('gulp-webp')
-critical = require('critical')
 browserSync = require('browser-sync').create()
-
-
+critical = require('critical').stream
+uncss = require('gulp-uncss')
 
 
 gulp.task 'serve', [ 'app_css','app_js' ], ->
@@ -50,6 +49,9 @@ gulp.task 'vendor_css', ->
     .pipe(concatCss("vendor.css"))
     .pipe(minifyCSS(keepSpecialComments: 0))
     .pipe(rename(suffix: '.min'))
+    .pipe(uncss(html: [
+      'docs/*.html'
+    ]))
     .pipe gulp.dest('./docs/assets/css')
     return
 
@@ -71,8 +73,11 @@ gulp.task 'app_css', ->
     .pipe concatCss("app.css")
     .pipe csscomb()
     .pipe minifyCSS()
-    .pipe rename(suffix: '.min')
+    .pipe rename suffix: '.min'
     .pipe gulp.dest('./docs/assets/css')
+    .pipe(uncss(html: [
+      'docs/*.html'
+    ]))
     .pipe browserSync.stream()
     return
 
@@ -171,11 +176,11 @@ gulp.task 'clean', ->
 
 
 gulp.task 'build', [
+    'html'
     'vendor_css'
     'vendor_js'
     'app_js'
     'app_css'
-    'html'
     'fonts'
     'images'
     'images-png'
