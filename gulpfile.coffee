@@ -45,6 +45,7 @@ gulp.task 'vendor_css', ->
         'assets/css/vendor/bootstrap.css'
         'assets/css/vendor/font-awesome.css'
         'assets/css/vendor/bootstrap-material-design.css'
+        'assets/css/vendor/material-icons.css'
         'assets/css/vendor/fonts.css'
     ])
     .pipe(concatCss("vendor.css"))
