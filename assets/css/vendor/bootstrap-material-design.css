@@ -126,7 +126,6 @@ body .container-fluid .jumbotron-danger {
   border-radius: 2px;
   position: relative;
   padding: 8px 30px;
-  margin: 10px 1px;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -714,7 +713,6 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
 .btn-group,
 .btn-group-vertical {
   position: relative;
-  margin: 10px 1px;
 }
 .btn-group.open > .dropdown-toggle.btn,
 .btn-group-vertical.open > .dropdown-toggle.btn,

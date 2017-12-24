@@ -1,0 +1,40 @@
+
+extends layout/layout
+append vars
+    - var bodyClasses = ''
+
+block pageBody
+  .container.baseheader
+    .row
+      .col-sm-3.col-md-3.col-lg-3
+      .col-sm-6.col-md-6.col-lg-6.wrapper
+        .row
+
+          img.me.img-responsive(src='./assets/img/me/me.png', alt='Robert James Gabriel')
+          h1.text-center
+            b Robert James Gabriel
+          h2.text-center
+            | Software engineer working at #[a(href="https://www.teamwork.com") Teamwork.com]
+
+        .row
+          .col-sm-12.boxes
+            h2 About Me
+            p
+              | Robert James Gabriel is a Software Engineer at Teamwork.com.
+            p
+              | Robert James is also the author of several published papers including Problems Posed by Ad-blockers and Web Accessibility and OpenDyslexia.
+            p
+              | Love currently working with Node.js and Golang
+        .row
+          .col-sm-12.boxes
+            h2 Current Projects
+            p
+              | I'm currently working on projects like
+              |#[a(href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en") Open Dyslexic,]
+              |#[a(href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en") Markdown Editor for Chrome,]
+              |#[a(href="https://github.com/FezVrasta/bootstrap-material-design") Material Bootstrap]
+              | and #[a(href="https://www.teamwork.com/projects") Teamwork.com.]
+            p
+              | More can be seen #[a(href="https://github.com/RobertJGabriel") here.]
+
+      .col-sm-3.col-md-3.col-lg-3
