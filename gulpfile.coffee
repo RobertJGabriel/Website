@@ -108,8 +108,7 @@ gulp.task 'vendor_js', ->
         'assets/js/vendor/bootstrap.min.js',
         'assets/js/vendor/material.js',
         'assets/js/vendor/ripples.js',
-        'assets/js/vendor/cheet.min.js',
-        'assets/js/vendor/forform.min.js'
+        'assets/js/vendor/cheet.min.js'
         ]
     ).on('error', (err) ->
         gutil.log gutil.colors.red(err.background_imagessage)
