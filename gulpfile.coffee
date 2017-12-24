@@ -25,7 +25,7 @@ webp = require('gulp-webp')
 browserSync = require('browser-sync').create()
 critical = require('critical').stream
 uncss = require('gulp-uncss')
-
+purify = require('gulp-purifycss')
 
 gulp.task 'serve', [ 'app_css','app_js' ], ->
   browserSync.init server: './docs'
@@ -42,15 +42,12 @@ gulp.task 'vendor_css', ->
     gulp.src([
         'assets/css/vendor/bootstrap.css'
         'assets/css/vendor/font-awesome.css'
-        'assets/css/vendor/bootstrap-material-design.css'
-        'assets/css/vendor/material-icons.css'
-        'assets/css/vendor/ripples.css'
     ])
     .pipe(concatCss("vendor.css"))
     .pipe(minifyCSS(keepSpecialComments: 0))
     .pipe(rename(suffix: '.min'))
     .pipe(uncss(html: [
-      'docs/*.html'
+      './docs/*.html'
     ]))
     .pipe gulp.dest('./docs/assets/css')
     return
@@ -76,7 +73,7 @@ gulp.task 'app_css', ->
     .pipe rename suffix: '.min'
     .pipe gulp.dest('./docs/assets/css')
     .pipe(uncss(html: [
-      'docs/*.html'
+      './docs/*.html'
     ]))
     .pipe browserSync.stream()
     return

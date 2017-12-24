@@ -22,6 +22,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-order": "^1.1.1",
     "gulp-pug": "^3.3.0",
+    "gulp-purifycss": "^0.2.0",
     "gulp-rollup": "^2.11.0",
     "gulp-sass": "^3.1.0",
     "gulp-webp": "^2.3.0",
