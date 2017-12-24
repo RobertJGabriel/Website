@@ -133,6 +133,7 @@ gulp.task 'json', ->
 
 gulp.task 'extra', ->
     gulp.src('./assets/extra/*')
+    .pipe(jsonminify())
     .pipe(gulp.dest('./docs/'))
     return
 
