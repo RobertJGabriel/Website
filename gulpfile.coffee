@@ -27,7 +27,7 @@ critical = require('critical').stream
 uncss = require('gulp-uncss')
 purify = require('gulp-purifycss')
 runSequence = require('run-sequence').use(gulp)
-
+jsonminify = require('gulp-jsonminify')
 
 gulp.task 'serve', [ 'app_css','app_js' ], ->
   browserSync.init server: './docs'
@@ -37,16 +37,12 @@ gulp.task 'serve', [ 'app_css','app_js' ], ->
   gulp.watch('./assets/views/*.pug').on 'change', browserSync.reload
   return
 
-
-
-
 gulp.task 'vendor_css', ->
     gulp.src([
         'assets/css/vendor/bootstrap.css'
         'assets/css/vendor/font-awesome.css'
         'assets/css/vendor/bootstrap-material-design.css'
         'assets/css/vendor/material-icons.css'
-        'assets/css/vendor/fonts.css'
     ])
     .pipe(concatCss("vendor.css"))
     .pipe(minifyCSS(keepSpecialComments: 0))
@@ -131,6 +127,7 @@ gulp.task 'cname', ->
 
 gulp.task 'json', ->
     gulp.src('./assets/*.json')
+    .pipe(jsonminify())
     .pipe(gulp.dest('./docs/'))
     return
 
