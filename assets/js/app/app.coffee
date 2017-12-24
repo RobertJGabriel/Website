@@ -79,6 +79,7 @@ robertjames.init = ->
   return
 
 
+
 robertjames.init() # Attach events
 
 
@@ -128,3 +129,20 @@ else if window.attachEvent
   window.attachEvent 'onload', autorun
 else
   window.onload = autorun
+
+
+do ->
+  WebP = new Image
+  WebP.onload =
+  WebP.onerror = ->
+    if WebP.height != 2
+      sc = document.createElement('script')
+      sc.type = 'text/javascript'
+      sc.async = true
+      s = document.getElementsByTagName('script')[0]
+      sc.src = 'assets/js/webpjs.min.js'
+      s.parentNode.insertBefore sc, s
+    return
+
+  WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA'
+  return

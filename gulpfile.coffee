@@ -119,6 +119,23 @@ gulp.task 'vendor_js', ->
     .pipe(gulp.dest('./docs/assets/js/'))
     return
 
+gulp.task 'webp_js', ->
+    gulp.src( [
+        'assets/js/vendor/webpjs.js'
+        ]
+    ).on('error', (err) ->
+        gutil.log gutil.colors.red(err.background_imagessage)
+        return
+    )
+    .pipe(concat('webpjs.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./docs/assets/js/'))
+    return
+
+
+
+
+
 gulp.task 'fonts', ->
     gulp.src('./assets/fonts/*')
     .pipe(gulp.dest('./docs/assets/fonts/'))
@@ -176,6 +193,7 @@ gulp.task 'clean', ->
 gulp.task 'build', [
     'vendor_css'
     'vendor_js'
+    'webp_js'
     'app_js'
     'app_css'
     'fonts'
