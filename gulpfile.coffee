@@ -29,8 +29,10 @@ purify = require('gulp-purifycss')
 runSequence = require('run-sequence').use(gulp)
 jsonminify = require('gulp-jsonminify')
 
-gulp.task 'serve', [ 'app_css','app_js' ] , ->
-  browserSync.init server: './docs'
+gulp.task 'serve', [ 'app_css', 'app_js' ] , ->
+  browserSync.init {
+    server: './docs'
+  }
   gulp.watch './assets/css/app/*.scss', [ 'app_css' ]
   gulp.watch './assets/js/app/*.coffee', [ 'app_js' ]
   gulp.watch './assets/views/*.pug' , ['html']
@@ -68,7 +70,9 @@ gulp.task 'app_css', ->
     .pipe concatCss("app.css")
     .pipe csscomb()
     .pipe minifyCSS()
-    .pipe rename suffix: '.min'
+    .pipe rename {
+        suffix: '.min'
+    }
     .pipe gulp.dest('./docs/assets/css')
     .pipe browserSync.stream()
     return
@@ -164,7 +168,9 @@ gulp.task 'images-png', ->
 gulp.task 'clean', ->
   del.sync [
     './docs/*'
-  ], force: true
+  ], {
+    force: true
+  }
   return
 
 
@@ -180,7 +186,6 @@ gulp.task 'build', [
     'app_sw'
     'extra'
     'json'
-
 ]
 
-gulp.task 'default', [ 'clean','build' ]
+gulp.task 'default', [ 'clean', 'build' ]
