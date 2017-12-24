@@ -29,11 +29,11 @@ purify = require('gulp-purifycss')
 runSequence = require('run-sequence').use(gulp)
 jsonminify = require('gulp-jsonminify')
 
-gulp.task 'serve', [ 'app_css','app_js' ], ->
+gulp.task 'serve', [ 'app_css','app_js' ] , ->
   browserSync.init server: './docs'
   gulp.watch './assets/css/app/*.scss', [ 'app_css' ]
   gulp.watch './assets/js/app/*.coffee', [ 'app_js' ]
-  gulp.watch './assets/views/*.pug' ,['html']
+  gulp.watch './assets/views/*.pug' , ['html']
   gulp.watch('./assets/views/*.pug').on 'change', browserSync.reload
   return
 
@@ -104,7 +104,8 @@ gulp.task 'vendor_js', ->
         'assets/js/vendor/bootstrap.min.js',
         'assets/js/vendor/material.js',
         'assets/js/vendor/ripples.js',
-        'assets/js/vendor/cheet.min.js'
+        'assets/js/vendor/cheet.min.js',
+        'assets/js/vendor/forform.min.js'
         ]
     ).on('error', (err) ->
         gutil.log gutil.colors.red(err.background_imagessage)

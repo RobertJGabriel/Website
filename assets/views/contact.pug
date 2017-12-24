@@ -9,32 +9,39 @@ block pageBody
       .col-sm-3.col-md-3.col-lg-3
       .col-sm-6.col-md-6.col-lg-6.wrapper
         .row
-
-          img.me.img-responsive(src='./assets/img/me/me.png', alt='Robert James Gabriel')
-          h1.text-center
-            b Robert James Gabriel
-          h2.text-center
-            | Software engineer working at #[a(href="https://www.teamwork.com") Teamwork.com]
-
-        .row
           .col-sm-12.boxes
-            h2 About Me
+            h2 Contact me today!!
             p
-              | Robert James Gabriel is a Software Engineer at Teamwork.com.
-            p
-              | Robert James is also the author of several published papers including Problems Posed by Ad-blockers and Web Accessibility and OpenDyslexia.
-            p
-              | Love currently working with Node.js and Golang
-        .row
-          .col-sm-12.boxes
-            h2 Current Projects
-            p
-              | I'm currently working on projects like
-              |#[a(href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en") Open Dyslexic,]
-              |#[a(href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en") Markdown Editor for Chrome,]
-              |#[a(href="https://github.com/FezVrasta/bootstrap-material-design") Material Bootstrap]
-              | and #[a(href="https://www.teamwork.com/projects") Teamwork.com.]
-            p
-              | More can be seen #[a(href="https://github.com/RobertJGabriel") here.]
+              | Want to contact me about work, support on a project, speaking event, anything I love getting emails
+            form(action='https://api.foform.com/forms/64ac7305-d244-4d65-ae1e-65f790cb5fb9/submissionsUrlEncoded', method='post')
+
+              .form-group
+                label.col-md-2.control-label(for='inputSubject') Subject
+                .col-md-10
+                  input#inputEmail.form-control(type='text', placeholder='Subject')
+
+              .form-group
+                label.col-md-2.control-label(for='inputName') Name
+                .col-md-10
+                  input#inputEmail.form-control(type='text', placeholder='Name')
+
+              .form-group
+                label.col-md-2.control-label(for='inputEmail') Email
+                .col-md-10
+                  input#inputEmail.form-control(type='email', placeholder='Email')
+
+              .form-group
+                label.col-md-2.control-label(for='textArea') Message
+                .col-md-10
+                  textarea#textArea.form-control(rows='3')
+                  span.help-block
+                    | A longer block of help text that breaks onto a new line and may extend beyond one line.
+
+              .text-center
+                button.btn.btn-indigo
+                  | Send
+                  i.fa.fa-paper-plane-o.ml-1
+
+
 
       .col-sm-3.col-md-3.col-lg-3
