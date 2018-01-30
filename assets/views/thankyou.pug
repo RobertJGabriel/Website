@@ -1,0 +1,23 @@
+
+extends layout/layout
+append vars
+    - var bodyClasses = ''
+
+block pageBody
+  .container.baseheader
+    .row
+      .col-sm-3.col-md-3.col-lg-3
+      .col-sm-6.col-md-6.col-lg-6.wrapper
+
+        .row
+
+          img.me.img-responsive(src='./assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
+          h1.text-center
+            b Thank you
+        .row
+          .col-sm-12.boxes
+            p
+              | This funding will  help me support my work on "OpenDyslexic For Chrome" and my other other projects.
+
+      .col-sm-3.col-md-3.col-lg-3
+      script(src='https://script.foform.com/foform.js')
