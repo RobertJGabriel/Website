@@ -17,46 +17,54 @@ block pageBody
           h2.text-center
             | Want to help me support my work on "OpenDyslexic For Chrome", my other other projects? or even new projects?
         .row
-          .col-sm-12.col-md-12.col-lg-12.boxes
-            .row
-              .col-sm-4
-                form(action="https://intense-plains-75758.herokuapp.com/500", method="post")
-                  article
-                    img.me.img-responsive(src='./assets/img/icons/payments/shamrock.webp', alt='Robert James Gabriel', width='130', height='130')
-                    label Donate: $5.00
-                  script(
-                    src="https://checkout.stripe.com/v2/checkout.js",
-                    class="stripe-button",
-                    data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
-                    data-locale="auto",
-                    data-description="Donate",
-                    data-amount="500")
-              .col-sm-4
-                form(action="https://intense-plains-75758.herokuapp.com/1000", method="post")
-                  article
-                    img.me.img-responsive(src='./assets/img/icons/payments/sun.webp', alt='Robert James Gabriel', width='130', height='130')
-                    label Donate: $10.00
-                  script(
-                    src="https://checkout.stripe.com/v2/checkout.js",
-                    class="stripe-button",
-                    data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
-                    data-locale="auto",
-                    data-description="Donate",
-                    data-amount="1000")
-              .col-sm-4
-                form(action="https://intense-plains-75758.herokuapp.com/2000", method="post")
-                  article
-                    img.me.img-responsive(src='./assets/img/icons/payments/sunclouds.webp', alt='Robert James Gabriel', width='130', height='130')
-                    label Donate: $20.00
-                  script(
-                    src="https://checkout.stripe.com/v2/checkout.js",
-                    class="stripe-button",
-                    data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
-                    data-locale="auto",
-                    data-description="Donate",
-                    data-amount="2000")
+          .col-sm-12.boxes
+            h2 Thank you 🎂
+            form(action="https://intense-plains-75758.herokuapp.com/500", method="post")
+              article
+                p
+                  | You'll have my eternal gratitude
+                p
+                  | Donate: $5.00
+              script(
+                src="https://checkout.stripe.com/v2/checkout.js",
+                class="stripe-button",
+                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
+                data-locale="auto",
+                data-description="Donate",
+                data-amount="500")
 
+        .row
+          .col-sm-12.boxes
+            h2 Supporter 🔥
+            form(action="https://intense-plains-75758.herokuapp.com/1000", method="post")
+              article
+                p
+                  | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
+                p
+                  | Donate: $10.00
+              script(
+                src="https://checkout.stripe.com/v2/checkout.js",
+                class="stripe-button",
+                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
+                data-locale="auto",
+                data-description="Donate",
+                data-amount="1000")
 
-
+        .row
+          .col-sm-12.boxes
+            h2 Top Supporter ☘️
+            form(action="https://intense-plains-75758.herokuapp.com/2000", method="post")
+              article
+                p
+                  | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
+                p
+                  | Donate: $20.00
+              script(
+                src="https://checkout.stripe.com/v2/checkout.js",
+                class="stripe-button",
+                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
+                data-locale="auto",
+                data-description="Donate",
+                data-amount="2000")
       .col-sm-3.col-md-3.col-lg-3
-      script(src='https://script.foform.com/foform.js')
+
