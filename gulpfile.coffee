@@ -57,6 +57,7 @@ gulp.task 'app_css', ->
     gulp.src([
         './assets/css/app/__variables.sass'
         './assets/css/app/reset.sass'
+        './assets/css/app/timeline.sass'
         './assets/css/app/button.sass'
         './assets/css/app/app.sass'
         './assets/css/app/layout.sass'
