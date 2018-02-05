@@ -48,6 +48,23 @@ gulp.task 'vendor_css', ->
     ])
     .pipe(concatCss("vendor.css"))
     .pipe(minifyCSS(keepSpecialComments: 0))
+    .pipe(uncss({
+      html: ['./docs/**/*.html']
+      ignore:[
+          /\.affix/,
+          /\.alert/,
+          /\.close/,
+          /\.collaps/,
+          /\.fade/,
+          /\.has/,
+          /\.help/,
+          /\.in/,
+          /\.modal/,
+          /\.open/,
+          /\.popover/,
+          /\.tooltip/
+      ]
+    }))
     .pipe(rename(suffix: '.min'))
     .pipe gulp.dest('./docs/assets/css')
     return
@@ -69,6 +86,23 @@ gulp.task 'app_css', ->
         ])
     .pipe sass().on('error', sass.logError)
     .pipe concatCss("app.css")
+    .pipe(uncss({
+      html: ['./docs/**/*.html']
+      ignore:[
+          /\.affix/,
+          /\.alert/,
+          /\.close/,
+          /\.collaps/,
+          /\.fade/,
+          /\.has/,
+          /\.help/,
+          /\.in/,
+          /\.modal/,
+          /\.open/,
+          /\.popover/,
+          /\.tooltip/
+      ]
+    }))
     .pipe csscomb()
     .pipe minifyCSS()
     .pipe rename {
