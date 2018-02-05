@@ -197,14 +197,14 @@ gulp.task 'images', ->
   gulp.src('./assets/img/**/*')
   .pipe(webp())
   .pipe(gulp.dest('./docs/assets/img/'))
-
   return
+
 
 gulp.task 'images-png', ->
   gulp.src('./assets/img/**/*.png')
   .pipe(gulp.dest('./docs/assets/img/'))
-
   return
+
 
 gulp.task 'clean', ->
   del.sync [
