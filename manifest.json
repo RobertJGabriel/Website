@@ -6,8 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "scope": "./",
-  "icons": [
-    {
+  "icons": [{
       "src": "assets/me/logo.png",
       "type": "image/png",
       "sizes": "16x16"
