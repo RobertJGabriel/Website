@@ -52,17 +52,12 @@ gulp.task 'vendor_css', ->
       html: ['./docs/**/*.html']
       ignore:[
           /\.affix/,
-          /\.alert/,
           /\.close/,
           /\.collaps/,
           /\.fade/,
           /\.has/,
-          /\.help/,
-          /\.in/,
           /\.modal/,
-          /\.open/,
-          /\.popover/,
-          /\.tooltip/
+          /\.open/
       ]
     }))
     .pipe(rename(suffix: '.min'))
@@ -90,17 +85,12 @@ gulp.task 'app_css', ->
       html: ['./docs/**/*.html']
       ignore:[
           /\.affix/,
-          /\.alert/,
           /\.close/,
           /\.collaps/,
           /\.fade/,
           /\.has/,
-          /\.help/,
-          /\.in/,
           /\.modal/,
-          /\.open/,
-          /\.popover/,
-          /\.tooltip/
+          /\.open/
       ]
     }))
     .pipe csscomb()
