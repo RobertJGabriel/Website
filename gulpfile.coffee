@@ -33,7 +33,7 @@ gulp.task 'serve', [ 'app_css', 'app_js' ] , ->
   browserSync.init {
     server: './docs'
   }
-  gulp.watch './assets/css/app/*.scss', [ 'app_css' ]
+  gulp.watch './assets/css/app/*.sass', [ 'app_css' ]
   gulp.watch './assets/js/app/*.coffee', [ 'app_js' ]
   gulp.watch './assets/views/*.pug' , ['html']
   gulp.watch('./assets/views/*.pug').on 'change', browserSync.reload
@@ -48,18 +48,7 @@ gulp.task 'vendor_css', ->
     ])
     .pipe(concatCss("vendor.css"))
     .pipe(minifyCSS(keepSpecialComments: 0))
-    .pipe(uncss({
-      html: ['./docs/**/*.html']
-      ignore:[
-          /\.affix/,
-          /\.close/,
-          /\.collaps/,
-          /\.fade/,
-          /\.has/,
-          /\.modal/,
-          /\.open/
-      ]
-    }))
+
     .pipe(rename(suffix: '.min'))
     .pipe gulp.dest('./docs/assets/css')
     return
@@ -81,18 +70,7 @@ gulp.task 'app_css', ->
         ])
     .pipe sass().on('error', sass.logError)
     .pipe concatCss("app.css")
-    .pipe(uncss({
-      html: ['./docs/**/*.html']
-      ignore:[
-          /\.affix/,
-          /\.close/,
-          /\.collaps/,
-          /\.fade/,
-          /\.has/,
-          /\.modal/,
-          /\.open/
-      ]
-    }))
+
     .pipe csscomb()
     .pipe minifyCSS()
     .pipe rename {
