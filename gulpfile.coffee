@@ -149,6 +149,13 @@ gulp.task 'cname', ->
     .pipe(gulp.dest('./docs/'))
     return
 
+
+gulp.task 'apple-pay', ->
+    gulp.src('./assets/apple-developer-merchantid-domain-association')
+    .pipe(gulp.dest('./docs/.well-known'))
+    return
+
+
 gulp.task 'json', ->
     gulp.src('./assets/*.json')
     .pipe(jsonminify())
@@ -206,6 +213,7 @@ gulp.task 'build', [
     'app_sw'
     'extra'
     'json'
+    'apple-pay'
 ]
 
 gulp.task 'default', [ 'clean', 'build' ]
