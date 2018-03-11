@@ -40,6 +40,6 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://wwww.robertgabriel.ninja/",
+  "start_url": "index.html?from=app",
   "description": "Software engineer working at Teamwork.com lover of Frontend"
 }
