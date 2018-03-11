@@ -144,10 +144,10 @@ const assets = [
 gulp.task('cache', () => {
 
   const assets = [
-    ...glob.sync('./docs/assets/fonts/**/*.*'),
-    ...glob.sync('./docs/assets/fonts/**/*.*'),
-    ...glob.sync('./docs/assets/images/**/*.svg'),
-    ...glob.sync('./docs/assets/js/**/*.*'),
+    ...glob.sync('docs/assets/fonts/**/*.*'),
+    ...glob.sync('docs/assets/fonts/**/*.*'),
+    ...glob.sync('docs/assets/images/**/*.svg'),
+    ...glob.sync('docs/assets/js/**/*.*'),
   ];
   const assetsHash = shortHash(assets);
   const assetCacheList = [
