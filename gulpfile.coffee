@@ -33,40 +33,40 @@ gulp.task 'serve', [ 'app_css', 'app_js' ] , ->
   browserSync.init {
     server: './docs'
   }
-  gulp.watch './assets/css/app/*.sass', [ 'app_css' ]
-  gulp.watch './assets/js/app/*.coffee', [ 'app_js' ]
-  gulp.watch './assets/views/*.pug' , ['html']
-  gulp.watch('./assets/views/*.pug').on 'change', browserSync.reload
+  gulp.watch './app/assets/css/app/*.sass', [ 'app_css' ]
+  gulp.watch './app/assets/js/app/*.coffee', [ 'app_js' ]
+  gulp.watch './app/views/*.pug' , ['html']
+  gulp.watch('./app/views/*.pug').on 'change', browserSync.reload
   return
 
 gulp.task 'vendor_css', ->
-    gulp.src([
-        'assets/css/vendor/bootstrap.css'
-        'assets/css/vendor/font-awesome.css'
-        'assets/css/vendor/bootstrap-material-design.css'
-        'assets/css/vendor/material-icons.css'
-    ])
-    .pipe(concatCss("vendor.css"))
-    .pipe(minifyCSS(keepSpecialComments: 0))
+  gulp.src([
+      './app/assets/css/vendor/bootstrap.css'
+      './app/assets/css/vendor/font-awesome.css'
+      './app/assets/css/vendor/bootstrap-material-design.css'
+      './app/assets/css/vendor/material-icons.css'
+  ])
+  .pipe(concatCss("vendor.css"))
+  .pipe(minifyCSS(keepSpecialComments: 0))
 
-    .pipe(rename(suffix: '.min'))
-    .pipe gulp.dest('./docs/assets/css')
-    return
+  .pipe(rename(suffix: '.min'))
+  .pipe gulp.dest('./docs/assets/css')
+  return
 
 
 gulp.task 'app_css', ->
     gulp.src([
-        './assets/css/app/__variables.sass'
-        './assets/css/app/reset.sass'
-        './assets/css/app/timeline.sass'
-        './assets/css/app/button.sass'
-        './assets/css/app/app.sass'
-        './assets/css/app/layout.sass'
-        './assets/css/app/material.sass'
-        './assets/css/app/menu.sass'
-        './assets/css/app/gallery.sass'
-        './assets/css/app/story.sass'
-        './assets/css/app/box.sass'
+        './app/assets/css/app/__variables.sass'
+        './app/assets/css/app/reset.sass'
+        './app/assets/css/app/timeline.sass'
+        './app/assets/css/app/button.sass'
+        './app/assets/css/app/app.sass'
+        './app/assets/css/app/layout.sass'
+        './app/assets/css/app/material.sass'
+        './app/assets/css/app/menu.sass'
+        './app/assets/css/app/gallery.sass'
+        './app/assets/css/app/story.sass'
+        './app/assets/css/app/box.sass'
         ])
     .pipe sass().on('error', sass.logError)
     .pipe concatCss("app.css")
@@ -81,7 +81,7 @@ gulp.task 'app_css', ->
     return
 
 gulp.task 'app_sw', ->
-    gulp.src('assets/js/app/serviceWorker.coffee')
+    gulp.src('./app/assets/js/app/serviceWorker.coffee')
     .on('error', (err) ->
         gutil.log gutil.colors.red(err)
         return
@@ -92,7 +92,7 @@ gulp.task 'app_sw', ->
     return
 
 gulp.task 'app_js', ->
-    gulp.src('assets/js/app/*.coffee')
+    gulp.src('./app/assets/js/app/*.coffee')
     .on('error', (err) ->
         gutil.log gutil.colors.red(err)
         return
@@ -106,12 +106,12 @@ gulp.task 'app_js', ->
 
 gulp.task 'vendor_js', ->
     gulp.src( [
-        'assets/js/vendor/jquery.js',
-        'assets/js/vendor/tether.js',
-        'assets/js/vendor/bootstrap.min.js',
-        'assets/js/vendor/material.js',
-        'assets/js/vendor/ripples.js',
-        'assets/js/vendor/cheet.min.js'
+        './app/assets/js/vendor/jquery.js',
+        './app/assets/js/vendor/tether.js',
+        './app/assets/js/vendor/bootstrap.min.js',
+        './app/assets/js/vendor/material.js',
+        './app/assets/js/vendor/ripples.js',
+        './app/assets/js/vendor/cheet.min.js'
         ]
     ).on('error', (err) ->
         gutil.log gutil.colors.red(err.background_imagessage)
@@ -124,7 +124,7 @@ gulp.task 'vendor_js', ->
 
 gulp.task 'webp_js', ->
     gulp.src( [
-        'assets/js/vendor/webpjs.js'
+        './app/assets/js/vendor/webpjs.js'
         ]
     ).on('error', (err) ->
         gutil.log gutil.colors.red(err.background_imagessage)
@@ -140,37 +140,39 @@ gulp.task 'webp_js', ->
 
 
 gulp.task 'fonts', ->
-    gulp.src('./assets/fonts/*')
+    gulp.src('./app/assets/fonts/*')
     .pipe(gulp.dest('./docs/assets/fonts/'))
     return
 
 gulp.task 'cname', ->
-    gulp.src('./assets/CNAME')
+    gulp.src('./app/assets/CNAME')
     .pipe(gulp.dest('./docs/'))
     return
 
 
 gulp.task 'apple-pay', ->
-    gulp.src('./assets/apple-developer-merchantid-domain-association')
+    gulp.src('./app/assets/apple-developer-merchantid-domain-association')
     .pipe(gulp.dest('./docs/.well-known'))
     return
 
 
 gulp.task 'json', ->
-    gulp.src('./assets/*.json')
+    gulp.src('./app/assets/*.json')
     .pipe(jsonminify())
     .pipe(gulp.dest('./docs/'))
     return
 
 gulp.task 'extra', ->
-    gulp.src('./assets/extra/*')
+    gulp.src('./app/assets/extra/*')
     .pipe(jsonminify())
     .pipe(gulp.dest('./docs/'))
     return
 
 gulp.task 'html', ->
-    gulp.src('./assets/views/*.pug')
-    .pipe(pug({}))
+    gulp.src('./app/views/*.pug')
+    .pipe(pug({
+      pretty: true
+    }))
     #.pipe(w3c())
     #.pipe(w3c.reporter())
     .pipe(gulp.dest('./docs'))
@@ -179,20 +181,21 @@ gulp.task 'html', ->
 
 
 gulp.task 'images', ->
-  gulp.src('./assets/img/**/*')
+  gulp.src('./app/assets/img/**/*')
   .pipe(webp())
   .pipe(gulp.dest('./docs/assets/img/'))
   return
 
 
 gulp.task 'images-png', ->
-  gulp.src('./assets/img/**/*.png')
+  gulp.src('./app/assets/img/**/*.png')
   .pipe(gulp.dest('./docs/assets/img/'))
   return
 
 
 gulp.task 'clean', ->
   del.sync [
+    '!./docs/CNAME'
     './docs/*'
   ], {
     force: true

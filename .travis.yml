@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - '7'
+
+before_install:
+- npm install -g npm --cache-min 999999999
+- npm install gulp -g
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  local-dir: ./docs
+  on:
+    branch: master
+
+script:
+- npm run start
