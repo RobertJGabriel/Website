@@ -90,6 +90,10 @@ gulp.task('cname', function () {
   gulp.src('./app/assets/CNAME').pipe(gulp.dest('./docs/'));
 });
 
+gulp.task('build-settings', function () {
+  gulp.src('./app/assets/.nojekyll').pipe(gulp.dest('./docs/'));
+});
+
 gulp.task('apple-pay', function () {
   gulp.src('./app/assets/apple-developer-merchantid-domain-association').pipe(gulp.dest('./docs/.well-known'));
 });
@@ -192,6 +196,6 @@ gulp.task('cache', () => {
 
 
 
-gulp.task('build', ['vendor_css', 'vendor_js', 'webp_js', 'app_js', 'app_css', 'fonts', 'images', 'images-png', 'cname', 'app_sw', 'extra', 'json', 'apple-pay']);
+gulp.task('build', ['vendor_css', 'vendor_js', 'webp_js', 'app_js', 'app_css', 'fonts', 'images', 'images-png', 'cname', 'app_sw', 'extra', 'json', 'apple-pay','build-settings']);
 
 gulp.task('default', ['clean', 'build']);
