@@ -149,7 +149,8 @@ gulp.task('cache', () => {
 
   const assets = [
     ...glob.sync('docs/assets/fonts/**/*.*'),
-    ...glob.sync('docs/assets/fonts/**/*.*'),
+    ...glob.sync('docs/*.html'),
+    ...glob.sync('docs/**/*.*'),
     ...glob.sync('docs/assets/images/**/*.svg'),
     ...glob.sync('docs/assets/js/**/*.*'),
   ];
