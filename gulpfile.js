@@ -107,7 +107,7 @@ gulp.task('extra', function () {
 });
 
 gulp.task('html', function () {
-  gulp.src('./app/views/*.pug').pipe(pug({
+  gulp.src('./app/views/**/*.pug').pipe(pug({
     pretty: true
   })).pipe(gulp.dest('./docs')).pipe(browserSync.stream());
 });
