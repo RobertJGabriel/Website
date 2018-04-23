@@ -1,0 +1,45 @@
+extends layout/layout
+append vars
+    - var bodyClasses = ''
+    - var metaTitle = 'Repos & Projects | Robert James Gabriel'
+    - var metaDescription = 'Lastest repos by Robert James Gabriel'
+    - var metaKeywords = 'HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design'
+    - var pageUrl = 'https://robertgabriel.ninja/apps'
+    - var masterBinding = Math.floor(Math.random() * (15 - 1300) + 1300)
+    - var develop = false
+    - var currentPath = 'https://robertgabriel.ninja/apps'
+
+
+
+
+block pageBody
+  .container-fluid.baseheader#repos
+    .row
+      .col-sm-3.col-md-3.col-lg-3
+      .col-sm-6.col-md-6.col-lg-6.wrapper
+        .row
+          img.me.img-responsive(src='./assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
+          h1.text-center
+            b Latest repos
+          h2.text-center
+            | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
+
+
+        .row(v-for="repo in repos" v-cloak)
+          .col-sm-12.boxes
+            h2 {{repo.full_name}}
+            span.label.label-info(for="")
+              | {{repo.language}}
+            p
+              | {{repo.description}}
+
+            a.btn.btn-flat.btn-warning(v-bind:href="repo.html_url", target="blank")  Read more
+
+      .col-sm-3.col-md-3.col-lg-3
+
+
+      script(src='https://unpkg.com/vue/dist/vue.js')
+      script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
+
+      script(src='./assets/js/vue.js', defer='')
+
