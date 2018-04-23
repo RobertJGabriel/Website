@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": " gulp build && gulp html && gulp cache && http-server docs",
+    "dev": "gulp build && gulp html && gulp cache  && http-server docs",
+    "start": " gulp build && gulp html && gulp cache ",
     "publish": "gulp && gulp html && git add . && git commit -m 'new site update' && git push"
   },
   "repository": {
