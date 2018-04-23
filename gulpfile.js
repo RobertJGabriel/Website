@@ -192,7 +192,7 @@ gulp.task('cache', () => {
       /(<\/body>)/g,
       `<script>
 				  if ('serviceWorker' in navigator) {
-					  navigator.serviceWorker.register('${ assetsHash }.js');
+					  navigator.serviceWorker.register('/${ assetsHash }.js');
 				  }
 			  </script>$1`
     ))

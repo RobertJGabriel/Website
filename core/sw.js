@@ -1,6 +1,6 @@
 'use strict';
 
-const PREFIX = 'Teamwork.com';
+const PREFIX = 'robertgabriel.ninjs';
 const HASH = %HASH%; // Computed at build time.
 const OFFLINE_CACHE = `${PREFIX}-${HASH}`;
 

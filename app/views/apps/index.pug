@@ -1,10 +1,10 @@
-extends layout/layout
+extends ../layout/layout
 append vars
     - var bodyClasses = ''
     - var metaTitle = 'Apps & Software | Robert James Gabriel'
     - var metaDescription = 'Apps and software made by Robert James Gabriel'
     - var metaKeywords = 'HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design'
-    - var pageUrl = 'https://robertgabriel.ninja/apps'
+    - var pageUrl = 'https://robertgabriel.ninja/apps/'
     - var masterBinding = Math.floor(Math.random() * (15 - 1300) + 1300)
     - var develop = false
     - var currentPath = 'https://robertgabriel.ninja/apps'
@@ -18,7 +18,7 @@ block pageBody
       .col-sm-3.col-md-3.col-lg-3
       .col-sm-6.col-md-6.col-lg-6.wrapper
         .row
-          img.me.img-responsive(src='./assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
+          img.me.img-responsive(src='/assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
           h1.text-center
             b Apps
           h2.text-center

@@ -36,11 +36,13 @@ block pageBody
 
         .row
           .col-sm-12.boxes
-            h2 Supporter 🔥
-            form(action="https://intense-plains-75758.herokuapp.com/1000", method="post")
+            h2 Bronze 🥉
+            form(action="https://intense-plains-75758.herokuapp.com/subscriptions/1000", method="post")
               article
                 p
                   | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
+                p
+                  | This is recurring
                 p
                   | Donate: $10.00
               script(
@@ -53,11 +55,13 @@ block pageBody
 
         .row
           .col-sm-12.boxes
-            h2 Top Supporter ☘️
+            h2 Silver 🥈
             form(action="https://intense-plains-75758.herokuapp.com/2000", method="post")
               article
                 p
                   | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
+                p
+                  | This is recurring
                 p
                   | Donate: $20.00
               script(
@@ -67,6 +71,48 @@ block pageBody
                 data-locale="auto",
                 data-description="Donate",
                 data-amount="2000")
+
+        .row
+          .col-sm-12.boxes
+            h2 Gold 🥇
+            form(action="https://intense-plains-75758.herokuapp.com/10000", method="post")
+              article
+                p
+                  | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
+                p
+                  | This is recurring
+                p
+                  | Donate: $100.00
+              script(
+                src="https://checkout.stripe.com/v2/checkout.js",
+                class="stripe-button",
+                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
+                data-locale="auto",
+                data-description="Donate",
+                data-amount="10000")
+
+        .row
+          .col-sm-12.boxes
+            h2 Platinum 🍀
+            form(action="https://intense-plains-75758.herokuapp.com/10000", method="post")
+              article
+                p
+                  | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
+                p
+                  | This is recurring
+                p
+                  | Donate: $1000.00
+              script(
+                src="https://checkout.stripe.com/v2/checkout.js",
+                class="stripe-button",
+                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
+                data-image="./assets/img/me/me.webp"
+                data-name="Donate to Robert James",
+                data-locale="auto",
+                data-description="Donate 1000.00",
+                data-amount="100000")
+
+
         .row
           .col-sm-12.boxes
             h2 Paypal Donate 💖

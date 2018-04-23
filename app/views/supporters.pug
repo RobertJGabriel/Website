@@ -18,22 +18,28 @@ block pageBody
       .col-sm-3.col-md-3.col-lg-3
       .col-sm-6.col-md-6.col-lg-6.wrapper
         .row
-          img.me.img-responsive(src='./assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
           h1.text-center
-            b Latest repos
+            b Thanks! ❤️☘️
           h2.text-center
-            | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
+            | I’m truly grateful to all the wonderful humans and companies #[a(href='donate') supporting my open source work.]
 
 
-        .row(v-for="repo in repos" v-cloak)
-          .col-sm-12.boxes
-            h2 {{repo.full_name}}
-            span.label.label-info(for="")
-              | {{repo.language}}
-            p
-              | {{repo.description}}
+        .row
+          h1.text-center
+            b Platinum 🍀
+        .row
+          h1.text-center
+            b Gold 🥇
 
-            a.btn.btn-flat.btn-warning(v-bind:href="repo.html_url", target="blank")  Read more
+        .row
+          h1.text-center
+            b Silver 🥈
+
+        .row
+          h1.text-center
+            b Bronze 🥉
+
+
 
       .col-sm-3.col-md-3.col-lg-3
 
