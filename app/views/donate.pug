@@ -37,12 +37,10 @@ block pageBody
         .row
           .col-sm-12.boxes
             h2 Bronze 🥉
-            form(action="https://intense-plains-75758.herokuapp.com/subscriptions/1000", method="post")
+            form(action="https://intense-plains-75758.herokuapp.com/1000", method="post")
               article
                 p
                   | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
-                p
-                  | This is recurring
                 p
                   | Donate: $10.00
               script(
@@ -62,8 +60,6 @@ block pageBody
                 p
                   | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
                 p
-                  | This is recurring
-                p
                   | Donate: $20.00
               script(
                 src="https://checkout.stripe.com/v2/checkout.js",
@@ -80,8 +76,6 @@ block pageBody
               article
                 p
                   | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
-                p
-                  | This is recurring
                 p
                   | Donate: $100.00
               script(
