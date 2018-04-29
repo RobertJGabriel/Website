@@ -8,7 +8,7 @@ var repos = new Vue({
   },
   methods: {
     fetchData: function () {
-      this.$http.get('https://api.github.com/users/robertjgabriel/repos?type=all&sort=created&direction=desc').then(response => {
+      this.$http.get('https://api.github.com/users/robertjgabriel/repos?type=all&sort=created&direction=desc&per_page=100').then(response => {
         this.repos = response.data;
       })
     }
