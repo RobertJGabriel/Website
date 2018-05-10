@@ -39,7 +39,7 @@ gulp.task('serve', ['app_css', 'app_js'], function () {
     server: './docs'
   });
   gulp.watch('./app/assets/css/app/*.sass', ['app_css']);
-  gulp.watch('./app/assets/js/app/*.coffee', ['app_js']);
+  gulp.watch('./app/assets/js/app/*.js', ['app_js']);
   gulp.watch('./app/views/*.pug', ['html']);
   gulp.watch('./app/views/*.pug').on('change', browserSync.reload);
 });
@@ -65,9 +65,9 @@ gulp.task('app_sw', function () {
 });
 
 gulp.task('app_js', function () {
-  gulp.src('./app/assets/js/app/*.coffee').on('error', function (err) {
+  gulp.src('./app/assets/js/app/*.js').on('error', function (err) {
     gutil.log(gutil.colors.red(err));
-  }).pipe(coffee()).pipe(concat('app.min.js')).pipe(gulp.dest('./docs/assets/js')).pipe(browserSync.stream());
+  }).pipe(concat('app.min.js')).pipe(gulp.dest('./docs/assets/js')).pipe(browserSync.stream());
 });
 
 gulp.task('app_js_vue', function () {
