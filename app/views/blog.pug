@@ -23,8 +23,9 @@ block pageBody
             b Blog
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
+        include layout/loading
+        .row(v-for="posts in blogPosts", v-bind:class="{ hide: loading}" v-cloak)
 
-        .row(v-for="posts in blogPosts" v-cloak)
           .col-sm-12.boxes
             h2  {{posts.title}}
             span.label.label-info.margin-right(for="")

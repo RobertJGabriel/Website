@@ -1,7 +1,7 @@
 'use strict';
 
-const PREFIX = 'robertgabriel.ninjs';
-const HASH = %HASH%; // Computed at build time.
+const PREFIX = 'robertgabriel.ninja';
+const HASH = %HASH%;
 const OFFLINE_CACHE = `${PREFIX}-${HASH}`;
 
 self.addEventListener('install', function(event) {
