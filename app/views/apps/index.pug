@@ -9,11 +9,8 @@ append vars
     - var develop = false
     - var currentPath = 'https://robertgabriel.ninja/apps'
 
-
-
-
 block pageBody
-  .container-fluid.baseheader#repos
+  .container-fluid.baseheader
     .row
       .col-sm-3.col-md-3.col-lg-3
       .col-sm-6.col-md-6.col-lg-6.wrapper
@@ -24,7 +21,13 @@ block pageBody
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
 
-
+        .row
+          .col-sm-12.boxes
+            h2 Technical SEO Audit
+            p
+              | Technical search engine optimisation (SEO) describes the efforts of a webmaster to ensure their website is compatible with search engine guidelines, and can be indexed and ranked for keyphrase searches accordingly.
+              | This tool displays and non-exhaustive list of HTML, Javascript and CSS features a page is using which are not supported by the Google Search bot
+            a.btn.btn-flat.btn-warning(href="https://www.robertgabriel.ninja/apps/seo-friendly", target="blank")  Read more
 
 
         .row
@@ -33,7 +36,7 @@ block pageBody
             p
               | Annoyed writing markdown? Find it awkward to write it on Github, twitch or your code editor?
               | Markdown editor premium allows you to write markdown without leaving your browser. Supporting all popular coding languages.
-            a.btn.btn-flat.btn-warning(v-bind:href="https://www.robertgabriel.ninja/apps/markdown-editor", target="blank")  Read more
+            a.btn.btn-flat.btn-warning(href="https://www.robertgabriel.ninja/apps/markdown-editor", target="blank")  Read more
 
 
         .row
@@ -42,13 +45,8 @@ block pageBody
             p
               | Format pages using the OpenDyslexic font and low contrast help.
               | Open-Dyslexic is an open sourced font created to increase readability for readers with dyslexia. This extension overrides all fonts on webpages with the OpenDyslexic font, and formats pages to be more easily readable.
-            a.btn.btn-flat.btn-warning(v-bind:href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam/support", target="blank")  Read more
+            a.btn.btn-flat.btn-warning(href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam/support", target="blank")  Read more
 
       .col-sm-3.col-md-3.col-lg-3
-
-
-      script(src='https://unpkg.com/vue/dist/vue.js')
-      script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
-
 
 

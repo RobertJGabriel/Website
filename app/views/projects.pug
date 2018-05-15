@@ -9,9 +9,6 @@ append vars
     - var develop = false
     - var currentPath = 'https://robertgabriel.ninja/apps'
 
-
-
-
 block pageBody
   .container-fluid.baseheader#repos
     .row
@@ -20,10 +17,9 @@ block pageBody
         .row
           img.me.img-responsive(src='./assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
           h1.text-center
-            b Latest repos
+            b Latest Repos
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
-
 
         .row(v-for="repo in repos" v-cloak)
           .col-sm-12.boxes
@@ -38,8 +34,8 @@ block pageBody
       .col-sm-3.col-md-3.col-lg-3
 
 
-      script(src='https://unpkg.com/vue@2.5.16/dist/vue.min.js')
-      script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
+  script(src='https://unpkg.com/vue@2.5.16/dist/vue.min.js')
+  script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
 
-      script(src='./assets/js/vue.js')
+  script(src='./assets/js/vue/repos.js')
 

@@ -71,9 +71,9 @@ gulp.task('app_js', function () {
 });
 
 gulp.task('app_js_vue', function () {
-  gulp.src('./app/assets/js/app/*.js').on('error', function (err) {
+  gulp.src('./app/assets/js/app/vue/*.js').on('error', function (err) {
     gutil.log(gutil.colors.red(err));
-  }).pipe(gulp.dest('./docs/assets/js')).pipe(browserSync.stream());
+  }).pipe(gulp.dest('./docs/assets/js/vue/')).pipe(browserSync.stream());
 });
 
 gulp.task('vendor_js', function () {
@@ -99,6 +99,11 @@ gulp.task('cname', function () {
 gulp.task('build-settings', function () {
   gulp.src('./app/assets/.nojekyll').pipe(gulp.dest('./docs/'));
 });
+
+gulp.task('build-downloads', function () {
+  gulp.src('./app/assets/downloads/**/*.*').pipe(gulp.dest('./docs/assets/downloads/'));
+});
+
 
 gulp.task('apple-pay', function () {
   gulp.src('./app/assets/apple-developer-merchantid-domain-association').pipe(gulp.dest('./docs/.well-known'));
@@ -205,6 +210,6 @@ gulp.task('cache', () => {
 
 
 
-gulp.task('build', ['vendor_css', 'vendor_js', 'webp_js', 'app_js', 'app_css', 'fonts', 'images', 'images-png', 'cname','app_js_vue', 'app_sw', 'extra', 'json', 'apple-pay','build-settings']);
+gulp.task('build', ['vendor_css', 'build-downloads','vendor_js', 'webp_js', 'app_js', 'app_css', 'fonts', 'images', 'images-png', 'cname','app_js_vue', 'app_sw', 'extra', 'json', 'apple-pay','build-settings']);
 
 gulp.task('default', ['clean', 'build']);
