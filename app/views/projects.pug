@@ -17,15 +17,19 @@ block pageBody
         .row
           img.me.img-responsive(src='./assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
           h1.text-center
-            b Latest Repos
+            b Latest Repos & Projects
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
 
         .row(v-for="repo in repos" v-cloak)
           .col-sm-12.boxes
             h2 {{repo.full_name}}
-            span.label.label-info(for="")
+            span.label.label-info.margin-right(for="")
               | {{repo.language}}
+            span.label.label-success.margin-right(for="")
+              | Forks: {{repo.forks}}
+            span.label.label-success.margin-right(for="")
+              | Stars: {{repo.stargazers_count}}
             p
               | {{repo.description}}
 

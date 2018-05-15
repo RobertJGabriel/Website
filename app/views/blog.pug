@@ -13,7 +13,7 @@ append vars
 
 
 block pageBody
-  .container-fluid.baseheader
+  .container-fluid.baseheader#blog
     .row
       .col-sm-3.col-md-3.col-lg-3
       .col-sm-6.col-md-6.col-lg-6.wrapper
@@ -24,98 +24,20 @@ block pageBody
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
 
-
-        .row
+        .row(v-for="posts in blogPosts" v-cloak)
           .col-sm-12.boxes
-            h2 Warning!! Google Chrome HTTPS certificate apocalypse!
-            p
-              | Google at the start of the year announced that come July 2018, Chrome will begin to explicitly warn users if a site is insecure....
-            a.btn.btn-flat.btn-warning(href='https://medium.com/@RobertJGabriel/warning-google-chrome-https-certificate-apocalypse-86373083ba2') Read
-
-
-        .row
-          .col-sm-12.boxes
-            h2 2018 Goals 👋
-            p
-              | Writing this as for myself mostly and to improve my writing. 2017 has/had been a high and wild year for both good and bad points.
-            a.btn.btn-flat.btn-warning(href='https://medium.com/@RobertJGabriel/2018-goals-3199365c1026') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 How to add Free SSL to GitHub Pages
-            p
-              | As people may or may not know if you host your site on Github though GitHub pages (which is served on AWS fun fact) and use a custom domain.....
-            a.btn.btn-flat.btn-warning(href='https://medium.com/@RobertJGabriel/how-to-add-free-ssl-to-github-pages-hosted-site-ceea290eac69') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 CREATING CONTENT IS IRRELEVANT FOR THE MOST PART for SEO
-            p
-              | Creating content is irrelevant for the most part when it comes to SEO. When people think of SEO, they believe that it involves targeting keywords and text on a website along with setting your site up to crawled by search engines and make it number one on the web......
-            a.btn.btn-flat.btn-warning(href='https://medium.com/@RobertJGabriel/creating-content-is-actually-irrelevant-for-the-the-most-part-for-seo-ca9ef0a610c9') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 Design and Machine Learning
-            p
-              | Part of my fourth year project for college. On flitering systems and designing a web tools for children and parents.
-            a.btn.btn-flat.btn-warning(href='https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 Introduction to Firebase
-            p
-              | Talk in how to use and benfits of Firebase. Was done at Austin Texas meetup July 2016
-            a.btn.btn-flat.btn-warning(href='https://chrome.google.com/webstore/detail/helper-bird-opendyslexic/ahmapmilbkfamljbpgphfndeemhnajme?hl=en') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 Computer Science college notes
-            p
-              | Notes, slides and answers for all the classes I took while doing computer science In Cork Institute of Technology
-            a.btn.btn-flat.btn-warning(href='https://github.com/RobertJGabriel/CIT-Web-development-answers-and-notes') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 Web Accessibility and OpenDyslexia
-            p
-              | There are few published papers about usability testing with dyslexia focused fonts, but there is a considerable collection of knowledge on dyslexia as well as many suggestions for authoring dyslexia friendly interfaces.
-            a.btn.btn-flat.btn-warning(href='research-into-web-accessibility-for-dyslexics-and-Dyslexia-focused-fonts-such-asopendyslexia') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 Problems Posed by Ad-blockers
-            p
-              | Browsing the web without ads or popups stealing your screen or auto playing video ads making the page load as slowly as if it were being dialed up in the 1990s is a pleasant experience, so it’s understandable that so many people these days choose to use ad blockers when surfing the internet. But what problems are posed to businesses by using ad-blockers?
-            a.btn.btn-flat.btn-warning(href='adblockers') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 Whats in my Bag
-            p
-              | I recently read a book about the minimal life. I'm no hipster and I am a sort of privileged, white Irish man. But I thought I would write about what I need to do my day to day life.
-            a.btn.btn-flat.btn-warning(href='bag') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 MYSQL Interview Questions
-            p
-              | MYSQL interview questions to help you study for your next interview.
-            a.btn.btn-flat.btn-warning(href='mysql-interview-questions') Read
-
-        .row
-          .col-sm-12.boxes
-            h2 Featured in Smart Futures at BT Young Scientist
-            p
-              | We talk to students at the 2012 BT Young Scientist & Technology Exhibition at the RDS in Dublin.
-            a.btn.btn-flat.btn-warning(href='https://www.youtube.com/watch?v=E0C48G_wyEY') Watch
-
-        .row
-          .col-sm-12.boxes
-            h2 The blurred line between websites/webapps
-            p
-              |  In todays talk Robert James Gabriel will talk about how reaching a 100% lighthouse ranking and how  turning your website into a webapp will increase performance, rankings , sales, costs  and much more.
-            a.btn.btn-flat.btn-warning(href='https://www.youtube.com/watch?v=X6pFD4M70Nk') Watch
-
+            h2  {{posts.title}}
+            span.label.label-info.margin-right(for="")
+              | {{posts.pubDate}}
+            span.label.label-success.margin-right(for="")
+              | {{posts.author}}
+            p(v-html='posts.description')
+            a.btn.btn-flat.btn-warning(v-bind:href="posts.link", target="blank") Read
 
       .col-sm-3.col-md-3.col-lg-3
+
+  script(src='https://unpkg.com/vue@2.5.16/dist/vue.min.js')
+  script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
+
+  script(src='./assets/js/vue/blog.js')
+
