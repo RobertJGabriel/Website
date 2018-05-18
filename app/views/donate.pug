@@ -17,93 +17,27 @@ block pageBody
             | Want to help me support my work on "OpenDyslexic For Chrome", my other other projects? or even new projects?
         .row
           .col-sm-12.boxes
-            h2 Thank you 🎂
-            form(action="https://intense-plains-75758.herokuapp.com/500", method="post")
+            h2 Stripe Donate
+            form(action="https://intense-plains-75758.herokuapp.com/donate?amount=500", method="post", id="stripe-donate")
               article
                 p
                   | You'll have my eternal gratitude
-                p
-                  | Donate: $5.00
+                .form-group.label-placeholder
+                  label.control-label(for='amount') Amount to Donate in Dollars/Euros
+                  input.form-control(id="amount" type="number",placeholder="1 = 1 dollar/euro")
+                  span.help-block
+                    | Rememeber this is in dollars/euros
+                    code span.help-block.hint
+
               script(
                 src="https://checkout.stripe.com/v2/checkout.js",
-                class="stripe-button",
-                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
-                data-locale="auto",
-                data-description="Donate",
-                data-amount="500")
-
-        .row
-          .col-sm-12.boxes
-            h2 Bronze 🥉
-            form(action="https://intense-plains-75758.herokuapp.com/1000", method="post")
-              article
-                p
-                  | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
-                p
-                  | Donate: $10.00
-              script(
-                src="https://checkout.stripe.com/v2/checkout.js",
-                class="stripe-button",
-                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
-                data-locale="auto",
-                data-description="Donate",
-                data-amount="1000")
-
-
-        .row
-          .col-sm-12.boxes
-            h2 Silver 🥈
-            form(action="https://intense-plains-75758.herokuapp.com/2000", method="post")
-              article
-                p
-                  | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
-                p
-                  | Donate: $20.00
-              script(
-                src="https://checkout.stripe.com/v2/checkout.js",
-                class="stripe-button",
-                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
-                data-locale="auto",
-                data-description="Donate",
-                data-amount="2000")
-
-        .row
-          .col-sm-12.boxes
-            h2 Gold 🥇
-            form(action="https://intense-plains-75758.herokuapp.com/10000", method="post")
-              article
-                p
-                  | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
-                p
-                  | Donate: $100.00
-              script(
-                src="https://checkout.stripe.com/v2/checkout.js",
-                class="stripe-button",
-                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
-                data-locale="auto",
-                data-description="Donate",
-                data-amount="10000")
-
-        .row
-          .col-sm-12.boxes
-            h2 Platinum 🍀
-            form(action="https://intense-plains-75758.herokuapp.com/10000", method="post")
-              article
-                p
-                  | Your name will be added to the Supporter section of robertgabriel.ninja/thanks
-                p
-                  | This is recurring
-                p
-                  | Donate: $1000.00
-              script(
-                src="https://checkout.stripe.com/v2/checkout.js",
-                class="stripe-button",
-                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
+                data-name="Robert James Gabriel",
                 data-image="./assets/img/me/me.webp"
-                data-name="Donate to Robert James",
+                class="stripe-button",
+                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
                 data-locale="auto",
-                data-description="Donate 1000.00",
-                data-amount="100000")
+                data-description="Donate"
+                )
 
 
         .row
@@ -119,3 +53,10 @@ block pageBody
 
       .col-sm-3.col-md-3.col-lg-3
 
+  script.
+    document.getElementById("amount").onchange = function() {myFunction()};
+    function myFunction() {
+    var amount = document.getElementById("amount");
+    var form = document.getElementById("stripe-donate")
+    form.action = "https://intense-plains-75758.herokuapp.com/donate?amount=" + amount.value + "00";
+    }
