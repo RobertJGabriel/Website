@@ -12,22 +12,20 @@ block pageBody
 
           img.me.img-responsive(src='./assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
           h1.text-center
-            b Supporters
+            b Donate/Payment
           h2.text-center
             | Want to help me support my work on "OpenDyslexic For Chrome", my other other projects? or even new projects?
+            | Did I do work for you? You can pay me using the following below.
         .row
           .col-sm-12.boxes
-            h2 Stripe Donate
+            h2 Pay using Stripe
             form(action="https://intense-plains-75758.herokuapp.com/donate?amount=500", method="post", id="stripe-donate")
-              article
-                p
-                  | You'll have my eternal gratitude
-                .form-group.label-placeholder
-                  label.control-label(for='amount') Amount to Donate in Dollars/Euros
-                  input.form-control(id="amount" type="number",placeholder="1 = 1 dollar/euro")
-                  span.help-block
-                    | Rememeber this is in dollars/euros
-                    code span.help-block.hint
+              .form-group.label-placeholder
+                label.control-label(for='amount') Amount to Donate in Dollars/Euros
+                input.form-control(id="amount" type="number",placeholder="1 = 1 dollar/euro")
+                span.help-block
+                  | Rememeber this is in dollars/euros
+                  code span.help-block.hint
 
               script(
                 src="https://checkout.stripe.com/v2/checkout.js",
@@ -42,13 +40,9 @@ block pageBody
 
         .row
           .col-sm-12.boxes
-            h2 Paypal Donate 💖
+            h2 Pay using Paypal
             form(action="https://www.paypal.me/robertjgabriel", method="post")
               article
-                p
-                  | I will give you a huge hug
-                p
-                  | Donate: Up to you
               a.btn.btn-flat.btn-warning(href='https://www.paypal.me/robertjgabriel') Paypal
 
       .col-sm-3.col-md-3.col-lg-3
