@@ -550,8 +550,6 @@ fieldset[disabled][disabled] .btn-group-vertical,
 .input-group-btn .btn.disabled,
 .btn-group.disabled,
 .btn-group-vertical.disabled,
-.btn:disabled,
-.input-group-btn .btn:disabled,
 .btn-group:disabled,
 .btn-group-vertical:disabled,
 .btn[disabled][disabled],
@@ -757,8 +755,6 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
 .btn-group-vertical .btn + .btn,
 .btn-group .btn,
 .btn-group-vertical .btn,
-.btn-group .btn:active,
-.btn-group-vertical .btn:active,
 .btn-group .btn-group,
 .btn-group-vertical .btn-group {
   margin: 0;
