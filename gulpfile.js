@@ -58,9 +58,7 @@ gulp.task('vendor_css', function () {
   gulp
     .src([
       './app/assets/css/vendor/bootstrap.css',
-      './app/assets/css/vendor/font-awesome.css',
       './app/assets/css/vendor/bootstrap-material-design.css',
-      './app/assets/css/vendor/material-icons.css'
     ])
     .pipe(postcss(plugins))
     .pipe(concatCss('vendor.css'))
@@ -81,6 +79,7 @@ gulp.task('app_css', function () {
 
   var plugins = [
     uncss({
+      ignore: ['.open'],
       html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
     }),
   ];

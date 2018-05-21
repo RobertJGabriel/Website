@@ -85,14 +85,12 @@ a
   font-size: 1.5rem
   text-align: center
 
-  .fa,.fab,.fas
+  .fa,.fab,.fas,svg
     font-size: 1.5rem
     padding: .5rem
 
-  .fa-heart
-    color: $heart-color
 
-.fa-bars
+.fa-bars,svg
   font-size: 24px
 
 .panel-footer
@@ -195,7 +193,7 @@ header
 img
   margin: 20px 10 20px 0
 
-  .fa,.fab,.fas
+  .fa,.fab,.fas,svg
     font-size: 24px
     margin: 10px
 
@@ -224,7 +222,7 @@ p
 footer
   background-color: $footer-background-color
 
-  .fas, .fab
+  .fas, .fab,svg
     font-size: 24px
     margin: 10px
 
@@ -261,44 +259,68 @@ footer
     list-style: none
     font-family: $font-stack
     width: 14%
+    height: 48px
 
-    a
+    a,svg
       color: $grey
       font-family: $font-stack
       transition: color .5s ease
-      color: #F2F1EF !important
+      fill: #F2F1EF !important
+      height: 25px
+      &:hover
+        color: #F44336 !important
+    a
+      svg
+        color: $grey
+        font-family: $font-stack
+        transition: color .5s ease
+        fill: #F2F1EF !important
+        height: 25px
+        &:hover
+          color: #F44336 !important
 
 .icon-twitter
   a
-    &:hover
-      color: #F44336 !important
+    svg
+      &:hover
+        color: #F44336 !important
 
 .icon-mail
   a
-    &:hover
-      color: #24292E !important
+    svg
+      &:hover
+        color: #24292E !important
+  a
+    svg
+      &:hover
+        color: #24292E !important
 
 .icon-dribble
   a
-    &:hover
-      color: #FFEB3B !important
+    svg
+      &:hover
+        color: #FFEB3B !important
 
 .icon-patreon
   a
-    &:hover
-      color: #FFEB3B !important
+    svg
+      &:hover
+        color: #FFEB3B !important
 
 .icon-github
   a
-    &:hover
-      color: #4CAF50 !important
+    svg
+      &:hover
+        color: #4CAF50 !important
 
 .icon-googleplus
   a
-    &:hover
-      color: #2196F3 !important
+    svg
+      &:hover
+        color: #2196F3 !important
 
 .icon-linkedin
   a
-    &:hover
-      color: #673AB7 !important
+    svg
+      &:hover
+        color: #673AB7 !important
