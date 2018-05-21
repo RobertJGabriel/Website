@@ -6503,8 +6503,12 @@ button.close {
 .pull-left {
   float: left !important;
 }
-
-
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
 .invisible {
   visibility: hidden;
 }
