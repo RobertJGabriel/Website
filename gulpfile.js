@@ -52,6 +52,7 @@ gulp.task('serve', ['app_css', 'app_js'], function () {
 gulp.task('vendor_css', function () {
   var plugins = [
     uncss({
+      ignore: ['.label', '.label-success', '.label-info'],
       html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
     }),
   ];
@@ -79,7 +80,7 @@ gulp.task('app_css', function () {
 
   var plugins = [
     uncss({
-      ignore: ['.open'],
+      ignore: ['.open', '.sk-fading-circle', '.margin-right'],
       html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
     }),
   ];
@@ -87,7 +88,6 @@ gulp.task('app_css', function () {
     .src([
       './app/assets/css/app/__variables.sass',
       './app/assets/css/app/reset.sass',
-      './app/assets/css/app/timeline.sass',
       './app/assets/css/app/loading.sass',
       './app/assets/css/app/button.sass',
       './app/assets/css/app/app.sass',
@@ -224,12 +224,18 @@ gulp.task('extra', function () {
 
 gulp.task('html', function () {
   gulp
-    .src('./app/views/**/*.pug')
+    .src('./app/views/*.pug')
     .pipe(
       pug({
         pretty: true
       })
     )
+    //.pipe(critical({
+    //  base: 'docs/',
+     // inline: true,
+     // css: ['./docs/assets/css/app.min.css']
+    //}))
+    .on('error', function(err) { console.log(err.message); })
     .pipe(gulp.dest('./docs'))
     .pipe(browserSync.stream())
 })
