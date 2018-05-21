@@ -20,7 +20,8 @@ const pug = require('gulp-pug')
 const rollup = require('gulp-rollup')
 const concatCss = require('gulp-concat-css')
 const coffee = require('gulp-coffee')
-const uncss = require('gulp-uncss')
+const postcss = require('gulp-postcss');
+const uncss = require('postcss-uncss');
 const imagemin = require('gulp-imagemin')
 const watch = require('gulp-watch')
 const csscomb = require('gulp-csscomb')
@@ -49,6 +50,11 @@ gulp.task('serve', ['app_css', 'app_js'], function () {
 })
 
 gulp.task('vendor_css', function () {
+  var plugins = [
+    uncss({
+      html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
+    }),
+  ];
   gulp
     .src([
       './app/assets/css/vendor/bootstrap.css',
@@ -56,6 +62,7 @@ gulp.task('vendor_css', function () {
       './app/assets/css/vendor/bootstrap-material-design.css',
       './app/assets/css/vendor/material-icons.css'
     ])
+    .pipe(postcss(plugins))
     .pipe(concatCss('vendor.css'))
     .pipe(
       minifyCSS({
@@ -71,6 +78,12 @@ gulp.task('vendor_css', function () {
 })
 
 gulp.task('app_css', function () {
+
+  var plugins = [
+    uncss({
+      html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
+    }),
+  ];
   gulp
     .src([
       './app/assets/css/app/__variables.sass',
@@ -87,6 +100,7 @@ gulp.task('app_css', function () {
       './app/assets/css/app/box.sass'
     ])
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(plugins))
     .pipe(concatCss('app.css'))
     .pipe(csscomb())
     .pipe(minifyCSS())
