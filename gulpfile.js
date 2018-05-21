@@ -52,7 +52,7 @@ gulp.task('serve', ['app_css', 'app_js'], function () {
 gulp.task('vendor_css', function () {
   var plugins = [
     uncss({
-      ignore: ['.label', '.label-success', '.label-info'],
+      ignore: ['.label', '.label-success', '.label-info','.open','.hide','.show'],
       html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
     }),
   ];
@@ -80,7 +80,7 @@ gulp.task('app_css', function () {
 
   var plugins = [
     uncss({
-      ignore: ['.open', '.sk-fading-circle', '.margin-right'],
+      ignore: ['.open', '.sk-fading-circle', '.margin-right','.hide','.show'],
       html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
     }),
   ];
