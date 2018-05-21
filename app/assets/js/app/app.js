@@ -8,12 +8,7 @@ navText = $('#logo1')
 
 bannerText = $('#logo2')
 
-robertjames.easterEgg = function () {
-  cheet('↑ ↑ ↓ ↓ ← → ← → b a', function () {
-    console.log('hi')
-    $('#easteregg').modal('show')
-  })
-}
+
 
 robertjames.events = function () {
   $('.menu-button').click(function (e) {
@@ -33,7 +28,6 @@ robertjames.events = function () {
 
 robertjames.init = function () {
   robertjames.events()
-  robertjames.easterEgg()
   navText.addClass('show')
   navText.text('Robert James Gabriel')
 }

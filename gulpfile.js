@@ -150,7 +150,7 @@ gulp.task('app_js_vue', function () {
 gulp.task('vendor_js', function () {
   gulp
     .src([
-      './app/assets/js/vendor/jquery.js',
+      './app/assets/js/vendor/jquery.js'
     ])
     .on('error', function (err) {
       gutil.log(gutil.colors.red(err.background_imagessage))
