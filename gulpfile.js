@@ -151,11 +151,6 @@ gulp.task('vendor_js', function () {
   gulp
     .src([
       './app/assets/js/vendor/jquery.js',
-      './app/assets/js/vendor/popper.js',
-      './app/assets/js/vendor/bootstrap.min.js',
-      './app/assets/js/vendor/material.js',
-      './app/assets/js/vendor/ripples.js',
-      './app/assets/js/vendor/cheet.min.js'
     ])
     .on('error', function (err) {
       gutil.log(gutil.colors.red(err.background_imagessage))
