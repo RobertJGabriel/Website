@@ -151,7 +151,7 @@ gulp.task('vendor_js', function () {
   gulp
     .src([
       './app/assets/js/vendor/jquery.js',
-      './app/assets/js/vendor/tether.js',
+      './app/assets/js/vendor/popper.js',
       './app/assets/js/vendor/bootstrap.min.js',
       './app/assets/js/vendor/material.js',
       './app/assets/js/vendor/ripples.js',
@@ -275,13 +275,13 @@ gulp.task('cache', () => {
   const assetCacheList = [
     '/',
     ...assets
-      // Remove all `images/icon-*` files except for the one used in
-      // the HTML.
-      .filter(
-        path =>
-          !path.includes('images/icon-') || path.includes('icon-228x228.png')
-      )
-      .map(path => path.replace(/^docs\//, '/'))
+    // Remove all `images/icon-*` files except for the one used in
+    // the HTML.
+    .filter(
+      path =>
+      !path.includes('images/icon-') || path.includes('icon-228x228.png')
+    )
+    .map(path => path.replace(/^docs\//, '/'))
   ]
 
   gulp
