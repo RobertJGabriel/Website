@@ -53,7 +53,8 @@ gulp.task('vendor_css', function () {
   var plugins = [
     uncss({
       ignore: ['.label', '.label-success', '.label-info','.open','.hide','.show'],
-      html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
+      html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja'],
+      report: true
     }),
   ];
   gulp

@@ -24,11 +24,11 @@ block pageBody
         .row(v-for="repo in repos" v-bind:class="{ hide: loading}" v-cloak, )
           .col-sm-12.boxes
             h2 {{repo.full_name}}
-            span.label.label-info.margin-right(for="")
+            span.margin-right(for="")
               | {{repo.language}}
-            span.label.label-success.margin-right(for="")
+            span.margin-right(for="")
               | Forks: {{repo.forks}}
-            span.label.label-success.margin-right(for="")
+            span.margin-right(for="")
               | Stars: {{repo.stargazers_count}}
             p
               | {{repo.description}}
