@@ -20,7 +20,7 @@ block pageBody
             b Latest Repos & Projects
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
-        .(v-bind:class="{ hide: !loading}")
+        .c(v-bind:class="{ hide: !loading}")
           include layout/loading
         .row(v-for="repo in repos" v-bind:class="{ hide: loading}" v-cloak, )
           .col-sm-12.boxes
