@@ -50,20 +50,12 @@ gulp.task('serve', ['app_css', 'app_js'], function () {
 })
 
 gulp.task('vendor_css', function () {
-  var plugins = [
-    uncss({
-      ignore: ['.label', '.label-success', '.label-info','.open','.hide','.show'],
-      html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja'],
-      report: true
-    }),
-  ];
   gulp
     .src([
       './app/assets/css/vendor/bootstrap.css',
       './app/assets/css/vendor/bootstrap-material-design.css',
     ])
-    .pipe(purify(['./docs/assets/js/**/*.min.js', './docs/**/*.html']))
-    .pipe(postcss(plugins))
+
     .pipe(concatCss('vendor.css'))
     .pipe(
       minifyCSS({
@@ -80,12 +72,7 @@ gulp.task('vendor_css', function () {
 
 gulp.task('app_css', function () {
 
-  var plugins = [
-    uncss({
-      ignore: ['.open', '.sk-fading-circle', '.margin-right','.hide','.show'],
-      html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
-    }),
-  ];
+
   gulp
     .src([
       './app/assets/css/app/__variables.sass',
@@ -101,8 +88,6 @@ gulp.task('app_css', function () {
       './app/assets/css/app/box.sass'
     ])
     .pipe(sass().on('error', sass.logError))
-    .pipe(purify(['./docs/assets/js/**/*.min.js', './docs/**/*.html']))
-    .pipe(postcss(plugins))
     .pipe(concatCss('app.css'))
     .pipe(csscomb())
     .pipe(minifyCSS())
@@ -114,6 +99,25 @@ gulp.task('app_css', function () {
     .pipe(gulp.dest('./docs/assets/css'))
     .pipe(browserSync.stream())
 })
+
+gulp.task('final_css', function () {
+
+  var plugins = [
+    uncss({
+      ignore: ['.open', '.sk-fading-circle', '.margin-right', '.hide', '.show', '.label', '.label-success', '.label-info', '.open', '.hide', '.show'],
+      html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
+    }),
+  ];
+
+  gulp
+    .src('./docs/assets/css/**/*.min.css')
+    .pipe(purify(['./docs/assets/js/**/*.min.js', './docs/**/*.html']))
+    .pipe(postcss(plugins))
+    .pipe(minifyCSS())
+    .pipe(concat('styles.min.css'))
+    .pipe(gulp.dest('./docs/assets/css/'));
+
+});
 
 gulp.task('app_sw', function () {
   gulp
@@ -235,10 +239,12 @@ gulp.task('html', function () {
     )
     //.pipe(critical({
     //  base: 'docs/',
-     // inline: true,
-     // css: ['./docs/assets/css/app.min.css']
+    // inline: true,
+    // css: ['./docs/assets/css/app.min.css']
     //}))
-    .on('error', function(err) { console.log(err.message); })
+    .on('error', function (err) {
+      console.log(err.message);
+    })
     .pipe(gulp.dest('./docs'))
     .pipe(browserSync.stream())
 })
@@ -337,6 +343,7 @@ gulp.task('build', [
   'app_js',
   'app_css',
   'fonts',
+  'final_css',
   'images',
   'images-png',
   'cname',
