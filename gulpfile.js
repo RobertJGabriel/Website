@@ -62,6 +62,7 @@ gulp.task('vendor_css', function () {
       './app/assets/css/vendor/bootstrap.css',
       './app/assets/css/vendor/bootstrap-material-design.css',
     ])
+    .pipe(purify(['./docs/assets/js/**/*.min.js', './docs/**/*.html']))
     .pipe(postcss(plugins))
     .pipe(concatCss('vendor.css'))
     .pipe(
@@ -100,6 +101,7 @@ gulp.task('app_css', function () {
       './app/assets/css/app/box.sass'
     ])
     .pipe(sass().on('error', sass.logError))
+    .pipe(purify(['./docs/assets/js/**/*.min.js', './docs/**/*.html']))
     .pipe(postcss(plugins))
     .pipe(concatCss('app.css'))
     .pipe(csscomb())
