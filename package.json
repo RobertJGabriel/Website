@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp webp_js && gulp app_js && gulp app_css && gulp fonts && gulp final_css && gulp images && gulp images-png && gulp cname && gulp app_js_vue && gulp app_sw && gulp extra && gulp json && gulp apple-pay && gulp build-settings && gulp sitemap && gulp html && gulp cache  && http-server docs",
-    "start": " gulp build && gulp html && gulp cache ",
+    "start": " gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp webp_js && gulp app_js && gulp app_css && gulp fonts && gulp final_css && gulp images && gulp images-png && gulp cname && gulp app_js_vue && gulp app_sw && gulp extra && gulp json && gulp apple-pay && gulp build-settings && gulp sitemap && gulp html && gulp cache",
     "publish": "gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp webp_js && gulp app_js && gulp app_css && gulp fonts && gulp final_css && gulp images && gulp images-png && gulp cname && gulp app_js_vue && gulp app_sw && gulp extra && gulp json && gulp apple-pay && gulp build-settings && gulp sitemap && gulp html && git add . && git commit -m 'new site update' && git push"
   },
   "repository": {
