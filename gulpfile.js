@@ -233,7 +233,6 @@ gulp.task('json', function () {
 gulp.task('extra', function () {
   gulp
     .src('./app/assets/extra/*')
-    .pipe(jsonminify())
     .pipe(gulp.dest('./docs/'))
 })
 
