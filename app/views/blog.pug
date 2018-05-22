@@ -23,7 +23,8 @@ block pageBody
             b Blog
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
-        include layout/loading
+        .(v-bind:class="{ hide: !loading}")
+          include layout/loading
         .row(v-for="posts in blogPosts", v-bind:class="{ hide: loading}" v-cloak)
 
           .col-sm-12.boxes
