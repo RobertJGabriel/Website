@@ -120,7 +120,6 @@ gulp.task('final_css', function () {
         }
       }
     }))
-    .pipe(purify(['./docs/assets/js/**/*.min.js', './docs/**/*.html']))
     .pipe(postcss(plugins))
     .pipe(minifyCSS())
     .pipe(concat('styles.min.css'))
