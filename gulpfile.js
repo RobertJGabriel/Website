@@ -32,7 +32,7 @@ const purify = require('gulp-purifycss')
 const runSequence = require('run-sequence').use(gulp)
 const jsonminify = require('gulp-jsonminify')
 const sitemap = require('gulp-sitemap')
-
+const cleanCss = require('gulp-clean-css');
 /**
  * @param  {} 'serve'
  * @param  {} ['app_css'
@@ -81,7 +81,6 @@ gulp.task('app_css', function () {
       './app/assets/css/app/button.sass',
       './app/assets/css/app/app.sass',
       './app/assets/css/app/layout.sass',
-      './app/assets/css/app/material.sass',
       './app/assets/css/app/menu.sass',
       './app/assets/css/app/gallery.sass',
       './app/assets/css/app/story.sass',
@@ -111,6 +110,7 @@ gulp.task('final_css', function () {
 
   gulp
     .src('./docs/assets/css/**/*.min.css')
+    .pipe(cleanCss({ level: { 2: { restructureRules: true,mergeSemantically:true } } }))
     .pipe(purify(['./docs/assets/js/**/*.min.js', './docs/**/*.html']))
     .pipe(postcss(plugins))
     .pipe(minifyCSS())
@@ -231,7 +231,7 @@ gulp.task('extra', function () {
 
 gulp.task('html', function () {
   gulp
-    .src('./app/views/*.pug')
+    .src('./app/views/**/*.pug')
     .pipe(
       pug({
         pretty: true
