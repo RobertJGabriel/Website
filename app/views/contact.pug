@@ -30,20 +30,29 @@ block pageBody
           .col-sm-12.boxes
             p
               | Want to contact me about work? Would you like me to talk at an upcoming event? Sending me free stuff to show off (I love stickers!) or even just to chat? Send an email to robert_gabriel@outlook.com and I’ll get back to you.
-            ul.footer-icons
-              li
-                a.icon-mail(href='mailto:robert_gabriel@outlook.com', title='Email your free sticker')
-                  include ../../app/assets/svgs/solid/inbox.svg
-              li
-                a.icon-github(href='https://github.com/RobertJGabriel', title='Add me on Github')
-                  include ../../app/assets/svgs/brands/github.svg
-              li
-                a.icon-twitter(href='https://twitter.com/RobertJGabriel', title='Follow me on Twitter')
-                  include ../../app/assets/svgs/brands/twitter.svg
-              li
-                a.icon-linkedin(href='https://www.linkedin.com/in/robertjamesgabriel',  title='Add me on Linkedin')
-                  include ../../app/assets/svgs/brands/linkedin.svg
-              li
-                a.icon-patreon(href='https://www.patreon.com/robertjgabriel', title='Support my work on patreon')
-                  include ../../app/assets/svgs/brands/patreon.svg
+            form(action='https://api.foform.com/forms/64ac7305-d244-4d65-ae1e-65f790cb5fb9/submissionsUrlEncoded', method='post')
+
+              .form-group
+                .col-md-12
+                  input#inputEmail.form-control(type='text', placeholder='Subject',name='subject')
+
+              .form-group
+                .col-md-12
+                  input#inputEmail.form-control(type='text', placeholder='Name',name='name')
+
+              .form-group
+                .col-md-12
+                  input#inputEmail.form-control(type='email', placeholder='Email',name='email')
+
+              .form-group
+                .col-md-12
+                  textarea#textArea.form-control(rows='6', placeholder='Hey, do you know how much wood chuck if a wood chuck could chuck ?',name='message')
+
+              .form-group
+                .col-md-12
+                  button.btn.btn-indigo.submit
+                    | Send
+
       .col-sm-3.col-md-3.col-lg-3
+      script(src='https://script.foform.com/foform.js')
+
