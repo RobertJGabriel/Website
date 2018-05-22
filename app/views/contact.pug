@@ -4,29 +4,27 @@ append vars
     - var bodyClasses = ''
 
 block pageBody
+
   .container.baseheader
     .row
       .col-sm-3.col-md-3.col-lg-3
       .col-sm-6.col-md-6.col-lg-6.wrapper
         .row
+
+          img.me.img-responsive(src='./assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
+          h1.text-center
+            b Contact Me
+          h2.text-center
+            | Engineer working as a #[a(href="https://github.com/robertjgabriel/") Full-Time Open-Sourcer]
+
+        .row
           .col-sm-12.boxes
-            h2 Contact
+            h2 About Me
             p
-              |Want to contact me about work? Would you like me to talk at an upcoming event? Sending me free stuff to show off (I love stickers!) or even just to chat? Send an email to robert_gabriel@outlook.com and I’ll get back to you.
-
-            .form-group
-              .col-md-12
-                 ul
-                  li
-                    a(href="mailto:robert_gabriel@outlook.com") By Email
-
-                  li
-                    a(href="//twitter.com/robertjgabriel") By Twitter
-
-              .form-group
-                .col-md-12
-                  button.btn.btn-indigo.submit
-                    | Send
-
+              | Want to contact me about work? Would you like me to talk at an upcoming event? Sending me free stuff to show off (I love stickers!) or even just to chat? Send an email to robert_gabriel@outlook.com and I’ll get back to you.
+            ul
+              li
+                a(href="mailto:robert_gabriel@outlook.com") By Email
+              li
+                a(href="//twitter.com/robertjgabriel") By Twitter
       .col-sm-3.col-md-3.col-lg-3
-
