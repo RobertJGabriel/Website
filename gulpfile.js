@@ -110,7 +110,16 @@ gulp.task('final_css', function () {
 
   gulp
     .src('./docs/assets/css/**/*.min.css')
-    .pipe(cleanCss({ level: { 2: { restructureRules: true,mergeSemantically:true } } }))
+    .pipe(cleanCss({
+      level: {
+        2: {
+          all: true, // sets all values to `false,
+          removeUnusedAtRules: true, // controls unused at rule removing; defaults to false (available since 4.1.0)
+          restructureRules: true,
+          mergeSemantically: true,
+        }
+      }
+    }))
     .pipe(purify(['./docs/assets/js/**/*.min.js', './docs/**/*.html']))
     .pipe(postcss(plugins))
     .pipe(minifyCSS())
