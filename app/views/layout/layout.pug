@@ -86,8 +86,12 @@ html(lang="en",itemscope,itemtype="http://schema.org/MobileApplication")
       footer
         block pageFooter
           include footer
-          include loading
-
+          .c
+            include loading
+        style
+          .c{
+            display: none;
+          }
       //- Any modals you want to include
       //- Use `append modals` in your page's layout to add more for that page
       block modals
