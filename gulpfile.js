@@ -121,7 +121,6 @@ gulp.task('final_css', function () {
         }
       }
     }))
-    .pipe(postcss(plugins))
     .pipe(minifyCSS())
     .pipe(concat('styles.min.css'))
     .pipe(gulp.dest('./docs/assets/css/'));
