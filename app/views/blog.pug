@@ -13,12 +13,6 @@ append vars
 
 
 block pageBody
-
-  script(src='https://unpkg.com/vue@2.5.16/dist/vue.min.js')
-  script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
-
-  script(src='./assets/js/vue/blog.js')
-
   .container-fluid.baseheader#blog
     .row
       .col-sm-3.col-md-3.col-lg-3
@@ -44,4 +38,8 @@ block pageBody
 
       .col-sm-3.col-md-3.col-lg-3
 
+  script(src='https://unpkg.com/vue@2.5.16/dist/vue.min.js')
+  script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
+
+  script(src='./assets/js/vue/blog.js', defer)
 
