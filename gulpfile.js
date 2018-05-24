@@ -84,7 +84,8 @@ gulp.task('app_css', function () {
       './app/assets/css/app/menu.sass',
       './app/assets/css/app/gallery.sass',
       './app/assets/css/app/story.sass',
-      './app/assets/css/app/box.sass'
+      './app/assets/css/app/box.sass',
+      './app/assets/css/app/imac.sass'
     ])
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss('app.css'))
