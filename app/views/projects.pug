@@ -9,6 +9,15 @@ append vars
     - var develop = false
     - var currentPath = 'https://robertgabriel.ninja/apps'
 
+
+block headScript
+
+  script(src='https://unpkg.com/vue@2.5.16/dist/vue.min.js')
+  script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
+
+  script(src='./assets/js/vue/repos.js',defer)
+
+
 block pageBody
   .container-fluid.baseheader#repos
     .row
@@ -37,10 +46,4 @@ block pageBody
             a.btn.btn-flat.btn-warning(v-bind:href="repo.html_url", target="blank")  Read more
 
       .col-sm-3.col-md-3.col-lg-3
-
-
-  script(src='https://unpkg.com/vue@2.5.16/dist/vue.min.js')
-  script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
-
-  script(src='./assets/js/vue/repos.js',defer)
 
