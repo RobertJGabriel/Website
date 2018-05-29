@@ -5,62 +5,62 @@ var map = AmCharts.makeChart("chartdiv", {
   "theme": "light",
   "dataProvider": {
     "map": "worldLow",
-    "zoomLevel": 3.5,
+    "zoomLevel": 1.5,
     "zoomLongitude": -55,
     "zoomLatitude": 42,
     "lines": [{
       "id": "line1",
       "arc": -0.85,
       "alpha": 0.3,
-      "latitudes": [51.8969,30.2672,34.5037,40.7128,45.4642,40.4168,46.2276,42.7087],
-      "longitudes":  [8.4863, 97.7431, 93.0552, 74.0060,9.1900,3.7038,2.2137,19.3744]
+      "latitudes": [53.1424, 30.2672, 34.5037, 40.7128, 45.4642, 40.4168, 46.2276, 42.7087],
+      "longitudes": [-7.6921, -97.7431, -93.0552, -74.0060, -9.1900, -3.7038, -2.2137, -19.3744]
     }, {
       "id": "line2",
       "alpha": 0,
       "color": "#000000",
-      "latitudes": [51.8969,30.2672,34.5037,40.7128,45.4642,40.4168,46.2276,42.7087],
-      "longitudes": [8.4863, 97.7431, 93.0552, 74.0060,9.1900,3.7038,2.2137,19.3744]
+      "latitudes": [53.1424, 30.2672, 34.5037, 40.7128, 45.4642, 40.4168, 46.2276, 42.7087],
+      "longitudes": [-7.6921, -97.7431, -93.0552, -74.0060, -9.1900, -3.7038, -2.2137, -19.3744]
     }],
     "images": [{
         "svgPath": targetSVG,
         "title": "Ireland",
-        "latitude": 51.8969,
-        "longitude": 8.4863
+        "latitude": 53.1424,
+        "longitude": -7.6921
       }, {
         "svgPath": targetSVG,
         "title": "Austin",
         "latitude": 30.2672,
-        "longitude": 97.7431
+        "longitude": -97.7431
       }, {
         "svgPath": targetSVG,
         "title": "Hot Springs",
         "latitude": 34.5037,
-        "longitude": 93.0552
+        "longitude": -93.0552
       }, {
         "svgPath": targetSVG,
         "title": "New York",
         "latitude": 40.7128,
-        "longitude": 74.0060
+        "longitude": -74.0060
       }, {
         "svgPath": targetSVG,
         "title": "Milan",
         "latitude": 45.4642,
-        "longitude": 9.1900
+        "longitude": -9.1900
       }, {
         "svgPath": targetSVG,
         "title": "Madrid",
         "latitude": 40.4168,
-        "longitude": 3.7038
+        "longitude": -3.7038
       }, {
         "svgPath": targetSVG,
         "title": "Paris France",
         "latitude": 46.2276,
-        "longitude": 2.2137
+        "longitude": -2.2137
       }, {
         "svgPath": targetSVG,
         "title": "Montenegro",
         "latitude": 42.7087,
-        "longitude": 19.3744
+        "longitude": -19.3744
       },
       {
         "svgPath": planeSVG,
