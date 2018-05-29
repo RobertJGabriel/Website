@@ -200,6 +200,18 @@ gulp.task('webp_js', function () {
 })
 
 
+gulp.task('stripe_js', function () {
+  gulp
+    .src(['./app/assets/js/vendor/checkout.js'])
+    .on('error', function (err) {
+      gutil.log(gutil.colors.red(err.background_imagessage))
+    })
+    .pipe(concat('checkout.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./docs/assets/js/'))
+})
+
+
 gulp.task('fonts', function () {
   gulp.src('./app/assets/fonts/*').pipe(gulp.dest('./docs/assets/fonts/'))
 })
@@ -348,6 +360,7 @@ gulp.task('build', [
   'build-downloads',
   'vendor_js',
   'webp_js',
+  'stripe_js',
   'app_js',
   'app_css',
   'fonts',
