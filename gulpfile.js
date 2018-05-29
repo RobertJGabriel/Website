@@ -199,6 +199,7 @@ gulp.task('webp_js', function () {
     .pipe(gulp.dest('./docs/assets/js/'))
 })
 
+
 gulp.task('fonts', function () {
   gulp.src('./app/assets/fonts/*').pipe(gulp.dest('./docs/assets/fonts/'))
 })
