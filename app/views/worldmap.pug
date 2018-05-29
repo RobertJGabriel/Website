@@ -10,13 +10,11 @@ append vars
     - var currentPath = 'https://www.robertgabriel.ninja/worldmap'
 
 block headScript
-
-  <!-- Resources -->
-  script("https://www.amcharts.com/lib/3/ammap.js")
-  script("https://www.amcharts.com/lib/3/maps/js/worldLow.js")
-  script("https://www.amcharts.com/lib/3/plugins/export/export.min.js")
-  script("https://www.amcharts.com/lib/3/themes/light.js")
-  script("./assets/js/app/worldmap.js")
+  script(src="https://www.amcharts.com/lib/3/ammap.js")
+  script(src="https://www.amcharts.com/lib/3/maps/js/worldLow.js")
+  script(src="https://www.amcharts.com/lib/3/plugins/export/export.min.js")
+  script(src="https://www.amcharts.com/lib/3/themes/light.js")
+  script(src="./assets/js/vue/worldmap.js")
 block headStyles
   link(rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css")
   style.
