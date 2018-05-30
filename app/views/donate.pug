@@ -2,7 +2,7 @@
 extends layout/layout
 append vars
     - var bodyClasses = ''
-    - var metaTitle = 'Donate or Support my work | Robert James Gabriel'
+    - var metaTitle = 'Donate & Payments | Robert James Gabriel'
     - var metaDescription = 'Donate or Support my work.'
     - var metaKeywords = 'HTML, CSS, XML, JavaScript, Robert James Gabriel, award winning, php, experienced, Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer, golang, web design'
     - var pageUrl = 'https://www.robertgabriel.ninja/donate'
@@ -21,11 +21,12 @@ block pageBody
           h1.text-center
             b Donate/Payment
           h2.text-center
-            | Want to help me support my work on "OpenDyslexic For Chrome", my other other projects? or even new projects?
-            | Did I do work for you? You can pay me using the following below.
+            | Did I do work for you? You can pay me using the following below. Or even support my open source work.
         .row
           .col-sm-12.boxes
             h2 Pay using Stripe
+            p
+              | Stripe is a technology company. Its software allows individuals and businesses to receive payments over the Internet. Stripe provides the technical, fraud prevention, and banking infrastructure required to operate on-line payment systems.
             form(action="https://intense-plains-75758.herokuapp.com/donate?amount=500", method="post", id="stripe-donate")
               .form-group.label-placeholder
                 label.control-label(for='amount') Amount to Donate in Dollars/Euros
@@ -47,6 +48,8 @@ block pageBody
         .row
           .col-sm-12.boxes
             h2 Pay using Paypal
+            p
+              | PayPal Holdings, Inc. is an American company operating a worldwide online payments system that supports online money transfers and serves as an electronic alternative to traditional paper methods like checks and money orders.
             form(action="https://www.paypal.me/robertjgabriel", method="post")
               article
               a.btn.btn-flat.btn-warning(href='https://www.paypal.me/robertjgabriel') Paypal
@@ -55,6 +58,8 @@ block pageBody
         .row
           .col-sm-12.boxes
             h2 Support me though Patreon
+            p
+              | Patreon is a membership platform that provides business tools for creators to run a subscription content service, as well as ways for artists to build relationships and provide exclusive experiences to their subscribers, or "patrons."
             form(action="https://www.patreon.com/robertjgabriel", method="post")
               article
               a.btn.btn-flat.btn-warning(href='https://www.patreon.com/robertjgabriel') Patreon

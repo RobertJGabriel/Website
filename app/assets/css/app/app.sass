@@ -253,6 +253,31 @@ footer
         padding: 0
         text-align: center
 
+.margin-top
+  margin-top: 40px
+.black
+  color: #24292e !important
+  fill: #24292e !important
+  svg
+    color: #24292e !important
+    fill: #24292e !important
+.footer-icons-black
+  margin-top: 40px;
+  li
+    a,svg
+      fill: #24292e !important
+    svg:hover
+      color: #F44336 !important
+    a
+      svg
+        color: $grey
+        font-family: $font-stack
+        transition: color .5s ease
+        fill: #24292e !important
+        height: 25px
+        &:hover
+          color: #F44336 !important
+
 .footer-icons
   li
     float: left
@@ -266,7 +291,7 @@ footer
       transition: color .5s ease
       fill: #F2F1EF !important
       height: 25px
-      &:hover
+    svg:hover
         color: #F44336 !important
     svg
       color: $grey
@@ -274,7 +299,7 @@ footer
       transition: color .5s ease
       fill: #F2F1EF !important
       height: 25px
-      &:hover
+    svg:hover
         color: #F44336 !important
     a
       svg
