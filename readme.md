@@ -6,7 +6,7 @@
 
 ```js
     // Run dev mode
-    yarn deve
+    yarn dev
     // Push live
     yarn fuckit
     // Build and push live
