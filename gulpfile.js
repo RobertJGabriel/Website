@@ -8,31 +8,21 @@ const replace = require('gulp-replace')
 const uglify = require('gulp-uglify')
 const less = require('gulp-less')
 const gutil = require('gulp-util')
-const w3c = require('gulp-w3cjs')
 const minifyCSS = require('gulp-minify-css')
-const chalk = require('chalk')
-const logger = require('gulp-logger')
 const concat = require('gulp-concat')
 const sass = require('gulp-sass')
 const htmlmin = require('gulp-htmlmin')
-const babel = require('gulp-babel')
 const pug = require('gulp-pug')
-const rollup = require('gulp-rollup')
 const concatCss = require('gulp-concat-css')
-const coffee = require('gulp-coffee')
-const postcss = require('gulp-postcss');
-const uncss = require('postcss-uncss');
+const uncss = require('postcss-uncss')
 const imagemin = require('gulp-imagemin')
 const watch = require('gulp-watch')
 const csscomb = require('gulp-csscomb')
 const webp = require('gulp-webp')
 const browserSync = require('browser-sync').create()
-const critical = require('critical').stream
-const purify = require('gulp-purifycss')
 const runSequence = require('run-sequence').use(gulp)
-const jsonminify = require('gulp-jsonminify')
-const sitemap = require('gulp-sitemap')
-const cleanCss = require('gulp-clean-css');
+const cleanCss = require('gulp-clean-css')
+
 /**
  * @param  {} 'serve'
  * @param  {} ['app_css'
@@ -53,9 +43,8 @@ gulp.task('vendor_css', function () {
   gulp
     .src([
       './app/assets/css/vendor/bootstrap.css',
-      './app/assets/css/vendor/bootstrap-material-design.css',
+      './app/assets/css/vendor/bootstrap-material-design.css'
     ])
-
     .pipe(concatCss('vendor.css'))
     .pipe(
       minifyCSS({
@@ -71,8 +60,6 @@ gulp.task('vendor_css', function () {
 })
 
 gulp.task('app_css', function () {
-
-
   gulp
     .src([
       './app/assets/css/app/__variables.sass',
@@ -101,41 +88,42 @@ gulp.task('app_css', function () {
 })
 
 gulp.task('final_css', function () {
-
   var plugins = [
     uncss({
-      ignore: ['.open', '.sk-fading-circle', '.margin-right', '.hide', '.show', '.label', '.label-success', '.label-info', '.open', '.hide', '.show'],
+      ignore: [
+        '.open',
+        '.sk-fading-circle',
+        '.margin-right',
+        '.hide',
+        '.show',
+        '.label',
+        '.label-success',
+        '.label-info',
+        '.open',
+        '.hide',
+        '.show'
+      ],
       html: ['index.html', 'docs/**/*.html', 'https://www.robertgabriel.ninja']
-    }),
-  ];
+    })
+  ]
 
   gulp
     .src('./docs/assets/css/**/*.min.css')
-    .pipe(cleanCss({
-      level: {
-        2: {
-          all: true, // sets all values to `false,
-          removeUnusedAtRules: true, // controls unused at rule removing; defaults to false (available since 4.1.0)
-          restructureRules: true,
-          mergeSemantically: true,
+    .pipe(
+      cleanCss({
+        level: {
+          2: {
+            all: true, // sets all values to `false,
+            removeUnusedAtRules: true, // controls unused at rule removing; defaults to false (available since 4.1.0)
+            restructureRules: true,
+            mergeSemantically: true
+          }
         }
-      }
-    }))
+      })
+    )
     .pipe(minifyCSS())
     .pipe(concat('styles.min.css'))
-    .pipe(gulp.dest('./docs/assets/css/'));
-
-});
-
-gulp.task('app_sw', function () {
-  gulp
-    .src('./app/assets/js/app/serviceWorker.coffee')
-    .on('error', function (err) {
-      gutil.log(gutil.colors.red(err))
-    })
-    .pipe(coffee())
-    .pipe(concat('serviceWorker.js'))
-    .pipe(gulp.dest('./docs/'))
+    .pipe(gulp.dest('./docs/assets/css/'))
 })
 
 gulp.task('app_js', function () {
@@ -149,21 +137,6 @@ gulp.task('app_js', function () {
     .pipe(browserSync.stream())
 })
 
-gulp.task('sitemap', function () {
-  gulp
-    .src('/docs/**/*.html', {
-      read: false
-    })
-    .pipe(
-      sitemap({
-        siteUrl: 'https://www.robertgabriel.ninja'
-      })
-    )
-    .on('error', function (err) {
-      gutil.log(gutil.colors.red(err))
-    })
-    .pipe(gulp.dest('./dsocs/'))
-})
 
 gulp.task('app_js_vue', function () {
   gulp
@@ -177,9 +150,7 @@ gulp.task('app_js_vue', function () {
 
 gulp.task('vendor_js', function () {
   gulp
-    .src([
-      './app/assets/js/vendor/jquery.js'
-    ])
+    .src(['./app/assets/js/vendor/jquery.js'])
     .on('error', function (err) {
       gutil.log(gutil.colors.red(err.background_imagessage))
     })
@@ -199,7 +170,6 @@ gulp.task('webp_js', function () {
     .pipe(gulp.dest('./docs/assets/js/'))
 })
 
-
 gulp.task('stripe_js', function () {
   gulp
     .src(['./app/assets/js/vendor/checkout.js'])
@@ -212,13 +182,6 @@ gulp.task('stripe_js', function () {
 })
 
 
-gulp.task('fonts', function () {
-  gulp.src('./app/assets/fonts/*').pipe(gulp.dest('./docs/assets/fonts/'))
-})
-
-gulp.task('cname', function () {
-  gulp.src('./app/assets/CNAME').pipe(gulp.dest('./docs/'))
-})
 
 gulp.task('build-settings', function () {
   gulp.src('./app/assets/.nojekyll').pipe(gulp.dest('./docs/'))
@@ -236,17 +199,8 @@ gulp.task('apple-pay', function () {
     .pipe(gulp.dest('./docs/.well-known'))
 })
 
-gulp.task('json', function () {
-  gulp
-    .src('./app/assets/*.json')
-    .pipe(jsonminify())
-    .pipe(gulp.dest('./docs/'))
-})
-
 gulp.task('extra', function () {
-  gulp
-    .src('./app/assets/extra/*')
-    .pipe(gulp.dest('./docs/'))
+  gulp.src('./app/assets/extra/*').pipe(gulp.dest('./docs/'))
 })
 
 gulp.task('html', function () {
@@ -257,13 +211,8 @@ gulp.task('html', function () {
         pretty: true
       })
     )
-    //.pipe(critical({
-    //  base: 'docs/',
-    // inline: true,
-    // css: ['./docs/assets/css/app.min.css']
-    //}))
     .on('error', function (err) {
-      console.log(err.message);
+      console.log(err.message)
     })
     .pipe(gulp.dest('./docs'))
     .pipe(browserSync.stream())
@@ -306,7 +255,6 @@ const assets = ['docs/**/*.*']
 
 gulp.task('cache', () => {
   const assets = [
-    ...glob.sync('docs/assets/fonts/**/*.*'),
     ...glob.sync('docs/assets/css/**/*.*'),
     ...glob.sync('docs/*.html'),
     ...glob.sync('docs/*.js'),
@@ -367,14 +315,10 @@ gulp.task('build', [
   'final_css',
   'images',
   'images-png',
-  'cname',
   'app_js_vue',
-  'app_sw',
   'extra',
-  'json',
   'apple-pay',
-  'build-settings',
-  'sitemap'
+  'build-settings'
 ])
 
 gulp.task('default', ['clean', 'build'])

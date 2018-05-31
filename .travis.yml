@@ -4,8 +4,7 @@ node_js:
   - '7'
 
 before_install:
-- npm install -g npm --cache-min 999999999
-- npm install gulp -g
+- yarn install gulp -g
 
 deploy:
   provider: pages
@@ -18,6 +17,9 @@ deploy:
     branch: v1.8.47
   on:
     branch: master
-
+cache:
+  yarn: true
+  directories:
+    - node_modules
 script:
-- npm run start
+- yarn run start
