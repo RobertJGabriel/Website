@@ -170,21 +170,10 @@ gulp.task('webp_js', function () {
     .pipe(gulp.dest('./docs/assets/js/'))
 })
 
-gulp.task('stripe_js', function () {
-  gulp
-    .src(['./app/assets/js/vendor/checkout.js'])
-    .on('error', function (err) {
-      gutil.log(gutil.colors.red(err.background_imagessage))
-    })
-    .pipe(concat('checkout.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./docs/assets/js/'))
-})
-
 
 
 gulp.task('build-settings', function () {
-  gulp.src('./app/assets/.nojekyll').pipe(gulp.dest('./docs/'))
+  gulp.src('./core/.nojekyll').pipe(gulp.dest('./docs/'))
 })
 
 gulp.task('build-downloads', function () {
@@ -195,12 +184,12 @@ gulp.task('build-downloads', function () {
 
 gulp.task('apple-pay', function () {
   gulp
-    .src('./app/assets/apple-developer-merchantid-domain-association')
+    .src('./core/apple-developer-merchantid-domain-association')
     .pipe(gulp.dest('./docs/.well-known'))
 })
 
 gulp.task('extra', function () {
-  gulp.src('./app/assets/extra/*').pipe(gulp.dest('./docs/'))
+  gulp.src('./core/*').pipe(gulp.dest('./docs/'))
 })
 
 gulp.task('html', function () {
@@ -308,7 +297,6 @@ gulp.task('build', [
   'build-downloads',
   'vendor_js',
   'webp_js',
-  'stripe_js',
   'app_js',
   'app_css',
   'fonts',
