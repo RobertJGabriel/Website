@@ -1,4 +1,4 @@
-# robertgabriel.ninja website [![NPM version][npm-image]][npm-url] [![Build Status](https://travis-ci.org/RobertJGabriel/Website.svg?branch=master)](https://travis-ci.org/RobertJGabriel/Website)[travis-url]  <span class="badge-patreon"><a href="https://www.patreon.com/robertjgabriel" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+# robertgabriel.ninja website  [![Build Status](https://travis-ci.org/RobertJGabriel/Website.svg?branch=master)](https://travis-ci.org/RobertJGabriel/Website) <span class="badge-patreon"><a href="https://www.patreon.com/robertjgabriel" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
 > Personal pwa website for robertgabriel.ninja. Feel free to use the set. 98% in lighthouse
 
 
