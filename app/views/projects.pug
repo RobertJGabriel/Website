@@ -29,9 +29,9 @@ block pageBody
             b Latest Repos & Projects
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
-        .c(v-bind:class="{ hide: !loading}")
+        .c(v-bind:class="{ hide: loading == false}")
           include layout/loading
-        .row(v-for="repo in repos" v-bind:class="{ hide: loading}" v-cloak, )
+        .row(v-for="repo in repos" v-bind:class="{ hide: loading == true}" v-cloak, )
           .col-sm-12.boxes
             h2 {{repo.full_name}}
             span.label.label-success.margin-right(for="")

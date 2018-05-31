@@ -1,7 +1,7 @@
 extends layout/layout
 append vars
     - var bodyClasses = ''
-    - var metaTitle = 'Blog| Robert James Gabriel'
+    - var metaTitle = 'Blog | Robert James Gabriel'
     - var metaDescription = 'Talks and research by Robert James Gabriel. These include almost everything under the sun.'
     - var metaKeywords = 'HTML, CSS, XML, JavaScript, Robert James Gabriel, award winning, php, experienced, Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer, golang, web design'
     - var pageUrl = 'https://www.robertgabriel.ninja/blog'
@@ -29,9 +29,9 @@ block pageBody
             b Blog
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
-        .c(v-bind:class="{ hide: !loading}")
+        .c(v-bind:class="{ hide: loading == false }")
           include layout/loading
-        .row(v-for="posts in blogPosts", v-bind:class="{ hide: loading}" v-cloak)
+        .row(v-for="posts in blogPosts", v-bind:class="{ hide: loading == true}" v-cloak)
 
           .col-sm-12.boxes
             h2  {{posts.title}}
