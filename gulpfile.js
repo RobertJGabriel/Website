@@ -299,7 +299,6 @@ gulp.task('build', [
   'webp_js',
   'app_js',
   'app_css',
-  'fonts',
   'final_css',
   'images',
   'images-png',

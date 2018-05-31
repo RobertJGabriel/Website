@@ -4,10 +4,10 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp webp_js && gulp stripe_js && gulp app_js && gulp app_css && gulp fonts && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp apple-pay && gulp build-settings && gulp html && gulp cache  && http-server docs",
-    "start": " gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp webp_js && gulp stripe_js  && gulp app_js && gulp app_css && gulp fonts && gulp final_css && gulp images && gulp images-png && gulp app_js_vue  && gulp extra && gulp apple-pay && gulp build-settings && gulp html && gulp cache",
+    "dev": "gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp webp_js && gulp app_js && gulp app_css && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp apple-pay && gulp build-settings && gulp html && gulp cache  && http-server docs",
+    "start": " gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp webp_js  && gulp app_js && gulp app_css &&  gulp final_css && gulp images && gulp images-png && gulp app_js_vue  && gulp extra && gulp apple-pay && gulp build-settings && gulp html && gulp cache",
     "fuckit": "git add . && git commit -m 'new site update' && git push",
-    "publish": "gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp webp_js && gulp stripe_js  && gulp app_js && gulp app_css && gulp fonts && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp apple-pay && gulp build-settings && gulp html && git add . && git commit -m 'new site update' && git push"
+    "publish": "gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp webp_js  && gulp app_js && gulp app_css && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp apple-pay && gulp build-settings && gulp html && git add . && git commit -m 'new site update' && git push"
   },
   "repository": "git+https://github.com/RobertJGabriel/Website.git",
   "dependencies": {
