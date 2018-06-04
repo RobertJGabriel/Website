@@ -1,27 +1,27 @@
-const glob = require('glob')
-const del = require('del')
-const gulp = require('gulp')
-const hash = require('hash-files')
-const jsesc = require('jsesc')
-const rename = require('gulp-rename')
-const replace = require('gulp-replace')
-const uglify = require('gulp-uglify')
-const less = require('gulp-less')
-const gutil = require('gulp-util')
-const minifyCSS = require('gulp-minify-css')
-const concat = require('gulp-concat')
-const sass = require('gulp-sass')
-const htmlmin = require('gulp-htmlmin')
-const pug = require('gulp-pug')
-const concatCss = require('gulp-concat-css')
-const uncss = require('postcss-uncss')
-const imagemin = require('gulp-imagemin')
-const watch = require('gulp-watch')
-const csscomb = require('gulp-csscomb')
-const webp = require('gulp-webp')
-const browserSync = require('browser-sync').create()
-const runSequence = require('run-sequence').use(gulp)
-const cleanCss = require('gulp-clean-css')
+var glob = require('glob')
+var del = require('del')
+var gulp = require('gulp')
+var hash = require('hash-files')
+var jsesc = require('jsesc')
+var rename = require('gulp-rename')
+var replace = require('gulp-replace')
+var uglify = require('gulp-uglify')
+var less = require('gulp-less')
+var gutil = require('gulp-util')
+var minifyCSS = require('gulp-minify-css')
+var concat = require('gulp-concat')
+var sass = require('gulp-sass')
+var htmlmin = require('gulp-htmlmin')
+var pug = require('gulp-pug')
+var concatCss = require('gulp-concat-css')
+var uncss = require('postcss-uncss')
+var imagemin = require('gulp-imagemin')
+var watch = require('gulp-watch')
+var csscomb = require('gulp-csscomb')
+var webp = require('gulp-webp');
+var browserSync = require('browser-sync').create();
+var runSequence = require('run-sequence').use(gulp);
+var cleanCss = require('gulp-clean-css');
 
 /**
  * @param  {} 'serve'
@@ -224,7 +224,7 @@ gulp.task('clean', function () {
   })
 })
 
-const stringify = value => {
+var stringify = value => {
   return jsesc(value, {
     wrap: true,
     compact: false,
@@ -232,7 +232,7 @@ const stringify = value => {
   })
 }
 
-const shortHash = files => {
+var shortHash = files => {
   return hash
     .sync({
       files: files
@@ -240,10 +240,10 @@ const shortHash = files => {
     .slice(0, 8)
 }
 
-const assets = ['docs/**/*.*']
+var assets = ['docs/**/*.*']
 
 gulp.task('cache', () => {
-  const assets = [
+  var assets = [
     ...glob.sync('docs/assets/css/**/*.*'),
     ...glob.sync('docs/*.html'),
     ...glob.sync('docs/*.js'),
@@ -251,8 +251,8 @@ gulp.task('cache', () => {
     ...glob.sync('docs/assets/img/**/*.svg'),
     ...glob.sync('docs/assets/js/**/*.*')
   ]
-  const assetsHash = shortHash(assets)
-  const assetCacheList = [
+  var assetsHash = shortHash(assets)
+  var assetCacheList = [
     '/',
     ...assets
     // Remove all `images/icon-*` files except for the one used in
