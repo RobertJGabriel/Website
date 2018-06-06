@@ -1,0 +1,67 @@
+extends layout/layout
+
+append vars
+    - var bodyClasses = ''
+    - var metaTitle = 'Upgrade your site to HTTPS | Robert James Gabriel'
+    - var metaDescription = 'Contact me about talks. These include almost everything under the sun.'
+    - var metaKeywords = 'HTML, CSS, XML, JavaScript, Robert James Gabriel, award winning, php, experienced, Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer, golang, web design'
+    - var pageUrl = 'https://www.robertgabriel.ninja/https'
+    - var masterBinding = Math.floor(Math.random() * (15 - 1300) + 1300)
+    - var develop = false
+    - var currentPath = 'https://www.robertgabriel.ninja/https'
+
+
+
+block pageBody
+
+  .container.base-header
+    .row
+      .col-sm-3.col-md-3.col-lg-3
+      .col-sm-6.col-md-6.col-lg-6.wrapper
+        .row
+
+          img.me.img-responsive(src='./assets/img/me/me.webp', alt='Robert James Gabriel', width='130', height='130')
+          h1.text-center
+            b Warning!! Google Chrome HTTPS certificate apocalypse!
+          h2.text-center
+            | Google at the start of the year announced that come July 2018, Chrome will begin to explicitly warn users if a site is insecure.
+            a(target='_blank', href='https://medium.com/@RobertJGabriel/warning-google-chrome-https-certificate-apocalypse-86373083ba2') Learn why here.
+        .row
+          .col-sm-12.boxes
+            h2 Get in touch and fix your site before the July Deadline!
+            p
+              | For a one time payment of €50 to €75  (depending on the site). I will secure and update your site to https before the deadline. Ensuring your site isnt punished in seo rankings.
+            form(action='https://api.foform.com/forms/aedb267b-e9f4-44db-9b0b-302829d6d6ed/submissionsUrlEncoded', method='post')
+
+              .form-group
+                .col-md-12
+                  input#inputEmail.form-control(type='text', placeholder='Website URL',name='website')
+
+              .form-group
+                .col-md-12
+                  input#inputEmail.form-control(type='text', placeholder='Your Name',name='name')
+
+              .form-group
+                .col-md-12
+                  input#inputEmail.form-control(type='text', placeholder='Your Email',name='email')
+
+
+              .form-group
+                .col-md-12
+                  input#inputEmail.form-control(type='text', placeholder='Your Phone Number',name='phone')
+
+
+              .form-group
+                .col-md-12
+                  textarea#textArea.form-control(rows='6', placeholder='Any extra details, I should know?',name='message')
+
+              .form-group
+                .col-md-12
+                  button.btn.btn-indigo.submit
+                    | Send
+
+
+
+      .col-sm-3.col-md-3.col-lg-3
+      script(src='https://script.foform.com/foform.js')
+
