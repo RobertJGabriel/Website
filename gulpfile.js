@@ -39,6 +39,17 @@ gulp.task('serve', ['app_css', 'app_js'], function () {
   gulp.watch('./app/views/*.pug').on('change', browserSync.reload)
 })
 
+
+gulp.task('move_app_files', function () {
+  gulp
+    .src([
+      './app/views/apps/**/*.*',
+      '!./app/views/apps/**/*.pug'
+    ])
+    .pipe(gulp.dest('./docs/apps'))
+})
+
+
 gulp.task('vendor_css', function () {
   gulp
     .src([

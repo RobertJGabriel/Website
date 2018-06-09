@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    title Hidden Netflix categories
+    meta(charset='utf-8')
+    link(href='styles/vendor/bootstrap.min.css', rel='stylesheet')
+    link(href='styles/vendor/material.min.css', rel='stylesheet')
+    link(href='styles/styles.css', rel='stylesheet')
+  body
+    #app.container
+      .navbar.notWhite
+        .container-fluid
+          .navbar-header
+            b.bold-color Netflix
+            |  - Hidden Categories
+      .form-group.is-empty.notWhite.search
+        input#comment.form-control.col-md-8(type='text', placeholder="Search for Categories like 'Goofy Comedies starring Steve Martin'", v-model='title')
+      .alert.alert-dismissible.alert-warning(v-if='error == true')
+        p {{errorMessage}}
+      .row
+        .col-sm-12
+          .sk-fading-circle(v-if='loading == true')
+            .sk-circle1.sk-circle
+            .sk-circle2.sk-circle
+            .sk-circle3.sk-circle
+            .sk-circle4.sk-circle
+            .sk-circle5.sk-circle
+            .sk-circle6.sk-circle
+            .sk-circle7.sk-circle
+            .sk-circle8.sk-circle
+            .sk-circle9.sk-circle
+            .sk-circle10.sk-circle
+            .sk-circle11.sk-circle
+            .sk-circle12.sk-circle
+          table.table.no-border(v-if='loading == false')
+            tbody(v-cloak='', v-for='item in filteredResults')
+              template
+                tr
+                  td.ellipsis
+                    a(v-bind:href='item.url', target='_blank') {{item.value}}
+        .container.navbar-bottom.notWhite
+          .row
+            a.col-xs-6(href='https://www.netflix.com', target='_blank')
+              i.fa.fa-home(aria-hidden='true', title='Go home.')
+            a.col-xs-6(href='https://www.robertgabriel.ninja/donate', target='_blank')
+              i.fas.fa-donate(aria-hidden='true', title='Support my work')
+    script(src='scripts/vendor/vue.js', type='text/javascript')
+    script(src='scripts/vendor/vue-resouce.js', type='text/javascript')
+    script(src='scripts/vendor/fontawesome.js', type='text/javascript')
+    script(src='scripts/app.js', type='text/javascript')
