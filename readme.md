@@ -11,7 +11,7 @@
     yarn fuckit
     // Build and push live
     yarn publish
-``` 
+```
 
 ## License
 
