@@ -22,6 +22,7 @@
     "jquery": "^3.2.1",
     "jsesc": "^2.5.1",
     "postcss-uncss": "^0.16.1",
+    "standard": "^11.0.1",
     "uncss": "^0.16.2"
   },
   "devDependencies": {

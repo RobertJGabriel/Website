@@ -6,21 +6,16 @@ var jsesc = require('jsesc')
 var rename = require('gulp-rename')
 var replace = require('gulp-replace')
 var uglify = require('gulp-uglify')
-var less = require('gulp-less')
 var gutil = require('gulp-util')
 var minifyCSS = require('gulp-minify-css')
 var concat = require('gulp-concat')
 var sass = require('gulp-sass')
-var htmlmin = require('gulp-htmlmin')
 var pug = require('gulp-pug')
 var concatCss = require('gulp-concat-css')
 var uncss = require('postcss-uncss')
-var imagemin = require('gulp-imagemin')
-var watch = require('gulp-watch')
 var csscomb = require('gulp-csscomb')
 var webp = require('gulp-webp');
 var browserSync = require('browser-sync').create();
-var runSequence = require('run-sequence').use(gulp);
 var cleanCss = require('gulp-clean-css');
 
 /**
