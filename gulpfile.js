@@ -203,6 +203,7 @@ gulp.task('html', function () {
     .src('./app/views/**/*.pug')
     .pipe(
       pug({
+        basedir: __dirname,
         pretty: true
       })
     )
