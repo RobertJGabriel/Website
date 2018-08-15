@@ -1,7 +1,7 @@
 var repos = new Vue({
   el: '#repos',
   data: {
-    loading:true,
+    loading: true,
     repos: []
   },
   created: function () {
