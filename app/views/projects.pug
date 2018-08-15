@@ -33,14 +33,14 @@ block pageBody
           include /__layout/loading
         .row
           .col-sm-12.boxes(v-for="repo in repos" v-bind:class="{ hide: loading == true}" v-cloak )
-            h2 {{repo.full_name}}
-            span.label.label-success.margin-right(for="")
+            h2.common-IntroText {{repo.full_name}}
+            span.label.label-success.margin-right.labels-yellow(for="")
               | {{repo.language}}
-            span.label.label-success.margin-right(for="")
+            span.label.label-success.margin-right.labels-yellow(for="")
               | Forks: {{repo.forks}}
-            span.label.label-success.margin-right(for="")
+            span.label.label-success.margin-right.labels-yellow(for="")
               | Stars: {{repo.stargazers_count}}
-            p
+            p.common-BodyText
               | {{repo.description}}
 
             a.btn.btn-flat.btn-warning(v-bind:href="repo.html_url", target="blank")  Read more
