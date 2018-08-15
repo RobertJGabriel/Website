@@ -135,8 +135,8 @@ gulp.task('final_css', function () {
 gulp.task('app_js', function () {
   gulp
     .src([
-      '!./app/assets/js/app/sw.js',
-      './app/assets/js/app/*.js'
+
+      './app/assets/js/app/app.js'
     ])
     .on('error', function (err) {
       gutil.log(gutil.colors.red(err))
