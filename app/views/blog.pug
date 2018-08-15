@@ -1,4 +1,4 @@
-extends /layout/layout
+extends /__layout/layout
 append vars
     - var bodyClasses = ''
     - var metaTitle = 'Blog | Robert James Gabriel'
@@ -30,7 +30,7 @@ block pageBody
           h2.text-center
             | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
         .c(v-bind:class="{ hide: loading == false }")
-          include /layout/loading
+          include /__layout/loading
         .row(v-for="posts in blogPosts", v-bind:class="{ hide: loading == true}" v-cloak)
 
           .col-sm-12.boxes
