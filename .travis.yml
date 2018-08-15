@@ -5,6 +5,7 @@ node_js:
 
 before_install:
 - yarn global add gulp
+- yarn install
 
 deploy:
   provider: pages
@@ -13,13 +14,13 @@ deploy:
   keep-history: true
   local-dir: ./docs
   fqdn: 'https://www.robertgabriel.ninja'
-  edge:
-    branch: v1.8.47
   on:
     branch: master
+
 cache:
   yarn: true
   directories:
     - node_modules
+
 script:
 - yarn run start
