@@ -32,7 +32,7 @@ block pageBody
         .c(v-bind:class="{ hide: loading == false}")
           include /__layout/loading
         .row
-          .col-sm-4.boxes(v-for="repo in repos" v-bind:class="{ hide: loading == true}" v-cloak )
+          .col-sm-12.boxes(v-for="repo in repos" v-bind:class="{ hide: loading == true}" v-cloak )
             h2 {{repo.full_name}}
             span.label.label-success.margin-right(for="")
               | {{repo.language}}
