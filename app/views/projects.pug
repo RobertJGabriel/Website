@@ -35,9 +35,13 @@ block pageBody
           .col-sm-12.boxes(v-for="repo in repos" v-bind:class="{ hide: loading == true}" v-cloak )
             h2.common-IntroText {{repo.full_name}}
             p.common-BodyText
+              b
+                | Description
               | {{repo.description}}
 
             p
+              b
+                | Extra
               span.label.label-success.margin-right.labels-yellow(for="")
                 | {{repo.language}}
               span.label.label-success.margin-right.labels-yellow(for="")
@@ -45,7 +49,7 @@ block pageBody
               span.label.label-success.margin-right.labels-yellow(for="")
                 | Stars: {{repo.stargazers_count}}
             p
-              a.btn.btn-flat.btn-warning(v-bind:href="repo.html_url", target="blank")  Read more
+              a.btn.btn-flat.btn-warning(v-bind:href="repo.html_url", target="blank")  View on Github
 
       .col-sm-3.col-md-3.col-lg-3
 
