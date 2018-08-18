@@ -35,12 +35,13 @@ block pageBody
       .col-sm-12.col-md-12.col-lg-12.wrapper
         .c(v-bind:class="{ hide: loading == false }")
           include /__layout/loading
-        .row(v-for="posts in blogPosts", v-bind:class="{ hide: loading == true}" v-cloak)
-          .col-sm-12.boxes
-            h2  {{posts.title}}
-            span.label.label-info.margin-right(for="")
-              | {{posts.pubDate}}
-            span.label.label-success.margin-right(for="")
-              | {{posts.author}}
-            p(v-html='posts.description')
-            a.btn.btn-flat.btn-warning(v-bind:href="posts.link", target="blank") Read
+        .row
+          .col-sm-4(v-for="posts in blogPosts", v-bind:class="{ hide: loading == true}" v-cloak)
+            .boxes
+              h2  {{posts.title}}
+              span.label.label-info.margin-right(for="")
+                | {{posts.pubDate}}
+              span.label.label-success.margin-right(for="")
+                | {{posts.author}}
+              p(v-html='posts.description')
+              a.btn.btn-flat.btn-warning(v-bind:href="posts.link", target="blank") Read
