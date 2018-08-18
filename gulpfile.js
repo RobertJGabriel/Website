@@ -136,7 +136,7 @@ gulp.task('app_js', function () {
   gulp
     .src([
 
-      './app/assets/js/app/vue/nav.js'
+      './app/assets/js/app/vue/navigation.js'
     ])
     .on('error', function (err) {
       gutil.log(gutil.colors.red(err))
