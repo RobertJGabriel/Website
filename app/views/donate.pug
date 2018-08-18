@@ -23,51 +23,53 @@ block pageBody
           h2.text-center
             | Support my open source work or use one of my apps.
             | Check out the benefits on my patreon plus you will get added to the supporters page.
-
-        .row
-          .col-sm-12.boxes
-            h2 Pay using Paypal
-            p
-              | PayPal Holdings, Inc. is an American company operating a worldwide online payments system that supports online money transfers and serves as an electronic alternative to traditional paper methods like checks and money orders.
-            form(action="https://www.paypal.me/robertjgabriel", method="post")
-              article
-              a.btn.btn-flat.btn-warning(href='https://www.paypal.me/robertjgabriel') Paypal
-
-
-        .row
-          .col-sm-12.boxes
-            h2 Support me though Patreon
-            p
-              | Patreon is a membership platform that provides business tools for creators to run a subscription content service, as well as ways for artists to build relationships and provide exclusive experiences to their subscribers, or "patrons."
-            form(action="https://www.patreon.com/robertjgabriel", method="post")
-              article
-              a.btn.btn-flat.btn-warning(href='https://www.patreon.com/robertjgabriel') Patreon
-
-        .row
-          .col-sm-12.boxes
-            h2 Pay using Stripe
-            p
-              | Stripe is a technology company. Its software allows individuals and businesses to receive payments over the Internet. Stripe provides the technical, fraud prevention, and banking infrastructure required to operate on-line payment systems.
-            form(action="https://intense-plains-75758.herokuapp.com/donate?amount=500", method="post", id="stripe-donate")
-              .form-group.label-placeholder
-                label.control-label(for='amount') Amount to Donate in Dollars/Euros
-                input.form-control(id="amount" type="number",placeholder="1 = 1 dollar/euro")
-                span.help-block
-                  | Remember this is in $/€
-                  code span.help-block.hint
-
-              script(
-                src="https://checkout.stripe.com/v2/checkout.js",
-                data-name="Robert James Gabriel",
-                data-image="./assets/img/me/me-4.webp"
-                class="stripe-button",
-                data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
-                data-locale="auto",
-                data-description="Donate"
-                )
-
-
       .col-sm-3.col-md-3.col-lg-3
+      .col-sm-12.col-md-12.col-lg-12.wrapper
+        .row
+          .col-sm-4
+            .boxes
+              h2 Pay using Paypal
+              p
+                | PayPal Holdings, Inc. is an American company operating a worldwide online payments system that supports online money transfers and serves as an electronic alternative to traditional paper methods like checks and money orders.
+              form(action="https://www.paypal.me/robertjgabriel", method="post")
+                article
+                a.btn.btn-flat.btn-warning(href='https://www.paypal.me/robertjgabriel') Paypal
+
+          .col-sm-4
+            .boxes
+              h2 Support me though Patreon
+              p
+                | Patreon is a membership platform that provides business tools for creators to run a subscription content service, as well as ways for artists to build relationships and provide exclusive experiences to their subscribers, or "patrons."
+              form(action="https://www.patreon.com/robertjgabriel", method="post")
+                article
+                a.btn.btn-flat.btn-warning(href='https://www.patreon.com/robertjgabriel') Patreon
+
+
+          .col-sm-4
+            .boxes
+              h2 Pay using Stripe
+              p
+                | Stripe is a technology company. Its software allows individuals and businesses to receive payments over the Internet. Stripe provides the technical, fraud prevention, and banking infrastructure required to operate on-line payment systems.
+              form(action="https://intense-plains-75758.herokuapp.com/donate?amount=500", method="post", id="stripe-donate")
+                .form-group.label-placeholder
+                  label.control-label(for='amount') Amount to Donate in Dollars/Euros
+                  input.form-control(id="amount" type="number",placeholder="1 = 1 dollar/euro")
+                  span.help-block
+                    | Remember this is in $/€
+                    code span.help-block.hint
+
+                script(
+                  src="https://checkout.stripe.com/v2/checkout.js",
+                  data-name="Robert James Gabriel",
+                  data-image="./assets/img/me/me-4.webp"
+                  class="stripe-button",
+                  data-key='pk_live_4Uw6QOYu7lXV9N6XhFGYRjPf',
+                  data-locale="auto",
+                  data-description="Donate"
+                  )
+
+
+
 
   script.
     document.getElementById("amount").onchange = function() {myFunction()};
