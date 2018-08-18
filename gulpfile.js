@@ -67,19 +67,7 @@ gulp.task('vendor_css', function () {
 
 gulp.task('app_css', function () {
   gulp
-    .src([
-      './app/assets/css/app/__variables.sass',
-      './app/assets/css/app/reset.sass',
-      './app/assets/css/app/loading.sass',
-      './app/assets/css/app/button.sass',
-      './app/assets/css/app/app.sass',
-      './app/assets/css/app/layout.sass',
-      './app/assets/css/app/menu.sass',
-      './app/assets/css/app/gallery.sass',
-      './app/assets/css/app/story.sass',
-      './app/assets/css/app/box.sass',
-      './app/assets/css/app/imac.sass'
-    ])
+    .src('./app/assets/css/app/styles.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss('app.css'))
     .pipe(csscomb())

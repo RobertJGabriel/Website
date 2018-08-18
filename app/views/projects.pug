@@ -26,31 +26,35 @@ block pageBody
         .row
           img.me.img-responsive(src='./assets/img/me/me-4.webp', alt='Robert James Gabriel', width='150', height='150')
           h1.text-center
-            b Latest Repos & Projects
+            b Latest Repos, Projects & Ideas
           h2.text-center
-            | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
-        .c(v-bind:class="{ hide: loading == false}")
-          include /__layout/loading
-        .row
-          .col-sm-12.boxes(v-for="repo in repos" v-bind:class="{ hide: loading == true}" v-cloak )
-            h2.common-IntroText {{repo.full_name}}
-            p
-              b
-                | Description
-            p.common-BodyText
-              | {{repo.description}}
-            p
-              b
-                | Extra
-            p
-              span.label.label-success.margin-right.labels-yellow(for="")
-                | {{repo.language}}
-              span.label.label-success.margin-right.labels-yellow(for="")
-                | Forks: {{repo.forks}}
-              span.label.label-success.margin-right.labels-yellow(for="")
-                | Stars: {{repo.stargazers_count}}
-            p.margin-top
-              a.btn.btn-flat.btn-warning(v-bind:href="repo.html_url", target="blank")  View on Github
+            | On #[a(href='https://github.com/robertjgabriel')  Github]
 
       .col-sm-3.col-md-3.col-lg-3
 
+
+
+      .col-sm-12.col-md-12.col-lg-12.wrapper
+        .c(v-bind:class="{ hide: loading == false}")
+          include /__layout/loading
+        .row
+          .col-sm-4(v-for="repo in repos" v-bind:class="{ hide: loading == true}" v-cloak )
+            .boxes
+              h2.common-IntroText {{repo.full_name}}
+              p
+                b
+                  | Description
+              p.common-BodyText
+                | {{repo.description}}
+              p
+                b
+                  | Extra
+              p
+                span.label.label-success.margin-right.labels-yellow(for="")
+                  | {{repo.language}}
+                span.label.label-success.margin-right.labels-yellow(for="")
+                  | Forks: {{repo.forks}}
+                span.label.label-success.margin-right.labels-yellow(for="")
+                  | Stars: {{repo.stargazers_count}}
+              p.margin-top
+                a.btn.btn-flat.btn-warning(v-bind:href="repo.html_url", target="blank")  View on Github
