@@ -136,7 +136,7 @@ gulp.task('app_js', function () {
   gulp
     .src([
 
-      './app/assets/js/app/app.js'
+      './app/assets/js/app/vue/nav.js'
     ])
     .on('error', function (err) {
       gutil.log(gutil.colors.red(err))
@@ -159,7 +159,7 @@ gulp.task('app_js_vue', function () {
 
 gulp.task('vendor_js', function () {
   gulp
-    .src(['./app/assets/js/vendor/jquery.js'])
+    .src(['./app/assets/js/vendor/vue.js'])
     .on('error', function (err) {
       gutil.log(gutil.colors.red(err.background_imagessage))
     })

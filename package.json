@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp vendor_css && gulp build-downloads && gulp move_app_files && gulp vendor_js && gulp webp_js && gulp app_js && gulp app_css && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp apple-pay && gulp build-settings && gulp html && gulp cache  && http-server docs",
+    "server": "http-server docs",
     "start": " gulp vendor_css && gulp build-downloads && gulp move_app_files && gulp vendor_js && gulp webp_js  && gulp app_js && gulp app_css &&  gulp final_css && gulp images && gulp images-png && gulp app_js_vue  && gulp extra && gulp apple-pay && gulp build-settings && gulp html && gulp cache",
     "fuckit": "git add . && git commit -m 'new site update' && git push",
     "publish": "gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp move_app_files && gulp webp_js  && gulp app_js && gulp app_css && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp apple-pay && gulp build-settings && gulp html && git add . && git commit -m 'new site update' && git push"
@@ -13,7 +14,6 @@
   "dependencies": {
     "del": "^3.0.0",
     "gulp-clean-css": "^3.9.4",
-    "gulp-concat": "^2.6.1",
     "gulp-pug": "^4.0.1",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.1",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
     "gulp-csscomb": "^3.0.8",
     "gulp-htmlmin": "^4.0.0",

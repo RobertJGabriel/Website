@@ -1,5 +1,5 @@
 div.nav.navbar-nav.navbar-right(style='width:100%;')
-  ul.menu-bar.slideLeft
+  ul.menu-bar.slideLeft(v-bind:class="{ open: isOpen}")
     li
       a(href='/work') Work
     li
