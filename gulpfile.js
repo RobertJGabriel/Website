@@ -182,7 +182,7 @@ gulp.task('webp_js', function () {
 
 
 gulp.task('build-settings', function () {
-  gulp.src('./core/.nojekyll').pipe(gulp.dest('./docs/'))
+  gulp.src('./__core/.nojekyll').pipe(gulp.dest('./docs/'))
 })
 
 gulp.task('build-downloads', function () {
@@ -193,12 +193,12 @@ gulp.task('build-downloads', function () {
 
 gulp.task('apple-pay', function () {
   gulp
-    .src('./core/apple-developer-merchantid-domain-association')
+    .src('./__core/apple-developer-merchantid-domain-association')
     .pipe(gulp.dest('./docs/.well-known'))
 })
 
 gulp.task('extra', function () {
-  gulp.src('./core/*').pipe(gulp.dest('./docs/'))
+  gulp.src('./__core/*').pipe(gulp.dest('./docs/'))
 })
 
 gulp.task('html', function () {
@@ -275,7 +275,7 @@ gulp.task('cache', () => {
   ]
 
   gulp
-    .src('./core/sw.js')
+    .src('./__core/sw.js')
     .pipe(replace('%HASH%', stringify(assetsHash)))
     .pipe(replace('%CACHE_LIST%', stringify(assetCacheList)))
     .pipe(
