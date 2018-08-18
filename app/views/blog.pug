@@ -28,11 +28,14 @@ block pageBody
           h1.text-center
             b Blog
           h2.text-center
-            | By #[a(href='https://github.com/robertjgabriel') @RobertJGabriel]
+            | Thoughts, Ideas & rants by #[a(href='https://medium.com/@RobertJGabriel/') @RobertJGabriel]
+
+      .col-sm-3.col-md-3.col-lg-3
+
+      .col-sm-12.col-md-12.col-lg-12.wrapper
         .c(v-bind:class="{ hide: loading == false }")
           include /__layout/loading
         .row(v-for="posts in blogPosts", v-bind:class="{ hide: loading == true}" v-cloak)
-
           .col-sm-12.boxes
             h2  {{posts.title}}
             span.label.label-info.margin-right(for="")
@@ -41,6 +44,3 @@ block pageBody
               | {{posts.author}}
             p(v-html='posts.description')
             a.btn.btn-flat.btn-warning(v-bind:href="posts.link", target="blank") Read
-
-      .col-sm-3.col-md-3.col-lg-3
-
