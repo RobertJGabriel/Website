@@ -2,7 +2,7 @@ extends /__layout/layout
 append vars
     - var bodyClasses = ''
     - var metaTitle = 'Apps & Software | Robert James Gabriel'
-    - var metaDescription = 'Apps and software made by Robert James Gabriel'
+    - var metaDescription = 'Popular apps, chrome extensions and software made by software engineer Robert James Gabriel. Modules, Chrome/Firefox extensions and more.'
     - var metaKeywords = 'HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design'
     - var pageUrl = 'https://www.robertgabriel.ninja/apps/'
     - var masterBinding = Math.floor(Math.random() * (15 - 1300) + 1300)
@@ -19,7 +19,7 @@ block pageBody
           h1.text-center
             b Apps
           h2.text-center
-            | Created by myself with ☕ and 🍺
+            | Created by myself with coffee and beer.
       .col-sm-3.col-md-3.col-lg-3
 
       .col-sm-12.col-md-12.col-lg-12.wrapper
@@ -55,11 +55,10 @@ block pageBody
           .col-sm-4
             .boxes
               img.img-responsive(src='/assets/img/screenshots/editor.webp',alt='Markdown editor screenshot')
-              h2 Markdown Editor For OSX and Chrome/Firefox
+              h2 Markdown Editor for Firefox
               p
                 | Annoyed writing markdown? Find it awkward to write it on Github, twitch or your code editor?
                 | Markdown editor premium allows you to write markdown without leaving your browser. Supporting all popular coding languages.
-              a.btn.btn-flat.color-white(href="https://www.robertgabriel.ninja/apps/markdown-editor", target="blank")  Try it Now
               a.btn.btn-flat.color-white(href="https://addons.mozilla.org/en-US/firefox/addon/markdown-editor-premium/", target="blank")  Firefox
 
           .col-sm-4
@@ -81,3 +80,14 @@ block pageBody
                 | Over 5000 categories.
               a.btn.btn-flat.color-white(href="https://addons.mozilla.org/en-US/firefox/addon/hidden-netflix-categories/", target="blank")  Firefox
               a.btn.btn-flat.color-white(href="https://chrome.google.com/webstore/detail/netflix-hidden-categories/pajmfnmlmcknmehpcklomlblpdcpdmgg?utm_source=chrome-ntp-icon", target="blank")  Google Chrome
+
+        .row
+
+          .col-sm-4
+            .boxes
+              img.img-responsive(src='/assets/img/screenshots/editor.webp',alt='Markdown editor screenshot')
+              h2 Markdown Editor for Chrome
+              p
+                | Annoyed writing markdown? Find it awkward to write it on Github, twitch or your code editor?
+                | Markdown editor premium allows you to write markdown without leaving your browser. Supporting all popular coding languages.
+              a.btn.btn-flat.color-white(href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk", target="blank")  Chrome
