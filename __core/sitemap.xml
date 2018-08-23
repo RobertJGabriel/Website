@@ -1,127 +1,142 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!--
- created with Free Online Sitemap Generator www.xml-sitemaps.com
--->
-  <url>
-    <loc>https://www.robertgabriel.ninja/</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-   <url>
-    <loc>https://www.robertgabriel.ninja/sitemap</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://www.robertgabriel.ninja/work</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://www.robertgabriel.ninja/apps/</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-  <url>
-    <loc>https://www.robertgabriel.ninja/css/imac</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://www.robertgabriel.ninja/worldmap</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+<url>
+  <loc>https://www.robertgabriel.ninja/</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
 
 
-  <url>
-    <loc>https://www.robertgabriel.ninja/apps/markdown-editor</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://www.robertgabriel.ninja/apps/can-i-use</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.robertgabriel.ninja/projects</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.robertgabriel.ninja/blog</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.robertgabriel.ninja/awards</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.robertgabriel.ninja/donate</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://www.robertgabriel.ninja/bag</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+<url>
+  <loc>https://www.robertgabriel.ninja/license/helperbird</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
 
 
+<url>
+  <loc>https://www.robertgabriel.ninja/license/markdown</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/work</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/projects</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/apps/</loc>
+  <lastmod>2018-08-23T21:22:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/blog</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/awards</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/assets/downloads/resume.pdf</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/contact</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/donate</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/sitemap</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/research-into-web-accessibility-for-dyslexics-and-Dyslexia-focused-fonts-such-asopendyslexia</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/adblockers</loc>
+  <lastmod>2018-08-23T21:22:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/apps/can-i-use</loc>
+  <lastmod>2018-08-23T21:22:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/talks</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/thankyou</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/404</loc>
+  <lastmod>2018-08-23T21:22:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/lighthouse</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/css/imac</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/worldmap</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/bag</loc>
+  <lastmod>2018-08-23T21:22:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/apps/markdown-editor</loc>
+  <lastmod>2018-08-23T21:22:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.robertgabriel.ninja/apps/netflix</loc>
+  <lastmod>2018-08-23T21:22:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
-  <url>
-    <loc>
-      https://www.robertgabriel.ninja/assets/downloads/resume.pdf
-    </loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.robertgabriel.ninja/contact</loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>
-      https://www.robertgabriel.ninja/research-into-web-accessibility-for-dyslexics-and-Dyslexia-focused-fonts-such-asopendyslexia
-    </loc>
-    <lastmod>2018-06-05T00:50:31+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
+<url>
+  <loc>https://www.robertgabriel.ninja/apps/sync-snip</loc>
+  <lastmod>2018-08-23T21:22:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
 
-  <url>
-    <loc>https://www.robertgabriel.ninja/lighthouse</loc>
-    <lastmod>2018-06-05T00:50:30+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://www.robertgabriel.ninja/talks</loc>
-    <lastmod>2018-06-05T00:50:30+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://www.robertgabriel.ninja/https</loc>
-    <lastmod>2018-06-05T00:50:30+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://www.robertgabriel.ninja/adblockers</loc>
-    <lastmod>2018-06-05T00:50:30+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-    <url>
-    <loc>https://www.robertgabriel.ninja/sitemap</loc>
-    <lastmod>2018-06-05T00:50:30+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
+
 </urlset>
