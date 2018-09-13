@@ -34,11 +34,22 @@ block pageBody
             p
               | Check out my apps, my github repo for my level of skill. Also, this website is 100% lighthouse rating.
 
-            form(action='https://api.foform.com/forms/64ac7305-d244-4d65-ae1e-65f790cb5fb9/submissionsUrlEncoded', method='post')
+            form(action='https://formspree.io/robert_gabriel@outlook.com', method='post')
 
               .form-group
                 .col-md-12
                   input.form-control(type='text', placeholder='Subject',name='subject')
+
+
+              .form-group
+                .col-md-12
+                  select.form-control(type='text',name='app')
+                    option(value='Other') Other
+                    option(value='Markdown Editor') Markdown Editor
+                    option(value='Open Dyslexic') Open Dyslexic
+                    option(value='Helperbird') Helperbird
+                    option(value='Netflix App') Netflix
+
 
               .form-group
                 .col-md-12
@@ -87,5 +98,3 @@ block pageBody
 
 
       .col-sm-3.col-md-3.col-lg-3
-      script(src='https://script.foform.com/foform.js')
-
