@@ -13,7 +13,6 @@ var sass = require('gulp-sass')
 var pug = require('gulp-pug')
 var concatCss = require('gulp-concat-css')
 var uncss = require('postcss-uncss')
-var csscomb = require('gulp-csscomb')
 var webp = require('gulp-webp');
 var browserSync = require('browser-sync').create();
 var cleanCss = require('gulp-clean-css');
@@ -42,7 +41,7 @@ gulp.task('move_app_files', function () {
       '!./app/views/apps/**/*.pug'
     ])
     .pipe(gulp.dest('./docs/apps'))
-})
+});
 
 
 gulp.task('vendor_css', function () {
@@ -63,14 +62,13 @@ gulp.task('vendor_css', function () {
       })
     )
     .pipe(gulp.dest('./docs/assets/css'))
-})
+});
 
 gulp.task('app_css', function () {
   gulp
     .src('./app/assets/css/app/styles.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss('app.css'))
-    .pipe(csscomb())
     .pipe(minifyCSS())
     .pipe(
       rename({
@@ -79,7 +77,7 @@ gulp.task('app_css', function () {
     )
     .pipe(gulp.dest('./docs/assets/css'))
     .pipe(browserSync.stream())
-})
+});
 
 gulp.task('final_css', function () {
   var plugins = [
