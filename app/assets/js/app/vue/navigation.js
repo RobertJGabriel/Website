@@ -27,7 +27,6 @@ var repos = new Vue({
         },
         outside: function (e) {
             this.isOpen = false;
-            console.log('clicked outside!')
         },
     },
     directives: {
