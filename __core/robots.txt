@@ -34,4 +34,5 @@ Disallow:
 User-agent: *
 Disallow:
 Disallow: /.well-known/
+Disallow: /cailin
 Sitemap: https://www.robertgabriel.ninja/sitemap.xml
