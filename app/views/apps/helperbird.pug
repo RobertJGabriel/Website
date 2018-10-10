@@ -10,8 +10,10 @@ html
     link(rel='stylesheet', href='https://www.launchaco.com/static/AllTemplates.min.css')
     link(rel="canonical" href="https://www.robertgabriel.ninja/apps/helperbird")
   body.font-neutral
-    .yellow-accent
-      // 
+    .yellow-accent.background
+      .bg
+        .bg-image(style='background-image: url("https://cdn.launchaco.com/images/b9e078bf-b0d8-44c5-81de-87fcdfdce1d2.png");')
+        // 
       header.header
         .container-lrg
           .flex.col-12.spread
@@ -29,7 +31,7 @@ html
       section.section
         .container.mb40
           .col-12.text-center
-            h1.heading.primary-color.launchaco-builder-hoverable Helperbird OpenDyslexic Font
+            h1.heading.primary-color.launchaco-builder-hoverable A little App to help with Dyslexia
             h2.subheading.secondary-color.mt20.launchaco-builder-hoverable
               | Helperbird is an extension that overrides all fonts on the webpage with the award-winning OpenDyslexic font and changes the page to be more easily read. You can switch it on and off at any time. Helping people with dyslexia. You can now change
               | the size of the font!.
@@ -47,87 +49,52 @@ html
               .youtube-responsive
               iframe.youtube-video(src='https://www.youtube.com/embed/DBjeJb07c8I?&theme=dark&color=white&autohide=1&modestbranding=1&showinfo=0&rel=0', frameborder='0')
     section#checklist-1.section.yellow-black(sitemeta='[object Object]', activepage='Landing')
-      .container-lrg.flex
-        .col-6.flex.flex-column.center-vertical
+      .container.text-center.mb75
+        .col-12
           h3.heading.primary-color.launchaco-builder-hoverable Features
           p.subheading.secondary-color.mt20.launchaco-builder-hoverable See the features that over 10,000 people are enjoying.
-          ul.checklist.mt20
-            li.checklist-item.flex.center-horizontal.spread.pad10.pr0.pl0.launchaco-builder-hoverable
-              p.span.primary-color.mr20 Changes the font on the web page to the award-winning OpenDyslexic.
-              svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                g(transform='translate(4.000000, 5.000000)')
-                  path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
-            li.checklist-item.flex.center-horizontal.spread.pad10.pr0.pl0.launchaco-builder-hoverable
-              p.span.primary-color.mr20 Turn it on and Off at any time.
-              svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                g(transform='translate(4.000000, 5.000000)')
-                  path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
-            li.checklist-item.flex.center-horizontal.spread.pad10.pr0.pl0.launchaco-builder-hoverable
-              p.span.primary-color.mr20 Disable on certain websites.
-              svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                g(transform='translate(4.000000, 5.000000)')
-                  path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
-            li.checklist-item.flex.center-horizontal.spread.pad10.pr0.pl0.launchaco-builder-hoverable
-              p.span.primary-color.mr20 Google Docs support.
-              svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                g(transform='translate(4.000000, 5.000000)')
-                  path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
-            li.checklist-item.flex.center-horizontal.spread.pad10.pr0.pl0.launchaco-builder-hoverable
-              p.span.primary-color.mr20 Sync Across devices
-              svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                g(transform='translate(4.000000, 5.000000)')
-                  path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
-        .col-6.flex.center-horizontal.center-vertical
-          .launchaco-builder-hoverable
-            div
-              img.custom-img(src='https://cdn.launchaco.com/images/6f394e41-bbb1-415b-9396-638ecb0efeed.png', alt='Screenshot of small App')
-    section#testimonial-2.section.yellow-accent(sitemeta='[object Object]', activepage='Landing')
-      .container-lrg
-        .slideshow.text-center
-          input#ss2-item-0.slideshow-bullet(type='radio', name='ss2', checked='checked')
-          .slideshow-item
-            .slideshow-item-content
-              blockquote.container.col-12.bold.primary-color.launchaco-builder-hoverable
-                | This works and it makes everything so much easier to read! Thank you so much and i will keep posted if i do run into any issues!
-              .mt20
-                .user-image.mt20.mb20.launchaco-builder-hoverable(style='background-image: url("https://cdn.launchaco.com/images/3c52d495-9975-4148-b0c9-71ae19ebb8f8.png");')
-                p.span.secondary-color.mb10.launchaco-builder-hoverable Jason O'Bel
-                span.span.secondary-color.launchaco-builder-hoverable User
-            label.slideshow-nav.slideshow-nav-previous.accent-bg(for='ss2-item-2')
-            label.slideshow-nav.slideshow-nav-next.accent-bg(for='ss2-item-1')
-          input#ss2-item-1.slideshow-bullet(type='radio', name='ss2', checked='checked')
-          .slideshow-item
-            .slideshow-item-content
-              blockquote.container.col-12.bold.primary-color.launchaco-builder-hoverable Works a treat. Couldn't get dyslexie.com to work. This is brill!
-              .mt20
-                .user-image.mt20.mb20.launchaco-builder-hoverable(style='background-image: url("https://cdn.launchaco.com/images/2c022895-921d-4cbc-b9c3-d9449fb3c965.png");')
-                p.span.secondary-color.mb10.launchaco-builder-hoverable Sue Dowdall
-                span.span.secondary-color.launchaco-builder-hoverable User
-            label.slideshow-nav.slideshow-nav-previous.accent-bg(for='ss2-item-0')
-            label.slideshow-nav.slideshow-nav-next.accent-bg(for='ss2-item-2')
-          input#ss2-item-2.slideshow-bullet(type='radio', name='ss2', checked='checked')
-          .slideshow-item
-            .slideshow-item-content
-              blockquote.container.col-12.bold.primary-color.launchaco-builder-hoverable
-                | This is a great little extension, lightweight and non intrusive. With dyslexia its reading that's an issue, not the underlying intelligence. An aid such as this one, can help deliver the world to some who may not otherwise have received
-                | it. Great Work.
-              .mt20
-                .user-image.mt20.mb20.launchaco-builder-hoverable(style='background-image: url("https://cdn.launchaco.com/images/01a18667-5127-4a8d-8f7c-89995f492eab.png");')
-                p.span.secondary-color.mb10.launchaco-builder-hoverable Colm Murphy
-                span.span.secondary-color.launchaco-builder-hoverable User
-            label.slideshow-nav.slideshow-nav-previous.accent-bg(for='ss2-item-1')
-            label.slideshow-nav.slideshow-nav-next.accent-bg(for='ss2-item-0')
-    section#pricing-3.section.yellow-gradient(sitemeta='[object Object]', activepage='Landing')
-      .container.text-center
+      .container.flex
+        ul.checklist.col-12
+          li.checklist-item.flex.center-horizontal.spread.pad10.launchaco-builder-hoverable
+            p.paragraph.primary-color.mr20 Changes the font on the web page to the award-winning OpenDyslexic.
+            svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              g(transform='translate(4.000000, 5.000000)')
+                path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+          li.checklist-item.flex.center-horizontal.spread.pad10.launchaco-builder-hoverable
+            p.paragraph.primary-color.mr20 Turn it on and Off at any time.
+            svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              g(transform='translate(4.000000, 5.000000)')
+                path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+          li.checklist-item.flex.center-horizontal.spread.pad10.launchaco-builder-hoverable
+            p.paragraph.primary-color.mr20 Disable on certain websites.
+            svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              g(transform='translate(4.000000, 5.000000)')
+                path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+          li.checklist-item.flex.center-horizontal.spread.pad10.launchaco-builder-hoverable
+            p.paragraph.primary-color.mr20 Google Docs support.
+            svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              g(transform='translate(4.000000, 5.000000)')
+                path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+          li.checklist-item.flex.center-horizontal.spread.pad10.launchaco-builder-hoverable
+            p.paragraph.primary-color.mr20 Sync Across devices
+            svg.noshrink.svg-fill(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+              g(transform='translate(4.000000, 5.000000)')
+                path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+      .container-lrg.mt75
+        .col-12.launchaco-builder-hoverable
+          div
+            img.custom-img(src='https://cdn.launchaco.com/images/9c3f2037-12cb-477c-b8d0-98b4c0708d32.png', alt='Screenshot of application')
+    section#pricing-2.section.yellow-accent(sitemeta='[object Object]', activepage='Landing')
+      .container.mb75.text-center
         .col-12
           h4.heading.primary-color.launchaco-builder-hoverable Pricing
-          p.paragraph.secondary-color.mt20.launchaco-builder-hoverable Always free. There is a premium account to support the development of the app.
-      .container.mt75
+          p.paragraph.secondary-color.launchaco-builder-hoverable Always free. There is a premium account to support the development of the app.
+      .container-lrg
         .col-12
           .card.flex.mobile-flex-wrap
-            .col-6.flex.flex-column.spread.pad30.launchaco-builder-hoverable
+            .col-4.pad30.flex.flex-column.spread.launchaco-builder-hoverable
               .mb20
-                p.bold.primary-color Premium
+                h4.bold.primary-color Premium
                 b.heading.primary-color 2.99
                 span.paragraph.secondary-color Monthly
                 ul.mt20
@@ -150,7 +117,7 @@ html
                     svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                       g(transform='translate(4.000000, 5.000000)')
                         path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
-                    span.span.secondary-color New Features.
+                    span.span.secondary-color New Features first.
                   li.flex.mb20
                     svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
                       g(transform='translate(4.000000, 5.000000)')
@@ -168,9 +135,9 @@ html
                     span.span.secondary-color Cute design
               a.button.mobile-text-center.mt10.launchaco-builder-hoverable.button__full.mobile-text-center.accent-bg.primary-color(href='https://chrome.google.com/webstore/detail/opendyslexic-font-helperb/ahmapmilbkfamljbpgphfndeemhnajme', target='_blank')
                 span  Download now 
-            .col-6.flex.flex-column.spread.pad30.launchaco-builder-hoverable
+            .col-4.pad30.flex.flex-column.spread.launchaco-builder-hoverable
               .mb20
-                p.bold.primary-color Free
+                h4.bold.primary-color Free
                 b.heading.primary-color  0.00
                 span.paragraph.secondary-color  
                 ul.mt20
@@ -191,6 +158,90 @@ html
                     span.span.secondary-color Cute Design
               a.button.mobile-text-center.mt10.launchaco-builder-hoverable.button__full.mobile-text-center.accent-bg.primary-color(href='https://chrome.google.com/webstore/detail/opendyslexic-font-helperb/ahmapmilbkfamljbpgphfndeemhnajme', target='_blank')
                 span  Download now 
+            .col-4.pad30.flex.flex-column.spread.launchaco-builder-hoverable
+              .mb20
+                h4.bold.primary-color School/Enterprise
+                b.heading.primary-color 200
+                span.paragraph.secondary-color Monthly
+                ul.mt20
+                  li.flex.mb20
+                    svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                      g(transform='translate(4.000000, 5.000000)')
+                        path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+                    span.span.secondary-color Full Google Docs support.
+                  li.flex.mb20
+                    svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                      g(transform='translate(4.000000, 5.000000)')
+                        path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+                    span.span.secondary-color Blacklist - Disable from running on certain sites.
+                  li.flex.mb20
+                    svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                      g(transform='translate(4.000000, 5.000000)')
+                        path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+                    span.span.secondary-color Premium support.
+                  li.flex.mb20
+                    svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                      g(transform='translate(4.000000, 5.000000)')
+                        path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+                    span.span.secondary-color New Features first.
+                  li.flex.mb20
+                    svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                      g(transform='translate(4.000000, 5.000000)')
+                        path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+                    span.span.secondary-color OpenDyslexia Font on all pages.
+                  li.flex.mb20
+                    svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                      g(transform='translate(4.000000, 5.000000)')
+                        path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+                    span.span.secondary-color Sync across Chrome browsers.
+                  li.flex.mb20
+                    svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                      g(transform='translate(4.000000, 5.000000)')
+                        path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+                    span.span.secondary-color Cute design
+                  li.flex.mb20
+                    svg.svg-fill.noshrink.mr20(width='22px', height='22px', viewBox='0 0 22 22', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                      g(transform='translate(4.000000, 5.000000)')
+                        path(d='M5.24961475,8.39956394 L2.16512063,5.35475362 C1.74038521,4.93548271 1.05017933,4.9352057 0.624646383,5.35526395 C0.199019838,5.77541456 0.198881924,6.45614266 0.624129379,6.8759191 L4.35212111,10.555948 C4.38658274,10.6034965 4.42544251,10.6488955 4.46870038,10.6915969 C4.70907746,10.9288814 5.03375662,11.0320952 5.3475228,11.0013023 C5.59592563,10.9812599 5.83876209,10.8774981 6.02880771,10.6898975 C6.06831079,10.6509027 6.10414872,10.6096632 6.13632157,10.5665961 L13.9850992,2.81879759 C14.4107939,2.39857976 14.410861,1.71746456 13.985328,1.29740632 C13.5597015,0.8772557 12.8697673,0.877449143 12.444108,1.29763217 L5.24961475,8.39956394 Z')
+                    span.span.secondary-color Unlimited users/computers.
+              a.button.mobile-text-center.mt10.launchaco-builder-hoverable.button__full.mobile-text-center.accent-bg.primary-color(href='mailto:robert_gabriel@outlook.com', target='_blank')
+                span  Contact Sales 
+    section#testimonial-3.section.yellow-accent(sitemeta='[object Object]', activepage='Landing')
+      .container-lrg
+        .slideshow.text-center
+          input#ss3-item-0.slideshow-bullet(type='radio', name='ss3', checked='checked')
+          .slideshow-item
+            .slideshow-item-content
+              blockquote.container.col-12.bold.primary-color.launchaco-builder-hoverable
+                | This works and it makes everything so much easier to read! Thank you so much and i will keep posted if i do run into any issues!
+              .mt20
+                .user-image.mt20.mb20.launchaco-builder-hoverable(style='background-image: url("https://cdn.launchaco.com/images/3c52d495-9975-4148-b0c9-71ae19ebb8f8.png");')
+                p.span.secondary-color.mb10.launchaco-builder-hoverable Jason O'Bel
+                span.span.secondary-color.launchaco-builder-hoverable User
+            label.slideshow-nav.slideshow-nav-previous.accent-bg(for='ss3-item-2')
+            label.slideshow-nav.slideshow-nav-next.accent-bg(for='ss3-item-1')
+          input#ss3-item-1.slideshow-bullet(type='radio', name='ss3', checked='checked')
+          .slideshow-item
+            .slideshow-item-content
+              blockquote.container.col-12.bold.primary-color.launchaco-builder-hoverable Works a treat. Couldn't get dyslexie.com to work. This is brill!
+              .mt20
+                .user-image.mt20.mb20.launchaco-builder-hoverable(style='background-image: url("https://cdn.launchaco.com/images/2c022895-921d-4cbc-b9c3-d9449fb3c965.png");')
+                p.span.secondary-color.mb10.launchaco-builder-hoverable Sue Dowdall
+                span.span.secondary-color.launchaco-builder-hoverable User
+            label.slideshow-nav.slideshow-nav-previous.accent-bg(for='ss3-item-0')
+            label.slideshow-nav.slideshow-nav-next.accent-bg(for='ss3-item-2')
+          input#ss3-item-2.slideshow-bullet(type='radio', name='ss3', checked='checked')
+          .slideshow-item
+            .slideshow-item-content
+              blockquote.container.col-12.bold.primary-color.launchaco-builder-hoverable
+                | This is a great little extension, lightweight and non intrusive. With dyslexia its reading that's an issue, not the underlying intelligence. An aid such as this one, can help deliver the world to some who may not otherwise have received
+                | it. Great Work.
+              .mt20
+                .user-image.mt20.mb20.launchaco-builder-hoverable(style='background-image: url("https://cdn.launchaco.com/images/01a18667-5127-4a8d-8f7c-89995f492eab.png");')
+                p.span.secondary-color.mb10.launchaco-builder-hoverable Colm Murphy
+                span.span.secondary-color.launchaco-builder-hoverable User
+            label.slideshow-nav.slideshow-nav-previous.accent-bg(for='ss3-item-1')
+            label.slideshow-nav.slideshow-nav-next.accent-bg(for='ss3-item-0')
     section#featuredin-4.section.yellow-white(sitemeta='[object Object]', activepage='Landing')
       .container.text-center.mb50
         .col-12
@@ -202,13 +253,13 @@ html
           .col-3.mobile-col-6.mt20
             a(href='https://www.producthunt.com/posts/helperbird', target='_blank')
               img.press-logo.launchaco-builder-hoverable(src='https://cdn.launchaco.com/images/593d874a-d61f-4a9f-ba2e-d91db207daf4.png')
-    section#cta-5.section.custom-color-9015c398-3925-8101-34b1-8a54b6564cf3(sitemeta='[object Object]', activepage='Landing')
+    section#cta-5.section.yellow-black(sitemeta='[object Object]', activepage='Landing')
       // 
       .container.text-center
         .col-12
           h4.heading-lrg.primary-color.launchaco-builder-hoverable Don't take our word for it! Try it out yourself
           .mt40
-            a.button.mobile-text-center.mt10.launchaco-builder-hoverable.mobile-text-center.accent-bg.fill-white.button__white(href='https://chrome.google.com/webstore/detail/opendyslexic-font-helperb/ahmapmilbkfamljbpgphfndeemhnajme', target='_blank')
+            a.button.mobile-text-center.mt10.launchaco-builder-hoverable.mobile-text-center.accent-bg.fill-white.primary-color(href='https://chrome.google.com/webstore/detail/opendyslexic-font-helperb/ahmapmilbkfamljbpgphfndeemhnajme', target='_blank')
               svg(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
                 path(d='M7.429 12c0 2.52 2.05 4.571 4.571 4.571 2.52 0 4.571-2.05 4.571-4.57 0-2.522-2.05-4.572-4.57-4.572A4.577 4.577 0 0 0 7.428 12z')
                 path(d='M22.26 6.014a.193.193 0 0 0-.002-.196 11.991 11.991 0 0 0-4.285-4.215A12.026 12.026 0 0 0 11.966 0a11.945 11.945 0 0 0-9.352 4.468.193.193 0 0 0-.016.219l3.367 5.787a.196.196 0 0 0 .36-.049c.664-2.552 2.984-4.335 5.64-4.335a6.035 6.035 0 0 1 .524.022h9.6c.071 0 .136-.037.171-.098z')
