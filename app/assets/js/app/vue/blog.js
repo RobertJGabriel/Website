@@ -14,7 +14,6 @@ var blog = new Vue({
           'https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fmedium.com%2Ffeed%2F%40robertjgabriel'
         )
         .then(response => {
-
           this.blogPosts = response.data.items;
           this.loading = false;
         })

@@ -38,8 +38,9 @@ block pageBody
         .row
           .col-sm-4(v-for="posts in blogPosts", v-bind:class="{ hide: loading == true}" v-cloak)
             .boxes
+              img.img-responsive(v-bind:src='posts.thumbnail',alt='posts.pubDate')
               h2  {{posts.title}}
               span.label.label-info.margin-right(for="")
                 | {{posts.pubDate}}
-              p(v-html='posts.description')
+    
               a.btn.btn-flat.btn-warning(v-bind:href="posts.link", target="blank") Read
