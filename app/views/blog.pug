@@ -40,7 +40,6 @@ block pageBody
             .boxes
               img.img-responsive(v-bind:src='posts.thumbnail',alt='posts.pubDate')
               h2  {{posts.title}}
-              span.label.label-info.margin-right(for="")
-                | {{posts.pubDate}}
+
     
               a.btn.btn-flat.btn-warning(v-bind:href="posts.link", target="blank") Read
