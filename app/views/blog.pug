@@ -36,7 +36,7 @@ block pageBody
         .c(v-bind:class="{ hide: loading == false }")
           include /__layout/loading
         .row
-          .col-sm-4(v-for="posts in blogPosts", v-bind:class="{ hide: loading == true}" v-cloak)
+          .col-sm-12(v-for="posts in blogPosts", v-bind:class="{ hide: loading == true}" v-cloak)
             .boxes
               img.img-responsive(v-bind:src='posts.thumbnail',alt='posts.pubDate')
               h2  {{posts.title}}
