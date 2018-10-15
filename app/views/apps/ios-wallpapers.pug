@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1,viewport-fit=cover')
+    title iOS Wallpapers - By Robert James Gabriel
+    meta(name='description', content='Browse and download every iOs wallpaper. By Robert James Gabriel')
+    meta(property='og:title', content='iOS Wallpapers - By Robert James Gabriel')
+    meta(property='og:description', content='Browse and download every iOs wallpaper. By Robert James Gabriel')
+    meta(property='og:url', content='https://www.robertgabriel/apps/ios-wallpapers')
+    meta(property='og:locale', content='en_IE')
+    meta(property='og:image', content='https://www.apple.com/ac/structured-data/images/open_graph_logo.png?201809270422')
+    meta(property='og:type', content='website')
+    meta(property='og:site_name', content='Robert James Gabriel')
+    link(rel='apple-touch-icon', sizes='120x120', href='images/extra/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='images/extra/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='images/extra/favicon-16x16.png')
+    link(rel='manifest', href='images/extra/site.webmanifest')
+    link(rel='mask-icon', href='images/extra/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='msapplication-TileColor', content='#da532c')
+    meta(name='theme-color', content='#ffffff')
+    link(href='./scripts/bundle.min.css', rel='stylesheet')
+  body
+    #app
+      header
+        nav
+          .menu-container
+            ul.menu
+              li.menu-mac(v-bind:class='{ hidden: isOpen}')
+                a(href='#')
+                  span iOs Wallpapers
+              li.menu-search(v-bind:class='{ floatLeft: isOpen}')
+                a(href='#', v-on:click='open', v-click-outside='outside')
+                  font-awesome-icon(icon='search', prefix='fa')
+            .menu-search-container(v-bind:class='{ active: isOpen}')
+              .menu-search-input
+                form(action='')
+                  a(href='#')
+                    i.fa.fa-search(aria-hidden='true')
+                  input.menu-search-input(ref='search', type='text', aria-label='Search iOs Wallpapers', placeholder='Search iOs Wallpapers', autocorrect='off', autocapitalize='off', autocomplete='off', spellcheck='false', v-model='search')
+              a.menu-search-close(href='#')
+                font-awesome-icon(icon='times', prefix='fa')
+              .search-sub-menu
+                h3 Quick Links
+                ul
+                  li
+                    a(href='https://www.robertgabriel.ninja', target='_blank') Made by Robert James Gabriel. Looking for work.
+                  li
+                    a(href='https://photos.google.com/share/AF1QipNi8VN2pw2Ya_xCV8eFgzEZmiXDy1-GwhXbqFtvXoH3HypF10as9puV8FdoVZpOZA?key=WkZjQTIxQTM5a01oZkNUYTE2ZllKTVJKZk1CMTR3', target='_blank') Check out the Google photos group
+      .fade-screen(v-bind:class='{ visible: isOpen}')
+      .container
+        .row
+          div
+            .column.flexContainer(v-for='( item,index2) in  filteredResults', v-bind:key='index2')
+              h2(id='#`${item.group}`') {{ item.iOs }}
+              vue-images.item(v-for='( check, index)  in item.photos', v-bind:key='check.name', v-bind:item='check', v-bind:group='item.group')
+    script(src='./scripts/popup.min.js', type='text/javascript')
