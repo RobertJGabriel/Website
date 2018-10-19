@@ -1,81 +1,10 @@
-.common-IntroText
-  margin: 0 0 20px;
-  color: #32325d;
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: 300;
-
-
-.common-BodyText
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 28px;
-  color: #525f7f;
-  margin: 0;
-  padding: 0;
-
-
-
 .boxes
-  overflow: hidden
-  background-color: #FAFBFC
-  position: relative;
+  background-color: $background-white
   border-radius: 4px;
-  padding: 30px !important;
-  -webkit-box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   margin-bottom: 20px;
+  overflow: hidden
+  padding: 30px !important
+  position: relative
 
-.columns.is-multiline
-  display: flex
-  flex-wrap: wrap
-  @media screen and (min-width: 769px)
-    .column.is-half-tablet
-      flex: none
-      width: 50%
 
-  @media screen and (min-width: 1000px)
-    .column.is-one-third-desktop
-      flex: none
-      width: 33.3333%
-
-  .column
-    flex: none
-    display: block
-    flex-basis: 0
-    flex-grow: 1
-    flex-shrink: 1
-    padding: .75rem
-    .box
-      height: 100%
-      border-radius: 5px
-      box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1)
-      display: block
-      padding: 1.25rem
-      background-color: #F2F1EF
-      margin-bottom: 10px
-      .btn
-        width: 100%
-      .image
-        margin-bottom: 10px
-        position: relative
-        display: block
-      .title
-        margin-bottom: 1.7rem
-        font-size: 2rem
-        color: #363636
-        word-break: break-word
-        font-size: 2rem
-        font-weight: 300
-        line-height: 1.125
-      .sub-title.is-6
-        font-size: 14px
-        margin-top: -1.25rem
-        color: #4a4a4a
-        font-size: 1.25rem
-        font-weight: 300
-
-  #currentProjects
-    .column
-      flex: none
-      width: 50%

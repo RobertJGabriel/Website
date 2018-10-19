@@ -1,180 +1,154 @@
-
-
-.hide
-  display: none !important
-.modal-content
-  overflow: hidden
-  background-color: #fff
-  width: 500px
-  border-radius: 4px
-  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07)
-  display: inline-block
-  vertical-align: middle
-  -webkit-transform: perspective(1px) translateZ(0)
-  transform: perspective(1px) translateZ(0)
-  -webkit-transition-duration: 0.3s
-  transition-duration: 0.3s
-  -webkit-transition-property: transform
-  transition-property: transform
-  -webkit-transition-timing-function: ease-out
-  transition-timing-function: ease-out
-
 html,
 body
   background-color: $background-color !important
   font-family: $font-stack
 
-.margin-right
-  margin-right: 1rem;
+  .margin-right
+    margin-right: 1rem
 
-.margin-top
-  margin-top: 2rem;
-.shadow
-  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07)
-  transition-property: color,background-color,box-shadow,transform
-  transition-duration: .15s
+  .margin-top
+    margin-top: 2rem
 
-p, h1, h2 ,h3 ,h4 ,h5
-  font-family: $font-stack
+  .shadow
+    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07)
+    transition-duration: .15s
+    transition-property: color, background-color, box-shadow, transform
 
-.menu-bar
-  a
-    color: #0366D6 !important
+  .row,
+  .menu-bar
+    a
+      color: $link-color
 
-    &:hover
-      color: #0366D6 !important
+      &:hover
+        color: $link-color
 
-.row
-  a
-    color: #0366D6 !important
+    .btn,
+    .btn-flat
+      color: $white
 
-    &:hover
-      color: #0366D6 !important
-
-.sub-title
-  padding-bottom: 1rem
-
-.navbar
-  background-color: $navigation-color
-
-.me
-  border-radius: 100%
-  margin-left: auto
-  margin-right: auto
-  width: 150px
-  box-shadow: 0 15px 35px rgba(0,0,0,.1), 0 3px 10px rgba(0,0,0,.07)
-
-a
-  padding-left: .15em
-  padding-right: .15em
-  font-family: $font-stack
-
-
-
-.fa-bars,svg
-  font-size: 24px
-
-
-.home-title
-  padding-bottom: .75rem
-
-
-
-.wrapper
-  margin: 0 auto
-  padding: 40px 40px 0
-
-  h1
-    color: $black-header
-    font-size: 3.5rem
-    font-weight: 600
-    font-family: $font-stack
-
-  h2
-    color: $black-header
-    font-size: 2rem
-    font-weight: 500
-    line-height: 2em
-    margin-bottom: 5px
-    margin-top: 5px
-    font-family: $font-stack
+      &:hover
+        color: $white
 
   hr
-    background-color: $light-black
+    margin-bottom: 0
+    margin-top: 40px
 
+  .navbar
+    background-color: $dark-brown
 
-.navbar .navbar-brand
-  padding: 10px !important
+    .navbar-brand
+      padding: 10px !important
 
+  .me
+    border-radius: 100%
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .1), 0 3px 10px rgba(0,0,0,.07)
+    margin-left: auto
+    margin-right: auto
+    width: 150px
 
-
-
-.shadow
-  box-shadow: 0 2px 5px $shadow
-
-nav .navbar-nav .navbar-right
-  height: 100vh
-  width: 100%
-
-header
-  background: $header-color
-  left: 0
-  padding-bottom: 70px
-  position: none
-  top: 0
-  width: 100%
-
-  .header-title
-    color: #FEFEFE
-    cursor: pointer
-    font-size: 56px
-    font-weight: 400
-    line-height: 1.5
-    margin: 0 auto
-    overflow: hidden
-    padding-top: 90px
-    white-space: nowrap
-    word-break: break-word
+  a
+    padding-left: .15em
+    padding-right: .15em
 
 
 
-.embed-responsive,
-img
-  margin: 20px 10 20px 0
-
-  .fa,.fab,.fas,svg
-    font-size: 24px
-    margin: 10px
-
-.hide
-  display: none !important
-
-.show
-  display: block !important
-
-
-
-.container-fluid > .navbar-header
-  margin-left: 0
-  margin-right: 0
-  width: 100%
-
-.bold
-  font-weight: 400
-
-li,
-p
-  font-size: 16px
-  line-height: 1.7
-
-
-
-
-.blue
-  fill: #24292e !important
+  .fa-bars,
   svg
-    fill: #0366d6 !important
+    font-size: 24px
 
-.blog
-  img
+
+  .wrapper
+    margin: 0 auto
+    padding: 40px 40px 0
+
+    h1
+      color: $black-header
+      font-size: 3.5rem
+      font-weight: 600
+
+    h2
+      color: $black-header
+      font-size: 2rem
+      font-weight: 500
+      line-height: 2em
+      margin-bottom: 5px
+      margin-top: 5px
+
+    hr
+      background-color: $light-black
+
+  nav
+    .navbar-nav
+      .navbar-right
+        height: 100vh
+        width: 100%
+
+  header
+    background: $header-color
+    left: 0
+    padding-bottom: 70px
+    position: none
+    top: 0
     width: 100%
+
+    .header-title
+      color: $white
+      cursor: pointer
+      font-size: 56px
+      font-weight: 400
+      line-height: 1.5
+      margin: 0 auto
+      overflow: hidden
+      padding-top: 90px
+      white-space: nowrap
+      word-break: break-word
+
+
+
+  .embed-responsive,
+  img
+    margin: 20px 10 20px 0
+
+    .fa,
+    .fab,
+    .fas,
+    svg
+      font-size: 24px
+      margin: 10px
+
+
+
+
+  .container-fluid > .navbar-header
+    margin-left: 0
+    margin-right: 0
+    width: 100%
+
+  .bold
+    font-weight: 400
+
+  li,
+  p
+    font-size: 16px
+    line-height: 1.7
+
+  .blue
+    fill: $dark-brown
+
+    svg
+      fill: $link-color
+
+  .blog
+    img
+      width: 100%
+
+  .ellipsis
+    overflow: hidden 
+    white-space: nowrap 
+    text-overflow: ellipsis
+  
+  .row 
+    margin-bottom: 50px 
+  
+  .show
+    display: block !important

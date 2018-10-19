@@ -6,17 +6,18 @@
   left: 0
   bottom: 0
   right: 0
-  z-index: 1
+  z-index: -2
 
   .navbar-brand
     margin-top: 0
-    padding: 10px !important;
+    padding: 10px
 
 
 
 .menu
   position: absolute
   z-index: 3319
+
   li > a
     display: block
     text-indent: -500em
@@ -29,8 +30,9 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.05)
 
     &:hover
-      background: #ebebeb
-      color: #F2F1EF
+      background: $off-white
+      color: $white
+
 
 .menu-bar
   transition: 1s
@@ -39,7 +41,7 @@
   list-style-type: none
   margin: 0
   padding: 0
-  background: #FAFBFC
+  background: $background-white
   z-index: 10
   box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26)
   overflow: hidden
@@ -54,19 +56,14 @@
       height: 4em
       line-height: 4em
       text-align: center
-      color: #333333
+      color: $link-color
       text-decoration: none
       position: relative
       font-family: verdana
       border-bottom: 1px solid rgba(0, 0, 0, 0.05)
       &:hover
-        background: #ebebeb
-        color: #333333
-    &:first-child a
-      height: 5em
-      background: #f7f7f7
-      color: #333333
-      line-height: 5
+        background: $off-white
+        color: $link-color
 
 
 .open
@@ -99,37 +96,27 @@
   .para
     padding-left: 5px
 
-.navbar
-  min-height: 46px !important
 
 
 
 .menu-button
   float: right
-  font-size: 24px!important
+  font-size: 24px
 
   .fa,.fab,.fas,svg
     padding: 0
     margin: 0
     margin-top: 10px
-    fill: #F2F1EF !important
+    fill: $white 
     height: 24px
 
 .navbar-right
-  float: none !important
-  margin-right: 0px !important
+  float: none 
+  margin-right: 0px 
 
-.navbar-brand
-  width: 85%
-  height: 40px !important
-  line-height: 16px !important
-  white-space: nowrap
-  overflow: hidden
-  margin-top: 5px
-  text-overflow: ellipsis
 
-.navbar-nav
-  margin: 0 !important
+
+
 
 @media screen and (max-height: 34em)
   .menu li, .menu-bar

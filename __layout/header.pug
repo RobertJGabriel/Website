@@ -1,5 +1,5 @@
 
-#navBar.navbar.navbar-warning.colorsFadeIn(data-ripple-color='#F0F0F0')
+#navBar.navbar.navbar-warning
   .container-fluid
     .navbar-header
       a.navbar-brand(href='/')
@@ -7,4 +7,4 @@
       a.menu-button.home(v-on:click="open",v-click-outside="outside")
         include /app/assets/svgs/solid/bars.svg
     include sidebar.pug
-  .overlay(v-if="open")
+  .overlay(v-bind:class="{ show: isOpen }")

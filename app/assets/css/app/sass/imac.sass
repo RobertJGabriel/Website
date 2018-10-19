@@ -7,14 +7,15 @@
   margin: auto
 
 .screen
-  height: 360px
-  background: no-repeat center url("https://9to5mac.files.wordpress.com/2017/12/imac-pro-wallpaper.jpg")
-  background-size: cover
   box-sizing: border-box
+  height: 360px
+
   border: 24px solid black
   border-top: 32px solid black
   border-top-left-radius: 18px
   border-top-right-radius: 18px
+  background: no-repeat center url('https://9to5mac.files.wordpress.com/2017/12/imac-pro-wallpaper.jpg')
+  background-size: cover
 
 .facetime__camera
   background: #222
@@ -37,14 +38,17 @@
   transform: translatey(12px)
 
 .stand
-  margin: 0 auto
   width: 120px
   height: 100px
-  background: linear-gradient(to bottom, #222222, #666666)
-  border-bottom-left-radius: 18px
+  margin: 0 auto
+  margin-top: -26px
+
+  transform: rotatex(100deg)
+
   border-bottom-right-radius: 18px
+  border-bottom-left-radius: 18px
+  background: linear-gradient(to bottom, #222, #666)
+  box-shadow: 0 4px 0 0 #111
+
   perspective-origin: 150% 150%
   transform-style: preserve-3d
-  transform: rotatex(100deg)
-  margin-top: -26px
-  box-shadow: 0 4px 0 0 #111111
