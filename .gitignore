@@ -6,3 +6,4 @@ bower_components/**
 docs
 docs/*
 /docs
+dist/
