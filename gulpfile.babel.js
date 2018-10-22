@@ -1,40 +1,22 @@
-var glob = require('glob')
-var del = require('del')
-var gulp = require('gulp')
-var hash = require('hash-files')
-var jsesc = require('jsesc')
-var rename = require('gulp-rename')
-var replace = require('gulp-replace')
-var uglify = require('gulp-uglify')
-var gutil = require('gulp-util')
-var minifyCSS = require('gulp-minify-css')
-var concat = require('gulp-concat')
-var sass = require('gulp-sass')
-var pug = require('gulp-pug')
-var concatCss = require('gulp-concat-css')
-var uncss = require('postcss-uncss')
-var webp = require('gulp-webp');
-var browserSync = require('browser-sync').create();
-var cleanCss = require('gulp-clean-css');
-
-/**
- * @param  {} 'serve'
- * @param  {} ['app_css'
- * @param  {} 'app_js']
- * @param  {} function(
- */
-gulp.task('serve', ['app_css', 'app_js'], function () {
-  browserSync.init({
-    server: './dist'
-  })
-  gulp.watch('./app/assets/css/app/*.sass', ['app_css'])
-  gulp.watch('./app/assets/js/app/*.js', ['app_js'])
-  gulp.watch('./app/views/*.pug', ['html'])
-  gulp.watch('./app/views/*.pug').on('change', browserSync.reload)
-})
+import glob from 'glob';
+import del from 'del';
+import gulp from 'gulp';
+import hash from 'hash-files';
+import jsesc from 'jsesc';
+import rename from 'gulp-rename';
+import replace from 'gulp-replace';
+import uglify from 'gulp-uglify';
+import gutil from 'gulp-util';
+import minifyCSS from 'gulp-minify-css';
+import concat from 'gulp-concat';
+import sass from 'gulp-sass';
+import pug from 'gulp-pug';
+import concatCss from 'gulp-concat-css';
+import webp from 'gulp-webp';
+import cleanCss from 'gulp-clean-css';
 
 
-gulp.task('move_app_files', function () {
+gulp.task('move_app_files', () => {
   gulp
     .src([
       './app/views/apps/**/*.*',
@@ -44,7 +26,7 @@ gulp.task('move_app_files', function () {
 });
 
 
-gulp.task('vendor_css', function () {
+gulp.task('vendor_css', () => {
   gulp
     .src([
       './app/assets/css/vendor/bootstrap.css',
@@ -64,7 +46,7 @@ gulp.task('vendor_css', function () {
     .pipe(gulp.dest('./dist/assets/css'))
 });
 
-gulp.task('app_css', function () {
+gulp.task('app_css', () => {
   gulp
     .src('./app/assets/css/app/styles.sass')
     .pipe(sass().on('error', sass.logError))
@@ -76,29 +58,10 @@ gulp.task('app_css', function () {
       })
     )
     .pipe(gulp.dest('./dist/assets/css'))
-    .pipe(browserSync.stream())
+
 });
 
-gulp.task('final_css', function () {
-  var plugins = [
-    uncss({
-      ignore: [
-        '.open',
-        '.sk-fading-circle',
-        '.margin-right',
-        '.hide',
-        '.show',
-        '.label',
-        '.label-success',
-        '.label-info',
-        '.open',
-        '.hide',
-        '.show'
-      ],
-      html: ['index.html', 'dist/**/*.html', 'https://www.robertgabriel.ninja']
-    })
-  ]
-
+gulp.task('final_css', () => {
   gulp
     .src('./dist/assets/css/**/*.min.css')
     .pipe(
@@ -118,35 +81,33 @@ gulp.task('final_css', function () {
     .pipe(gulp.dest('./dist/assets/css/'))
 })
 
-gulp.task('app_js', function () {
+gulp.task('app_js', () => {
   gulp
     .src([
 
       './app/assets/js/app/vue/navigation.js'
     ])
-    .on('error', function (err) {
+    .on('error', err => {
       gutil.log(gutil.colors.red(err))
     })
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest('./dist/assets/js'))
-    .pipe(browserSync.stream())
 })
 
 
-gulp.task('app_js_vue', function () {
+gulp.task('app_js_vue', () => {
   gulp
     .src('./app/assets/js/app/vue/*.js')
-    .on('error', function (err) {
+    .on('error', err => {
       gutil.log(gutil.colors.red(err))
     })
     .pipe(gulp.dest('./dist/assets/js/vue/'))
-    .pipe(browserSync.stream())
 })
 
-gulp.task('vendor_js', function () {
+gulp.task('vendor_js', () => {
   gulp
     .src(['./app/assets/js/vendor/vue.js'])
-    .on('error', function (err) {
+    .on('error', err => {
       gutil.log(gutil.colors.red(err.background_imagessage))
     })
     .pipe(concat('vendor.min.js'))
@@ -154,10 +115,10 @@ gulp.task('vendor_js', function () {
     .pipe(gulp.dest('./dist/assets/js/'))
 })
 
-gulp.task('webp_js', function () {
+gulp.task('webp_js', () => {
   gulp
     .src(['./app/assets/js/vendor/webpjs.js'])
-    .on('error', function (err) {
+    .on('error', err => {
       gutil.log(gutil.colors.red(err.background_imagessage))
     })
     .pipe(concat('webpjs.min.js'))
@@ -167,27 +128,27 @@ gulp.task('webp_js', function () {
 
 
 
-gulp.task('build-settings', function () {
+gulp.task('build-settings', () => {
   gulp.src('./__core/.nojekyll').pipe(gulp.dest('./dist/'))
 })
 
-gulp.task('build-downloads', function () {
+gulp.task('build-downloads', () => {
   gulp
     .src('./app/assets/downloads/**/*.*')
     .pipe(gulp.dest('./dist/assets/downloads/'))
 })
 
-gulp.task('apple-pay', function () {
+gulp.task('apple-pay', () => {
   gulp
     .src('./__core/apple-developer-merchantid-domain-association')
     .pipe(gulp.dest('./dist/.well-known'))
 })
 
-gulp.task('extra', function () {
+gulp.task('extra', () => {
   gulp.src('./__core/*').pipe(gulp.dest('./dist/'))
 })
 
-gulp.task('html', function () {
+gulp.task('html', () => {
   gulp
     .src('./app/views/**/*.pug')
     .pipe(
@@ -196,59 +157,58 @@ gulp.task('html', function () {
         pretty: true
       })
     )
-    .on('error', function (err) {
+    .on('error', err => {
       console.log(err.message)
     })
     .pipe(gulp.dest('./dist'))
-    .pipe(browserSync.stream())
 })
 
-gulp.task('images', function () {
+gulp.task('images', () => {
   gulp
     .src('./app/assets/img/**/*')
     .pipe(webp())
     .pipe(gulp.dest('./dist/assets/img/'))
 })
 
-gulp.task('images-png', function () {
+gulp.task('images-png', () => {
   gulp.src('./app/assets/img/**/*.png').pipe(gulp.dest('./dist/assets/img/'))
 })
 
-gulp.task('clean', function () {
+gulp.task('clean', () => {
   del.sync(['!./dist/CNAME', './dist/*'], {
     force: true
   })
 })
 
-var stringify = value => {
+const stringify = value => {
   return jsesc(value, {
     wrap: true,
     compact: false,
     indentLevel: 3
   })
-}
+};
 
-var shortHash = files => {
+const shortHash = files => {
   return hash
     .sync({
-      files: files
+      files
     })
     .slice(0, 8)
-}
+};
 
-var assets = ['dist/**/*.*']
+const assets = ['dist/**/*.*'];
 
 gulp.task('cache', () => {
-  var assets = [
+  const assets = [
     ...glob.sync('dist/assets/css/**/*.*'),
     ...glob.sync('dist/*.html'),
     ...glob.sync('dist/*.js'),
     ...glob.sync('dist/assets/img/**/me.png'),
     ...glob.sync('dist/assets/img/**/*.svg'),
     ...glob.sync('dist/assets/js/**/*.*')
-  ]
-  var assetsHash = shortHash(assets)
-  var assetCacheList = [
+  ];
+  const assetsHash = shortHash(assets);
+  const assetCacheList = [
     '/',
     ...assets
     // Remove all `images/icon-*` files except for the one used in
@@ -258,7 +218,7 @@ gulp.task('cache', () => {
       !path.includes('images/icon-') || path.includes('icon-228x228.png')
     )
     .map(path => path.replace(/^dist\//, '/'))
-  ]
+  ];
 
   gulp
     .src('./__core/sw.js')
