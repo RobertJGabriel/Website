@@ -19,7 +19,7 @@ deploy:
     branch: master
 
 after_success:
-  - node __core/twitter.js
+  - node tweet.js
 
 cache:
   yarn: true
