@@ -6,7 +6,7 @@ node_js:
 before_install:
 - yarn global add gulp
 - yarn install
-- chmod +x ./__core/twitter.js
+- chmod +x __core/twitter.js
 
 deploy:
   provider: pages
@@ -19,7 +19,7 @@ deploy:
     branch: master
 
 after_success:
-  - ./__core/twitter.js
+  - node __core/twitter.js
 
 cache:
   yarn: true

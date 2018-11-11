@@ -4,9 +4,9 @@ var _twitter = require('twitter');
 
 var _twitter2 = _interopRequireDefault(_twitter);
 
-var _onfig = require('./twitter_config/onfig.js');
+var _config = require('./twitter_config/config.js');
 
-var _onfig2 = _interopRequireDefault(_onfig);
+var _config2 = _interopRequireDefault(_config);
 
 var _package = require('../package.json');
 
@@ -14,7 +14,7 @@ var _package2 = _interopRequireDefault(_package);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var T = new _twitter2.default(_onfig2.default);
+var T = new _twitter2.default(_config2.default);
 var homepage = _package2.default.homepage;
 var name = _package2.default.name;
 var version = _package2.default.version;
