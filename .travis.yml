@@ -7,23 +7,14 @@ before_install:
 - yarn global add gulp
 - yarn install
 
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-  keep-history: true
-  local-dir: ./dist
-  fqdn: 'https://www.robertgabriel.ninja'
-  on:
-    branch: master
+
 
 after_success:
-  - ./__core/twitter.js
+  - ./twitter.js
 
 cache:
   yarn: true
   directories:
     - node_modules
 
-script:
-- yarn run start
+

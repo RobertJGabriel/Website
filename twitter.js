@@ -1,6 +1,6 @@
 import Twitter from 'twitter';
 import config from './twitter_config/onfig.js';
-import package from '../package.json';
+import package from 'package.json';
 const T = new Twitter(config);
 let homepage = package.homepage;
 let name = package.name;
