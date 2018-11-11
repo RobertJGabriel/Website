@@ -24,7 +24,7 @@ var message = { status: 'I just released ' + version + ' of ' + name + '. Check 
 T.post('statuses/update', message, function (error, tweet, response) {
     // If the favorite fails, log the error message
     if (error) {
-        console.log(err);
+        console.log(error);
     }
     // If the favorite is successful, log the url of the tweet
     else {
