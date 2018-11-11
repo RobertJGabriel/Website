@@ -136,7 +136,7 @@ gulp.task('build-downloads', () => {
   return gulp
     .src('./app/assets/downloads/**/*.*')
     .pipe(gulp.dest('./dist/assets/downloads/'));
-})
+});
 
 
 
