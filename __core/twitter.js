@@ -28,8 +28,6 @@ T.post('statuses/update', message, function (error, tweet, response) {
     }
     // If the favorite is successful, log the url of the tweet
     else {
-            console.table(tweet); // Tweet body.
-            console.table(response); // Raw response object.
             var username = response.user.screen_name;
             var tweetId = response.id_str;
             console.log('Favorited: ', 'https://twitter.com/' + username + '/status/' + tweetId);

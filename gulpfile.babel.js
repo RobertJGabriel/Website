@@ -17,7 +17,7 @@ import cleanCss from 'gulp-clean-css';
 
 
 gulp.task('move_app_files', () => {
-  gulp
+  return gulp
     .src([
       './app/views/apps/**/*.*',
       '!./app/views/apps/**/*.pug'
@@ -27,7 +27,7 @@ gulp.task('move_app_files', () => {
 
 
 gulp.task('vendor_css', () => {
-  gulp
+  return gulp
     .src([
       './app/assets/css/vendor/bootstrap.css',
       './app/assets/css/vendor/bootstrap-material-design.css'
@@ -47,7 +47,7 @@ gulp.task('vendor_css', () => {
 });
 
 gulp.task('app_css', () => {
-  gulp
+  return gulp
     .src('./app/assets/css/app/styles.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(concatCss('app.css'))
@@ -62,7 +62,7 @@ gulp.task('app_css', () => {
 });
 
 gulp.task('final_css', () => {
-  gulp
+  return gulp
     .src('./dist/assets/css/**/*.min.css')
     .pipe(
       cleanCss({
@@ -82,7 +82,7 @@ gulp.task('final_css', () => {
 })
 
 gulp.task('app_js', () => {
-  gulp
+  return gulp
     .src([
 
       './app/assets/js/app/vue/navigation.js'
@@ -96,7 +96,7 @@ gulp.task('app_js', () => {
 
 
 gulp.task('app_js_vue', () => {
-  gulp
+  return gulp
     .src('./app/assets/js/app/vue/*.js')
     .on('error', err => {
       gutil.log(gutil.colors.red(err))
@@ -105,7 +105,7 @@ gulp.task('app_js_vue', () => {
 })
 
 gulp.task('vendor_js', () => {
-  gulp
+  return gulp
     .src(['./app/assets/js/vendor/vue.js'])
     .on('error', err => {
       gutil.log(gutil.colors.red(err.background_imagessage))
@@ -116,7 +116,7 @@ gulp.task('vendor_js', () => {
 })
 
 gulp.task('webp_js', () => {
-  gulp
+  return gulp
     .src(['./app/assets/js/vendor/webpjs.js'])
     .on('error', err => {
       gutil.log(gutil.colors.red(err.background_imagessage))
@@ -129,27 +129,23 @@ gulp.task('webp_js', () => {
 
 
 gulp.task('build-settings', () => {
-  gulp.src('./__core/.nojekyll').pipe(gulp.dest('./dist/'))
+  return gulp.src('./__core/.nojekyll').pipe(gulp.dest('./dist/'))
 })
 
 gulp.task('build-downloads', () => {
-  gulp
+  return gulp
     .src('./app/assets/downloads/**/*.*')
-    .pipe(gulp.dest('./dist/assets/downloads/'))
+    .pipe(gulp.dest('./dist/assets/downloads/'));
 })
 
-gulp.task('apple-pay', () => {
-  gulp
-    .src('./__core/apple-developer-merchantid-domain-association')
-    .pipe(gulp.dest('./dist/.well-known'))
-})
+
 
 gulp.task('extra', () => {
-  gulp.src('./__core/*').pipe(gulp.dest('./dist/'))
+  return gulp.src('./__core/*').pipe(gulp.dest('./dist/'))
 })
 
 gulp.task('html', () => {
-  gulp
+  return gulp
     .src('./app/views/**/*.pug')
     .pipe(
       pug({
@@ -164,14 +160,14 @@ gulp.task('html', () => {
 })
 
 gulp.task('images', () => {
-  gulp
+  return gulp
     .src('./app/assets/img/**/*')
     .pipe(webp())
     .pipe(gulp.dest('./dist/assets/img/'))
 })
 
 gulp.task('images-png', () => {
-  gulp.src('./app/assets/img/**/*.png').pipe(gulp.dest('./dist/assets/img/'))
+  return gulp.src('./app/assets/img/**/*.png').pipe(gulp.dest('./dist/assets/img/'))
 })
 
 gulp.task('clean', () => {
@@ -248,7 +244,7 @@ gulp.task('cache', () => {
   return del(['dist/service-worker.js'])
 })
 
-gulp.task('build', [
+gulp.task('build', gulp.series(
   'vendor_css',
   'build-downloads',
   'vendor_js',
@@ -260,8 +256,7 @@ gulp.task('build', [
   'images-png',
   'app_js_vue',
   'extra',
-  'apple-pay',
   'build-settings'
-])
+))
 
-gulp.task('default', ['clean', 'build'])
+gulp.task('default', gulp.parallel('clean', 'build'))
