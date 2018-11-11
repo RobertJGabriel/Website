@@ -4,11 +4,9 @@ const package = require('./package.json');
 let object = {
     version: package.version,
     name: 'Robert Gabriel.ninja',
-    message: 'I just updated my website, check it out now!',
+    tweet: 'I just updated my website, check it out now!',
     link: package.homepage
 };
 
-let releaseType = 'minor';
-
-tweet.update(object);
+console.log(tweet.post(object));
 
