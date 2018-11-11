@@ -6,7 +6,7 @@ node_js:
 before_install:
 - yarn global add gulp
 - yarn install
-- chmod +x __core/twitter.js
+- chmod +x tweet.js
 
 deploy:
   provider: pages
