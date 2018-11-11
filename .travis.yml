@@ -17,6 +17,9 @@ deploy:
   on:
     branch: master
 
+after_success:
+  - ./__core/twitter.js
+
 cache:
   yarn: true
   directories:
