@@ -23,6 +23,7 @@
     "jsesc": "^2.5.1",
     "postcss-uncss": "^0.16.1",
     "standard": "^11.0.1",
+    "twitter": "^1.7.1",
     "uncss": "^0.16.2"
   },
   "devDependencies": {
@@ -51,6 +52,6 @@
   "bugs": {
     "url": "https://github.com/RobertJGabriel/Website/issues"
   },
-  "homepage": "https://github.com/RobertJGabriel/Website#readme",
+  "homepage": "https://robertgabriel.ninja",
   "private": true
 }
