@@ -42,20 +42,13 @@ block pageBody
           .col-sm-4(v-for="repo in repos.slice((i - 1) * 3, i * 3)")
             .boxes
               h2.common-IntroText {{repo.name}}
-              p
-                b
-                  | Description
               p.common-BodyText
                 | {{repo.description}}
               p
-                b
-                  | Extra
-              p
                 span.label.label-success.margin-right.labels-yellow(for="")
                   | {{repo.language}}
-                span.label.label-success.margin-right.labels-yellow(for="")
-                  | Forks: {{repo.forks}}
-                span.label.label-success.margin-right.labels-yellow(for="")
-                  | Stars: {{repo.stargazers_count}}
+                span.info
+                  include /app/assets/svgs/solid/star.svg
+                  | {{repo.stargazers_count}}
               p.margin-top
-                a.btn.btn-flat.btn-warning(v-bind:href="repo.html_url", target="blank")  View on Github
+                a.btn.btn-flat.btn-warning.btn-padding-left(v-bind:href="repo.html_url", target="blank")  View on Github
