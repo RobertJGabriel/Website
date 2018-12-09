@@ -10,32 +10,32 @@
   "applicationServerKey": "",
   "icons": [
     {
-      "src": "assets/img/me/logo.png",
+      "src": "assets/img/me/logo-16.png",
       "type": "image/png",
       "sizes": "16x16"
     },
     {
-      "src": "assets/img/me/logo.png",
+      "src": "assets/img/me/logo-32.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "assets/img/me/logo.png",
+      "src": "assets/img/me/logo-144.png",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "assets/img/me/logo.png",
+      "src": "assets/img/me/logo-152.png",
       "type": "image/png",
       "sizes": "152x152"
     },
     {
-      "src": "assets/img/me/logo.png",
+      "src": "assets/img/me/logo-196.png",
       "type": "image/png",
       "sizes": "196x196"
     },
     {
-      "src": "assets/img/me/logo.png",
+      "src": "assets/img/me/logo-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
