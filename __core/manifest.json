@@ -3,11 +3,10 @@
   "name": "robertgabriel.ninja",
   "background_color": "#FFFFFF",
   "theme_color": "#24292E",
-  "display": "standalone",
-  "orientation": "portrait",
+  "display":"standalone",
   "scope": "./",
   "gcm_sender_id": "482941778795",
-  "applicationServerKey": "",
+  "orientation": "landscape",
   "icons": [
     {
       "src": "assets/img/me/logo-16.png",
@@ -35,11 +34,16 @@
       "sizes": "196x196"
     },
     {
+      "src": "assets/img/me/logo-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
       "src": "assets/img/me/logo-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "index.html?from=app",
+  "start_url": "/?from=app",
   "description": "Software engineer working on open source"
 }
