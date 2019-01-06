@@ -4,11 +4,12 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp vendor_css && gulp build-downloads && gulp move_app_files && gulp vendor_js && gulp webp_js && gulp app_js && gulp app_css && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp build-settings && gulp html && gulp cache  && http-server dist",
+    "dev": "gulp build && http-server dist",
     "server": "http-server dist",
-    "start": " gulp vendor_css && gulp build-downloads && gulp move_app_files && gulp vendor_js && gulp webp_js  && gulp app_js && gulp app_css &&  gulp final_css && gulp images && gulp images-png && gulp app_js_vue  && gulp extra && gulp build-settings && gulp html && gulp cache",
+    "build": "gulp build",
+    "start": " gulp build",
     "fuckit": "git add . && git commit -m 'new site update' && git push",
-    "publish": "gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp move_app_files && gulp webp_js  && gulp app_js && gulp app_css && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp build-settings && gulp html && git add . && git commit -m 'new site update' && git push"
+    "publish": "gulp build && git add . && git commit -m 'new site update' && git push"
   },
   "repository": "git+https://github.com/RobertJGabriel/Website.git",
   "dependencies": {
@@ -24,6 +25,7 @@
     "jsesc": "^2.5.2",
     "npm-bump": "0.0.25",
     "postcss-uncss": "^0.16.1",
+    "require-dir": "^1.2.0",
     "standard": "^12.0.1",
     "uncss": "^0.16.2"
   },
