@@ -3,7 +3,7 @@
   .container-fluid
     .navbar-header
       a.navbar-brand(href='/')
-        | Robert James Gabriel
+        | #{author}
       a.menu-button.home(v-on:click="open", v-click-outside="outside", v-if="!isOpen")
         include /app/assets/svgs/solid/bars.svg
       a.menu-button.home.hide(v-if="isOpen", v-click-outside="outside", v-on:click="outside",v-bind:class="{ show: isOpen }")

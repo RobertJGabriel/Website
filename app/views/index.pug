@@ -10,47 +10,47 @@ block pageBody
       .col-sm-6.col-md-6.col-lg-6.wrapper
         .row
 
-          img.me.img-responsive(src='./assets/img/me/me-4.webp', alt='Robert James Gabriel', width='150', height='150')
+          img.me.img-responsive(src='./assets/img/me/me-5.webp', alt='Robert James Gabriel', width='150', height='150')
           h1.text-center
-            b Robert James Gabriel
+            b #{author}
           h2.text-center
-            | Engineer working as a #[a(href="https://github.com/robertjgabriel/") Full-Time Open-Sourcer]
+            | Engineer working on #[a(target="_blank", rel="noopener", title="Fill", href='https://github.com/robertjgabriel/' ) #{workingOn}]
 
         .row
           .col-sm-12.boxes
-            h2 About Me
+            h2 About
             p
-              | I 💗 the web & coffee. I write open source code and make chrome extensions. Previously at #[a(href="https://www.teamwork.com/") Teamwork], #[a(href="https://www.emc.com/") Dell & Emc].
-            p
-              | I also the author of two published papers including ‘Problems Posed by Ad-blockers’ and ‘Web Accessibility and OpenDyslexia’.
-            p
-              | Currently I love working with; Node.js and Golang.
-
+              | Robert James is currently building open source projects and sass products, PWA's across iOS, Android, Website, and TV while traveling the world. To speak at events. Previously at #[a(target="_blank", rel="noopener", title="Fill", href="https://www.teamwork.com/") Teamwork], #[a(target="_blank", rel="noopener", title="Fill", href="https://www.emc.com/") Dell & Emc].
 
         .row
           .col-sm-12.boxes
-            h2 Apps
+            h2 Apps & Projects
             p
-              | Here are some of the apps I’ve made.
+              | In my spare time, I work and maintain the OpenDyslexic #[a(target="_blank", rel="noopener", title="Fill", href="https://chrome.google.com/webstore/detail/opendyslexic-font-for-chr/cdnapgfjopgaggbmfgbiinmmbdcglnam/related?hl=en") Chrome] and #[a(target="_blank", rel="noopener", title="Fill", href="https://addons.mozilla.org/en-US/firefox/addon/hidden-netflix-categories/") Firefox] apps that are now used by over 150,000 users. Along with the following
             ol
               li
-                |#[a(href="https://github.com/Projectbird/Helperbird-Dyslexia") Helperbird]
+                |#[a(target="_blank", rel="noopener", title="Fill", href="https://www.helperbird.com") Helperbird]
               li            
-                |#[a(href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en") Open Dyslexic For Chrome]
+                |#[a(target="_blank", rel="noopener", title="Fill", href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en") Open Dyslexic]
               li
-                |#[a(href="https://chrome.google.com/webstore/detail/markdown-live-preview/dkpldbigkfcgpamifjimiejipmodkigk") Markdown Editor For Chrome]
+                |#[a(target="_blank", rel="noopener", title="Fill", href="https://chrome.google.com/webstore/detail/markdown-live-preview/dkpldbigkfcgpamifjimiejipmodkigk") Markdown Editor For Chrome]
               li
-                |#[a(href="https://github.com/yvasiyarov/swagger") Swagger for Golang]
+                |#[a(target="_blank", rel="noopener", title="Fill", href="https://github.com/yvasiyarov/swagger") Swagger for Golang]
               li
-                |#[a(href="https://www.robertgabriel.ninja/apps/ios-wallpapers") iOS Wallpapers Gallery]
+                |#[a(target="_blank", rel="noopener", title="Fill", href="https://www.robertgabriel.ninja/apps/can-i-use") Can I use ___ for Chrome]
               li
-                |#[a(href="https://www.robertgabriel.ninja/apps/can-i-use") Can I use ___ for Chrome]
+                |#[a(target="_blank", rel="noopener", title="Fill", href="https://chrome.google.com/webstore/detail/sync-snip/lfdilgpdlbbffekebkinihgdjknbnbnc") Sync Snip]
               li
-                |#[a(href="https://chrome.google.com/webstore/detail/sync-snip/lfdilgpdlbbffekebkinihgdjknbnbnc") Sync Snip]
+                |#[a(target="_blank", rel="noopener", title="Fill", href="https://chrome.google.com/webstore/detail/netflix-hidden-categories/pajmfnmlmcknmehpcklomlblpdcpdmgg") Netflix Hidden Categories]
               li
-                |#[a(href="https://chrome.google.com/webstore/detail/netflix-hidden-categories/pajmfnmlmcknmehpcklomlblpdcpdmgg") Netflix Hidden Categories]
+                |#[a(target="_blank", rel="noopener", title="Fill", href="https://www.tooshytoask.com") Too Shy to Ask]
+
+              li
+                |#[a(target="_blank", rel="noopener", title="Fill", href="https://github.com/FezVrasta/bootstrap-material-design") Material Bootstrap]
+
+          
             p
-              | You can find more on  #[a(href="https://github.com/RobertJGabriel") GitHub].
+              | You can find more on  #[a(target="_blank", rel="noopener", title="Fill", href="https://github.com/RobertJGabriel") GitHub].
    
    
 
@@ -58,17 +58,29 @@ block pageBody
           .col-sm-12.boxes
             h2
               | Skills
+            p
+              | Throughout  years of experience, I has obtained a great deal of knowledge working for internal and external clients delivering web and mobile applications. 
+            p
+              | I have experience working with the following
             ul.footer-icons-black
-              li.color--vue
-                  include ../../app/assets/svgs/brands/vuejs.svg
-              li.color--css
-                  include ../../app/assets/svgs/brands/css3.svg
-              li.color--gulp
-                  include ../../app/assets/svgs/brands/gulp.svg
               li.color--html
                   include ../../app/assets/svgs/brands/html5.svg
               li.color--javascript
                   include ../../app/assets/svgs/brands/js.svg
+              li.color--css
+                  include ../../app/assets/svgs/brands/css3.svg
+              li.color--gulp
+                  include ../../app/assets/svgs/brands/gulp.svg
+              li.color--vue
+                  include ../../app/assets/svgs/brands/vuejs.svg
+              li.color--paypal
+                  include ../../app/assets/svgs/brands/angular.svg
+              li.color--node
+                  include ../../app/assets/svgs/brands/node-js.svg
+              li.color--npm
+                  include ../../app/assets/svgs/brands/less.svg
+              li.color--npm
+                  include ../../app/assets/svgs/brands/jenkins.svg
               li.color--maxcdn
                   include ../../app/assets/svgs/brands/maxcdn.svg
               li.color--apple
@@ -81,8 +93,6 @@ block pageBody
                   include ../../app/assets/svgs/brands/google.svg
               li.color--apple
                   include ../../app/assets/svgs/brands/aws.svg
-              li.color--paypal
-                  include ../../app/assets/svgs/brands/angular.svg
               li.color--stripe
                   include ../../app/assets/svgs/brands/cc-stripe.svg
               li.color--awesome
@@ -93,18 +103,12 @@ block pageBody
                   include ../../app/assets/svgs/brands/autoprefixer.svg
               li.color--git
                   include ../../app/assets/svgs/brands/git-square.svg
-              li.color--node
-                  include ../../app/assets/svgs/brands/node-js.svg
-              li.color--npm
-                  include ../../app/assets/svgs/brands/less.svg
               li.color--npm
                   include ../../app/assets/svgs/brands/linux.svg
               li.color--npm
                   include ../../app/assets/svgs/brands/laravel.svg
               li.color--npm
                   include ../../app/assets/svgs/brands/npm.svg
-              li.color--sass
-                  include ../../app/assets/svgs/brands/grunt.svg
               li.color--sass
                   include ../../app/assets/svgs/brands/sass.svg
               li.color--github
@@ -119,61 +123,146 @@ block pageBody
 
         .row
           .col-sm-12.boxes
-            h2 Current Projects
-            p
-              | I'm currently working on the following projects.
+            h2 Awards & Honours
             ol
               li
-                |#[a(href="https://www.helperbird.com") Helperbird for Chrome]
+                | Imagine Cup  National Runner Up
+                span.padding-left.label.label-default  
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://microsoft.ie") Microsoft]
+              li 
+                | Imagine Cup Innovation National Runner Up
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://microsoft.ie") Microsoft]
+              li 
+                | Microsoft Ireland Imagine Cup Finalist
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://microsoft.ie") Microsoft]
+              li 
+                | Hatchery Scholarship For Innovation
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://cit.ie") CIT]
+              li 
+                | Abbott Award For Network Code
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://abbott.ie") Abbott]
+              li 
+                |   The Most Technically Innovative Award
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://cit.ie") CIT]
+              li 
+                |   Maths and Algorithms 2nd (2012)
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://btyoungscientist.com/") BT Young Scientist]
+              li 
+                |  Technology 2nd Place (2011)
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://btyoungscientist.com/") BT Young Scientist]
               li
-                |#[a(href="https://www.tooshytoask.com") Too Shy to Ask]
-              li
-                |#[a(href="https://chrome.google.com/webstore/detail/opendyslexic-font-for-chr/cdnapgfjopgaggbmfgbiinmmbdcglnam/related") Open Dyslexic]
-              li
-                |#[a(href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk") Markdown Editor for Chrome]
-              li
-                |#[a(href="https://github.com/FezVrasta/bootstrap-material-design") Material Bootstrap]
-            p
-              | More can be seen #[a(href="https://github.com/RobertJGabriel") here.]
-
-   
-        .row
-          .col-sm-12.boxes
-            h2 Awards
-            ol
-              li Imagine Cup Innovation National Runner Up
-              li Imagine Cup Innovation National Runner Up X2
-              li Microsoft Ireland Imagine Cup Finalist X2
-              li Hatchery Scholarship For Innovation
-              li Abbott Award For Network Code
-              li The Most Technically Innovative Award CIT
-              li Bt Young Scientist Award: Maths and Algorithms
-              li Bt Young Scientist Award: Technology 2nd Place
-              li Sci-Fest Award: For Programming
-              li Sci-Fest Awards X4
-              li HEANet Special Award For Network and Scaling code
-              li Avaya Communications Special Award
-              li Junior Spiders Awards: All Ireland Title
-              li Junior Spider Awards: Best Application
-              li Teamwork Hackathon 2015: Runner Up
-              li Young Social Innovators All Ireland Title
-              li Project Cover Grant winner
-              li Google Scholarship Awards
-              li Lightening Talk Smackdown Winner
-              li 1 of 5 students to go to a private Google open day
-              li Overall Best Poster 2016 - Department of Computing Cork Institute of Technology
-              li
-                | Best Overall Final Year Project & Best Use of Open Source Tools - Department of Computing Cork Institute of Technology
-              li Everyday Excellence Award - Teamwork.com
-              li Scholar Award for finishing top in my year with a G.P.A of 3.9
-              li Above and Beyond the Call of Duty - Teamwork.com
-              li Above and Beyond the Call of Duty (Novemeber 2016) - Teamwork.com
-              li Above and Beyond the Call of Duty (Decemeber 2016) - Teamwork.com
-              li Everyday Excellence Award (Decemeber 2016) - Teamwork.com
+                | 2nd place Cork
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://scifest.ie/") Sci-Fest]
+              li 
+                | Awards and Merits X4
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://scifest.ie/") Sci-Fest]
+              li 
+                | Special Award For Network
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://www.heanet.ie/") HEANet]
+              li 
+                |   Communications  Award
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://www.avaya.com/en/") Avaya]
+              li 
+                | All Ireland Title & 1st place
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.juniorspiders.ie/") Junior Spiders Awards] 
+              li 
+                | Best Application
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.juniorspiders.ie/") Junior Spiders Awards]
+              li 
+                | Hackathon 2015: Runner Up
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.teamwork.com/") Teamwork.com]
+              li 
+                | All Ireland Title
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://www.youngsocialinnovators.ie")  Young Social Innovators]
+              li 
+                | Project Cover Grant winner
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://www.projectcover.org") Project Cover]
+              li 
+                | Google & Udemy Scholarship Award
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://www.udemy.com/") Google & Udemy]
+              li 
+                | Lightening Talk Smackdown Winner
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://rebelcon.io/") Rebel Con 2017]          
+              li 
+                | Invited: Google open day
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.cit.ie/") CIT & Google]
+              li 
+                | Overall Best Poster 2016
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.cit.ie/") CIT]
+              li 
+                | Best Overall Final Year Project
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.cit.ie/") CIT && IBM]
+              li 
+                | Best Use of Open Source Tools
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.cit.ie/") CIT && INTEL] 
+              li 
+                | Everyday Excellence Award
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.teamwork.com/") Teamwork.com]
+              li 
+                | BSc Honours in Computer Science 
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.cit.ie/") CIT]
+              li 
+                | The Faculty of Engineering & Science Scholar
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.cit.ie/") CIT]
+              li 
+                | Above and Beyond the Call of Duty
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.teamwork.com/") Teamwork.com]
+              li 
+                | Above and Beyond the Call of Duty
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.teamwork.com/") Teamwork.com]
+              li 
+                | Above and Beyond the Call of Duty
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.teamwork.com/") Teamwork.com]
+              li 
+                | Everyday Excellence Award
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.teamwork.com/") Teamwork.com]
+              li 
+                | Everyday Excellence Award
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.teamwork.com/") Teamwork.com]
+              li 
+                | Everyday Excellence Award
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.teamwork.com/") Teamwork.com]
+              li 
+                | Curated $100 Micro Grant
+                span.padding-left.label.label-default
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="https://mechaelephant.com/microgrant") Abe]
+              li 
+                | #5 product of the day
+                span.padding-left.label.label-default 
+                    | #[a.label-link(target="_blank", rel="noopener", title="Fill", href="http://www.producthunt.com/") ProductHunt]
             p
               | Plus several other scholastic achievements.
-              br
-              | I’ve been offered interviews with the likes of Google, Yahoo and other significant companies in the past.
 
         .row
           .col-sm-12.boxes
@@ -183,20 +272,20 @@ block pageBody
               | This site reaches 100% on lighthouse.
               | Built with these langues plus a few others.
             ul.footer-icons-black
-              li.color--vue
-                  include ../../app/assets/svgs/brands/vuejs.svg
-              li.color--css
-                  include ../../app/assets/svgs/brands/css3.svg
-              li.color--gulp
-                  include ../../app/assets/svgs/brands/gulp.svg
               li.color--html
                   include ../../app/assets/svgs/brands/html5.svg
+              li.color--css
+                  include ../../app/assets/svgs/brands/css3.svg
               li.color--javascript
                   include ../../app/assets/svgs/brands/js.svg
+              li.color--sass
+                  include ../../app/assets/svgs/brands/sass.svg
+              li.color--vue
+                  include ../../app/assets/svgs/brands/vuejs.svg
+              li.color--gulp
+                  include ../../app/assets/svgs/brands/gulp.svg
               li.color--maxcdn
                   include ../../app/assets/svgs/brands/maxcdn.svg
-              li.color--apple
-                  include ../../app/assets/svgs/brands/apple-pay.svg
               li.color--paypal
                   include ../../app/assets/svgs/brands/cc-paypal.svg
               li.color--stripe
@@ -211,8 +300,7 @@ block pageBody
                   include ../../app/assets/svgs/brands/node-js.svg
               li.color--npm
                   include ../../app/assets/svgs/brands/npm.svg
-              li.color--sass
-                  include ../../app/assets/svgs/brands/sass.svg
+
 
 
 
@@ -220,7 +308,7 @@ block pageBody
           .col-sm-12.boxes
             h2 Contact
             p
-              | Want me to work for your team or even just to chat? Send an email to #[a(href="mailto:robert_gabriel@outlook.com") robert_gabriel@outlook.com] and I’ll get back to you.
+              | Want me to work for your team or even just to chat? Send an email to #[a(target="_blank", rel="noopener", title="Fill", href="mailto:robert_gabriel@outlook.com") robert_gabriel@outlook.com] and I’ll get back to you.
 
 
 

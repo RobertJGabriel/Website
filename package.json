@@ -1,19 +1,21 @@
 {
   "name": "robert_james_gabriel",
-  "version": "1.1.0",
+  "version": "2.1.0",
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp vendor_css && gulp build-downloads && gulp move_app_files && gulp vendor_js && gulp webp_js && gulp app_js && gulp app_css && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp build-settings && gulp html && gulp cache  && http-server dist",
+    "dev": "gulp build && http-server dist",
     "server": "http-server dist",
-    "start": " gulp vendor_css && gulp build-downloads && gulp move_app_files && gulp vendor_js && gulp webp_js  && gulp app_js && gulp app_css &&  gulp final_css && gulp images && gulp images-png && gulp app_js_vue  && gulp extra && gulp build-settings && gulp html && gulp cache",
+    "build": "gulp build",
+    "start": " gulp build",
     "fuckit": "git add . && git commit -m 'new site update' && git push",
-    "publish": "gulp vendor_css && gulp build-downloads && gulp vendor_js && gulp move_app_files && gulp webp_js  && gulp app_js && gulp app_css && gulp final_css && gulp images && gulp images-png  && gulp app_js_vue && gulp extra && gulp build-settings && gulp html && git add . && git commit -m 'new site update' && git push"
+    "publish": "gulp build && git add . && git commit -m 'new site update' && git push"
   },
   "repository": "git+https://github.com/RobertJGabriel/Website.git",
   "dependencies": {
     "del": "^3.0.0",
     "gulp-clean-css": "^3.10.0",
+    "gulp-hub": "^0.8.0",
     "gulp-pug": "^4.0.1",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
@@ -23,12 +25,11 @@
     "jsesc": "^2.5.2",
     "npm-bump": "0.0.25",
     "postcss-uncss": "^0.16.1",
+    "require-dir": "^1.2.0",
     "standard": "^12.0.1",
-    "travis-tweet-update": "^1.0.0",
     "uncss": "^0.16.2"
   },
   "devDependencies": {
-    "twitter": "^1.7.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",

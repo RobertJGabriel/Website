@@ -1,19 +1,14 @@
 //- Use `append vars` to override these in your page's layout
 block vars
-    - var metaTitle = 'Robert James Gabriel: Software engineer'
-    - var metaDescription = 'Robert James Gabriel is a open source engineer. He has also written papers on Learning Web Accessibility, Design and Machine Learning and Ux issues'
-    - var metaKeywords = 'HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design'
+    - var metaTitle = locals.site.title
+    - var metaDescription = locals.site.description
+    - var metaKeywords = locals.site.keywords
     - var bodyClasses = ''
-    - var pageUrl = 'https://www.robertgabriel.ninja'
-    - var pageProduct = 'desk'
-    - var masterBinding = Math.floor(Math.random() * (15 - 1300) + 1300)
-    - var showFooterNav = true
-    - var showFooterSignup = true
-    - var showHeader = true
-    - var showMainNav = true
-    - var showSearchBar = true
-    - var develop = false
-    - var currentPath = 'https://www.robertgabriel.ninja'
+    - var pageUrl = locals.site.url
+    - var currentPath = locals.site.url
+    - var author = locals.site.author
+    - var year = locals.settings.year
+    - var workingOn = locals.personal.current
 
 doctype
 html(lang="en",itemscope,itemtype="http://schema.org/MobileApplication")
@@ -82,7 +77,7 @@ html(lang="en",itemscope,itemtype="http://schema.org/MobileApplication")
             block headStyles
 
 
-    body(class=bodyClasses)
+    body
 
       include header
       block pageBody

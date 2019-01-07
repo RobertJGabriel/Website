@@ -1,0 +1,20 @@
+{
+    "locals": {
+        "site": {
+            "title": "Robert James Gabriel - Software engineer",
+            "author": "Robert James Gabriel",
+           
+            "description": "Robert James Gabriel is an experienced lead and engineer with a focus on performance and engineering for the mobile, and web.",
+            "url": "https://www.robertgabriel.ninja",
+            "keywords": "html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexia"
+        },
+        "settings":{
+            "year":"2019"
+        },
+        "personal":{
+            "current": "Helperbird  & Opensource"
+        }
+    },
+    "pretty": true,
+    "basedir": null
+}

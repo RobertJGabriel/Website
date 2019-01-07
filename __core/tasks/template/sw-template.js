@@ -2,7 +2,7 @@
 
 const PREFIX = 'robertgabriel.ninja';
 const HASH = %HASH%;
-const OFFLINE_CACHE = `${PREFIX}-${HASH}`;
+const OFFLINE_CACHE = PREFIX + '-' + HASH;
 
 self.addEventListener('install', function(event) {
 	event.waitUntil(
