@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import requireDir from 'require-dir';
 
 import config from './__core/settings/config.json';
-var tasks = requireDir('./__core/tasks');
+var tasks = requireDir('./__core/tasks/');
 
 config.basedir = __dirname;
 
@@ -21,3 +21,6 @@ gulp.task('build', gulp.series(
   tasks.html.html, 
   tasks.sw.cache
 ));
+
+
+gulp.task('cache', gulp.series(  tasks.sw.cache));

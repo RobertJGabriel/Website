@@ -4,8 +4,8 @@ node_js:
   - '8'
 
 before_install:
-- yarn global add gulp
-- yarn install
+- npm global add gulp
+- npm install
 
 deploy:
   provider: pages
@@ -18,9 +18,9 @@ deploy:
     branch: master
 
 cache:
-  yarn: true
+  npm: true
   directories:
     - node_modules
 
 script:
-- yarn run start
+- npm run start
