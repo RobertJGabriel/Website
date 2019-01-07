@@ -1,10 +1,9 @@
 var repos = new Vue({
     el: '#navBar',
     data: {
-        isOpen: false,
+        isOpen: true,
     },
     created: function () {
-        console.log('hoooo');
         var WebP;
         WebP = new Image();
         WebP.onload = WebP.onerror = function () {

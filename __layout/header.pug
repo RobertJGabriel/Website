@@ -4,7 +4,7 @@
     .navbar-header
       a.navbar-brand(href='/')
         | #{author}
-      a.menu-button.home(v-oRobert James Gabrieln:click="open", v-click-outside="outside", v-if="!isOpen")
+      a.menu-button.home(v-on:click="open", v-click-outside="outside", v-if="!isOpen")
         include /app/assets/svgs/solid/bars.svg
       a.menu-button.home.hide(v-if="isOpen", v-click-outside="outside", v-on:click="outside",v-bind:class="{ show: isOpen }")
         include /app/assets/svgs/solid/times.svg
