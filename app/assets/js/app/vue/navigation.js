@@ -1,7 +1,7 @@
 var repos = new Vue({
     el: '#navBar',
     data: {
-        isOpen: true,
+        isOpen: false,
     },
     created: function () {
         var WebP;

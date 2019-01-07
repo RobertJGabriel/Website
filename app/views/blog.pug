@@ -28,10 +28,11 @@ block pageBody
           h1.text-center
             b Blog
           h2.text-center
-            | Thoughts, Ideas & Rants by #[a(href='https://medium.com/@RobertJGabriel/') @RobertJGabriel]
+            | Thoughts, Ideas & rants by #[a(href='https://medium.com/@RobertJGabriel/') @RobertJGabriel]
 
       .col-sm-3.col-md-3.col-lg-3
-
+    .row
+      .col-sm-3.col-md-3.col-lg-3
       .col-sm-6.col-md-6.col-lg-6.wrapper.blog
         .c(v-bind:class="{ hide: loading == false }")
           include /__layout/loading
@@ -40,6 +41,4 @@ block pageBody
             .boxes
               img.img-responsive(v-bind:src='posts.thumbnail',alt='posts.pubDate')
               h2  {{posts.title}}
-
-    
               a.btn.btn-flat.btn-warning(v-bind:href="posts.link", target="blank") Read
