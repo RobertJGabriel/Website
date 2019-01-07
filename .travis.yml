@@ -4,8 +4,9 @@ node_js:
   - '8'
 
 before_install:
-- npm global add gulp
 - npm install
+- npm global add gulp
+
 
 deploy:
   provider: pages
