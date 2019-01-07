@@ -10,6 +10,12 @@ append vars
     - var currentPath = 'https://www.robertgabriel.ninja/apps/'
 
 block pageBody
+  script(src='https://unpkg.com/vue@2.5.16/dist/vue.min.js')
+  script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
+
+  script(src='../assets/js/vue/repos.js',defer)
+
+
   .container-fluid.base-header
     .row
       .col-sm-3.col-md-3.col-lg-3
@@ -88,3 +94,36 @@ block pageBody
               a.btn.btn-flat.color-white(href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk", target="blank")  Try it now!
           .col-sm-4
           .col-sm-4
+
+
+    .row#repos
+
+      .col-sm-3.col-md-3.col-lg-3
+      .col-sm-6.col-md-6.col-lg-6.wrapper
+        .row
+          h1.text-center
+            b Latest Repos & Projects
+          h2.text-center
+            | On #[a(href='https://github.com/robertjgabriel')  Github]
+      .col-sm-3.col-md-3.col-lg-3
+      .col-sm-12.col-md-12.col-lg-12.wrapper
+
+        .c(v-bind:class="{ hide: loading == false}")
+          include /__layout/loading
+
+        .row(v-for="i in Math.ceil(repos.length / 5)" v-bind:class="{ hide: loading == true}" v-cloak )
+          .col-sm-4(v-for="repo in repos.slice((i - 1) * 3, i * 3)")
+            .boxes
+              h2.common-IntroText {{repo.name}}
+              p.common-BodyText
+                | {{repo.description}}
+              p
+                span.label.label-success.margin-right.labels-yellow(for="")
+                  | {{repo.language}}
+                span.info
+                  include /app/assets/svgs/solid/star.svg
+                  | {{repo.stargazers_count}}
+              p.margin-top
+                a.btn.btn-flat.btn-warning.btn-padding-left(v-bind:href="repo.html_url", target="blank")  View on Github
+
+      .col-sm-3.col-md-3.col-lg-3
