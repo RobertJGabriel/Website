@@ -6,9 +6,6 @@ import gutil from 'gulp-util';
 import concat from 'gulp-concat';
 
 
-
-
-
 module.exports = {
   app_js: function () {
     return gulp
