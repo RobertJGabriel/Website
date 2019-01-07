@@ -10,45 +10,45 @@ block pageBody
       .col-sm-6.col-md-6.col-lg-6.wrapper
         .row
 
-          img.me.img-responsive(src='./assets/img/me/me-4.webp', alt='Robert James Gabriel', width='150', height='150')
+          img.me.img-responsive(src='./assets/img/me/me-5.webp', alt='Robert James Gabriel', width='150', height='150')
           h1.text-center
-            b Robert James Gabriel
+            b #{author}
           h2.text-center
-            | Engineer working as a #[a(href="https://github.com/robertjgabriel/") Full-Time Open-Sourcer]
+            | Engineer working on #[a(href="https://github.com/robertjgabriel/") #{workingOn}]
 
         .row
           .col-sm-12.boxes
             h2 About Me
             p
-              | I 💗 the web & coffee. I write open source code and make chrome extensions. Previously at #[a(href="https://www.teamwork.com/") Teamwork], #[a(href="https://www.emc.com/") Dell & Emc].
-            p
-              | I also the author of two published papers including ‘Problems Posed by Ad-blockers’ and ‘Web Accessibility and OpenDyslexia’.
-            p
-              | Currently I love working with; Node.js and Golang.
-
+              | Robert James is currently building open source projects and sass products, PWA's across iOS, Android, Website, and TV while traveling the world. To speak at events. Previously at #[a(href="https://www.teamwork.com/") Teamwork], #[a(href="https://www.emc.com/") Dell & Emc].
 
         .row
           .col-sm-12.boxes
-            h2 Apps
+            h2 Apps & Projects
             p
-              | Here are some of the apps I’ve made.
+              | In my spare time, I work and maintain the OpenDyslexic #[a(href="https://chrome.google.com/webstore/detail/opendyslexic-font-for-chr/cdnapgfjopgaggbmfgbiinmmbdcglnam/related?hl=en") Chrome] and #[a(href="https://addons.mozilla.org/en-US/firefox/addon/hidden-netflix-categories/") Firefox] apps that are now used by over 150,000 users. Along with the following
             ol
               li
-                |#[a(href="https://github.com/Projectbird/Helperbird-Dyslexia") Helperbird]
+                |#[a(href="https://www.helperbird.com") Helperbird]
               li            
-                |#[a(href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en") Open Dyslexic For Chrome]
+                |#[a(href="https://chrome.google.com/webstore/detail/opendyslexic/cdnapgfjopgaggbmfgbiinmmbdcglnam?hl=en") Open Dyslexic]
               li
                 |#[a(href="https://chrome.google.com/webstore/detail/markdown-live-preview/dkpldbigkfcgpamifjimiejipmodkigk") Markdown Editor For Chrome]
               li
                 |#[a(href="https://github.com/yvasiyarov/swagger") Swagger for Golang]
-              li
-                |#[a(href="https://www.robertgabriel.ninja/apps/ios-wallpapers") iOS Wallpapers Gallery]
               li
                 |#[a(href="https://www.robertgabriel.ninja/apps/can-i-use") Can I use ___ for Chrome]
               li
                 |#[a(href="https://chrome.google.com/webstore/detail/sync-snip/lfdilgpdlbbffekebkinihgdjknbnbnc") Sync Snip]
               li
                 |#[a(href="https://chrome.google.com/webstore/detail/netflix-hidden-categories/pajmfnmlmcknmehpcklomlblpdcpdmgg") Netflix Hidden Categories]
+              li
+                |#[a(href="https://www.tooshytoask.com") Too Shy to Ask]
+
+              li
+                |#[a(href="https://github.com/FezVrasta/bootstrap-material-design") Material Bootstrap]
+
+          
             p
               | You can find more on  #[a(href="https://github.com/RobertJGabriel") GitHub].
    
@@ -58,17 +58,29 @@ block pageBody
           .col-sm-12.boxes
             h2
               | Skills
+            p
+              | Throughout  years of experience, I has obtained a great deal of knowledge working for internal and external clients delivering web and mobile applications. 
+            p
+              | I have experience working with the following
             ul.footer-icons-black
-              li.color--vue
-                  include ../../app/assets/svgs/brands/vuejs.svg
-              li.color--css
-                  include ../../app/assets/svgs/brands/css3.svg
-              li.color--gulp
-                  include ../../app/assets/svgs/brands/gulp.svg
               li.color--html
                   include ../../app/assets/svgs/brands/html5.svg
               li.color--javascript
                   include ../../app/assets/svgs/brands/js.svg
+              li.color--css
+                  include ../../app/assets/svgs/brands/css3.svg
+              li.color--gulp
+                  include ../../app/assets/svgs/brands/gulp.svg
+              li.color--vue
+                  include ../../app/assets/svgs/brands/vuejs.svg
+              li.color--paypal
+                  include ../../app/assets/svgs/brands/angular.svg
+              li.color--node
+                  include ../../app/assets/svgs/brands/node-js.svg
+              li.color--npm
+                  include ../../app/assets/svgs/brands/less.svg
+              li.color--npm
+                  include ../../app/assets/svgs/brands/jenkins.svg
               li.color--maxcdn
                   include ../../app/assets/svgs/brands/maxcdn.svg
               li.color--apple
@@ -81,8 +93,6 @@ block pageBody
                   include ../../app/assets/svgs/brands/google.svg
               li.color--apple
                   include ../../app/assets/svgs/brands/aws.svg
-              li.color--paypal
-                  include ../../app/assets/svgs/brands/angular.svg
               li.color--stripe
                   include ../../app/assets/svgs/brands/cc-stripe.svg
               li.color--awesome
@@ -93,18 +103,12 @@ block pageBody
                   include ../../app/assets/svgs/brands/autoprefixer.svg
               li.color--git
                   include ../../app/assets/svgs/brands/git-square.svg
-              li.color--node
-                  include ../../app/assets/svgs/brands/node-js.svg
-              li.color--npm
-                  include ../../app/assets/svgs/brands/less.svg
               li.color--npm
                   include ../../app/assets/svgs/brands/linux.svg
               li.color--npm
                   include ../../app/assets/svgs/brands/laravel.svg
               li.color--npm
                   include ../../app/assets/svgs/brands/npm.svg
-              li.color--sass
-                  include ../../app/assets/svgs/brands/grunt.svg
               li.color--sass
                   include ../../app/assets/svgs/brands/sass.svg
               li.color--github
@@ -117,26 +121,6 @@ block pageBody
                   include ../../app/assets/svgs/brands/expeditedssl.svg                  
 
 
-        .row
-          .col-sm-12.boxes
-            h2 Current Projects
-            p
-              | I'm currently working on the following projects.
-            ol
-              li
-                |#[a(href="https://www.helperbird.com") Helperbird for Chrome]
-              li
-                |#[a(href="https://www.tooshytoask.com") Too Shy to Ask]
-              li
-                |#[a(href="https://chrome.google.com/webstore/detail/opendyslexic-font-for-chr/cdnapgfjopgaggbmfgbiinmmbdcglnam/related") Open Dyslexic]
-              li
-                |#[a(href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk") Markdown Editor for Chrome]
-              li
-                |#[a(href="https://github.com/FezVrasta/bootstrap-material-design") Material Bootstrap]
-            p
-              | More can be seen #[a(href="https://github.com/RobertJGabriel") here.]
-
-   
         .row
           .col-sm-12.boxes
             h2 Awards
