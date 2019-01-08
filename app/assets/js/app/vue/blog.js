@@ -5,7 +5,7 @@ var blog = new Vue({
     blogPosts: []
   },
   created: function () {
-    this.fetchData()
+    this.fetchData();
   },
   methods: {
     fetchData: function () {
