@@ -21,3 +21,5 @@ gulp.task('build', gulp.series(
   TASKS.html.html, 
   TASKS.sw.cache
 ));
+
+gulp.task('html', gulp.series(  TASKS.html.html));
