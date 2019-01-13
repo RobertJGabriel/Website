@@ -9,6 +9,7 @@ block vars
     - var author = locals.site.author
     - var year = locals.settings.year
     - var workingOn = locals.personal.current
+    - var url = locals.site.url
 
 doctype
 html(lang="en",itemscope,itemtype="http://schema.org/MobileApplication")
@@ -48,7 +49,7 @@ html(lang="en",itemscope,itemtype="http://schema.org/MobileApplication")
             meta(property='og:description', content=metaDescription)
 
             meta(property='author', content='Robert James Gabriel')
-            meta(property='og:site_name', content='robertgabriel.ninja')
+            meta(property='og:site_name', content=metaKeywords)
             meta(name='twitter:site', content='@robertjgabriel')
             meta(name='twitter:creator', content='@robertjgabriel')
 
@@ -67,7 +68,7 @@ html(lang="en",itemscope,itemtype="http://schema.org/MobileApplication")
               {
               "@context": "http://schema.org",
               "@type": "Organization",
-              "url": "https://robertgabriel.ninja",
+              "url": metaKeywords,
               "logo": "assets/images/me/me-4.png"
               }
 

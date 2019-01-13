@@ -6,7 +6,7 @@ html
     link(href='assets/netflix/styles/vendor/bootstrap.min.css', rel='stylesheet')
     link(href='assets/netflix/styles/vendor/material.min.css', rel='stylesheet')
     link(href='assets/netflix/styles/styles.css', rel='stylesheet')
-    link(rel="canonical" href="https://www.robertgabriel.ninja/apps/netflix")
+    link(rel="canonical" href= url + "/apps/netflix")
   body
     #app.container
       .navbar.notWhite
@@ -43,7 +43,7 @@ html
           .row
             a.col-xs-6(href='https://www.netflix.com', target='_blank')
               i.fa.fa-home(aria-hidden='true', title='Go home.')
-            a.col-xs-6(href='https://www.robertgabriel.ninja/donate', target='_blank')
+            a.col-xs-6(href= url + 'donate', target='_blank')
               i.fas.fa-donate(aria-hidden='true', title='Support my work')
     script(src='assets/netflix/scripts/vendor/vue.js', type='text/javascript')
     script(src='assets/netflix/scripts/vendor/vue-resouce.js', type='text/javascript')
