@@ -4,15 +4,16 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp build && http-server dist",
+    "dev": "gulp build && node __core/tasks/redirects.js && http-server dist",
     "server": "http-server dist",
-    "build": "gulp build",
-    "start": " gulp build",
+    "build": "gulp build && node __core/tasks/redirects.js ",
+    "start": " gulp build && node __core/tasks/redirects.js",
     "fuckit": "git add . && git commit -m 'new site update' && git push",
-    "publish": "gulp build && git add . && git commit -m 'new site update' && git push"
+    "publish": "gulp build && node __core/tasks/redirects.js && git add . && git commit -m 'new site update' && git push"
   },
   "repository": "git+https://github.com/RobertJGabriel/Website.git",
   "dependencies": {
+    "bluebird": "^3.5.3",
     "del": "^3.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-hub": "^0.8.0",
