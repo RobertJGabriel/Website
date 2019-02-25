@@ -7,6 +7,14 @@ append vars
     - var pageUrl = url + 'apps/'
     - var currentPath = url + 'apps/'
 
+block headScript
+
+  script(src='https://unpkg.com/vue@2.5.16/dist/vue.min.js')
+  script(src='https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js')
+  script(src='./assets/js/vue/repos.js',defer)
+
+
+
 block pageBody
 
 
@@ -85,4 +93,28 @@ block pageBody
                 | Annoyed writing markdown? Find it awkward to write it on Github, twitch or your code editor?
                 | Markdown editor premium allows you to write markdown without leaving your browser. Supporting all popular coding languages.
               a.btn.btn-flat.color-white(href="https://chrome.google.com/webstore/detail/markdown-editor-chrome-gi/dkpldbigkfcgpamifjimiejipmodkigk", target="blank")  Try it now!
-
+      
+      .col-sm-12.col-md-12.col-lg-12.wrapper
+        .c(v-bind:class="{ hide: loading == false}")
+          include /__layout/loading
+        table.table.table-striped.table-hover( v-bind:class="{ hide: loading == true}" v-cloak )
+          thead
+            tr
+              th #
+              th Column heading
+              th Column heading
+              th Column heading
+          tbody
+            tr(v-for="repo in repos")
+              td 1
+              td 
+                | {{repo.name}}
+              td
+                | {{repo.description}}
+              td
+                | {{repo.language}}
+              td
+                | {{repo.stargazers_count}}
+              td
+                a(v-bind:href="repo.html_url", target="blank")  View
+  
