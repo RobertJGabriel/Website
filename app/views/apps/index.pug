@@ -120,13 +120,13 @@ block pageBody
             tr
               th Name
               th Description
-              th
+
           tbody
             tr(v-for="repo in repos")
               td 
-                | {{repo.name}}
+                a(v-bind:href="repo.html_url", target="blank")  
+                  | {{repo.name}}
               td
                 | {{repo.description}}
-              td
-                a(v-bind:href="repo.html_url", target="blank")  View
+
   
