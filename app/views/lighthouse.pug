@@ -6800,9 +6800,9 @@ html
       const metricAuditsEl = this.renderAuditGroup(groups['metrics'], {expandable: false});
       const keyMetrics = metricAudits.filter(a => a.weight >= 3);
       const otherMetrics = metricAudits.filter(a => a.weight < 3);
-      const metricsBoxesEl = this.dom.createChildOf(metricAuditsEl, 'div', 'lh-metric-container');
-      const metricsColumn1El = this.dom.createChildOf(metricsBoxesEl, 'div', 'lh-metric-column');
-      const metricsColumn2El = this.dom.createChildOf(metricsBoxesEl, 'div', 'lh-metric-column');
+      const metricsboxes.pullUpEl = this.dom.createChildOf(metricAuditsEl, 'div', 'lh-metric-container');
+      const metricsColumn1El = this.dom.createChildOf(metricsboxes.pullUpEl, 'div', 'lh-metric-column');
+      const metricsColumn2El = this.dom.createChildOf(metricsboxes.pullUpEl, 'div', 'lh-metric-column');
       keyMetrics.forEach(item => {
       metricsColumn1El.appendChild(this._renderMetric(item));
       });

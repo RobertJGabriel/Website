@@ -40,7 +40,7 @@ block pageBody
 
         .row(v-for="i in Math.ceil(repos.length / 5)" v-bind:class="{ hide: loading == true}" v-cloak )
           .col-sm-4(v-for="repo in repos.slice((i - 1) * 3, i * 3)")
-            .boxes
+            .boxes.pullUp
               h2.common-IntroText {{repo.name}}
               p.common-BodyText
                 | {{repo.description}}
