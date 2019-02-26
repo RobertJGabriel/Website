@@ -2,6 +2,8 @@
        "bag": "blog/bag",
        "adblockers": "blog/adblockers",
        "projects": "apps",
+       "apps/helperbird": "https://www.helperbird.com",
+       "donate": "https://www.paypal.me/robertjgabriel",
        "acquired-hidden-categories": "blog/acquired-hidden-categories",
        "research-into-web-accessibility-for-dyslexics": "blog/research-into-web-accessibility-for-dyslexics"
 }

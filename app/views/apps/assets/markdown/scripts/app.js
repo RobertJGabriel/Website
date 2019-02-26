@@ -3,7 +3,7 @@
 var paid = true;
 Vue.config.productionTip = false;
 
-var markdownString = '### What is Markdown? \n \n' + ' Markdown is a lightweight markup language with plain text formatting syntax.  \n \n' + '#### Features \n \n' + '- Tables \n' + '- Fenced code blocks \n' + '- Even More \n\n' + '```javascript \n\n' + 'function javascriptIsWild(){ \n \n' + 'parseInt("Infinity", 10) // -> NaN \n\n' + '}\n' + '```' + '\n\n ### Support my work? \n\n 1. [My Donate Page](https://www.robertgabriel.ninja/donate) \n\n 2. [Patreon](https://www.patreon.com/robertjgabriel) ';
+var markdownString = '### What is Markdown? \n \n' + ' Markdown is a lightweight markup language with plain text formatting syntax.  \n \n' + '#### Features \n \n' + '- Tables \n' + '- Fenced code blocks \n' + '- Even More \n\n' + '```javascript \n\n' + 'function javascriptIsWild(){ \n \n' + 'parseInt("Infinity", 10) // -> NaN \n\n' + '}\n' + '```' + '\n\n ### Support my work? \n\n 1. [My Donate Page](https://www.robertgabriel.ninja/) \n\n 2. [Patreon](https://www.patreon.com/robertjgabriel) ';
 
 if (!paid) {
   markdownString += '\n\n ### Premium Version \n\n 1. Auto save your work!! \n\n 2. Only 1.99 cent \n\n 3. Download your work to the desktop';

@@ -2,12 +2,10 @@ extends /__layout/layout
 
 append vars
     - var bodyClasses = ''
-    - var metaTitle = 'Contact me | Robert James Gabriel'
+    - var metaTitle = 'Contact | Robert James Gabriel'
     - var metaDescription = 'Contact me for talks, contact work or jobs. Open to job offers and remote work. Feel free to drop me a line today.'
     - var metaKeywords = 'HTML, CSS, XML, JavaScript, Robert James Gabriel, award winning, php, experienced, Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer, golang, web design'
     - var pageUrl = url + 'contact'
-
-
     - var currentPath = url + 'contact'
 
 
@@ -42,10 +40,9 @@ block pageBody
                   select.form-control(type='text',name='app')
                     option(value='Other') Other
                     option(value='Markdown Editor') Markdown Editor
-                    option(value='Open Dyslexic') Open Dyslexic
+                    option(value='Open Dyslexic') OpenDyslexic
                     option(value='Helperbird') Helperbird
                     option(value='Netflix App') Netflix
-
 
               .form-group
                 .col-md-12
@@ -82,9 +79,6 @@ block pageBody
               li.color--html
                 a(href='https://www.linkedin.com/in/robertjamesgabriel',  title='Add me on Linkedin')
                   include ../../app/assets/svgs/brands/linkedin.svg
-              li.color--javascript
-                a(href='/donate', title='Support my work')
-                  include ../../app/assets/svgs/solid/donate.svg
               li.color--maxcdn
                 a(href='https://www.twitch.tv/robertjamesgabriel/', title='Add me on Twitch')
                   include ../../app/assets/svgs/brands/twitch.svg
