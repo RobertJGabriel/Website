@@ -35,7 +35,7 @@ block pageBody
           include /__layout/loading
         .row
           .col-sm-12(v-for="posts in blogPosts", v-bind:class="{ hide: loading == true}" v-cloak)
-            .boxes.pullUp
+            .boxes
               img.img-responsive(v-bind:src='posts.thumbnail',alt='posts.pubDate')
               h2  {{posts.title}}
               a.btn.btn-flat.btn-warning(v-bind:href="posts.link", target="blank") Read

@@ -13,8 +13,7 @@ module.exports = {
         return gulp
             .src([
                 './app/assets/css/vendor/bootstrap.css',
-                './app/assets/css/vendor/bootstrap-material-design.css',
-                './app/assets/css/vendor/animations.css'
+                './app/assets/css/vendor/bootstrap-material-design.css'
             ])
             .pipe(concatCss('vendor.css'))
             .pipe(
