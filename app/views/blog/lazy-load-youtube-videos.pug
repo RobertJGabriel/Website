@@ -1,0 +1,42 @@
+extends /__layout/layout
+append vars
+  - var bodyClasses = 'story'
+  - var metaTitle = 'Lazy load Youtube videos using Javascript | Robert James Gabriel'
+  - var metaDescription = 'Learn now lazy load Youtube videos using Javascript '
+  - var metaKeywords = 'HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design'
+  - var pageUrl = url + 'blog/lazy-load-youtube-videos'
+  - var currentPath = url + 'blog/lazy-load-youtube-videos'
+
+block pageBody
+  header#header.withripple.shadow
+    .container
+      .row
+        .col-xs-3.col-md-3.col-lg-3
+        .col-xs-6.col-md-6.col-lg-6
+          h1#logo2.header-title
+            | Lazy load Youtube videos using Javascript
+        .col-xs-3.col-md-3.col-lg-3
+  .overlay
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css")
+  .container(style='position: relative;')
+    .row
+      .col-xs-3.col-md-3.col-lg-3
+      .col-xs-6.col-md-6.col-lg-6
+        p
+          | I was recently working on perfomance issues with the Helperbird website. I noticed that the Youtube videos we have on the page was huge bottle neck in terms of loading and first meaningful paint.
+        p
+          | I thought, how about lazy loading the youtube videos and its super simple.
+
+        h1 How to?
+
+        code.hljs
+            :highlight(lang="javascript")
+
+                    <!-- (1) video wrapper -->
+                <div class="youtubeLazyLoad" data-embed="AqcjdkPMPJA"> 
+                
+                    <!-- (2) the "play" button -->
+                    <div class="play-button"></div> 
+                    
+                </div>
+      .col-xs-3.col-md-3.col-lg-3
