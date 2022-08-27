@@ -1,0 +1,213 @@
+{
+    "websites": [
+        {
+            "data": "September 21 2021",
+            "title": "Jacksmedia.net",
+            "website": "Jacksmedia.net",
+            "description": "Welcome to JACKS, a webzine for you to get all the latest on live music in Liverpool and keeping you up to date on the indie and alternative scene with news, reviews and more.",
+
+            "link": "https://www.jacksmedia.net",
+            "img": "jacks.webp"
+        },
+        {
+            "data": "September 21 2021",
+            "title": "Teamwork Desk API",
+            "website": "Teamwork Desk API",
+            "description": "Bend Teamwork Desk to your will using these read and write endpoints.",
+
+            "link": "https://deskdeveloper.teamwork.com/",
+            "img": "deskapi.webp"
+        },
+        {
+            "data": "September 21 2021",
+            "title": "Teamwork Blog",
+            "website": "Teamwork Blog",
+            "description": "Roadmap for new features coming to Teamwork.com, Teamwork Projects, Teamwork Desk and Teamwork Chat.",
+
+            "link": "https://blog.teamwork.com/",
+            "img": "blog.webp"
+        },
+        {
+            "data": "September 21 2021",
+            "title": "Teamwork Desk",
+            "website": "Teamwork Desk",
+            "description": "Our suite of products work together so you can track every detail without leaving your Teamwork.com application. Start a conversation through Teamwork Desk ...",
+
+            "link": "https://www.teamworkdesk.com/",
+            "img": "desk.webp"
+        }, {
+            "data": "September 21 2021",
+            "title": "Teamwork.com",
+            "website": "Teamwork.com",
+            "description": "Online project management, help desk & team messaging software designed to maximize your teams productivity, communication, and overall customer happiness.",
+
+            "link": "https://www.teamwork.com/",
+            "img": "teamwork.webp"
+        }, {
+            "data": "September 21 2021",
+            "title": "Clean energy Ireland",
+            "website": "Clean energy Ireland",
+            "description": "Munster’s top installer of NSAI Certified Solar PV Panels since 2006. NSAI Certified Solar Panels (Solar PV) transform daylight directly into electricity.",
+
+            "link": "https://www.cleanenergyireland.ie/",
+            "img": "clean.webp"
+        }, {
+            "data": "September 21 2021",
+            "title": "Courtney Hood - Video Editor",
+            "website": "Courtney Hood - Video Editor",
+            "description": "Im Courtney Hood and Im a video editor with years of experience working for brands such as Disney, Intel, Adobe, Lexus, Garnier-Fructis, Evian, History Channel and CNN.",
+
+            "link": "https://www.courtneymakesvideo.com/",
+            "img": "court.webp"
+        }, {
+            "data": "September 21 2021",
+            "title": "Yaa Its an Art Studio",
+            "website": "Yaa Its an Art Studio",
+            "description": "Art classes that bring colour to your young budding artists life",
+
+            "link": "https://www.yaaitsanartstudio.net/",
+            "img": "yaa.webp"
+        }, {
+            "data": "September 21 2021",
+            "title": "Wedding Videographer and Cinematographer - VectorPm.net",
+            "website": "Wedding Videographer and Cinematographer - VectorPm.net",
+            "description": "Wedding Videographer specialise in capturing those family moments in a creative captivating way! Unique approach goes beyond traditional wedding videos.",
+
+            "link": "https://vectorpm.net/",
+            "img": "vectorpm.webp"
+        }, {
+            "data": "September 21 2021",
+            "title": "Clare Sands",
+            "website": "Clare Sands",
+            "description": "The official website of Clare Sands with all the latest news, video, audio, lyrics, photos, tour dates and ticket information",
+
+            "link": "https://www.claresands.com/",
+            "img": "clare.webp"
+        }
+    ],
+    "apps": [
+        {
+            "data": "September 21 2021",
+            "title": "Dyslexia & Accessibility Tool - Helperbird",
+            "website": "helperbird.com",
+            "description": "Helperbird is an extension that overrides all fonts on the webpage with the award-winning OpenDyslexic font and changes the page to be more easily read. You can switch it on and off at any time. Helping people with dyslexia. You can now change the size of the font!.",
+
+            "link": "https://www.helperbird.com",
+            "img": "helperbird.webp"
+        }, {
+            "data": "September 21 2021",
+            "title": "Sync Snip",
+            "website": "https://www.helperbird.com",
+            "description": "Sync snippets of text, URLs or anything else across different operating systems instantly.",
+            "link": "https://chrome.google.com/webstore/detail/sync-snip/lfdilgpdlbbffekebkinihgdjknbnbnc",
+            "img": "sync.webp"
+        }, {
+            "data": "September 21 2021",
+            "title": "Can I use ___ for Chrome            ",
+            "website": "https://www.helperbird.com",
+            "description": "Can I use provides up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers? So you can run this on any page and get a response of all the features that are used on the page and not supported.",
+            "link": "https://www.robertgabriel.ninja//apps/can-i-use",
+            "img": "seo.webp"
+        },
+        {
+            "data": "September 21 2021",
+            "title": "Markdown Editor for Chrome            ",
+            "website": "https://www.helperbird.com",
+            "description": "Annoyed writing markdown? Find it awkward to write it on Github, twitch or your code editor? Markdown editor premium allows you to write markdown without leaving your browser. Supporting all popular coding languages.            ",
+            "link": "https://addons.mozilla.org/en-US/firefox/addon/markdown-editor-premium/",
+            "img": "editor.webp"
+        },
+        {
+            "data": "September 21 2021",
+            "title": "Netflix Hidden Categories for Chrome            ",
+            "website": "https://www.helperbird.com",
+            "description": "List all categories on Netflix including the hidden ones. Over 5000 categories.            ",
+            "link": "https://chrome.google.com/webstore/detail/netflix-hidden-categories/pajmfnmlmcknmehpcklomlblpdcpdmgg",
+            "img": "firefox.webp"
+        }
+    ],
+    "talks": [
+        {
+            "data": "September 21 2021",
+            "title": "The blurred line between websites/webapps",
+            "website": "Rebel con",
+            "description": "Rebel Con 2017 by Robert James Gabriel",
+            "link": "X6pFD4M70Nk"
+        }
+    ],
+
+    "history": [
+        {
+            "title": "Owner and Author",
+            "company": "robertgabriel.ninja",
+            "start": "July 2015",
+            "end": "June 2018",
+            "description": "Covers consultancies with a variety of large-scale developers’ projects requiring JavaScript, Node, Golang, PHP and other front and back-end technologies."
+        },
+        {
+            "title": "Team Lead and Software Engineer",
+            "company": "Teamwork.com",
+            "start": "January 2017",
+            "end": "May 2018",
+            "description": "January 2017 – May 2018 (One year and four months)\u000a\u000a\u0009\u0009\u0009I led a team of six developers during the re-architecture of the frontend & backend implementation of Teamwork.com’s websites.\u000a\u0009\u0009\u0009\u000a\u0009\u0009\u0009Creating in-depth analytic tools, we made the world-renowned Teamwork.com website more personalized and relevant to new and existing audiences.\u000a\u0009\u0009\u0009\u000a\u0009\u0009\u0009Built with technologies such as Gulp, web pack, CoffeeScript, require.js, pug, travis, jest, Node, npm, SASS, Babel, Kubernetes, Golang and Coldfusion. The product is deployed to millions of people via AWS."
+        },
+        {
+            "title": "Software Engineer",
+            "company": "Teamwork.com",
+            "start": "May 2016",
+            "end": "January 2017",
+            "description": "\u000a\u0009\u0009\u0009Primarily responsible for the development of the suite of importers the Teamwork.com Projects team used, while providing help to other teams when asked. These included a rebuild of the sign-up code, adding Google sign-up and login support, new features and UX changes. Responsibilities also included creating Coldfusion/Golang based server-side solutions and front-end improvements.\u000a\u000aUsing a wide range of technologies such as Knockout.js, Require.js, CoffeeScript on the frontend; Coldfusion and Golang on the backend; and MySQL and PostgreSQL for databases. We practice an agile and test-driven methodology; utilizing build tools such as Gulp, code management through Git and continuously deploying to AWS."
+        },
+        {
+            "title": "Software Engineer (Part time)",
+            "company": "Teamwork.com",
+            "start": "September 2015",
+            "end": "May 2016",
+            "description": "After completing my internship I was offered a part-time position while studying for a Computer Science degree.\u000a\u000a\u0009\u0009\u0009Primarily responsible for the development of the suite of importers the Teamwork.com Projects team used, along with developing new features and pages for Teamwork.com and the CMS that runs it. These included a rebuild of the sign-up code, adding Google sign-up support and new features and UX changes. Responsibilities also included creating Coldfusion/Golang based server-side solutions, CoffeeScript based & javascript based server-side solutions, graphic design and SEO implementation."
+        }, {
+            "title": "Web Engineer (Internship)",
+            "company": "Teamwork.com",
+            "start": "January 2015",
+            "end": "September 2015",
+            "description": "Primarily responsible for the development of the suite of importers the Teamwork.com Projects team used, along with developing new features and pages for Teamwork.com and the CMS that runs it.\u000a\u000a\u0009\u0009\u0009This included a new features, a rebuild of the sign-up code, adding Google sign-up support and UX changes.\u000a\u0009\u0009\u0009\u000a\u0009\u0009\u0009Responsibilities also included creating Coldfusion/Golang based server-side solutions, CoffeeScript based and javascript based server-side solutions, graphic design and SEO implementation."
+        }, {
+            "title": "Software Engineer",
+            "company": "Learn code",
+            "start": "September 2014",
+            "end": "December 2014",
+            "description": "I designed custom encryption algorithms to help with encrypting data for password restarts in the enterprise market.\u000a\u000a\u0009\u0009\u0009I maintained existing code along with developing new features, while also reviewing code by other developers before they went into production."
+        }, {
+            "title": "Software Engineer",
+            "company": "Autism Start",
+            "start": "October 2013",
+            "end": "October 2014",
+            "description": "Design and development of Autism Start social website including access to original content, a social network community and tools available for users.\u000a\u000a\u0009\u0009\u0009Users can utilize Autism Starts’ original content via video playback, articles, and tailored lesson plans.\u000a\u0009\u0009\u0009\u000a\u0009\u0009\u0009Supports interaction with other users through a deeply-embedded social networking system: users can follow others, receive status updates, upload photos and share links. Includes public discussion forums and the facility to add items to a scrapbook to read later."
+        }, {
+            "title": "Software Developer (Internship)",
+            "company": "EMC/DELL",
+            "start": "July 2013",
+            "end": "September 2013",
+            "description": "I designed and developed an interactive and internal internet website for EMC employees.\u000a\u000a\u0009\u0009\u0009Employees interact with the website by creating an account, searching for employees and making mentor requests.\u000a\u0009\u0009\u0009\u000a\u0009\u0009\u0009Built using PHP, Html5, CSS and Microsoft Database."
+        }, {
+            "title": "Software Developer (Internship)",
+            "company": "EMC/DELL",
+            "start": "July 2012",
+            "end": "September 2012",
+            "description": "Throughout this internship I gained experience in setting up networks and servers on a major scale.\u000a\u000a\u0009\u0009\u0009I worked with a variety of departments such as Networking, Coding, Engineering and HR.\u000a\u0009\u0009\u0009\u000a\u0009\u0009\u0009I redesigned and built the Visitors Portal Website to improve the website’s information and increase its interactivity via social sharing and videos."
+        }, {
+            "title": "Web Developer (Internship)",
+            "company": "Microsoft",
+            "start": "Feburay 2011",
+            "end": "March 2011",
+            "description": "Participation in the National Young Scientist competition, which resulted in an invitation to the Microsoft Internship Workshop.\u000a\u000a\u0009\u0009\u0009Their focus was on developing critical links in the innovation process, as well as commercialization of skills such as software development, professional and career development."
+        }, {
+            "title": "Web Developer (Internship)",
+            "company": "Horner Automation",
+            "start": "July 2010",
+            "end": "September 2011",
+            "description": "I built circuit boards for projects and coding on pre-market test projects, such as writing C++ code for chips on these boards.\u000a\u000a\u0009\u0009\u0009I also gained invaluable experience in R&D."
+        }
+    ]
+
+
+}

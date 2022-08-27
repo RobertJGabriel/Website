@@ -1,9 +1,3 @@
-
-node_modules/
-
-bower_components/**
-
+node_modules
 docs
-docs/*
-/docs
-dist/
+workbox-v4.3.1

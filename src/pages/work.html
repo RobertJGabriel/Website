@@ -1,0 +1,58 @@
+---
+layout: templates/base.html
+title: Apps
+youtubeId: PfILiWebkuc
+cardTitle: Read. Write. Adapt the web to your needs.
+description: Popular apps, chrome extensions and software made by software engineer Robert James Gabriel. Modules, Chrome/Firefox extensions and more.
+keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexic
+
+url: awards
+---
+
+<main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8 pt-16 mb-12">
+	<div class="flex flex-shrink-0 justify-center">
+		<a href="/" class="inline-flex">
+			<span class="sr-only">Robert James Gabriel </span>
+			
+			<div class="avatar">
+				<div class="h-48 w-auto  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+				  <img src="/assets/images/me-two.png" alt="Robert James Gabriel" />
+				</div>
+			  </div>
+		
+		</a>
+	</div>
+	<div class="py-12">
+		<div class="text-center">
+			<h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+				Work history
+			</h1>
+			<p class="mt-2 text-xl text-gray-500">by Robert James</p>
+		</div>
+	</div>
+
+	<div class="mx-auto max-w-lg">
+	
+            {%- for article in work.history -%}
+
+			<div class="card mb-8 bg-white shadow-xl">
+			
+				<div class="card-body">
+				  <h2 class="card-title">
+					{{ article.title }}
+					<div class="badge badge-secondary">{{ article.company }}</div>
+				  </h2>
+				  <p> {{ article.description }}</p>
+				  <div class="card-actions justify-end">
+					<div class="badge badge-outline">{{ article.start }}</div> 
+					<div class="badge badge-outline">{{ article.end }}</div>
+				  </div>
+				</div>
+			  </div>
+ 
+
+            {%- endfor -%}
+ 
+
+	</div>
+</main>

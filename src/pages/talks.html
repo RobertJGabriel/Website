@@ -1,0 +1,56 @@
+---
+layout: templates/base.html
+title: Talks by Robert James Gabriel
+youtubeId: PfILiWebkuc
+cardTitle: Talks by Robert James Gabriel
+description: Popular apps, chrome extensions and software made by software engineer Robert James Gabriel. Modules, Chrome/Firefox extensions and more.
+keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexic
+
+url: awards
+---
+
+<main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8 pt-16 mb-12">
+	<div class="flex flex-shrink-0 justify-center">
+		<a href="/" class="inline-flex">
+			<span class="sr-only">Robert James Gabriel </span>
+			
+			<div class="avatar">
+				<div class="h-48 w-auto  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+				  <img src="/assets/images/me-two.png" alt="Robert James Gabriel" />
+				</div>
+			  </div>
+		
+		</a>
+	</div>
+	<div class="py-12">
+		<div class="text-center">
+			<h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+				Robert James Gabriel
+			</h1>
+			<p class="mt-2 text-xl text-gray-500">npx robertgabriel</p>
+		</div>
+	</div>
+
+	<div class="mx-auto max-w-lg">
+	
+            {%- for article in work.talks -%}
+
+            <div class="card mb-8 bg-white shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title"> {{ article.title }}</h2>
+                    <p>
+                        {{ article.description }}
+                    </p>
+
+					<iframe width="100%" height="315" src="https://www.youtube.com/embed/{{article.link}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+                
+                </div>
+            </div>
+
+
+            {%- endfor -%}
+ 
+
+	</div>
+</main>
