@@ -11,7 +11,7 @@ function load() {
 
 	
 
-			youtube();
+
 
 		},
 		methods: {

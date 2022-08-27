@@ -232,7 +232,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/core/app.js",
-    "revision": "c2bcf6d2e80b3cb12345f4d742eb2c5b"
+    "revision": "9471d06970ab6b164fcdf115de7c310a"
   },
   {
     "url": "assets/js/core/worldmap.js",
@@ -248,7 +248,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.bundle.js",
-    "revision": "304a8c42a3758ab9feb35fbc75374851"
+    "revision": "d224cb328d3e21f77391d1b99bde5fb7"
   },
   {
     "url": "assets/js/main.css",

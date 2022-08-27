@@ -98,9 +98,7 @@ function load() {
   new (vue_min_default())({
     el: '#helperbird-website',
     data: {},
-    mounted: function mounted() {
-      youtube();
-    },
+    mounted: function mounted() {},
     methods: {},
     computed: {}
   });
