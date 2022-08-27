@@ -112,7 +112,7 @@
 		"imagemin-webp": "^6.0.0",
 		"markdown-it": "^12.2.0",
 		"mini-css-extract-plugin": "^2.2.0",
-		"moment": "^2.29.3",
+		"moment": "^2.29.4",
 		"postcss-loader": "^4.1.0",
 		"regenerator-runtime": "^0.13.9",
 		"shimmer": "^1.2.1",
