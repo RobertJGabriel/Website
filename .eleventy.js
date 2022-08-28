@@ -45,7 +45,7 @@ const createSocialImageForArticle = (input, output) =>
 
 			const splashSolid = await loadImage('./tools/images/splash-1.png');
 			const splashStriped = await loadImage('./tools/images/splash-2.png');
-	//		const helperbirdLogo = await loadImage('./tools/images/helperbird-logo.png');
+		const robertgabriel = await loadImage('./tools/images/me.png');
 
 			context.fillStyle = '#450a75';
 			context.fillRect(0, 0, width, height);
@@ -65,8 +65,8 @@ const createSocialImageForArticle = (input, output) =>
 			context.fillStyle = '#ffffff';
 			context.fillText(`${post.author}`, 650, authorY);
 
-			//const { w, h, x, y } = imagePosition;
-			//context.drawImage(helperbirdLogo, x, y, w, h);
+			const { w, h, x, y } = imagePosition;
+			context.drawImage(robertgabriel, x, y, w, h);
 			context.drawImage(splashSolid, 1000, 0, 403, 409);
 			context.drawImage(splashSolid, 200, 500, 403, 409);
 			context.drawImage(splashStriped, -80, 48, 348, 252);
