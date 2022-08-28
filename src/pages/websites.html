@@ -11,7 +11,7 @@ url: awards
 
 <main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8 pt-16 mb-12">
 	<div class="flex flex-shrink-0 justify-center">
-		<a href="/" class="inline-flex">
+		<a href="/"  title="Link to Homepage" class="inline-flex">
 			<span class="sr-only">Robert James Gabriel </span>
 			
 			<div class="avatar">
@@ -37,7 +37,7 @@ url: awards
 
             <div class="card mb-8 bg-white shadow-xl card-compact ">
 				<figure class="px-10 pt-10">
-					<img src="/assets/images/websites/{{article.img}}" alt="Shoes" class="rounded-xl" />
+					<img src="/assets/images/websites/{{article.img}}" alt="{{article.title}}" class="rounded-xl" />
 				  </figure>
 				
                 <div class="card-body">
@@ -46,7 +46,7 @@ url: awards
                         {{ article.description }}
                     </p>
                     <div class="card-actions justify-end">
-                        <a class="btn btn-primary"  href="{{ article.link }}" target="_blank" rel="noreferrer" >  Read full story</a>
+                        <a class="btn btn-primary"  title="Link to {{article.title}}" href="{{ article.link }}" target="_blank" rel="noreferrer" >  Read full story</a>
                       </div>
                 </div>
             </div>

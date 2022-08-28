@@ -10,7 +10,7 @@ url: apps
 
 <main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8 pt-16 mb-12">
 	<div class="flex flex-shrink-0 justify-center">
-		<a href="/" class="inline-flex">
+		<a href="/" title="Link to Robert James homepage " class="inline-flex">
 			<span class="sr-only">Robert James Gabriel </span>
 			
 			<div class="avatar">
@@ -36,7 +36,7 @@ url: apps
 
             <div class="card mb-8 bg-white shadow-xl">
 				<figure class="px-10 pt-10">
-					<img src="/assets/images/apps/{{article.img}}" alt="Shoes" class="rounded-xl" />
+					<img src="/assets/images/apps/{{article.img}}" alt="{{ article.title }}" class="rounded-xl" />
 				  </figure>
                 <div class="card-body">
                     <h2 class="card-title"> {{ article.title }}</h2>
@@ -44,7 +44,7 @@ url: apps
                         {{ article.description }}
                     </p>
                     <div class="card-actions justify-end">
-                        <a class="btn btn-primary"  href="{{ article.link }}" target="_blank" rel="noreferrer" >  Read full story</a>
+                        <a class="btn btn-primary"  title="Learn more about the {{article.title}}"  href="{{ article.link }}" target="_blank" rel="noreferrer" >  See more </a>
                       </div>
                 </div>
             </div>
