@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "86b8d1e7e9abfa78efb5b5cd7707bab3"
+    "revision": "d32892effe465636bba1ca74698a68d2"
   },
   {
     "url": "404.png",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
   },
   {
     "url": "apps/index.html",
-    "revision": "73137112f9697efb1f90a5b509268895"
+    "revision": "606f2e04e737c36da491f42ae458d534"
   },
   {
     "url": "apps/index.png",
@@ -252,7 +252,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "f4cebb6f949821dd0f079d4328b60621"
+    "revision": "c6baa31df2aeb41830e6fd51dc5345fe"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -264,7 +264,7 @@ self.__precacheManifest = [
   },
   {
     "url": "awards/index.html",
-    "revision": "ce07d5cf8f67cc106b34d4f99e219664"
+    "revision": "2fa235372e8367e583a2c3b3bdfca08b"
   },
   {
     "url": "awards/index.png",
@@ -272,7 +272,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "c50ace4fee0e14dae54e5317cda386c8"
+    "revision": "d3e45ca52782669d5ab31eb997be4cb6"
   },
   {
     "url": "blog/adblockers/index.png",
@@ -280,7 +280,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "2653f5a043ded9d99569c83231a518a2"
+    "revision": "2712915319bd72e266d5ea6679855875"
   },
   {
     "url": "blog/bag/index.png",
@@ -288,7 +288,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "fcb5d254c94a0a33e96ebe42a577a438"
+    "revision": "2e27a61a5877593805928d3b8ef6a21e"
   },
   {
     "url": "blog/index.png",
@@ -296,7 +296,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
-    "revision": "31dff2c978acd021c2c67bf6b8f3038b"
+    "revision": "bf977c2b468428313a6be57c0220efd9"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
@@ -304,7 +304,7 @@ self.__precacheManifest = [
   },
   {
     "url": "cailin/index.html",
-    "revision": "c3f9719687f0214aead089ff59a4b0bb"
+    "revision": "6b9fb791fcb310d8568df17a20124f82"
   },
   {
     "url": "cailin/index.png",
@@ -312,7 +312,7 @@ self.__precacheManifest = [
   },
   {
     "url": "contact/index.html",
-    "revision": "047dcee8ae54f8caf4cbf3069025fe5e"
+    "revision": "55adec898ce0381ec48b02b8d5320448"
   },
   {
     "url": "contact/index.png",
@@ -320,7 +320,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/chrome-dino/index.html",
-    "revision": "a0e6df58327e1454569a5a0fe5a752cd"
+    "revision": "8ff266d9ed2294919b108e59f57dcb7d"
   },
   {
     "url": "css/chrome-dino/index.png",
@@ -328,7 +328,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/imac/index.html",
-    "revision": "bcc362d6d94d8905fb03ec6f3f07fe7c"
+    "revision": "9c6d8af19188de049cb547143a66187c"
   },
   {
     "url": "css/imac/index.png",
@@ -336,7 +336,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "3ef667d5a8b8d7c64d030e1326afa276"
+    "revision": "b20193f984cc508cc75576abfdc27b3c"
   },
   {
     "url": "index.png",
@@ -344,7 +344,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "200388acf6c7e7813527a38bc106fe93"
+    "revision": "216b5b4f1652966e3442f1e136f0f76b"
   },
   {
     "url": "sitemap/index.png",
@@ -352,7 +352,7 @@ self.__precacheManifest = [
   },
   {
     "url": "talks/index.html",
-    "revision": "0d3a0ffbbb046d71037665d934d5dd01"
+    "revision": "15087717ed6fda01f9175d98ad2561d7"
   },
   {
     "url": "talks/index.png",
@@ -360,7 +360,7 @@ self.__precacheManifest = [
   },
   {
     "url": "websites/index.html",
-    "revision": "eabf76b5b013efd1cccf991b96181d94"
+    "revision": "e7d0fd4adaf620642fdd4777ea3f8e8b"
   },
   {
     "url": "websites/index.png",
@@ -368,7 +368,7 @@ self.__precacheManifest = [
   },
   {
     "url": "work/index.html",
-    "revision": "8de07945fec57d7a73245ca3d401aad2"
+    "revision": "f57a86afdcbf6ec6a03766aba01050a2"
   },
   {
     "url": "work/index.png",
@@ -376,7 +376,7 @@ self.__precacheManifest = [
   },
   {
     "url": "worldmap/index.html",
-    "revision": "b3b11308c47f6ffbc82f320dff7f1e06"
+    "revision": "63cfe1653433b18080b32a91e60371c5"
   },
   {
     "url": "worldmap/index.png",
