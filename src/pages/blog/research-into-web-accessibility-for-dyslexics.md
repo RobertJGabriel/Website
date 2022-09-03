@@ -414,17 +414,17 @@ img: /assets/images/blog/giveaway/giveaway.jpeg
 </p>
 <blockquote>
   <p class="mt-8 mb-8 text-xl">
-    Doing Research on Dyslexia and Fonts for college, quick survey<a
+    Doing Research on Dyslexia and Fonts for college, quick survey<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy"
       href="https://t.co/6xRe7SWXwy"
       >https://t.co/6xRe7SWXwy</a
     >
-    Please rt :)<a href="https://twitter.com/hashtag/dyslexia?src=hash"
+    Please rt :)<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="https://twitter.com/hashtag/dyslexia?src=hash"
       >#dyslexia</a
-    ><a href="https://twitter.com/hashtag/fonts?src=hash">#fonts</a
-    ><a href="https://t.co/tw6gcSJY3v">pic.twitter.com/tw6gcSJY3v</a>
+    ><a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="https://twitter.com/hashtag/fonts?src=hash">#fonts</a
+    ><a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="https://t.co/tw6gcSJY3v">pic.twitter.com/tw6gcSJY3v</a>
   </p>
   <p class="mt-8 mb-8 text-xl">
-    — Robert James Gabriel (@RobertJGabriel)<a
+    — Robert James Gabriel (@RobertJGabriel)<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy"
       href="https://twitter.com/RobertJGabriel/"
       >February 22, 2016</a
     >
@@ -503,38 +503,38 @@ img: /assets/images/blog/giveaway/giveaway.jpeg
 <h1 class="mt-4 mb-4 text-2xl" id="bibliography">Bibliography</h1>
 <ol>
   <li class="mt-8 mb-8 text-lg">
-    <a href="http://www.typographydeconstructed.com/ascender/" title="Link to reference in article"
+    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="http://www.typographydeconstructed.com/ascender/" title="Link to reference in article"
       >K. O. Connor,
       &quot;www.typographydeconstructed.com,&quot;[Online].[Accessed 21 April
       2016].</a
     >
   </li>
   <li class="mt-8 mb-8 text-lg">
-    <a href="#"
+    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="#"
       >L. R. &amp;. R. Baeza-Yates, &quot;Good Fonts for Dyslexia,&quot; Web
       Research Group, Barcelona, Spain, 2013.</a
     >
   </li>
   <li class="mt-8 mb-8 text-lg">
-    <a href="https://www.opendyslexic.org/contact" title="Link to reference in article"
+    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="https://www.opendyslexic.org/contact" title="Link to reference in article"
       >A. GONZALEZ, &quot;FAQ | OpenDyslexic,&quot; 03 June 2006. [Online].
       [Accessed 01 April 2016].</a
     >
   </li>
   <li class="mt-8 mb-8 text-lg">
-    <a href="https://opendyslexic.org" title="Link to reference in article"
+    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="https://opendyslexic.org" title="Link to reference in article"
       >A. GONZALEZ, &quot;OpenDyslexic | About,&quot; 01 June 2006. [Online].
       [Accessed 12 Januray 2016].</a
     >
   </li>
   <li class="mt-8 mb-8 text-lg">
-    <a href="https://www.ilo.gw.utwente.nl/" title="Link to reference in article"
+    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="https://www.ilo.gw.utwente.nl/" title="Link to reference in article"
       >R. d. Leeuw, &quot;Special Font For Dyslexia?,&quot; 5 December 2010.
       [Online]. [Accessed 13 Januray 2016].</a
     >
   </li>
   <li class="mt-8 mb-8 text-lg">
-    <a
+    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy"
       href="https://www.dyslexiasw.com/about/website-accessibility"
       title="Link to reference in article"
       >D. Scotwest, &quot;Website Accessibility For Dyslexiasw,&quot; 2010 April
@@ -542,15 +542,15 @@ img: /assets/images/blog/giveaway/giveaway.jpeg
     >
   </li>
   <li class="mt-8 mb-8 text-lg">
-    <a href="https://www.w3.org/WAI/RD/2012/text-customization/r11"
+    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="https://www.w3.org/WAI/RD/2012/text-customization/r11"
       >W3C, &quot;Text Customization,&quot; 11 November 2012. [Online].</a
     >
   </li>
   <li class="mt-8 mb-8 text-lg">
-    [V. F. d. Santana, &quot;<a href="https://pdfs.semanticscholar.org"
+    [V. F. d. Santana, &quot;<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="https://pdfs.semanticscholar.org"
       >https://pdfs.semanticscholar.org</a
     >,&quot; University of Campinas , 23 June ] 2012. [Online] [Accessed 23
-    Febuary 2016].](<a href="https://pdfs.semanticscholar.org/"
+    Febuary 2016].](<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" href="https://pdfs.semanticscholar.org/"
       >https://pdfs.semanticscholar.org/</a
     >
     &quot;Fonts&quot;)
