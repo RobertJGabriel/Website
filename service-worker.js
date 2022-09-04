@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "1b69fc02c74984338dba1f733c863873"
+    "revision": "06a3a4c0459539031f350a7cb90871b5"
   },
   {
     "url": "404.png",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
   },
   {
     "url": "apps/index.html",
-    "revision": "9f9823990cfc4fdaf468f829a04dbb6a"
+    "revision": "112f6511ea9e221f721e0b9dca888363"
   },
   {
     "url": "apps/index.png",
@@ -264,7 +264,7 @@ self.__precacheManifest = [
   },
   {
     "url": "awards/index.html",
-    "revision": "34f5d5d2fd3dada80afc5236df7599aa"
+    "revision": "401441c50af0aea1d69cad2c2407132d"
   },
   {
     "url": "awards/index.png",
@@ -272,7 +272,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "e660eaa02fd09a581dbc316c3c8631af"
+    "revision": "f42c11818a5e728c7b7e6971ed381dc3"
   },
   {
     "url": "blog/adblockers/index.png",
@@ -280,7 +280,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "f80d2d731e95249d3dd7755731522bfe"
+    "revision": "ac2610d72fe4ec82dfa8bcb51dd6da17"
   },
   {
     "url": "blog/bag/index.png",
@@ -288,7 +288,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "4c69eaf422a37295fc062887cf543c77"
+    "revision": "3a5ab031dfa51d3cc0be43545cad00bb"
   },
   {
     "url": "blog/index.png",
@@ -296,7 +296,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
-    "revision": "ccac562d0318d51e5bc540a4455b07f6"
+    "revision": "2848bd0b52e32bc10891305a30f99cef"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
@@ -304,7 +304,7 @@ self.__precacheManifest = [
   },
   {
     "url": "cailin/index.html",
-    "revision": "ec966096611db4f8e5df8673c2978562"
+    "revision": "efe21a71a6e7eb14c76f37bb0ca499a3"
   },
   {
     "url": "cailin/index.png",
@@ -312,7 +312,7 @@ self.__precacheManifest = [
   },
   {
     "url": "contact/index.html",
-    "revision": "1ee01438c918499b23c1a4ec7d8587fa"
+    "revision": "e0b6fbe186c7f3c39e04356d0d869f3d"
   },
   {
     "url": "contact/index.png",
@@ -320,7 +320,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/chrome-dino/index.html",
-    "revision": "4c164fdb989cc9810d8d3cf9f450eaf4"
+    "revision": "0cf583f62a3459a6116fe80fa5ab6721"
   },
   {
     "url": "css/chrome-dino/index.png",
@@ -328,7 +328,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/imac/index.html",
-    "revision": "061f7ce5df41db26f303fa7509e2d12e"
+    "revision": "db0f95ad733a20bdeb8930359f650e98"
   },
   {
     "url": "css/imac/index.png",
@@ -336,7 +336,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "d3d6eb65eed7abf2b88fdb11c4091553"
+    "revision": "a0280227acfe3e2bc82342a1bf354f73"
   },
   {
     "url": "index.png",
@@ -344,7 +344,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "964a293f3941df11fe706964a89bb2c4"
+    "revision": "1640adfcd21d06154310513e2299beab"
   },
   {
     "url": "sitemap/index.png",
@@ -352,7 +352,7 @@ self.__precacheManifest = [
   },
   {
     "url": "talks/index.html",
-    "revision": "6a73ae8cc4c358cc8484bc72deac8987"
+    "revision": "271d79ce7d35cee644bcc248244ff41e"
   },
   {
     "url": "talks/index.png",
@@ -360,7 +360,7 @@ self.__precacheManifest = [
   },
   {
     "url": "websites/index.html",
-    "revision": "20777f5364cf577dfdc11d1b85d32d19"
+    "revision": "7117692a008ffcdb940f9a8bf34e8d7f"
   },
   {
     "url": "websites/index.png",
@@ -368,7 +368,7 @@ self.__precacheManifest = [
   },
   {
     "url": "work/index.html",
-    "revision": "f569a026f50ee4e998fa0dc4ab83a941"
+    "revision": "a13771582adbf4cec57530ceeda4eb7e"
   },
   {
     "url": "work/index.png",
@@ -376,7 +376,7 @@ self.__precacheManifest = [
   },
   {
     "url": "worldmap/index.html",
-    "revision": "bd6af9816f26d57ca352f79bd45d7647"
+    "revision": "d85f9b328bc30b3bd9bf1a0e4d20e347"
   },
   {
     "url": "worldmap/index.png",
