@@ -504,7 +504,7 @@ img: /assets/images/blog/giveaway/giveaway.jpeg
   <li class="mt-8 mb-8 text-lg">
     B. Insider, &quot;PageFair and Adobe 2015 ad blocking report,&quot; Business
     Insider, 2016 Augsut 2015. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.businessinsider.com/pagefair-and-adobe-"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.businessinsider.com/pagefair-and-adobe-"
       >https://www.businessinsider.com/pagefair-and-adobe-</a
     >
     2015-ad-blocking-report-2015-8. [Accessed 9 May 2016]
@@ -512,47 +512,47 @@ img: /assets/images/blog/giveaway/giveaway.jpeg
   <li class="mt-8 mb-8 text-lg">
     K. Hill, &quot;Use Of Ad Blocking Is On The Rise,&quot; 21 August 2015.
     [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.forbes.com/sites/kashmirhill/2013/08/21/use-of-ad-blocking-is-on-therise/#5b2eae07496bFQjCNHxRqxnzge7RFxDCcMw6kN543u4-w&amp;sig2=kX3AEhuUzMP8XC2dE5Mhg"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.forbes.com/sites/kashmirhill/2013/08/21/use-of-ad-blocking-is-on-therise/#5b2eae07496bFQjCNHxRqxnzge7RFxDCcMw6kN543u4-w&amp;sig2=kX3AEhuUzMP8XC2dE5Mhg"
       >https://www.forbes.com/sites/kashmirhill/2013/08/21/use-of-ad-blocking-is-on-therise/#5b2eae07496bFQjCNHxRqxnzge7RFxDCcMw6kN543u4-w&amp;sig2=kX3AEhuUzMP8XC2dE5Mhg</a
     >. [Accessed 24 April 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     Adobe, &quot;Adobe,&quot; Adobe, 2 July 2015. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://blog.pagefair.com/2015/ad-blocking-report/"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://blog.pagefair.com/2015/ad-blocking-report/"
       >https://blog.pagefair.com/2015/ad-blocking-report/</a
     >. [Accessed 3 May 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     I. Yablonka, &quot;What is the percentage of Internet users that
     employ,&quot; Ido Yablonka, 25 Sepetmeber 2015. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.quora.com/What-is-the-percentageof-Internet-users-that-employ-AdBlock-Plus-or-similar-ad-blocking-plugins"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.quora.com/What-is-the-percentageof-Internet-users-that-employ-AdBlock-Plus-or-similar-ad-blocking-plugins"
       >https://www.quora.com/What-is-the-percentageof-Internet-users-that-employ-AdBlock-Plus-or-similar-ad-blocking-plugins</a
     >. [Accessed 22 April 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     A. Plus, &quot;About Adblock Plus.,&quot; 21 December 2009. [Online].
     Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://adblockplus.org/about">https://adblockplus.org/about</a>.
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://adblockplus.org/about">https://adblockplus.org/about</a>.
     [Accessed 25 Feburay 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     A. Khetarpal, &quot;The Top Ten Most Dangerous Things You Can Do
     Online.,&quot; 10 October 2010. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://gizmodo.com/5614047/the-top-ten-most-dangerousthings-you-can-do-online"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://gizmodo.com/5614047/the-top-ten-most-dangerousthings-you-can-do-online"
       >https://gizmodo.com/5614047/the-top-ten-most-dangerousthings-you-can-do-online</a
     >. [Accessed 28 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     D. Shewan, &quot;The Rise of Ad Blockers: Should Advertisers Be Panicking
     ..,&quot; 10 October 2015. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.wordstream.com/blog/ws/2015/10/02/ad-blockers"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.wordstream.com/blog/ws/2015/10/02/ad-blockers"
       >https://www.wordstream.com/blog/ws/2015/10/02/ad-blockers</a
     >. [Accessed 28 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     N. Nethercote, &quot;Firefox 41 will use less memory when running AdBlock
     Plus ...,&quot; 1 July 2015. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://blog.mozilla.org/nnethercote/2015/07/01/firefox-41-"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://blog.mozilla.org/nnethercote/2015/07/01/firefox-41-"
       >https://blog.mozilla.org/nnethercote/2015/07/01/firefox-41-</a
     >
     will-use-less-memory-when-running-adblock-plus/. [Accessed 22 March 2016].
@@ -560,27 +560,27 @@ img: /assets/images/blog/giveaway/giveaway.jpeg
   <li class="mt-8 mb-8 text-lg">
     Google, &quot;PageSpeed Insights - Google Developers.&quot; 2012. 9 May.
     2016,&quot; Google, 2 09 2012. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://developers.google.com/speed/pagespeed/insights/"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://developers.google.com/speed/pagespeed/insights/"
       >https://developers.google.com/speed/pagespeed/insights/</a
     >. [Accessed 3 May 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     S. Anthony, &quot;extremetech,&quot; 14 March 2014. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.extremetech.com/computing/182428-ironic-iframes-adblock-plus-isprobably-the-reason-firefox-and-chrome-are-such-memory-hogs"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.extremetech.com/computing/182428-ironic-iframes-adblock-plus-isprobably-the-reason-firefox-and-chrome-are-such-memory-hogs"
       >https://www.extremetech.com/computing/182428-ironic-iframes-adblock-plus-isprobably-the-reason-firefox-and-chrome-are-such-memory-hogs</a
     >. [Accessed 28 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     R. J. Gabriel, &quot;Adblocker Survery Results,&quot; 22 Feburay 2016.
     [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.projectbird.com/problems-posed-by-ad-blockers"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.projectbird.com/problems-posed-by-ad-blockers"
       >https://www.projectbird.com/problems-posed-by-ad-blockers</a
     >. [Accessed 11 April 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     M. Rouse, &quot;What is asynchronous? - SearchNetworking - TechTarget,&quot;
     20 March 2012. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://searchnetworking.techtarget.com/definition/asynchronous"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://searchnetworking.techtarget.com/definition/asynchronous"
       >https://searchnetworking.techtarget.com/definition/asynchronous</a
     >
     . [Accessed 18 March 2016].
@@ -588,27 +588,27 @@ img: /assets/images/blog/giveaway/giveaway.jpeg
   <li class="mt-8 mb-8 text-lg">
     M. Navaraj, &quot;labs.bromium.com,&quot; 21 Feburay 2014. [Online].
     Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://labs.bromium.com/2014/02/21/the-wild-wild-web-youtube-ads-serving-malware/"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://labs.bromium.com/2014/02/21/the-wild-wild-web-youtube-ads-serving-malware/"
       >https://labs.bromium.com/2014/02/21/the-wild-wild-web-youtube-ads-serving-malware/</a
     >. [Accessed 26 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     D. Goodin, &quot;arstechnica,&quot; 7 August 2015. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://arstechnica.com/security/2015/08/0-day-attack-on-firefox-users-stole-passwordand-key-data-patch-now/"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://arstechnica.com/security/2015/08/0-day-attack-on-firefox-users-stole-passwordand-key-data-patch-now/"
       >https://arstechnica.com/security/2015/08/0-day-attack-on-firefox-users-stole-passwordand-key-data-patch-now/</a
     >. [Accessed 20 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     T. Geigner, &quot;Forbes Site, After Begging You Turn Off Adblocker, Serves
     Up,&quot; 11 Januray 2016. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.techdirt.com/articles/20160111/05574633295/forbes-site-after-beggingyou-turn-off-adblocker-serves-up-steaming-pile-malware-ads.shtml"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.techdirt.com/articles/20160111/05574633295/forbes-site-after-beggingyou-turn-off-adblocker-serves-up-steaming-pile-malware-ads.shtml"
       >https://www.techdirt.com/articles/20160111/05574633295/forbes-site-after-beggingyou-turn-off-adblocker-serves-up-steaming-pile-malware-ads.shtml</a
     >. [Accessed 18 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     investopedia, &quot;Cost Per Thousand - CPM,&quot; 20 July 2015. [Online].
     Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.investopedia.com/terms/c/cpm.asp"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.investopedia.com/terms/c/cpm.asp"
       >https://www.investopedia.com/terms/c/cpm.asp</a
     >. [Accessed 10 April 2016].
   </li>
@@ -616,92 +616,92 @@ img: /assets/images/blog/giveaway/giveaway.jpeg
     J. MARSHALL,
     &quot;apples-ad-blocking-is-potential-nightmare-for-ad-sellers/,&quot; 28
     August 2015. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://blogs.wsj.com/cmo/2015/08/28/apples-ad-blocking-ispotential-nightmare-for-ad-sellers/"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://blogs.wsj.com/cmo/2015/08/28/apples-ad-blocking-ispotential-nightmare-for-ad-sellers/"
       >https://blogs.wsj.com/cmo/2015/08/28/apples-ad-blocking-ispotential-nightmare-for-ad-sellers/</a
     >. [Accessed 02 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     S. Ranger, &quot;zdnet,&quot; zdnet, 20 Januray 2016. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.zdnet.com/article/ios-versus-android-apple-app-store-versus-google-playhere-comes-the-next-battle-in-the-app-wars/"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.zdnet.com/article/ios-versus-android-apple-app-store-versus-google-playhere-comes-the-next-battle-in-the-app-wars/"
       >https://www.zdnet.com/article/ios-versus-android-apple-app-store-versus-google-playhere-comes-the-next-battle-in-the-app-wars/</a
     >. [Accessed 13 April 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     D. Shewan, &quot;wordstream,&quot; 10 October 2015. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.wordstream.com/blog/ws/2015/10/02/ad-blockers"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.wordstream.com/blog/ws/2015/10/02/ad-blockers"
       >https://www.wordstream.com/blog/ws/2015/10/02/ad-blockers</a
     >. [Accessed 18 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     J. Kahn, &quot;Google says it won’t make advertisers pay unless ads are 100%
     viewable,&quot; 10 October 2015. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://9to5google.com/2015/09/30/google-displayads-viewable/"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://9to5google.com/2015/09/30/google-displayads-viewable/"
       >https://9to5google.com/2015/09/30/google-displayads-viewable/</a
     >. [Accessed 10 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
-    Google, &quot;<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://adwords.blogspot.ie/"
+    Google, &quot;<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://adwords.blogspot.ie/"
       >https://adwords.blogspot.ie/</a
     >,&quot; 30 September 2015. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://adwords.blogspot.ie/2015/09/Enhancing-the-google-display-network"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://adwords.blogspot.ie/2015/09/Enhancing-the-google-display-network"
       >https://adwords.blogspot.ie/2015/09/Enhancing-the-google-display-network</a
     >. [Accessed 16 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     sharethrough, &quot;sharethrough,&quot; 10 June 2014. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.sharethrough.com/nativeadvertising/"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.sharethrough.com/nativeadvertising/"
       >https://www.sharethrough.com/nativeadvertising/</a
     >. [Accessed 13 April 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     T. Mogg, &quot;NY Times starts fighting ad blockers with plea to
     users,&quot; 8 March 2016. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.digitaltrends.com/mobile/ny-times-fights-ad-blockers/"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.digitaltrends.com/mobile/ny-times-fights-ad-blockers/"
       >https://www.digitaltrends.com/mobile/ny-times-fights-ad-blockers/</a
     >. [Accessed 29 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     PageFair, &quot;Inside PageFair | Monitoring adblock and the future of the
     ..,&quot; 10 June 2015. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://blog.pagefair.com/">https://blog.pagefair.com/</a>.
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://blog.pagefair.com/">https://blog.pagefair.com/</a>.
     [Accessed 2 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     G. Keeley, &quot;GitHub - brave/browser-ios: Brave iOS Browser.,&quot; 20
     October 2015. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://github.com/brave/browser-ios"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://github.com/brave/browser-ios"
       >https://github.com/brave/browser-ios</a
     >. [Accessed 28 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     R. H. &amp;. S. Wojcicki, &quot;Here&#39;s The Future Of Advertising,
     According To Google,&quot; 10 April 2013. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.forbes.com/sites/roberthof/2013/04/10/heres-thefuture-of-advertising-according-to-google/#22de1749687a"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.forbes.com/sites/roberthof/2013/04/10/heres-thefuture-of-advertising-according-to-google/#22de1749687a"
       >https://www.forbes.com/sites/roberthof/2013/04/10/heres-thefuture-of-advertising-according-to-google/#22de1749687a</a
     >. [Accessed 01 Feburay 2016]
   </li>
   <li class="mt-8 mb-8 text-lg">
     A. A. Org, &quot;Acceptable Ads Manifest,&quot; 1 May 2016. [Online].
     Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://acceptableads.org/">https://acceptableads.org/</a>.
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://acceptableads.org/">https://acceptableads.org/</a>.
     [Accessed 2 May 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     R. Hof, 10 August 2013. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.forbes.com/sites/roberthof/2013/04/10/heres-the-future-of-advertisingaccording-to-google/"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.forbes.com/sites/roberthof/2013/04/10/heres-the-future-of-advertisingaccording-to-google/"
       >https://www.forbes.com/sites/roberthof/2013/04/10/heres-the-future-of-advertisingaccording-to-google/</a
     >. [Accessed 10 March 2016]
   </li>
   <li class="mt-8 mb-8 text-lg">
     Y. Blog, &quot;Youtube Blog,&quot; 20 Octber 2014. [Online]. Available:
-<a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://youtubecreator.blogspot.com/2011/10/getting-people-to-your-channel-andhow"
+<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://youtubecreator.blogspot.com/2011/10/getting-people-to-your-channel-andhow"
       >https://youtubecreator.blogspot.com/2011/10/getting-people-to-your-channel-andhow</a
     >. [Accessed 20 March 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     V. Beal, &quot;What is Random Access Memory (RAM)? Webopedia ...,&quot; 10
     August 2002. [Online]. Available:
-    <a class="decoration-pink-500 no-underline hover:underline hover:text-gray-900 hover:decoration-wavy" title="Link to reference in article" href="https://www.webopedia.com/TERM/R/RAM"
+    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " title="Link to reference in article" href="https://www.webopedia.com/TERM/R/RAM"
       >https://www.webopedia.com/TERM/R/RAM</a
     >. [Accessed 24 March 2016].
   </li>
