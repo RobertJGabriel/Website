@@ -7,7 +7,7 @@ url: blog/research-into-web-accessibility-for-dyslexics/
 tags: blog
 blog_cat: Blog
 youtubeId: PfILiWebkuc
-date: June 1st 2016
+dated: June 1st 2016
 cardTitle: Web Accessibility and OpenDyslexic
 blog_snip: There are few published papers about usability testing with dyslexia focused fonts, but there is a considerable collection of knowledge on dyslexia as well as many suggestions for authoring dyslexia friendly interfaces
 

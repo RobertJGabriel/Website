@@ -9,7 +9,7 @@ blog_cat: Blog
 youtubeId: PfILiWebkuc
 cardTitle: Whats in my Bag 2018
 blog_snip: I recently read a book about the minimal life. Im no hipster and I are a white privilege Irish man. So I didnt have to worry about some things and have a savings and a job. I thought I would write about I need to do my day to day life
-date: July 13 2017
+dated: July 13 2017
 cat: Blog
 img: /assets/images/blog/giveaway/giveaway.jpeg
 

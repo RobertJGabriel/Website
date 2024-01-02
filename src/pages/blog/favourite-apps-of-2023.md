@@ -7,7 +7,7 @@ url: blog/favourite-apps-of-2023/
 tags: blog
 blog_cat: Blog
 youtubeId: PfILiWebkuc
-date: Jan 1 2024
+dated: Jan 1 2024
 cardTitle: My Favourite Apps of 2023
 blog_snip: Hey everyone, Robert James Gabriel here! As we bid farewell to another whirlwind year in the tech world, I wanted to take a moment and share with you some apps that have made a significant impact on my daily life.
 
