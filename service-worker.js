@@ -28,19 +28,19 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "50614f01c4a1da12bf01a24becbb65fa"
+    "revision": "909f8a02c95895c0f0b561d16511d5d2"
   },
   {
     "url": "404.png",
-    "revision": "385a8ecb6e3e2805a6ca9c4f1573c13e"
+    "revision": "cd79f164a6d3ae7bf9ef902914e20aac"
   },
   {
     "url": "apps/index.html",
-    "revision": "9345a2624b69106c937a15fa34505caf"
+    "revision": "a447d53abc718e5bfce47df8d9512c5c"
   },
   {
     "url": "apps/index.png",
-    "revision": "d5dad45ff1399ac3bd1b98dd034a1e49"
+    "revision": "3cff33f28952c00fb5e72d4ddd1e1f3e"
   },
   {
     "url": "assets/css/blog.css",
@@ -53,6 +53,10 @@ self.__precacheManifest = [
   {
     "url": "assets/css/styles.css",
     "revision": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "url": "assets/images/apps/coffee.png",
+    "revision": "835aae9ca06f8e91251903e222b94d3c"
   },
   {
     "url": "assets/images/apps/editor.webp",
@@ -231,6 +235,22 @@ self.__precacheManifest = [
     "revision": "c6fb7f6b1004587127a5779ade1d51bc"
   },
   {
+    "url": "assets/images/work/coffee-and-fun.png",
+    "revision": "835aae9ca06f8e91251903e222b94d3c"
+  },
+  {
+    "url": "assets/images/work/helperbird.png",
+    "revision": "f6f3b6a69cf6cead4e27ae79547fd51e"
+  },
+  {
+    "url": "assets/images/work/markdown.png",
+    "revision": "b4ecd19b03666fd7a61e8ac11b04354c"
+  },
+  {
+    "url": "assets/images/work/simple.webp",
+    "revision": "7826acae36a1c3771503f7265e87bbc4"
+  },
+  {
     "url": "assets/js/core/app.js",
     "revision": "9471d06970ab6b164fcdf115de7c310a"
   },
@@ -252,7 +272,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "11253a8a31079540faf6e982e2f645c3"
+    "revision": "0f919b2e3e65d64c1d4ba94749e5b43f"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -264,127 +284,123 @@ self.__precacheManifest = [
   },
   {
     "url": "awards/index.html",
-    "revision": "7647f8be5823dd4d5a2beeed44346b5c"
+    "revision": "96e014be9f13f5f8c1ecccb40f4bfba9"
   },
   {
     "url": "awards/index.png",
-    "revision": "e78bd6a22dde3673090cf975c697574e"
+    "revision": "d64dbf7ed6cb512916d9a1e8ba4298dc"
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "df7714152bb5051ad4e52c3341c2c7f0"
+    "revision": "aac856cb5dfb2fca74af7f66df9cae9c"
   },
   {
     "url": "blog/adblockers/index.png",
-    "revision": "44bf1f7fc049b98a64151b784757e5a5"
+    "revision": "6b1e4fd7839371289f071842ac8b312a"
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "be007168e83122714a0140221d1ca1e2"
+    "revision": "37fd4bd9fa563ad02f7f9072d73a571b"
   },
   {
     "url": "blog/bag/index.png",
-    "revision": "9701b70d60a0bf353b69c91198904efa"
+    "revision": "52385888d47a1fbb4a0fde4dbcf9c10e"
+  },
+  {
+    "url": "blog/favourite-apps-of-2023/index.html",
+    "revision": "59fd1f7840704b15c132387344cd07de"
+  },
+  {
+    "url": "blog/favourite-apps-of-2023/index.png",
+    "revision": "dd3624b340cc7efd5ad3697b1684db46"
   },
   {
     "url": "blog/index.html",
-    "revision": "be7e2a818771771ef729009acc018352"
+    "revision": "9f5f09cee5be4c5125ea03dfd7d75e15"
   },
   {
     "url": "blog/index.png",
-    "revision": "89969ea7f9c1acc12c4f5e867645e822"
+    "revision": "b3946e80a136d472c519d90ca0f6fe88"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
-    "revision": "77a2081fd1df8a9d4c0f9c05962da4fc"
+    "revision": "c3549a07c277b8b78ddd67b7da992915"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
-    "revision": "5ef0b12de29f5c6c3f37005dfd315dd6"
+    "revision": "dab9510b8175d5b2cee7569547d3fec1"
   },
   {
     "url": "cailin/index.html",
-    "revision": "1bcfb6375a84a27cb367aff1c670f2b5"
+    "revision": "21f93ee05cb1c8ae1d5c315cae0d2dcf"
   },
   {
     "url": "cailin/index.png",
-    "revision": "89969ea7f9c1acc12c4f5e867645e822"
-  },
-  {
-    "url": "contact/index.html",
-    "revision": "b0a85e2085e1538596e18ae64ec70b96"
-  },
-  {
-    "url": "contact/index.png",
-    "revision": "142319a8aea12fb423656375e32205dd"
+    "revision": "b3946e80a136d472c519d90ca0f6fe88"
   },
   {
     "url": "css/chrome-dino/index.html",
-    "revision": "6b532e051f3561e6b72b16f16c8f2179"
+    "revision": "f5c426a58926b664ed2b8057c1bba2cb"
   },
   {
     "url": "css/chrome-dino/index.png",
-    "revision": "ef8460eabf6743d820f8969417288a3c"
+    "revision": "5224a03eb5c512740b29b912326026f2"
   },
   {
     "url": "css/imac/index.html",
-    "revision": "0989bf10cfb09f398fefac9dc4a91d43"
+    "revision": "0ecfc2beecbe6f67cf3d929639143645"
   },
   {
     "url": "css/imac/index.png",
-    "revision": "857969c0d46b919519209c71c25130ee"
-  },
-  {
-    "url": "footer/index.html",
-    "revision": "b9be31ce34b560c9ed6fd8d1decbc61b"
+    "revision": "b223afac04b6e37833ea02bdf36d3842"
   },
   {
     "url": "index.html",
-    "revision": "d1de4df6902f617d497d8ddf08a86879"
+    "revision": "bc94f6ef1748a398700b1d78e900be6a"
   },
   {
     "url": "index.png",
-    "revision": "20590ace41836b629307b56cae2eb0aa"
+    "revision": "417bf9a301229722b496cdc39b08eb56"
   },
   {
     "url": "sitemap/index.html",
-    "revision": "4abf42f71e8a6753db6798b59a5de560"
+    "revision": "4e14e6561afa73cb3f653d34ef1e08de"
   },
   {
     "url": "sitemap/index.png",
-    "revision": "2ab5caf85945eb1c9841111ea3361595"
+    "revision": "a30610265c3a685d94cbc47a7c1e5701"
   },
   {
     "url": "talks/index.html",
-    "revision": "2c50ccac118556d74a2f465aebae4c2b"
+    "revision": "acd79d9e98e128fc800e0d8d7fb8aa63"
   },
   {
     "url": "talks/index.png",
-    "revision": "4a5118555059926e650245ef62737f9b"
+    "revision": "ea22a4db74cbad26d6ea09ab04ac4f76"
   },
   {
     "url": "websites/index.html",
-    "revision": "3c5d622ae2c34d8fcccfa1d9ac14000f"
+    "revision": "29e2369291efeec638a0061d4a16e891"
   },
   {
     "url": "websites/index.png",
-    "revision": "4e1fbfe031cb8e62d3a81459c96ff617"
+    "revision": "1d74578f349c6035caf054bb7113e5f0"
   },
   {
     "url": "work/index.html",
-    "revision": "bf2e84a24727e98c573812c93a922d18"
+    "revision": "1fc96a7e6c257afe4a32cd61618688c5"
   },
   {
     "url": "work/index.png",
-    "revision": "89969ea7f9c1acc12c4f5e867645e822"
+    "revision": "b3946e80a136d472c519d90ca0f6fe88"
   },
   {
     "url": "worldmap/index.html",
-    "revision": "34ff58c2d1d5c962aafdb2847ffcfa75"
+    "revision": "3e222dd417c4e825b1f01286b6974b07"
   },
   {
     "url": "worldmap/index.png",
-    "revision": "cc52d1c4e412bc7d3b9fbd90c13246e9"
+    "revision": "4832e7efdcc87e7515efdb204d717822"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
