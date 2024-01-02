@@ -3,7 +3,7 @@ layout: templates/blog.html
 title: Problems Posed by Ad-blockers
 description: Discover the history and the problems posed by ad-blockers. Includes the in-depth research papers. Dated 2017.
 keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design
-url: blog/research-into-web-accessibility-for-dyslexics/
+url: blog/adblockers/
 tags: blog
 blog_cat: Blog
 youtubeId: PfILiWebkuc
