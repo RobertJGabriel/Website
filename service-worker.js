@@ -272,7 +272,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "aa6ba33f6a55ed1260db60ba19a316bd"
+    "revision": "772849b492cd4471c481ebcf84178f8f"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -292,7 +292,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "4a01225ec8c1f86572d45dfc25a00e9a"
+    "revision": "987e9abd7fdd4f7760a2b96c07bb159a"
   },
   {
     "url": "blog/adblockers/index.png",
@@ -300,7 +300,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "b0685e4bb32c4defe0e1af67068dc856"
+    "revision": "9234130006f9bd1a9bd9445669153050"
   },
   {
     "url": "blog/bag/index.png",
