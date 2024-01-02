@@ -117,7 +117,7 @@
        "website": "https://www.helperbird.com",
        "description": "Markdown Editor simplifies your writing experience. Whether it's on GitHub, Twitch, or any code editor, our premium markdown editor integrates seamlessly into your browser. It supports all popular coding languages, making markdown writing a breeze.",
        "link": "https://chromewebstore.google.com/detail/markdown-editor-for-chrom/dkpldbigkfcgpamifjimiejipmodkigk",
-       "img": "netflix.jpeg"
+       "img": "markdown.png"
      },
      {
        "date": "September 21, 2021",
@@ -125,7 +125,7 @@
        "website": "https://www.helperbird.com",
        "description": "List all categories on Netflix including the hidden ones. Over 5000 categories.",
        "link": "https://chrome.google.com/webstore/detail/netflix-hidden-categories/pajmfnmlmcknmehpcklomlblpdcpdmgg",
-       "img": "firefox.webp"
+       "img": "netflix.jpeg"
      }
    ],
     "talks": [

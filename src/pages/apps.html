@@ -43,9 +43,9 @@ url: apps
               </div>
               <h2 class="mt-6 text-lg font-semibold text-black">
                 <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition sm:-inset-x-6 sm:rounded-2xl"></div>
-                <a href="            {{ article.link }}" title="{{ article.title }} - Learn more">
-                  <span class="relative z-10">{{ article.title }}</span>
-                </a>
+                <a href="{{ article.link }}" title="{{ article.title }} - Learn more" aria-label="{{ article.title }} - Learn more" role="link">
+    <span class="relative z-10">{{ article.title }}</span>
+  </a>
               </h2>
               <p class="relative z-10 mt-2 text-base text-black">
                 {{ article.description }}

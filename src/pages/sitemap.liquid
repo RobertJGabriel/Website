@@ -57,23 +57,25 @@ url: sitemap/
                 <div
                   class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
                 ></div>
-                <a  href="{{ item.url }}" title="Link to  {{ item.data.title }}"
-                  ><span
+              <span
                     class=" -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
                   ></span
-                  ><span class="relative z-10">              {{ item.data.title }}</span></a
-                >
+                  ><span class="relative z-10">              {{ item.data.title }}</span>
               </h2>
               <p
                 class="relative z-10 mt-2 text-base text-black"
               >
               		 {{ item.data.description }}
               </p>
-              <p
-                class="relative z-10 mt-6 flex link link-secondary "
-              >
-                <span class="ml-2">Visit</span>
-              </p>
+            <a
+  href="{{ item.url }}"
+  title="Link to {{ item.data.title }}"
+  class="relative z-10 mt-6 flex link link-secondary"
+  role="link"
+  aria-label="Visit {{ item.data.title }}"
+>
+  <span class="ml-2">Visit</span>
+</a>
             </li>
 
 

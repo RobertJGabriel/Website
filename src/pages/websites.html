@@ -3,7 +3,7 @@ layout: templates/base.html
 title: Websites & Apps
 youtubeId: PfILiWebkuc
 cardTitle: Websites & Apps
-description: Explore a portfolio of popular websites designed and developed by Robert James Gabriel, a proficient software engineer. This collection showcases a variety of web-based projects, each demonstrating a unique blend of creativity and technical expertise. 
+description: Explore a portfolio of popular websites designed and developed by Robert James Gabriel, a proficient software engineer. This collection showcases a variety of web-based projects, each demonstrating a unique blend of creativity and technical expertise.
 keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexic
 
 url: websites
@@ -73,14 +73,16 @@ It's where my passion for web magic meets practical results – all crafted with
                     >
                   							{{ article.description }}
                     </p>
-                    <a   href="{{article.link}}"
-                      target="_blank"
-
-
-                      class="relative z-10 mt-4 flex items-center link link-secondary"
-                    >
-                      Visit website
-                    </a>
+                    <a
+    href="{{ article.link }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="relative z-10 mt-4 flex items-center link link-secondary"
+    role="link"
+    aria-label="Visit website: {{ article.title }}"
+  >
+    Visit website
+  </a>
                   </article>
 
 

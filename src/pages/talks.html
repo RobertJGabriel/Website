@@ -79,17 +79,16 @@ url: talks
                     >
                   							{{ article.description }}
                     </p>
-                    <a  href="{{article.link}}"
-                      target="_blank"
-
-
-                      class="relative z-10 mt-4 flex items-center link link-secondary"
-
-                      aria-hidden="true"
-
-                    >
-                      Watch video
-                    </a>
+                    <a
+    href="{{ article.link }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="relative z-10 mt-4 flex items-center link link-secondary"
+    role="link"
+    aria-label="Watch video: {{ article.title }}"
+  >
+    Watch video
+  </a>
                   </article>
 
 
@@ -150,17 +149,16 @@ url: talks
 
 
 
-                      <a  href="{{podcast.link}}"
-                        target="_blank"
-
-
-                        class="relative z-10 mt-4 flex items-center link link-secondary"
-
-                        aria-hidden="true"
-
-                      >
-                        Listen
-                      </a>
+                      <a
+          href="{{ podcast.link }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="relative z-10 mt-4 flex items-center link link-secondary"
+          role="link"
+          aria-label="Listen to podcast: {{ podcast.title }}"
+        >
+          Listen
+        </a>
 										</article>
 
             				{%- endfor -%}
