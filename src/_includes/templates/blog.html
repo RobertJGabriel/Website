@@ -87,24 +87,83 @@
 		<meta content="/assets/images/social/browserconfig.xml" name="msapplication-config" />
 	</head>
 
-	<body class="h-full bg-base-300">
-		<div id="robertjames-website" class="min-h-full  flex flex-col bg-base-300">
-	
-				{% include templates/header.html %} 
-				<main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8 pt-16 mb-12">
-					<div class="mx-auto max-w-2xl">
-					{{ content | safe }}
+	<body class="flex h-full bg-zinc-50 bg-base-300">
+		<div id="robertjames-website" class="flex w-full">
+
+			<div class="relative flex w-full flex-col">
+
+				{% include templates/header.html %}
+				<div class="flex-none"></div>
+				<main class="flex-auto">
+
+					<div class="mx-auto w-full max-w-7xl lg:px-8">
+					  <div class="relative px-4 sm:px-8 lg:px-12">
+					    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+					      <div class="xl:relative">
+					        <div class="mx-auto max-w-2xl">
+					          <a
+											href="/blog/"
+					            type="button"
+					            aria-label="Go back to articles"
+					            class=" btn btn-circle btn-secondary mb-10"
+					          >
+					            <svg
+					              viewBox="0 0 16 16"
+					              fill="none"
+					              aria-hidden="true"
+												stroke='currentColor'
+					              class="h-6 w-6"
+					            >
+					              <path
+					                d="M7.25 11.25 3.75 8m0 0 3.5-3.25M3.75 8h8.5"
+					                stroke-width="1.5"
+					                stroke-linecap="round"
+					                stroke-linejoin="round"
+					              ></path>
+					            </svg>
+					          </a>
+					          <article>
+					            <header class="flex flex-col">
+					              <h1
+					                class="mt-6 text-4xl font-bold tracking-tight text-zinc-800 text-black sm:text-5xl"
+					              >
+					                {{ title}}
+					              </h1>
+					              <time
+					                datetime="2022-09-05"
+					                class="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
+					                ><span
+					                  class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"
+					                ></span
+					                ><span class="ml-3">September 5, 2022</span></time
+					              >
+					            </header>
+					            <div class="mt-8 prose dark:prose-invert" data-mdx-content="true">
+
+
+															{{ content | safe }}
+
+
+					            </div>
+					          </article>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
 					</div>
-				</main>
-				{% include templates/footer.html %} 
-
-	
-		
 
 
-				
-		
-	
+
+			</main>
+				{% include templates/footer.html %}
+			</div>
+
+
+
+
+
+
+
 		</div>
 	</body>
 	{% bundledJs %}

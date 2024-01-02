@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en" class="h-full antialiased dark">
 	<head>
 		<meta charset="utf-8" />
 		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -83,24 +83,35 @@
 		<link href="/assets/images/social/site.webmanifest" rel="manifest" />
 		<link href="/assets/images/social/safari-pinned-tab.svg" rel="mask-icon" />
 		<link href="/assets/images/social/favicon.ico" rel="shortcut icon" />
-		<meta content="#ffffff" name="msapplication-TileColor" />
+		<meta content="#ffa6e1" name="msapplication-TileColor" />
 		<meta content="/assets/images/social/browserconfig.xml" name="msapplication-config" />
+		<style>
+
+		.robert-pink{
+			background-color: #ffa6e1;
+		}
+		</style>
 	</head>
 
-	<body class="h-full bg-base-300">
-		<div id="robertjames-website" class="min-h-full  flex flex-col bg-base-300">
-	
-				{% include templates/header.html %} 
+	<body class="flex h-full bg-zinc-50 bg-base-300">
+		<div id="robertjames-website" class="flex w-full">
+
+			<div class="relative flex w-full flex-col">
+
+				{% include templates/header.html %}
+				<div class="flex-none"></div>
+				<main class="flex-auto">
 				{{ content | safe }}
-				{% include templates/footer.html %} 
+			</main>
+				{% include templates/footer.html %}
+			</div>
 
-	
-		
 
 
-				
-		
-	
+
+
+
+
 		</div>
 	</body>
 	{% bundledJs %}

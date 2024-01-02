@@ -1,28 +1,123 @@
-<header class="navbar">
-  <div class="flex-1">
+<header
+  class="pointer-events-none relative z-50 flex flex-none flex-col"
 
-    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy  btn btn-ghost normal-case text-xl lg:invisible"  href="/"  title="Link to the homepage">RJG</a>
-    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy  btn btn-ghost normal-case text-xl invisible lg:visible h-8 w-auto"  href="/"  title="Link to the homepage">Robert James</a>
+>
+  <div class="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"></div>
 
-   
-  </div>
-  <div class="flex-none">
-    <ul class="menu menu-horizontal p-0">
-      <li><a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy "  href="/blog/" title="Link to Robert James blog ">Blog</a></li>
-      <li tabindex="0">
-        <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " href="/work" title="Link to Robert James work history ">
-          Work
-          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </a>
-        <ul class="p-2 bg-base-100">
-          <li><a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy "  href="/apps/" title="Link to Robert James apps "> Apps</a></li>
-          <li><a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy "  href="/websites/" title="Link to Robert James website list ">Websites</a></li>
-          <li><a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy "  href="/talks/"  title="Link to Robert James list of talks ">Talks</a></li>
-        </ul>
-      </li>
+  <div class="top-0 z-10 h-16 pt-6" >
+    <div
+      class="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full"
 
-      <li><a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy "  href="/awards/" title="Link to Robert James list of awards ">Awards</a></li>
-      <li><a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy "  href="/contact/" title="Link to Robert James list of talks ">Contact</a></li>
-    </ul>
+    >
+      <div class="mx-auto w-full max-w-7xl lg:px-8">
+        <div class="relative px-4 sm:px-8 lg:px-12">
+          <div class="mx-auto max-w-2xl lg:max-w-5xl">
+            <div class="relative flex gap-4">
+              <div class="flex flex-1">
+
+                <div
+                  class="h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
+                >
+                  <a aria-label="Home" class="pointer-events-auto" href="/"
+                    ><img
+                      alt=""
+                      fetchpriority="high"
+                      width="512"
+                      height="512"
+                      decoding="async"
+                      data-nimg="1"
+                      class="rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 h-9 w-9"
+                      sizes="2.25rem"
+
+                      src="/assets/images/me-two.png"
+
+                  /></a>
+                </div>
+
+
+
+
+              </div>
+              <div class="flex flex-1 justify-end md:justify-center">
+                <div
+                  class="pointer-events-auto md:hidden"
+                  data-headlessui-state=""
+                >
+                  <button
+                    class="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
+                    type="button"
+                    aria-expanded="false"
+                    data-headlessui-state=""
+                    id="headlessui-popover-button-:R2miqla:"
+                  >
+                    Menu<svg
+                      viewBox="0 0 8 6"
+                      aria-hidden="true"
+                      class="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400"
+                    >
+                      <path
+                        d="M1.75 1.75 4 4.25l2.25-2.5"
+                        fill="none"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div
+
+                ></div>
+                <nav class="pointer-events-auto hidden md:block">
+                  <ul
+                    class="flex rounded-full bg-white/90 px-3 text-base font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10"
+                  >
+
+                    <li>
+                      <a
+                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                        href="/blog/"
+                        >Blog</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                        href="/Apps/"
+                        >Projects</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                        href="/talks/"
+                        >Speaking</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                        href="/awards"
+                        >Awards</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                        href="/#contact"
+                        >Contact</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="flex justify-end md:flex-1">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

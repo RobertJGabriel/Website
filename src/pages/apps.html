@@ -1,57 +1,74 @@
 ---
 layout: templates/base.html
-title: Apps & software
+title: Apps
 youtubeId: PfILiWebkuc
-cardTitle: Apps & software
+cardTitle: Apps  software
 description: Popular apps, chrome extensions and software made by software engineer Robert James Gabriel. Modules, Chrome/Firefox extensions and more.
 keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexic
 url: apps
 ---
 
-<main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8 pt-16 mb-12">
-	<div class="flex flex-shrink-0 justify-center">
-		<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " href="/" title="Link to Robert James homepage " class="inline-flex">
-			<span class="sr-only">Robert James Gabriel </span>
-			
-			<div class="avatar">
-				<div class="h-48 w-auto  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-				  <img src="/assets/images/me-two.png" alt="Robert James Gabriel" />
-				</div>
-			  </div>
-		
-		</a>
-	</div>
-	<div class="py-12">
-		<div class="text-center">
-			<h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-				Apps & Software
-			</h1>
-			<p class="mt-2 text-xl text-gray-500">by Robert James</p>
-		</div>
-	</div>
 
-	<div class="mx-auto max-w-lg">
-	
+<div class="sm:px-8 mt-16 sm:mt-32">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <header class="max-w-2xl">
+          <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">
+            From My Desk to Your.
+
+<br>
+            App Showcase
+          </h1>
+          <p class="mt-6 text-xl text-black">
+            Explore the apps I've crafted, designed to blend utility with inventive features. My collection ranges from open-source tools to specialized solutions, each created to enhance your digital experience in areas like accessibility and productivity.
+          </p>
+        </header>
+        <div class="mt-16 sm:mt-20">
+          <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
             {%- for article in work.apps -%}
-
-            <div class="card mb-8 bg-white shadow-xl">
-				<figure class="px-10 pt-10">
-					<img src="/assets/images/apps/{{article.img}}" alt="{{ article.title }}" class="rounded-xl" />
-				  </figure>
-                <div class="card-body">
-                    <h2 class="card-title"> {{ article.title }}</h2>
-                    <p class="mt-4">
-                        {{ article.description }}
-                    </p>
-                    <div class="card-actions justify-end">
-                        <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " class="btn btn-primary"  title="Learn more about the {{article.title}}"  href="{{ article.link }}" target="_blank" rel="noreferrer" >  See more </a>
-                      </div>
-                </div>
-            </div>
-
-
+            <li class="group relative flex flex-col items-start">
+              <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                <img
+                  loading="lazy"
+                  width="32"
+                  height="32"
+                  decoding="async"
+                  data-nimg="1"
+                  class="h-8 w-8"
+                  src="/assets/images/work/{{ article.img }}"
+                  alt="{{ article.title }} logo"
+                  style="color: transparent"
+                />
+              </div>
+              <h2 class="mt-6 text-lg font-semibold text-black">
+                <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition sm:-inset-x-6 sm:rounded-2xl"></div>
+                <a href="            {{ article.link }}" title="{{ article.title }} - Learn more">
+                  <span class="relative z-10">{{ article.title }}</span>
+                </a>
+              </h2>
+              <p class="relative z-10 mt-2 text-base text-black">
+                {{ article.description }}
+              </p>
+              <a href="{{article.link}}" target="
+              " class="relative z-10 mt-6 flex text-base font-medium text-black transition">
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="h-6 w-6 flex-none"
+                >
+                  <path
+                    d="M15.712 11.823a.75.75 0 1 0 1.06 1.06l-1.06-1.06Zm-4.95 1.768a.75.75 0 0 0 1.06-1.06l-1.06 1.06Zm-2.475-1.414a.75.75 0 1 0-1.06-1.06l1.06 1.06Zm4.95-1.768a.75.75 0 1 0-1.06 1.06l1.06-1.06Zm3.359.53-.884.884 1.06 1.06.885-.883-1.061-1.06Zm-4.95-2.12 1.414-1.415L12 6.344l-1.415 1.413 1.061 1.061Zm0 3.535a2.5 2.5 0 0 1 0-3.536l-1.06-1.06a4 4 0 0 0 0 5.656l1.06-1.06Zm4.95-4.95a2.5 2.5 0 0 1 0 3.535L17.656 12a4 4 0 0 0 0-5.657l-1.06 1.06Zm1.06-1.06a4 4 0 0 0-5.656 0l1.06 1.06a2.5 2.5 0 0 1 3.536 0l1.06-1.06Zm-7.07 7.07.176.177 1.06-1.06-.176-.177-1.06 1.06Zm-3.183-.353.884-.884-1.06-1.06-.884.883 1.06 1.06Zm4.95 2.121-1.414 1.414 1.06 1.06 1.415-1.413-1.06-1.061Zm0-3.536a2.5 2.5 0 0 1 0 3.536l1.06 1.06a4 4 0 0 0 0-5.656l-1.06 1.06Zm-4.95 4.95a2.5 2.5 0 0 1 0-3.535L6.344 12a4 4 0 0 0 0 5.656l1.06-1.06Zm-1.06 1.06a4 4 0 0 0 5.657 0l-1.061-1.06a2.5 2.5 0 0 1-3.535 0l-1.061 1.06Zm7.07-7.07-.176-.177-1.06 1.06.176.178 1.06-1.061Z"
+                    fill="currentColor"
+                  ></path></svg
+                >
+                <span class="ml-2">{{ article.title }}</span>
+              </a>
+            </li>
             {%- endfor -%}
- 
-
-	</div>
-</main>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

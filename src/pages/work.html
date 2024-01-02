@@ -9,50 +9,98 @@ keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript
 url: awards
 ---
 
-<main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8 pt-16 mb-12">
-	<div class="flex flex-shrink-0 justify-center">
-		<a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy " href="/" title="Link to homepage" class="inline-flex">
-			<span class="sr-only">Robert James Gabriel </span>
-			
-			<div class="avatar">
-				<div class="h-48 w-auto  rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-				  <img src="/assets/images/me-two.png" alt="Robert James Gabriel" />
-				</div>
-			  </div>
-		
-		</a>
-	</div>
-	<div class="py-12">
-		<div class="text-center">
-			<h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-				Work history
-			</h1>
-			<p class="mt-2 text-xl text-gray-500">by Robert James</p>
-		</div>
-	</div>
 
-	<div class="mx-auto max-w-lg">
-	
-            {%- for article in work.history -%}
 
-			<div class="card mb-8 bg-white shadow-xl">
-			
-				<div class="card-body">
-				  <h2 class="card-title">
-					{{ article.title }}
-					<div class="badge badge-secondary">{{ article.company }}</div>
-				  </h2>
-				  <p class="mt-4"> {{ article.description }}</p>
-				  <div class="card-actions justify-end">
-					<div class="badge badge-outline">{{ article.start }}</div> 
-					<div class="badge badge-outline">{{ article.end }}</div>
-				  </div>
-				</div>
-			  </div>
- 
+<div class="sm:px-8 mt-16 sm:mt-32">
+  <div class="mx-auto w-full max-w-7xl lg:px-8">
+    <div class="relative px-4 sm:px-8 lg:px-12">
+      <div class="mx-auto max-w-2xl lg:max-w-5xl">
+        <header class="max-w-2xl">
+          <h1
+            class="text-4xl font-bold tracking-tight text-zinc-800 text-zinc-100 sm:text-5xl"
+          >
+        My Work History.
+<br>
+        The Road I've Traveled
+          </h1>
+          <p class="mt-6 text-xl text-zinc-600 text-zinc-400">
+      Take a peek into my career journey in 'My Work History'.
 
-            {%- endfor -%}
- 
+<br>
+      It's a straightforward story of how I grew from a keen developer into a specialist in Chrome extensions and web tools.
 
-	</div>
-</main>
+<br>
+      Every job, every project has been a step forward, fueling my passion for making tech easy and accessible for all.
+
+<br>
+       It's a simple tale of hard work, learning, and a lot of coding. Here, you'll see the milestones that define my professional path and the experiences that have shaped me in the tech world!
+          </p>
+        </header>
+        <div class="mt-16 sm:mt-20">
+          <div
+            class="md:border-l md:border-zinc-100 md:pl-6 border-zinc-700/40"
+          >
+            <div class="flex max-w-3xl flex-col space-y-16">
+          {%- for article in work.history -%}
+
+              <article class="md:grid md:grid-cols-4 md:items-baseline">
+                <div
+                  class="md:col-span-3 group relative flex flex-col items-start"
+                >
+                  <h2
+                    class="text-xl font-semibold tracking-tight text-zinc-800 text-zinc-100"
+                  >
+              
+                    <div
+                      ><span
+                        class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
+                      ></span
+                      ><span class="relative z-10"
+                        >				{{ article.title }}</span
+                      >
+
+                      <div
+                        aria-hidden="true"
+                        class="relative z-10 mt-4 flex items-center text-lg font-medium link link-secondary"
+                      >
+                            <div class="badge badge-secondary">{{ article.company }}</div>
+                      </div>
+                      </div
+                    >
+                  </h2>
+                  <time
+                    class="md:hidden relative z-10 order-first mb-3 flex items-center text-base text-black pl-3.5"
+                    datetime="2022-07-14"
+                    ><span
+                      class="absolute inset-y-0 left-0 flex items-center"
+                      aria-hidden="true"
+                      ><span
+                        class="h-4 w-0.5 rounded-full bg-zinc-200 bg-zinc-500"
+                      ></span></span
+                    >			<div class="badge badge-outline">{{ article.start }}</div>
+													<div class="badge badge-outline">{{ article.end }}</div></time
+                  >
+                  <p
+                    class="relative z-10 mt-2 text-base text-black"
+                  >
+          {{ article.description }}
+                  </p>
+
+                </div>
+                <time
+                  class="mt-1 hidden md:block relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 text-zinc-500"
+                  datetime="2022-07-14"
+                  ><div class="badge badge-outline">{{ article.start }}</div>
+                        <div class="badge badge-outline">{{ article.end }}</div></time
+                >
+              </article>
+
+
+                {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
