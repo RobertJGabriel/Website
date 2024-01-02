@@ -36,11 +36,11 @@ self.__precacheManifest = [
   },
   {
     "url": "apps/index.html",
-    "revision": "a447d53abc718e5bfce47df8d9512c5c"
+    "revision": "acbc87fdb7d94e2c397eebcc216182f7"
   },
   {
     "url": "apps/index.png",
-    "revision": "3cff33f28952c00fb5e72d4ddd1e1f3e"
+    "revision": "45c021cbf46f228cd0c30c1824220b87"
   },
   {
     "url": "assets/css/blog.css",
@@ -284,7 +284,7 @@ self.__precacheManifest = [
   },
   {
     "url": "awards/index.html",
-    "revision": "96e014be9f13f5f8c1ecccb40f4bfba9"
+    "revision": "f0d0596788a120932d99e6851eb892fb"
   },
   {
     "url": "awards/index.png",
@@ -356,43 +356,43 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "bc94f6ef1748a398700b1d78e900be6a"
+    "revision": "cc5b66b67d58274bb37e95750caf75c8"
   },
   {
     "url": "index.png",
-    "revision": "417bf9a301229722b496cdc39b08eb56"
+    "revision": "e7cb9fdfce0f5bdb3966650127add68a"
   },
   {
     "url": "sitemap/index.html",
-    "revision": "4e14e6561afa73cb3f653d34ef1e08de"
+    "revision": "ca6c32c69463a92d30c0d7f22c7b4dfb"
   },
   {
     "url": "sitemap/index.png",
-    "revision": "a30610265c3a685d94cbc47a7c1e5701"
+    "revision": "78dcec035e62523ff9710cd70f5992c5"
   },
   {
     "url": "talks/index.html",
-    "revision": "acd79d9e98e128fc800e0d8d7fb8aa63"
+    "revision": "210517e9e33f5023be4618acf892f6f9"
   },
   {
     "url": "talks/index.png",
-    "revision": "ea22a4db74cbad26d6ea09ab04ac4f76"
+    "revision": "d7123412abe8b99c4ab1fc51a56fbe63"
   },
   {
     "url": "websites/index.html",
-    "revision": "29e2369291efeec638a0061d4a16e891"
+    "revision": "55fae4b7c208d823230c71984903bc80"
   },
   {
     "url": "websites/index.png",
-    "revision": "1d74578f349c6035caf054bb7113e5f0"
+    "revision": "ce04ea32d1822ab7b44f2bab0948c306"
   },
   {
     "url": "work/index.html",
-    "revision": "1fc96a7e6c257afe4a32cd61618688c5"
+    "revision": "b85a8ac103506410c286df6575e69c87"
   },
   {
     "url": "work/index.png",
-    "revision": "b3946e80a136d472c519d90ca0f6fe88"
+    "revision": "39efe508285e39e4f08ecbff6acd8f0c"
   },
   {
     "url": "worldmap/index.html",
