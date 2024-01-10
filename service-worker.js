@@ -292,7 +292,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "987e9abd7fdd4f7760a2b96c07bb159a"
+    "revision": "7561962ffa97ec9ff0db5c67e0d273d7"
   },
   {
     "url": "blog/adblockers/index.png",
@@ -300,7 +300,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "9234130006f9bd1a9bd9445669153050"
+    "revision": "c05b773999bf90167f8a7980af2ede2c"
   },
   {
     "url": "blog/bag/index.png",
@@ -308,7 +308,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/favourite-apps-of-2023/index.html",
-    "revision": "36c93bd0cd58d947ea94e55417ec1df7"
+    "revision": "b2f4f93c3f61bdc74eb495122ed22332"
   },
   {
     "url": "blog/favourite-apps-of-2023/index.png",
@@ -316,19 +316,27 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "df6362552dd3999aa5ff5d1ac16f08be"
+    "revision": "18773a5484b46b85e7213c20e6335fa4"
   },
   {
     "url": "blog/index.png",
-    "revision": "b3946e80a136d472c519d90ca0f6fe88"
+    "revision": "c8851702e0e4ff729c2b62f79fe33163"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
-    "revision": "44baecd71d4757ba90a6ddfaea5e2991"
+    "revision": "66cb0107f2cbc020b25f00e3ff2861f8"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
     "revision": "dab9510b8175d5b2cee7569547d3fec1"
+  },
+  {
+    "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.html",
+    "revision": "bc2258bedcddea228e4d39a4860a97f7"
+  },
+  {
+    "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.png",
+    "revision": "5f914b87762979b65571307b740669df"
   },
   {
     "url": "cailin/index.html",
@@ -364,7 +372,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "075dcb13e1a543fc5f9390776cecc590"
+    "revision": "ba7bacdd5f059f1550b2776cfdf03413"
   },
   {
     "url": "sitemap/index.png",
