@@ -87,6 +87,10 @@ self.__precacheManifest = [
     "revision": "bffe9b60b6bd651d23642c05828deb9c"
   },
   {
+    "url": "assets/images/blog/eye.png",
+    "revision": "b6068cc572e1e243eb1e76413a4b6164"
+  },
+  {
     "url": "assets/images/me-two.png",
     "revision": "1b5499c9c7b03568c13eb731492655a0"
   },
@@ -291,6 +295,14 @@ self.__precacheManifest = [
     "revision": "d64dbf7ed6cb512916d9a1e8ba4298dc"
   },
   {
+    "url": "blog/ my-rare-eye-teratoma-tumor-story/index.html",
+    "revision": "1f9a024725426f4e260ff482716a4794"
+  },
+  {
+    "url": "blog/ my-rare-eye-teratoma-tumor-story/index.png",
+    "revision": "79556fc73c629f0c7a6370101e5298cd"
+  },
+  {
     "url": "blog/adblockers/index.html",
     "revision": "7561962ffa97ec9ff0db5c67e0d273d7"
   },
@@ -316,7 +328,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "18773a5484b46b85e7213c20e6335fa4"
+    "revision": "a3700c3150a8ca1c9bf21c5a658b254b"
   },
   {
     "url": "blog/index.png",
@@ -372,7 +384,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "ba7bacdd5f059f1550b2776cfdf03413"
+    "revision": "65f57f4ffa997c866fb2b942b40a6f15"
   },
   {
     "url": "sitemap/index.png",
