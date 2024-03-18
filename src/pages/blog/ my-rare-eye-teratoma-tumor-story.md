@@ -43,6 +43,9 @@ Recovering from the surgery brought its own set of challenges. My eyebrow moveme
 
 
 </p>
+
+<p class="mt-8 mb-8 text-xl"><img src="/assets/images/blog/eye.png" alt="What's in my bag"></p>
+
 <p class="mt-8 mb-8 text-xl">
 
 Throughout this ordeal, I tried to keep a brave face and not let on how worried I actually was. I didn't want my family and friends to be more stressed than they already were. But in hindsight, opening up about these fears and leaning on others for support was incredibly important.
