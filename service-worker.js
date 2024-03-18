@@ -296,7 +296,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.html",
-    "revision": "1f9a024725426f4e260ff482716a4794"
+    "revision": "3f81463a845e3518caf1fb4b41a24db5"
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.png",
