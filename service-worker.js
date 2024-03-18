@@ -91,6 +91,10 @@ self.__precacheManifest = [
     "revision": "b6068cc572e1e243eb1e76413a4b6164"
   },
   {
+    "url": "assets/images/blog/reddit.webp",
+    "revision": "b1ef4883b243b20ff1d2379a96ed57c6"
+  },
+  {
     "url": "assets/images/me-two.png",
     "revision": "1b5499c9c7b03568c13eb731492655a0"
   },
@@ -296,7 +300,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.html",
-    "revision": "3f81463a845e3518caf1fb4b41a24db5"
+    "revision": "fb8bc1973a6bdd8e6ea4c419ab7250c8"
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.png",
@@ -304,7 +308,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "7561962ffa97ec9ff0db5c67e0d273d7"
+    "revision": "c791984f287207ec4b84a3e73313ba3c"
   },
   {
     "url": "blog/adblockers/index.png",
@@ -312,7 +316,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "c05b773999bf90167f8a7980af2ede2c"
+    "revision": "026d9fd1242d75442785aa446dc5c0a5"
   },
   {
     "url": "blog/bag/index.png",
@@ -320,15 +324,23 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/favourite-apps-of-2023/index.html",
-    "revision": "b2f4f93c3f61bdc74eb495122ed22332"
+    "revision": "85f960c580c189dc56be190e4cbeefca"
   },
   {
     "url": "blog/favourite-apps-of-2023/index.png",
     "revision": "dd3624b340cc7efd5ad3697b1684db46"
   },
   {
+    "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.html",
+    "revision": "378fcaf5c7df5ad27560813d6a89a9d2"
+  },
+  {
+    "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.png",
+    "revision": "33ad7ac649220b7fd73fa6577b585e5c"
+  },
+  {
     "url": "blog/index.html",
-    "revision": "a3700c3150a8ca1c9bf21c5a658b254b"
+    "revision": "8e96d8a37b625207be478122dbb1d29b"
   },
   {
     "url": "blog/index.png",
@@ -336,7 +348,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
-    "revision": "66cb0107f2cbc020b25f00e3ff2861f8"
+    "revision": "6c7c87196b52ae9046e9b5a52e634691"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
@@ -344,7 +356,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.html",
-    "revision": "bc2258bedcddea228e4d39a4860a97f7"
+    "revision": "49d604bf0cebe29fdeb8cc4888045000"
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.png",
@@ -384,7 +396,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "65f57f4ffa997c866fb2b942b40a6f15"
+    "revision": "e16f487a607c4795d667b47c0d805719"
   },
   {
     "url": "sitemap/index.png",
