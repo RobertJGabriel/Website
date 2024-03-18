@@ -16,77 +16,54 @@ img: /assets/images/blog/eye.png
 ---
 
 
-<h2 class="mt-4 mb-4 text-3xl font-bold">
-My Journey with a Rare Eye Teratoma: A Plain-Spoken Tale
 
-</h2>
+
 
 
 <p class="mt-8 mb-8 text-xl">
-
-Hey there. I've decided to share something quite personal with you all, something I've been dealing with for a while now. It's about this unusual medical condition I found out I had a few years back, around 2017/2018. It's called a teratoma, and it was located in the temple of my right eye. I want to talk about what that's been like, the worries that came with it, and where I am now.
-
-</p>
-
-
-<p class="mt-8 mb-8 text-xl">
-
-First off, what's a teratoma? Well, in simple terms, it's a tumor that's pretty out of the ordinary because it can contain different types of tissue, like hair, teeth, and even muscle. Yeah, it sounds like something from a sci-fi movie, but it's real. And when you have one of these near your eye, it's not just rare; it's a big deal because it can cause serious problems, like affecting your vision or even being life-threatening if it turns out to be cancerous.
-
-</p>
-
-
-<p class="mt-8 mb-8 text-xl">
-
-
-Finding a surgeon who could remove this thing was a massive challenge, especially with the whole world turned upside down by COVID-19. It took until 2024 to get it sorted, with Dr. Bryan Wilkins stepping up to do the surgery. The tumor was successfully removed, and yeah, it was as weird as it sounds — teeth and hair included.
-
-</p>
-
-
-<p class="mt-8 mb-8 text-xl">
-
-
-After the surgery, I couldn't move my eyebrow, which was a bit of a shock, but it's something that will get better over time. There's also a scar to show for it, but the biggest relief is knowing that the tumor is gone. The whole experience, though, was a rollercoaster of emotions, not just for me but for my family and some friends I shared this with.
-
-</p>
-
-<p class="mt-8 mb-8 text-xl"><img src="/assets/images/blog/eye.png" alt="What's in my bag"></p>
-
-
-<p class="mt-8 mb-8 text-xl">
-
-My wife, my parents, and a few friends were pretty worried throughout this whole ordeal. And who could blame them? We were all on edge, waiting for test results to come back, hoping the teratoma wasn't cancerous. The uncertainty of it all was probably the hardest part to deal with.
+Hey everyone! I've got a bit of a personal story to share with you today. Back in 2017/2018, I found out I had this medical condition called a teratoma, right near my right eye, of all places. For those who might not know, a teratoma is not your typical tumor. This one can be made up of different types of tissue, including hair and teeth, which sounds like something straight out of a science fiction book, but it’s a real thing.
 
 
 </p>
-
-
 <p class="mt-8 mb-8 text-xl">
 
-Looking back, I kept a lot of the fear and anxiety to myself. I didn't want to pile on more worry for my loved ones. But now, I feel it's important to talk about it, to share my story in case someone else is going through something similar. It's okay to be scared, and it's okay to lean on others for support.
+The location of this tumor, right by my eye, made it a pretty significant concern. These tumors can be risky, impacting vision or even posing a threat to life if they turn out to be cancerous. That's not to mention the potential for it to be incredibly dangerous depending on its nature and the complications it might cause.
 
 
 </p>
-
-
 <p class="mt-8 mb-8 text-xl">
 
-
-Teratomas, especially in places like near your eye, are no joke. They can be dangerous, and the waiting game for test results can really mess with your head. But here I am, tumor-free and feeling a lot lighter, even if I'm still waiting for my eyebrow to catch up.
-</p>
-
-
-<p class="mt-8 mb-8 text-xl">
-
-If you're dealing with your own health scares, just remember, you're not alone. It's tough, and it's okay to feel all the feels. Reach out, share your story, and let's support each other through these weird, scary moments in life.
+The journey to getting this tumor removed was anything but straightforward, especially with the world grappling with the COVID-19 pandemic. It wasn't until 2024 that I found Dr. Bryan Wilkins, who took on the task. The surgery was successful, removing a tumor complete with hair and teeth - as bizarre as that sounds.
 
 
 </p>
-
-
 <p class="mt-8 mb-8 text-xl">
 
-Thanks for letting me share this with you. Here's to health, healing, and finding strength in our stories.
+Recovering from the surgery brought its own set of challenges. My eyebrow movement was limited at first, which was unexpected, but I was told it would improve with time. There's also a scar, a small reminder of what I've been through. However, the relief of having that tumor out of me cannot be overstated. The emotional toll it took, not just on me but on my close ones, was heavy. There was a lot of anxiety surrounding the possibility of cancer and the overall uncertainty.
+
+
+</p>
+<p class="mt-8 mb-8 text-xl">
+
+Throughout this ordeal, I tried to keep a brave face and not let on how worried I actually was. I didn't want my family and friends to be more stressed than they already were. But in hindsight, opening up about these fears and leaning on others for support was incredibly important.
+
+
+</p>
+<p class="mt-8 mb-8 text-xl">
+
+Teratomas, especially in such a sensitive area as near the eye, are no small matter. They can pose real dangers, and the waiting period for test results can be mentally and emotionally draining. But now, with the tumor gone, I feel a sense of lightness, even as I wait for my eyebrow movement to fully return.
+
+
+
+</p>
+<p class="mt-8 mb-8 text-xl">
+
+
+If you're facing health issues of your own, know that it's okay to be scared and it's okay to ask for help. Sharing our stories and supporting one another can make a world of difference in navigating these challenging moments.
+
+
+</p>
+<p class="mt-8 mb-8 text-xl">
+Thanks for letting me share this with you. Here's to health, healing, and the strength we find in community and sharing our experiences.
 
 </p>
