@@ -87,6 +87,10 @@ self.__precacheManifest = [
     "revision": "bffe9b60b6bd651d23642c05828deb9c"
   },
   {
+    "url": "assets/images/blog/cat.png",
+    "revision": "c0da0d837c079b620cc884967bc22d65"
+  },
+  {
     "url": "assets/images/blog/eye.png",
     "revision": "b6068cc572e1e243eb1e76413a4b6164"
   },
@@ -280,7 +284,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "772849b492cd4471c481ebcf84178f8f"
+    "revision": "dfa844768d4e83213ceab7ccd22e4ca2"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -340,11 +344,19 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "8e96d8a37b625207be478122dbb1d29b"
+    "revision": "81625bb7a1021f594e33abeae8133284"
   },
   {
     "url": "blog/index.png",
     "revision": "c8851702e0e4ff729c2b62f79fe33163"
+  },
+  {
+    "url": "blog/panic-attacks-and-anxiety/index.html",
+    "revision": "bf7a1f46271268be0e222109786bce65"
+  },
+  {
+    "url": "blog/panic-attacks-and-anxiety/index.png",
+    "revision": "f01c1a8f0d6042e1d561a1818cae1ebf"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
@@ -396,7 +408,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "e16f487a607c4795d667b47c0d805719"
+    "revision": "61ebe0d252fcb5b2a23055ec37b4aa92"
   },
   {
     "url": "sitemap/index.png",
