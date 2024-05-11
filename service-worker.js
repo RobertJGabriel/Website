@@ -87,12 +87,12 @@ self.__precacheManifest = [
     "revision": "bffe9b60b6bd651d23642c05828deb9c"
   },
   {
-    "url": "assets/images/blog/cat.png",
-    "revision": "c0da0d837c079b620cc884967bc22d65"
-  },
-  {
     "url": "assets/images/blog/eye.png",
     "revision": "b6068cc572e1e243eb1e76413a4b6164"
+  },
+  {
+    "url": "assets/images/blog/panic-attacks-and-anxiety/index.png",
+    "revision": "c0da0d837c079b620cc884967bc22d65"
   },
   {
     "url": "assets/images/blog/reddit.webp",
