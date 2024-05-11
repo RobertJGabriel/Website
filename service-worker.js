@@ -344,7 +344,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "286d1a38ad61dd0480869378984e8116"
+    "revision": "6b367ef8c3cf93a8891b8e4df888033b"
   },
   {
     "url": "blog/index.png",
@@ -352,7 +352,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.html",
-    "revision": "92aa2f14a276461b405b4a68da7198da"
+    "revision": "78bac6edfc6678a1b6af3f65ac3067b0"
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.png",
