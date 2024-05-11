@@ -7,7 +7,7 @@ url: blog/panic-attacks-and-anxiety/
 tags: blog
 blog_cat: Blog
 youtubeId: 
-dated: May 5 2024
+dated: May 5th 2024
 cardTitle: Anxiety Attacks 
 blog_snip: In this heartfelt blog post, I open up about my personal battle with anxiety attacks, sharing the challenges I've faced and the steps I'm taking to regain control over my life. From the intense pressures of a tech career to the recent resurgence of anxiety symptoms, I hope my story resonates with and supports others navigating similar struggles. Join me as I discuss the importance of seeking help, the impact on daily life, and my determination to prioritize mental health.
 
