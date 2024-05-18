@@ -28,15 +28,23 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "9153f15dfda893a5e3b9cc329746309a"
+    "revision": "9fe73743da29390836a43b75e2169f6e"
   },
   {
     "url": "404.png",
     "revision": "cd79f164a6d3ae7bf9ef902914e20aac"
   },
   {
+    "url": "about/index.html",
+    "revision": "705dc3c73e9f087ce48c70dc7dd7495e"
+  },
+  {
+    "url": "about/index.png",
+    "revision": "e7cb9fdfce0f5bdb3966650127add68a"
+  },
+  {
     "url": "apps/index.html",
-    "revision": "2d6bc6b50b5fbe9ab5e8c12d6ba47520"
+    "revision": "b142862e921411d7c6011282eac8ab4a"
   },
   {
     "url": "apps/index.png",
@@ -55,8 +63,20 @@ self.__precacheManifest = [
     "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
+    "url": "assets/images/apps/banned.png",
+    "revision": "e6c8c92534c4e62e09ef0eca2f68f799"
+  },
+  {
+    "url": "assets/images/apps/bear.png",
+    "revision": "2bbb51bed83c4b102dcf895967c185f2"
+  },
+  {
+    "url": "assets/images/apps/beard.png",
+    "revision": "a9cdd57de4d643dd733bfdcb1189ab4a"
+  },
+  {
     "url": "assets/images/apps/coffee.png",
-    "revision": "835aae9ca06f8e91251903e222b94d3c"
+    "revision": "e5c3db28251623046817aae3cadfde0a"
   },
   {
     "url": "assets/images/apps/editor.webp",
@@ -67,12 +87,48 @@ self.__precacheManifest = [
     "revision": "2d03947c7e2e8d4b4bd81f1137612de6"
   },
   {
+    "url": "assets/images/apps/flash.png",
+    "revision": "a58401282ece9199e3d3eb7748f2f0e8"
+  },
+  {
+    "url": "assets/images/apps/flashcards.png",
+    "revision": "b7c462081c51f438512c70801859922f"
+  },
+  {
+    "url": "assets/images/apps/google.png",
+    "revision": "6868fe1c3f04798214bd1b25b9abe8e1"
+  },
+  {
+    "url": "assets/images/apps/helperbird.png",
+    "revision": "90dc1616791ecd12d6faf91b765f9909"
+  },
+  {
     "url": "assets/images/apps/helperbird.webp",
     "revision": "6276eca5833aca9c00569477a7633f7f"
   },
   {
+    "url": "assets/images/apps/instant-incognito.png",
+    "revision": "797b5f271c51677f741f2914a5c1bda0"
+  },
+  {
+    "url": "assets/images/apps/markdown.png",
+    "revision": "56fd268030efb56aaccd22354d3ff4c8"
+  },
+  {
+    "url": "assets/images/apps/netflix.png",
+    "revision": "fc0a3cf92204bfbfa951580401e67101"
+  },
+  {
     "url": "assets/images/apps/opendyslexic.webp",
     "revision": "10c651f386966e4af83d21bb013ff158"
+  },
+  {
+    "url": "assets/images/apps/pii.png",
+    "revision": "b460f66f8d61c64330694e6a8707e5d6"
+  },
+  {
+    "url": "assets/images/apps/screenshot.png",
+    "revision": "51929f98c1f979bf8e908196e161d233"
   },
   {
     "url": "assets/images/apps/seo.webp",
@@ -87,16 +143,80 @@ self.__precacheManifest = [
     "revision": "bffe9b60b6bd651d23642c05828deb9c"
   },
   {
+    "url": "assets/images/blog/adblockers.png",
+    "revision": "06a641ce85acead48eb60de6b5168e74"
+  },
+  {
+    "url": "assets/images/blog/attacks.png",
+    "revision": "28ddbee097ab48f398095d56f5c6ace3"
+  },
+  {
+    "url": "assets/images/blog/bag.png",
+    "revision": "3fe96fdc246a302bede68fa4e9d20ea0"
+  },
+  {
+    "url": "assets/images/blog/banned.png",
+    "revision": "6f195054687ebc71fa0c243c406d1b22"
+  },
+  {
+    "url": "assets/images/blog/beard.png",
+    "revision": "9f674c878cf87b89699b21bd4883cf95"
+  },
+  {
+    "url": "assets/images/blog/coffee.png",
+    "revision": "dd72967ec9fe4a988a30f2cb476b6268"
+  },
+  {
     "url": "assets/images/blog/eye.png",
     "revision": "b6068cc572e1e243eb1e76413a4b6164"
+  },
+  {
+    "url": "assets/images/blog/fav.png",
+    "revision": "f3199b35bb35a71bfb142869382be253"
+  },
+  {
+    "url": "assets/images/blog/flashcards.png",
+    "revision": "a135512f8ef0d93d2919d7d5f91cb2ea"
+  },
+  {
+    "url": "assets/images/blog/google.png",
+    "revision": "03f15f4c7f8ca17e82d9ced2c4c4b40a"
+  },
+  {
+    "url": "assets/images/blog/helperbird.png",
+    "revision": "2c48c4760a98eb3ad7d9bc656116f12b"
+  },
+  {
+    "url": "assets/images/blog/markdown.png",
+    "revision": "2cf027bc5b50f72101ee06638da04e88"
+  },
+  {
+    "url": "assets/images/blog/netflix.png",
+    "revision": "3091498e75a1914b9d95a72c98674ec7"
+  },
+  {
+    "url": "assets/images/blog/opendyslexic.png",
+    "revision": "d7f1fcc68975809f8f65ec023d78bdfe"
   },
   {
     "url": "assets/images/blog/panic-attacks-and-anxiety/index.png",
     "revision": "c0da0d837c079b620cc884967bc22d65"
   },
   {
+    "url": "assets/images/blog/pokemon.png",
+    "revision": "bcf35bfdb07a8e505201f27f8889e7f4"
+  },
+  {
     "url": "assets/images/blog/reddit.webp",
     "revision": "b1ef4883b243b20ff1d2379a96ed57c6"
+  },
+  {
+    "url": "assets/images/blog/screenshot.png",
+    "revision": "c1720c722b0852b1cc239ede4f870bb2"
+  },
+  {
+    "url": "assets/images/blog/tumor.png",
+    "revision": "7f2febc8bc4bfbfe1981f5786bdfbba8"
   },
   {
     "url": "assets/images/me-two.png",
@@ -284,7 +404,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "74149182aef2bb3e120382fe9ad1fcb7"
+    "revision": "95120d6c08129516fe48fc60391c7568"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -296,7 +416,7 @@ self.__precacheManifest = [
   },
   {
     "url": "awards/index.html",
-    "revision": "c4bab420cd7216cf7bb0d4f1373159f0"
+    "revision": "f08e97b024715bc19273706859ad152d"
   },
   {
     "url": "awards/index.png",
@@ -304,7 +424,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.html",
-    "revision": "df5dbec3d6c25a01882d7cf1cb62b282"
+    "revision": "84b4bcec44c28075ff6a249ba8617b56"
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.png",
@@ -312,7 +432,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "d792f98fb1c301c582ef89872ccbf813"
+    "revision": "9afff3072a30a6b76ef11fc946a84414"
   },
   {
     "url": "blog/adblockers/index.png",
@@ -320,7 +440,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "d87bc8c3a00071d4d3430a96b86e2535"
+    "revision": "db1657683cb2bafaa98af3b6fcdc58c5"
   },
   {
     "url": "blog/bag/index.png",
@@ -328,7 +448,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/favourite-apps-of-2023/index.html",
-    "revision": "57722732f046d132af4673b620bed085"
+    "revision": "907cb1c603709822081c25984f70e3f2"
   },
   {
     "url": "blog/favourite-apps-of-2023/index.png",
@@ -336,7 +456,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.html",
-    "revision": "e9290afb3af5055f20d165a3bcf6d2b1"
+    "revision": "cb8a8283f396b05b9de76473b355ad77"
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.png",
@@ -344,7 +464,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "6b367ef8c3cf93a8891b8e4df888033b"
+    "revision": "d7bcedc101a379d618c05a32e8c0a818"
   },
   {
     "url": "blog/index.png",
@@ -352,7 +472,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.html",
-    "revision": "78bac6edfc6678a1b6af3f65ac3067b0"
+    "revision": "f9366128148543eef9bf633d1191c748"
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.png",
@@ -360,7 +480,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
-    "revision": "a4a1372da25d3e5051ed23c11715d23f"
+    "revision": "0db191545870f0e91bf5cc999d49cad5"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
@@ -368,7 +488,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.html",
-    "revision": "8193a3fdc87d6418177ba52c5cab71a2"
+    "revision": "e97bedbffd73a8e33cfb2d9eeb8185ff"
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.png",
@@ -376,7 +496,7 @@ self.__precacheManifest = [
   },
   {
     "url": "cailin/index.html",
-    "revision": "53a6eaedbbb8665ac262746d6a71f5b8"
+    "revision": "5c72541d6b6261e1bd40af983536c930"
   },
   {
     "url": "cailin/index.png",
@@ -384,7 +504,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/chrome-dino/index.html",
-    "revision": "41fdf91995e22cd7a6a6fe731139229a"
+    "revision": "7f489a0d9e6814078798c0d66745ce1f"
   },
   {
     "url": "css/chrome-dino/index.png",
@@ -392,7 +512,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/imac/index.html",
-    "revision": "922e5f0cf68fcb8f004fe520eb8751b5"
+    "revision": "6f4ddfbb411db23e58e89078b5e61ab0"
   },
   {
     "url": "css/imac/index.png",
@@ -400,7 +520,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "1324fc921d47f0e3d5df74f29d9e129b"
+    "revision": "549acf33b21c1917c791325a4c95ad2d"
   },
   {
     "url": "index.png",
@@ -408,7 +528,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "b024273125b9b9d9fa21995a1c1073e0"
+    "revision": "b7ceba6475cd9b08cb7d613bf55a6800"
   },
   {
     "url": "sitemap/index.png",
@@ -416,7 +536,7 @@ self.__precacheManifest = [
   },
   {
     "url": "talks/index.html",
-    "revision": "3eaf4482417b2762f786b1a0abee5520"
+    "revision": "e75a8307c8698ff71c21ca405db9a3b8"
   },
   {
     "url": "talks/index.png",
@@ -424,7 +544,7 @@ self.__precacheManifest = [
   },
   {
     "url": "websites/index.html",
-    "revision": "f4a248b27692645e90525c79504adc11"
+    "revision": "0b659430935359dab475e7e2fae1a40c"
   },
   {
     "url": "websites/index.png",
@@ -432,7 +552,7 @@ self.__precacheManifest = [
   },
   {
     "url": "work/index.html",
-    "revision": "18b712d2bd5cb94a2b94dbdb0ce905e5"
+    "revision": "eba01106355dbb723070c2ca53703777"
   },
   {
     "url": "work/index.png",
@@ -440,7 +560,7 @@ self.__precacheManifest = [
   },
   {
     "url": "worldmap/index.html",
-    "revision": "7af5007dbae33d2fac459bc1bd53f95e"
+    "revision": "a80ccb2fd61756c0ae131230207e76c5"
   },
   {
     "url": "worldmap/index.png",
