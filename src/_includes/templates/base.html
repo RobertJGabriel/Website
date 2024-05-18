@@ -85,15 +85,10 @@
 		<link href="/assets/images/social/favicon.ico" rel="shortcut icon" />
 		<meta content="#ffa6e1" name="msapplication-TileColor" />
 		<meta content="/assets/images/social/browserconfig.xml" name="msapplication-config" />
-		<style>
-
-		.robert-pink{
-			background-color: #ffa6e1;
-		}
-		</style>
+	
 	</head>
 
-	<body class="flex h-full bg-zinc-50 bg-base-300">
+	<body class="flex h-full  bg-base-300">
 		<div id="robertjames-website" class="flex w-full">
 
 			<div class="relative flex w-full flex-col">
@@ -102,8 +97,8 @@
 					{% include templates/header.html %}
 				{% endif %}
 
-				<div class="flex-none"></div>
-				<main class="flex-auto">
+	
+				<main class="flex-auto m-8">
 				{{ content | safe }}
 			</main>
 				{% include templates/footer.html %}

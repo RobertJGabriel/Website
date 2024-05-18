@@ -14,7 +14,10 @@ module.exports = {
 		extend: {
 			gridTemplateRows: {
 				'[auto,auto,1fr]': 'auto auto 1fr'
-			}
+			},
+			colors: {
+				'base-300': '#fef5ec', // Replace #yournewcolor with the color code you want
+			  },
 		}
 	},
 	variants: {

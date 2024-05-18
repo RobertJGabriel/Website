@@ -17,9 +17,7 @@ img: /assets/images/blog/opendyslexic.png
 
 ---
 
-Sure, here’s the content formatted in Markdown:
 
-```markdown
 # Introduction
 
 There are few published papers about usability testing with dyslexia focused fonts, but there is a considerable collection of knowledge on dyslexia as well as many suggestions for authoring dyslexia-friendly interfaces. Existing accessibility guidelines for dyslexic and non-dyslexic users suggest that dyslexic-accessible practices may redress difficulties encountered by all Internet users. This paper reviews two existing papers about dyslexia-focused fonts (OpenDyslexia font) and accessibility.
@@ -202,4 +200,3 @@ This report should offer an insight into the way dyslexic users experience the w
 6. [D. Scotwest, "Website Accessibility For Dyslexiasw," 2010 April 2016. [Online]. [Accessed 2010 April 2016]](https://www.dyslexiasw.com/about/website-accessibility)
 7. [W3C, "Text Customization," 11 November 2012. [Online]](https://www.w3.org/WAI/RD/2012/text-customization/r11)
 8. [V. F. d. Santana, "https://pdfs.semanticscholar.org," University of Campinas , 23 June 2012. [Online] [Accessed 23 Febuary 2016].](https://pdfs.semanticscholar.org/)
-```
