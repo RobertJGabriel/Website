@@ -1,5 +1,6 @@
 ---
-layout: templates/blog.html
+hideHeader: false
+layout:  templates/blog.html
 title: Whats in my Bag 2018
 description: I recently read a book about the minimal life. Im no hipster and I are a white privilege Irish man. So I didnt have to worry about some things and have a savings and a job. I thought I would write about I need to do my day to day life
 keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design

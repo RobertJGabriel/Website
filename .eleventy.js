@@ -10,6 +10,24 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const {createCanvas, loadImage} = require('canvas');
 const {formatTitle} = require('./tools/format-title');
 
+
+// Add custom markdown-it plugin to add ARIA attributes
+function addAriaAttributes(md) {
+    // Plugin to add ARIA attributes to links
+    md.core.ruler.push('aria_links', state => {
+        state.tokens.forEach(blockToken => {
+            if (blockToken.type === 'inline' && blockToken.children) {
+                blockToken.children.forEach(token => {
+                    if (token.type === 'link_open') {
+                        token.attrSet('role', 'link');
+                        token.attrSet('aria-label', 'External link');
+                    }
+                });
+            }
+        });
+    });
+}
+
 const createSocialImageForArticle = async (input, output) => {
     const splashSolid = await loadImage('./tools/images/splash-1.png');
     const splashStriped = await loadImage('./tools/images/splash-2.png');
@@ -190,7 +208,9 @@ module.exports = function (eleventyConfig) {
         return content;
     });
 
-	eleventyConfig.setLibrary('md', markdownIt(options).use(markdownItClass, mapping));
+
+    eleventyConfig.setLibrary('md', markdownIt(options).use(markdownItClass, mapping).use(addAriaAttributes));
+
     eleventyConfig.setLiquidOptions({
         dynamicPartials: false, strictFilters: false // renamed from `strict_filters` in Eleventy 1.0
     });

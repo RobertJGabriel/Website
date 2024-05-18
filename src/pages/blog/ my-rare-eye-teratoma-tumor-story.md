@@ -1,5 +1,6 @@
 ---
-layout: templates/blog.html
+hideHeader: false
+layout:  templates/blog.html
 title:  My Rare Eye Teratoma Tumor Story
 description: This post shares a deeply personal story of living with a rare teratoma tumor near the eye, the medical and emotional journey to its removal, and the impact on life and loved ones. It highlights the challenges of navigating healthcare, the importance of support, and the relief and learning that comes from facing one's fears.
 keywords: health, medical journey, teratoma, surgery, personal story, resilience, support, emotional health, recovery, rare conditions, Dr. Bryan Wilkins, patient experience

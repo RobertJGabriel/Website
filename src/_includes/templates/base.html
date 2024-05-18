@@ -98,7 +98,10 @@
 
 			<div class="relative flex w-full flex-col">
 
-				{% include templates/header.html %}
+				{% if hideHeader == false %}
+					{% include templates/header.html %}
+				{% endif %}
+
 				<div class="flex-none"></div>
 				<main class="flex-auto">
 				{{ content | safe }}

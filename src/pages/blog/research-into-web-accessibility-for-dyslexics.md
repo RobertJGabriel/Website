@@ -1,5 +1,6 @@
 ---
-layout: templates/blog.html
+hideHeader: false
+layout:  templates/blog.html
 title: Web Accessibility and OpenDyslexic
 description: There are few published papers about usability testing with dyslexia focused fonts, but there is a considerable collection of knowledge on dyslexia as well as many suggestions for authoring dyslexia friendly interfaces
 keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design

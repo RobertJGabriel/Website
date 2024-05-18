@@ -1,5 +1,6 @@
 ---
-layout: templates/blog.html
+hideHeader: false
+layout:  templates/blog.html
 title:  Anxiety Attacks
 description: In this heartfelt blog post, I open up about my personal battle with Anxiety attacks, sharing the challenges I've faced and the steps I'm taking to regain control over my life. From the intense pressures of a tech career to the recent resurgence of anxiety symptoms, I hope my story resonates with and supports others navigating similar struggles. Join me as I discuss the importance of seeking help, the impact on daily life, and my determination to prioritize mental health.
 keywords: health, medical journey, teratoma, surgery, personal story, resilience, support, emotional health, recovery, rare conditions, Dr. Bryan Wilkins, patient experience

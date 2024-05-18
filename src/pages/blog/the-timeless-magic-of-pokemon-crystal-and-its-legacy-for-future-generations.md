@@ -1,5 +1,6 @@
 ---
-layout: templates/blog.html
+hideHeader: false
+layout:  templates/blog.html
 title:  The Timeless Magic of Pokemon Crystal and Its Legacy for Future Generations
 description: This article delves into the personal journey with the beloved game, the challenges of accessing it in the modern era, and the role of web-based emulators in preserving this classic for new generations. Discover insights on device compatibility, cultural preservation, ethical gaming, and connecting generations through the magic of Pokémon Crystal.
 keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design

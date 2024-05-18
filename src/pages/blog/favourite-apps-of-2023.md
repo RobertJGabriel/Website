@@ -1,5 +1,6 @@
 ---
-layout: templates/blog.html
+hideHeader: false
+layout:  templates/blog.html
 title:  My Favourite Apps of 2023 - A Personal Journey Through Tech
 description: Hey everyone, Robert James Gabriel here! As we bid farewell to another whirlwind year in the tech world, I wanted to take a moment and share with you some apps that have made a significant impact on my daily life.
 keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design
