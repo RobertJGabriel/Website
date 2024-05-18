@@ -11,7 +11,7 @@ cardTitle: Problems Posed by Ad-blockers
 blog_snip: Discover the history and the problems posed by ad-blockers. Includes the in-depth research papers. Dated 2017.
 dated: April 1st 2015
 cat: Blog
-img: /assets/images/blog/giveaway/giveaway.jpeg
+img: /assets/images/blog/adblockers.png
 
 ---
 

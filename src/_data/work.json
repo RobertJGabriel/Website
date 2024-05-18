@@ -85,49 +85,67 @@
             "img": "clare.webp"
         }
     ],
-    "apps": [
-     {
-       "date": "September 21, 2021",
-       "title": "Helperbird",
-       "website": "https://www.helperbird.com",
-       "description": "Helperbird is your all in one accessibility tool providing personalized support for browsing, reading, and writing on the web. Whether you're reading a movie review or writing an email, Helperbird can make web pages, PDFs, and documents more accessible and productive to meet your needs",
-       "link": "https://www.helperbird.com",
-       "img": "helperbird.png"
-     },
-     {
-       "date": "September 21, 2021",
-       "title": "Coffee & Fun LLC",
-       "website": "https://www.coffeeandfun.com",
-       "description": "Coffee & Fun LLC, founded in 2020 with a passion for technological creativity. At the helm is Robert James Gabriel, guiding our team in crafting innovative software that makes a difference. We focus on building solutions that are not only functional but also add a touch of joy and accessibility to the digital world.",
-       "link": "https://www.coffeeandfun.com",
-       "img": "coffee-and-fun.png"
-     },
-     {
-       "date": "September 21, 2021",
-       "title": "Simple Screenshot Pro",
-       "website": "https://apps.apple.com/vn/app/simple-screenshot-pro/id6451333294",
-       "description": "Simple Screenshot Pro redefines screen capturing with one-click efficiency. Forget the old way of tedious scrolling and combining multiple images. This tool brings ease and precision to capturing entire webpages or just the visible parts.",
-       "link": "https://apps.apple.com/vn/app/simple-screenshot-pro/id6451333294",
-       "img": "simple.webp"
-     },
-
-     {
-       "date": "September 21, 2021",
-       "title": "Markdown Editor for Chrome",
-       "website": "https://www.helperbird.com",
-       "description": "Markdown Editor simplifies your writing experience. Whether it's on GitHub, Twitch, or any code editor, our premium markdown editor integrates seamlessly into your browser. It supports all popular coding languages, making markdown writing a breeze.",
-       "link": "https://chromewebstore.google.com/detail/markdown-editor-for-chrom/dkpldbigkfcgpamifjimiejipmodkigk",
-       "img": "markdown.png"
-     },
-     {
-       "date": "September 21, 2021",
-       "title": "Netflix Hidden Categories for Chrome",
-       "website": "https://www.helperbird.com",
-       "description": "List all categories on Netflix including the hidden ones. Over 5000 categories.",
-       "link": "https://chrome.google.com/webstore/detail/netflix-hidden-categories/pajmfnmlmcknmehpcklomlblpdcpdmgg",
-       "img": "netflix.jpeg"
-     }
-   ],
+    
+        "apps": [
+          {
+            "date": "September 21, 2021",
+            "title": "Helperbird",
+            "website": "https://www.helperbird.com",
+            "description": "Helperbird is your all-in-one accessibility tool, making browsing, reading, and writing on the web easier.",
+            "link": "https://www.helperbird.com",
+            "img": "helperbird.png"
+          },
+          {
+            "date": "September 21, 2021",
+            "title": "Coffee & Fun LLC",
+            "website": "https://www.coffeeandfun.com",
+            "description": " Coffee & Fun build software that’s functional, fun, and accessible, making a real difference in the digital world.",
+            "link": "https://www.coffeeandfun.com",
+            "img": "coffee.png"
+          },
+          {
+            "date": "September 21, 2021",
+            "title": "Simple Screenshot Pro",
+            "website": "https://apps.apple.com/vn/app/simple-screenshot-pro/id6451333294",
+            "description": "Simple Screenshot Pro makes screen capturing a breeze with one-click efficiency. No more tedious scrolling or combining images. Capture entire webpages or just the visible parts with ease and precision.",
+            "link": "https://apps.apple.com/vn/app/simple-screenshot-pro/id6451333294",
+            "img": "screenshot.png"
+          },
+          {
+            "date": "September 21, 2021",
+            "title": "Markdown Editor for Chrome",
+            "website": "https://www.helperbird.com",
+            "description": "Markdown Editor makes writing easy. Whether it's on GitHub, Twitch, or any code editor, this premium editor fits right into your browser, supporting all popular coding languages.",
+            "link": "https://chromewebstore.google.com/detail/markdown-editor-for-chrom/dkpldbigkfcgpamifjimiejipmodkigk",
+            "img": "markdown.png"
+          },
+          {
+            "date": "September 21, 2021",
+            "title": "Netflix Hidden Categories for Chrome",
+            "website": "https://chrome.google.com/webstore/detail/netflix-hidden-categories/pajmfnmlmcknmehpcklomlblpdcpdmgg",
+            "description": "Unlock all Netflix categories, including the hidden ones. Explore over 5000 categories and find your next binge-watch.",
+            "link": "https://chrome.google.com/webstore/detail/netflix-hidden-categories/pajmfnmlmcknmehpcklomlblpdcpdmgg",
+            "img": "netflix.png"
+          },
+          {
+            "date": "September 21, 2021",
+            "title": "Incognito Bear",
+            "website": "https://www.incognitomode.app/",
+            "description": "With one click, Incognito Bear removes all NSFW content or a custom list from your browsing history, letting you browse worry-free.",
+            "link": "https://www.incognitomode.app/",
+            "img": "bear.png"
+          },
+          {
+            "date": "September 21, 2021",
+            "title": "Instant Flash Cards",
+            "website": "https://www.coffeeandfun.com/flash-cards/",
+            "description": "Turn any site into study vibes with one click. Instant Flash Cards is your hack to making learning stick.",
+            "link": "https://www.coffeeandfun.com/flash-cards/",
+            "img": "flash.png"
+          }
+        ]
+      ,
+      
     "talks": [
         {
             "data": "September 21 2021",

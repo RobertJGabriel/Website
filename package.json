@@ -96,6 +96,7 @@
 		"@jlengstorf/get-share-image": "^0.8.0",
 		"@tailwindcss/aspect-ratio": "^0.2.0",
 		"@tailwindcss/typography": "^0.4.0",
+		"@toycode/markdown-it-class": "^1.2.4",
 		"canvas": "^2.11.0",
 		"clean-css": "^5.1.5",
 		"core-js": "^3.35.0",

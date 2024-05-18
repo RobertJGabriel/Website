@@ -9,57 +9,65 @@ url: apps
 ---
 
 
-<div class="sm:px-8 mt-16 sm:mt-32">
-  <div class="mx-auto w-full max-w-7xl lg:px-8">
-    <div class="relative px-4 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-2xl lg:max-w-5xl">
-        <header class="max-w-2xl">
+<div class="sm:px-8 mt-16">
+  <div class="mx-auto max-w-2xl lg:max-w-3xl">
+        
+        <header class="mb-12">
           <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">
-            From My Desk to Your.
-
-<br>
-            App Showcase
+            App Showcase 🚀
           </h1>
           <p class="mt-6 text-xl text-black">
-            Explore the apps I've crafted, designed to blend utility with inventive features. My collection ranges from open-source tools to specialized solutions, each created to enhance your digital experience in areas like accessibility and productivity.
+            Check out some of the apps I've put together! 🌟 
+            
+            <br>
+            They're all about being helpful and fun. Whether it's open-source tools or special solutions, each app is made to make your life easier and more productive. Dive in and see how these cool apps can boost your tech game!
+
           </p>
         </header>
-        <div class="mt-16 sm:mt-20">
-          <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-            {%- for article in work.apps -%}
-            <li class="group relative flex flex-col items-start">
-              <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                <img
-                  loading="lazy"
-                  width="32"
-                  height="32"
-                  decoding="async"
-                  data-nimg="1"
-                  class="h-8 w-8"
-                  src="/assets/images/work/{{ article.img }}"
-                  alt="{{ article.title }} logo"
-                  style="color: transparent"
-                />
-              </div>
-              <h2 class="mt-6 text-lg font-semibold text-black">
-                <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition sm:-inset-x-6 sm:rounded-2xl"></div>
-                <a href="{{ article.link }}" title="{{ article.title }} - Learn more" aria-label="{{ article.title }} - Learn more" role="link">
-    <span class="relative z-10">{{ article.title }}</span>
-  </a>
-              </h2>
-              <p class="relative z-10 mt-2 text-base text-black">
-                {{ article.description }}
-              </p>
-              <a href="{{article.link}}" target="
-              " class="relative z-10 mt-6 flex link link-secondary">
 
-                <span class="ml-2">{{ article.title }}</span>
-              </a>
-            </li>
-            {%- endfor -%}
-          </ul>
-        </div>
+
+
+
+        <div
+        class="not-prose grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+      >
+      {%- for article in work.apps -%}
+      <article class="card card-compact bg-base-100 border-1 transition-all duration-200 hover:-translate-y-1 focus-within:border focus-within:border-indigo-500">
+        <a
+          href="{{ article.link }}" title="{{ article.title }} - Learn more" aria-label="{{ article.title }} - Learn more"
+          class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 block transition-transform duration-200 focus:-translate-y-1"
+        >
+          <figure class="px-4 pt-4">
+            <img
+              loading="lazy"
+              src="/assets/images/apps/{{ article.img }}"
+              alt="{{ article.title }} logo - {{ article.description | truncate: 100 }}"
+              class="rounded-lg border border-base-content bg-base-300"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">{{ article.title }}</h2>
+            <p class="text-base">
+              {{ article.description }}
+            </p>
+          </div>
+        </a>
+      </article>
+      {%- endfor -%}
+      
+      
+      
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
-  </div>
-</div>

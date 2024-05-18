@@ -149,11 +149,33 @@ module.exports = function (eleventyConfig) {
     });
 
     let markdownIt = require('markdown-it');
+    let markdownItClass = require('@toycode/markdown-it-class');
     let options = {
         html: true,
         breaks: true,
         linkify: true
     };
+    const mapping = {
+        h1: 'leading-relaxed font-display text-3xl mb-8 font-bold text-gray-900',
+        h2: 'leading-relaxed font-display text-2xl mb-6 mt-12 font-semibold text-gray-800',
+        h3: 'leading-relaxed font-display text-xl mb-4 mt-10 font-semibold text-gray-700',
+        h4: 'leading-relaxed font-display text-lg mb-4 mt-8 font-semibold text-gray-600',
+        p: 'leading-relaxed font-display mb-4 mt-4 text-lg text-gray-900',
+        strong: 'text-lg font-semibold text-gray-800',
+        bold: 'font-bold text-gray-900',
+        ul: "leading-relaxed list-disc list-inside mt-4 space-y-2 pl-6 text-lg font-display ml-6 mb-8 text-gray-900",
+        ol: "leading-relaxed list-decimal list-inside mt-4 space-y-2 pl-6 text-lg font-display ml-6 mb-8 text-gray-900",
+        li: "leading-relaxed mb-2 text-lg font-display text-gray-900 flex items-center",
+      
+        img: 'aspect-square rounded-2xl mb-8 shadow-lg',
+        hr: 'divider divider-neutral my-8',
+        a: 'leading-relaxed font-sans text-lg text-blue-500 hover:text-blue-700 underline',
+        iframe: 'w-full h-96 rounded-xl shadow-lg my-10',
+        blockquote: 'border-l-4 border-gray-300 pl-4 italic text-gray-700 my-4',
+        code: 'bg-gray-100 text-gray-800 rounded p-2 text-sm font-mono',
+        pre: 'bg-gray-100 p-4 rounded overflow-x-auto'
+      };
+      
 
     eleventyConfig.addTransform('htmlmin', function (content, outputPath) { // Eleventy 1.0+: use this.inputPath and this.outputPath instead
         if (outputPath && outputPath.endsWith('.html')) {
@@ -168,7 +190,7 @@ module.exports = function (eleventyConfig) {
         return content;
     });
 
-    eleventyConfig.setLibrary('md', markdownIt(options));
+	eleventyConfig.setLibrary('md', markdownIt(options).use(markdownItClass, mapping));
     eleventyConfig.setLiquidOptions({
         dynamicPartials: false, strictFilters: false // renamed from `strict_filters` in Eleventy 1.0
     });

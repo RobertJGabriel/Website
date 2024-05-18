@@ -12,84 +12,98 @@ url: /awards
 
 
 
-<div class="sm:px-8 mt-16 sm:mt-32">
 
-<div class="mx-auto w-full max-w-7xl lg:px-8">
-  <div class="relative px-4 sm:px-8 lg:px-12">
-    <div class="mx-auto max-w-2xl lg:max-w-5xl">
-      <header class="max-w-2xl">
-        <h1
-          class="text-4xl font-bold tracking-tight text-black sm:text-5xl"
-        >
-          Some of my Honors & awards
-        </h1>
-        <p class="mt-6 text-xl text-black">
-  I'm thrilled to have been recognized with several honors and awards in technology and accessibility!
-<br>
-   These accolades celebrate my passion for creating innovative and user-friendly Chrome extensions and web tools.
+<div class="sm:px-8 mt-16">
+  <div class="mx-auto max-w-2xl lg:max-w-3xl">
+        
+        <header class="mb-12">
+          <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">
+            Sitemap
+          </h1>
+          <p class="mt-6 text-xl text-black">
+            Need to find something quickly on our site? Our sitemap is your go-to guide!
+            <br>
+                       It's simple, efficient, and gets you right where you want to be. From cool tools to insightful content, it's all here in a neat, organized layout.
+            
+
+          </p>
+        </header>
 
 
-        </p>
-      </header>
-      <div class="mt-16 sm:mt-20">
-        <div class="space-y-20">
-          <section
-            aria-labelledby=":S1:"
-            class="md:border-l  md:pl-6 border-zinc-700/40"
-          >
-            <div
-              class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4"
+
+
+
+        <div class="mt-16 sm:mt-20">
+          <div class="space-y-20">
+            <section
+              aria-labelledby=":S1:"
+              class="md:border-l  md:pl-6 border-zinc-700/40"
             >
-              <h2
-                id=":S1:"
-                class="text-lg font-semibold text-black"
+              <div
+                class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4"
               >
-                Awards & Honors
-              </h2>
-              <div class="md:col-span-3">
-                <div class="space-y-16">
-
-
-				            {%- for article in awards.awards -%}
-
-
-
-                  <article class="group relative flex flex-col items-start">
-                    <h3
-                      class="text-base font-semibold tracking-tight text-black"
-                    >
-
-                      <div><span
-                          class=" -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-                        ></span
-                        ><span class="relative z-10"
-                          >{{ article.title }}</span
-                        ></div
+                <h2
+                  id=":S1:"
+                  class="text-lg font-semibold text-black"
+                >
+                  Awards & Honors
+                </h2>
+                <div class="md:col-span-3">
+                  <div class="space-y-16">
+  
+  
+                      {%- for article in awards.awards -%}
+  
+  
+  
+                    <article class="group relative flex flex-col items-start">
+                      <h3
+                        class="text-base font-semibold tracking-tight text-black"
                       >
-                    </h3>
-
-                    <p
-                      class="relative z-10 mt-2 text-base text-black"
-                    >
-                  							{{ article.description }}
-                    </p>
-
-                  </article>
-
-
-
-
-									{%- endfor -%}
-
+  
+                        <div><span
+                            class=" -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
+                          ></span
+                          ><span class="relative z-10"
+                            >{{ article.title }}</span
+                          ></div
+                        >
+                      </h3>
+  
+                      <p
+                        class="relative z-10 mt-2 text-base text-black"
+                      >
+                                  {{ article.description }}
+                      </p>
+  
+                    </article>
+  
+  
+  
+  
+                    {%- endfor -%}
+  
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-
+            </section>
+  
+          </div>
         </div>
+      
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
-  </div>
-</div>
 
-</div>
+
+
+

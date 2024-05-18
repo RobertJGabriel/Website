@@ -13,79 +13,67 @@ url: sitemap/
 
 
 
-
-
-
-
-
-
-<div class="sm:px-8 mt-16 sm:mt-32">
-  <div class="mx-auto w-full max-w-7xl lg:px-8">
-    <div class="relative px-4 sm:px-8 lg:px-12">
-      <div class="mx-auto max-w-2xl lg:max-w-5xl">
-        <header class="max-w-2xl">
-          <h1
-            class="text-4xl font-bold tracking-tight text-black 0 sm:text-5xl"
-          >
-          Our sitemap
+<div class="sm:px-8 mt-16">
+  <div class="mx-auto max-w-2xl lg:max-w-3xl">
+        
+        <header class="mb-12">
+          <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">
+            Sitemap
           </h1>
           <p class="mt-6 text-xl text-black">
-          Need to find something quickly on our site? Our sitemap is your go-to guide!
-<br>
-           It's simple, efficient, and gets you right where you want to be. From cool tools to insightful content, it's all here in a neat, organized layout.
+            Need to find something quickly on our site? Our sitemap is your go-to guide!
+            <br>
+                       It's simple, efficient, and gets you right where you want to be. From cool tools to insightful content, it's all here in a neat, organized layout.
+            
 
-<br>
-           Click away and easily discover everything our website has to offer!
           </p>
         </header>
-        <div class="mt-16 sm:mt-20">
-          <ul
-            role="list"
-            class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-          >
 
 
 
-					            {% for item in collections.all %}
+
+        <div
+        class="not-prose grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+      >
+      {% for item in collections.all %}
+      <article class="card card-compact bg-base-100 border-1 transition-all duration-200 hover:-translate-y-1 focus-within:border focus-within:border-indigo-500">
+        <a
+          href="{{ item.url }}" title=" {{ item.data.title }} - Learn more" aria-label=" {{ item.data.title }} - Learn more"
+          class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 block transition-transform duration-200 focus:-translate-y-1"
+        >
+    
+          <div class="card-body">
+            <h2 class="card-title"> {{ item.data.title }}</h2>
+            <p class="text-base">
+              {{ item.data.description }}
+
+             
+            
+            </p>
+
+          
+          </div>
+        </a>
+      </article>
+      {%- endfor -%}
+      
+      
+      
+      </div>
+      
 
 
-            <li class="group relative flex flex-col items-start">
-
-              <h2
-                class="mt-6 text-lg font-semibold text-black"
-              >
-                <div
-                  class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
-                ></div>
-              <span
-                    class=" -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-                  ></span
-                  ><span class="relative z-10">              {{ item.data.title }}</span>
-              </h2>
-              <p
-                class="relative z-10 mt-2 text-base text-black"
-              >
-              		 {{ item.data.description }}
-              </p>
-            <a
-  href="{{ item.url }}"
-  title="Link to {{ item.data.title }}"
-  class="relative z-10 mt-6 flex link link-secondary"
-  role="link"
-  aria-label="Visit {{ item.data.title }}"
->
-  <span class="ml-2">Visit</span>
-</a>
-            </li>
 
 
 
-					 {%- endfor -%}
 
 
-          </ul>
-        </div>
+
+
+
       </div>
     </div>
-  </div>
-</div>
+
+
+
+

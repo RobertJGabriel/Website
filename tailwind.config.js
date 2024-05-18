@@ -18,8 +18,12 @@ module.exports = {
 		}
 	},
 	variants: {
-		extend: {}
-	},
+		extend: {
+		  ringWidth: ['focus'],
+		  ringColor: ['focus'],
+		  ringOffsetWidth: ['focus'],
+		},
+	  },
 	daisyui: {
 		styled: true,
 		themes: true,
