@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "9fe73743da29390836a43b75e2169f6e"
+    "revision": "9fea9028fb7d05636f843349045e4ed6"
   },
   {
     "url": "404.png",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
   },
   {
     "url": "about/index.html",
-    "revision": "705dc3c73e9f087ce48c70dc7dd7495e"
+    "revision": "7f6c79148c2841f6267efceec532a12b"
   },
   {
     "url": "about/index.png",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
   },
   {
     "url": "apps/index.html",
-    "revision": "b142862e921411d7c6011282eac8ab4a"
+    "revision": "fe7eca1510d86b1ab392efd581ba852f"
   },
   {
     "url": "apps/index.png",
@@ -404,7 +404,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "95120d6c08129516fe48fc60391c7568"
+    "revision": "aff63157d0d578bf0585cf282f641e39"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -416,7 +416,7 @@ self.__precacheManifest = [
   },
   {
     "url": "awards/index.html",
-    "revision": "f08e97b024715bc19273706859ad152d"
+    "revision": "605f6b50324972346e1d94270d4a2389"
   },
   {
     "url": "awards/index.png",
@@ -424,7 +424,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.html",
-    "revision": "84b4bcec44c28075ff6a249ba8617b56"
+    "revision": "0218b86ec1547541b3e4afbc1f6b9580"
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.png",
@@ -432,7 +432,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "9afff3072a30a6b76ef11fc946a84414"
+    "revision": "8393580caf860b0eccb147cbc45593c0"
   },
   {
     "url": "blog/adblockers/index.png",
@@ -440,7 +440,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "db1657683cb2bafaa98af3b6fcdc58c5"
+    "revision": "3a24fdc6cdde6ff523f77cd2e6b9bfef"
   },
   {
     "url": "blog/bag/index.png",
@@ -448,7 +448,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/favourite-apps-of-2023/index.html",
-    "revision": "907cb1c603709822081c25984f70e3f2"
+    "revision": "6695484bf51844a90333b3823c6d014c"
   },
   {
     "url": "blog/favourite-apps-of-2023/index.png",
@@ -456,7 +456,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.html",
-    "revision": "cb8a8283f396b05b9de76473b355ad77"
+    "revision": "da4a086a31d1ca59490fd4ff289ba798"
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.png",
@@ -464,7 +464,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "d7bcedc101a379d618c05a32e8c0a818"
+    "revision": "8b040f8691c0709a662484ecff447651"
   },
   {
     "url": "blog/index.png",
@@ -472,7 +472,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.html",
-    "revision": "f9366128148543eef9bf633d1191c748"
+    "revision": "30c71052f8153119e30ce3c02d148f3d"
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.png",
@@ -480,7 +480,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
-    "revision": "0db191545870f0e91bf5cc999d49cad5"
+    "revision": "83d487ff96e933e02fc86f2d1daaa4b0"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
@@ -488,7 +488,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.html",
-    "revision": "e97bedbffd73a8e33cfb2d9eeb8185ff"
+    "revision": "2df341225191f6ed6ad9af8fe6665099"
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.png",
@@ -496,7 +496,7 @@ self.__precacheManifest = [
   },
   {
     "url": "cailin/index.html",
-    "revision": "5c72541d6b6261e1bd40af983536c930"
+    "revision": "3597cc056ba219ef854b73c76399d5f9"
   },
   {
     "url": "cailin/index.png",
@@ -504,7 +504,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/chrome-dino/index.html",
-    "revision": "7f489a0d9e6814078798c0d66745ce1f"
+    "revision": "c482847d179126250c8120f241c3c37c"
   },
   {
     "url": "css/chrome-dino/index.png",
@@ -512,7 +512,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/imac/index.html",
-    "revision": "6f4ddfbb411db23e58e89078b5e61ab0"
+    "revision": "abc381ca1ee19ce66b750a21e7451348"
   },
   {
     "url": "css/imac/index.png",
@@ -520,7 +520,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "549acf33b21c1917c791325a4c95ad2d"
+    "revision": "5b48e4beb0166621e651f2d20c3849c3"
   },
   {
     "url": "index.png",
@@ -528,7 +528,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "b7ceba6475cd9b08cb7d613bf55a6800"
+    "revision": "84e6210bff39e1c08f307167b712a4d8"
   },
   {
     "url": "sitemap/index.png",
@@ -536,7 +536,7 @@ self.__precacheManifest = [
   },
   {
     "url": "talks/index.html",
-    "revision": "e75a8307c8698ff71c21ca405db9a3b8"
+    "revision": "34bc1c2d0aaad9a85ff0f25e073f4d3e"
   },
   {
     "url": "talks/index.png",
@@ -544,7 +544,7 @@ self.__precacheManifest = [
   },
   {
     "url": "websites/index.html",
-    "revision": "0b659430935359dab475e7e2fae1a40c"
+    "revision": "341b272649db243995f51fc6f8d0689d"
   },
   {
     "url": "websites/index.png",
@@ -552,7 +552,7 @@ self.__precacheManifest = [
   },
   {
     "url": "work/index.html",
-    "revision": "eba01106355dbb723070c2ca53703777"
+    "revision": "9e3f28ee60c7ebe86237bf8c7a25a262"
   },
   {
     "url": "work/index.png",
@@ -560,7 +560,7 @@ self.__precacheManifest = [
   },
   {
     "url": "worldmap/index.html",
-    "revision": "a80ccb2fd61756c0ae131230207e76c5"
+    "revision": "9837ea890dc8bfb685c22112c0ed99c0"
   },
   {
     "url": "worldmap/index.png",
