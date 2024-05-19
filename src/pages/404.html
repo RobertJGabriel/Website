@@ -12,98 +12,107 @@ permalink: /404.html
 ---
 
 
-<div class="sm:px-8 mt-16">
-	<div class="mx-auto max-w-2xl lg:max-w-3xl">
-	
+<div class="sm:px-8 mt-16 text-center font-sans">
 
-
-
-		  <div class="flex items-center justify-center h-screen">
-
-			<div id="gameContainer" class="relative w-96 h-128 bg-black overflow-hidden border-2 border-white" tabindex="0" role="application" aria-label="Pong game">
-				<div id="ball" class="absolute w-5 h-5 bg-white rounded-full" role="img" aria-label="Ball"></div>
-				<div id="paddleLeft" class="absolute w-5 h-24 bg-white" role="img" aria-label="Left paddle"></div>
-				<div id="paddleRight" class="absolute w-5 h-24 bg-white" role="img" aria-label="Right paddle"></div>
+		
+			<div class="mx-auto max-w-2xl lg:max-w-3xl">
+				<div class="flex flex-col items-center justify-center h-screen">
+					<h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">Oops! Page Not Found</h1>
+					<p class="mt-6 text-xl text-black">But you can play a game while you're here!</p>
+					<canvas id="gameCanvas" width="480" height="320" class="border-2"></canvas>
+				</div>
 			</div>
-		</div>
-
-	</div>
-
-</div>
-
-
-<script>
-const gameContainer = document.getElementById('gameContainer');
-const ball = document.getElementById('ball');
-const paddleLeft = document.getElementById('paddleLeft');
-const paddleRight = document.getElementById('paddleRight');
-
-let ballX = 190;
-let ballY = 290;
-let ballSpeedX = 2;
-let ballSpeedY = 2;
-
-let paddleLeftY = 190;
-let paddleRightY = 190;
-const paddleSpeed = 4;
-
-function movePaddle(e) {
-    if (e.type === 'mousemove') {
-        const rect = gameContainer.getBoundingClientRect();
-        const mouseY = e.clientY - rect.top;
-        if (mouseY < 12) {
-            paddleLeftY = 0;
-            paddleRightY = 0;
-        } else if (mouseY > 476) {
-            paddleLeftY = 364;
-            paddleRightY = 364;
-        } else {
-            paddleLeftY = mouseY - 12;
-            paddleRightY = mouseY - 12;
-        }
-    } else if (e.type === 'keydown') {
-        if (e.key === 'ArrowUp') {
-            paddleLeftY = Math.max(paddleLeftY - paddleSpeed, 0);
-            paddleRightY = Math.max(paddleRightY - paddleSpeed, 0);
-        } else if (e.key === 'ArrowDown') {
-            paddleLeftY = Math.min(paddleLeftY + paddleSpeed, gameContainer.clientHeight - paddleLeft.clientHeight);
-            paddleRightY = Math.min(paddleRightY + paddleSpeed, gameContainer.clientHeight - paddleRight.clientHeight);
-        }
-    }
-    paddleLeft.style.top = `${paddleLeftY}px`;
-    paddleRight.style.top = `${paddleRightY}px`;
-}
-
-function moveBall() {
-    ballX += ballSpeedX;
-    ballY += ballSpeedY;
-
-    if (ballY <= 0 || ballY >= gameContainer.clientHeight - ball.clientHeight) {
-        ballSpeedY *= -1;
-    }
-
-    if (
-        (ballX <= paddleLeft.clientWidth && ballY > paddleLeftY && ballY < paddleLeftY + paddleLeft.clientHeight) ||
-        (ballX >= gameContainer.clientWidth - paddleRight.clientWidth - ball.clientWidth && ballY > paddleRightY && ballY < paddleRightY + paddleRight.clientHeight)
-    ) {
-        ballSpeedX *= -1;
-    }
-
-    if (ballX <= 0 || ballX >= gameContainer.clientWidth - ball.clientWidth) {
-        ballX = gameContainer.clientWidth / 2 - ball.clientWidth / 2;
-        ballY = gameContainer.clientHeight / 2 - ball.clientHeight / 2;
-        ballSpeedX = 2;
-        ballSpeedY = 2;
-    }
-
-    ball.style.left = `${ballX}px`;
-    ball.style.top = `${ballY}px`;
-}
-
-gameContainer.addEventListener('mousemove', movePaddle);
-gameContainer.addEventListener('keydown', movePaddle);
-setInterval(moveBall, 16);
-
-gameContainer.focus();
-
-</script>
+	
+		<script>
+			const canvas = document.getElementById("gameCanvas");
+			const ctx = canvas.getContext("2d");
+	
+			const basketWidth = 55;
+			const basketHeight = 15;
+			let basketX = (canvas.width - basketWidth) / 2;
+			let rightPressed = false;
+			let leftPressed = false;
+	
+			const itemRadius = 10;
+			let itemX = Math.random() * (canvas.width - itemRadius * 2) + itemRadius;
+			let itemY = itemRadius;
+			const itemSpeed = 10;
+	
+			let score = 0;
+	
+			document.addEventListener("keydown", keyDownHandler, false);
+			document.addEventListener("keyup", keyUpHandler, false);
+	
+			function keyDownHandler(e) {
+				if (e.key == "Right" || e.key == "ArrowRight") {
+					rightPressed = true;
+				} else if (e.key == "Left" || e.key == "ArrowLeft") {
+					leftPressed = true;
+				}
+			}
+	
+			function keyUpHandler(e) {
+				if (e.key == "Right" || e.key == "ArrowRight") {
+					rightPressed = false;
+				} else if (e.key == "Left" || e.key == "ArrowLeft") {
+					leftPressed = false;
+				}
+			}
+	
+			function drawBasket() {
+				ctx.beginPath();
+				ctx.rect(basketX, canvas.height - basketHeight, basketWidth, basketHeight);
+				ctx.fillStyle = "#000000";
+				ctx.fill();
+				ctx.closePath();
+			}
+	
+			function drawItem() {
+				ctx.beginPath();
+				ctx.arc(itemX, itemY, itemRadius, 0, Math.PI * 2);
+				ctx.fillStyle = "#000000";
+				ctx.fill();
+				ctx.closePath();
+			}
+	
+			function drawScore() {
+				ctx.font = "16px Arial";
+				ctx.fillStyle = "#000000";
+				ctx.fillText("Score: " + score, 8, 20);
+			}
+	
+			function detectCollision() {
+				if (
+					itemY + itemRadius > canvas.height - basketHeight &&
+					itemX > basketX &&
+					itemX < basketX + basketWidth
+				) {
+					score++;
+					itemY = itemRadius;
+					itemX = Math.random() * (canvas.width - itemRadius * 2) + itemRadius;
+				} else if (itemY + itemRadius > canvas.height) {
+					alert("GAME OVER. Your score: " + score);
+					document.location.reload();
+				}
+			}
+	
+			function draw() {
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				drawBasket();
+				drawItem();
+				drawScore();
+				detectCollision();
+	
+				if (rightPressed && basketX < canvas.width - basketWidth) {
+					basketX += 7;
+				} else if (leftPressed && basketX > 0) {
+					basketX -= 7;
+				}
+	
+				itemY += itemSpeed;
+				requestAnimationFrame(draw);
+			}
+	
+			draw();
+		</script>
+	
