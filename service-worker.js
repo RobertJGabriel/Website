@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "44c87906129c06331c4b50f0d5aa3708"
+    "revision": "4c536731ee6fb83c629da7ac7db85526"
   },
   {
     "url": "404.png",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
   },
   {
     "url": "about/index.html",
-    "revision": "111b4cdf9f89fb762bf7657b090bce8f"
+    "revision": "c7e657dd3b18cfc841b1a7da866502ee"
   },
   {
     "url": "about/index.png",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
   },
   {
     "url": "apps/index.html",
-    "revision": "b5b1c11bd220dfd3cb3a4a46c2845052"
+    "revision": "69135abad5634f0110bb9cd9358c6b94"
   },
   {
     "url": "apps/index.png",
@@ -223,6 +223,10 @@ self.__precacheManifest = [
     "revision": "1b5499c9c7b03568c13eb731492655a0"
   },
   {
+    "url": "assets/images/robert-james.png",
+    "revision": "37b8b473f49589b3970af03ef56a4650"
+  },
+  {
     "url": "assets/images/RobertGabriel-Av1.png",
     "revision": "3d80352af493a762eaa185f1741de926"
   },
@@ -252,43 +256,39 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/images/social/android-chrome-192x192.png",
-    "revision": "69c60878b46f3fd8721d6e95da3370f5"
+    "revision": "11088f634cfee9ce3d89e28f0787d90f"
   },
   {
     "url": "assets/images/social/android-chrome-384x384.png",
-    "revision": "9cb7a521b86d78d2585754f8cf534440"
+    "revision": "2945401528fbfcfbfa93c9a610abb995"
   },
   {
     "url": "assets/images/social/android-chrome-512x512.png",
-    "revision": "24c64a0a5f542ccbaff81b8672707fad"
-  },
-  {
-    "url": "assets/images/social/apple-touch-icon-precomposed copy.png",
-    "revision": "888ac7670681aeb413d3b4426a0ef2e6"
-  },
-  {
-    "url": "assets/images/social/apple-touch-icon-precomposed.png",
-    "revision": "562340ffc912d888e3cc1561037abcf1"
+    "revision": "a1c6144530a19c20d04fa86584189ae9"
   },
   {
     "url": "assets/images/social/apple-touch-icon.png",
-    "revision": "4ea5fa364b6440220963185907a27da0"
+    "revision": "e87a18510099fc9d49b3ac803c34eb7c"
   },
   {
     "url": "assets/images/social/favicon-16x16.png",
-    "revision": "17158b8efbb1f5432886f58eaa0bee05"
+    "revision": "615315674e2bdf98e6d8b65c7ca2a4eb"
   },
   {
     "url": "assets/images/social/favicon-32x32.png",
-    "revision": "d32c531128566514677505a690baa69f"
+    "revision": "2289fc0a747bb9ae11d66fb0b529956d"
   },
   {
     "url": "assets/images/social/favicon.ico",
-    "revision": "0c86ead95372643b3b9ee1b328f8d2e3"
+    "revision": "c098c971362b6c3b6d79c48ec37eb282"
+  },
+  {
+    "url": "assets/images/social/favicon.png",
+    "revision": "615315674e2bdf98e6d8b65c7ca2a4eb"
   },
   {
     "url": "assets/images/social/mstile-150x150.png",
-    "revision": "36965f55e6deabf19d04768438d0ce93"
+    "revision": "6ecb2ed625fce609fcadff47001b24a8"
   },
   {
     "url": "assets/images/social/safari-pinned-tab.svg",
@@ -404,7 +404,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "3f7227a4c8381e5bb400e173cc776408"
+    "revision": "f45ae4a461b26fd9820fad269511e466"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -416,7 +416,7 @@ self.__precacheManifest = [
   },
   {
     "url": "awards/index.html",
-    "revision": "85ecd42be8a5762af5e4f4f90614dff6"
+    "revision": "7db560023497e4448e2ad4361eb12dc6"
   },
   {
     "url": "awards/index.png",
@@ -424,7 +424,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.html",
-    "revision": "10ba011ded676b567b15ca9645c93507"
+    "revision": "070e9506e33b6237b30e892aea798e32"
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.png",
@@ -432,7 +432,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "165381c9258d1b50ef3d67641137226b"
+    "revision": "e7cfc8c7c2b523c30f8a64d68e9a9e35"
   },
   {
     "url": "blog/adblockers/index.png",
@@ -440,7 +440,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "42b5300d9f497dc25e80915e7289ef20"
+    "revision": "d8bda81f349003654f81f4e341582df6"
   },
   {
     "url": "blog/bag/index.png",
@@ -448,7 +448,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/favourite-apps-of-2023/index.html",
-    "revision": "a69ab490be84cb908f65ebe41bc0edd6"
+    "revision": "39a717b6d374f0d95923c3f7902a2cef"
   },
   {
     "url": "blog/favourite-apps-of-2023/index.png",
@@ -456,7 +456,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.html",
-    "revision": "b7d1b2038300e00f83cda25dc53af74e"
+    "revision": "93fb38990b6668a0459e445668948ecf"
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.png",
@@ -464,7 +464,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "91d3dc7929fe43d53b594e7290c7ba0e"
+    "revision": "c33ebc2a6eaf2abf8b56ca9fc3591cec"
   },
   {
     "url": "blog/index.png",
@@ -472,7 +472,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.html",
-    "revision": "0ef7021ef242f7e092f77f2b322c4ab4"
+    "revision": "f29623c340e59b2f2b9e3cfeb2976a16"
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.png",
@@ -480,15 +480,23 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
-    "revision": "c6825637af8c12d442e5918c267ff2e1"
+    "revision": "5e159ed8bc377428336e87bd8071325c"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
     "revision": "bcc0c77672e13851386b4565f513a3ca"
   },
   {
+    "url": "blog/the-art-and-beauty-of-an-accessible-website/index.html",
+    "revision": "8e936d12e3f70be43e039f02bcd9833c"
+  },
+  {
+    "url": "blog/the-art-and-beauty-of-an-accessible-website/index.png",
+    "revision": "90f9423e69683c8164092a693a7178b1"
+  },
+  {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.html",
-    "revision": "9e639c7cbb5858e6063be4b48d0e3ce7"
+    "revision": "cbfc22807dd68a244401072263ad7f50"
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.png",
@@ -496,7 +504,7 @@ self.__precacheManifest = [
   },
   {
     "url": "cailin/index.html",
-    "revision": "2f52fe0619e3c49d319013e0bfe69f3b"
+    "revision": "75aa86c3d02d59dfe200e575b7d177e4"
   },
   {
     "url": "cailin/index.png",
@@ -504,7 +512,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/chrome-dino/index.html",
-    "revision": "ebab9bbdc7e626f10140e55c04737919"
+    "revision": "c22a64b8136fee7951fd226b42868a82"
   },
   {
     "url": "css/chrome-dino/index.png",
@@ -512,7 +520,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/imac/index.html",
-    "revision": "bc931dca5215cd3e68d87a821cfdb291"
+    "revision": "4621454dcce0702f62caa020c9db6af2"
   },
   {
     "url": "css/imac/index.png",
@@ -520,7 +528,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "65d3f7affdee3845b571b6acf2a34370"
+    "revision": "88f9cc163c0ce12211f4d7a15e17490d"
   },
   {
     "url": "index.png",
@@ -528,7 +536,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "f12033713f0168181daef9f3eed392f2"
+    "revision": "0c3aa2203ec0ecb530ad3efe8bad8a0a"
   },
   {
     "url": "sitemap/index.png",
@@ -536,7 +544,7 @@ self.__precacheManifest = [
   },
   {
     "url": "talks/index.html",
-    "revision": "14f6e20f39fa44856c380e30ed398681"
+    "revision": "e6af1d4840ffc73b718b9967fdaae214"
   },
   {
     "url": "talks/index.png",
@@ -544,7 +552,7 @@ self.__precacheManifest = [
   },
   {
     "url": "websites/index.html",
-    "revision": "957aad29c7e0850ae9fa71077471f589"
+    "revision": "8c48dba81e351170b196faa6aa7f775c"
   },
   {
     "url": "websites/index.png",
@@ -552,7 +560,7 @@ self.__precacheManifest = [
   },
   {
     "url": "work/index.html",
-    "revision": "f188aeec952249cc56008f6f262ffcfd"
+    "revision": "9cdf3973bc76c45178a9e1222f485caf"
   },
   {
     "url": "work/index.png",
@@ -560,7 +568,7 @@ self.__precacheManifest = [
   },
   {
     "url": "worldmap/index.html",
-    "revision": "b1c811e5e63b8a2a1c3c9b2fe74c344b"
+    "revision": "a5c438a06cc63968faa94665bba418c4"
   },
   {
     "url": "worldmap/index.png",
