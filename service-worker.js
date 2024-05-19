@@ -520,7 +520,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "0c38f20c2cd4cbc9b3b3704e923f6339"
+    "revision": "3c84f0e33495203b5b10a2cae2683ffa"
   },
   {
     "url": "index.png",
@@ -536,7 +536,7 @@ self.__precacheManifest = [
   },
   {
     "url": "talks/index.html",
-    "revision": "a8f773e5b01d362a972dcdf9f95f6343"
+    "revision": "14f6e20f39fa44856c380e30ed398681"
   },
   {
     "url": "talks/index.png",
@@ -544,7 +544,7 @@ self.__precacheManifest = [
   },
   {
     "url": "websites/index.html",
-    "revision": "6bfaacc151fbda4096865476ac1e580c"
+    "revision": "957aad29c7e0850ae9fa71077471f589"
   },
   {
     "url": "websites/index.png",
@@ -552,7 +552,7 @@ self.__precacheManifest = [
   },
   {
     "url": "work/index.html",
-    "revision": "74156c2e55135b569d318d97705ee38b"
+    "revision": "d369c5b98505685e19e9ba31f1f0c82f"
   },
   {
     "url": "work/index.png",
