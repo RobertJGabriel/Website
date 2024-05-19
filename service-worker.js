@@ -416,7 +416,7 @@ self.__precacheManifest = [
   },
   {
     "url": "awards/index.html",
-    "revision": "da4b7ba1a68c50b898fa7bddd13d5edf"
+    "revision": "85ecd42be8a5762af5e4f4f90614dff6"
   },
   {
     "url": "awards/index.png",
