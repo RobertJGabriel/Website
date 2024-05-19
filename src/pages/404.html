@@ -1,12 +1,11 @@
 ---
 hideHeader: false
-layout:  templates/base.html
+layout: templates/base.html
 title: 404
 youtubeId: PfILiWebkuc
 cardTitle: 404
 description: The most amazing 404 page in the world. Created by Robert James Gabroel 404 page.
-keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexic
-
+keywords: html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile
 url: 404.html
 permalink: /404.html
 ---
@@ -14,104 +13,107 @@ permalink: /404.html
 
 <div class="sm:px-8 mt-16 text-center font-sans">
 
-		
-			<div class="mx-auto max-w-2xl lg:max-w-3xl">
-				<div class="flex flex-col items-center justify-center h-screen">
-					<h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">Oops! Page Not Found</h1>
-					<p class="mt-6 text-xl text-black">But you can play a game while you're here!</p>
-					<canvas id="gameCanvas" width="480" height="320" class="border-2"></canvas>
-				</div>
-			</div>
+
+	<div class="mx-auto max-w-2xl lg:max-w-3xl">
+		<div class="flex flex-col items-center justify-center h-screen">
+			<h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">Oops! Page Not Found</h1>
+			<p class="mt-6 mb-10 text-xl text-black">But you can play a game while you're here!</p>
+			<canvas id="gameCanvas" width="480" height="320" class="border-2 border-black bg-white" role="img" aria-label="A simple game where you catch falling items with a basket."></canvas>
+<p id="score" class="screen-reader-only">Score: 0</p>
+<div id="gameOverMessage" class="hidden text-red-500 font-bold text-xl mt-8">Game Over</div>
+
+		</div>
+	</div>
+
 	
-		<script>
-			const canvas = document.getElementById("gameCanvas");
-			const ctx = canvas.getContext("2d");
-	
-			const basketWidth = 75;
-			const basketHeight = 15;
-			let basketX = (canvas.width - basketWidth) / 2;
-			let rightPressed = false;
-			let leftPressed = false;
-	
-			const itemRadius = 10;
-			let itemX = Math.random() * (canvas.width - itemRadius * 2) + itemRadius;
-			let itemY = itemRadius;
-			const itemSpeed = 2;
-	
-			let score = 0;
-	
-			document.addEventListener("keydown", keyDownHandler, false);
-			document.addEventListener("keyup", keyUpHandler, false);
-	
-			function keyDownHandler(e) {
-				if (e.key == "Right" || e.key == "ArrowRight") {
-					rightPressed = true;
-				} else if (e.key == "Left" || e.key == "ArrowLeft") {
-					leftPressed = true;
-				}
-			}
-	
-			function keyUpHandler(e) {
-				if (e.key == "Right" || e.key == "ArrowRight") {
-					rightPressed = false;
-				} else if (e.key == "Left" || e.key == "ArrowLeft") {
-					leftPressed = false;
-				}
-			}
-	
-			function drawBasket() {
-				ctx.beginPath();
-				ctx.rect(basketX, canvas.height - basketHeight, basketWidth, basketHeight);
-				ctx.fillStyle = "#000000";
-				ctx.fill();
-				ctx.closePath();
-			}
-	
-			function drawItem() {
-				ctx.beginPath();
-				ctx.arc(itemX, itemY, itemRadius, 0, Math.PI * 2);
-				ctx.fillStyle = "#000000";
-				ctx.fill();
-				ctx.closePath();
-			}
-	
-			function drawScore() {
-				ctx.font = "16px Arial";
-				ctx.fillStyle = "#000000";
-				ctx.fillText("Score: " + score, 8, 20);
-			}
-	
-			function detectCollision() {
-				if (
-					itemY + itemRadius > canvas.height - basketHeight &&
-					itemX > basketX &&
-					itemX < basketX + basketWidth
-				) {
-					score++;
-					itemY = itemRadius;
-					itemX = Math.random() * (canvas.width - itemRadius * 2) + itemRadius;
-				} else if (itemY + itemRadius > canvas.height) {
-					document.location.reload();
-				}
-			}
-	
-			function draw() {
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-				drawBasket();
-				drawItem();
-				drawScore();
-				detectCollision();
-	
-				if (rightPressed && basketX < canvas.width - basketWidth) {
-					basketX += 7;
-				} else if (leftPressed && basketX > 0) {
-					basketX -= 7;
-				}
-	
-				itemY += itemSpeed;
-				requestAnimationFrame(draw);
-			}
-	
-			draw();
-		</script>
-	
+<script>
+	const canvas = document.getElementById("gameCanvas");
+	const ctx = canvas.getContext("2d");
+  
+	const basketWidth = 75;
+	const basketHeight = 15;
+	let basketX = (canvas.width - basketWidth) / 2;
+	let rightPressed = false;
+	let leftPressed = false;
+  
+	const itemRadius = 10;
+	let itemX = Math.random() * (canvas.width - itemRadius * 2) + itemRadius;
+	let itemY = itemRadius;
+	const itemSpeed = 2;
+  
+	let score = 0;
+	const scoreDisplay = document.getElementById("score");
+	const gameOverMessage = document.getElementById("gameOverMessage");
+  
+	document.addEventListener("keydown", keyDownHandler);
+	document.addEventListener("keyup", keyUpHandler);
+  
+	function keyDownHandler(e) {
+	  if (e.key === "Right" || e.key === "ArrowRight") {
+		rightPressed = true;
+	  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+		leftPressed = true;
+	  }
+	}
+  
+	function keyUpHandler(e) {
+	  if (e.key === "Right" || e.key === "ArrowRight") {
+		rightPressed = false;
+	  } else if (e.key === "Left" || e.key === "ArrowLeft") {
+		leftPressed = false;
+	  }
+	}
+  
+	function drawBasket() {
+	  ctx.beginPath();
+	  ctx.rect(basketX, canvas.height - basketHeight, basketWidth, basketHeight);
+	  ctx.fillStyle = "#000";
+	  ctx.fill();
+	  ctx.closePath();
+	}
+  
+	function drawItem() {
+	  ctx.beginPath();
+	  ctx.arc(itemX, itemY, itemRadius, 0, Math.PI * 2);
+	  ctx.fillStyle = "#000";
+	  ctx.fill();
+	  ctx.closePath();
+	}
+  
+	function drawScore() {
+	  ctx.font = "16px Arial";
+	  ctx.fillStyle = "#000";
+	  ctx.fillText("Score: " + score, 8, 20);
+	  scoreDisplay.textContent = "Score: " + score;
+	}
+  
+	function detectCollision() {
+	  if (itemY + itemRadius > canvas.height - basketHeight && itemX > basketX && itemX < basketX + basketWidth) {
+		score++;
+		itemY = itemRadius;
+		itemX = Math.random() * (canvas.width - itemRadius * 2) + itemRadius;
+	  } else if (itemY + itemRadius > canvas.height) {
+		gameOverMessage.classList.remove('hidden');
+		document.location.reload();
+	  }
+	}
+  
+	function draw() {
+	  ctx.clearRect(0, 0, canvas.width, canvas.height);
+	  drawBasket();
+	  drawItem();
+	  drawScore();
+	  detectCollision();
+  
+	  if (rightPressed && basketX < canvas.width - basketWidth) {
+		basketX += 7;
+	  } else if (leftPressed && basketX > 0) {
+		basketX -= 7;
+	  }
+  
+	  itemY += itemSpeed;
+	  requestAnimationFrame(draw);
+	}
+  
+	draw();
+  </script>
