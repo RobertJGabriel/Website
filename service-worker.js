@@ -28,7 +28,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "ca5d5b866180b96eebe02ca7c1e8c8b8"
+    "revision": "13d086862181cb69aaaa883137ff39b6"
   },
   {
     "url": "404.png",
@@ -404,7 +404,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "b92d1b0daa0b6f2977e61365f77804e1"
+    "revision": "e89a570d43c894bc92b05940963501fe"
   },
   {
     "url": "assets/videos/HBmenu1.png",
