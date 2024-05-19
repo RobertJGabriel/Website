@@ -27,7 +27,7 @@ permalink: /404.html
 			const canvas = document.getElementById("gameCanvas");
 			const ctx = canvas.getContext("2d");
 	
-			const basketWidth = 55;
+			const basketWidth = 75;
 			const basketHeight = 15;
 			let basketX = (canvas.width - basketWidth) / 2;
 			let rightPressed = false;
@@ -36,7 +36,7 @@ permalink: /404.html
 			const itemRadius = 10;
 			let itemX = Math.random() * (canvas.width - itemRadius * 2) + itemRadius;
 			let itemY = itemRadius;
-			const itemSpeed = 10;
+			const itemSpeed = 2;
 	
 			let score = 0;
 	
