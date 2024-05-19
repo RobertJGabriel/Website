@@ -12,7 +12,7 @@ dated: May 1 2024
 cardTitle: The Art and Beauty of an Accessible Website
 blog_snip: This post explores the intersection of web accessibility and aesthetic design, inspired by Steve Jobs' philosophy. It highlights the importance of creating digital spaces that are usable by everyone, reflecting true craftsmanship.
 cat: Technology & Design
-img: /assets/images/blog/accessible-website.png
+img: /assets/images/blog/website.png
 ---
 
 
@@ -39,16 +39,20 @@ When developers think about accessibility from the start, they write better code
 **Example: Accessible Button Code**
 
 *Incorrect Code:*
+
 ```html
 <button>Submit</button>
 ```
-- This button lacks an `aria-label` and doesn't specify its purpose clearly for screen readers.
+
+This button lacks an **aria-label** and doesn't specify its purpose clearly for screen readers.
 
 *Correct Code:*
+
 ```html
-<button aria-label="Submit form" tabindex="0">Submit</button>
+<button aria-label="Submit the form" tabindex="0" type="submit" title="Submit the form">Submit</button>
 ```
-- This button includes an `aria-label` for screen readers and a `tabindex` to ensure it can be navigated via keyboard.
+
+This button includes an **aria-label** for screen readers and a **tabindex** to ensure it can be navigated via keyboard.
 
 ## Designing Beyond Personal Experience
 
@@ -57,22 +61,26 @@ A button might seem like a straightforward element, but if it's not accessible, 
 **Example: Ensuring Proper Contrast**
 
 *Incorrect Code:*
+
 ```css
 button {
     background-color: #0053ba;
     color: #a5a5a5; /* Poor contrast */
 }
 ```
-- This button uses a color with poor contrast, making it hard to read for some users.
+
+This button uses a color with poor contrast, making it hard to read for some users.
 
 *Correct Code:*
+
 ```css
 button {
     background-color: #0053ba; /* Ensure this color has enough contrast */
     color: #ffffff;
 }
 ```
-- This button uses colors with sufficient contrast, making it easier to read for all users. Use tools like [WebAIM's contrast checker](https://webaim.org/resources/contrastchecker/) to verify that your color choices meet accessibility standards.
+
+This button uses colors with sufficient contrast, making it easier to read for all users. Use tools like [WebAIM's contrast checker](https://webaim.org/resources/contrastchecker/) to verify that your color choices meet accessibility standards.
 
 ## Testing Tools and Techniques
 
@@ -83,7 +91,6 @@ Testing your website for accessibility is crucial. Use tools like screen readers
 
 ## Inspiring Examples of Accessible Websites
 
-Look at websites like [example.com] which excel in both design and accessibility. Their buttons are not only visually appealing but also have clear labels, proper contrast, and can be easily navigated with a keyboard. These sites set a high standard for others to follow. By studying these examples, developers can learn how to balance beauty and functionality, creating sites that are both stunning and accessible.
 
 **Example: Descriptive Link Text**
 
@@ -109,11 +116,15 @@ Steve Jobs believed in the importance of inner beauty, even if it's unseen. This
 
 Accessible code and content are critical for several reasons:
 
-1. **Inclusivity**: Ensures that people with disabilities can access and use your website. This includes individuals with visual, auditory, motor, and cognitive impairments.
-2. **User Experience**: Accessible websites offer a better user experience for everyone, including those using different devices and technologies.
-3. **Legal Compliance**: Helps avoid legal issues by complying with accessibility laws and standards.
-4. **Reputation**: Demonstrates a commitment to social responsibility and can enhance your brand's reputation.
-5. **Broader Audience**: Opens your website to a wider audience, potentially increasing traffic and engagement.
+**Inclusivity**: Ensures that people with disabilities can access and use your website. This includes individuals with visual, auditory, motor, and cognitive impairments.
+
+**User Experience**: Accessible websites offer a better user experience for everyone, including those using different devices and technologies.
+
+**Legal Compliance**: Helps avoid legal issues by complying with accessibility laws and standards.
+
+**Reputation**: Demonstrates a commitment to social responsibility and can enhance your brand's reputation.
+
+**Broader Audience**: Opens your website to a wider audience, potentially increasing traffic and engagement.
 
 By focusing on accessibility, you not only create a more inclusive web but also improve the overall quality and usability of your site for all users. This is the true art and beauty of web design—crafting digital experiences that everyone can enjoy.
 
