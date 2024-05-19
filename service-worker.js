@@ -32,7 +32,7 @@ self.__precacheManifest = [
   },
   {
     "url": "404.png",
-    "revision": "cd79f164a6d3ae7bf9ef902914e20aac"
+    "revision": "6349399459909e36d88b072b9d3eff74"
   },
   {
     "url": "about/index.html",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
   },
   {
     "url": "about/index.png",
-    "revision": "e7cb9fdfce0f5bdb3966650127add68a"
+    "revision": "3e472ac0724048db27e9775b01648629"
   },
   {
     "url": "apps/index.html",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "apps/index.png",
-    "revision": "45c021cbf46f228cd0c30c1824220b87"
+    "revision": "59c5c0050c02230e5bbb4be80adbbc88"
   },
   {
     "url": "assets/css/blog.css",
@@ -420,7 +420,7 @@ self.__precacheManifest = [
   },
   {
     "url": "awards/index.png",
-    "revision": "d64dbf7ed6cb512916d9a1e8ba4298dc"
+    "revision": "d7a30ccafa93ecacffa2bdf8d4d2cd5c"
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.html",
@@ -428,7 +428,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.png",
-    "revision": "79556fc73c629f0c7a6370101e5298cd"
+    "revision": "e798a3a75e5f3cc2d5e28c7050724335"
   },
   {
     "url": "blog/adblockers/index.html",
@@ -436,7 +436,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.png",
-    "revision": "6b1e4fd7839371289f071842ac8b312a"
+    "revision": "d1e245300c7622abb9e8a886609a278c"
   },
   {
     "url": "blog/bag/index.html",
@@ -444,7 +444,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.png",
-    "revision": "52385888d47a1fbb4a0fde4dbcf9c10e"
+    "revision": "c15312dda7e4dcc4509bed39ef0e0664"
   },
   {
     "url": "blog/favourite-apps-of-2023/index.html",
@@ -452,7 +452,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/favourite-apps-of-2023/index.png",
-    "revision": "dd3624b340cc7efd5ad3697b1684db46"
+    "revision": "146cfade23989d6e9ddf7589445256ed"
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.html",
@@ -460,7 +460,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.png",
-    "revision": "33ad7ac649220b7fd73fa6577b585e5c"
+    "revision": "6a2d53da023803a55b9286623ba5619a"
   },
   {
     "url": "blog/index.html",
@@ -468,7 +468,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.png",
-    "revision": "c8851702e0e4ff729c2b62f79fe33163"
+    "revision": "2ee84fe6f53a02e9e3beb5e52f2f7c04"
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.html",
@@ -476,7 +476,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.png",
-    "revision": "1af25aee17fc576e627cfb2e7a04a58b"
+    "revision": "8e2074bcd1d91af34af60076787f69b8"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
@@ -484,7 +484,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
-    "revision": "dab9510b8175d5b2cee7569547d3fec1"
+    "revision": "bcc0c77672e13851386b4565f513a3ca"
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.html",
@@ -492,7 +492,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.png",
-    "revision": "5f914b87762979b65571307b740669df"
+    "revision": "fcfb718a9d6d55afad2b3e7a970c5c2d"
   },
   {
     "url": "cailin/index.html",
@@ -500,7 +500,7 @@ self.__precacheManifest = [
   },
   {
     "url": "cailin/index.png",
-    "revision": "b3946e80a136d472c519d90ca0f6fe88"
+    "revision": "60aab097334725ba2449f40aa3f104f3"
   },
   {
     "url": "css/chrome-dino/index.html",
@@ -508,7 +508,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/chrome-dino/index.png",
-    "revision": "1cec7920d74c073029dd81e36185d1ff"
+    "revision": "83b134372c354ee8a27b3ff428f36163"
   },
   {
     "url": "css/imac/index.html",
@@ -516,7 +516,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/imac/index.png",
-    "revision": "b223afac04b6e37833ea02bdf36d3842"
+    "revision": "7473b75cc89613a2ffdecb52745ee489"
   },
   {
     "url": "index.html",
@@ -524,7 +524,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.png",
-    "revision": "e7cb9fdfce0f5bdb3966650127add68a"
+    "revision": "3e472ac0724048db27e9775b01648629"
   },
   {
     "url": "sitemap/index.html",
@@ -532,7 +532,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.png",
-    "revision": "78dcec035e62523ff9710cd70f5992c5"
+    "revision": "56234f7083e253d953dbde1dc7712c12"
   },
   {
     "url": "talks/index.html",
@@ -540,7 +540,7 @@ self.__precacheManifest = [
   },
   {
     "url": "talks/index.png",
-    "revision": "d7123412abe8b99c4ab1fc51a56fbe63"
+    "revision": "e270c0dc4c99791bb3864c81b7833e5b"
   },
   {
     "url": "websites/index.html",
@@ -548,7 +548,7 @@ self.__precacheManifest = [
   },
   {
     "url": "websites/index.png",
-    "revision": "ce04ea32d1822ab7b44f2bab0948c306"
+    "revision": "081fabbf8473425a9218b39ce3420646"
   },
   {
     "url": "work/index.html",
@@ -556,7 +556,7 @@ self.__precacheManifest = [
   },
   {
     "url": "work/index.png",
-    "revision": "39efe508285e39e4f08ecbff6acd8f0c"
+    "revision": "d9598d91d85e62518a3cc8f9ff64e17a"
   },
   {
     "url": "worldmap/index.html",
@@ -564,7 +564,7 @@ self.__precacheManifest = [
   },
   {
     "url": "worldmap/index.png",
-    "revision": "4832e7efdcc87e7515efdb204d717822"
+    "revision": "72c890038033097bdd8c86cc07ec8951"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
