@@ -520,7 +520,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "3c84f0e33495203b5b10a2cae2683ffa"
+    "revision": "65d3f7affdee3845b571b6acf2a34370"
   },
   {
     "url": "index.png",
@@ -528,7 +528,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "e5df9f54ee977a146a09b2e6e61c8b2f"
+    "revision": "f12033713f0168181daef9f3eed392f2"
   },
   {
     "url": "sitemap/index.png",
