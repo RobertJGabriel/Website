@@ -404,7 +404,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "d57c2d536d5ef79fc9ba61644818f8dd"
+    "revision": "b92d1b0daa0b6f2977e61365f77804e1"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -552,7 +552,7 @@ self.__precacheManifest = [
   },
   {
     "url": "work/index.html",
-    "revision": "d369c5b98505685e19e9ba31f1f0c82f"
+    "revision": "f188aeec952249cc56008f6f262ffcfd"
   },
   {
     "url": "work/index.png",
