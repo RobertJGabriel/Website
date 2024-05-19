@@ -40,16 +40,16 @@ url: work
                 <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
                   <span class="h-4 w-0.5 rounded-full bg-zinc-200 bg-zinc-500"></span>
                 </span>
-                <div class="badge badge-outline">{{ article.start }}</div>
-                <div class="badge badge-outline">{{ article.end }}</div>
+                <div class="badge badge-neutral">{{ article.start }}</div>
+                <div class="badge badge-neutral">{{ article.end }}</div>
               </time>
               <p class="relative z-10 mt-2 text-base text-black">
                 {{ article.description }}
               </p>
             </div>
             <time class="mt-1 hidden md:block relative z-10 order-first mb-3 flex items-center text-base text-zinc-400" datetime="{{ article.start }}">
-              <div class="badge badge-outline">{{ article.start }}</div>
-              <div class="badge badge-outline">{{ article.end }}</div>
+              <div class="badge badge-neutral">{{ article.start }}</div>
+              <div class="badge badge-neutral">{{ article.end }}</div>
             </time>
           </article>
           {% endfor %}
