@@ -219,6 +219,10 @@ self.__precacheManifest = [
     "revision": "7f2febc8bc4bfbfe1981f5786bdfbba8"
   },
   {
+    "url": "assets/images/blog/website.png",
+    "revision": "7db7516a95cb08f115a1a21d840fa9cc"
+  },
+  {
     "url": "assets/images/me-two.png",
     "revision": "1b5499c9c7b03568c13eb731492655a0"
   },
@@ -464,7 +468,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "c33ebc2a6eaf2abf8b56ca9fc3591cec"
+    "revision": "b4ab20bb02d5bc7ceb1ae7558b81acb4"
   },
   {
     "url": "blog/index.png",
@@ -488,7 +492,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/the-art-and-beauty-of-an-accessible-website/index.html",
-    "revision": "8e936d12e3f70be43e039f02bcd9833c"
+    "revision": "550eb8c9fa4e87ffd98bd568b88739fd"
   },
   {
     "url": "blog/the-art-and-beauty-of-an-accessible-website/index.png",
