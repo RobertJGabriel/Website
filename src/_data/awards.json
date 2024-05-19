@@ -1,121 +1,119 @@
 {
     "awards": [
         {
-            "title": "Forbes 30 under 30 2020",
+            "title": "Forbes 30 Under 30 2020",
             "company": "Forbes",
-            "description": "After years of struggling in school, Robert James Gabriel was finally diagnosed with dyslexia at the age of 16. So after majoring in computer science and working at Teamwork.com, he founded Helperbird, a browser extension called Helperbird"
+            "description": "Awarded for my work on creating and developing Helperbird."
         },
         {
-            "title": "Best use of Open Source Tools",
-            "company": "IBM &amp; Intel",
-            "description": "Awarded for my use into machine learning alogorthims and cutting edge tools, such as node.js, Material design along more."
+            "title": "Best Use of Open Source Tools",
+            "company": "IBM & Intel",
+            "description": "Awarded for innovative use of machine learning algorithms and cutting-edge tools such as Node.js and Material Design."
         },
         {
-            "title": "Overall Best Poster &amp; Project 2016",
+            "title": "Overall Best Poster & Project 2016",
             "company": "Cork Institute of Technology",
-            "description": "Awarded for my use into machine learning alogorthims and cutting edge tools, such as node.js, material design, and more."
+            "description": "Recognized for excellence in using machine learning algorithms and advanced tools, including Node.js and Material Design."
         },
         {
-            "title": "Imagine Cup National Runner Up",
+            "title": "Imagine Cup National Runner-Up 2015",
             "company": "Microsoft Ireland",
-            "description": "Following on from our success in 2014, I entered the Imagine Cup 2015 with a innovative exercise app called CrossTrainr. The application was designed to connect individuals with a desire to exercise but found it hard to find people with a similar interest. Designed for use in large cities, it was designed to create a network of people for completing exercise. We received great feedback and support from Microsoft employees and management on the concept at a visit to Microsoft&#39;s offices in Dublin on the 23rd of April 2015. The Microsoft employees encouraged us to pursue the idea after the competition to a fully functional business. Until I have exhausted all avenues with the concept I am reluctant to give any more information on the idea."
-        }, {
-            "title": "Imagine Cup National Runner Up",
+            "description": "Entered the Imagine Cup with an innovative exercise app called CrossTrainr, designed to connect individuals with similar exercise interests. The app received positive feedback from Microsoft employees and management, encouraging further development into a fully functional business."
+        },
+        {
+            "title": "Imagine Cup National Runner-Up 2014",
             "company": "Microsoft Ireland",
-            "description": "Developed a project called Yeti for the Microsoft Imagine Cup 2014. The project earned 2nd place in the innovation category for all of Ireland. The project resized images and videos to reduce bandwidth and speed up load times. Also developed was Yoursear.ch"
-        }, {
-            "title": "Hatchery Scholarship For Innovation",
+            "description": "Developed a project called Yeti, which resized images and videos to reduce bandwidth and speed up load times. This project earned 2nd place in the innovation category for all of Ireland."
+        },
+        {
+            "title": "Hatchery Scholarship for Innovation",
             "company": "Cork Institute of Technology",
-            "description": "Over the summer months in 2012 five student projects were developed into businesses by students who attended the Rubicon full-time. Over the summer they attended weekly training workshops, covering many topics, which enabled the student entrepreneurs to produce a completed business plan by September. The students received financial assistance from the School of Business, the School of Engineering and Science, the Department of Media Communications and from Crawford College of Art and Design."
-        }, {
+            "description": "Developed five student projects into businesses over the summer of 2012. Attended weekly training workshops and received financial assistance, resulting in completed business plans by September."
+        },
+        {
             "title": "Abbott Runner-Up Award",
             "company": "Abbott",
-            "description": "I totally forgot about this. For a local computation called Scifest , I built a tablet out of an old laptop. Added a touch screen panel, progammed a interface and bunch of apps for it. Then made a custom shell for it. It was madness but I can second place. Won the Abbott award."
-        }, {
-            "title": "The Most Technically Innovative Award",
+            "description": "For a local competition called SciFest, built a tablet from an old laptop, added a touch screen panel, programmed an interface and apps, and created a custom shell. This project earned second place and the Abbott award."
+        },
+        {
+            "title": "Most Technically Innovative Award",
             "company": "Cork Institute of Technology",
-            "description": "The Most Technically Innovative Award of €2,000 went to Project Bird, an award winning software studio focusing on windows and web 2.0 developments. The team is made up Robert Gabriel and Tadhg Foley, both students in Computing (IT Management), at CIT."
-        }, {
-            "title": "The Most Technically Innovative Award",
-            "company": "Cork Institute of Technology",
-            "description": "The Most Technically Innovative Award of €2,000 went to Project Bird, an award winning software studio focusing on windows and web 2.0 developments. The team is made up Robert Gabriel and Tadhg Foley, both students in Computing (IT Management), at CIT."
-        }, {
-            "title": "Maths and Algorthims",
-            "company": "Bt Young Scientist",
-            "description": "Robert Gabriel from Scoil Mhuire Gan Smal in Blarney, who came second in the Chemical, Physical &amp; Mathematical Sciences Senior Individual category for his project &#39; A new algorithm to improve the gathering of information on mobile. This later become the Yeti engine"
-        }, {
-            "title": "Technology 2nd place",
-            "company": "Bt Young Scientist Award",
-            "description": "Robert Gabriel, a fifth year student from Scoil Mhuire gan Smál in Blarney, won the favour of the judges with his project “Automated Monitoring of Computer SQL Servers by way of a Merit”. This later became Tallus"
-        }, {
-            "title": "Sci Fest Award : For Progamming x 5",
-            "company": "Bt Young Scientist Award",
-            "description": "SciFest is a series of one-day science fairs for second-level students hosted at local level in schools and at regional level in the Institutes of Technology, culminating in a national competition for the overall winners from the institutes. The project consists of four distinct strands – local, regional, national and international. This was a project that was made in 24 hours."
-        }, {
+            "description": "Awarded €2,000 for Project Bird, a software studio focusing on Windows and web 2.0 developments. The team included Robert Gabriel and Tadhg Foley, both students in Computing (IT Management) at CIT."
+        },
+        {
+            "title": "Maths and Algorithms",
+            "company": "BT Young Scientist",
+            "description": "Robert Gabriel from Scoil Mhuire Gan Smál in Blarney earned second place in the Chemical, Physical & Mathematical Sciences Senior Individual category for his project 'A New Algorithm to Improve the Gathering of Information on Mobile,' which later became the Yeti engine."
+        },
+        {
+            "title": "Technology 2nd Place",
+            "company": "BT Young Scientist Award",
+            "description": "Robert Gabriel, a fifth-year student from Scoil Mhuire Gan Smál in Blarney, impressed the judges with his project 'Automated Monitoring of Computer SQL Servers by Way of a Merit,' which later became Tallus."
+        },
+        {
+            "title": "SciFest Award for Programming x5",
+            "company": "BT Young Scientist Award",
+            "description": "SciFest is a series of one-day science fairs for second-level students, culminating in a national competition. This project, completed in 24 hours, won recognition for its innovative programming."
+        },
+        {
             "title": "HEANet Special Award",
             "company": "HEANet",
-            "description": "The project which shows the most practical and innovative use of network technology in performing background research for the project and/or collaborating with other team members, teachers etc."
-        }, {
+            "description": "Awarded for the most practical and innovative use of network technology in performing background research and collaborating with team members and teachers."
+        },
+        {
             "title": "Avaya Communications Special Award",
             "company": "Avaya",
-            "description": "Avaya Incis a privately held global provider of business communications and collaboration systems. The international headquarters is in Basking Ridge, New Jersey, United States. The company provides contact centers, networking (routers, switches and other networking hardware), unified communications, and video products (integrated hardware and software) solutions and services."
-        }, {
-            "title": "All Ireland TItle",
+            "description": "Recognized by Avaya, a global provider of business communications and collaboration systems, for innovative solutions in networking, unified communications, and video products."
+        },
+        {
+            "title": "All Ireland Title",
             "company": "Eircom",
-            "description": "A web application that is fully developed and available to use; it must be fully working. It should be user friendly, useful and innovative."
-        }, {
+            "description": "Awarded for a fully developed and innovative web application that is user-friendly and useful."
+        },
+        {
             "title": "Junior Spider Awards: Best Application",
             "company": "Eircom",
-            "description": "A web application that is fully developed and available to use; it must be fully working. It should be user friendly, useful and innovative."
-        }, {
-            "title": "Teamwork Hackathon 2015 : Runner Up",
+            "description": "Recognized for a fully developed, user-friendly, and innovative web application."
+        },
+        {
+            "title": "Teamwork Hackathon 2015: Runner-Up",
             "company": "Teamwork.com",
-            "description": "Create a internal website , social website in 24 hours. It was voted as second best would of 15 ideas. Cannot say any more :)"
-        }, {
+            "description": "Created an internal social website in 24 hours, earning second place among 15 ideas."
+        },
+        {
             "title": "Everyday Excellence Award",
             "company": "Teamwork.com",
-            "description": "Reason: Doing amazing job and I was impressed to see what awesomeness he is cooking for the website and maybe a future update of it. Nice to have him on board!"
-        }, {
-            "title": "Everyday Excellence Award",
-            "company": "Teamwork.com",
-            "description": "Reason: We’re delighted to have Robert as a full-time member of the team now. He’s already made great improvements to the teamwork.com codebase, with loads more planned, a lot of it being behind-the-scenes improvements which most people don’t see/realise."
-        }, {
-            "title": "Everyday Excellence Award",
-            "company": "Teamwork.com",
-            "description": "Reason: We’re delighted to have Robert as a full-time member of the team now. He’s already made great improvements to the teamwork.com codebase, with loads more planned, a lot of it being behind-the-scenes improvements which most people don’t see/realise."
-        }, {
-            "title": "Everyday Excellence Award",
-            "company": "Teamwork.com",
-            "description": "Reason: We’re delighted to have Robert as a full-time member of the team now. He’s already made great improvements to the teamwork.com codebase, with loads more planned, a lot of it being behind-the-scenes improvements which most people don’t see/realise."
-        }, {
-            "title": "Everyday Excellence Award",
-            "company": "Teamwork.com",
-            "description": "Reason: We’re delighted to have Robert as a full-time member of the team now. He’s already made great improvements to the teamwork.com codebase, with loads more planned, a lot of it being behind-the-scenes improvements which most people don’t see/realise."
-        }, {
+            "description": "Recognized for outstanding contributions and impressive work on the website, including potential future updates."
+        },
+        {
             "title": "Above and Beyond the Call of Duty",
             "company": "Teamwork.com",
-            "description": "Reason: Doing amazing job and I was impressed to see what awesomeness he is cooking for the website and maybe a future update of it. Nice to have him on board!"
-        }, {
-            "title": "The Faculty of Engineering &amp; Science Scholar",
+            "description": "Awarded for exceptional work and dedication, impressing the team with innovative website updates."
+        },
+        {
+            "title": "The Faculty of Engineering & Science Scholar",
             "company": "Cork Institute of Technology",
-            "description": "Who received the accolade &#39;Faculty Scholar&#39; in recognition of his achievement of earning the top grade in his class."
-        }, {
-            "title": "Lightening Talk Smackdown Winner",
+            "description": "Received the accolade 'Faculty Scholar' for earning the top grade in my class."
+        },
+        {
+            "title": "Lightning Talk Smackdown Winner",
             "company": "Rebelcon 2017",
-            "description": "A talk on A starting point to get you started with creating or converting your existing website/webapp into a Progressive Web App. Includes a service worker template."
-        }, {
+            "description": "Presented a talk on creating or converting websites/web apps into Progressive Web Apps, including a service worker template."
+        },
+        {
             "title": "Google Scholarship Awards",
             "company": "Google.com",
-            "description": "Top 1,000 students will be awarded scholarships to the Front-End Web Developer Nanodegree Program."
-        }, {
-            "title": "Project Cover Grant winner",
-            "company": "projectcover",
-            "description": "Cover is a non-profit that gifts small grants to driven people. Our mission is to extend access to knowledge, networks, and opportunities to those who are working hard to achieve great things."
-        }, {
-            "title": "Abe;s Curated $100 Micro Grant",
-            "company": "Abes",
-            "description": "I (Abe) am creating a monthly $100 grant to create CC0, CC-BY, CC-BY-SA or GPL (compatible) art, code, hardware designs, etc."
+            "description": "Selected as one of the top 1,000 students to receive scholarships for the Front-End Web Developer Nanodegree Program."
+        },
+        {
+            "title": "Project Cover Grant Winner",
+            "company": "Project Cover",
+            "description": "Awarded a grant by Cover, a non-profit organization that supports driven individuals by extending access to knowledge, networks, and opportunities."
+        },
+        {
+            "title": "Abe's Curated $100 Micro Grant",
+            "company": "Abe's",
+            "description": "Received a $100 grant for creating CC0, CC-BY, CC-BY-SA, or GPL (compatible) art, code, hardware designs, and more."
         }
-
     ]
 }
