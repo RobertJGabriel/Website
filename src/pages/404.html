@@ -1,7 +1,7 @@
 ---
 hideHeader: false
 layout:  templates/base.html
-title: 404 - Robert James Gabriel
+title: 404
 youtubeId: PfILiWebkuc
 cardTitle: 404
 description: The most amazing 404 page in the world. Created by Robert James Gabroel 404 page.
@@ -11,14 +11,99 @@ url: 404.html
 permalink: /404.html
 ---
 
-<div class="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
-	<div class="text-center mt-12" aria-live="polite">
-		<p class="text-base font-semibold text-indigo-600">404</p>
-		<h1 class="mt-4 text-3xl font-bold tracking-tight text-black sm:text-5xl">Page not found</h1>
-		<p class="mt-6 text-lg leading-7 text-black">Sorry, we couldn’t find the page you’re looking for.</p>
-		<div class="mt-10 flex items-center justify-center gap-x-6">
-			<a href="/" class="btn btn-secondary" title="Return to the homepage">Go back home</a>
-			<a href="/contact/" class="btn btn-primary" title="Contact our support team">Contact support</a>
+
+<div class="sm:px-8 mt-16">
+	<div class="mx-auto max-w-2xl lg:max-w-3xl">
+	
+
+
+
+		  <div class="flex items-center justify-center h-screen">
+
+			<div id="gameContainer" class="relative w-96 h-128 bg-black overflow-hidden border-2 border-white" tabindex="0" role="application" aria-label="Pong game">
+				<div id="ball" class="absolute w-5 h-5 bg-white rounded-full" role="img" aria-label="Ball"></div>
+				<div id="paddleLeft" class="absolute w-5 h-24 bg-white" role="img" aria-label="Left paddle"></div>
+				<div id="paddleRight" class="absolute w-5 h-24 bg-white" role="img" aria-label="Right paddle"></div>
+			</div>
 		</div>
+
 	</div>
+
 </div>
+
+
+<script>
+const gameContainer = document.getElementById('gameContainer');
+const ball = document.getElementById('ball');
+const paddleLeft = document.getElementById('paddleLeft');
+const paddleRight = document.getElementById('paddleRight');
+
+let ballX = 190;
+let ballY = 290;
+let ballSpeedX = 2;
+let ballSpeedY = 2;
+
+let paddleLeftY = 190;
+let paddleRightY = 190;
+const paddleSpeed = 4;
+
+function movePaddle(e) {
+    if (e.type === 'mousemove') {
+        const rect = gameContainer.getBoundingClientRect();
+        const mouseY = e.clientY - rect.top;
+        if (mouseY < 12) {
+            paddleLeftY = 0;
+            paddleRightY = 0;
+        } else if (mouseY > 476) {
+            paddleLeftY = 364;
+            paddleRightY = 364;
+        } else {
+            paddleLeftY = mouseY - 12;
+            paddleRightY = mouseY - 12;
+        }
+    } else if (e.type === 'keydown') {
+        if (e.key === 'ArrowUp') {
+            paddleLeftY = Math.max(paddleLeftY - paddleSpeed, 0);
+            paddleRightY = Math.max(paddleRightY - paddleSpeed, 0);
+        } else if (e.key === 'ArrowDown') {
+            paddleLeftY = Math.min(paddleLeftY + paddleSpeed, gameContainer.clientHeight - paddleLeft.clientHeight);
+            paddleRightY = Math.min(paddleRightY + paddleSpeed, gameContainer.clientHeight - paddleRight.clientHeight);
+        }
+    }
+    paddleLeft.style.top = `${paddleLeftY}px`;
+    paddleRight.style.top = `${paddleRightY}px`;
+}
+
+function moveBall() {
+    ballX += ballSpeedX;
+    ballY += ballSpeedY;
+
+    if (ballY <= 0 || ballY >= gameContainer.clientHeight - ball.clientHeight) {
+        ballSpeedY *= -1;
+    }
+
+    if (
+        (ballX <= paddleLeft.clientWidth && ballY > paddleLeftY && ballY < paddleLeftY + paddleLeft.clientHeight) ||
+        (ballX >= gameContainer.clientWidth - paddleRight.clientWidth - ball.clientWidth && ballY > paddleRightY && ballY < paddleRightY + paddleRight.clientHeight)
+    ) {
+        ballSpeedX *= -1;
+    }
+
+    if (ballX <= 0 || ballX >= gameContainer.clientWidth - ball.clientWidth) {
+        ballX = gameContainer.clientWidth / 2 - ball.clientWidth / 2;
+        ballY = gameContainer.clientHeight / 2 - ball.clientHeight / 2;
+        ballSpeedX = 2;
+        ballSpeedY = 2;
+    }
+
+    ball.style.left = `${ballX}px`;
+    ball.style.top = `${ballY}px`;
+}
+
+gameContainer.addEventListener('mousemove', movePaddle);
+gameContainer.addEventListener('keydown', movePaddle);
+setInterval(moveBall, 16);
+
+gameContainer.focus();
+
+</script>

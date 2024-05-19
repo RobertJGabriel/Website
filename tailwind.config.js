@@ -17,6 +17,7 @@ module.exports = {
 			},
 			colors: {
 				'base-300': '#fef5ec', // Replace #yournewcolor with the color code you want
+				'bg-base-300': '#fef5ec', // Replace #yournewcolor with the color code you want
 			  },
 		}
 	},

@@ -9,33 +9,24 @@ keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript
 url: apps
 ---
 
-
 <div class="sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
-        
-        <header class="mb-12">
-          <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">
-            App Showcase 🚀
-          </h1>
-          <p class="mt-6 text-xl text-black">
-            Check out some of the apps I've put together! 🌟 
-            
-            <br>
-            They're all about being helpful and fun. Whether it's open-source tools or special solutions, each app is made to make your life easier and more productive. Dive in and see how these cool apps can boost your tech game!
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">App Showcase 🚀</h1>
+      <p class="mt-6 text-xl text-black">
+        Check out some of the apps I've put together! 🌟
+        <br>
+        They're all about being helpful and fun. Whether it's open-source tools or special solutions, each app is made to make your life easier and more productive. Dive in and see how these cool apps can boost your tech game!
+      </p>
+    </header>
 
-          </p>
-        </header>
-
-
-
-
-        <div
-        class="not-prose grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
-      >
+    <div class="not-prose grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
       {%- for article in work.apps -%}
       <article class="card card-compact border-2 border-stone-500 bg-base-100 transition-all duration-200 hover:-translate-y-1 focus-within:border focus-within:border-indigo-500">
         <a
-          href="{{ article.link }}" title="{{ article.title }} - Learn more" aria-label="{{ article.title }} - Learn more"
+          href="{{ article.link }}" 
+          title="{{ article.title }} - Learn more" 
+          aria-label="{{ article.title }} - Learn more"
           class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 block transition-transform duration-200 focus:-translate-y-1"
         >
           <figure class="px-4 pt-4">
@@ -48,27 +39,11 @@ url: apps
           </figure>
           <div class="card-body">
             <h2 class="card-title">{{ article.title }}</h2>
-            <p class="text-base">
-              {{ article.description }}
-            </p>
+            <p class="text-base">{{ article.description }}</p>
           </div>
         </a>
       </article>
       {%- endfor -%}
-      
-      
-      
-      </div>
-      
-
-
-
-
-
-
-
-
-
-
-      </div>
     </div>
+  </div>
+</div>

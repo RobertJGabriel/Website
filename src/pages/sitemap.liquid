@@ -1,7 +1,7 @@
 ---
 hideHeader: false
 layout:  templates/base.html
-title: Sitemap and list of pages for Robert James
+title: Sitemap
 youtubeId: PfILiWebkuc
 cardTitle:  Sitemap and list of pages for Robert James
 description: Navigate through the comprehensive sitemap of Robert James Gabriel's work. This guide provides easy access to a variety of popular apps, Chrome and Firefox extensions, and other software projects. Each page showcases Robert's expertise as a software engineer, offering detailed insights into his innovative modules and versatile extensions designed to enhance user experiences.
@@ -11,70 +11,33 @@ keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript
 url: sitemap/
 ---
 
-
-
-
 <div class="sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
-        
-        <header class="mb-12">
-          <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">
-            Sitemap
-          </h1>
-          <p class="mt-6 text-xl text-black">
-            Need to find something quickly on our site? Our sitemap is your go-to guide!
-            <br>
-                       It's simple, efficient, and gets you right where you want to be. From cool tools to insightful content, it's all here in a neat, organized layout.
-            
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">Sitemap</h1>
+      <p class="mt-6 text-xl text-black">
+        Need to find something quickly on our site? Our sitemap is your go-to guide!
+        <br>
+        It's simple, efficient, and gets you right where you want to be. From cool tools to insightful content, it's all here in a neat, organized layout.
+      </p>
+    </header>
 
-          </p>
-        </header>
-
-
-
-
-        <div
-        class="not-prose grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
-      >
+    <div class="not-prose grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
       {% for item in collections.all %}
       <article class="card card-compact bg-base-100 border-1 transition-all duration-200 hover:-translate-y-1 focus-within:border focus-within:border-indigo-500">
         <a
-          href="{{ item.url }}" title=" {{ item.data.title }} - Learn more" aria-label=" {{ item.data.title }} - Learn more"
+          href="{{ item.url }}" 
+          title="{{ item.data.title }} - Learn more" 
+          aria-label="{{ item.data.title }} - Learn more"
           class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 block transition-transform duration-200 focus:-translate-y-1"
         >
-    
           <div class="card-body">
-            <h2 class="card-title"> {{ item.data.title }}</h2>
-            <p class="text-base">
-              {{ item.data.description }}
-
-             
-            
-            </p>
-
-          
+            <h2 class="card-title">{{ item.data.title }}</h2>
+            <p class="text-base">{{ item.data.description }}</p>
           </div>
         </a>
       </article>
-      {%- endfor -%}
-      
-      
-      
-      </div>
-      
-
-
-
-
-
-
-
-
-
-
-      </div>
+      {% endfor %}
     </div>
-
-
-
-
+  </div>
+</div>

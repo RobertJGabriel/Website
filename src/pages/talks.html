@@ -11,186 +11,92 @@ url: talks
 ---
 
 
-
-
-
-
-
-
 <div class="sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
-        
-        <header class="mb-12">
-          <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">
-           Talks & Podcasts
-          </h1>
-          <p class="mt-6 text-xl text-black">
-          
-            I  absolutely adore hitting the stage to share my ideas – it's a vibrant, dynamic way to connect that goes way beyond what writing can offer.
-            <br>
-                 And podcasts?
-                 <br>
-                 They're a blast! I love diving into interviews, where I get to interact, answer questions, and share my thoughts in a lively, conversational setting.
-                        
-          </p>
-        </header>
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">Talks & Podcasts</h1>
+      <p class="mt-6 text-xl text-black">
+        I absolutely adore hitting the stage to share my ideas – it's a vibrant, dynamic way to connect that goes way beyond what writing can offer.
+        <br>
+        And podcasts?
+        <br>
+        They're a blast! I love diving into interviews, where I get to interact, answer questions, and share my thoughts in a lively, conversational setting.
+      </p>
+    </header>
 
-
-
-
-        <div class="mt-16 sm:mt-20">
-          <div class="space-y-20">
-            <section
-              aria-labelledby=":S1:"
-              class="md:border-l  md:pl-6 border-zinc-700/40"
-            >
-              <div
-                class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4"
-              >
-                <h2
-                  id=":S1:"
-                  class="text-lg font-semibold text-black"
-                >
-                  Conferences
-                </h2>
-                <div class="md:col-span-3">
-                  <div class="space-y-16">
-  
-  
-                    {%- for article in work.talks -%}
-  
-  
-  
-                    <article class="group relative flex flex-col items-start">
-                      <h3
-                        class="text-base font-semibold tracking-tight text-black"
-                      >
-  
-                      <span
-                            class=" -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-                          ></span
-                          ><span class="relative z-10"
-                            >{{ article.title }}</span
-                          >
-                      </h3>
-                      <p
-                        class="relative z-10 order-first mb-3 flex items-center text-base text-black pl-3.5"
-                      >
-                        <span
-                          class="absolute inset-y-0 left-0 flex items-center"
-                          aria-hidden="true"
-                          ><span
-                            class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"
-                          ></span></span
-                        >{{article.data}}
-                      </p>
-                      <p
-                        class="relative z-10 mt-2 text-base text-black"
-                      >
-                                  {{ article.description }}
-                      </p>
-                      <a
-      href="{{ article.link }}"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="relative z-10 mt-4 flex items-center link link-secondary"
-      role="link"
-      aria-label="Watch video: {{ article.title }}"
-    >
-      Watch video
-    </a>
-                    </article>
-  
-  
-  
-  
-                    {%- endfor -%}
-  
-                  </div>
-                </div>
+    <div class="mt-16 sm:mt-20">
+      <div class="space-y-20">
+        <section aria-labelledby="conferences-section" class="md:border-l md:pl-6 border-zinc-700/40">
+          <div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4">
+            <h2 id="conferences-section" class="text-lg font-semibold text-black">Conferences</h2>
+            <div class="md:col-span-3">
+              <div class="space-y-16">
+                {% for article in work.talks %}
+                <article class="group relative flex flex-col items-start">
+                  <h3 class="text-base font-semibold tracking-tight text-black">
+                    <span class="relative z-10">{{ article.title }}</span>
+                  </h3>
+                  <p class="relative z-10 order-first mb-3 flex items-center text-base text-black pl-3.5">
+                    <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                      <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
+                    </span>
+                    {{ article.data }}
+                  </p>
+                  <p class="relative z-10 mt-2 text-base text-black">
+                    {{ article.description }}
+                  </p>
+                  <a
+                    href="{{ article.link }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="relative z-10 mt-4 flex items-center link link-secondary"
+                    role="link"
+                    aria-label="Watch video: {{ article.title }}"
+                  >
+                    Watch video
+                  </a>
+                </article>
+                {% endfor %}
               </div>
-            </section>
-            <section
-              aria-labelledby=":S2:"
-              class="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40"
-            >
-              <div
-                class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4"
-              >
-                <h2
-                  id=":S2:"
-                  class="text-lg font-semibold text-black"
-                >
-                  Podcasts
-                </h2>
-                <div class="md:col-span-3">
-                  <div class="space-y-16">
-                      {%- for podcast in work.podcasts -%}
-                      <article class="group relative flex flex-col items-start">
-                        <h3
-                          class="text-xl font-semibold tracking-tight text-black"
-                        >
-                          <div
-                            class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition  dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"
-                          ></div>
-                      <span
-                              class=" -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-                            ></span
-                            ><span class="relative z-10"
-                              >{{ podcast.title }}</span
-                            >
-                        </h3>
-                        <p
-                          class="relative z-10 order-first mb-3 flex items-center text-lg text-black pl-3.5"
-                        >
-                          <span
-                            class="absolute inset-y-0 left-0 flex items-center"
-                            aria-hidden="true"
-                            ><span
-                              class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"
-                            ></span></span
-                          >{{podcast.data}}
-                        </p>
-                        <p
-                          class="relative z-10 mt-2 text-base text-black"
-                        >
-                                    {{ podcast.description }}
-                        </p>
-  
-  
-  
-                        <a
-            href="{{ podcast.link }}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="relative z-10 mt-4 flex items-center link link-secondary"
-            role="link"
-            aria-label="Listen to podcast: {{ podcast.title }}"
-          >
-            Listen
-          </a>
-                      </article>
-  
-                      {%- endfor -%}
-                  </div>
-                </div>
-              </div>
-            </section>
+            </div>
           </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
+        </section>
+        <section aria-labelledby="podcasts-section" class="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
+          <div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4">
+            <h2 id="podcasts-section" class="text-lg font-semibold text-black">Podcasts</h2>
+            <div class="md:col-span-3">
+              <div class="space-y-16">
+                {% for podcast in work.podcasts %}
+                <article class="group relative flex flex-col items-start">
+                  <h3 class="text-xl font-semibold tracking-tight text-black">
+                    <span class="relative z-10">{{ podcast.title }}</span>
+                  </h3>
+                  <p class="relative z-10 order-first mb-3 flex items-center text-lg text-black pl-3.5">
+                    <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                      <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span>
+                    </span>
+                    {{ podcast.data }}
+                  </p>
+                  <p class="relative z-10 mt-2 text-base text-black">
+                    {{ podcast.description }}
+                  </p>
+                  <a
+                    href="{{ podcast.link }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="relative z-10 mt-4 flex items-center link link-secondary"
+                    role="link"
+                    aria-label="Listen to podcast: {{ podcast.title }}"
+                  >
+                    Listen
+                  </a>
+                </article>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-
-
-
-
+  </div>
+</div>

@@ -1,109 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
-	<head>
-		<meta charset="utf-8" />
-		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-		<title>{{ title }} - Robert James Gabriel</title>
-		{% bundledCss %}
-		<script>
-			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('/service-worker.js');
-			}
-		</script>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} - Robert James Gabriel</title>
+    {% bundledCss %}
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
 
-		<link href="https://www.robertgabriel.ninja{{ page.url | safe }}" rel="canonical" />
-		<meta content="{{ description }}" name="description" />
-		<meta content="{{ keywords }}" name="keywords" />
+    <link rel="canonical" href="https://www.robertgabriel.ninja{{ page.url | safe }}" />
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ keywords }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="image" content="/assets/images/favicon.png" />
+    <meta name="theme-color" content="#5046e4" />
+    <meta itemprop="name" content="Robert James" />
+    <meta itemprop="description" content="{{ description }}" />
+    <meta itemprop="image" content="/assets/images/favicon.png" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<meta content="/assets/images/favicon.png" name="image" />
-		<meta content="#5046e4" name="theme-color" />
-		<meta content="Robert James" itemprop="name" />
-		<meta content="{{ description }}" itemprop="description" />
-		<meta content="/assets/images/favicon.png" itemprop="image" />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@robertjgabriel" />
+    <meta name="twitter:creator" content="@robertjgabriel" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta property="twitter:domain" content="robertgabriel.ninja" />
+    <meta property="twitter:url" content="https://www.robertgabriel.ninja{{ page.url | safe }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image:alt" content="Robert James's cartoon face" />
+    <meta name="twitter:image" content="https://www.robertgabriel.ninja{{ page.url | safe }}index.png" />
+    <meta name="twitter:player" content="https://www.youtube.com/watch?v={{ youtubeId}}" />
 
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@robertjgabriel" />
-		<meta name="twitter:creator" content="@robertjgabriel" />
-		<meta name="twitter:title" content="{{ title }}" />
-		<meta property="twitter:domain" content="robertgabriel.ninja" />
+    <!-- Open Graph data -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:url" content="https://www.robertgabriel.ninja{{ page.url | safe }}" />
+    <meta property="og:site_name" content="Robert James" />
+    <meta property="og:image" content="https://www.robertgabriel.ninja{{ page.url | safe }}index.png" />
+    <meta property="og:video" content="https://www.youtube.com/watch?v={{ youtubeId}}" />
 
-		<meta property="twitter:url" content="https://www.robertgabriel.ninja{{ page.url | safe }}" />
-		<meta name="twitter:description" content="{{ description }}" />
+    <link rel="shortcut icon" href="/assets/images/site/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/images/social/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/favicon.png" />
+    <meta name="msvalidate.01" content="5A7359B55CCBDE2A927000280EAECBBC" />
+    <link rel="icon" sizes="32x32" type="image/png" href="/assets/images/social/favicon-32x32.png" />
+    <link rel="icon" sizes="16x16" type="image/png" href="/assets/images/social/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/images/social/site.webmanifest" />
+    <link rel="mask-icon" href="/assets/images/social/safari-pinned-tab.svg" />
+    <link rel="shortcut icon" href="/assets/images/social/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-config" content="/assets/images/social/browserconfig.xml" />
+</head>
 
-		<meta
-			name="twitter:image:alt"
-			content="Robert James's cartoon face"
-		/>
-		<meta name="twitter:image" content="https://www.robertgabriel.ninja{{ page.url | safe }}index.png" />
-
-		<meta
-			content="https://www.youtube.com/watch?v={{ youtubeId}}"
-			name="twitter:player"
-		/>
-
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="{{ title }}" />
-		<meta property="og:description" content="{{ description }}" />
-		<meta property="og:url" content="https://www.robertgabriel.ninja{{ page.url | safe }}" />
-		<meta property="og:site_name" content="Robert James" />
-		<meta property="og:image" content="https://www.robertgabriel.ninja{{ page.url | safe }}index.png" />
-		<meta
-			property="og:video"
-			content="https://www.youtube.com/watch?v={{ youtubeId}}"
-		/>
-
-		<link href="/assets/images/site/favicon.png" rel="shortcut icon" />
-		<link href="/assets/images/social/apple-touch-icon.png" rel="apple-touch-icon" />
-		<link href="/assets/images/favicon.png" rel="apple-touch-icon" sizes="152x152" />
-		<link href="/assets/images/favicon.png" rel="apple-touch-icon" sizes="180x180" />
-		<link href="/assets/images/favicon.png" rel="apple-touch-icon" sizes="167x167" />
-		<meta content="5A7359B55CCBDE2A927000280EAECBBC" name="msvalidate.01" />
-		<meta content="5A7359B55CCBDE2A927000280EAECBBC" name="msvalidate.01" />
-		<link
-			href="/assets/images/social/apple-touch-icon.png"
-			rel="apple-touch-icon"
-			sizes="180x180"
-		/>
-		<link
-			href="/assets/images/social/favicon-32x32.png"
-			rel="icon"
-			sizes="32x32"
-			type="image/png"
-		/>
-		<link
-			href="/assets/images/social/favicon-16x16.png"
-			rel="icon"
-			sizes="16x16"
-			type="image/png"
-		/>
-		<link href="/assets/images/social/site.webmanifest" rel="manifest" />
-		<link href="/assets/images/social/safari-pinned-tab.svg" rel="mask-icon" />
-		<link href="/assets/images/social/favicon.ico" rel="shortcut icon" />
-		<meta content="#ffffff" name="msapplication-TileColor" />
-		<meta content="/assets/images/social/browserconfig.xml" name="msapplication-config" />
-	</head>
-
-	<body class="h-full bg-base-300">
-		<div id="robertjames-website" class="min-h-full  flex flex-col bg-base-300">
-	
-				{% include templates/header.html %} 
-				<main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center m-8 pt-16 mb-12">
-				
-					{{ content | safe }}
-			
-				</main>
-				{% include templates/footer.html %} 
-
-	
-		
-
-
-				
-		
-	
-		</div>
-	</body>
-	{% bundledJs %}
+<body class="h-full bg-base-300">
+    <div id="robertjames-website" class="min-h-full flex flex-col bg-base-300">
+        {% include templates/header.html %} 
+        <main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center m-8 pt-16 mb-12" role="main">
+            {{ content | safe }}
+        </main>
+        {% include templates/footer.html %} 
+    </div>
+    {% bundledJs %}
+</body>
 </html>
