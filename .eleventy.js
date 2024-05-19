@@ -29,9 +29,9 @@ function addAriaAttributes(md) {
 }
 
 const createSocialImageForArticle = async (input, output) => {
-    const splashSolid = await loadImage('./tools/images/splash-1.png');
-    const splashStriped = await loadImage('./tools/images/splash-2.png');
-    const robertgabriel = await loadImage('./tools/images/me.png');
+    const coffeeIcon = await loadImage('./tools/images/coffee.svg');
+    const heartIcon =await loadImage('./tools/images/heart.svg');
+    const codeIcon = await loadImage('./tools/images/code.svg');
 
     new Promise((resolve, reject) => { // read data from input file
         try {
@@ -42,7 +42,7 @@ const createSocialImageForArticle = async (input, output) => {
 
             const post = {
                 title: title,
-                author: 'Robert James'
+                author: 'Robert James Gabriel'
             };
 
             const width = 1200;
@@ -60,17 +60,17 @@ const createSocialImageForArticle = async (input, output) => {
             const titleLineHeight = 100;
             // Bring up the author's Y value as well to make it all
             // fit together nicely.
-            const authorY = 525;
+            const authorY = 500;
 
             const canvas = createCanvas(width, height);
             const context = canvas.getContext('2d');
 
-            context.fillStyle = '#450a75';
+            context.fillStyle = '#fef5ec';
             context.fillRect(0, 0, width, height);
 
             context.font = "bold 50pt 'PT Sans'";
             context.textAlign = 'center';
-            context.fillStyle = '#ffffff';
+            context.fillStyle = '#000000';
 
             const titleText = formatTitle(post.title);
             context.fillText(titleText[0], 600, titleY);
@@ -80,18 +80,20 @@ const createSocialImageForArticle = async (input, output) => {
 
             context.font = "25pt 'PT Sans'";
             context.textAlign = 'center';
-            context.fillStyle = '#ffffff';
+            context.fillStyle = '#000000';
             context.fillText(`${
                 post.author
-            }`, 650, authorY);
+            }`, 600, authorY);
 
             const {w, h, x, y} = imagePosition;
-            context.drawImage(robertgabriel, x, y, w, h);
-            context.drawImage(splashSolid, 1000, 0, 403, 409);
-            context.drawImage(splashSolid, 200, 500, 403, 409);
-            context.drawImage(splashStriped, -80, 48, 348, 252);
-            context.drawImage(splashStriped, 1000, 400, 348, 252);
-            context.drawImage(splashStriped, 100, 600, 348, 252);
+            const drawRandomIcons = (icon, count) => {
+                for (let i = 0; i < count; i++) {
+                    const x = Math.random() * (width - 20); // Random x position
+                    const y = Math.random() * (height - 20); // Random y position
+                    context.drawImage(icon, x, y, 20, 20); // Draw icon with size 50x50
+                }
+            };
+
 
             const outputDir = path.dirname(output);
             if (! fs.existsSync(outputDir)) {
