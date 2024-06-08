@@ -163,6 +163,10 @@ self.__precacheManifest = [
     "revision": "9f674c878cf87b89699b21bd4883cf95"
   },
   {
+    "url": "assets/images/blog/calendar-versioning.png",
+    "revision": "0e6d80316bfa891861650cfef4f75398"
+  },
+  {
     "url": "assets/images/blog/coffee.png",
     "revision": "dd72967ec9fe4a988a30f2cb476b6268"
   },
@@ -408,7 +412,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "f45ae4a461b26fd9820fad269511e466"
+    "revision": "116247f6c6807e2ea51cd6fbdf5fb5d9"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -468,7 +472,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "b4ab20bb02d5bc7ceb1ae7558b81acb4"
+    "revision": "6f97666f75c6188d688f0e2d99853867"
   },
   {
     "url": "blog/index.png",
@@ -507,6 +511,14 @@ self.__precacheManifest = [
     "revision": "fcfb718a9d6d55afad2b3e7a970c5c2d"
   },
   {
+    "url": "blog/why-calendar-versioning-makes-sense/index.html",
+    "revision": "84882787fe897dd923dad26d11f26871"
+  },
+  {
+    "url": "blog/why-calendar-versioning-makes-sense/index.png",
+    "revision": "793c7f5165fc9b870e078345d54b7078"
+  },
+  {
     "url": "cailin/index.html",
     "revision": "75aa86c3d02d59dfe200e575b7d177e4"
   },
@@ -540,7 +552,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "0c3aa2203ec0ecb530ad3efe8bad8a0a"
+    "revision": "c0ea82411fe043dbf362c2f0fb4f881b"
   },
   {
     "url": "sitemap/index.png",
