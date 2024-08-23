@@ -416,7 +416,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "658b0a66e93db5745e7d0c0211ca2d90"
+    "revision": "483febd8e6aa0fda66d10d6ff5566cf7"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -436,7 +436,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.html",
-    "revision": "b5c4b4a6c2822938985e8316dacdb29d"
+    "revision": "c50abd423d01a9affec18874e785eeb7"
   },
   {
     "url": "blog/ my-rare-eye-teratoma-tumor-story/index.png",
@@ -444,7 +444,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/adblockers/index.html",
-    "revision": "64f09f7004f53e510d0a99fc0010dbed"
+    "revision": "a8d03e988765b187c7ca650128d96982"
   },
   {
     "url": "blog/adblockers/index.png",
@@ -452,7 +452,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/bag/index.html",
-    "revision": "7a53c0c2de075210a2db81748e7ab117"
+    "revision": "4b80651a2f3352aa534c2878c7c2bc22"
   },
   {
     "url": "blog/bag/index.png",
@@ -460,7 +460,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/favourite-apps-of-2023/index.html",
-    "revision": "472f2a7189def165fe32a699b2927479"
+    "revision": "154602e6305152a7ceefb813ad7c53c5"
   },
   {
     "url": "blog/favourite-apps-of-2023/index.png",
@@ -468,7 +468,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.html",
-    "revision": "4006ffc716202d691e2b7e3e3b089600"
+    "revision": "b2a5d872e227c630528331da16c4edcb"
   },
   {
     "url": "blog/finding-an-exploit-and-annoying-the-xbox-dev-team/index.png",
@@ -476,7 +476,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/how-did-the-original-apple-tv-remote-get-released/index.html",
-    "revision": "3571d29bd8e379033b13caff1b338721"
+    "revision": "7950931cb218d297ecc1bb0048a4dcff"
   },
   {
     "url": "blog/how-did-the-original-apple-tv-remote-get-released/index.png",
@@ -492,7 +492,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.html",
-    "revision": "63adcd11012515bae722347c3f2a78a5"
+    "revision": "2ce19bd8d6c68dbf0c94558949602b47"
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.png",
@@ -500,7 +500,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.html",
-    "revision": "ea793bfcd3b21a0a6b5eba7b7aca3e4d"
+    "revision": "93ba15becd2f7c0b8a7fa27ed06dfe8e"
   },
   {
     "url": "blog/research-into-web-accessibility-for-dyslexics/index.png",
@@ -508,7 +508,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/the-art-and-beauty-of-an-accessible-website/index.html",
-    "revision": "a40162dd0577f00c3f568857ac5f2207"
+    "revision": "fc396236c9c8516948dfd6c58020a5b8"
   },
   {
     "url": "blog/the-art-and-beauty-of-an-accessible-website/index.png",
@@ -516,7 +516,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.html",
-    "revision": "9f7539b4ecce1762bdae21c6c7b5f1f4"
+    "revision": "15a10ffba4c858221d0a0aaf74ff609b"
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.png",
@@ -524,7 +524,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/why-calendar-versioning-makes-sense/index.html",
-    "revision": "ffb7b1d7bd00a412f5fb0c97e2e19069"
+    "revision": "aec7dd34adddb2d0ee1255a9d798630e"
   },
   {
     "url": "blog/why-calendar-versioning-makes-sense/index.png",
