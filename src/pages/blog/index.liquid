@@ -43,7 +43,7 @@ url:
         class="not-prose grid grid-cols-1 sm:gap-x-2 md:gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3"
       >
       {%- for post  in collections.blog reversed -%}
-      <article class="card card-compact bg-base-100 transition-all duration-200 hover:-translate-y-1 shadow-md h-full flex flex-col helperbird-editor helperbird-editor-highlighter-marker medium-editor-element">
+      <article class="card card-compact bg-base-100 transition-all duration-200 hover:-translate-y-1 shadow-md h-full flex flex-col ">
         <a
           href="{{ post.url}}" title="{{ post.data.cardTitle}} - Learn more" aria-label="{{ post.data.cardTitle}} - Learn more"
           class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 block transition-transform duration-200 focus:-translate-y-1"
