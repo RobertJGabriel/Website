@@ -103,7 +103,7 @@
 		"css-minimizer-webpack-plugin": "^1.2.0",
 		"eleventy-plugin-pwa": "^1.0.8",
 		"eleventy-plugin-svg-contents": "^0.7.0",
-		"gulp": "^4.0.2",
+		"gulp": "^5.0.0",
 		"gulp-html2pug": "^3.0.3",
 		"gulp-image": "^6.2.1 ",
 		"gulp-imagemin": "^7.1.0",
