@@ -416,7 +416,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "483febd8e6aa0fda66d10d6ff5566cf7"
+    "revision": "2666b837a63d0b5e2173927bbe48d543"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -516,7 +516,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.html",
-    "revision": "15a10ffba4c858221d0a0aaf74ff609b"
+    "revision": "330797e62729329496d40affa5501ad0"
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.png",
@@ -564,7 +564,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "91bcdacaa89d651ecc37987e41220d01"
+    "revision": "5e3af2073e7fdc36be1e5ee795ab8d6b"
   },
   {
     "url": "sitemap/index.png",
