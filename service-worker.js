@@ -568,7 +568,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "88f9cc163c0ce12211f4d7a15e17490d"
+    "revision": "560bff65609e5deb4a4d1404ee7d6f48"
   },
   {
     "url": "index.png",
