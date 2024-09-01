@@ -14,7 +14,7 @@ blog_snip: Check out Mystery Rank, a playful project from Coffee and Fun where y
 
 
 cat: Blog
-img: /assets/images/blog/pokemon.png
+img: /assets/images/blog/rank.png
 
 ---
 
