@@ -416,7 +416,7 @@ self.__precacheManifest = [
   },
   {
     "url": "assets/js/main.css",
-    "revision": "2666b837a63d0b5e2173927bbe48d543"
+    "revision": "84fca90d95297cb8a7ae01bdb791738a"
   },
   {
     "url": "assets/videos/HBmenu1.png",
@@ -484,7 +484,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "6f5352428252709bfcf88b5099b801e4"
+    "revision": "ba497506b0cc9eb856bc96e9a0bcf665"
   },
   {
     "url": "blog/index.png",
@@ -516,11 +516,19 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.html",
-    "revision": "330797e62729329496d40affa5501ad0"
+    "revision": "54fd72dbb5b5b7802fe50f5c2ed048ff"
   },
   {
     "url": "blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/index.png",
     "revision": "fcfb718a9d6d55afad2b3e7a970c5c2d"
+  },
+  {
+    "url": "blog/what-is-mystery-rank/index.html",
+    "revision": "da36c279ca315faf609fac5c8ba1e57c"
+  },
+  {
+    "url": "blog/what-is-mystery-rank/index.png",
+    "revision": "6b1f1c8caba90b52ad47f4eed15172e1"
   },
   {
     "url": "blog/why-calendar-versioning-makes-sense/index.html",
@@ -564,7 +572,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "5e3af2073e7fdc36be1e5ee795ab8d6b"
+    "revision": "c5828daee3946ae4ac7b5f7fb0a18314"
   },
   {
     "url": "sitemap/index.png",
