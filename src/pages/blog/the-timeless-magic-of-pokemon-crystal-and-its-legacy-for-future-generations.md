@@ -1,8 +1,8 @@
 ---
 hideHeader: false
 layout:  templates/blog.html
-Title: The Lasting Magic of Pokémon Crystal and What It Means for the Next Generation
-Description: In this article, I share my personal journey with Pokémon Crystal, the challenges of playing it today, and how web-based emulators are keeping this classic alive for the next generation. We’ll explore everything from playing on modern devices to preserving gaming culture, ethical ways to enjoy retro games, and how Pokémon Crystal continues to connect gamers of all ages.
+title: The Lasting Magic of Pokémon Crystal and What It Means for the Next Generation
+description: In this article, I share my personal journey with Pokémon Crystal, the challenges of playing it today, and how web-based emulators are keeping this classic alive for the next generation. We’ll explore everything from playing on modern devices to preserving gaming culture, ethical ways to enjoy retro games, and how Pokémon Crystal continues to connect gamers of all ages.
 keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design
 url: blog/the-timeless-magic-of-pokemon-crystal-and-its-legacy-for-future-generations/
 tags: blog
