@@ -215,6 +215,10 @@ self.__precacheManifest = [
     "revision": "bcf35bfdb07a8e505201f27f8889e7f4"
   },
   {
+    "url": "assets/images/blog/rank.png",
+    "revision": "7eb1260fa26729f415a2ac29e2c1c780"
+  },
+  {
     "url": "assets/images/blog/reddit.webp",
     "revision": "b1ef4883b243b20ff1d2379a96ed57c6"
   },
@@ -484,7 +488,7 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "ba497506b0cc9eb856bc96e9a0bcf665"
+    "revision": "b213ca050f1e6b429b77231d60a5fd2f"
   },
   {
     "url": "blog/index.png",
