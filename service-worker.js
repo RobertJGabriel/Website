@@ -195,6 +195,10 @@ self.__precacheManifest = [
     "revision": "2c48c4760a98eb3ad7d9bc656116f12b"
   },
   {
+    "url": "assets/images/blog/markdown-trend.png",
+    "revision": "72dbbbdf221c6fad029ce4d7349fae23"
+  },
+  {
     "url": "assets/images/blog/markdown.png",
     "revision": "2cf027bc5b50f72101ee06638da04e88"
   },
@@ -488,11 +492,19 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "cd33f6cfa5020ed100039f01534ec9f7"
+    "revision": "356407899f6cb2d498512a81a1914c04"
   },
   {
     "url": "blog/index.png",
     "revision": "2ee84fe6f53a02e9e3beb5e52f2f7c04"
+  },
+  {
+    "url": "blog/markdown-editor-for-safari-just-hit-26-in-developer-tools-on-app-store/index.html",
+    "revision": "dd00d55236af08a41a4629147901ae1f"
+  },
+  {
+    "url": "blog/markdown-editor-for-safari-just-hit-26-in-developer-tools-on-app-store/index.png",
+    "revision": "9a314b1384092fbfd14368dab18dbba7"
   },
   {
     "url": "blog/panic-attacks-and-anxiety/index.html",
@@ -576,7 +588,7 @@ self.__precacheManifest = [
   },
   {
     "url": "sitemap/index.html",
-    "revision": "c5828daee3946ae4ac7b5f7fb0a18314"
+    "revision": "b68a9e8d48d9e479914fe96446beba3e"
   },
   {
     "url": "sitemap/index.png",
