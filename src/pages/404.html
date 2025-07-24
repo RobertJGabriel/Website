@@ -4,116 +4,286 @@ layout: templates/base.html
 title: 404
 youtubeId: PfILiWebkuc
 cardTitle: 404
-description: The most amazing 404 page in the world. Created by Robert James Gabroel 404 page.
+description: The most amazing 404 page in the world. Created by Robert James Gabriel 404 page.
 keywords: html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile
 url: 404.html
 permalink: /404.html
 ---
 
+<div class="px-4 sm:px-8 mt-16 text-center">
+  <div class="mx-auto max-w-2xl lg:max-w-3xl">
+    <div class="flex flex-col items-center justify-center min-h-[80vh]">
+      
+      <!-- Error Message -->
+      <div class="mb-12">
+        <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl mb-6">
+          Oops! Page Not Found
+        </h1>
+        <p class="text-xl text-base-content/80 mb-4">
+          But hey, you can play a game while you're here!
+        </p>
+        <p class="text-base text-base-content/60">
+          Use your arrow keys to catch the falling items
+        </p>
+      </div>
 
-<div class="sm:px-8 mt-16 text-center font-sans">
+      <!-- Game Area -->
+      <div class="bg-base-200 rounded-2xl p-8 shadow-lg border border-base-300">
+        <canvas 
+          id="gameCanvas" 
+          width="480" 
+          height="320" 
+          class="border-2 border-base-content/20 bg-base-100 rounded-lg shadow-sm" 
+          role="img" 
+          aria-label="A simple game where you catch falling items with a basket."
+        ></canvas>
+        
+        <!-- Score Display -->
+        <div class="mt-4 text-lg font-semibold text-base-content">
+          <span id="scoreDisplay">Score: 0</span>
+        </div>
+        
+        <!-- Screen Reader Score -->
+        <p id="score" class="sr-only">Score: 0</p>
+        
+        <!-- Game Over Message -->
+        <div id="gameOverMessage" class="hidden mt-4">
+          <div class="alert alert-error shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="font-bold">Game Over! Restarting...</span>
+          </div>
+        </div>
+      </div>
 
 
-	<div class="mx-auto max-w-2xl lg:max-w-3xl">
-		<div class="flex flex-col items-center justify-center h-screen">
-			<h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">Oops! Page Not Found</h1>
-			<p class="mt-6 mb-10 text-xl text-black">But you can play a game while you're here!</p>
-			<canvas id="gameCanvas" width="480" height="320" class="border-2 border-black bg-white" role="img" aria-label="A simple game where you catch falling items with a basket."></canvas>
-<p id="score" class="screen-reader-only">Score: 0</p>
-<div id="gameOverMessage" class="hidden text-red-500 font-bold text-xl mt-8">Game Over</div>
+    </div>
+  </div>
+</div>
 
-		</div>
-	</div>
-
-	
 <script>
-	const canvas = document.getElementById("gameCanvas");
-	const ctx = canvas.getContext("2d");
+  class CatchGame {
+    constructor() {
+      this.canvas = document.getElementById("gameCanvas");
+      this.ctx = this.canvas.getContext("2d");
+      
+      // Game constants
+      this.BASKET_WIDTH = 75;
+      this.BASKET_HEIGHT = 15;
+      this.BASKET_SPEED = 7;
+      this.ITEM_RADIUS = 10;
+      this.ITEM_SPEED = 2;
+      this.GAME_OVER_DELAY = 2000;
+      
+      // Game state
+      this.basketX = (this.canvas.width - this.BASKET_WIDTH) / 2;
+      this.keys = { left: false, right: false };
+      this.score = 0;
+      this.gameRunning = true;
+      this.animationId = null;
+      
+      // DOM elements
+      this.scoreDisplay = document.getElementById("scoreDisplay");
+      this.screenReaderScore = document.getElementById("score");
+      this.gameOverMessage = document.getElementById("gameOverMessage");
+      
+      // Initialize item position
+      this.resetItem();
+      
+      // Bind event listeners
+      this.bindEvents();
+      
+      // Start game loop
+      this.gameLoop();
+    }
+    
+    bindEvents() {
+      document.addEventListener("keydown", (e) => this.handleKeyDown(e));
+      document.addEventListener("keyup", (e) => this.handleKeyUp(e));
+      
+      // Add touch/mouse support for mobile
+      this.canvas.addEventListener("touchstart", (e) => this.handleTouch(e));
+      this.canvas.addEventListener("touchmove", (e) => this.handleTouch(e));
+      this.canvas.addEventListener("mousemove", (e) => this.handleMouse(e));
+    }
+    
+    handleKeyDown(e) {
+      switch(e.key) {
+        case "ArrowLeft":
+        case "Left":
+          this.keys.left = true;
+          e.preventDefault();
+          break;
+        case "ArrowRight":
+        case "Right":
+          this.keys.right = true;
+          e.preventDefault();
+          break;
+      }
+    }
+    
+    handleKeyUp(e) {
+      switch(e.key) {
+        case "ArrowLeft":
+        case "Left":
+          this.keys.left = false;
+          break;
+        case "ArrowRight":
+        case "Right":
+          this.keys.right = false;
+          break;
+      }
+    }
+    
+    handleTouch(e) {
+      e.preventDefault();
+      const rect = this.canvas.getBoundingClientRect();
+      const touch = e.touches[0] || e.changedTouches[0];
+      const x = touch.clientX - rect.left;
+      this.basketX = Math.max(0, Math.min(x - this.BASKET_WIDTH / 2, this.canvas.width - this.BASKET_WIDTH));
+    }
+    
+    handleMouse(e) {
+      const rect = this.canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      this.basketX = Math.max(0, Math.min(x - this.BASKET_WIDTH / 2, this.canvas.width - this.BASKET_WIDTH));
+    }
+    
+    resetItem() {
+      this.itemX = Math.random() * (this.canvas.width - this.ITEM_RADIUS * 2) + this.ITEM_RADIUS;
+      this.itemY = this.ITEM_RADIUS;
+    }
+    
+    updateBasketPosition() {
+      if (this.keys.right && this.basketX < this.canvas.width - this.BASKET_WIDTH) {
+        this.basketX += this.BASKET_SPEED;
+      }
+      if (this.keys.left && this.basketX > 0) {
+        this.basketX -= this.BASKET_SPEED;
+      }
+    }
+    
+    updateItemPosition() {
+      this.itemY += this.ITEM_SPEED;
+    }
+    
+    checkCollision() {
+      const itemBottom = this.itemY + this.ITEM_RADIUS;
+      const basketTop = this.canvas.height - this.BASKET_HEIGHT;
+      
+      // Check if item hits basket
+      if (itemBottom >= basketTop && 
+          this.itemX >= this.basketX && 
+          this.itemX <= this.basketX + this.BASKET_WIDTH) {
+        this.score++;
+        this.updateScore();
+        this.resetItem();
+        return true;
+      }
+      
+      // Check if item hits ground
+      if (itemBottom >= this.canvas.height) {
+        this.gameOver();
+        return true;
+      }
+      
+      return false;
+    }
+    
+    updateScore() {
+      const scoreText = `Score: ${this.score}`;
+      this.scoreDisplay.textContent = scoreText;
+      this.screenReaderScore.textContent = scoreText;
+    }
+    
+    drawBasket() {
+      this.ctx.beginPath();
+      this.ctx.fillStyle = "#666";
+      this.ctx.fillRect(this.basketX, this.canvas.height - this.BASKET_HEIGHT, this.BASKET_WIDTH, this.BASKET_HEIGHT);
+      
+      // Add a simple basket design
+      this.ctx.strokeStyle = "#444";
+      this.ctx.lineWidth = 2;
+      this.ctx.strokeRect(this.basketX, this.canvas.height - this.BASKET_HEIGHT, this.BASKET_WIDTH, this.BASKET_HEIGHT);
+    }
+    
+    drawItem() {
+      this.ctx.beginPath();
+      this.ctx.arc(this.itemX, this.itemY, this.ITEM_RADIUS, 0, Math.PI * 2);
+      this.ctx.fillStyle = "#ff6b6b";
+      this.ctx.fill();
+      
+      // Add a simple shine effect
+      this.ctx.beginPath();
+      this.ctx.arc(this.itemX - 3, this.itemY - 3, this.ITEM_RADIUS / 3, 0, Math.PI * 2);
+      this.ctx.fillStyle = "#ffaaaa";
+      this.ctx.fill();
+    }
+    
+    drawScore() {
+      this.ctx.font = "bold 16px Arial";
+      this.ctx.fillStyle = "#333";
+      this.ctx.fillText(`Score: ${this.score}`, 8, 20);
+    }
+    
+    render() {
+      // Clear canvas
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      
+      // Draw game objects
+      this.drawBasket();
+      this.drawItem();
+      this.drawScore();
+    }
+    
+    gameOver() {
+      this.gameRunning = false;
+      this.gameOverMessage.classList.remove('hidden');
+      
+      setTimeout(() => {
+        this.resetGame();
+      }, this.GAME_OVER_DELAY);
+    }
+    
+    resetGame() {
+      this.gameOverMessage.classList.add('hidden');
+      this.score = 0;
+      this.basketX = (this.canvas.width - this.BASKET_WIDTH) / 2;
+      this.keys = { left: false, right: false };
+      this.gameRunning = true;
+      this.resetItem();
+      this.updateScore();
+    }
+    
+    gameLoop() {
+      if (!this.gameRunning) {
+        this.animationId = requestAnimationFrame(() => this.gameLoop());
+        return;
+      }
+      
+      // Update game state
+      this.updateBasketPosition();
+      this.updateItemPosition();
+      this.checkCollision();
+      
+      // Render
+      this.render();
+      
+      // Continue loop
+      this.animationId = requestAnimationFrame(() => this.gameLoop());
+    }
+    
+    destroy() {
+      if (this.animationId) {
+        cancelAnimationFrame(this.animationId);
+      }
+      // Remove event listeners if needed
+    }
+  }
   
-	const basketWidth = 75;
-	const basketHeight = 15;
-	let basketX = (canvas.width - basketWidth) / 2;
-	let rightPressed = false;
-	let leftPressed = false;
-  
-	const itemRadius = 10;
-	let itemX = Math.random() * (canvas.width - itemRadius * 2) + itemRadius;
-	let itemY = itemRadius;
-	const itemSpeed = 2;
-  
-	let score = 0;
-	const scoreDisplay = document.getElementById("score");
-	const gameOverMessage = document.getElementById("gameOverMessage");
-  
-	document.addEventListener("keydown", keyDownHandler);
-	document.addEventListener("keyup", keyUpHandler);
-  
-	function keyDownHandler(e) {
-	  if (e.key === "Right" || e.key === "ArrowRight") {
-		rightPressed = true;
-	  } else if (e.key === "Left" || e.key === "ArrowLeft") {
-		leftPressed = true;
-	  }
-	}
-  
-	function keyUpHandler(e) {
-	  if (e.key === "Right" || e.key === "ArrowRight") {
-		rightPressed = false;
-	  } else if (e.key === "Left" || e.key === "ArrowLeft") {
-		leftPressed = false;
-	  }
-	}
-  
-	function drawBasket() {
-	  ctx.beginPath();
-	  ctx.rect(basketX, canvas.height - basketHeight, basketWidth, basketHeight);
-	  ctx.fillStyle = "#000";
-	  ctx.fill();
-	  ctx.closePath();
-	}
-  
-	function drawItem() {
-	  ctx.beginPath();
-	  ctx.arc(itemX, itemY, itemRadius, 0, Math.PI * 2);
-	  ctx.fillStyle = "#000";
-	  ctx.fill();
-	  ctx.closePath();
-	}
-  
-	function drawScore() {
-	  ctx.font = "16px Arial";
-	  ctx.fillStyle = "#000";
-	  ctx.fillText("Score: " + score, 8, 20);
-	  scoreDisplay.textContent = "Score: " + score;
-	}
-  
-	function detectCollision() {
-	  if (itemY + itemRadius > canvas.height - basketHeight && itemX > basketX && itemX < basketX + basketWidth) {
-		score++;
-		itemY = itemRadius;
-		itemX = Math.random() * (canvas.width - itemRadius * 2) + itemRadius;
-	  } else if (itemY + itemRadius > canvas.height) {
-		gameOverMessage.classList.remove('hidden');
-		document.location.reload();
-	  }
-	}
-  
-	function draw() {
-	  ctx.clearRect(0, 0, canvas.width, canvas.height);
-	  drawBasket();
-	  drawItem();
-	  drawScore();
-	  detectCollision();
-  
-	  if (rightPressed && basketX < canvas.width - basketWidth) {
-		basketX += 7;
-	  } else if (leftPressed && basketX > 0) {
-		basketX -= 7;
-	  }
-  
-	  itemY += itemSpeed;
-	  requestAnimationFrame(draw);
-	}
-  
-	draw();
-  </script>
+  // Initialize game when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const game = new CatchGame();
+  });
+</script>

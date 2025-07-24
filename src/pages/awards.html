@@ -6,47 +6,32 @@ youtubeId: PfILiWebkuc
 cardTitle: Awards
 description: See the awards and honors won by Robert James Gabriel, a skilled software engineer. This page highlights his achievements in creating apps and extensions.
 keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexic
-
 url: /awards
 ---
 
-
-
-
-<div class="sm:px-8 mt-16">
+<div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
     <header class="mb-12">
-      <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">Awards & Honors</h1>
-      <p class="mt-6 text-xl text-black">
+      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">Awards & Honors</h1>
+      <p class="mt-6 text-xl text-base-content">
         I've been fortunate to receive several awards and honors throughout my journey. Below is a list of these recognitions that highlight the dedication and hard work I've put into my projects.
       </p>
     </header>
 
-    <div class="mt-16 sm:mt-20">
-      <div class="space-y-20">
-        <section aria-labelledby="awards-honors-section" class="md:border-l md:pl-6 border-zinc-700/40">
-          <div class="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4">
-            <h2 id="awards-honors-section" class="text-lg font-semibold text-black">Awards & Honors</h2>
-            <div class="md:col-span-3">
-              <div class="space-y-16">
-                {%- for article in awards.awards -%}
-                <article class="group relative flex flex-col items-start">
-                  <h3 class="text-base font-semibold tracking-tight text-black">
-                    <div>
-                      <span class="-inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-                      <span class="relative z-10">{{ article.title }}</span>
-                    </div>
-                  </h3>
-                  <p class="relative z-10 mt-2 text-base text-black">
-                    {{ article.description }}
-                  </p>
-                </article>
-                {%- endfor -%}
-              </div>
-            </div>
-          </div>
-        </section>
+    <div class="space-y-8">
+      {%- for article in awards.awards -%}
+      <div class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-md transition-shadow duration-200">
+        <div class="card-body p-6">
+          <h3 class="card-title text-xl font-bold text-base-content mb-3">
+            {{ article.title }}
+          </h3>
+          <p class="text-lg text-base-content/90 leading-relaxed">
+            {{ article.description }}
+          </p>
+        </div>
       </div>
+      {%- endfor -%}
     </div>
+
   </div>
 </div>

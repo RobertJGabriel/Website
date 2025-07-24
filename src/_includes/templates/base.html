@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full antialiased dark">
+<html lang="en" class="h-full" data-theme="caramellatte">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,14 +59,14 @@
     <meta name="msapplication-config" content="/assets/images/social/browserconfig.xml" />
 </head>
 
-<body class="flex h-full bg-base-300">
-    <div id="robertjames-website" class="flex w-full">
-        <div class="relative flex w-full flex-col">
+<body class="min-h-screen bg-base-100 overflow-x-hidden">
+    <div id="robertjames-website" class="min-h-screen w-full">
+        <div class="flex flex-col min-h-screen w-full">
             {% if hideHeader == false %}
                 {% include templates/header.html %}
             {% endif %}
 
-            <main class="flex-auto m-8" role="main">
+            <main class="flex-auto p-8" role="main">
                 {{ content | safe }}
             </main>
             {% include templates/footer.html %}

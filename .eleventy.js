@@ -1,241 +1,214 @@
-const lodash = require('lodash');
-const htmlmin = require('html-minifier');
-const svgContents = require('eleventy-plugin-svg-contents');
-const pluginPWA = require('./tools/eleventy-plugin-pwa');
-const fs = require('fs');
-const path = require('path');
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+// .eleventy.js (ESM style for Eleventy v3)
 
 
-const {createCanvas, loadImage} = require('canvas');
-const {formatTitle} = require('./tools/format-title');
+import htmlmin from 'html-minifier';
+import svgContents from 'eleventy-plugin-svg-contents';
+//import pluginPWA from './tools/eleventy-plugin-pwa';
+import fs from 'fs';
+import path from 'path';
+import eleventyVue from '@11ty/eleventy-plugin-vue';
+import { createCanvas, loadImage } from 'canvas';
+import { formatTitle } from './tools/format-title.js';
 
-
-// Add custom markdown-it plugin to add ARIA attributes
-function addAriaAttributes(md) {
-    // Plugin to add ARIA attributes to links
-    md.core.ruler.push('aria_links', state => {
-        state.tokens.forEach(blockToken => {
-            if (blockToken.type === 'inline' && blockToken.children) {
-                blockToken.children.forEach(token => {
-                    if (token.type === 'link_open') {
-                        token.attrSet('role', 'link');
-                        token.attrSet('aria-label', 'External link');
-                    }
-                });
-            }
-        });
-    });
-}
+import moment from 'moment';
+import format from 'date-fns/format/index.js';
+import postcss from 'postcss';
+//import tailwindcss from 'tailwindcss';
+import markdownIt from 'markdown-it';
+import markdownItClass from '@toycode/markdown-it-class';
+import markdownItAnchor from 'markdown-it-anchor';
+import tailwindcss from '@tailwindcss/postcss';
 
 const createSocialImageForArticle = async (input, output) => {
-    const coffeeIcon = await loadImage('./tools/images/coffee.svg');
-    const heartIcon =await loadImage('./tools/images/heart.svg');
-    const codeIcon = await loadImage('./tools/images/code.svg');
+	try {
+		const data = fs.readFileSync(input, 'utf-8');
+		const [, title] = data.match(/cardTitle:(.*)/);
 
-    new Promise((resolve, reject) => { // read data from input file
-        try {
-            const data = fs.readFileSync(input, {encoding: 'utf-8'});
+		const post = {
+			title: title,
+			author: 'coffeeandfun.com'
+		};
 
-            // get title from file data
-            const [, title] = data.match(/cardTitle:(.*)/);
+		const width = 1200;
+		const height = 627;
+		const canvas = createCanvas(width, height);
+		const context = canvas.getContext('2d');
 
-            const post = {
-                title: title,
-                author: 'Robert James Gabriel'
-            };
+		const splashSolid = await loadImage('./tools/images/splash-1.png');
+		const splashStriped = await loadImage('./tools/images/splash-2.png');
+		const helperbirdLogo = await loadImage('./tools/images/helperbird-logo.png');
 
-            const width = 1200;
-            const height = 627;
-            // Set the coordinates for the image position.
-            const imagePosition = {
-                w: 70,
-                h: 70,
-                x: 455,
-                y: 475
-            };
-            // Because we are putting the image near the top (y: 75)
-            // move the title down.
-            const titleY = 260;
-            const titleLineHeight = 100;
-            // Bring up the author's Y value as well to make it all
-            // fit together nicely.
-            const authorY = 500;
+		context.fillStyle = '#450a75';
+		context.fillRect(0, 0, width, height);
 
-            const canvas = createCanvas(width, height);
-            const context = canvas.getContext('2d');
+		const titleText = formatTitle(post.title);
+		context.font = "bold 50pt 'PT Sans'";
+		context.textAlign = 'center';
+		context.fillStyle = '#ffffff';
+		context.fillText(titleText[0], 600, 260);
+		if (titleText[1]) {
+			context.fillText(titleText[1], 600, 360);
+		}
 
-            context.fillStyle = '#fef5ec';
-            context.fillRect(0, 0, width, height);
+		context.font = "25pt 'PT Sans'";
+		context.fillText(`${post.author}`, 650, 525);
 
-            context.font = "bold 50pt 'PT Sans'";
-            context.textAlign = 'center';
-            context.fillStyle = '#000000';
+		context.drawImage(helperbirdLogo, 455, 475, 70, 70);
+		context.drawImage(splashSolid, 1000, 0, 403, 409);
+		context.drawImage(splashSolid, 200, 500, 403, 409);
+		context.drawImage(splashStriped, -80, 48, 348, 252);
+		context.drawImage(splashStriped, 1000, 400, 348, 252);
+		context.drawImage(splashStriped, 100, 600, 348, 252);
 
-            const titleText = formatTitle(post.title);
-            context.fillText(titleText[0], 600, titleY);
-            if (titleText[1]) {
-                context.fillText(titleText[1], 600, titleY + titleLineHeight);
-            }
+		const outputDir = path.dirname(output);
+		if (!fs.existsSync(outputDir)) {
+			fs.mkdirSync(outputDir, { recursive: true });
+		}
 
-            context.font = "25pt 'PT Sans'";
-            context.textAlign = 'center';
-            context.fillStyle = '#000000';
-            context.fillText(`${
-                post.author
-            }`, 600, authorY);
+		const stream = fs.createWriteStream(output);
+		stream.on('finish', () => {});
+		stream.on('error', (e) => console.error(e));
 
-            const {w, h, x, y} = imagePosition;
-            const drawRandomIcons = (icon, count) => {
-                for (let i = 0; i < count; i++) {
-                    const x = Math.random() * (width - 20); // Random x position
-                    const y = Math.random() * (height - 20); // Random y position
-                    context.drawImage(icon, x, y, 20, 20); // Draw icon with size 50x50
-                }
-            };
-
-
-            const outputDir = path.dirname(output);
-            if (! fs.existsSync(outputDir)) {
-                fs.mkdirSync(outputDir, {recursive: true});
-            }
-
-            // write the output image
-
-            const stream = fs.createWriteStream(output);
-            stream.on('finish', resolve);
-            stream.on('error', reject);
-            canvas.createPNGStream({quailty: 1.0}).pipe(stream);
-        } catch (e) {
-
-            console.error(this.inputPath, e);
-            console.error(e);
-        }
-    });
+		canvas.createPNGStream({ quality: 1.0 }).pipe(stream);
+	} catch (e) {
+		console.error('Error generating social image:', e);
+	}
 };
 
-const manifest = {
-    'main.js': '/assets/js/main.bundle.js',
-    'main.css': '/assets/js/main.css'
-};
-const format = require('date-fns/format');
-const moment = require('moment');
+export default function (eleventyConfig) {
+	eleventyConfig.addPassthroughCopy({ 'src/assets/': '/assets/' });
 
+	eleventyConfig.addLiquidFilter('limit', (arr, limit) => arr.slice(0, limit));
+	eleventyConfig.addPlugin(eleventyVue);
 
-module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy({'src/assets/': '/assets/'});
-    eleventyConfig.addLiquidFilter('limit', (arr, limit) => arr.slice(0, limit));
-    eleventyConfig.addTransform('social-image', async function (content) { // only handle blog posts
-        if (this.inputPath.endsWith('.njk')) {
-            return content;
-        }
+	eleventyConfig.addPlugin(svgContents);
 
-        try {
-            await createSocialImageForArticle(
-                // our input article
-                    this.inputPath,
+	eleventyConfig.addFilter('date', (date, dateFormat) => format(date, dateFormat));
+	eleventyConfig.addFilter('formatDateWithOrdinal', (dateString) => {
+		try {
+			return moment(dateString).format('MMMM Do, YYYY');
+		} catch (error) {
+			console.error('Error formatting date:', error);
+			return dateString;
+		}
+	});
 
-                // the output image name
-                    this.outputPath.replace('.html', '.png')
-            );
+	eleventyConfig.addFilter('dateDisplay', (input) => moment(input).format('MMMM Do YYYY'));
 
-            // return normal content
-            return content;
-        } catch (error) {
-            const [, title] = data.match(/title:(.*)/);
-            console.error('Error creating social image for', title);
-            console.error(this.inputPath, error);
-        }
-    });
+	const markdownOptions = {
+		html: true,
+		breaks: false,
+		linkify: true
+	};
 
-    eleventyConfig.addPlugin(syntaxHighlight);
-    eleventyConfig.addPlugin(pluginPWA, {
-        swDest: './docs/service-worker.js',
-        globDirectory: './docs'
-    });
-    eleventyConfig.addPlugin(svgContents);
+	const tagMap = {
+		h1: 'leading-relaxed font-display text-pretty text-3xl mb-8 font-bold text-pretty text-gray-900',
+		h2: 'leading-relaxed font-display text-pretty text-2xl mb-6 mt-12 font-semibold text-pretty text-gray-800',
+		h3: 'leading-relaxed font-display text-pretty text-xl mb-4 mt-10 font-semibold text-pretty text-gray-700',
+		h4: 'leading-relaxed font-display text-pretty text-lg mb-4 mt-8 font-semibold text-pretty text-gray-600',
+		p: 'leading-relaxed font-display mb-4 mt-4 text-pretty text-lg text-pretty text-gray-900',
+		strong: 'text-lg font-semibold text-pretty text-gray-800',
+		bold: 'font-bold text-pretty text-gray-900',
+		ul: 'list-disc list-inside mt-4 space-y-2 pl-6 text-pretty text-lg font-display ml-6 mb-8 text-pretty text-gray-900',
+		ol: 'list-decimal list-inside mt-4 space-y-2 pl-6 text-pretty text-lg font-display ml-6 mb-8 text-pretty text-gray-900',
+		li: 'mb-2 text-pretty text-lg font-display text-pretty text-gray-900 flex items-center',
+		table:
+			'table-auto w-full border-collapse border border-gray-300 text-pretty text-lg font-display text-pretty text-gray-900 mt-4 mb-8',
+		thead: 'bg-gray-100',
+		th: 'border border-gray-300 px-4 py-2 text-pretty text-left text-pretty text-gray-700 font-medium',
+		tr: 'odd:bg-gray-50 even:bg-white',
+		td: 'border border-gray-300 px-4 py-2 text-pretty text-gray-900',
+		img: 'aspect-square rounded-3xl mb-8 shadow-lg',
+		hr: 'divider divider-neutral my-10',
+		a: 'text-lg text-pretty text-blue-500 hover:text-blue-700 underline',
+		iframe: 'w-full h-96 rounded-3xl shadow-lg my-10',
+		blockquote: 'border-l-4 border-gray-300 pl-4 italic text-pretty text-gray-700 my-4',
+		code: 'bg-gray-100 text-pretty text-gray-800 rounded p-2 text-pretty text-sm font-mono',
+		pre: 'bg-gray-100 p-4 rounded overflow-x-auto'
+	};
 
-    // add `date` filter
-    eleventyConfig.addFilter('date', function (date, dateFormat) {
-        return format(date, dateFormat);
-    });
+	eleventyConfig.setLibrary(
+		'md',
+		markdownIt(markdownOptions)
+			.use(markdownItClass, tagMap)
+			.use(markdownItAnchor, { permalink: false })
+	);
 
-    // Random Filter: With the help from google search engine
-    eleventyConfig.addFilter('shuffle', (arr) => lodash.shuffle(arr));
+	eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
+		if (process.env.ELEVENTY_ENV === 'production' && outputPath.endsWith('.html')) {
+			return htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true
+			});
+		}
+		return content;
+	});
 
-    eleventyConfig.addFilter('dateDisplay', function (input) {
-        let xx = moment(input).format('MMMM Do YYYY');
-        return xx;
-    });
+	eleventyConfig.on('eleventy.before', async () => {
+		const tailwindInputPath = path.resolve('./src/assets/css/styles.css');
+		const tailwindOutputPath = './docs/assets/css/engine.css';
+		const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
+		const outputDir = path.dirname(tailwindOutputPath);
 
-    let markdownIt = require('markdown-it');
-    let markdownItClass = require('@toycode/markdown-it-class');
-    let options = {
-        html: true,
-        breaks: true,
-        linkify: true
-    };
-    const mapping = {
-        h1: 'leading-relaxed font-display text-3xl mb-8 font-bold text-gray-900',
-        h2: 'leading-relaxed font-display text-2xl mb-6 mt-12 font-semibold text-gray-800',
-        h3: 'leading-relaxed font-display text-xl mb-4 mt-10 font-semibold text-gray-700',
-        h4: 'leading-relaxed font-display text-lg mb-4 mt-8 font-semibold text-gray-600',
-        p: 'leading-relaxed font-display mb-4 mt-4 text-lg text-gray-900',
-        strong: 'text-lg font-semibold text-gray-800',
-        bold: 'font-bold text-gray-900',
-        ul: "leading-relaxed list-disc list-inside mt-4 space-y-2 pl-6 text-lg font-display ml-6 mb-8 text-gray-900",
-        ol: "leading-relaxed list-decimal list-inside mt-4 space-y-2 pl-6 text-lg font-display ml-6 mb-8 text-gray-900",
-        li: "leading-relaxed mb-2 text-lg font-display text-gray-900 flex items-center",
-      
-        img: 'aspect-square rounded-2xl mb-8 shadow-lg',
-        hr: 'divider divider-neutral my-8',
-        a: 'leading-relaxed font-sans text-lg text-blue-500 hover:text-blue-700 underline',
-        iframe: 'w-full h-96 rounded-xl shadow-lg my-10',
-        blockquote: 'border-l-4 border-gray-300 pl-4 italic text-gray-700 my-4',
-        code: 'bg-gray-100 text-gray-800 rounded p-2 text-sm font-mono',
-        pre: 'bg-gray-100 p-4 rounded overflow-x-auto'
-      };
-      
+		if (!fs.existsSync(outputDir)) {
+			fs.mkdirSync(outputDir, { recursive: true });
+		}
 
-    eleventyConfig.addTransform('htmlmin', function (content, outputPath) { // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-        if (outputPath && outputPath.endsWith('.html')) {
-            let minified = htmlmin.minify(content, {
-                useShortDoctype: true,
-                removeComments: true,
-                collapseWhitespace: true
-            });
-            return minified;
-        }
+		// 🔥 Auto-generate asset list for PWA
+		const walk = (dir) => {
+			const files = fs.readdirSync(dir);
+			return files.flatMap((file) => {
+				const fullPath = path.join(dir, file);
+				if (fs.statSync(fullPath).isDirectory()) {
+					return walk(fullPath);
+				} else {
+					const relative = '/' + path.relative('./docs', fullPath).replace(/\\/g, '/');
 
-        return content;
-    });
+					return [relative];
+				}
+			});
+		};
+		const allAssets = walk('./docs').filter((f) => !f.endsWith('.map'));
+		const outputJsonPath = './docs/cache-assets.json';
+		fs.writeFileSync(outputJsonPath, JSON.stringify(allAssets, null, 2));
+		const result = await postcss([tailwindcss()]).process(cssContent, {
+			from: tailwindInputPath,
+			to: tailwindOutputPath
+		});
 
+		fs.writeFileSync(tailwindOutputPath, result.css);
+	});
 
-    eleventyConfig.setLibrary('md', markdownIt(options).use(markdownItClass, mapping).use(addAriaAttributes));
+	eleventyConfig.setLiquidOptions({
+		dynamicPartials: false,
+		strictFilters: false
+	});
 
-    eleventyConfig.setLiquidOptions({
-        dynamicPartials: false, strictFilters: false // renamed from `strict_filters` in Eleventy 1.0
-    });
-    // Add a shortcode for bundled CSS.
-    eleventyConfig.addShortcode('bundledCss', function () {
-        return manifest['main.css'] ? `<link href="${
-            manifest['main.css']
-        }" rel="stylesheet" />` : '';
-    });
+	const manifest = {
+		'main.js': '/assets/js/main.bundle.js',
+		'main.css': '/assets/css/engine.css'
+	};
 
-    // Add a shortcode for bundled JS.
-    eleventyConfig.addShortcode('bundledJs', function () {
-        return manifest['main.js'] ? `<script src="${
-            manifest['main.js']
-        }"></script>` : '';
-    });
-    return {
-        markdownTemplateEngine: 'md',
-        dir: {
-            data: '../_data',
-            includes: '../_includes',
-            input: 'src/pages/',
-            output: 'docs'
-        }
-    };
-};
+	eleventyConfig.addShortcode('bundledCss', () =>
+		manifest['main.css'] ? `<link href="${manifest['main.css']}" rel="stylesheet" />` : ''
+	);
+	eleventyConfig.addShortcode('bundledJs', () =>
+		manifest['main.js'] ? `<script src="${manifest['main.js']}"></script>` : ''
+	);
+	// Register service worker manually
+	eleventyConfig.addPassthroughCopy('./src/service-worker.js');
+	eleventyConfig.addPassthroughCopy('./src/manifest.webmanifest');
+
+	return {
+		markdownTemplateEngine: 'liquid',
+		dir: {
+			data: '../_data',
+			includes: '../_includes',
+			input: 'src/pages/',
+			output: 'docs'
+		},
+		// 👇 This allows output files like CNAME without extensions
+		allowsFileExtensionsOnPermalinks: false
+	};
+}

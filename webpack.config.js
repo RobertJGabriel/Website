@@ -5,7 +5,7 @@ const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').def
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-	mode: 'production',
+	mode: 'development',
 	context: __dirname + '/src/',
 	entry: ['./assets/js/index.js', './assets/css/styles.css'],
 	plugins: [new MiniCssExtractPlugin({ ignoreOrder: false }), new HTMLInlineCSSWebpackPlugin()],
@@ -17,7 +17,15 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.styl(us)?$/,
+				use: ["style-loader", "css-loader", "stylus-loader"],
+			  },
+			{
 				test: /\.mp4$/,
+				use: 'file-loader?name=videos/[name].[ext]'
+			},
+				{
+				test: /\.mp3$/,
 				use: 'file-loader?name=videos/[name].[ext]'
 			},
 			{
@@ -58,15 +66,13 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: [
+					"style-loader",
+					"css-loader",
 					{
-						loader: MiniCssExtractPlugin.loader,
-						options: {
-							esModule: false
-						}
+					  loader: "postcss-loader",
+					
 					},
-					'css-loader',
-					'postcss-loader'
-				]
+				  ],
 			}
 		]
 	},
