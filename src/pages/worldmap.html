@@ -1,43 +1,102 @@
 ---
 hideHeader: false
-layout:  templates/app.html
+layout: templates/app.html
 title: World Map of my Travels
 youtubeId: PfILiWebkuc
 cardTitle: World Map of my Travels
-description: An interactive world map built in CSS, Javascript and Highcharts showing where im traveling around the world.
-keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexic
-
+description: An interactive world map built in CSS, Javascript and Highcharts showing where I'm traveling around the world.
+keywords: html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application, golang, helperbird, opendyslexic, opendyslexic
 url: worldmap
 ---
 
+<div class="px-4 sm:px-8 mt-16">
+  <div class="mx-auto max-w-6xl">
+    <header class="mb-12">
+      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">My Travel Adventures</h1>
+      <p class="mt-6 text-xl text-base-content">
+        From speaking at conferences to exploring new cultures, here's a visual journey of all the amazing places I've been fortunate to visit. Each pin tells a story of learning, connecting with incredible people, and discovering how technology impacts communities worldwide.
+      </p>
+    </header>
+
+    <div class="card bg-base-100 border border-base-300 shadow-lg overflow-hidden">
+      <div class="card-body p-0">
+        <div id="chartdiv" class="w-full h-96 md:h-[500px] lg:h-[600px] bg-base-100" 
+             role="img" 
+             aria-label="Interactive world map showing travel destinations">
+          <!-- Map will be rendered here -->
+        </div>
+      </div>
+    </div>
 
 
-
-
-<div id="chartdiv" class="mt-8 mb-8 card">
-
+  </div>
 </div>
 
+<!-- External Scripts -->
+<script src="https://www.amcharts.com/lib/3/ammap.js" defer></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js" defer></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js" defer></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js" defer></script>
 
-
-
-
-
-
-
-
-
-<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
-<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
-<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-<script src="/assets/js/core/worldmap.js"></script>
-<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" />
+<!-- Map Initialization -->
+<script defer>
+document.addEventListener('DOMContentLoaded', function() {
+  // Load the worldmap.js file after DOM is ready
+  const script = document.createElement('script');
+  script.src = '/assets/js/core/worldmap.js';
+  script.defer = true;
+  document.head.appendChild(script);
+  
+  
+});
+</script>
 
 <style>
-      #chartdiv {
-      width: 100%;
-      height: 500px;
-    }
+/* Map container styles */
+#chartdiv {
 
+  transition: all 0.3s ease;
+}
+
+.amcharts-main-div{
+  background-color: white;
+}
+
+#chartdiv:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive map height */
+@media (max-width: 768px) {
+  #chartdiv {
+    height: 300px !important;
+  }
+}
+
+/* Loading state */
+#chartdiv:empty::before {
+  content: "Loading map...";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: hsl(var(--bc) / 0.6);
+  font-size: 1.125rem;
+}
+
+/* Accessibility improvements */
+.amcharts-map-area {
+  outline: none;
+}
+
+.amcharts-map-area:focus {
+  outline: 2px solid hsl(var(--a));
+  outline-offset: 2px;
+}
+
+/* Chart export menu styling */
+.amcharts-export-menu {
+  border-radius: 0.5rem !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
 </style>

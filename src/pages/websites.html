@@ -6,49 +6,52 @@ youtubeId: PfILiWebkuc
 cardTitle: Websites & Apps
 description: Explore a portfolio of popular websites designed and developed by Robert James Gabriel, a proficient software engineer. This collection showcases a variety of web-based projects, each demonstrating a unique blend of creativity and technical expertise.
 keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexic
-
 url: websites
 ---
 
-
-
-<div class="sm:px-8 mt-16">
+<div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
     <header class="mb-12">
-      <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">Website Showcase 🚀</h1>
-      <p class="mt-6 text-xl text-black">
-        Take a look at the awesome websites I've built throughout my career! 🌟
+      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">Website Showcase</h1>
+      <p class="mt-6 text-xl text-base-content">
+        Take a look at the awesome websites I've built throughout my career! 
         <br>
         They're all about creativity and smart strategies. From stunning designs to top-notch SEO, each site is crafted to stand out and rank high. Dive in and see how these projects showcase my passion for web magic and practical results!
       </p>
     </header>
 
-    <div class="not-prose grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
       {% for article in work.websites %}
-      <article class="card card-compact border-2 border-stone-500 bg-base-100 transition-all duration-200 hover:-translate-y-1 focus-within:border focus-within:border-indigo-500">
+      <article class="group">
         <a
           href="{{ article.link }}"
           title="{{ article.title }} - Learn more"
           aria-label="{{ article.title }} - Learn more"
-          class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 block transition-transform duration-200 focus:-translate-y-1"
+          class="group snap-start flex-shrink-0 w-64"
         >
-          <figure class="px-4 pt-4">
-            <img
-              loading="lazy"
-              src="/assets/images/websites/{{ article.img }}"
-              alt="{{ article.title }} logo - {{ article.description | truncate: 100 }}"
-              class="rounded-lg border border-base-content bg-base-300"
-            />
-          </figure>
-          <div class="card-body">
-            <h2 class="card-title">{{ article.title }}</h2>
-            <p class="text-base">
-              {{ article.description }}
-            </p>
+          <div class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 block h-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+            <figure class="px-6 pt-6">
+              <img
+                loading="lazy"
+                src="/assets/images/websites/{{ article.img }}"
+                alt="{{ article.title }} logo - {{ article.description | truncate: 100 }}"
+                class="w-full bg-base-200 rounded-xl overflow-hidden border border-base-300 group-hover:border-primary/30 transition-colors duration-300"
+              />
+            </figure>
+            <div class="card-body px-6 pb-6">
+              <h2 class="card-title text-lg font-semibold text-base-content group-hover:text-accent transition-colors duration-300">
+                {{ article.title }}
+              </h2>
+              <p class="text-base text-base-content/80 leading-relaxed mt-2">
+                {{ article.description }}
+              </p>
+            </div>
           </div>
         </a>
       </article>
       {% endfor %}
     </div>
+
+   
   </div>
 </div>

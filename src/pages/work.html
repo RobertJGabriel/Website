@@ -6,59 +6,82 @@ youtubeId: PfILiWebkuc
 cardTitle: Work history
 description: Delve into the extensive work history of Robert James Gabriel, a software engineer renowned for developing popular apps and browser extensions. This page chronicles his professional journey, highlighting significant projects and achievements in creating innovative software solutions, including modules and extensions for Chrome and Firefox. Gain insights into the experiences and milestones that have shaped his career in technology and software development.
 keywords:  html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application,golang,helpebird,opendyslexic,opendyslexic
-
 url: work
 ---
 
-
-
-
-<div class="sm:px-8 mt-16">
+<div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
     <header class="mb-12">
-      <h1 class="text-4xl font-bold tracking-tight text-black sm:text-5xl">My Work History</h1>
-      <p class="mt-6 text-xl text-black">
-        Each job and project has fueled my passion for making tech accessible and easy for all.
-        <br>
-        It's a tale of hard work, learning, and coding. Discover the milestones that define my career and the experiences that shaped me in the tech world!
+      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">My Work History</h1>
+      <p class="mt-6 text-xl text-base-content">
+        Each role has been a stepping stone in my journey to make technology more accessible and meaningful. From early experiments to leading projects that impact thousands of users, here's how my career has evolved alongside my passion for inclusive design and problem-solving.
       </p>
     </header>
 
     <div class="mt-16 sm:mt-20">
-      <div class="md:border-l md:border-zinc-100 md:pl-6 border-zinc-700/40">
-        <div class="flex max-w-3xl flex-col space-y-16">
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent/60 to-accent/30" aria-hidden="true"></div>
+        
+        <div class="space-y-12">
           {% for article in work.history %}
-          <article class="md:grid md:grid-cols-4 md:items-baseline">
-            <div class="md:col-span-3 group relative flex flex-col items-start">
-              <h2 class="text-xl font-semibold tracking-tight text-zinc-800">
-                <span class="relative z-10">{{ article.title }}</span>
-                <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-lg font-medium link link-secondary">
-                  <div class="badge badge-secondary">{{ article.company }}</div>
+          <article class="relative flex items-start group">
+            <!-- Timeline dot -->
+            <div class="absolute left-6 mt-1.5 h-4 w-4 rounded-full bg-accent border-4 border-base-100 shadow-sm group-hover:bg-accent-focus transition-colors duration-300" aria-hidden="true"></div>
+            
+            <!-- Content -->
+            <div class="ml-16 min-w-0 flex-1">
+              <div class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent/30">
+                <div class="card-body p-6">
+                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                    <div class="flex-1">
+                      <h2 class="text-xl font-semibold tracking-tight text-base-content group-hover:text-accent transition-colors duration-300">
+                        {{ article.title }}
+                      </h2>
+                      <div class="mt-2 flex items-center gap-2">
+                        <div class="badge badge-accent badge-outline">{{ article.company }}</div>
+                      </div>
+                      <p class="mt-4 text-base text-base-content/80 leading-relaxed">
+                        {{ article.description }}
+                      </p>
+                      
+                      {% if article.technologies %}
+                      <div class="mt-4 flex flex-wrap gap-2">
+                        {% for tech in article.technologies %}
+                        <span class="badge badge-outline badge-sm text-xs">{{ tech }}</span>
+                        {% endfor %}
+                      </div>
+                      {% endif %}
+                    </div>
+                    
+                    <div class="flex flex-col sm:items-end gap-2 text-sm">
+                      <div class="flex flex-wrap gap-2">
+                        <time class="badge badge-neutral badge-outline" datetime="{{ article.start }}">
+                          {{ article.start }}
+                        </time>
+                        {% if article.end %}
+                        <span class="text-base-content/60">–</span>
+                        <time class="badge badge-secondary badge-outline" datetime="{{ article.end }}">
+                          {{ article.end }}
+                        </time>
+                        {% else %}
+                        <span class="badge badge-success badge-outline">Present</span>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </h2>
-              <time class="md:hidden relative z-10 order-first mb-3 flex items-center text-base text-black pl-3.5" datetime="{{ article.start }}">
-                <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
-                  <span class="h-4 w-0.5 rounded-full bg-zinc-200 bg-zinc-500"></span>
-                </span>
-                <div class="badge badge-neutral  badge-outline">{{ article.start }}</div>
-                {% if article.end %}
-                  <div class="badge badge-accent badge-outline">{{ article.end }}</div>
-                {% endif %}
-              </time>
-              <p class="relative z-10 mt-2 text-base text-black">
-                {{ article.description }}
-              </p>
+              </div>
             </div>
-            <time class="mt-1 hidden md:block relative z-10 order-first mb-3 flex items-center text-base text-zinc-400" datetime="{{ article.start }}">
-              <div class="badge badge-neutral  badge-outline">{{ article.start }}</div>
-              {% if article.end %}
-              <div class="badge badge-accent badge-outline">{{ article.end }}</div>
-            {% endif %}
-            </time>
           </article>
           {% endfor %}
         </div>
+        
+        <!-- Timeline end dot -->
+        <div class="absolute left-6 bottom-0 h-4 w-4 rounded-full bg-accent/30 border-4 border-base-100" aria-hidden="true"></div>
       </div>
     </div>
+
+ 
   </div>
 </div>

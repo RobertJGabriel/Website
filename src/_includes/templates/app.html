@@ -58,13 +58,18 @@
     <meta name="msapplication-config" content="/assets/images/social/browserconfig.xml" />
 </head>
 
-<body class="h-full bg-base-300">
-    <div id="robertjames-website" class="min-h-full flex flex-col bg-base-300">
-        {% include templates/header.html %} 
-        <main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center m-8 pt-16 mb-12" role="main">
-            {{ content | safe }}
-        </main>
-        {% include templates/footer.html %} 
+<body class="min-h-screen bg-base-100 overflow-x-hidden">
+    <div id="robertjames-website" class="min-h-screen w-full">
+         <div class="flex flex-col min-h-screen w-full">
+            {% if hideHeader == false %}
+                {% include templates/header.html %}
+            {% endif %}
+
+            <main class="flex-auto p-8" role="main">
+                {{ content | safe }}
+            </main>
+            {% include templates/footer.html %}
+        </div>
     </div>
     {% bundledJs %}
 </body>
