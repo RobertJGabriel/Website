@@ -1,8 +1,13 @@
-/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
+@import 'tailwindcss';
+@config '../../../tailwind.config.js';
+@plugin "daisyui" {
+	themes: caramellatte --default;
+	include: ;
+	exclude: ;
+	prefix: ;
+	logs: true;
+}
+
 
  code[class*="language-"],
  pre[class*="language-"] {
