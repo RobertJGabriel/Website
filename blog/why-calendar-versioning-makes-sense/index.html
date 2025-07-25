@@ -6,9 +6,21 @@
 		<title>Why Calendar Versioning Makes Sense in Today's Ever-Evolving Software World - Robert James Gabriel's Blog</title>
 		<link href="/assets/css/engine.css" rel="stylesheet" />
 		<script>
-			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('/service-worker.js');
-			}
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          for (const registration of registrations) {
+            registration.unregister().then(() => {
+              console.log("🧹 Old service worker unregistered");
+            });
+          }
+
+          // After clearing, register the new one
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(() => console.log("✅ New service worker registered"))
+            .catch((err) => console.log("Service worker error:", err));
+        });
+      }
 		</script>
 
 		<link rel="canonical" href="https://www.robertgabriel.ninja/blog/why-calendar-versioning-makes-sense/" />
