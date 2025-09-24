@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @config '../../../tailwind.config.js';
 @plugin "daisyui" {
-	themes: caramellatte --default;
+	themes: fantasy --default;
 	include: ;
 	exclude: ;
 	prefix: ;
