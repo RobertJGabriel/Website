@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full" data-theme="caramellatte">
+<html lang="en" class="h-full" data-theme="fantasy">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -83,19 +83,32 @@
     <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
       
       <!-- Image Section -->
-      <div class="lg:pl-20">
-        <div class="max-w-xs px-2.5 lg:max-w-none">
-          <img 
-            src="/assets/images/robert-james.png" 
-            alt="Robert James Gabriel, with a beard and glasses, looking at framed artwork on the wall in a gallery." 
-            class="aspect-square rotate-3 rounded-2xl bg-base-200 object-cover" 
-            width="340" 
-            height="340" 
-            loading="lazy" 
-            decoding="async" 
-          />
-        </div>
-      </div>
+<div class="lg:pl-20">
+  <div class="max-w-xs px-2.5 lg:max-w-none">
+    <div class="relative aspect-square w-[340px] h-[340px] rotate-3 transition-transform duration-300 hover:rotate-0 group">
+      <!-- Default image -->
+      <img 
+        src="/assets/images/robert-james.png" 
+        alt="Robert James Gabriel, with a beard and glasses, looking at framed artwork on the wall in a gallery."
+        class="absolute inset-0 rounded-2xl bg-base-200 object-cover transition-opacity duration-300 group-hover:opacity-0" 
+        width="340" 
+        height="340"
+        loading="lazy" 
+        decoding="async"
+      />
+      <!-- Hover image -->
+      <img 
+        src="/assets/images/robert-james-muppet.jpg" 
+        alt="Robert James Gabriel, with a beard and glasses, looking at framed artwork on the wall in a gallery."
+        class="absolute inset-0 rounded-2xl bg-base-200 object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" 
+        width="340" 
+        height="340"
+        loading="lazy" 
+        decoding="async"
+      />
+    </div>
+  </div>
+</div>
 
       <!-- Text Section -->
       <div class="lg:order-first lg:row-span-2">
@@ -171,22 +184,24 @@
               LinkedIn
             </a>
   
-            <a class="btn btn-outline btn-sm gap-1" href="https://www.threads.net/@robetjgabriel"  target="_blank"  aria-label="Visit Threads Profile">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" aria-hidden="true" class="h-5 w-5" fill="currentColor" stroke="none">
-                <path class="x19hqcy" d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"></path>
-              </svg>
-              Threads
-            </a>
+          
           </div>
 
         <div class="my-6 flex flex-wrap gap-4 mt-8">
-          <a class="btn btn-outline btn-sm gap-1" href="/blog/" aria-label="Visit Blog">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 -960 960 960" fill="currentColor">
-              <path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+      
+       <a class="btn btn-outline btn-sm gap-1" href="/about/" aria-label="Visit About Page" role="menuitem">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="h-4 w-4" stroke="none" fill="currentColor">
+              <path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h560v80h-80v80q0 17-11.5 28.5T680-680H360q-17 0-28.5-11.5T320-720v-80h-80v640h162q-38-27-60-68.5T320-320v-200h400v200q0 50-22 91.5T638-160h162v80H240Zm280-120q50 0 85-35t35-85v-120H400v120q0 50 35 85t85 35Zm0-360q17 0 28.5-11.5T560-600q0-17-11.5-28.5T520-640q-17 0-28.5 11.5T480-600q0 17 11.5 28.5T520-560Zm0 120Z" />
+            </svg>
+            About
+          </a>
+
+              <a class="btn btn-outline btn-sm gap-1" href="/blog/" aria-label="Visit About Page" role="menuitem">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 " viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
+              <path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/>
             </svg>
             Blog
           </a>
-
           <a class="btn btn-outline btn-sm gap-1" href="/awards/" aria-label="Visit Awards Page">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="h-4 w-4" stroke="none" fill="currentColor">
               <path d="M480-160q75 0 127.5-52.5T660-340q0-75-52.5-127.5T480-520q-75 0-127.5 52.5T300-340q0 75 52.5 127.5T480-160ZM363-572q20-11 42.5-17.5T451-598L350-800H250l113 228Zm234 0 114-228H610l-85 170 19 38q14 4 27 8.5t26 11.5ZM256-208q-17-29-26.5-62.5T220-340q0-36 9.5-69.5T256-472q-42 14-69 49.5T160-340q0 47 27 82.5t69 49.5Zm448 0q42-14 69-49.5t27-82.5q0-47-27-82.5T704-472q17 29 26.5 62.5T740-340q0 36-9.5 69.5T704-208ZM480-80q-40 0-76.5-11.5T336-123q-9 2-18 2.5t-19 .5q-91 0-155-64T80-339q0-87 58-149t143-69L120-880h280l80 160 80-160h280L680-559q85 8 142.5 70T880-340q0 92-64 156t-156 64q-9 0-18.5-.5T623-123q-31 20-67 31.5T480-80Zm0-260ZM363-572 250-800l113 228Zm234 0 114-228-114 228ZM406-230l28-91-74-53h91l29-96 29 96h91l-74 53 28 91-74-56-74 56Z" />
@@ -194,19 +209,9 @@
             Awards
           </a>
 
-          <a class="btn btn-outline btn-sm gap-1" href="/about/" aria-label="Visit About Page" role="menuitem">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="h-4 w-4" stroke="none" fill="currentColor">
-              <path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h560v80h-80v80q0 17-11.5 28.5T680-680H360q-17 0-28.5-11.5T320-720v-80h-80v640h162q-38-27-60-68.5T320-320v-200h400v200q0 50-22 91.5T638-160h162v80H240Zm280-120q50 0 85-35t35-85v-120H400v120q0 50 35 85t85 35Zm0-360q17 0 28.5-11.5T560-600q0-17-11.5-28.5T520-640q-17 0-28.5 11.5T480-600q0 17 11.5 28.5T520-560Zm0 120Z" />
-            </svg>
-            About
-          </a>
+   
 
-          <a class="btn btn-outline btn-sm gap-1" href="/apps/" aria-label="Visit Projects Page">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true" class="h-4 w-4" stroke="none" fill="currentColor">
-              <path d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-240q60 0 117 17.5T704-252q46-46 71-104.5T800-480q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 65 24.5 124T256-252q50-33 107-50.5T480-320Zm0 80q-41 0-80 10t-74 30q35 20 74 30t80 10q41 0 80-10t74-30q-35-20-74-30t-80-10ZM280-520q17 0 28.5-11.5T320-560q0-17-11.5-28.5T280-600q-17 0-28.5 11.5T240-560q0 17 11.5 28.5T280-520Zm120-120q17 0 28.5-11.5T440-680q0-17-11.5-28.5T400-720q-17 0-28.5 11.5T360-680q0 17 11.5 28.5T400-640Zm280 120q17 0 28.5-11.5T720-560q0-17-11.5-28.5T680-600q-17 0-28.5 11.5T640-560q0 17 11.5 28.5T680-520ZM480-400q33 0 56.5-23.5T560-480q0-13-4-25.5T544-528l54-136q7-16 .5-31.5T576-718q-15-7-30.5-.5T524-696l-54 136q-30 5-50 27.5T400-480q0 33 23.5 56.5T480-400Zm0 80Zm0-206Zm0 286Z" />
-            </svg>
-            Projects
-          </a>
+    
 
           <a class="btn btn-outline btn-sm gap-1" href="/work/" aria-label="Visit Work History Page">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" class="inline-block h-4 w-4">
@@ -237,10 +242,9 @@
           </a>
         </div>
 
-        <div class="space-y-2 text-base-content my-6">
-          <p class="flex items-center gap-1 text-lg">
-            Check out my
-            <a href="/blog/" class="link link-accent" aria-label="Visit Blog">Blog</a>
+        <div class="space-y-2 text-base-content my-6 mt-10">
+          <p class="flex items-center gap-1 text-base">
+            <b>“Your most unhappy customers are your greatest source of learning.” — Bill Gates </b>
           </p>
         </div>
       </div>
@@ -254,9 +258,9 @@
 			<div class="border-base-300 border-t pb-16 pt-10">
 				<div class="relative px-4 sm:px-8 lg:px-12">
 					<div class="mx-auto max-w-2xl lg:max-w-5xl">
-						<div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+						<div class="flex flex-col items-center justify-between gap-6">
 							<!-- Fun Interactive Elements -->
-							<div class="flex flex-col items-center gap-4 sm:items-start">
+							<div class="flex flex-col items-center gap-4 ">
 								<!-- Coffee, Love, Code Icons with Hover Effects -->
 								<div class="text-base-content group flex items-center gap-2">
 									<div class="tooltip tooltip-top" data-tip="Fueled by coffee">
@@ -305,10 +309,10 @@
 							</div>
 
 							<!-- Copyright and Links -->
-							<div class="flex flex-col items-center gap-4 sm:items-end">
+							<div class="flex flex-col items-center gap-4 ">
 								<!-- Copyright with fun twist -->
 								<p
-									class="text-base-content/70 hover:text-base-content text-sm transition-colors duration-300"
+									class="text-base-content/70 hover:text-base-content text-base transition-colors duration-300"
 								>
 									© <span id="current-year">2025</span> Robert James Gabriel
 
