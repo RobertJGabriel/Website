@@ -206,39 +206,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ============================================================
-   Dark Blog Section — Typographic, minimal, dark background
-   ============================================================ */
-
-.blog-dark-bg {
-	background-color: oklch(7% 0.005 260);
-}
-
-.blog-dark-title {
-	font-size: clamp(3rem, 8vw, 5.5rem);
-	line-height: 1.05;
-	letter-spacing: -0.04em;
-	font-weight: 700;
-	color: oklch(98% 0 0);
-}
-
-.blog-dark-text {
-	color: oklch(95% 0.005 85);
-}
-
-.blog-dark-subtitle {
-	color: oklch(75% 0.01 85);
-}
-
-.blog-dark-meta {
-	color: oklch(55% 0.01 85);
-}
-
-.blog-dark-border {
-	border-color: oklch(22% 0.01 260);
-}
-
-
-/* ============================================================
    Circular Rotating Logo
    ============================================================ */
 

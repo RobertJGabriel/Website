@@ -1,6 +1,6 @@
 ---
 hideHeader: false
-layout: templates/app.html
+layout: templates/base.html
 title: Apple iMac Pro Created with Pure CSS
 youtubeId: PfILiWebkuc
 cardTitle: Apple iMac Pro in CSS
@@ -30,7 +30,7 @@ url: /css/imac
           </svg>
         </div>
         <div class="imac-stand" aria-hidden="true"></div>
-        <p id="imac-description" class="visually-hidden">An illustration of an iMac Pro with a screen, camera, chin, and stand created entirely with CSS.</p>
+        <p id="imac-description" class="sr-only">An illustration of an iMac Pro with a screen, camera, chin, and stand created entirely with CSS.</p>
       </div>
     </div>
 
@@ -220,19 +220,6 @@ url: /css/imac
   height: 2px;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
   border-radius: 1px;
-}
-
-/* Accessibility helper */
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
 }
 
 /* Responsive improvements */

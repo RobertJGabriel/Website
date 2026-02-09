@@ -1,6 +1,6 @@
 ---
 hideHeader: false
-layout: templates/app.html
+layout: templates/base.html
 title: Google Chrome Dino Pixel Art in CSS
 youtubeId: PfILiWebkuc
 cardTitle: Google Chrome Dino Pixel Art in CSS
@@ -21,7 +21,7 @@ url: /css/chrome-dino
     <div class="flex justify-center mb-16">
       <div class="dino-container">
         <div class="dino-art" role="img" aria-labelledby="dino-description"></div>
-        <p id="dino-description" class="visually-hidden">A pixel art representation of the Chrome Dino game character created entirely with CSS.</p>
+        <p id="dino-description" class="sr-only">A pixel art representation of the Chrome Dino game character created entirely with CSS.</p>
       </div>
     </div>
 
@@ -121,18 +121,6 @@ url: /css/chrome-dino
   transform: translateZ(0) scale(1.02);
 }
 
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .dino-container {
@@ -151,36 +139,4 @@ url: /css/chrome-dino
 }
 
 
-.dino-art:hover {
-  transform: scale(1.05);
-}
-
-.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .dino-container {
-    width: 400px;
-    height: 400px;
-    transform: scale(0.8);
-  }
-}
-
-@media (max-width: 480px) {
-  .dino-container {
-    width: 320px;
-    height: 320px;
-    transform: scale(0.65);
-  }
-}
 </style>
