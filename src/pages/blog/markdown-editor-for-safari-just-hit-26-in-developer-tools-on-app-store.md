@@ -2,7 +2,7 @@
 hideHeader: false
 layout:  templates/blog.html
 title:  My Markdown Editor for Safari Just Hit 26 in Developer Tools on the App Store!
-description: Discover how my completely rebuilt Markdown Editor for Safari has climbed to '#26' in the Developer Tools category on the Apple App Store. Learn more about the journey and why this extension is a must-have for anyone working with Markdown.
+description: My Markdown Editor for Safari hit number 26 in the Developer Tools category on the App Store. Here's a quick update on the rebuild.
 keywords: Markdown, Safari, extension, Apple App Store, developer tools, browser extension, text editor, macOS
 url: blog/markdown-editor-for-safari-just-hit-26-in-developer-tools-on-app-store/
 tags: blog
@@ -10,7 +10,7 @@ blog_cat: Blog
 youtubeId: 
 dated: September 1 2024
 cardTitle: My Markdown Editor for Safari Just Hit 26 in Developer Tools on the App Store!
-blog_snip: Discover how my completely rebuilt Markdown Editor for Safari has climbed to '#26' in the Developer Tools category on the Apple App Store. Learn more about the journey and why this extension is a must-have for anyone working with Markdown.
+blog_snip: My Markdown Editor for Safari hit number 26 in the Developer Tools category on the App Store. Here's a quick update on the rebuild.
 cat: Developer Tools
 img: /assets/images/blog/markdown-trend.png
 ---

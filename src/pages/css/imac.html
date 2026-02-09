@@ -4,7 +4,7 @@ layout: templates/app.html
 title: Apple iMac Pro Created with Pure CSS
 youtubeId: PfILiWebkuc
 cardTitle: Apple iMac Pro in CSS
-description: Discover the Apple iMac Pro crafted entirely with pure CSS, Less, and Pug.js by award-winning software engineer Robert James Gabriel. This project showcases his expertise in web design and development.
+description: An iMac Pro built entirely with CSS. No images — just gradients, shadows, and transforms.
 keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel, award winning, php, experienced, Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer, golang, web design
 url: /css/imac
 ---
@@ -12,9 +12,9 @@ url: /css/imac
 <div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-4xl">
     <header class="mb-12 text-center">
-      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">Pure CSS iMac Pro</h1>
+      <h1 class="text-section">Pure CSS iMac Pro</h1>
       <p class="mt-6 text-xl text-base-content">
-        A pixel-perfect recreation of Apple's iconic iMac Pro using nothing but CSS. This showcase demonstrates advanced CSS techniques including 3D transforms, gradients, and responsive design – all while maintaining clean, semantic markup.
+        I wanted to see if I could build an iMac Pro using only CSS. No images at all — just gradients, box-shadows, 3D transforms, and way too much patience.
       </p>
     </header>
 
@@ -35,19 +35,19 @@ url: /css/imac
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-      <div class="stat bg-base-100 border border-base-300 rounded-lg text-center">
+      <div class="stat bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth text-center">
         <div class="stat-title">CSS Lines</div>
-        <div class="stat-value text-accent">150+</div>
+        <div class="stat-value text-primary">150+</div>
         <div class="stat-desc">Pure CSS, no images</div>
       </div>
-      
-      <div class="stat bg-base-100 border border-base-300 rounded-lg text-center">
+
+      <div class="stat bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth text-center">
         <div class="stat-title">3D Transforms</div>
         <div class="stat-value text-secondary">5</div>
         <div class="stat-desc">Advanced perspective effects</div>
       </div>
-      
-      <div class="stat bg-base-100 border border-base-300 rounded-lg text-center">
+
+      <div class="stat bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth text-center">
         <div class="stat-title">Accessibility</div>
         <div class="stat-value text-primary">100%</div>
         <div class="stat-desc">ARIA compliant design</div>
@@ -55,46 +55,41 @@ url: /css/imac
     </div>
 
     <div class="prose prose-lg max-w-none">
-      <h2 class="text-2xl font-bold text-base-content mb-6">Technical Implementation</h2>
-      
+      <h2 class="text-2xl font-bold text-base-content mb-6">How It's Built</h2>
+
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-        <div class="card bg-base-100 border border-base-300">
-          <div class="card-body">
-            <h3 class="card-title text-base-content">CSS Techniques Used</h3>
-            <ul class="text-base-content/80">
-              <li>3D CSS transforms for the stand perspective</li>
-              <li>Linear gradients for realistic metallic finishes</li>
-              <li>Box shadows for depth and dimension</li>
-              <li>Border radius for smooth, rounded corners</li>
-              <li>CSS perspective for 3D positioning</li>
-            </ul>
-          </div>
+        <div class="bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth">
+          <h3 class="text-xl font-semibold text-base-content mb-3">CSS Tricks Involved</h3>
+          <ul class="text-base-content/80 space-y-1.5 list-disc list-inside">
+            <li>3D transforms for the stand's perspective</li>
+            <li>Linear gradients for the metallic look</li>
+            <li>Box shadows for depth</li>
+            <li>Border radius for smooth corners</li>
+            <li>CSS perspective for 3D positioning</li>
+          </ul>
         </div>
 
-        <div class="card bg-base-100 border border-base-300">
-          <div class="card-body">
-            <h3 class="card-title text-base-content">Design Features</h3>
-            <ul class="text-base-content/80">
-              <li>Pixel-perfect proportions matching real iMac Pro</li>
-              <li>Authentic Apple logo as inline SVG</li>
-              <li>Responsive design that scales beautifully</li>
-              <li>Semantic HTML with proper ARIA labels</li>
-              <li>Screen-reader friendly descriptions</li>
-            </ul>
-          </div>
+        <div class="bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth">
+          <h3 class="text-xl font-semibold text-base-content mb-3">Details</h3>
+          <ul class="text-base-content/80 space-y-1.5 list-disc list-inside">
+            <li>Proportions matched to the real iMac Pro</li>
+            <li>Apple logo done as inline SVG</li>
+            <li>Responsive — works on all screen sizes</li>
+            <li>Semantic HTML with ARIA labels</li>
+            <li>Screen reader friendly</li>
+          </ul>
         </div>
       </div>
 
       <p class="text-base-content/80">
-        This project showcases how modern CSS can recreate complex physical objects with stunning accuracy. Every detail from the camera dot to the stand's perspective has been carefully crafted using only CSS properties, demonstrating the power and flexibility of modern web styling techniques.
+        Everything from the camera dot to the stand is pure CSS. It was a great exercise in seeing how far you can push modern CSS properties.
       </p>
     </div>
 
     <div class="mt-12 text-center">
       <p class="text-lg text-base-content/70">
-        Interested in the source code? 
-        <a href="https://github.com/RobertJGabriel" class="link link-accent" title="View source code">Check it out on GitHub</a> 
-        or explore more of my CSS experiments.
+        Want to see the source?
+        <a href="https://github.com/RobertJGabriel" class="text-primary hover:text-primary/80 transition-colors duration-200" title="View source code">It's on GitHub</a>.
       </p>
     </div>
   </div>

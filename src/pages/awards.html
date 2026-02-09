@@ -11,26 +11,29 @@ url: /awards
 
 <div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
-    <header class="mb-12">
-      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">Awards & Honors</h1>
-      <p class="mt-6 text-xl text-base-content">
-        I've been fortunate to receive several awards and honors throughout my journey. Below is a list of these recognitions that highlight the dedication and hard work I've put into my projects.
+
+    <!-- Header -->
+    <header class="mb-16">
+      <div class="accent-line w-full mb-10"></div>
+      <h1 class="text-section text-base-content">Awards</h1>
+      <p class="mt-5 text-lg text-base-content/70">
+        Things I've been recognised for along the way.
       </p>
     </header>
 
-    <div class="space-y-8">
+    <!-- Awards List -->
+    <div>
       {%- for article in awards.awards -%}
-      <div class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-md transition-shadow duration-200">
-        <div class="card-body p-6">
-          <h3 class="card-title text-xl font-bold text-base-content mb-3">
-            {{ article.title }}
-          </h3>
-          <p class="text-lg text-base-content/90 leading-relaxed">
-            {{ article.description }}
-          </p>
-        </div>
+      <div class="py-10 border-t border-base-300/50">
+        <h3 class="text-2xl sm:text-3xl font-bold text-base-content leading-snug mb-3">
+          {{ article.title }}
+        </h3>
+        <p class="text-base text-base-content/70 leading-relaxed max-w-xl">
+          {{ article.description }}
+        </p>
       </div>
       {%- endfor -%}
+      <div class="border-t border-base-300/50"></div>
     </div>
 
   </div>

@@ -190,13 +190,11 @@ This report should offer an insight into the way dyslexic users experience the w
 
 # Bibliography
 
-1. [K. O. Connor, "www.typographydeconstructed.com,"[Online].[Accessed 
-
-21 April 2016]](http://www.typographydeconstructed.com/ascender/)
+1. [K. O. Connor, "www.typographydeconstructed.com," \[Online\]. \[Accessed 21 April 2016\]](http://www.typographydeconstructed.com/ascender/)
 2. [L. R. & R. Baeza-Yates, "Good Fonts for Dyslexia," Web Research Group, Barcelona, Spain, 2013](#)
-3. [A. GONZALEZ, "FAQ | OpenDyslexic," 03 June 2006. [Online]. [Accessed 01 April 2016]](https://www.opendyslexic.org/contact)
-4. [A. GONZALEZ, "OpenDyslexic | About," 01 June 2006. [Online]. [Accessed 12 January 2016]](https://opendyslexic.org)
-5. [R. d. Leeuw, "Special Font For Dyslexia?," 5 December 2010. [Online]. [Accessed 13 January 2016]](https://www.ilo.gw.utwente.nl/)
-6. [D. Scotwest, "Website Accessibility For Dyslexiasw," 2010 April 2016. [Online]. [Accessed 2010 April 2016]](https://www.dyslexiasw.com/about/website-accessibility)
-7. [W3C, "Text Customization," 11 November 2012. [Online]](https://www.w3.org/WAI/RD/2012/text-customization/r11)
-8. [V. F. d. Santana, "https://pdfs.semanticscholar.org," University of Campinas , 23 June 2012. [Online] [Accessed 23 February 2016].](https://pdfs.semanticscholar.org/)
+3. [A. GONZALEZ, "FAQ | OpenDyslexic," 03 June 2006. \[Online\]. \[Accessed 01 April 2016\]](https://www.opendyslexic.org/contact)
+4. [A. GONZALEZ, "OpenDyslexic | About," 01 June 2006. \[Online\]. \[Accessed 12 January 2016\]](https://opendyslexic.org)
+5. [R. d. Leeuw, "Special Font For Dyslexia?," 5 December 2010. \[Online\]. \[Accessed 13 January 2016\]](https://www.ilo.gw.utwente.nl/)
+6. [D. Scotwest, "Website Accessibility For Dyslexiasw," 2010 April 2016. \[Online\]. \[Accessed 2010 April 2016\]](https://www.dyslexiasw.com/about/website-accessibility)
+7. [W3C, "Text Customization," 11 November 2012. \[Online\]](https://www.w3.org/WAI/RD/2012/text-customization/r11)
+8. [V. F. d. Santana, "pdfs.semanticscholar.org," University of Campinas, 23 June 2012. \[Online\] \[Accessed 23 February 2016\]](https://pdfs.semanticscholar.org/)

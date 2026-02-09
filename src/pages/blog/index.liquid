@@ -4,7 +4,7 @@ layout:  templates/base.html
 title: Robert James Gabriel - Software Engineer
 youtubeId: PfILiWebkuc
 cardTitle: Robert James' Blog
-description: Welcome to where my passion for technology, insights on accessibility, and startup adventures meet personal stories.
+description: Blog posts about tech, accessibility, and whatever else I'm thinking about.
 keywords: html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application, golang, helperbird, opendyslexic
 
 url:
@@ -12,69 +12,40 @@ url:
 
 <div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
-    <header class="mb-12">
-      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">
-        My Thoughts
-      </h1>
-      <p class="mt-6 text-xl text-base-content leading-relaxed">
-        Welcome to my world of tech, accessibility insights, and startup adventures! Here I share my journey through tech innovation, founding companies, and the lessons learned along the way. It's a mix of professional insights and personal stories, all driven by my passion for creating technology that makes a difference.
+
+    <!-- Header -->
+    <header class="mb-16">
+      <div class="accent-line w-full mb-10"></div>
+      <h1 class="text-section text-base-content">Writing</h1>
+      <p class="mt-5 text-lg text-base-content/70">
+        Thoughts, discoveries, and technical writeups.
       </p>
     </header>
 
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
+    <!-- Posts -->
+    <div>
       {%- for post in collections.blog reversed -%}
-      <article class="group">
-        <a
-          href="{{ post.url }}" 
-          title="{{ post.data.cardTitle }} - Learn more" 
-          aria-label="{{ post.data.cardTitle }} - Learn more"
-          class="block transition-all duration-300 ease-in-out group-hover:-translate-y-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent focus:-translate-y-2"
-        >
-          <div class="card bg-base-100 border border-base-300 shadow-sm transition-all duration-300 ease-in-out group-hover:shadow-xl group-hover:border-accent/30 h-full flex flex-col">
-            <figure class="px-6 pt-6">
-              <img
-                loading="lazy"
-                src="{{ post.data.img }}"
-                alt="{{ post.data.cardTitle }} featured image"
-                class="rounded-lg border border-base-300 bg-base-200 w-full h-48 object-cover"
-              />
-            </figure>
-            <div class="card-body px-6 pb-6 flex-1 flex flex-col">
-              <div class="flex items-center gap-2 mb-3">
-                <div class="badge badge-accent badge-outline text-xs">
-                  {{ post.data.dated }}
-                </div>
-              </div>
-              
-              <h2 class="card-title text-lg font-semibold text-base-content group-hover:text-accent transition-colors duration-300 mb-3">
-                {{ post.data.cardTitle }}
-              </h2>
-              
-              {% if post.data.blog_snip %}
-              <p class="text-sm text-base-content/80 leading-relaxed flex-1">
-                {{ post.data.blog_snip | truncate: 120 }}
-              </p>
-              {% endif %}
-              
-              <div class="mt-4 flex items-center justify-between">
-                <div class="text-xs text-accent font-medium group-hover:text-accent-focus transition-colors duration-300">
-                  Read more →
-                </div>
-                {% if post.data.tags %}
-                <div class="flex flex-wrap gap-1">
-                  {% for tag in post.data.tags | slice: 0, 2 %}
-                  <span class="badge badge-outline badge-xs">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-                {% endif %}
-              </div>
-            </div>
-          </div>
+      <article>
+        <a href="{{ post.url }}" class="block py-10 border-t border-base-300/50 group" title="{{ post.data.cardTitle }} - Read post" aria-label="{{ post.data.cardTitle }} - Read post">
+
+          <h2 class="text-2xl sm:text-3xl font-bold text-base-content leading-snug mb-3 group-hover:text-primary transition-colors duration-200">
+            {{ post.data.cardTitle }}
+          </h2>
+
+          {% if post.data.blog_snip %}
+          <p class="text-base text-base-content/70 leading-relaxed mb-4 max-w-xl">
+            {{ post.data.blog_snip }}
+          </p>
+          {% endif %}
+
+          <time datetime="{{ post.data.dated }}" class="text-sm text-base-content/50">
+            {{ post.data.dated }}
+          </time>
         </a>
       </article>
       {%- endfor -%}
+      <div class="border-t border-base-300/50"></div>
     </div>
 
-    
   </div>
 </div>

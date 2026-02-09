@@ -172,7 +172,7 @@
         "title": "Founder",
         "company": "Coffee & Fun",
         "start": "January 2023",
-        "description": "Coffee & Fun build software that's functional, fun, and accessible, making a real difference in the digital world.",
+        "description": "My company where I build apps and browser extensions. We focus on making software that's actually useful and accessible to everyone.",
         "technologies": ["JavaScript", "Node.js", "Vue.js", "Tailwind CSS", "PostgreSQL", "AWS"]
     },
     {
@@ -180,7 +180,7 @@
         "company": "Helperbird.com",
         "start": "January 2015",
         "end": "January 2025",
-        "description": "Solo Founded Helperbird as a side project into a thriving app for Chrome, Edge, Firefox, Safari, Google Docs & Google Slides. Helping 1,000,000 people to make the web more accessible for everyone.",
+        "description": "Started Helperbird as a side project and grew it into an accessibility app used by over a million people across Chrome, Edge, Firefox, Safari, and Google Docs.",
         "technologies": ["JavaScript", "Chrome APIs", "Firefox WebExtensions", "Vue.js", "Node.js", "MongoDB", "Stripe API", "Google Analytics"]
     },
     {
@@ -188,7 +188,7 @@
         "company": "robertgabriel.ninja",
         "start": "July 2015",
         "end": "June 2018",
-        "description": "Led various consulting projects for large-scale developers, specializing in JavaScript, Node.js, Golang, PHP, and other front-end and back-end technologies. Provided innovative solutions to complex problems and delivered high-quality results.",
+        "description": "Freelance consulting work, helping companies with JavaScript, Node.js, Golang, and PHP projects. A mix of frontend and backend work.",
         "technologies": ["JavaScript", "Node.js", "Golang", "PHP", "React", "Angular", "MySQL", "PostgreSQL"]
     },
     {
@@ -196,7 +196,7 @@
         "company": "Teamwork.com",
         "start": "January 2017",
         "end": "May 2018",
-        "description": "Led a team of six developers in re-architecting the frontend and backend of Teamwork.com's websites. Developed in-depth analytic tools to personalize the site for new and existing users.",
+        "description": "Led a team of six devs rebuilding the frontend and backend of the Teamwork.com websites. Also built analytics tools to personalise the experience for new and returning users.",
         "technologies": ["Gulp", "Webpack", "CoffeeScript", "Require.js", "Pug", "Travis", "Jest", "Node.js", "SASS", "Babel", "Kubernetes", "Golang", "ColdFusion", "AWS"]
     },
     {
@@ -204,7 +204,7 @@
         "company": "Teamwork.com",
         "start": "May 2016",
         "end": "January 2017",
-        "description": "Developed a suite of importers for Teamwork.com Projects. Enhanced the sign-up process by adding Google sign-up and login support, and implemented new features and UX changes.",
+        "description": "Built a bunch of data importers for Teamwork Projects. Added Google sign-up and login support and worked on new features and UX improvements.",
         "technologies": ["Knockout.js", "Require.js", "CoffeeScript", "ColdFusion", "Golang", "MySQL", "PostgreSQL", "AWS"]
     },
     {
@@ -212,7 +212,7 @@
         "company": "Teamwork.com",
         "start": "September 2015",
         "end": "May 2016",
-        "description": "Continued development work on Teamwork.com Projects while studying for a Computer Science degree. Enhanced the sign-up process, developed new features, and improved UX.",
+        "description": "Worked part-time on the Teamwork.com websites while finishing my CS degree. Mostly frontend work — sign-up flows, new features, and UX improvements.",
         "technologies": ["ColdFusion", "Golang", "CoffeeScript", "JavaScript", "CSS", "SEO"]
     },
     {
@@ -220,7 +220,7 @@
         "company": "Teamwork.com",
         "start": "January 2015",
         "end": "September 2015",
-        "description": "Developed new features and pages for Teamwork.com and its CMS. Improved the sign-up process, added Google sign-up support, and implemented UX changes.",
+        "description": "My first proper job in tech. Built new pages and features for the Teamwork.com marketing site and CMS. This is where I really learned the ropes.",
         "technologies": ["ColdFusion", "Golang", "JavaScript", "HTML5", "CSS3", "jQuery"]
     },
     {
@@ -228,7 +228,7 @@
         "company": "Learn Code",
         "start": "September 2014",
         "end": "December 2014",
-        "description": "Designed custom encryption algorithms for password resets in the enterprise market. Maintained and developed new features, and reviewed code for quality assurance.",
+        "description": "Built custom encryption for password resets and worked on new features. Also did a lot of code reviews.",
         "technologies": ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "Encryption"]
     },
     {
@@ -236,7 +236,7 @@
         "company": "Autism Start",
         "start": "October 2013",
         "end": "October 2014",
-        "description": "Designed and developed a social website for Autism Start, providing access to original content, a social network community, and tools for users.",
+        "description": "Built a social website for Autism Start from scratch — a community platform with original content, social features, and tools for their users.",
         "technologies": ["PHP", "MySQL", "JavaScript", "jQuery", "HTML5", "CSS3", "Social APIs"]
     },
     {
@@ -244,7 +244,7 @@
         "company": "EMC/DELL",
         "start": "July 2013",
         "end": "September 2013",
-        "description": "Designed and developed an interactive internal website for EMC employees. Enabled account creation, employee search, and mentor requests.",
+        "description": "Built an internal website for EMC employees with account creation, search, and a mentor matching feature.",
         "technologies": ["PHP", "HTML5", "CSS3", "Microsoft SQL Server", "JavaScript"]
     },
     {
@@ -252,7 +252,7 @@
         "company": "EMC/DELL",
         "start": "July 2012",
         "end": "September 2012",
-        "description": "Gained experience in setting up networks and servers. Redesigned the Visitors Portal Website to enhance information and interactivity through social sharing and videos.",
+        "description": "Learned a lot about networking and servers. Redesigned the Visitors Portal website and added social sharing and video features.",
         "technologies": ["HTML5", "CSS3", "JavaScript", "PHP", "Networking", "Server Administration"]
     },
     {
@@ -260,7 +260,7 @@
         "company": "Microsoft",
         "start": "February 2011",
         "end": "March 2011",
-        "description": "Participated in the National Young Scientist competition, leading to an invitation to the Microsoft Internship Workshop. Focused on developing critical links in the innovation process.",
+        "description": "Got invited to the Microsoft workshop after the National Young Scientist competition. Short but I learned a ton about how things work at a company like Microsoft.",
         "technologies": ["C#", ".NET", "HTML", "CSS", "JavaScript"]
     },
     {
@@ -268,7 +268,7 @@
         "company": "Horner Automation",
         "start": "July 2010",
         "end": "September 2011",
-        "description": "Built circuit boards and coded pre-market test projects, writing C++ code for chips. Gained valuable experience in R&D, contributing to innovative solutions.",
+        "description": "Built circuit boards and wrote C++ code for chips. My first taste of hardware and R&D — very different from web dev but I loved it.",
         "technologies": ["C++", "Embedded Systems", "Circuit Design", "Hardware"]
     }
 ]

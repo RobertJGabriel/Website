@@ -4,178 +4,148 @@ layout:  templates/base.html
 title: Software Engineer & Founder
 youtubeId: PfILiWebkuc
 cardTitle: Robert James Gabriel - Software Engineer & Founder
-description: Robert James Gabriel is a successful founder and seasoned software engineer, specializing in high-performance solutions for mobile and web platforms. His expertise lies in leading projects and engineering innovative applications that set new standards in the tech industry.
+description: Irish software engineer and founder of Helperbird. I build tools that make the web more accessible, one line of code at a time.
 keywords: html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application, golang, helperbird
 url:
 ---
 
-<div class="px-4 sm:px-8 mt-16 sm:mt-32">
-  <div class="mx-auto max-w-2xl lg:max-w-3xl">
-    <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-      
-      <!-- Image Section -->
-<div class="lg:pl-20">
-  <div class="max-w-xs px-2.5 lg:max-w-none">
-    <div class="relative aspect-square w-[340px] h-[340px] rotate-3 transition-transform duration-300 hover:rotate-0 group">
-      <!-- Default image -->
-      <img 
-        src="/assets/images/robert-james.png" 
-        alt="Robert James Gabriel, with a beard and glasses, looking at framed artwork on the wall in a gallery."
-        class="absolute inset-0 rounded-2xl bg-base-200 object-cover transition-opacity duration-300 group-hover:opacity-0"
-        width="340"
-        height="340"
-        loading="eager"
-        decoding="async"
-      />
-      <!-- Hover image -->
-      <img 
-        src="/assets/images/robert-james-muppet.jpg" 
-        alt="Robert James Gabriel, with a beard and glasses, looking at framed artwork on the wall in a gallery."
-        class="absolute inset-0 rounded-2xl bg-base-200 object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100" 
-        width="340" 
-        height="340"
-        loading="lazy" 
-        decoding="async"
-      />
-    </div>
-  </div>
-</div>
+<!-- Apple HIG: Content-first layout with generous whitespace and clear hierarchy -->
+<div class=" min-h-screen">
+  <div class="px-4 sm:px-8 pt-16 sm:pt-24 pb-16">
+    <div class="mx-auto max-w-2xl lg:max-w-3xl">
 
-      <!-- Text Section -->
-      <div class="lg:order-first lg:row-span-2">
-        <h1 class="text-4xl font-bold text-base-content mb-2">Robert James Gabriel</h1>
-        <p class="text-2xl font-semibold text-base-content">
-          Coffee, Accessibility & Code
-        </p>
+      <!-- Two-column hero: text + image -->
+      <div class="flex flex-col-reverse lg:flex-row lg:items-start lg:gap-16">
 
-        <div class="space-y-2 text-base-content my-6">
-          <p class="flex items-center gap-1 text-lg">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 -960 960 960" 
-              fill="currentColor" 
-              aria-hidden="true"
-              class="inline-block h-4 w-auto"
-            >
-              <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
-            </svg>
-            <span>Cork City</span>
+        <!-- Text Section — Apple HIG: clear hierarchy, generous spacing -->
+        <div class="flex-1 mt-10 lg:mt-0">
+
+          <!-- Status badge — warm Irish green -->
+          <div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-8">
+            <span class="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
+            Building at Coffee & Fun
+          </div>
+
+          <!-- Name — hero typography using clamp() -->
+          <h1 class="text-hero font-bold text-base-content">
+            Robert James Gabriel
+          </h1>
+
+          <!-- Tagline — warm secondary tone -->
+          <p class="mt-4 text-xl sm:text-2xl font-medium text-base-content/70">
+            Coffee, Accessibility &amp; Code
           </p>
 
-          <p class="flex items-center gap-1 text-lg">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 -960 960 960" 
-              fill="currentColor" 
-              aria-hidden="true"
-              class="inline-block h-4 w-auto"
-            >
-              <path d="M160-80q-33 0-56.5-23.5T80-160v-440q0-33 23.5-56.5T160-680h200v-120q0-33 23.5-56.5T440-880h80q33 0 56.5 23.5T600-800v120h200q33 0 56.5 23.5T880-600v440q0 33-23.5 56.5T800-80H160Zm0-80h640v-440H600q0 33-23.5 56.5T520-520h-80q-33 0-56.5-23.5T360-600H160v440Zm80-80h240v-18q0-17-9.5-31.5T444-312q-20-9-40.5-13.5T360-330q-23 0-43.5 4.5T276-312q-17 8-26.5 22.5T240-258v18Zm320-60h160v-60H560v60Zm-200-60q25 0 42.5-17.5T420-420q0-25-17.5-42.5T360-480q-25 0-42.5 17.5T300-420q0 25 17.5 42.5T360-360Zm200-60h160v-60H560v60ZM440-600h80v-200h-80v200Zm440 220Z" />
+          <!-- Irish tricolour accent line -->
+          <div class="accent-line w-24 mt-6" aria-hidden="true"></div>
+
+          <!-- Location + Job — clean metadata -->
+          <div class="mt-8 flex flex-col gap-2.5">
+            <p class="flex items-center gap-2.5 text-base text-base-content/60">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" class="h-4 w-4 text-primary/60">
+                <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/>
               </svg>
-              <span>Engineer @ Helperbird</span>
+              Cork City, Ireland
+            </p>
+            <p class="flex items-center gap-2.5 text-base text-base-content/60">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" class="h-4 w-4 text-primary/60">
+                <path d="M160-80q-33 0-56.5-23.5T80-160v-440q0-33 23.5-56.5T160-680h200v-120q0-33 23.5-56.5T440-880h80q33 0 56.5 23.5T600-800v120h200q33 0 56.5 23.5T880-600v440q0 33-23.5 56.5T800-80H160Zm0-80h640v-440H600q0 33-23.5 56.5T520-520h-80q-33 0-56.5-23.5T360-600H160v440Zm80-80h240v-18q0-17-9.5-31.5T444-312q-20-9-40.5-13.5T360-330q-23 0-43.5 4.5T276-312q-17 8-26.5 22.5T240-258v18Zm320-60h160v-60H560v60Zm-200-60q25 0 42.5-17.5T420-420q0-25-17.5-42.5T360-480q-25 0-42.5 17.5T300-420q0 25 17.5 42.5T360-360Zm200-60h160v-60H560v60ZM440-600h80v-200h-80v200Zm40 220Z"/>
+              </svg>
+              Engineer @ Helperbird
             </p>
           </div>
-  
-          <div class="my-6 flex flex-wrap gap-4">
-            <a class="btn btn-outline btn-sm gap-1" href="https://twitter.com/robertJGabriel/" target="_blank" aria-label="Visit Twitter Profile">
-              <svg viewBox="0 0 20 20" aria-hidden="true" class="h-4 w-4" stroke="none" fill="currentColor">
+
+          <!-- Social links — Apple HIG: subtle, icon-focused -->
+          <div class="mt-8 flex flex-wrap gap-2">
+            <a class="inline-flex items-center justify-center w-10 h-10 rounded-full text-base-content/50 hover:text-primary hover:bg-primary/5 transition-all duration-200" href="https://twitter.com/robertJGabriel/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" fill="currentColor">
                 <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0 0 20 3.92a8.19 8.19 0 0 1-2.357.646 4.118 4.118 0 0 0 1.804-2.27 8.224 8.224 0 0 1-2.605.996 4.107 4.107 0 0 0-6.993 3.743 11.65 11.65 0 0 1-8.457-4.287 4.106 4.106 0 0 0 1.27 5.477A4.073 4.073 0 0 1 .8 7.713v.052a4.105 4.105 0 0 0 3.292 4.022 4.095 4.095 0 0 1-1.853.07 4.108 4.108 0 0 0 3.834 2.85A8.233 8.233 0 0 1 0 16.407a11.615 11.615 0 0 0 6.29 1.84"></path>
               </svg>
-              Twitter
             </a>
-  
-            <a class="btn btn-outline btn-sm gap-1" href="https://www.instagram.com/robertjgabriel/"  target="_blank"  aria-label="Visit Instagram Profile">
-              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5" fill="currentColor" stroke="none">
+            <a class="inline-flex items-center justify-center w-10 h-10 rounded-full text-base-content/50 hover:text-primary hover:bg-primary/5 transition-all duration-200" href="https://www.instagram.com/robertjgabriel/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5" fill="currentColor">
                 <path d="M12 3c-2.444 0-2.75.01-3.71.054-.959.044-1.613.196-2.185.418A4.412 4.412 0 0 0 4.51 4.511c-.5.5-.809 1.002-1.039 1.594-.222.572-.374 1.226-.418 2.184C3.01 9.25 3 9.556 3 12s.01 2.75.054 3.71c.044.959.196 1.613.418 2.185.23.592.538 1.094 1.039 1.595.5.5 1.002.808 1.594 1.038.572.222 1.226.374 2.184.418C9.25 20.99 9.556 21 12 21s2.75-.01 3.71-.054c.959-.044 1.613-.196 2.185-.419a4.412 4.412 0 0 0 1.595-1.038c.5-.5.808-1.002 1.038-1.594.222-.572.374-1.226.418-2.184.044-.96.054-1.267.054-3.711s-.01-2.75-.054-3.71c-.044-.959-.196-1.613-.419-2.185A4.412 4.412 0 0 0 19.49 4.51c-.5-.5-1.002-.809-1.594-1.039-.572-.222-1.226-.374-2.184-.418C14.75 3.01 14.444 3 12 3Zm0 1.622c2.403 0 2.688.009 3.637.052.877.04 1.354.187 1.67.31.421.163.72.358 1.036.673.315.315.51.615.673 1.035.123.317.27.794.31 1.671.043.95.052 1.234.052 3.637s-.009 2.688-.052 3.637c-.04.877-.187 1.354-.31 1.67-.163.421-.358.72-.673 1.036a2.79 2.79 0 0 1-1.035.673c-.317.123-.794.27-1.671.31-.95.043-1.234.052-3.637.052s-2.688-.009-3.637-.052c-.877-.04-1.354-.187-1.67-.31a2.789 2.789 0 0 1-1.036-.673 2.79 2.79 0 0 1-.673-1.035c-.123-.317-.27-.794-.31-1.671-.043-.95-.052-1.234-.052-3.637s.009-2.688.052-3.637c.04-.877.187-1.354.31-1.67.163-.421.358-.72.673-1.036.315-.315.615-.51 1.035-.673.317-.123.794-.27 1.671-.31.95-.043 1.234-.052 3.637-.052Z"></path>
                 <path d="M12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0-7.622a4.622 4.622 0 1 0 0 9.244 4.622 4.622 0 0 0 0-9.244Zm5.884-.182a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0Z"></path>
               </svg>
-              Instagram
             </a>
-  
-            <a class="btn btn-outline btn-sm gap-1" href="https://github.com/RobertJGabriel"   target="_blank" aria-label="Visit GitHub Profile">
-              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5" fill="currentColor" stroke="none">
+            <a class="inline-flex items-center justify-center w-10 h-10 rounded-full text-base-content/50 hover:text-primary hover:bg-primary/5 transition-all duration-200" href="https://github.com/RobertJGabriel" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5" fill="currentColor">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"></path>
               </svg>
-              GitHub
             </a>
-  
-            <a class="btn btn-outline btn-sm gap-1" href="https://www.forbes.com/profile/robert-james-gabriel/?sh=7b37009b232c"  target="_blank"  aria-label="Visit Forbes Profile">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 -960 960 960" stroke="none">
+            <a class="inline-flex items-center justify-center w-10 h-10 rounded-full text-base-content/50 hover:text-secondary hover:bg-secondary/5 transition-all duration-200" href="https://www.forbes.com/profile/robert-james-gabriel/?sh=7b37009b232c" target="_blank" rel="noopener noreferrer" aria-label="Forbes 30 Under 30">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 -960 960 960">
                 <path d="M240-40v-329L110-580l185-300h370l185 300-130 211v329l-240-80-240 80Zm80-111 160-53 160 53v-129H320v129Zm20-649L204-580l136 220h280l136-220-136-220H340Zm98 383L296-558l57-57 85 85 169-170 57 56-226 227ZM320-280h320-320Z"></path>
               </svg>
-              Forbes
             </a>
-  
-            <a class="btn btn-outline btn-sm gap-1" href="https://www.linkedin.com/in/robertjamesgabriel/?originalSubdomain=ie" target="_blank"  aria-label="Visit LinkedIn Profile">
-              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5" fill="currentColor" stroke="none">
-                <path d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 01-1.548-1.549 1.548 1.548 0 111.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z"></path>
+            <a class="inline-flex items-center justify-center w-10 h-10 rounded-full text-base-content/50 hover:text-primary hover:bg-primary/5 transition-all duration-200" href="https://www.linkedin.com/in/robertjamesgabriel/?originalSubdomain=ie" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5" fill="currentColor">
+                <path d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.85 3.37-1.85 3.601 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 01-1.548-1.549 1.548 1.548 0 111.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
               </svg>
-              LinkedIn
             </a>
-  
-          
           </div>
 
-        <div class="my-6 flex flex-wrap gap-4 mt-8">
+          <!-- Page navigation — Apple HIG: clean pill buttons -->
+          <div class="mt-10 flex flex-wrap gap-2">
+            <a class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-base-300 text-base-content/70 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-200" href="/about/">
+              About
+            </a>
+            <a class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-base-300 text-base-content/70 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-200" href="/blog/">
+              Blog
+            </a>
+            <a class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-base-300 text-base-content/70 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-200" href="/awards/">
+              Awards
+            </a>
+            <a class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-base-300 text-base-content/70 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-200" href="/work/">
+              Work
+            </a>
+            <a class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-base-300 text-base-content/70 hover:text-secondary hover:border-secondary/30 hover:bg-secondary/5 transition-all duration-200" href="/websites/">
+              Websites
+            </a>
+            <a class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-base-300 text-base-content/70 hover:text-base-content hover:border-base-content/30 hover:bg-base-content/5 transition-all duration-200" href="/css/imac/">
+              iMac
+            </a>
+            <a class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-base-300 text-base-content/70 hover:text-base-content hover:border-base-content/30 hover:bg-base-content/5 transition-all duration-200" href="/css/chrome-dino/">
+              Chrome Dino
+            </a>
+            <a class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-full border border-base-300 text-base-content/70 hover:text-base-content hover:border-base-content/30 hover:bg-base-content/5 transition-all duration-200" href="/404.html">
+              Game
+            </a>
+          </div>
+
       
-       <a class="btn btn-outline btn-sm gap-1" href="/about/" aria-label="Visit About Page">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="h-4 w-4" stroke="none" fill="currentColor">
-              <path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h560v80h-80v80q0 17-11.5 28.5T680-680H360q-17 0-28.5-11.5T320-720v-80h-80v640h162q-38-27-60-68.5T320-320v-200h400v200q0 50-22 91.5T638-160h162v80H240Zm280-120q50 0 85-35t35-85v-120H400v120q0 50 35 85t85 35Zm0-360q17 0 28.5-11.5T560-600q0-17-11.5-28.5T520-640q-17 0-28.5 11.5T480-600q0 17 11.5 28.5T520-560Zm0 120Z" />
-            </svg>
-            About
-          </a>
-
-              <a class="btn btn-outline btn-sm gap-1" href="/blog/" aria-label="Visit Blog Page">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 " viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
-              <path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/>
-            </svg>
-            Blog
-          </a>
-          <a class="btn btn-outline btn-sm gap-1" href="/awards/" aria-label="Visit Awards Page">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="h-4 w-4" stroke="none" fill="currentColor">
-              <path d="M480-160q75 0 127.5-52.5T660-340q0-75-52.5-127.5T480-520q-75 0-127.5 52.5T300-340q0 75 52.5 127.5T480-160ZM363-572q20-11 42.5-17.5T451-598L350-800H250l113 228Zm234 0 114-228H610l-85 170 19 38q14 4 27 8.5t26 11.5ZM256-208q-17-29-26.5-62.5T220-340q0-36 9.5-69.5T256-472q-42 14-69 49.5T160-340q0 47 27 82.5t69 49.5Zm448 0q42-14 69-49.5t27-82.5q0-47-27-82.5T704-472q17 29 26.5 62.5T740-340q0 36-9.5 69.5T704-208ZM480-80q-40 0-76.5-11.5T336-123q-9 2-18 2.5t-19 .5q-91 0-155-64T80-339q0-87 58-149t143-69L120-880h280l80 160 80-160h280L680-559q85 8 142.5 70T880-340q0 92-64 156t-156 64q-9 0-18.5-.5T623-123q-31 20-67 31.5T480-80Zm0-260ZM363-572 250-800l113 228Zm234 0 114-228-114 228ZM406-230l28-91-74-53h91l29-96 29 96h91l-74 53 28 91-74-56-74 56Z" />
-            </svg>
-            Awards
-          </a>
-
-   
-
-    
-
-          <a class="btn btn-outline btn-sm gap-1" href="/work/" aria-label="Visit Work History Page">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" class="inline-block h-4 w-4">
-              <path d="M160-80q-33 0-56.5-23.5T80-160v-440q0-33 23.5-56.5T160-680h200v-120q0-33 23.5-56.5T440-880h80q33 0 56.5 23.5T600-800v120h200q33 0 56.5 23.5T880-600v440q0 33-23.5 56.5T800-80H160Zm0-80h640v-440H600q0 33-23.5 56.5T520-520h-80q-33 0-56.5-23.5T360-600H160v440Zm80-80h240v-18q0-17-9.5-31.5T444-312q-20-9-40.5-13.5T360-330q-23 0-43.5 4.5T276-312q-17 8-26.5 22.5T240-258v18Zm320-60h160v-60H560v60Zm-200-60q25 0 42.5-17.5T420-420q0-25-17.5-42.5T360-480q-25 0-42.5 17.5T300-420q0 25 17.5 42.5T360-360Zm200-60h160v-60H560v60ZM440-600h80v-200h-80v200Zm40 220Z" />
-            </svg>
-            Work
-          </a>
-
-          <a class="btn btn-outline btn-sm gap-1" href="/css/imac/" aria-label="Visit iMac CSS Page">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true" class="h-4 w-4" stroke="none" fill="currentColor">
-              <path d="M40-120v-80h880v80H40Zm120-120q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v440q0 33-23.5 56.5T800-240H160Zm0-80h640v-440H160v440Zm0 0v-440 440Z" />
-            </svg>
-            iMac
-          </a>
-
-          <a class="btn btn-outline btn-sm gap-1" href="/css/chrome-dino/" aria-label="Visit Chrome Dino CSS Page">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true" class="h-4 w-4" stroke="none" fill="currentColor">
-              <path d="M200-400q0 52 21 98.5t60 81.5q-1-5-1-9v-9q0-32 12-60t35-51l113-111 113 111q23 23 35 51t12 60v9q0 4-1 9 39-35 60-81.5t21-98.5q0-50-18.5-94.5T608-574q-20 13-42 19.5t-45 6.5q-62 0-107.5-41T361-690q-39 33-69 68.5t-50.5 72Q221-513 210.5-475T200-400Zm240 52-57 56q-11 11-17 25t-6 29q0 32 23.5 55t56.5 23q33 0 56.5-23t23.5-55q0-16-6-29.5T497-292l-57-56Zm0-492v132q0 34 23.5 57t57.5 23q18 0 33.5-7.5T582-658l18-22q74 42 117 117t43 163q0 134-93 227T440-80q-134 0-227-93t-93-227q0-129 86.5-245T440-840Zm400 320q-17 0-28.5-11.5T800-560q0-17 11.5-28.5T840-600q17 0 28.5 11.5T880-560q0 17-11.5 28.5T840-520Zm-40-120v-200h80v200h-80Z" />
-            </svg>
-            Chrome Dino
-          </a>
-
-          <a class="btn btn-outline btn-sm gap-1" href="/404.html" aria-label="A Fun collection game.">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true" class="h-4 w-4" stroke="none" fill="currentColor">
-              <path d="M182-200q-51 0-79-35.5T82-322l42-300q9-60 53.5-99T282-760h396q60 0 104.5 39t53.5 99l42 300q7 51-21 86.5T778-200q-21 0-39-7.5T706-230l-90-90H344l-90 90q-15 15-33 22.5t-39 7.5Zm16-86 114-114h336l114 114q2 2 16 6 11 0 17.5-6.5T800-304l-44-308q-4-29-26-48.5T678-680H282q-30 0-52 19.5T204-612l-44 308q-2 11 4.5 17.5T182-280q2 0 16-6Zm482-154q17 0 28.5-11.5T720-480q0-17-11.5-28.5T680-520q-17 0-28.5 11.5T640-480q0 17 11.5 28.5T680-440Zm-80-120q17 0 28.5-11.5T640-600q0-17-11.5-28.5T600-640q-17 0-28.5 11.5T560-600q0 17 11.5 28.5T600-560ZM310-440h60v-70h70v-60h-70v-70h-60v70h-70v60h70v70Zm170-40Z"/>
-            </svg>
-            Game
-          </a>
         </div>
 
-        <div class="space-y-2 text-base-content my-6 mt-10">
-          <p class="flex items-center gap-1 text-base">
-            <b>“Your most unhappy customers are your greatest source of learning.” — Bill Gates </b>
-          </p>
+        <!-- Image Section — Apple HIG: depth through layered shadows -->
+        <div class="flex-shrink-0 flex justify-center lg:justify-end">
+          <div class="relative group">
+            <!-- Soft glow background -->
+            <div class="absolute -inset-2 rounded-3xl bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10 opacity-60 blur-xl group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true"></div>
+
+            <!-- Image container -->
+            <div class="relative aspect-square w-64 sm:w-72 lg:w-80 overflow-hidden rounded-2xl img-glow">
+              <img
+                src="/assets/images/robert-james.png"
+                alt="Robert James Gabriel, with a beard and glasses, looking at framed artwork on the wall in a gallery."
+                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+                width="320"
+                height="320"
+                loading="eager"
+                decoding="async"
+              />
+              <img
+                src="/assets/images/robert-james-muppet.jpg"
+                alt="Robert James Gabriel as a fun Muppet-style illustration."
+                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                width="320"
+                height="320"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </div>

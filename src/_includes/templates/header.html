@@ -1,58 +1,55 @@
-<header class="px-4 sm:px-8 py-8">
-  <div class="mx-auto max-w-2xl lg:max-w-5xl">
-    <!-- Navigation -->
-    <nav class="flex justify-center" aria-label="Main Navigation">
-      <ul class="menu menu-horizontal gap-4 flex-wrap justify-center" role="menubar">
-        <li role="none">
+<!-- Apple HIG Navigation — Clean, minimal, content-deferred -->
+<header class="sticky top-0 z-40 backdrop-blur-lg bg-base-100/80 border-b border-base-300/50">
+  <div class="mx-auto max-w-2xl lg:max-w-3xl px-4 sm:px-8">
+    <nav class="flex items-center justify-between h-16" aria-label="Main Navigation">
+
+      <!-- Circular text logo — inspired by stamp/seal design -->
+      <a href="/" class="group relative flex items-center justify-center" aria-label="Robert James Gabriel - Home">
+        <svg class="w-11 h-11 logo-circle text-base-content group-hover:text-primary transition-colors duration-300" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <path id="circle-top" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0" fill="none"/>
+            <path id="circle-bottom" d="M 50,50 m 38,0 a 38,38 0 1,1 -76,0" fill="none"/>
+          </defs>
+          <text fill="currentColor" style="font-size: 10.5px; font-weight: 700; letter-spacing: 4.5px; font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;">
+            <textPath href="#circle-top" startOffset="50%" text-anchor="middle">ROBERT</textPath>
+          </text>
+          <text fill="currentColor" style="font-size: 10.5px; font-weight: 700; letter-spacing: 4.5px; font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;">
+            <textPath href="#circle-bottom" startOffset="50%" text-anchor="middle">JAMES GABRIEL</textPath>
+          </text>
+        </svg>
+      </a>
+
+      <!-- Navigation links — Apple HIG: simple, consistent, minimum 44px targets -->
+      <ul class="flex items-center gap-1 sm:gap-2" role="list">
+        <li>
           <a
-            class="btn btn-outline gap-2 hover:scale-105 transition-all duration-200 group"
-            href="/"
-            role="menuitem"
-            aria-label="Home"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:scale-110 transition-transform duration-200" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
-              <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
-            </svg>
-            Home
-          </a>
-        </li>
-        <li role="none">
-          <a
-            class="btn btn-outline gap-2 hover:scale-105 transition-all duration-200 group"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-base-content/70 hover:text-primary rounded-lg hover:bg-primary/5 transition-all duration-200 touch-target"
             href="/about/"
-            role="menuitem"
-            aria-label="About"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:scale-110 transition-transform duration-200" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
-              <path d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h560v80h-80v80q0 17-11.5 28.5T680-680H360q-17 0-28.5-11.5T320-720v-80h-80v640h162q-38-27-60-68.5T320-320v-200h400v200q0 50-22 91.5T638-160h162v80H240Zm280-120q50 0 85-35t35-85v-120H400v120q0 50 35 85t85 35Zm0-360q17 0 28.5-11.5T560-600q0-17-11.5-28.5T520-640q-17 0-28.5 11.5T480-600q0 17 11.5 28.5T520-560Zm0 120Z"/>
-            </svg>
             About
           </a>
         </li>
-        <li role="none">
+        <li>
           <a
-            class="btn btn-outline gap-2 hover:scale-105 transition-all duration-200 group"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-base-content/70 hover:text-primary rounded-lg hover:bg-primary/5 transition-all duration-200 touch-target"
             href="/blog/"
-            role="menuitem"
-            aria-label="Blog"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:scale-110 transition-transform duration-200" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true">
-              <path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/>
-            </svg>
             Blog
           </a>
         </li>
-        
-        <li role="none">
+        <li>
           <a
-            class="btn btn-outline gap-2 hover:scale-105 transition-all duration-200 group"
-            href="/awards/"
-            role="menuitem"
-            aria-label="Awards"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-base-content/70 hover:text-primary rounded-lg hover:bg-primary/5 transition-all duration-200 touch-target"
+            href="/work/"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="h-4 w-4 group-hover:scale-110 transition-transform duration-200" stroke="none" fill="currentColor" aria-hidden="true">
-              <path d="M480-160q75 0 127.5-52.5T660-340q0-75-52.5-127.5T480-520q-75 0-127.5 52.5T300-340q0 75 52.5 127.5T480-160ZM363-572q20-11 42.5-17.5T451-598L350-800H250l113 228Zm234 0 114-228H610l-85 170 19 38q14 4 27 8.5t26 11.5ZM256-208q-17-29-26.5-62.5T220-340q0-36 9.5-69.5T256-472q-42 14-69 49.5T160-340q0 47 27 82.5t69 49.5Zm448 0q42-14 69-49.5t27-82.5q0-47-27-82.5T704-472q17 29 26.5 62.5T740-340q0 36-9.5 69.5T704-208ZM480-80q-40 0-76.5-11.5T336-123q-9 2-18 2.5t-19 .5q-91 0-155-64T80-339q0-87 58-149t143-69L120-880h280l80 160 80-160h280L680-559q85 8 142.5 70T880-340q0 92-64 156t-156 64q-9 0-18.5-.5T623-123q-31 20-67 31.5T480-80Zm0-260ZM363-572 250-800l113 228Zm234 0 114-228-114 228ZM406-230l28-91-74-53h91l29-96 29 96h91l-74 53 28 91-74-56-74 56Z"/>
-            </svg>
+            Work
+          </a>
+        </li>
+        <li>
+          <a
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-base-content/70 hover:text-primary rounded-lg hover:bg-primary/5 transition-all duration-200 touch-target"
+            href="/awards/"
+          >
             Awards
           </a>
         </li>

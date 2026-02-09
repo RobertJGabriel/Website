@@ -4,7 +4,7 @@ layout: templates/app.html
 title: Google Chrome Dino Pixel Art in CSS
 youtubeId: PfILiWebkuc
 cardTitle: Google Chrome Dino Pixel Art in CSS
-description: Explore the Google Chrome Dino pixel art created with pure CSS, Less, and Pug.js by award-winning software engineer Robert James Gabriel. This project showcases his expertise in web design and development as an example of his work.
+description: The Chrome offline dino recreated entirely with CSS box-shadows. A fun pixel art experiment.
 keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel, award winning, php, experienced, Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer, golang, web design
 url: /css/chrome-dino
 ---
@@ -12,9 +12,9 @@ url: /css/chrome-dino
 <div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-4xl">
     <header class="mb-12 text-center">
-      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">Chrome Dino Pixel Art</h1>
+      <h1 class="text-section">Chrome Dino Pixel Art</h1>
       <p class="mt-6 text-xl text-base-content">
-        A nostalgic recreation of the beloved Chrome offline game dinosaur, meticulously crafted using only CSS box-shadows. This pixel-perfect tribute showcases advanced CSS techniques and attention to detail that brings the iconic T-Rex to life on the web.
+        You know the little dinosaur that shows up when your internet goes down? I recreated it using nothing but CSS box-shadows. Over 1000 of them, in fact.
       </p>
     </header>
 
@@ -26,19 +26,19 @@ url: /css/chrome-dino
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-      <div class="stat bg-base-100 border border-base-300 rounded-lg text-center">
+      <div class="stat bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth text-center">
         <div class="stat-title">CSS Pixels</div>
-        <div class="stat-value text-accent">1000+</div>
+        <div class="stat-value text-primary">1000+</div>
         <div class="stat-desc">Individual box-shadows</div>
       </div>
-      
-      <div class="stat bg-base-100 border border-base-300 rounded-lg text-center">
+
+      <div class="stat bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth text-center">
         <div class="stat-title">Colors Used</div>
         <div class="stat-value text-secondary">4</div>
         <div class="stat-desc">Black, green, brown & transparent</div>
       </div>
-      
-      <div class="stat bg-base-100 border border-base-300 rounded-lg text-center">
+
+      <div class="stat bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth text-center">
         <div class="stat-title">Technique</div>
         <div class="stat-value text-primary">100%</div>
         <div class="stat-desc">Pure CSS box-shadow</div>
@@ -46,34 +46,30 @@ url: /css/chrome-dino
     </div>
 
     <div class="prose prose-lg max-w-none">
-      <h2 class="text-2xl font-bold text-base-content mb-6">The Art of CSS Pixel Art</h2>
+      <h2 class="text-2xl font-bold text-base-content mb-6">How It Works</h2>
       
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-        <div class="card bg-base-100 border border-base-300">
-          <div class="card-body">
-            <h3 class="card-title text-base-content">Technical Challenge</h3>
-            <p class="text-base-content/80">
-              Creating pixel art with CSS requires mapping each individual pixel to a box-shadow coordinate. This dino uses over 1000 precisely positioned shadows to recreate the classic 8-bit aesthetic of the Chrome offline game.
-            </p>
-            <div class="mt-4">
-              <div class="badge badge-outline mr-2">box-shadow</div>
-              <div class="badge badge-outline mr-2">positioning</div>
-              <div class="badge badge-outline">pixel-perfect</div>
-            </div>
+        <div class="bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth">
+          <h3 class="text-xl font-semibold text-base-content mb-3">The Approach</h3>
+          <p class="text-base-content/80 leading-relaxed">
+            Each pixel maps to a single CSS box-shadow with specific coordinates. Over 1000 shadows positioned one by one to get the classic 8-bit look right.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium">box-shadow</span>
+            <span class="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium">positioning</span>
+            <span class="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium">pixel-perfect</span>
           </div>
         </div>
 
-        <div class="card bg-base-100 border border-base-300">
-          <div class="card-body">
-            <h3 class="card-title text-base-content">Design Elements</h3>
-            <p class="text-base-content/80">
-              The dino includes the classic black silhouette, green grass ground, and brown earth beneath. Each element is carefully positioned to maintain the retro gaming aesthetic while being fully accessible and semantic.
-            </p>
-            <div class="mt-4">
-              <div class="badge badge-accent mr-2">Nostalgic</div>
-              <div class="badge badge-secondary mr-2">Retro Gaming</div>
-              <div class="badge badge-primary">Iconic</div>
-            </div>
+        <div class="bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth">
+          <h3 class="text-xl font-semibold text-base-content mb-3">What's In It</h3>
+          <p class="text-base-content/80 leading-relaxed">
+            The classic black dino silhouette, green grass, and brown earth underneath. Tried to keep it as close to the original as possible.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1.5 rounded-full bg-accent/10 text-accent font-medium">Pixel Art</span>
+            <span class="text-xs px-3 py-1.5 rounded-full bg-secondary/10 text-secondary font-medium">Retro</span>
+            <span class="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium">CSS Only</span>
           </div>
         </div>
       </div>
@@ -81,15 +77,14 @@ url: /css/chrome-dino
  
 
       <p class="text-base-content/80">
-        This project demonstrates how CSS can be pushed beyond traditional styling into the realm of digital art. By leveraging the box-shadow property creatively, we can recreate beloved pixel art characters while maintaining web standards and accessibility best practices.
+        It was a fun experiment to see how far you can push CSS beyond normal styling. Turns out you can do quite a lot with just box-shadows.
       </p>
     </div>
 
     <div class="mt-12 text-center">
       <p class="text-lg text-base-content/70">
-        Want to try creating your own CSS pixel art? 
-        <a href="https://github.com/RobertJGabriel" class="link link-accent" title="View source code">Check out the code</a> 
-        and see how each pixel comes to life.
+        Fancy having a look at the source?
+        <a href="https://github.com/RobertJGabriel" class="text-primary hover:text-primary/80 transition-colors duration-200" title="View source code">It's on GitHub</a>.
       </p>
     </div>
   </div>

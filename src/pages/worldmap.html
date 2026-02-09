@@ -4,7 +4,7 @@ layout: templates/app.html
 title: World Map of my Travels
 youtubeId: PfILiWebkuc
 cardTitle: World Map of my Travels
-description: An interactive world map built in CSS, Javascript and Highcharts showing where I'm traveling around the world.
+description: A map of all the places I've been lucky enough to travel to.
 keywords: html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application, golang, helperbird, opendyslexic, opendyslexic
 url: worldmap
 ---
@@ -12,19 +12,17 @@ url: worldmap
 <div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-6xl">
     <header class="mb-12">
-      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">My Travel Adventures</h1>
+      <h1 class="text-section text-base-content">Where I've Been</h1>
       <p class="mt-6 text-xl text-base-content">
-        From speaking at conferences to exploring new cultures, here's a visual journey of all the amazing places I've been fortunate to visit. Each pin tells a story of learning, connecting with incredible people, and discovering how technology impacts communities worldwide.
+        Places I've travelled to for work, conferences, and just for the craic.
       </p>
     </header>
 
-    <div class="card bg-base-100 border border-base-300 shadow-lg overflow-hidden">
-      <div class="card-body p-0">
-        <div id="chartdiv" class="w-full h-96 md:h-[500px] lg:h-[600px] bg-base-100" 
-             role="img" 
-             aria-label="Interactive world map showing travel destinations">
-          <!-- Map will be rendered here -->
-        </div>
+    <div class="bg-base-100 rounded-xl border border-base-300/60 overflow-hidden card-depth">
+      <div id="chartdiv" class="w-full h-96 md:h-[500px] lg:h-[600px] bg-base-100"
+           role="img"
+           aria-label="Interactive world map showing travel destinations">
+        <!-- Map will be rendered here -->
       </div>
     </div>
 
@@ -54,16 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <style>
 /* Map container styles */
 #chartdiv {
-
   transition: all 0.3s ease;
 }
 
-.amcharts-main-div{
-  background-color: white;
-}
-
-#chartdiv:hover {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+.amcharts-main-div {
+  background-color: oklch(98.5% 0.007 85);
 }
 
 /* Responsive map height */
@@ -80,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: hsl(var(--bc) / 0.6);
+  color: oklch(22% 0.015 260 / 0.6);
   font-size: 1.125rem;
 }
 
@@ -90,13 +83,13 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .amcharts-map-area:focus {
-  outline: 2px solid hsl(var(--a));
+  outline: 2px solid oklch(50% 0.14 155);
   outline-offset: 2px;
 }
 
 /* Chart export menu styling */
 .amcharts-export-menu {
-  border-radius: 0.5rem !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 15px -3px oklch(22% 0.015 260 / 0.1), 0 4px 6px -2px oklch(22% 0.015 260 / 0.05) !important;
 }
 </style>

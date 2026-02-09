@@ -12,46 +12,72 @@ url: websites
 <div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
     <header class="mb-12">
-      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">Website Showcase</h1>
+      <h1 class="text-section text-base-content">Website Showcase</h1>
       <p class="mt-6 text-xl text-base-content">
-        Take a look at the awesome websites I've built throughout my career! 
-        <br>
-        They're all about creativity and smart strategies. From stunning designs to top-notch SEO, each site is crafted to stand out and rank high. Dive in and see how these projects showcase my passion for web magic and practical results!
+        Some of the websites I've built over the years for clients and for fun.
       </p>
     </header>
 
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
-      {% for article in work.websites %}
-      <article class="group">
-        <a
-          href="{{ article.link }}"
-          title="{{ article.title }} - Learn more"
-          aria-label="{{ article.title }} - Learn more"
-          class="group snap-start flex-shrink-0 w-64"
-        >
-          <div class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 block h-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-            <figure class="px-6 pt-6">
-              <img
-                loading="lazy"
-                src="/assets/images/websites/{{ article.img }}"
-                alt="{{ article.title }} logo - {{ article.description | truncate: 100 }}"
-                class="w-full bg-base-200 rounded-xl overflow-hidden border border-base-300 group-hover:border-primary/30 transition-colors duration-300"
-              />
-            </figure>
-            <div class="card-body px-6 pb-6">
-              <h2 class="card-title text-lg font-semibold text-base-content group-hover:text-accent transition-colors duration-300">
-                {{ article.title }}
-              </h2>
-              <p class="text-base text-base-content/80 leading-relaxed mt-2">
-                {{ article.description }}
-              </p>
+    <div class="mt-16 sm:mt-20">
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/40 to-primary/10" aria-hidden="true"></div>
+
+        <div class="space-y-12">
+          {% for article in work.websites %}
+          <article class="relative flex items-start group">
+            <!-- Timeline dot -->
+            <div class="absolute left-6 mt-1.5 h-4 w-4 rounded-full bg-primary border-4 border-base-100 shadow-sm group-hover:bg-primary/80 transition-colors duration-300" aria-hidden="true"></div>
+
+            <!-- Content -->
+            <div class="ml-16 min-w-0 flex-1">
+              <a
+                href="{{ article.link }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="{{ article.title }} - Visit site"
+                aria-label="{{ article.title }} - Visit site"
+                class="block"
+              >
+                <div class="bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth">
+                  <div class="flex flex-col sm:flex-row sm:items-start gap-5">
+                    <!-- Image -->
+                    <div class="flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden bg-base-200 border border-base-300/60">
+                      <img
+                        loading="lazy"
+                        src="/assets/images/websites/{{ article.img }}"
+                        alt="{{ article.title }} logo"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <!-- Details -->
+                    <div class="flex-1 min-w-0">
+                      <h2 class="text-xl font-semibold tracking-tight text-base-content group-hover:text-primary transition-colors duration-300">
+                        {{ article.title }}
+                      </h2>
+                      <p class="mt-2 text-base text-base-content/80 leading-relaxed">
+                        {{ article.description }}
+                      </p>
+                      <span class="inline-flex items-center gap-1.5 mt-3 text-sm text-primary font-medium group-hover:text-primary/80 transition-colors duration-200">
+                        Visit site
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 -960 960 960" fill="currentColor">
+                          <path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/>
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
-          </div>
-        </a>
-      </article>
-      {% endfor %}
+          </article>
+          {% endfor %}
+        </div>
+
+        <!-- Timeline end dot -->
+        <div class="absolute left-6 bottom-0 h-4 w-4 rounded-full bg-primary/10 border-4 border-base-100" aria-hidden="true"></div>
+      </div>
     </div>
 
-   
   </div>
 </div>

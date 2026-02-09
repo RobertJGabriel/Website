@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en" class="h-full" data-theme="irish">
 	<head>
 		<title>{{ title }} - Robert James Gabriel's Blog</title>
 		{% include templates/head.html %}
 	</head>
 
-	<body class="bg-base-100 min-h-screen overflow-x-hidden">
+	<body class="bg-base-100 text-base-content min-h-screen overflow-x-hidden antialiased">
 		{% include templates/skip-link.html %}
 		<div id="robertjames-website" class="min-h-screen w-full">
   <div class="flex flex-col min-h-screen w-full">
@@ -20,7 +20,7 @@
               <nav class="mb-8" aria-label="Breadcrumb">
                 <a
                   href="/blog/"
-                  class="btn btn-circle btn-secondary mb-2 hover:bg-accent hover:text-white transition-all duration-200 hover:-translate-y-1"
+                  class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-base-200 text-base-content hover:bg-primary hover:text-primary-content transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                   aria-label="Go back to blog posts"
                 >
                   <svg
@@ -28,7 +28,7 @@
                     fill="none"
                     aria-hidden="true"
                     stroke="currentColor"
-                    class="h-6 w-6"
+                    class="h-5 w-5"
                   >
                     <path
                       d="M7.25 11.25 3.75 8m0 0 3.5-3.25M3.75 8h8.5"
@@ -42,14 +42,18 @@
 
               <!-- Article -->
               <article class="relative">
-                <header class="mb-12">
+                <header class="mb-16">
+                  <!-- Accent Line -->
+                  <div class="mb-6">
+                    <span class="accent-line"></span>
+                  </div>
+
                   <!-- Date and Reading Time -->
                   <div class="flex items-center gap-4 mb-6">
                     <time
                       datetime="{{ dated }}"
-                      class="flex items-center text-sm text-base-content/60"
+                      class="text-sm text-base-content/60"
                     >
-                      <span class="h-4 w-0.5 rounded-full bg-accent mr-3"></span>
                       {{ dated }}
                     </time>
                     {% if readingTime %}
@@ -59,13 +63,13 @@
                   </div>
 
                   <!-- Title -->
-                  <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl lg:text-6xl">
+                  <h1 class="text-section text-base-content mb-6">
                     {{ title }}
                   </h1>
 
                   <!-- Subtitle/Description -->
                   {% if description %}
-                  <p class="mt-6 text-xl text-base-content/80 leading-relaxed">
+                  <p class="text-base text-base-content/80 leading-relaxed max-w-2xl">
                     {{ description }}
                   </p>
                   {% endif %}
@@ -75,7 +79,7 @@
                   <div class="mt-6 flex flex-wrap gap-2">
                     {% for tag in tags %}
                     {% if tag != "blog" %}
-                    <span class="badge badge-accent badge-outline">{{ tag }}</span>
+                    <span class="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary font-medium">{{ tag }}</span>
                     {% endif %}
                     {% endfor %}
                   </div>
@@ -83,7 +87,7 @@
                 </header>
 
                 <!-- Content -->
-                <div class="prose prose-lg max-w-none prose-headings:text-base-content prose-p:text-base-content/90 prose-strong:text-base-content prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-code:text-accent prose-pre:bg-base-200 prose-pre:border prose-pre:border-base-300">
+                <div class="prose prose-lg max-w-none prose-headings:text-base-content prose-p:text-base-content/90 prose-strong:text-base-content prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-code:text-primary prose-pre:bg-base-200 prose-pre:border prose-pre:border-base-300">
                   {{ content | safe }}
                 </div>
 
@@ -92,13 +96,13 @@
                   <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
                     <!-- Share Section -->
                     <div class="flex items-center gap-4">
-                      <span class="text-sm font-medium text-base-content/60">Share this post:</span>
-                      <div class="flex items-center gap-2">
+                      <span class="text-sm text-base-content/60">Share this post:</span>
+                      <div class="flex items-center gap-3">
                         <a
                           href="https://twitter.com/intent/tweet?url={{ page.url | url | absoluteUrl }}&text={{ title | url_encode }}"
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="btn btn-circle btn-sm btn-ghost hover:btn-accent"
+                          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-base-200 text-base-content hover:bg-primary hover:text-primary-content transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                           aria-label="Share on Twitter"
                         >
                           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -109,7 +113,7 @@
                           href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | url | absoluteUrl }}"
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="btn btn-circle btn-sm btn-ghost hover:btn-accent"
+                          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-base-200 text-base-content hover:bg-primary hover:text-primary-content transition-all duration-250 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                           aria-label="Share on LinkedIn"
                         >
                           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

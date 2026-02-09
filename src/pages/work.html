@@ -4,7 +4,7 @@ layout:  templates/base.html
 title: Work history
 youtubeId: PfILiWebkuc
 cardTitle: Work history
-description: Delve into the extensive work history of Robert James Gabriel, a software engineer renowned for developing popular apps and browser extensions. This page chronicles his professional journey, highlighting significant projects and achievements in creating innovative software solutions, including modules and extensions for Chrome and Firefox. Gain insights into the experiences and milestones that have shaped his career in technology and software development.
+description: Where I've worked over the years, from early internships to founding my own companies.
 keywords: html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application, golang, helperbird, opendyslexic
 url: work
 ---
@@ -12,34 +12,34 @@ url: work
 <div class="px-4 sm:px-8 mt-16">
   <div class="mx-auto max-w-2xl lg:max-w-3xl">
     <header class="mb-12">
-      <h1 class="text-4xl font-bold tracking-tight text-base-content sm:text-5xl">My Work History</h1>
+      <h1 class="text-section text-base-content">My Work History</h1>
       <p class="mt-6 text-xl text-base-content">
-        Each role has been a stepping stone in my journey to make technology more accessible and meaningful. From early experiments to leading projects that impact thousands of users, here's how my career has evolved alongside my passion for inclusive design and problem-solving.
+        Places I've worked, things I've built, and the people I've been lucky to work with along the way.
       </p>
     </header>
 
     <div class="mt-16 sm:mt-20">
       <div class="relative">
         <!-- Timeline line -->
-        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent/60 to-accent/30" aria-hidden="true"></div>
+        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/40 to-primary/10" aria-hidden="true"></div>
         
         <div class="space-y-12">
           {% for article in work.history %}
           <article class="relative flex items-start group">
             <!-- Timeline dot -->
-            <div class="absolute left-6 mt-1.5 h-4 w-4 rounded-full bg-accent border-4 border-base-100 shadow-sm group-hover:bg-accent-focus transition-colors duration-300" aria-hidden="true"></div>
+            <div class="absolute left-6 mt-1.5 h-4 w-4 rounded-full bg-primary border-4 border-base-100 shadow-sm group-hover:bg-primary/80 transition-colors duration-300" aria-hidden="true"></div>
             
             <!-- Content -->
             <div class="ml-16 min-w-0 flex-1">
-              <div class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent/30">
-                <div class="card-body p-6">
+              <div class="bg-base-100 rounded-xl border border-base-300/60 p-6 card-depth">
+                <div>
                   <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                     <div class="flex-1">
-                      <h2 class="text-xl font-semibold tracking-tight text-base-content group-hover:text-accent transition-colors duration-300">
+                      <h2 class="text-xl font-semibold tracking-tight text-base-content group-hover:text-primary transition-colors duration-300">
                         {{ article.title }}
                       </h2>
                       <div class="mt-2 flex items-center gap-2">
-                        <div class="badge badge-accent badge-outline">{{ article.company }}</div>
+                        <span class="rounded-full bg-secondary/10 text-secondary text-sm px-3 py-1">{{ article.company }}</span>
                       </div>
                       <p class="mt-4 text-base text-base-content/80 leading-relaxed">
                         {{ article.description }}
@@ -48,24 +48,24 @@ url: work
                       {% if article.technologies %}
                       <div class="mt-4 flex flex-wrap gap-2">
                         {% for tech in article.technologies %}
-                        <span class="badge badge-outline badge-sm text-xs">{{ tech }}</span>
+                        <span class="rounded-full bg-base-200 text-base-content/70 text-xs px-2.5 py-1">{{ tech }}</span>
                         {% endfor %}
                       </div>
                       {% endif %}
                     </div>
                     
-                    <div class="flex flex-col sm:items-end gap-2 text-sm">
-                      <div class="flex flex-wrap gap-2">
-                        <time class="badge badge-neutral badge-outline" datetime="{{ article.start }}">
+                    <div class="flex flex-col sm:items-end gap-2 text-sm text-base-content/70">
+                      <div class="flex flex-wrap gap-2 items-center">
+                        <time datetime="{{ article.start }}">
                           {{ article.start }}
                         </time>
                         {% if article.end %}
                         <span class="text-base-content/60">–</span>
-                        <time class="badge badge-secondary badge-outline" datetime="{{ article.end }}">
+                        <time datetime="{{ article.end }}">
                           {{ article.end }}
                         </time>
                         {% else %}
-                        <span class="badge badge-success badge-outline">Present</span>
+                        <span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">Present</span>
                         {% endif %}
                       </div>
                     </div>
@@ -76,9 +76,9 @@ url: work
           </article>
           {% endfor %}
         </div>
-        
+
         <!-- Timeline end dot -->
-        <div class="absolute left-6 bottom-0 h-4 w-4 rounded-full bg-accent/30 border-4 border-base-100" aria-hidden="true"></div>
+        <div class="absolute left-6 bottom-0 h-4 w-4 rounded-full bg-primary/10 border-4 border-base-100" aria-hidden="true"></div>
       </div>
     </div>
 
