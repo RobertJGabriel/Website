@@ -404,7 +404,7 @@ img: /assets/images/blog/adblockers.png
 <ol>
   <li class="mt-8 mb-8 text-lg">
     B. Insider, "PageFair and Adobe 2015 ad blocking report," Business
-    Insider, 2016 Augsut 2015. [Online]. Available:
+    Insider, 2016 August 2015. [Online]. Available:
     <a class="link link-secondary" href="https://www.businessinsider.com/pagefair-and-adobe-2015-ad-blocking-report-2015-8" title="Link to reference in article">Business Insider</a>. [Accessed 9 May 2016]
   </li>
   <li class="mt-8 mb-8 text-lg">
@@ -418,13 +418,13 @@ img: /assets/images/blog/adblockers.png
   </li>
   <li class="mt-8 mb-8 text-lg">
     I. Yablonka, "What is the percentage of Internet users that
-    employ," Ido Yablonka, 25 Sepetmeber 2015. [Online]. Available:
+    employ," Ido Yablonka, 25 September 2015. [Online]. Available:
     <a class="link link-secondary" href="https://www.quora.com/What-is-the-percentageof-Internet-users-that-employ-AdBlock-Plus-or-similar-ad-blocking-plugins" title="Link to reference in article">Quora</a>. [Accessed 22 April 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     A. Plus, "About Adblock Plus.," 21 December 2009. [Online].
     Available:
-    <a class="link link-secondary" href="https://adblockplus.org/about" title="Link to reference in article">Adblock Plus</a>. [Accessed 25 Feburay 2016].
+    <a class="link link-secondary" href="https://adblockplus.org/about" title="Link to reference in article">Adblock Plus</a>. [Accessed 25 February 2016].
   </li>
   <li class="mt-8 mb-8 text-lg">
     A. Khetarpal, "The Top Ten Most Dangerous Things You Can Do
@@ -453,7 +453,7 @@ img: /assets/images/blog/adblockers.png
    </a>. [Accessed 28 March 2016].
  </li>
  <li class="mt-8 mb-8 text-lg">
-   R. J. Gabriel, "Adblocker Survery Results," 22 Feburay 2016. [Online]. Available:
+   R. J. Gabriel, "Adblocker Survey Results," 22 February 2016. [Online]. Available:
    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy" title="Link to reference in article" href="https://www.projectbird.com/problems-posed-by-ad-blockers">
      https://www.projectbird.com/problems-posed-by-ad-blockers
    </a>. [Accessed 11 April 2016].
@@ -465,7 +465,7 @@ img: /assets/images/blog/adblockers.png
    </a>. [Accessed 18 March 2016].
  </li>
  <li class="mt-8 mb-8 text-lg">
-   M. Navaraj, "labs.bromium.com," 21 Feburay 2014. [Online]. Available:
+   M. Navaraj, "labs.bromium.com," 21 February 2014. [Online]. Available:
    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy" title="Link to reference in article" href="https://labs.bromium.com/2014/02/21/the-wild-wild-web-youtube-ads-serving-malware/">
      https://labs.bromium.com/2014/02/21/the-wild-wild-web-youtube-ads-serving-malware/
    </a>. [Accessed 26 March 2016].
@@ -477,7 +477,7 @@ img: /assets/images/blog/adblockers.png
    </a>. [Accessed 20 March 2016].
  </li>
  <li class="mt-8 mb-8 text-lg">
-   T. Geigner, "Forbes Site, After Begging You Turn Off Adblocker, Serves Up," 11 Januray 2016. [Online]. Available:
+   T. Geigner, "Forbes Site, After Begging You Turn Off Adblocker, Serves Up," 11 January 2016. [Online]. Available:
    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy" title="Link to reference in article" href="https://www.techdirt.com/articles/20160111/05574633295/forbes-site-after-beggingyou-turn-off-adblocker-serves-up-steaming-pile-malware-ads.shtml">
      https://www.techdirt.com/articles/20160111/05574633295/forbes-site-after-beggingyou-turn-off-adblocker-serves-up-steaming-pile-malware-ads.shtml
    </a>. [Accessed 18 March 2016].
@@ -495,7 +495,7 @@ img: /assets/images/blog/adblockers.png
    </a>. [Accessed 02 March 2016].
  </li>
  <li class="mt-8 mb-8 text-lg">
-   S. Ranger, "zdnet," zdnet, 20 Januray 2016. [Online]. Available:
+   S. Ranger, "zdnet," zdnet, 20 January 2016. [Online]. Available:
    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy" title="Link to reference in article" href="https://www.zdnet.com/article/ios-versus-android-apple-app-store-versus-google-playhere-comes-the-next-battle-in-the-app-wars/">
      https://www.zdnet.com/article/ios-versus-android-apple-app-store-versus-google-playhere-comes-the-next-battle-in-the-app-wars/
    </a>. [Accessed 13 April 2016].
@@ -548,7 +548,7 @@ img: /assets/images/blog/adblockers.png
    R. H. & S. Wojcicki, "Here's The Future Of Advertising, According To Google," 10 April 2013. [Online]. Available:
    <a class="decoration-pink-500 underline hover:underline hover:text-gray-900 hover:decoration-wavy hover:decoration-blue-500 decoration-wavy" title="Link to reference in article" href="https://www.forbes.com/sites/roberthof/2013/04/10/heres-thefuture-of-advertising-according-to-google/#22de1749687a">
      https://www.forbes.com/sites/roberthof/2013/04/10/heres-thefuture-of-advertising-according-to-google/#22de1749687a
-   </a>. [Accessed 01 Feburay 2016]
+   </a>. [Accessed 01 February 2016]
  </li>
  <li class="mt-8 mb-8 text-lg">
    A. A. Org, "Acceptable Ads Manifest," 1 May 2016. [Online]. Available:

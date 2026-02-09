@@ -11,7 +11,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://marcamos@github.com/marcamos/jet.git"
+		"url": "git+https://github.com/RobertJGabriel/robertjgabriel.github.io.git"
 	},
 	"keywords": [
 		"eleventy",
@@ -21,9 +21,9 @@
 	],
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/marcamos/jet/issues"
+		"url": "https://github.com/RobertJGabriel/robertjgabriel.github.io/issues"
 	},
-	"homepage": "https://github.com/marcamos/jet#readme",
+	"homepage": "https://www.robertgabriel.ninja",
 	"resolutions": {
 		"babel-jest": "^21.2.0",
 		"babel-plugin-jest-hoist": "^21.2.0",

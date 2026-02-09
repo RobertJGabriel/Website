@@ -26,7 +26,7 @@ const createSocialImageForArticle = async (input, output) => {
 
 		const post = {
 			title: title,
-			author: 'coffeeandfun.com'
+			author: 'robertgabriel.ninja'
 		};
 
 		const width = 1200;

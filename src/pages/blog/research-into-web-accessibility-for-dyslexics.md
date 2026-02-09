@@ -34,7 +34,7 @@ In the context of human-computer interaction, typography has critical importance
 
 Font face describes the overall letter form, for example, Comic Sans or Times New Roman. Font faces may have serifs (a slight projection finishing off a stroke of a letter in certain typefaces such as Times New Roman) or may be sans serif (Don’t use serifs which are small lines at the ends/tips of characters such as in Comic Sans).
 
-![open dyslexica](/assets/img/talks/sans.webp)
+![open dyslexica](/assets/images/talks/sans.webp)
 
 Fonts may be display fonts, designed for headlines, or text fonts, designed for large bodies of smaller text.
 
@@ -44,7 +44,7 @@ When measuring font size, there are two key areas to focus on:
 
 The following graphic summarizes the key parts:
 
-![open dyslexica](/assets/img/talks/typography.webp)
+![open dyslexica](/assets/images/talks/typography.webp)
 
 # What is OpenDyslexia
 
@@ -54,7 +54,7 @@ The unique shape of each letter in the OpenDyslexia font can help prevent confus
 
 As you can see below:
 
-![open dyslexica](/assets/img/talks/OpenDyslexic.webp)
+![open dyslexica](/assets/images/talks/OpenDyslexic.webp)
 
 # The History of OpenDyslexia’s Development
 
@@ -86,13 +86,13 @@ Rello stated in the report, that the use of the fonts Helvetica, OpenDyslexia, C
 
 Despite the fact that there were already dozens of available fonts claiming to be dyslexia-friendly, none of them had the backing of scientific proof. Rello’s study was one of the first times that HCI techniques were used to investigate the effects of key aspects of type design on readability for dyslexics, thus providing the basis for designing a font which could potentially make the internet a dyslexia-friendly space.
 
-## Special Fonts for Dyslexia - RenskeDe Leeuws
+## Special Fonts for Dyslexia - Renske De Leeuw
 
 In the second paper, masters student Renske de Leeuw (2010) compared Arial with the font Dyslexie (Dyslexie is a typeface/font designed to mitigate some of the issues that dyslexics experience when reading. It was developed by Dutch graphic designer Christian Boer while in college to help combat her own dyslexia). Rello took 21 Dutch students with dyslexia as her sample group, gave them texts to read in both fonts and monitored the differences in reading speed and accuracy the fonts produced.
 
-Rello found that Dyslexie did not lead to quicker reading, however it did help some students make less dyslexia-related errors, another inserting aspect was from the questionnaires. Renske found that users wouldn’t use the font, because other people, who would have to read their work, would not like the font. This gives the impression that dyslectics are adapting to others, instead of asking for understanding of the use of an adapted font, so that a dyslectic can cope with his/her handicap.
+Rello found that Dyslexie did not lead to quicker reading, however it did help some students make less dyslexia-related errors, another inserting aspect was from the questionnaires. Renske found that users wouldn't use the font, because other people, who would have to read their work, would not like the font. This gives the impression that dyslexics are adapting to others, instead of asking for understanding of the use of an adapted font, so that a dyslexic can cope with his/her handicap.
 
- Overall the dyslectics read fewer errors while reading the words printed in the font “Dyslexie”.
+ Overall the dyslexics read fewer errors while reading the words printed in the font "Dyslexie".
 
 ## Results of the Papers
 
@@ -195,8 +195,8 @@ This report should offer an insight into the way dyslexic users experience the w
 21 April 2016]](http://www.typographydeconstructed.com/ascender/)
 2. [L. R. & R. Baeza-Yates, "Good Fonts for Dyslexia," Web Research Group, Barcelona, Spain, 2013](#)
 3. [A. GONZALEZ, "FAQ | OpenDyslexic," 03 June 2006. [Online]. [Accessed 01 April 2016]](https://www.opendyslexic.org/contact)
-4. [A. GONZALEZ, "OpenDyslexic | About," 01 June 2006. [Online]. [Accessed 12 Januray 2016]](https://opendyslexic.org)
-5. [R. d. Leeuw, "Special Font For Dyslexia?," 5 December 2010. [Online]. [Accessed 13 Januray 2016]](https://www.ilo.gw.utwente.nl/)
+4. [A. GONZALEZ, "OpenDyslexic | About," 01 June 2006. [Online]. [Accessed 12 January 2016]](https://opendyslexic.org)
+5. [R. d. Leeuw, "Special Font For Dyslexia?," 5 December 2010. [Online]. [Accessed 13 January 2016]](https://www.ilo.gw.utwente.nl/)
 6. [D. Scotwest, "Website Accessibility For Dyslexiasw," 2010 April 2016. [Online]. [Accessed 2010 April 2016]](https://www.dyslexiasw.com/about/website-accessibility)
 7. [W3C, "Text Customization," 11 November 2012. [Online]](https://www.w3.org/WAI/RD/2012/text-customization/r11)
-8. [V. F. d. Santana, "https://pdfs.semanticscholar.org," University of Campinas , 23 June 2012. [Online] [Accessed 23 Febuary 2016].](https://pdfs.semanticscholar.org/)
+8. [V. F. d. Santana, "https://pdfs.semanticscholar.org," University of Campinas , 23 June 2012. [Online] [Accessed 23 February 2016].](https://pdfs.semanticscholar.org/)

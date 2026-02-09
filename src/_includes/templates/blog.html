@@ -1,95 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{{ title }} - Robert James Gabriel's Blog</title>
-		{% bundledCss %}
-		<script>
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.getRegistrations().then((registrations) => {
-          for (const registration of registrations) {
-            registration.unregister().then(() => {
-              console.log("🧹 Old service worker unregistered");
-            });
-          }
-
-          // After clearing, register the new one
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then(() => console.log("✅ New service worker registered"))
-            .catch((err) => console.log("Service worker error:", err));
-        });
-      }
-		</script>
-
-		<link rel="canonical" href="https://www.robertgabriel.ninja{{ page.url | safe }}" />
-		<meta name="description" content="{{ description }}" />
-		<meta name="keywords" content="{{ keywords }}" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<meta name="image" content="/assets/images/favicon.png" />
-		<meta name="theme-color" content="#5046e4" />
-		<meta itemprop="name" content="Robert James" />
-		<meta itemprop="description" content="{{ description }}" />
-		<meta itemprop="image" content="/assets/images/favicon.png" />
-
-		<!-- Twitter Card data -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@robertjgabriel" />
-		<meta name="twitter:creator" content="@robertjgabriel" />
-		<meta name="twitter:title" content="{{ title }}" />
-		<meta name="twitter:description" content="{{ description }}" />
-		<meta name="twitter:image:alt" content="Robert James's cartoon face" />
-		<meta
-			name="twitter:image"
-			content="https://www.robertgabriel.ninja{{ page.url | safe }}index.png"
-		/>
-		<meta name="twitter:player" content="https://www.youtube.com/watch?v={{ youtubeId}}" />
-
-		<meta property="og:locale" content="en_US" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="{{ title }}" />
-		<meta property="og:description" content="{{ description }}" />
-		<meta property="og:url" content="https://www.robertgabriel.ninja{{ page.url | safe }}" />
-		<meta property="og:site_name" content="Robert James" />
-		<meta
-			property="og:image"
-			content="https://www.robertgabriel.ninja{{ page.url | safe }}index.png"
-		/>
-		<meta property="og:video" content="https://www.youtube.com/watch?v={{ youtubeId}}" />
-
-		<link rel="shortcut icon" href="/assets/images/social/favicon.png" />
-		<link rel="apple-touch-icon" href="/assets/images/social/apple-touch-icon.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon.png" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon.png" />
-		<link rel="apple-touch-icon" sizes="167x167" href="/assets/images/favicon.png" />
-		<meta name="msvalidate.01" content="5A7359B55CCBDE2A927000280EAECBBC" />
-		<link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" />
-		<link
-			rel="icon"
-			sizes="32x32"
-			type="image/png"
-			href="/assets/images/social/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			sizes="16x16"
-			type="image/png"
-			href="/assets/images/social/favicon-16x16.png"
-		/>
-		<link rel="manifest" href="/assets/images/social/site.webmanifest" />
-		<link rel="mask-icon" href="/assets/images/social/safari-pinned-tab.svg" />
-		<link rel="shortcut icon" href="/assets/images/social/favicon.ico" />
-		<meta name="msapplication-TileColor" content="#ffa6e1" />
-		<meta name="msapplication-config" content="/assets/images/social/browserconfig.xml" />
+		{% include templates/head.html %}
 	</head>
 
 	<body class="bg-base-100 min-h-screen overflow-x-hidden">
+		{% include templates/skip-link.html %}
 		<div id="robertjames-website" class="min-h-screen w-full">
   <div class="flex flex-col min-h-screen w-full">
     {% include templates/header.html %}
-    
-    <main id="main-content" class="flex-auto" role="main">
+
+    <main id="main-content" class="flex-auto">
       <div class="px-4 sm:px-8 mt-16">
         <div class="mx-auto max-w-2xl lg:max-w-4xl">
           <div class="xl:relative">
@@ -131,7 +53,7 @@
                       {{ dated }}
                     </time>
                     {% if readingTime %}
-                    <span class="text-sm text-base-content/60">•</span>
+                    <span class="text-sm text-base-content/60">&bull;</span>
                     <span class="text-sm text-base-content/60">{{ readingTime }} min read</span>
                     {% endif %}
                   </div>
@@ -179,7 +101,7 @@
                           class="btn btn-circle btn-sm btn-ghost hover:btn-accent"
                           aria-label="Share on Twitter"
                         >
-                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                           </svg>
                         </a>
@@ -190,7 +112,7 @@
                           class="btn btn-circle btn-sm btn-ghost hover:btn-accent"
                           aria-label="Share on LinkedIn"
                         >
-                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                           </svg>
                         </a>
@@ -209,13 +131,13 @@
                 </footer>
               </article>
 
-         
+
             </div>
           </div>
         </div>
       </div>
     </main>
-    
+
     {% include templates/footer.html %}
   </div>
 </div>

@@ -1,15 +1,15 @@
 ---
 hideHeader: false
 layout:  templates/blog.html
-title: Whats in my Bag 2018
-description: I recently read a book about the minimal life. Im no hipster and I are a white privilege Irish man. So I didnt have to worry about some things and have a savings and a job. I thought I would write about I need to do my day to day life
+title: What's in my Bag 2018
+description: I recently read a book about the minimal life. I'm no hipster, and I am a privileged Irish man. So I didn't have to worry about some things and have savings and a job. I thought I would write about what I need for my day-to-day life.
 keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design
 url: blog/bag/
 tags: blog
 blog_cat: Blog
 youtubeId: PfILiWebkuc
-cardTitle: Whats in my Bag 2018
-blog_snip: I recently read a book about the minimal life. Im no hipster and I are a white privilege Irish man. So I didnt have to worry about some things and have a savings and a job. I thought I would write about I need to do my day to day life
+cardTitle: What's in my Bag 2018
+blog_snip: I recently read a book about the minimal life. I'm no hipster, and I am a privileged Irish man. So I didn't have to worry about some things and have savings and a job. I thought I would write about what I need for my day-to-day life.
 dated: July 13 2017
 cat: Blog
 img: /assets/images/blog/bag.png

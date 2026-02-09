@@ -1,0 +1,88 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% bundledCss %}
+<script defer>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (const registration of registrations) {
+        registration.unregister().then(() => {
+          console.log("Old service worker unregistered");
+        });
+      }
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then(() => console.log("New service worker registered"))
+        .catch((err) => console.log("Service worker error:", err));
+    });
+  }
+</script>
+
+<link rel="canonical" href="https://www.robertgabriel.ninja{{ page.url | safe }}" />
+<meta name="description" content="{{ description }}" />
+<meta name="keywords" content="{{ keywords }}" />
+<meta name="image" content="/assets/images/social/favicon.png" />
+<meta name="theme-color" content="#5046e4" />
+<meta itemprop="name" content="Robert James" />
+<meta itemprop="description" content="{{ description }}" />
+<meta itemprop="image" content="/assets/images/social/favicon.png" />
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@robertjgabriel" />
+<meta name="twitter:creator" content="@robertjgabriel" />
+<meta name="twitter:title" content="{{ title }}" />
+<meta property="twitter:domain" content="robertgabriel.ninja" />
+<meta property="twitter:url" content="https://www.robertgabriel.ninja{{ page.url | safe }}" />
+<meta name="twitter:description" content="{{ description }}" />
+<meta name="twitter:image:alt" content="Robert James's cartoon face" />
+<meta name="twitter:image" content="https://www.robertgabriel.ninja{{ page.url | safe }}index.png" />
+{% if youtubeId %}
+<meta name="twitter:player" content="https://www.youtube.com/watch?v={{ youtubeId }}" />
+{% endif %}
+
+<!-- Open Graph data -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="{{ ogType | default: 'website' }}" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:url" content="https://www.robertgabriel.ninja{{ page.url | safe }}" />
+<meta property="og:site_name" content="Robert James" />
+<meta property="og:image" content="https://www.robertgabriel.ninja{{ page.url | safe }}index.png" />
+{% if youtubeId %}
+<meta property="og:video" content="https://www.youtube.com/watch?v={{ youtubeId }}" />
+{% endif %}
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Robert James Gabriel",
+  "url": "https://www.robertgabriel.ninja",
+  "author": {
+    "@type": "Person",
+    "name": "Robert James Gabriel",
+    "url": "https://www.robertgabriel.ninja",
+    "sameAs": [
+      "https://twitter.com/robertJGabriel",
+      "https://github.com/RobertJGabriel",
+      "https://www.linkedin.com/in/robertjamesgabriel/",
+      "https://www.forbes.com/profile/robert-james-gabriel/"
+    ]
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="/assets/images/social/favicon.ico" />
+<link rel="apple-touch-icon" href="/assets/images/social/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/social/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/social/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="167x167" href="/assets/images/social/apple-touch-icon.png" />
+<meta name="msvalidate.01" content="5A7359B55CCBDE2A927000280EAECBBC" />
+<link rel="stylesheet" href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" />
+<link rel="icon" sizes="32x32" type="image/png" href="/assets/images/social/favicon-32x32.png" />
+<link rel="icon" sizes="16x16" type="image/png" href="/assets/images/social/favicon-16x16.png" />
+<link rel="manifest" href="/assets/images/social/site.webmanifest" />
+<link rel="mask-icon" href="/assets/images/social/safari-pinned-tab.svg" />
+<meta name="msapplication-TileColor" content="#ffa6e1" />
+<meta name="msapplication-config" content="/assets/images/social/browserconfig.xml" />

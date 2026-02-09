@@ -1,0 +1,191 @@
+---
+hideHeader: false
+layout:  templates/base.html
+title: Watch History — 2025
+youtubeId: PfILiWebkuc
+cardTitle: Awards
+description:  My combined Netflix & Hulu watch history for 2025, newest → oldest. Shows are grouped by series + season.
+keywords: html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application, golang, helperbird, opendyslexic
+url: /watch
+---
+
+
+<div class="px-6 sm:px-12 mt-20">
+  <div class="mx-auto max-w-4xl lg:max-w-5xl">
+    <header class="mb-8">
+      <h1 class="text-4xl font-semibold tracking-tight text-base-content sm:text-5xl">Watch History — 2025</h1>
+      <p class="mt-3 text-base text-base-content/80">A clean, combined timeline of movies and TV — grouped by <em>Series → Season</em>. Newest first. Grouped by day so the date shows once per day.</p>
+    </header>
+
+    <div id="watch-controls" class="flex items-center gap-4 mb-6 text-sm text-base-content/70">
+      <div>Showing <strong class="ml-1">2025</strong></div>
+      <div class="ml-auto">Tip: click an item for more details.</div>
+    </div>
+
+    <ul id="watch-timeline" class="timeline timeline-vertical">
+      <!-- day groups injected here -->
+    </ul>
+
+    <template id="timeline-item-template">
+      <li>
+        <div class="timeline-start">DATE</div>
+        <div class="timeline-middle">
+          <!-- success check icon (only for the day's first item) -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="timeline-end timeline-box">
+          <div class="flex items-start gap-3">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-3">
+                <div class="text-lg font-medium title truncate"></div>
+                <div class="ml-auto text-sm text-base-content/60 date"></div>
+              </div>
+              <p class="mt-1 text-sm text-base-content/70 meta"></p>
+              <div class="mt-3 flex gap-2 services" aria-hidden></div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </template>
+
+    <template id="timeline-item-template-no-start">
+      <li>
+        <div class="timeline-start">&nbsp;</div>
+        <div class="timeline-middle">
+          <!-- invisible placeholder to keep alignment -->
+          <div style="width:20px; height:20px;"></div>
+        </div>
+        <div class="timeline-end timeline-box">
+          <div class="flex items-start gap-3">
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-3">
+                <div class="text-lg font-medium title truncate"></div>
+                <div class="ml-auto text-sm text-base-content/60 date"></div>
+              </div>
+              <p class="mt-1 text-sm text-base-content/70 meta"></p>
+              <div class="mt-3 flex gap-2 services" aria-hidden></div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </template>
+
+  </div>
+</div>
+
+<script>
+(function renderTimeline(){
+  const raw = window.__WATCHED__ || {};
+  const items = [];
+  ['netflix','hulu'].forEach(src => {
+    (raw[src] || []).forEach(it => {
+      const copy = Object.assign({}, it);
+      copy._source = src;
+      copy._dateObj = parseDateString(copy.watched_at);
+      items.push(copy);
+    });
+  });
+
+  const items2025 = items.filter(i => i._dateObj && i._dateObj.getFullYear() === 2025);
+
+  function clean(val){
+    if(val === null || val === undefined) return null;
+    const s = String(val).trim();
+    if(!s || s.toLowerCase() === 'n/a' || s.toLowerCase() === 'null') return null;
+    return s;
+  }
+
+  // Group by day (yyyy-mm-dd) so we only show the date/marker once per day
+  const byDay = new Map();
+  items2025.forEach(it => {
+    const date = it._dateObj;
+    const key = date.getFullYear() + '-' + String(date.getMonth()+1).padStart(2,'0') + '-' + String(date.getDate()).padStart(2,'0');
+    if(!byDay.has(key)) byDay.set(key, []);
+    byDay.get(key).push(it);
+  });
+
+  // sort days newest -> oldest
+  const dayKeys = Array.from(byDay.keys()).sort((a,b)=> b.localeCompare(a));
+
+  const container = document.getElementById('watch-timeline');
+  const tpl = document.getElementById('timeline-item-template');
+  const tplNoStart = document.getElementById('timeline-item-template-no-start');
+  container.innerHTML = '';
+
+  dayKeys.forEach((dayKey, dayIndex) => {
+    const dayItems = byDay.get(dayKey).sort((a,b)=> b._dateObj - a._dateObj);
+    // within a day, group by series+season or movie title to avoid duplicate season rows
+    const dayGroups = new Map();
+
+    dayItems.forEach(it => {
+      const seriesRaw = clean(it.series_name);
+      const seasonRaw = clean(it.season);
+      const isShow = !!seriesRaw;
+      let gkey;
+      if(isShow){
+        gkey = `show::${seriesRaw}::S${seasonRaw || ''}`;
+        if(!dayGroups.has(gkey)) dayGroups.set(gkey, {kind:'show', series: seriesRaw, season: seasonRaw, count:0, services:new Set(), last:null, rawLast:null});
+        const g = dayGroups.get(gkey);
+        g.count += 1;
+        g.services.add(it._source);
+        if(!g.last || it._dateObj > g.last){ g.last = it._dateObj; g.rawLast = it.watched_at; }
+      } else {
+        const title = clean(it.title) || 'Untitled';
+        gkey = `movie::${title}`;
+        if(!dayGroups.has(gkey)) dayGroups.set(gkey, {kind:'movie', title: title, count:1, services:new Set([it._source]), last: it._dateObj, rawLast: it.watched_at});
+        else {
+          const g = dayGroups.get(gkey);
+          g.count += 1;
+          g.services.add(it._source);
+          if(!g.last || it._dateObj > g.last){ g.last = it._dateObj; g.rawLast = it.watched_at; }
+        }
+      }
+    });
+
+    // convert dayGroups to ordered array by last watched desc
+    const dayRows = Array.from(dayGroups.values()).sort((a,b)=> (b.last || 0) - (a.last || 0));
+
+    // render rows for the day. First row shows the start marker; following rows use no-start template
+    dayRows.forEach((r, idx) => {
+      if(idx === 0){
+        const node = tpl.content.cloneNode(true);
+        node.querySelector('.timeline-start').textContent = (r.last && r.last.getFullYear()) ? r.last.getFullYear() : '';
+        node.querySelector('.title').textContent = (r.kind === 'show') ? (r.series + (r.season ? ` — Season ${r.season}` : '')) : r.title;
+        node.querySelector('.meta').textContent = (r.kind === 'show') ? `${r.count} watched` : 'Movie';
+        node.querySelector('.date').textContent = r.last ? formatNice(r.last) : (r.rawLast || '');
+        const servicesEl = node.querySelector('.services');
+        r.services.forEach(s => {
+          const chip = document.createElement('span');
+          chip.className = 'px-2 py-1 text-xs rounded-full border border-base-200 text-base-content/70';
+          chip.textContent = s.charAt(0).toUpperCase() + s.slice(1);
+          servicesEl.appendChild(chip);
+        });
+        if(dayIndex !== 0){ container.appendChild(document.createElement('hr')); }
+        container.appendChild(node);
+      } else {
+        const node = tplNoStart.content.cloneNode(true);
+        node.querySelector('.title').textContent = (r.kind === 'show') ? (r.series + (r.season ? ` — Season ${r.season}` : '')) : r.title;
+        node.querySelector('.meta').textContent = (r.kind === 'show') ? `${r.count} watched` : 'Movie';
+        node.querySelector('.date').textContent = r.last ? formatNice(r.last) : (r.rawLast || '');
+        const servicesEl = node.querySelector('.services');
+        r.services.forEach(s => {
+          const chip = document.createElement('span');
+          chip.className = 'px-2 py-1 text-xs rounded-full border border-base-200 text-base-content/70';
+          chip.textContent = s.charAt(0).toUpperCase() + s.slice(1);
+          servicesEl.appendChild(chip);
+        });
+        container.appendChild(node);
+      }
+    });
+
+  });
+
+  if(dayKeys.length === 0){
+    container.innerHTML = '<li class=\"timeline-item\"><div class=\"timeline-start\"></div><div class=\"timeline-middle\"></div><div class=\"timeline-end timeline-box\">No items found for 2025.</div></li>';
+  }
+
+})();
+</script>
+
