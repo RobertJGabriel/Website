@@ -1,21 +1,31 @@
 {
-    "name": "Robert James",
-    "short_name": "Robert James",
-    "description":"Robert James is currently building open source projects and sass products, PWA's across iOS, Android, Website, and TV while traveling the world.",
-    "icons": [
-        {
-            "src": "/assets/images/social/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/assets/images/social/android-chrome-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "start_url": "/contact"
+	"name": "Robert James Gabriel",
+	"short_name": "Robert Gabriel",
+	"description": "Personal site of Robert James Gabriel — Irish software engineer and founder of Helperbird, building accessible tools for the web.",
+	"lang": "en",
+	"id": "/",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"theme_color": "#1a7a4c",
+	"background_color": "#fdfbf6",
+	"icons": [
+		{
+			"src": "/assets/images/social/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/assets/images/social/android-chrome-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "/assets/images/social/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
 }

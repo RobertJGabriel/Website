@@ -1,29 +1,12 @@
-// css
+// Site entry point.
+// CSS is compiled by Eleventy (see .eleventy.js); this bundle only handles
+// progressive-enhancement behaviour. Keep it tiny.
 
-
-import '../css/blog.css';
-import '../css/help.css';
-import '../css/styles.css';
-import * as app from './core/app';
-
-app.load();
-
+// Register the service worker for offline support.
 if ('serviceWorker' in navigator) {
 	window.addEventListener('load', () => {
-		    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.getRegistrations().then((registrations) => {
-          for (const registration of registrations) {
-            registration.unregister().then(() => {
-              console.log("🧹 Old service worker unregistered");
-            });
-          }
-
-          // After clearing, register the new one
-          navigator.serviceWorker
-            .register("/service-worker.js")
-            .then(() => console.log("✅ New service worker registered"))
-            .catch((err) => console.log("Service worker error:", err));
-        });
-      }
+		navigator.serviceWorker
+			.register('/service-worker.js')
+			.catch((err) => console.error('Service worker registration failed:', err));
 	});
 }
