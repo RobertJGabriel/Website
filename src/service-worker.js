@@ -18,7 +18,7 @@ const PRECACHE = [
 	OFFLINE_URL,
 	'/assets/css/engine.css',
 	'/assets/js/main.bundle.js',
-	'/assets/images/robert-james.png',
+	'/assets/images/robert-james.jpeg',
 	'/assets/images/social/favicon-32x32.png'
 ];
 

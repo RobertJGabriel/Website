@@ -3,92 +3,65 @@ hideHeader: false
 layout: templates/base.html
 title: World Map of my Travels
 cardTitle: World Map of my Travels
-description: A map of all the places I've been lucky enough to travel to.
-keywords: Robert James Gabriel, software engineer, accessibility, Ireland
+description: A map of all the places I've been lucky enough to travel to for work, conferences, and the craic.
+keywords: Robert James Gabriel, travel, map, conferences
 url: worldmap
 ---
 
 <div class="px-4 sm:px-8 mt-16">
-  <div class="mx-auto max-w-6xl">
-    <header class="mb-12">
+  <div class="mx-auto max-w-2xl lg:max-w-4xl">
+    <header class="mb-10">
+      <div class="accent-line w-24 mb-8" aria-hidden="true"></div>
       <h1 class="text-section text-base-content">Where I've Been</h1>
-      <p class="mt-6 text-xl text-base-content">
+      <p class="mt-5 text-lg text-base-content/70">
         Places I've travelled to for work, conferences, and just for the craic.
       </p>
     </header>
 
-    <div class="bg-base-100 rounded-xl border border-base-300/60 overflow-hidden card-depth">
-      <div id="chartdiv" class="w-full h-96 md:h-[500px] lg:h-[600px] bg-base-100"
-           role="img"
-           aria-label="Interactive world map showing travel destinations">
-        <!-- Map will be rendered here -->
+    {%- assign countries = travels | map: "country" | uniq -%}
+
+    <!-- Stats -->
+    <div class="flex flex-wrap gap-10 mb-10">
+      <div>
+        <div class="text-3xl font-bold text-primary">{{ travels | size }}</div>
+        <div class="text-sm text-base-content/60">Cities</div>
+      </div>
+      <div>
+        <div class="text-3xl font-bold text-primary">{{ countries | size }}</div>
+        <div class="text-sm text-base-content/60">Countries</div>
       </div>
     </div>
 
+    <!-- Map -->
+    <div class="rounded-2xl border border-base-300/60 bg-base-100 p-4 sm:p-6 card-depth mb-12">
+      <img
+        src="/assets/images/story/travels-map.png"
+        width="1400"
+        height="700"
+        class="w-full h-auto"
+        loading="lazy"
+        decoding="async"
+        alt="World map with pins on the cities Robert has visited — across Ireland, the UK, France, Spain, Italy, Canada and the United States — and routes fanning out from Ireland."
+      />
+    </div>
+
+    <!-- Destinations by country -->
+    <div class="space-y-8">
+      {%- for c in countries -%}
+      {%- assign cities = travels | where: "country", c -%}
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-base-content/50 mb-3">{{ c }}</h2>
+        <div class="flex flex-wrap gap-2">
+          {%- for city in cities -%}
+          <span class="inline-flex items-center gap-2 rounded-full border border-base-300 px-4 py-2 text-sm text-base-content/80">
+            <span class="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true"></span>
+            {{ city.title }}
+          </span>
+          {%- endfor -%}
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
 
   </div>
 </div>
-
-<!-- External Scripts -->
-<script src="https://www.amcharts.com/lib/3/ammap.js" defer></script>
-<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js" defer></script>
-<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js" defer></script>
-<script src="https://www.amcharts.com/lib/3/themes/light.js" defer></script>
-
-<!-- Map Initialization -->
-<script defer>
-document.addEventListener('DOMContentLoaded', function() {
-  // Load the worldmap.js file after DOM is ready
-  const script = document.createElement('script');
-  script.src = '/assets/js/core/worldmap.js';
-  script.defer = true;
-  document.head.appendChild(script);
-  
-  
-});
-</script>
-
-<style>
-/* Map container styles */
-#chartdiv {
-  transition: all 0.3s ease;
-}
-
-.amcharts-main-div {
-  background-color: oklch(98.5% 0.007 85);
-}
-
-/* Responsive map height */
-@media (max-width: 768px) {
-  #chartdiv {
-    height: 300px !important;
-  }
-}
-
-/* Loading state */
-#chartdiv:empty::before {
-  content: "Loading map...";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: oklch(22% 0.015 260 / 0.6);
-  font-size: 1.125rem;
-}
-
-/* Accessibility improvements */
-.amcharts-map-area {
-  outline: none;
-}
-
-.amcharts-map-area:focus {
-  outline: 2px solid oklch(50% 0.14 155);
-  outline-offset: 2px;
-}
-
-/* Chart export menu styling */
-.amcharts-export-menu {
-  border-radius: 0.75rem !important;
-  box-shadow: 0 10px 15px -3px oklch(22% 0.015 260 / 0.1), 0 4px 6px -2px oklch(22% 0.015 260 / 0.05) !important;
-}
-</style>

@@ -10,6 +10,7 @@
 <link rel="alternate" type="application/atom+xml" title="Robert James Gabriel — Blog" href="/feed.xml" />
 <meta name="description" content="{{ description }}" />
 <meta name="keywords" content="{{ keywords }}" />
+{% if noindex %}<meta name="robots" content="noindex, follow" />{% endif %}
 <meta name="author" content="Robert James Gabriel" />
 <meta name="image" content="{{ social_image_abs }}" />
 <meta name="theme-color" content="#1a7a4c" />

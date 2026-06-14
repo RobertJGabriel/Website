@@ -1,0 +1,15 @@
+[
+  { "title": "Cork, Ireland", "country": "Ireland", "lat": 51.8985, "lon": -8.4756 },
+  { "title": "Austin, TX", "country": "United States", "lat": 30.2672, "lon": -97.7431 },
+  { "title": "Hot Springs, AR", "country": "United States", "lat": 34.5037, "lon": -93.0552 },
+  { "title": "New York City, NY", "country": "United States", "lat": 40.7306, "lon": -73.9352 },
+  { "title": "San Francisco, CA", "country": "United States", "lat": 37.7740, "lon": -122.4313 },
+  { "title": "Saint Louis, MO", "country": "United States", "lat": 38.6270, "lon": -90.1994 },
+  { "title": "Nederland, TX", "country": "United States", "lat": 29.9744, "lon": -93.9924 },
+  { "title": "Toronto, Canada", "country": "Canada", "lat": 43.6532, "lon": -79.3832 },
+  { "title": "Milan, Italy", "country": "Italy", "lat": 45.4642, "lon": 9.1900 },
+  { "title": "Madrid, Spain", "country": "Spain", "lat": 40.4168, "lon": -3.7038 },
+  { "title": "Paris, France", "country": "France", "lat": 48.8566, "lon": 2.3522 },
+  { "title": "Edinburgh, Scotland", "country": "United Kingdom", "lat": 55.9533, "lon": -3.1883 },
+  { "title": "London, England", "country": "United Kingdom", "lat": 51.4787, "lon": -0.2017 }
+]

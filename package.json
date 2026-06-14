@@ -7,7 +7,7 @@
 		"dev": "webpack && ELEVENTY_ENV=development eleventy --serve",
 		"start": "ELEVENTY_ENV=development eleventy --serve",
 		"format": "prettier --write .",
-		"build": "NODE_ENV=production ELEVENTY_ENV=production webpack --mode production && ELEVENTY_ENV=production eleventy",
+		"build": "npm run clean && NODE_ENV=production ELEVENTY_ENV=production webpack --mode production && ELEVENTY_ENV=production eleventy",
 		"check:links": "node scripts/check-links.mjs"
 	},
 	"repository": {
