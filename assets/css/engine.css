@@ -32,7 +32,6 @@
     --container-3xl: 48rem;
     --container-4xl: 56rem;
     --container-5xl: 64rem;
-    --container-6xl: 72rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
@@ -51,6 +50,7 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --tracking-tight: -0.025em;
+    --tracking-wide: 0.025em;
     --leading-snug: 1.375;
     --leading-relaxed: 1.625;
     --radius-lg: 0.5rem;
@@ -354,183 +354,6 @@
       &[disabled] {
         pointer-events: none;
         opacity: 40%;
-      }
-    }
-  }
-  .menu {
-    @layer daisyui.l1.l2.l3 {
-      display: flex;
-      width: fit-content;
-      flex-direction: column;
-      flex-wrap: wrap;
-      padding: calc(0.25rem * 2);
-      --menu-active-fg: var(--color-neutral-content);
-      --menu-active-bg: var(--color-neutral);
-      font-size: 0.875rem;
-      :where(li ul) {
-        position: relative;
-        margin-inline-start: calc(0.25rem * 4);
-        padding-inline-start: calc(0.25rem * 2);
-        white-space: nowrap;
-        &:before {
-          position: absolute;
-          inset-inline-start: calc(0.25rem * 0);
-          top: calc(0.25rem * 3);
-          bottom: calc(0.25rem * 3);
-          background-color: var(--color-base-content);
-          opacity: 10%;
-          width: var(--border);
-          content: "";
-        }
-      }
-      :where(li > .menu-dropdown:not(.menu-dropdown-show)) {
-        display: none;
-      }
-      :where(li:not(.menu-title) > *:not(ul, details, .menu-title, .btn)), :where(li:not(.menu-title) > details > summary:not(.menu-title)) {
-        display: grid;
-        grid-auto-flow: column;
-        align-content: flex-start;
-        align-items: center;
-        gap: calc(0.25rem * 2);
-        border-radius: var(--radius-field);
-        padding-inline: calc(0.25rem * 3);
-        padding-block: calc(0.25rem * 1.5);
-        text-align: start;
-        transition-property: color, background-color, box-shadow;
-        transition-duration: 0.2s;
-        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        grid-auto-columns: minmax(auto, max-content) auto max-content;
-        text-wrap: balance;
-        user-select: none;
-      }
-      :where(li > details > summary) {
-        --tw-outline-style: none;
-        outline-style: none;
-        @media (forced-colors: active) {
-          outline: 2px solid transparent;
-          outline-offset: 2px;
-        }
-        &::-webkit-details-marker {
-          display: none;
-        }
-      }
-      :where(li > details > summary), :where(li > .menu-dropdown-toggle) {
-        &:after {
-          justify-self: flex-end;
-          display: block;
-          height: 0.375rem;
-          width: 0.375rem;
-          rotate: -135deg;
-          translate: 0 -1px;
-          transition-property: rotate, translate;
-          transition-duration: 0.2s;
-          content: "";
-          transform-origin: 50% 50%;
-          box-shadow: 2px 2px inset;
-          pointer-events: none;
-        }
-      }
-      details {
-        overflow: hidden;
-        interpolate-size: allow-keywords;
-      }
-      details::details-content {
-        block-size: 0;
-        @media (prefers-reduced-motion: no-preference) {
-          transition-behavior: allow-discrete;
-          transition-property: block-size, content-visibility;
-          transition-duration: 0.2s;
-          transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        }
-      }
-      details[open]::details-content {
-        block-size: auto;
-      }
-      :where(li > details[open] > summary):after, :where(li > .menu-dropdown-toggle.menu-dropdown-show):after {
-        rotate: 45deg;
-        translate: 0 1px;
-      }
-      :where(li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title), li:not(.menu-title, .disabled) > details > summary:not(.menu-title) ):not(.menu-active, :active, .btn) {
-        &.menu-focus, &:focus-visible {
-          cursor: pointer;
-          background-color: var(--color-base-content);
-          @supports (color: color-mix(in lab, red, red)) {
-            background-color: color-mix(in oklab, var(--color-base-content) 10%, transparent);
-          }
-          color: var(--color-base-content);
-          --tw-outline-style: none;
-          outline-style: none;
-          @media (forced-colors: active) {
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-          }
-        }
-      }
-      :where(li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title):not(.menu-active, :active, .btn):hover, li:not(.menu-title, .disabled) > details > summary:not(.menu-title):not(.menu-active, :active, .btn):hover ) {
-        cursor: pointer;
-        background-color: var(--color-base-content);
-        @supports (color: color-mix(in lab, red, red)) {
-          background-color: color-mix(in oklab, var(--color-base-content) 10%, transparent);
-        }
-        --tw-outline-style: none;
-        outline-style: none;
-        @media (forced-colors: active) {
-          outline: 2px solid transparent;
-          outline-offset: 2px;
-        }
-        box-shadow: 0 1px oklch(0% 0 0 / 0.01) inset, 0 -1px oklch(100% 0 0 / 0.01) inset;
-      }
-      :where(li:empty) {
-        background-color: var(--color-base-content);
-        opacity: 10%;
-        margin: 0.5rem 1rem;
-        height: 1px;
-      }
-      :where(li) {
-        position: relative;
-        display: flex;
-        flex-shrink: 0;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: stretch;
-        .badge {
-          justify-self: flex-end;
-        }
-        & > *:not(ul, .menu-title, details, .btn):active, & > *:not(ul, .menu-title, details, .btn).menu-active, & > details > summary:active {
-          --tw-outline-style: none;
-          outline-style: none;
-          @media (forced-colors: active) {
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-          }
-          color: var(--menu-active-fg);
-          background-color: var(--menu-active-bg);
-          background-size: auto, calc(var(--noise) * 100%);
-          background-image: none, var(--fx-noise);
-          &:not(&:active) {
-            box-shadow: 0 2px calc(var(--depth) * 3px) -2px var(--menu-active-bg);
-          }
-        }
-        &.menu-disabled {
-          pointer-events: none;
-          color: var(--color-base-content);
-          @supports (color: color-mix(in lab, red, red)) {
-            color: color-mix(in oklab, var(--color-base-content) 20%, transparent);
-          }
-        }
-      }
-      .dropdown:focus-within {
-        .menu-dropdown-toggle:after {
-          rotate: 45deg;
-          translate: 0 1px;
-        }
-      }
-      .dropdown-content {
-        margin-top: calc(0.25rem * 2);
-        padding: calc(0.25rem * 2);
-        &:before {
-          display: none;
-        }
       }
     }
   }
@@ -1209,15 +1032,6 @@
     clip-path: inset(50%);
     white-space: nowrap;
     border-width: 0;
-  }
-  .stats {
-    @layer daisyui.l1.l2.l3 {
-      position: relative;
-      display: inline-grid;
-      grid-auto-flow: column;
-      overflow-x: auto;
-      border-radius: var(--radius-box);
-    }
   }
   .absolute {
     position: absolute;
@@ -2662,9 +2476,6 @@
   .max-w-4xl {
     max-width: var(--container-4xl);
   }
-  .max-w-6xl {
-    max-width: var(--container-6xl);
-  }
   .max-w-full {
     max-width: 100%;
   }
@@ -2742,9 +2553,6 @@
   .cursor-pointer {
     cursor: pointer;
   }
-  .resize {
-    resize: both;
-  }
   .list-inside {
     list-style-position: inside;
   }
@@ -2805,6 +2613,9 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .space-y-1\.5 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -2824,6 +2635,13 @@
       --tw-space-y-reverse: 0;
       margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-8 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-y-12 {
@@ -3229,6 +3047,10 @@
     --tw-tracking: var(--tracking-tight);
     letter-spacing: var(--tracking-tight);
   }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
   .link-secondary {
     @layer daisyui.l1.l2 {
       color: var(--color-secondary);
@@ -3247,6 +3069,12 @@
   }
   .text-base-content {
     color: var(--color-base-content);
+  }
+  .text-base-content\/50 {
+    color: var(--color-base-content);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+    }
   }
   .text-base-content\/60 {
     color: var(--color-base-content);
@@ -3304,6 +3132,9 @@
   }
   .lowercase {
     text-transform: lowercase;
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
   .italic {
     font-style: italic;
@@ -3365,10 +3196,6 @@
   .shadow-sm {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .blur-xl {
     --tw-blur: blur(var(--blur-xl));
@@ -3778,6 +3605,11 @@
       gap: calc(var(--spacing) * 2);
     }
   }
+  .sm\:p-6 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 6);
+    }
+  }
   .sm\:p-8 {
     @media (width >= 40rem) {
       padding: calc(var(--spacing) * 8);
@@ -3810,11 +3642,6 @@
       line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
-  .md\:h-\[500px\] {
-    @media (width >= 48rem) {
-      height: 500px;
-    }
-  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3823,11 +3650,6 @@
   .lg\:mt-0 {
     @media (width >= 64rem) {
       margin-top: 0;
-    }
-  }
-  .lg\:h-\[600px\] {
-    @media (width >= 64rem) {
-      height: 600px;
     }
   }
   .lg\:w-80 {
@@ -4593,11 +4415,6 @@ pre[class*="language-"] {
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -4735,7 +4552,6 @@ pre[class*="language-"] {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
