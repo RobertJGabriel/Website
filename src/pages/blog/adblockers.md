@@ -16,7 +16,7 @@ img: /assets/images/blog/adblockers.png
 
 ---
 
-<h1 class="mt-4 mb-4 text-2xl" id="introduction">Introduction</h1>
+<h2 class="mt-4 mb-4 text-2xl" id="introduction">Introduction</h2>
 <p class="mt-8 mb-8 text-xl">
   Ad blocking, one of the fastest-growing phenomena in internet usage [1], is a
   type of software that removes or alters advertising content on a web page,
@@ -46,7 +46,7 @@ img: /assets/images/blog/adblockers.png
 </p>
 
 
-<h1 class="mt-4 mb-4 text-2xl" id="what-is-ad-blocking">What is Ad Blocking</h1>
+<h2 class="mt-4 mb-4 text-2xl" id="what-is-ad-blocking">What is Ad Blocking</h2>
 <p class="mt-8 mb-8 text-xl">
   Ad blocking, in this context, is a term not limited to a specific platform or device; it is a general term for software designed solely to remove advertisements from websites or web applications. Many modern web browsers, such as Google's Chrome and Mozilla Firefox, automatically block pop-up adverts by default. The use of browser extension ad blockers to prevent ads from loading is also common. It has been estimated that 9% of all website views come from browsers with ad-blocking extensions installed [4], and for some publishers, 40% or more of their visitors are using ad blockers [3].
 </p>
@@ -70,9 +70,9 @@ img: /assets/images/blog/adblockers.png
 </p>
 
 
-<h2 class="mt-4 mb-4 text-2xl" id="benefits-to-the-user">
+<h3 class="mt-4 mb-4 text-2xl" id="benefits-to-the-user">
   Benefits to the User
-</h2>
+</h3>
 <p class="mt-8 mb-8 text-xl">
   Ad blockers offer several useful benefits to the user. They block or hide offensive material and other unpleasant elements, and they can also prevent malicious code from running. While ads on the web can be irritating and intrusive, some users choose not to block every ad as they understand that websites rely on advertising to generate income, enabling them to provide free content.
 </p>
@@ -81,7 +81,7 @@ img: /assets/images/blog/adblockers.png
 </p>
 
 
-<h1 class="mt-4 mb-4 text-2xl" id="performance-issues">Performance Issues</h1>
+<h2 class="mt-4 mb-4 text-2xl" id="performance-issues">Performance Issues</h2>
 <p class="mt-8 mb-8 text-xl">
   Using an ad blocker significantly impacts loading speeds [7]. However, improved loading comes with some side effects, such as memory or RAM consumption [5]. According to Mozilla Firefox engineer Nicholas Nethercutt, running Adblock Plus in the background on Firefox 40 results in an increase in RAM usage ranging from 80-100MB. The primary issue arises from the process by which Adblock Plus blocks ads [8]. Adblock Plus inserts a substantial CSS stylesheet, consuming approximately 4MB of RAM, into every web page visited. This stylesheet removes ads and overrides existing stylesheets.
 </p>
@@ -117,7 +117,7 @@ img: /assets/images/blog/adblockers.png
     <td class="text-xl">1.4</td>
   </tr>
 </table>
-<h1 class="mt-4 mb-4 text-2xl" id="speed">Speed</h1>
+<h2 class="mt-4 mb-4 text-2xl" id="speed">Speed</h2>
 <p class="mt-8 mb-8 text-xl">
   Download speed and rendering of websites and content are critical issues for users, with the average load time expected to be under 5 seconds. It would make sense for developers to be committed to increasing loading speed and reducing rendering time; however, that does not seem to be the case. I conducted informal research on developers' attitudes toward ad loading to confirm my suspicions. In my poll, I asked developers whether they optimize the loading of ads on their web pages, using tools such as asynchronous loading [11].
 </p>
@@ -125,17 +125,17 @@ img: /assets/images/blog/adblockers.png
   In computer programs, asynchronous operation means that a process operates independently of other processes [12]. According to my results, the majority of web developers do not prioritize this, making it easy to understand why users would opt for ad blockers. Developers often do not consider the time taken for loading ads in their apps or websites.
 </p>
 
-<h1 class="mt-4 mb-4 text-2xl" id="security">Security</h1>
+<h2 class="mt-4 mb-4 text-2xl" id="security">Security</h2>
 <p class="mt-8 mb-8 text-xl">
   Third-party advertisements can pose a serious threat to computer security. For example, in a high-profile case, malware was distributed through advertisements provided to YouTube by a malicious customer using Google's Doubleclick network [13]. In August 2015, a 0-day exploit in Firefox browsers was discovered in an advertisement running on a website [14]. The website Forbes requires users to disable ad blocking before viewing their website. However, in one incident, some of the website’s users were served with pop-under malware once they had disabled their ad blockers [15]. These examples demonstrate that ad blockers not only make surfing the internet more comfortable for the user but also safer.
 </p>
 
-<h1 class="mt-4 mb-4 text-2xl" id="privacy">Privacy</h1>
+<h2 class="mt-4 mb-4 text-2xl" id="privacy">Privacy</h2>
 <p class="mt-8 mb-8 text-xl">
   Users employ ad blockers because some advertisements abuse privacy by adding features in the website's code to track users online. This can be easily exploited to gain access to users’ cookies, which may contain sensitive information. Advertising platforms take advantage of tracking user behavior based on the sites they visit. Ad blockers are popular among users who do not want their browsing history sold to advertisers and advertising networks, making Adblock Plus particularly popular among users who prioritize privacy.
 </p>
 
-<h1 class="mt-4 mb-4 text-2xl" id="problems-posed-by-ad-blockers">Problems Posed by Ad Blockers</h1>
+<h2 class="mt-4 mb-4 text-2xl" id="problems-posed-by-ad-blockers">Problems Posed by Ad Blockers</h2>
 <p class="mt-8 mb-8 text-xl">
   The economic consequences of ad blocking for online businesses were reported by Adobe/PageFair, estimating the cost to publishers in 2016 alone could be as much as €22 billion [3]. If an ad is running on a website but is snubbed by the user because their ad-blocker is hiding it, this ad provides no value to the website owner. Advertisers perceive little value in putting brands in front of users who ignore advertisements. As a result, sites are rarely paid “per click” anymore, with the standard metric for selling web display ads being “CPM” or “cost per mille” – the cost for a thousand views [16].
 </p>
@@ -160,35 +160,35 @@ img: /assets/images/blog/adblockers.png
 <p class="mt-8 mb-8 text-xl">
   There are still many potential problems caused by ad blockers. Reports suggest that they will force sites to stop providing free content or decrease the quality of content while increasing the quantity, as seen in clickbait articles. This means that not only will users have access to incomplete information, as in the case of paywalls, but because the sites can no longer track users, this will also result in a loss of revenue and the inability to understand the customer because of their anonymity. These issues stem from ad blockers because publishers are being forced to try other means to increase revenue, such as paywalls and by publishing more low-quantity articles.
 </p>
-<h1 class="mt-4 mb-4 text-2xl" id="possible-solutions-and-the-future-of-advertising">
+<h2 class="mt-4 mb-4 text-2xl" id="possible-solutions-and-the-future-of-advertising">
   Possible Solutions and the Future of Advertising
-</h1>
+</h2>
 <p class="mt-8 mb-8 text-xl">
   When Apple announced last September that it would allow ad blocking in Safari
   for iOS 9.3, it brought a conflict that had been building in the web community. Many of the possible solutions included:
 </p>
 
-<h2 class="mt-4 mb-4 text-2xl" id="the-freemium-model-paywall-">
+<h3 class="mt-4 mb-4 text-2xl" id="the-freemium-model-paywall-">
   The Freemium Model (Paywall)
-</h2>
+</h3>
 <p class="mt-8 mb-8 text-xl">
   Freemium model pricing strategy is in which a product or service, such as games
   or web services, is free of charge, but money is charged for proprietary
   features, functionality, and extra content.
 </p>
 
-<h2 class="mt-4 mb-4 text-2xl" id="subscription-model">
+<h3 class="mt-4 mb-4 text-2xl" id="subscription-model">
   Subscription Model
-</h2>
+</h3>
 <p class="mt-8 mb-8 text-xl">
   The subscription model is where a customer must pay a subscription price to
   have access to the product/service. The model is now used by many businesses,
   websites, and magazines.
 </p>
 
-<h2 class="mt-4 mb-4 text-2xl" id="go-native">
+<h3 class="mt-4 mb-4 text-2xl" id="go-native">
   Go Native
-</h2>
+</h3>
 <p class="mt-8 mb-8 text-xl">
   Native advertising is a form of paid media where the ad experience follows the
   natural form and function of the user experience in which it is placed [22].
@@ -200,17 +200,17 @@ img: /assets/images/blog/adblockers.png
   according to ZenithOptimedia [23].
 </p>
 
-<h2 class="mt-4 mb-4 text-2xl" id="pay-the-ad-blockers">
+<h3 class="mt-4 mb-4 text-2xl" id="pay-the-ad-blockers">
   Pay the Ad Blockers
-</h2>
+</h3>
 <p class="mt-8 mb-8 text-xl">
   Where the publisher pays the ad blocker companies, such as Adblock Plus, to
   not run the ad blocker on their website.
 </p>
 
-<h2 class="mt-4 mb-4 text-2xl" id="ask-audiences-for-sympathy">
+<h3 class="mt-4 mb-4 text-2xl" id="ask-audiences-for-sympathy">
   Ask Audiences for Sympathy
-</h2>
+</h3>
 <p class="mt-8 mb-8 text-xl">
   This method involves asking the visitor, using a popup, if they will consider
   whitelisting the site they’re visiting or disabling ad blockers on it and
@@ -239,9 +239,9 @@ img: /assets/images/blog/adblockers.png
   content, with no display advertising or ad tracking.
 </p>
 
-<h2 class="mt-4 mb-4 text-2xl" id="block-content-from-people-who-use-ad-blockers">
+<h3 class="mt-4 mb-4 text-2xl" id="block-content-from-people-who-use-ad-blockers">
   Block Content from People Who Use Ad Blockers
-</h2>
+</h3>
 <p class="mt-8 mb-8 text-xl">
   Blocking content from people who use ad blockers is becoming more and more
   popular; this involves removing content or links from the user and displaying
@@ -253,17 +253,17 @@ img: /assets/images/blog/adblockers.png
   community to get working again. It is a coding tug of war," he stated.
 </p>
 
-<h2 class="mt-4 mb-4 text-2xl" id="offer-ads-free-versions">
+<h3 class="mt-4 mb-4 text-2xl" id="offer-ads-free-versions">
   Offer Ads Free Versions
-</h2>
+</h3>
 <p class="mt-8 mb-8 text-xl">
   Offer Ads Free Versions allow the user to support the website or web
   application. It removes adverts while supporting the services.
 </p>
 
-<h1 class="mt-4 mb-4 text-2xl" id="designated-apps">
+<h2 class="mt-4 mb-4 text-2xl" id="designated-apps">
   Designated Apps
-</h1>
+</h2>
 <p class="mt-8 mb-8 text-xl">
   Another approach to the war on ad blockers is exemplified by former Mozilla
   co-founder Brendan Eich, who launched a browser called Brave [25]. This
@@ -280,9 +280,9 @@ img: /assets/images/blog/adblockers.png
   blockers do.
 </p>
 
-<h1 class="mt-4 mb-4 text-2xl" id="redesigning-ads">
+<h2 class="mt-4 mb-4 text-2xl" id="redesigning-ads">
   Redesigning Ads
-</h1>
+</h2>
 <p class="mt-8 mb-8 text-xl">
   As the methods of fighting ad blockers are not particularly successful, it
   would be better to change the adverts themselves so that they are less
@@ -349,9 +349,9 @@ img: /assets/images/blog/adblockers.png
   exactly ads should be in the future.
 </p>
 
-<h1 class="mt-4 mb-4 text-2xl" id="conclusion">
+<h2 class="mt-4 mb-4 text-2xl" id="conclusion">
   Conclusion
-</h1>
+</h2>
 <p class="mt-8 mb-8 text-xl">
   While it is difficult to determine what exactly the future of advertising on
   the internet should be, all the evidence discussed in this report indicates
@@ -394,7 +394,7 @@ img: /assets/images/blog/adblockers.png
   seen before. With that in mind, it is vital that we change advertising to make
   it appeal to users so that the web economy may continue to grow and flourish.
 </p>
-<h1 class="mt-4 mb-4 text-2xl" id="bibliography">Bibliography</h1>
+<h2 class="mt-4 mb-4 text-2xl" id="bibliography">Bibliography</h2>
 <ol>
   <li class="mt-8 mb-8 text-lg">
     B. Insider, "PageFair and Adobe 2015 ad blocking report," Business

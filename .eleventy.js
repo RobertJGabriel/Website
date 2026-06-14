@@ -8,8 +8,23 @@ import markdownIt from 'markdown-it';
 import markdownItClass from '@toycode/markdown-it-class';
 import markdownItAnchor from 'markdown-it-anchor';
 import tailwindcss from '@tailwindcss/postcss';
+import { feedPlugin } from '@11ty/eleventy-plugin-rss';
 
 export default function (eleventyConfig) {
+	// Atom feed for the blog → /feed.xml
+	eleventyConfig.addPlugin(feedPlugin, {
+		type: 'atom',
+		outputPath: '/feed.xml',
+		collection: { name: 'blog', limit: 20 },
+		metadata: {
+			language: 'en',
+			title: 'Robert James Gabriel',
+			subtitle: 'Writing on software engineering, web accessibility, and whatever else I am thinking about.',
+			base: 'https://www.robertgabriel.ninja/',
+			author: { name: 'Robert James Gabriel' }
+		}
+	});
+
 	// Static assets
 	eleventyConfig.addPassthroughCopy({ 'src/assets/': '/assets/' });
 	// Root-level files (service worker needs root scope; CNAME + robots for hosting/SEO)

@@ -7,7 +7,8 @@
 		"dev": "webpack && ELEVENTY_ENV=development eleventy --serve",
 		"start": "ELEVENTY_ENV=development eleventy --serve",
 		"format": "prettier --write .",
-		"build": "NODE_ENV=production ELEVENTY_ENV=production webpack --mode production && ELEVENTY_ENV=production eleventy"
+		"build": "NODE_ENV=production ELEVENTY_ENV=production webpack --mode production && ELEVENTY_ENV=production eleventy",
+		"check:links": "node scripts/check-links.mjs"
 	},
 	"repository": {
 		"type": "git",
@@ -28,6 +29,7 @@
 	"homepage": "https://www.robertgabriel.ninja",
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-plugin-rss": "^2.0.2",
 		"@babel/core": "^7.24.0",
 		"@babel/preset-env": "^7.24.0",
 		"@tailwindcss/postcss": "^4.1.4",
