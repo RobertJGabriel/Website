@@ -9,8 +9,28 @@ import markdownItClass from '@toycode/markdown-it-class';
 import markdownItAnchor from 'markdown-it-anchor';
 import tailwindcss from '@tailwindcss/postcss';
 import { feedPlugin } from '@11ty/eleventy-plugin-rss';
+import Image from '@11ty/eleventy-img';
 
 export default function (eleventyConfig) {
+	// {% image src, alt, class, maxWidth %} — responsive AVIF/WebP from an
+	// explicit source path. Generates <picture> with srcset + width/height.
+	eleventyConfig.addLiquidShortcode('image', async (src, alt, className, maxWidth) => {
+		const w = parseInt(maxWidth, 10) || 480;
+		const metadata = await Image(src, {
+			widths: [w, w * 2],
+			formats: ['avif', 'webp', 'auto'],
+			outputDir: './docs/img/',
+			urlPath: '/img/'
+		});
+		return Image.generateHTML(metadata, {
+			alt: alt || '',
+			class: className || '',
+			sizes: `${w}px`,
+			loading: 'lazy',
+			decoding: 'async'
+		});
+	});
+
 	// Atom feed for the blog → /feed.xml
 	eleventyConfig.addPlugin(feedPlugin, {
 		type: 'atom',

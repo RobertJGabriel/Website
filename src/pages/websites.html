@@ -42,12 +42,9 @@ url: websites
                   <div class="flex flex-col sm:flex-row sm:items-start gap-5">
                     <!-- Image -->
                     <div class="flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden bg-base-200 border border-base-300/60">
-                      <img
-                        loading="lazy"
-                        src="/assets/images/websites/{{ article.img }}"
-                        alt="{{ article.title }} logo"
-                        class="w-full h-full object-cover"
-                      />
+                      {%- assign imgsrc = "src/assets/images/websites/" | append: article.img -%}
+                      {%- assign imgalt = article.title | append: " logo" -%}
+                      {% image imgsrc, imgalt, "w-full h-full object-cover", 80 %}
                     </div>
 
                     <!-- Details -->
