@@ -3,6 +3,21 @@
 	<head>
 		<title>{{ title }} - Robert James Gabriel's Blog</title>
 		{% include templates/head.html %}
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "BlogPosting",
+		  "headline": "{{ cardTitle | default: title }}",
+		  "description": "{{ description }}",
+		  "image": "https://www.robertgabriel.ninja{{ img | default: '/assets/images/social/og-default.png' }}",
+		  "datePublished": "{{ page.date | date: 'yyyy-MM-dd' }}",
+		  "dateModified": "{{ page.date | date: 'yyyy-MM-dd' }}",
+		  "url": "https://www.robertgabriel.ninja{{ page.url }}",
+		  "mainEntityOfPage": "https://www.robertgabriel.ninja{{ page.url }}",
+		  "author": { "@type": "Person", "name": "Robert James Gabriel", "url": "https://www.robertgabriel.ninja" },
+		  "publisher": { "@type": "Person", "name": "Robert James Gabriel" }
+		}
+		</script>
 	</head>
 
 	<body class="bg-base-100 text-base-content min-h-screen overflow-x-hidden antialiased">

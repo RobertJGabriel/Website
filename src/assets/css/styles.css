@@ -4,6 +4,9 @@
 /* Base DaisyUI plugin */
 @plugin "daisyui";
 
+/* Typography plugin — powers the `prose` classes used in blog posts */
+@plugin "@tailwindcss/typography";
+
 /* ============================================================
    Custom "Irish" Theme — Warm, Personal Aesthetic
    Following Apple Human Interface Guidelines + CSS Spec
@@ -19,7 +22,7 @@
 	--color-base-100: oklch(98.5% 0.007 85);
 	--color-base-200: oklch(95.5% 0.01 80);
 	--color-base-300: oklch(91% 0.013 75);
-	--color-base-content: oklch(22% 0.015 260);
+	--color-base-content: oklch(16% 0.02 260);
 
 	/* Primary — Irish Green */
 	--color-primary: oklch(50% 0.14 155);

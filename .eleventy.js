@@ -1,143 +1,58 @@
-// .eleventy.js (ESM style for Eleventy v3)
-
+// .eleventy.js (ESM, Eleventy v3)
 
 import htmlmin from 'html-minifier';
-import svgContents from 'eleventy-plugin-svg-contents';
-//import pluginPWA from './tools/eleventy-plugin-pwa';
 import fs from 'fs';
 import path from 'path';
-import eleventyVue from '@11ty/eleventy-plugin-vue';
-import { createCanvas, loadImage } from 'canvas';
-import { formatTitle } from './tools/format-title.js';
-
-import moment from 'moment';
-import format from 'date-fns/format/index.js';
 import postcss from 'postcss';
-//import tailwindcss from 'tailwindcss';
 import markdownIt from 'markdown-it';
 import markdownItClass from '@toycode/markdown-it-class';
 import markdownItAnchor from 'markdown-it-anchor';
 import tailwindcss from '@tailwindcss/postcss';
 
-const createSocialImageForArticle = async (input, output) => {
-	try {
-		const data = fs.readFileSync(input, 'utf-8');
-		const [, title] = data.match(/cardTitle:(.*)/);
-
-		const post = {
-			title: title,
-			author: 'robertgabriel.ninja'
-		};
-
-		const width = 1200;
-		const height = 627;
-		const canvas = createCanvas(width, height);
-		const context = canvas.getContext('2d');
-
-		const splashSolid = await loadImage('./tools/images/splash-1.png');
-		const splashStriped = await loadImage('./tools/images/splash-2.png');
-		const helperbirdLogo = await loadImage('./tools/images/helperbird-logo.png');
-
-		context.fillStyle = '#450a75';
-		context.fillRect(0, 0, width, height);
-
-		const titleText = formatTitle(post.title);
-		context.font = "bold 50pt 'PT Sans'";
-		context.textAlign = 'center';
-		context.fillStyle = '#ffffff';
-		context.fillText(titleText[0], 600, 260);
-		if (titleText[1]) {
-			context.fillText(titleText[1], 600, 360);
-		}
-
-		context.font = "25pt 'PT Sans'";
-		context.fillText(`${post.author}`, 650, 525);
-
-		context.drawImage(helperbirdLogo, 455, 475, 70, 70);
-		context.drawImage(splashSolid, 1000, 0, 403, 409);
-		context.drawImage(splashSolid, 200, 500, 403, 409);
-		context.drawImage(splashStriped, -80, 48, 348, 252);
-		context.drawImage(splashStriped, 1000, 400, 348, 252);
-		context.drawImage(splashStriped, 100, 600, 348, 252);
-
-		const outputDir = path.dirname(output);
-		if (!fs.existsSync(outputDir)) {
-			fs.mkdirSync(outputDir, { recursive: true });
-		}
-
-		const stream = fs.createWriteStream(output);
-		stream.on('finish', () => {});
-		stream.on('error', (e) => console.error(e));
-
-		canvas.createPNGStream({ quality: 1.0 }).pipe(stream);
-	} catch (e) {
-		console.error('Error generating social image:', e);
-	}
-};
-
 export default function (eleventyConfig) {
+	// Static assets
 	eleventyConfig.addPassthroughCopy({ 'src/assets/': '/assets/' });
+	// Root-level files (service worker needs root scope; CNAME + robots for hosting/SEO)
+	eleventyConfig.addPassthroughCopy({ 'src/service-worker.js': 'service-worker.js' });
+	eleventyConfig.addPassthroughCopy({ 'src/robots.txt': 'robots.txt' });
+	eleventyConfig.addPassthroughCopy({ 'src/CNAME': 'CNAME' });
 
+	// Filters
 	eleventyConfig.addLiquidFilter('limit', (arr, limit) => arr.slice(0, limit));
-	eleventyConfig.addPlugin(eleventyVue);
+	// ISO date (UTC) — stable regardless of the build machine's timezone.
+	eleventyConfig.addFilter('date', (value) =>
+		value ? new Date(value).toISOString().slice(0, 10) : ''
+	);
+	// Safe JSON for embedding data in a <script> (escapes </script> breakouts).
+	eleventyConfig.addFilter('json', (value) =>
+		JSON.stringify(value).replace(/</g, '\\u003c')
+	);
 
-	eleventyConfig.addPlugin(svgContents);
-
-	eleventyConfig.addFilter('date', (date, dateFormat) => format(date, dateFormat));
-	eleventyConfig.addFilter('formatDateWithOrdinal', (dateString) => {
-		try {
-			return moment(dateString).format('MMMM Do, YYYY');
-		} catch (error) {
-			console.error('Error formatting date:', error);
-			return dateString;
-		}
-	});
-
-	eleventyConfig.addFilter('dateDisplay', (input) => moment(input).format('MMMM Do YYYY'));
-
-	const markdownOptions = {
-		html: true,
-		breaks: false,
-		linkify: true
-	};
-
+	// Markdown — map elements to Tailwind classes so content pages stay on-theme
+	const markdownOptions = { html: true, breaks: false, linkify: true };
 	const tagMap = {
-  h1: 'leading-relaxed font-display text-3xl my-8 font-bold text-black',
-  h2: 'leading-relaxed font-display text-2xl my-8 font-semibold text-black',
-  h3: 'leading-relaxed font-display text-xl my-8 font-semibold text-black',
-  h4: 'leading-relaxed font-display text-lg my-8 font-semibold text-black',
-
-  p: 'leading-relaxed font-display mb-4 text-lg text-black',
-
-  // Keep inline, no margins, no size bump
-  strong: 'font-semibold text-black',
-  // You don't need a separate "bold" key; remove it or mirror strong without margins
-  // bold: 'font-bold text-black', // (optional) only if your renderer uses <bold>, no mx-*
-
-  ul: 'leading-relaxed list-disc mt-4 space-y-2 pl-6 text-lg font-display ml-6 my-8 text-black',
-  ol: 'leading-relaxed list-decimal list-inside mt-4 space-y-2 pl-6 text-lg font-display ml-6 my-8 text-black',
-  // Don’t force flex on list items unless you really need icons
-  li: 'leading-relaxed my-2 text-lg font-display text-black ml-4',
-
-  table: 'table-auto w-full border-collapse border border-gray-300 text-lg font-display text-black mt-4 my-8',
-  thead: 'bg-gray-100',
-  th: 'border border-gray-300 px-4 py-2 text-left text-gray-700 font-medium',
-  tbody: '',
-  tr: 'odd:bg-gray-50 even:bg-white',
-  td: 'border border-gray-300 px-4 py-2 text-black',
-
-  img: 'aspect-square rounded-2xl my-8 shadow-lg',
-  hr: 'divider divider-neutral my-16',
-
-  // Keep inline; remove mx-* so normal spaces work
-  a: 'font-sans text-lg text-blue-600 hover:text-blue-800 underline underline-offset-2',
-
-  iframe: 'w-full h-96 rounded-xl shadow-lg my-10',
-blockquote: 'bg-gray-100 border-l-4 border-blue-400 pl-4 pr-6 py-3 rounded-lg italic text-gray-800 my-6 shadow-sm',
-  code: 'bg-gray-100 text-gray-800 rounded p-1 text-sm font-mono',
-  pre: 'bg-gray-100 p-4 rounded overflow-x-auto'
-};
-
+		h1: 'leading-relaxed font-display text-3xl my-8 font-bold text-black',
+		h2: 'leading-relaxed font-display text-2xl my-8 font-semibold text-black',
+		h3: 'leading-relaxed font-display text-xl my-8 font-semibold text-black',
+		h4: 'leading-relaxed font-display text-lg my-8 font-semibold text-black',
+		p: 'leading-relaxed font-display mb-4 text-lg text-black',
+		strong: 'font-semibold text-black',
+		ul: 'leading-relaxed list-disc mt-4 space-y-2 pl-6 text-lg font-display my-8 text-black',
+		ol: 'leading-relaxed list-decimal mt-4 space-y-2 pl-6 text-lg font-display my-8 text-black',
+		li: 'leading-relaxed my-2 text-lg font-display text-black',
+		table: 'table-auto w-full border-collapse border border-gray-300 text-lg font-display text-black my-8',
+		thead: 'bg-gray-100',
+		th: 'border border-gray-300 px-4 py-2 text-left text-gray-700 font-medium',
+		tr: 'odd:bg-gray-50 even:bg-white',
+		td: 'border border-gray-300 px-4 py-2 text-black',
+		img: 'rounded-2xl my-8 shadow-md max-w-full h-auto',
+		hr: 'divider divider-neutral my-16',
+		a: 'font-sans text-lg text-blue-600 hover:text-blue-800 underline underline-offset-2',
+		iframe: 'w-full aspect-video rounded-xl shadow-lg my-10',
+		blockquote: 'bg-gray-100 border-l-4 border-blue-400 pl-4 pr-6 py-3 rounded-lg italic text-gray-800 my-6 shadow-sm',
+		code: 'bg-gray-100 text-gray-800 rounded p-1 text-sm font-mono',
+		pre: 'bg-gray-100 p-4 rounded overflow-x-auto'
+	};
 
 	eleventyConfig.setLibrary(
 		'md',
@@ -146,71 +61,61 @@ blockquote: 'bg-gray-100 border-l-4 border-blue-400 pl-4 pr-6 py-3 rounded-lg it
 			.use(markdownItAnchor, { permalink: false })
 	);
 
+	// Minify HTML in production
 	eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
-		if (process.env.ELEVENTY_ENV === 'production' && outputPath.endsWith('.html')) {
+		if (process.env.ELEVENTY_ENV === 'production' && outputPath && outputPath.endsWith('.html')) {
 			return htmlmin.minify(content, {
 				useShortDoctype: true,
 				removeComments: true,
-				collapseWhitespace: true
+				collapseWhitespace: true,
+				minifyCSS: true,
+				minifyJS: true
 			});
 		}
 		return content;
 	});
 
+	// Compile Tailwind CSS -> docs/assets/css/engine.css before Eleventy renders
 	eleventyConfig.on('eleventy.before', async () => {
-		const tailwindInputPath = path.resolve('./src/assets/css/styles.css');
-		const tailwindOutputPath = './docs/assets/css/engine.css';
-		const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
-		const outputDir = path.dirname(tailwindOutputPath);
-
-		if (!fs.existsSync(outputDir)) {
-			fs.mkdirSync(outputDir, { recursive: true });
-		}
-
-		// 🔥 Auto-generate asset list for PWA
-		const walk = (dir) => {
-			const files = fs.readdirSync(dir);
-			return files.flatMap((file) => {
-				const fullPath = path.join(dir, file);
-				if (fs.statSync(fullPath).isDirectory()) {
-					return walk(fullPath);
-				} else {
-					const relative = '/' + path.relative('./docs', fullPath).replace(/\\/g, '/');
-
-					return [relative];
-				}
-			});
-		};
-		const allAssets = walk('./docs').filter((f) => !f.endsWith('.map'));
-		const outputJsonPath = './docs/cache-assets.json';
-		fs.writeFileSync(outputJsonPath, JSON.stringify(allAssets, null, 2));
+		const inputPath = path.resolve('./src/assets/css/styles.css');
+		const outputDir = path.resolve('./docs/assets/css');
+		fs.mkdirSync(outputDir, { recursive: true });
+		const cssContent = fs.readFileSync(inputPath, 'utf8');
 		const result = await postcss([tailwindcss()]).process(cssContent, {
-			from: tailwindInputPath,
-			to: tailwindOutputPath
+			from: inputPath,
+			to: path.join(outputDir, 'engine.css')
 		});
-
-		fs.writeFileSync(tailwindOutputPath, result.css);
+		fs.writeFileSync(path.join(outputDir, 'engine.css'), result.css);
 	});
 
-	eleventyConfig.setLiquidOptions({
-		dynamicPartials: false,
-		strictFilters: false
+	// After build, generate a precache manifest the service worker can read
+	eleventyConfig.on('eleventy.after', async () => {
+		const root = path.resolve('./docs');
+		if (!fs.existsSync(root)) return;
+		const walk = (dir) =>
+			fs.readdirSync(dir).flatMap((file) => {
+				const full = path.join(dir, file);
+				return fs.statSync(full).isDirectory()
+					? walk(full)
+					: ['/' + path.relative(root, full).replace(/\\/g, '/')];
+			});
+		const assets = walk(root).filter(
+			(f) => !f.endsWith('.map') && f !== '/cache-assets.json'
+		);
+		fs.writeFileSync(path.join(root, 'cache-assets.json'), JSON.stringify(assets, null, 2));
 	});
 
-	const manifest = {
-		'main.js': '/assets/js/main.bundle.js',
-		'main.css': '/assets/css/engine.css'
-	};
+	eleventyConfig.setLiquidOptions({ dynamicPartials: false, strictFilters: false });
 
-	eleventyConfig.addShortcode('bundledCss', () =>
-		manifest['main.css'] ? `<link href="${manifest['main.css']}" rel="stylesheet" />` : ''
+	// Bundled asset shortcodes (webpack writes the JS, Eleventy writes the CSS)
+	eleventyConfig.addShortcode(
+		'bundledCss',
+		() => '<link href="/assets/css/engine.css" rel="stylesheet" />'
 	);
-	eleventyConfig.addShortcode('bundledJs', () =>
-		manifest['main.js'] ? `<script src="${manifest['main.js']}"></script>` : ''
+	eleventyConfig.addShortcode(
+		'bundledJs',
+		() => '<script src="/assets/js/main.bundle.js" defer></script>'
 	);
-	// Register service worker manually
-	eleventyConfig.addPassthroughCopy('./src/service-worker.js');
-	eleventyConfig.addPassthroughCopy('./src/manifest.webmanifest');
 
 	return {
 		markdownTemplateEngine: 'liquid',
@@ -219,8 +124,6 @@ blockquote: 'bg-gray-100 border-l-4 border-blue-400 pl-4 pr-6 py-3 rounded-lg it
 			includes: '../_includes',
 			input: 'src/pages/',
 			output: 'docs'
-		},
-		// 👇 This allows output files like CNAME without extensions
-		allowsFileExtensionsOnPermalinks: false
+		}
 	};
 }

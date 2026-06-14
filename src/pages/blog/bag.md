@@ -3,11 +3,11 @@ hideHeader: false
 layout:  templates/blog.html
 title: What's in my Bag 2018
 description: I recently read a book about the minimal life. I'm no hipster, and I am a privileged Irish man. So I didn't have to worry about some things and have savings and a job. I thought I would write about what I need for my day-to-day life.
-keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design
+keywords: minimalism, everyday carry, gear, Robert James Gabriel
 url: blog/bag/
 tags: blog
 blog_cat: Blog
-youtubeId: PfILiWebkuc
+date: 2017-07-13
 cardTitle: What's in my Bag 2018
 blog_snip: I recently read a book about the minimal life. I'm no hipster, and I am a privileged Irish man. So I didn't have to worry about some things and have savings and a job. I thought I would write about what I need for my day-to-day life.
 dated: July 13 2017
@@ -19,7 +19,7 @@ img: /assets/images/blog/bag.png
 
 # What's this about?
 
-I recently read a book about the minimal life. I'm no hipster, and I am a privileged, white Irish man. So, I don't have to worry about some things and have savings and a job. I thought I would write about what I need to do my day-to-day life.
+I recently read a book about the minimal life. I'm no hipster, and I am a privileged, white Irish man. So, I don't have to worry about some things and have savings and a job. I thought I would write about what I need for my day-to-day life.
 
 I recently came across an article on Medium, and it kind of inspired me to redo this.
 

@@ -3,11 +3,11 @@ hideHeader: false
 layout:  templates/blog.html
 title: Web Accessibility and OpenDyslexic
 description: There are few published papers about usability testing with dyslexia focused fonts, but there is a considerable collection of knowledge on dyslexia as well as many suggestions for authoring dyslexia friendly interfaces
-keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design
+keywords: dyslexia, OpenDyslexic, web accessibility, typography, fonts, Robert James Gabriel
 url: blog/research-into-web-accessibility-for-dyslexics/
 tags: blog
 blog_cat: Blog
-youtubeId: PfILiWebkuc
+date: 2016-06-01
 dated: June 1st 2016
 cardTitle: Web Accessibility and OpenDyslexic
 blog_snip: There are few published papers about usability testing with dyslexia focused fonts, but there is a considerable collection of knowledge on dyslexia as well as many suggestions for authoring dyslexia friendly interfaces
@@ -34,17 +34,11 @@ In the context of human-computer interaction, typography has critical importance
 
 Font face describes the overall letter form, for example, Comic Sans or Times New Roman. Font faces may have serifs (a slight projection finishing off a stroke of a letter in certain typefaces such as Times New Roman) or may be sans serif (Don’t use serifs which are small lines at the ends/tips of characters such as in Comic Sans).
 
-![open dyslexica](/assets/images/talks/sans.webp)
-
 Fonts may be display fonts, designed for headlines, or text fonts, designed for large bodies of smaller text.
 
 When measuring font size, there are two key areas to focus on:
 - **The body size:** Measures the full height of letters, from the bottom of the descenders (the part of the character that lies below the baseline) to the top of the ascenders (the part of the character that lies above the baseline) and three additional gutter spaces above and below.
 - **X-Height:** The top of the main body height of lowercase letters excluding the spacing or ascenders or descenders. X-Height is a huge factor in typeface regarding readability.
-
-The following graphic summarizes the key parts:
-
-![open dyslexica](/assets/images/talks/typography.webp)
 
 # What is OpenDyslexia
 
@@ -54,7 +48,7 @@ The unique shape of each letter in the OpenDyslexia font can help prevent confus
 
 As you can see below:
 
-![open dyslexica](/assets/images/talks/OpenDyslexic.webp)
+![The OpenDyslexic typeface, with heavier weighted letter bottoms](/assets/images/blog/opendyslexic.png)
 
 # The History of OpenDyslexia’s Development
 

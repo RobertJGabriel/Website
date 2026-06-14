@@ -2,10 +2,9 @@
 hideHeader: false
 layout:  templates/base.html
 title: Watch History — 2025
-youtubeId: PfILiWebkuc
 cardTitle: Watch History — 2025
 description:  My combined Netflix & Hulu watch history for 2025, newest → oldest. Shows are grouped by series + season.
-keywords: html5, css3, sass, less, nodejs, vue.js, php, npm, jquery, javascript, angularjs, pwa, data structures, mobile application, golang, helperbird, opendyslexic
+keywords: Robert James Gabriel, software engineer, accessibility, Ireland
 url: /watch
 ---
 
@@ -76,8 +75,26 @@ url: /watch
 </div>
 
 <script>
+  window.__WATCHED__ = {{ watched | json }};
+</script>
+<script>
 (function renderTimeline(){
   const raw = window.__WATCHED__ || {};
+
+  // Parse the two date formats in the data: "10/26/25" (Netflix) and
+  // "25 Oct 2025 06:43:33" (Hulu).
+  function parseDateString(s){
+    if(!s) return null;
+    s = String(s).trim();
+    const m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+    if(m){ let yr = +m[3]; if(yr < 100) yr += 2000; return new Date(yr, +m[1]-1, +m[2]); }
+    const d = new Date(s);
+    return isNaN(d.getTime()) ? null : d;
+  }
+
+  function formatNice(d){
+    return d.toLocaleDateString('en-IE', { day: 'numeric', month: 'short' });
+  }
   const items = [];
   ['netflix','hulu'].forEach(src => {
     (raw[src] || []).forEach(it => {

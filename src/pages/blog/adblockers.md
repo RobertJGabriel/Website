@@ -2,12 +2,12 @@
 hideHeader: false
 layout:  templates/blog.html
 title: Problems Posed by Ad-blockers
-description: Discover the history and the problems posed by ad-blockers. Includes the in-depth research papers. Dated 2017.
-keywords: HTML,CSS,XML,JavaScript,Robert James Gabriel,award winning, php , experienced,Galen, angular, HTML, HTML5, JavaScript, Node, PHP and SQL developer,golang,web design
+description: The history of ad-blockers and the problems they pose for publishers and advertisers, with in-depth research and references.
+keywords: ad blockers, online advertising, web research, publishing, Robert James Gabriel
 url: blog/adblockers/
 tags: blog
 blog_cat: Blog
-youtubeId: PfILiWebkuc
+date: 2015-04-01
 cardTitle: Problems Posed by Ad-blockers
 blog_snip: Discover the history and the problems posed by ad-blockers. Includes the in-depth research papers.
 dated: April 1st 2015
@@ -60,12 +60,6 @@ img: /assets/images/blog/adblockers.png
   to block. Users can also add any filter lists they want, such as those for
   blocking tracking or malware. Almost all filters are open source, and many
   are created and maintained by a large online community of users [5].
-</p>
-<p class="mt-8 mb-8 text-xl">
-  <img
-    src="/assets/img/talks/graphAdblocker.webp"
-    alt="Graph illustrating the growth of Adblocker"
-  />
 </p>
 <p class="mt-8 mb-8 text-xl">
   Ad blocking as a whole has experienced a 41% growth from 2014 to the end of

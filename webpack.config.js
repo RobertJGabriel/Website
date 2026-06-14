@@ -1,85 +1,21 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
-const WorkboxPlugin = require('workbox-webpack-plugin');
 
+// Webpack only bundles the small JS entry point. All CSS is compiled by
+// Eleventy's Tailwind step (see .eleventy.js), so there is no CSS pipeline here.
 module.exports = {
-	mode: 'development',
-	context: __dirname + '/src/',
-	entry: ['./assets/js/index.js', './assets/css/styles.css'],
-	plugins: [new MiniCssExtractPlugin({ ignoreOrder: false }), new HTMLInlineCSSWebpackPlugin()],
-	resolve: {
-		alias: {
-			vue: 'vue/dist/vue.min.js'
-		}
-	},
+	mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+	context: path.resolve(__dirname, 'src'),
+	entry: './assets/js/index.js',
 	module: {
 		rules: [
 			{
-				test: /\.styl(us)?$/,
-				use: ["style-loader", "css-loader", "stylus-loader"],
-			  },
-			{
-				test: /\.mp4$/,
-				use: 'file-loader?name=videos/[name].[ext]'
-			},
-				{
-				test: /\.mp3$/,
-				use: 'file-loader?name=videos/[name].[ext]'
-			},
-			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				use: [
-					{
-						loader: 'babel-loader',
-						options: {
-							presets: ['@babel/preset-env']
-						}
-					}
-				]
-			},
-			{
-				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							useRelativePath: false,
-							name: '[name].[ext]',
-							publicPath: 'fonts/icons/',
-							outputPath: 'fonts/'
-						}
-					}
-				]
-			},
-
-			{
-				test: /\.(png|jpe?g|gif|xml|ico|svg|woff2|webmanifest)$/i,
-				loader: 'file-loader',
-				options: {
-					name: '[name].[ext]',
-					outputPath: './docs'
+				use: {
+					loader: 'babel-loader',
+					options: { presets: ['@babel/preset-env'] }
 				}
-			},
-			{
-				test: /\.css$/,
-				use: [
-					"style-loader",
-					"css-loader",
-					{
-					  loader: "postcss-loader",
-					
-					},
-				  ],
 			}
-		]
-	},
-	optimization: {
-		minimize: true,
-		minimizer: [
-			new CssMinimizerPlugin()
 		]
 	},
 	output: {
